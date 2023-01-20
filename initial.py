@@ -5,4 +5,5 @@ df = pd.DataFrame(columns=['product_name','product_price','date_time_scraped','p
 
 # Create csv file to store our date
 df.to_csv("BillionPricesProject_ProductList.csv",index=False)
+#
 
