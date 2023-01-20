@@ -1,5 +1,4 @@
 pandas==1.2.3
 lxml==4.6.1
-html==1.16
 requests==2.26.0
 datetime==4.3
