@@ -25,7 +25,7 @@ jobs:
           
           git status
           git branch my-temporary-work
-          git checkout master
+          git checkout main
           git merge my-temporary-work
           python initial.py
           git config user.name github-actions
