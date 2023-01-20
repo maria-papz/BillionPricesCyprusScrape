@@ -31,7 +31,7 @@ jobs:
           # Create temporary branch for your detached head
           git branch tmp
           # Go to master
-          git checkout origin HEAD:main
+          git checkout origin/main
           # Merge in commits from previously detached head
           git merge tmp
           # Delete temporary branch
