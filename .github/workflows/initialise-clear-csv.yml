@@ -22,12 +22,14 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: execute py script
         run: |
-          git fetch
-          git checkout main
-          python initial.py
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add .
-          git commit -m "crongenerated"
-          git push
+         python initial.py 
+         git status
+#         git fetch
+#         git checkout main
+
+#         git config user.name github-actions
+#         git config user.email github-actions@github.com
+#         git add .
+#         git commit -m "crongenerated"
+#         git push
 
