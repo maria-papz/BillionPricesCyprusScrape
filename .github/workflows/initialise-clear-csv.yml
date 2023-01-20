@@ -22,13 +22,19 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: execute py script
         run: |
-          git config pull.rebase false    
-          git pull origin HEAD:main 
           python initial.py
           git status
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
           git commit -m "crongenerated"
-          git push origin HEAD:main
+          # Create temporary branch for your detached head
+          git branch tmp
+          # Go to master
+          git checkout origin HEAD:main
+          # Merge in commits from previously detached head
+          git merge tmp
+          # Delete temporary branch
+          git branch -d tmp
+# git push origin HEAD:main
 
