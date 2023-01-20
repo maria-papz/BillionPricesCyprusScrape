@@ -24,7 +24,7 @@ jobs:
         run: |
           python initial.py
           git status
-          git rev-list origin..HEAD
+          git rev-list HEAD..origin --pretty
           git pull origin HEAD:main
           git config user.name github-actions
           git config user.email github-actions@github.com
