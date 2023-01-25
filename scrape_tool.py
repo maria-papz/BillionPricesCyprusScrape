@@ -64,3 +64,5 @@ for i in range(6):
 #print(df)
 
 df.to_csv("BillionPricesProject_ProductList.csv", index=False)
+
+print("test")
