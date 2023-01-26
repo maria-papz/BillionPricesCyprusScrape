@@ -51,6 +51,90 @@ def supermarketCy_bread(bread_name,page):
     return new_row
 
 
+##########Andriani#######################
+#Defining a function that takes all the urls for the bakery goods and scrape them into two lists
+#the product_final and the prices_final. These two are also global defined
+def bakery_goods(urls:list):
+    #create lists for the products and the prices repsectively
+    global products 
+    global prices 
+    products =[]
+    prices = []
+
+    #final list for the products and the prices
+    global products_final 
+    global prices_final
+    products_final =[]
+    prices_final =[]
+
+    #for the different urls, putting the prices and the description of the 
+    # products in the two lists
+    for url in urls:
+        page = urlopen(url)
+        html = page.read().decode("utf-8")
+        bs = BeautifulSoup(html, "html.parser")
+    
+        scripts = bs.find_all('script',string=True)
+
+        #get the strings for the names and the prices of the products using regular expressions
+        for script in scripts:
+            product= re.findall(r"'name':.*",str(script))
+            price= re.findall(r"'price':.*",str(script))
+            if len(product)> 0:
+                products.append(product)
+                prices.append(price)
+            
+    #get the description of the items, by removing the ':',',' and the additional quotation marks
+    for j in range(len(products)):
+        for i in range(len(products[j])):
+            products_final.append(products[j][i].split(':')[1].replace(",", "").replace(" ","").strip('\''))
+        
+    #get the price of the items, by removing the ':',',' and the additional quotation marks
+    for j in range(len(prices)):
+        for i in range(len(prices[j])):
+            prices_final.append(prices[j][i].split(':')[1].replace(",", "").replace(" ","").strip('\''))
+
+
+
+#the urls for the bakery goods
+urls=["https://www.supermarketcy.com.cy/pites","https://www.supermarketcy.com.cy/tost"
+     ,"https://www.supermarketcy.com.cy/psomakia","https://www.supermarketcy.com.cy/almyra","https://www.supermarketcy.com.cy/keik"
+     ,"https://www.supermarketcy.com.cy/glyka-1"]
+
+
+#apply the urls on the function
+bakery_goods(urls)
+
+#products already stored in the excel file
+products_excel=['ΣίφουναςΠίττεςΆσπρεςΜεγάλες5Τεμ550g','ΣίφουναςΨωμίΦέτεςΤόστΆσπροΜικρό700g'
+,'ΣίφουναςΦραντζολάκιαΣτρογγυλά4Τεμ','ΣίφουναςΦραντζολάκιαΜακρόστεναΜεγάλα4Τεμ','ΣίφουναςΚρουασάνΒουτύρου1Τεμ','ΣίφουναςΛουκανικόπιτα1Τεμ'
+,'ΣίφουναςΠίταΣάτζιηςΜεΜέλι1Τεμ','ΣίφουναςΕλιόπιταΣφολιάτα1Τεμ','ΣίφουναςΚέικΓεωγραφίας750g','ΣίφουναςMixΣιροπιαστά410g']
+
+#create the list to store only the prices that we care about based on products_excel
+prices_excel =[]
+
+#to see which items in prodcuts_final match with the list products_excel
+for item in products_excel:
+    for product in products_final:
+        index = products_final.index(product)
+        if item==product:
+            prices_excel.append(prices_final[index])
+
+#round the prices to only two decimal points
+prices_excel = [ round(float(i),2) for i in prices_excel]
+
+df_bakery=pd.DataFrame()
+date = [datetime.now()]*len(prices_excel)
+retailer=['SupermarketCy']*len(prices_excel)
+product_class=['food']*len(prices_excel)
+product_subclass= ['bakery goods']*len(prices_excel)
+
+#store in an excel file
+df_bakery = pd.DataFrame({'product_name':products_excel,'product_price':prices_excel,'date_time_scraped':date,'product_class':product_class,'product_subclass':product_subclass,'Retailer':retailer,}) 
+
+##########Andriani#######################
+ 
+
 # Retrieving data from CSV
 df = pd.read_csv("BillionPricesProject_ProductList.csv")
 
@@ -63,6 +147,7 @@ for i in range(6):
     df.loc[len(df)] = supermarketCy_bread(supermarketCy_bread_names[i],supermarketCy_bread_pages[i])
 #print(df)
 
+df.append(df_bakery)
+
 df.to_csv("BillionPricesProject_ProductList.csv", index=False)
 
-print("test")
