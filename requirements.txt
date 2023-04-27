@@ -2,5 +2,4 @@ pandas==1.2.3
 lxml==4.6.1
 requests==2.26.0
 datetime==4.3
-json==3.4
 beautifulsoup4==4.12.2
