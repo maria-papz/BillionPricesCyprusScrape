@@ -3,3 +3,4 @@ lxml==4.6.1
 requests==2.26.0
 datetime==4.3
 beautifulsoup4==4.12.2
+xlsxWriter==3.1.0
