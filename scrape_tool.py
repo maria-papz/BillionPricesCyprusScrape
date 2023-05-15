@@ -5,11 +5,13 @@ from lxml import html
 import requests
 from datetime import datetime
 import time
+import tabula as tb
 import xlsxwriter
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import urllib.request
 import json
+from urllib.error import HTTPError
 
 
 #read from csv not to lose past records
@@ -20,6 +22,35 @@ df = pd.read_csv("BillionPricesProject_ProductList.csv")
 # Accepts name of bread and page the bread is found
 # Returns scraped data
 
+
+#Define functions:
+#initialize dataframe
+def initialise_df(products,prices_final,labels,retailer):
+    #put the rows in a list
+    all_items = []
+    for product,price,label in zip(products,prices_final,labels):
+        all_items.append([product,price,datetime.now(),label,retailer])
+
+    #initialise a dataframe
+    df=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','retailer'))
+
+    #assign the values to each column
+    for i in range(len(all_items)):
+        df.loc[i] = (all_items[i][0],all_items[i][1],all_items[i][2],all_items[i][3],all_items[i][4])
+
+    return df
+
+#calculating the mean price 
+def mean_price(df):
+    #change type of the item.price column
+    df['item.price'] = df['item.price'].astype('float8')
+
+    #calculating the mean price of each category
+    df_mean  = round(df.groupby('item.subclass')[['item.price']].mean(),2)
+    df_mean.reset_index(drop=False, inplace=True)
+    df_mean.rename(columns={"item.price":"average price"},inplace=True)
+    df = pd.merge(df, df_mean, on="item.subclass", how="inner")
+    return df
 
 
 def supermarketCy(item):
@@ -84,7 +115,7 @@ urls_bread = [['/psomi','/psomi?page=2','/psomi?page=3'],['ΣίφουναςΟλ�
 'ΣίφουναςΚοινόΨωμίΚομμένο970g', 'ΣίφουναςΆσπροΨωμί560g', 'ΣίφουναςΚοινόΨωμί970g']]
 
 urls_bakery=[["/pites","/tost","/psomakia","/almyra","/keik","/glyka-1","/glyka-1?page=2","/krakers","/krakers?page=2","/kritsinia","/kritsinia?page=2",
-"/kroutons","/fryganies","/paximadia","/paximadia?page=2","/paximadia?page=3","/paximadia?page=4","/koulourakia"],
+"/kritsinia?page=3","/kroutons","/fryganies","/paximadia","/paximadia?page=2","/paximadia?page=3","/paximadia?page=4","/koulourakia"],
 ['ΣίφουναςΠίττεςΆσπρεςΜεγάλες5Τεμ550g', 'ΣίφουναςΨωμίΦέτεςΤόστΆσπροΜικρό700g', 'ΣίφουναςΦραντζολάκιαΣτρογγυλά4Τεμ', 'ΣίφουναςΦραντζολάκιαΜακρόστεναΜεγάλα4Τεμ', 
 'ΣίφουναςΚρουασάνΒουτύρου1Τεμ', 'ΣίφουναςΛουκανικόπιτα1Τεμ', 'ΣίφουναςΠίταΣάτζιηςΜεΜέλι1Τεμ', 'ΣίφουναςΕλιόπιταΣφολιάτα1Τεμ', 'ΣίφουναςΚέικΓεωγραφίας750g', 'ΣίφουναςMixΣιροπιαστά410g',
 "7DaysMiniBakeRollsΠίτσα80g","BakandysΧωριάτικαΚριτσίνιαΣιταρένια275g","ΜαρίαςΠαξιμάδιαΓλυκανίσου300g","JohnsofΚρουτόνιαΟλικήςΆλεσης320g",
@@ -100,17 +131,17 @@ urls_pastas=[["/makaronia","/makaronia?page=2","/makaronia?page=3","/makaronia?p
 
 urls_rice = [["/parmpoil", "/parmpoil?page=2","/mpasmati","/karolina","/glase","/pourgouri","/diafora-ryzia"],
 ['3ΑΡύζιΠάρποιλτ1kg', 'BensOriginalΡύζιΜακρύκοκκο10Λεπτά1kg', 'TildaΡυζιΜπασματι1kg', '3ΑΡύζιΜπασμάτι1kg',
- '3ΑΡύζιJasmine1kg', 'ΑφοίΑ.ΚεπόλαΠουργούρι1kg','ΑφοίΑ.ΚεπόλαΠουργούρι500g', 'ΜιτσίδηΠουργούρι500g', 'ΜιτσίδηΠουργούρι1kg',
+ '3ΑΡύζιJasmine1kg', 'ΑφοίΑ.ΚεπόλαΠουργούρι1kg','ΑφοίΑ.ΚεπόλαΠουργούριΓιαΚούπες500g', 'ΜιτσίδηΠουργούρι500g', 'ΜιτσίδηΠουργούρι1kg',
 '3ΑΠουργούρι500g','NaturalLifeΑποφλειωμένοΠουργούριΠιλάφι500g']]
 
-urls_saltspices = [["/alati","/piperi","/mpacharika","/meigmata","/aromatika"],['SailorΑλάτι250g', 'CarnationSpicesΠιπέριΜαύροΑλεσμένο34g', 
+urls_saltspices = [["/alati","/piperi","/mpacharika","/meigmata","/aromatika","/aromatika?page=2"],['SailorΑλάτι250g', 'CarnationSpicesΠιπέριΜαύροΑλεσμένο34g', 
 'CarnationSpicesΚανέλαΑλεσμένη34g', 'CarnationSpicesΠάπρικαΓλυκιά30g', 'CarnationSpicesΚουρκουμάςΚιτρινόριζα30g', 'KnorrAromatΜείγμαΛαχανικών&amp;Μυρωδικών90g', 
 'CarnationSpicesΔιάφοραΒότανα12g', 'CarnationSpicesΣκόρδοΣκόνη40g', 'CarnationSpicesΡίγανη30g', 'CarnationSpicesΘυμάρι10g', 'CarnationSpicesΚόλιανδροςΣκόνη20g', 
 'CarnationSpicesΜαϊδανός10g', 'CarnationSpicesΒασιλικός10g', 'CarnationSpicesΆνηθος10g', 'CarnationSpicesΔεντρολίβανοΛάσμαρι10g']]
 
 urls_nuts = [["/xiroi-karpoi","/xiroi-karpoi?page=2","/xiroi-karpoi?page=3","/xiroi-karpoi?page=4","/xiroi-karpoi?page=5","/apoxiramena-frouta",
 "/apoxiramena-frouta?page=2","/apoxiramena-frouta?page=3","/apoxiramena-frouta?page=4"],['ΛειβαδιώτηΠράσινηΣφραγίδαΑμύγδαλα120g', 'SeranoΚάσιους140g', 
-'ΛειβαδιώτηΚαρυδόψιχα140g', 'SeranoEconomyPackΦουντούκιαΩμά350g', 'SeranoΦυστικόψιχαΚαβουρδισμένηΑλατισμένη175g','ΕποχέςΑποξηραμέναΣύκα350g', 
+'ΛειβαδιώτηΚαρυδόψιχα140g', 'SeranoΦουντούκιαΩμά150g', 'SeranoΦυστικόψιχαΚαβουρδισμένηΑλατισμένη175g','ΕποχέςΑποξηραμέναΣύκα350g', 
 'ΑμαλίαΧρυσόμηλαΑποξηραμένα250g', 'SeranoSnackin&#039;GoodΑποξηραμέναΔαμάσκηναΧωρίςΠρόσθετηΖάχαρη275g', 'ΚαρπόςΑπόΤηΓηΜαςΑποξηραμέναΒερίκοκα400g', 'ΑμαλίαΦοινίκιαΤυνησίας250g', 'SeranoΣταφίδες350g']]
 
 urls_jams = [["/meli","/meli?page=2","/meli?page=3","/marmelades","/pralines","/fystikovoutyro","/diafora-aleimmata"],['RoyalBeeΜέλι475g', 'MavroudesΜέλι380g',
@@ -124,10 +155,10 @@ urls_sauces=[["/ntomatas","/ntomatas?page=2","/ntomatas?page=3","/zomoi","/zomoi
 
 urls_oil=[["/elaiolado","/elaiolado?page=2"],['ΆγιοςΓεώργιοςΚυπριακόΠαρθένοΕλαιόλαδο1L','ΕλιοχώριΠαρθένοΕλαιόλαδο2L', 'ΣεκέπΠαρθένοΕλαιόλαδο1L']]
 
-urls_otheroil=[["/ilianthelaio"],['LesieurΗλιανθέλαιο3L', 'AmbrosiaΗλιανθέλαιο3L','FloraΗλιανθέλαιο3L', 'AmbrosiaΗλιανθέλαιο4L']]
+urls_otheroil=[["/ilianthelaio"],['AlokozayΗλιανθέλαιο3L', 'AmbrosiaΗλιανθέλαιο3L','FloraΗλιανθέλαιο3L', 'AmbrosiaΗλιανθέλαιο4L']]
 
 urls_preservedfish=[["/tonou","/tonou?page=2","/tonou?page=3"],['SevycoΆσπροςΤόνοςΣεΕλαιόλαδο4X95g', 'SevycoΤόνοςΣεΝερό4X200g',
- 'RioMareΤόνοςΣεΕλαιόλαδο160g2+1Δωρεάν', 'RioMareΤόνοςΣεΕλαιόλαδο80g3+1Δωρεάν','RioMareΤόνοςΣεΕλαιόλαδο80g3+1Δωρεάν']]
+ 'RioMareΤόνοςΣεΕλαιόλαδο160g2+1Δωρεάν','RioMareΤόνοςΣεΕλαιόλαδο80g3+1Δωρεάν']]
 
 urls_driedfish = [["/psariou-1"],['ΚαμήλαΣαρδελάκιαΣεΝερό120g', 'TrataΡέγγαΚαπνιστή160g', 'FlokosΦιλέτοΣκουμπρίΚαπνιστόΣεΦυτικόΛάδι160g',
  'ΚαμήλαΑντζιούγες50g']]
@@ -144,29 +175,30 @@ urls_othermilk = [["/kremes-galaktos","/galaktos","/galaktos?page=2"],
 
 urls_otherfood = [["/soupes","/diafores-sokolates","/diafores-sokolates?page=2","/mpiskota","/mpiskota?page=2","/mpiskota?page=3","/mpiskota?page=4",
 "/mpiskota?page=5","/mpiskota?page=6","/mpiskota?page=7","/mpiskota?page=8","/mpiskota?page=9","/mpiskota?page=10","/mpiskota?page=11","/mpiskota?page=12"],
-['HeinzΣούπαΜανιταριών400g', 'HeinzΣούπαΝτομάτας400g',"ΦρουΦρουJoker9Τεμ9+3Δωρεάν","ΦρουΦρουMorningCoffee150g","KinderCards5Τεμ128g",
+['HeinzΣούπαΜινεστρόνι400g', 'HeinzΣούπαΝτομάτας400g',"ΦρουΦρουJoker9Τεμ9+3Δωρεάν","ΦρουΦρουMorningCoffee150g","KinderCards5Τεμ128g",
 "Oreo154g","ΠαπαδοπούλουΓεμιστάΣοκολάτα200g"]]
 
 urls_sugar = [["/aspri"],['SweetFamilyΛευκήΚρυσταλλικήΖάχαρη1kg']]
 
-urls_flour= [["/alevri","/alevri?page=2"],['ΜιτσίδηΑλεύριΓιαΌλεςΤιςΧρήσεις1kg','ΜιτσίδηΑλεύριΦαρίνα&#039;&#039;00&#039;&#039;1kg',
+urls_flour= [["/alevri","/alevri?page=2"],['ΜιτσίδηΑλεύριΓιαΌλεςΤιςΧρήσεις1kg','ΜιτσίδηΑλεύριΦαρίνα001kg',
  'ΜιτσίδηΑλεύριΧωριάτικο1kg','ΜιτσίδηΑλεύριΦαρίναΖαχαροπλαστικής1kg','ΑδελφοίΚαζάζηΑλεύριΦαρίνα001kg','ΑδελφοίΚαζάζηΑλεύριΧωριάτικο1kg']]
 
-urls_chocolate = [["/mavri-sokolata","/lefki-sokolata"],['BakandysΣοκολάταΓάλακτοςΚουβερτούρα4X37.5g', 
+urls_chocolate = [["/sokolata-galaktos","/lefki-sokolata"],['BakandysΣοκολάταΓάλακτοςΚουβερτούρα4X37.5g', 
 'BakandysΆσπρηΣοκολάταΚουβερτούρα4x37.5g']]
 
 urls_confectionary= [["/diafora-alla-eidi", "/diafora-alla-eidi?page=2","/diafora-alla-eidi?page=3"],['ΜοναμίΜαγειρικήΣόδα10X7g', 
 'RoyalBakingPowder226g', 'ΣτέλλαΑνθόνεροΚιτρόμηλο500ml', 'ΑμαλίαΝησιαστέ400g', 'CarltonaΆμυλοΑραβοσίτου450g', 'BakandysΣαβουαγιάρ200g', 
 'ΓιώτηςΜαγιάΣτιγμής3x8g', 'SeranoΙνδοκάρυδοΑλεσμένο140g1+1Δωρεάν', 'SpryΦυτικόΜαγειρικόΠροιόν350g', 'ΑγρούΡοδόσταγμα500ml']]
 
-urls_freshvegetables= [[ "/freska-lachanika","/freska-lachanika?page=2","/freska-lachanika?page=3","/freska-lachanika?page=4","/freska-lachanika?page=5","/freska-lachanika?page=6"],
-['Ντομάτες1kg', 'ΑγγουράκιαΧωραφιού1kg', 'Λεμόνια1kg', 'ΚρεμμύδιαΑκαθάριστα1kg', 'Αγγουράκια1kg', 'ΝτοματίνιαΜίνιΦοινικωτά500g',
- 'ΚαρόταΑκαθάριστα1kg', 'Αβοκάντο1kg', 'ΜαρούλιΡομάναΔέσμη1Τεμ', 'ΠιπεριέςΧρωματιστές4Τεμ', 'Σκόρδος1Τεμ', 'ΜπανάνεςΕισαγωγής1kg']]
+urls_freshvegetables= [[ "/freska-lachanika","/freska-lachanika?page=2","/freska-lachanika?page=3","/freska-lachanika?page=4",
+"/freska-lachanika?page=5","/freska-lachanika?page=6","/freska-lachanika?page=7","/freska-lachanika?page=8","/freska-lachanika?page=9"],
+['ΝτομάτεςΕλλάς1kg', 'ΑγγουράκιαΧωραφιού1kg', 'Λεμόνια1kg', 'ΚρεμμύδιαΑκαθάριστα1kg', 'Αγγουράκια1kg', 'ΝτοματίνιαΜίνιΦοινικωτά500g',
+ 'ΚαρόταΑκαθάριστα1kg', 'Αβοκάντο1kg', 'ΜαρούλιΡομάναΔέσμη1Τεμ', 'ΠιπεριέςΧρωματιστές4Τεμ', 'Σκόρδος1Τεμ']]
 
 urls_potatoes =[["/freska-lachanika"],['ΦρέσκεςΠατάτεςΚυπριακέςΝέαςΣoδειάς2kg']]
 
 urls_fruit = [["/freska-frouta","/freska-frouta?page=2","/freska-frouta?page=3"],['ΜπανάνεςΕισαγωγής1kg','ΜήλαPinkLady1kg', 'ΠράσινοΣταφύλι750g', 'ΜήλαGrannySmith1kg', 'ΑχλάδιαConference1kg', 
-'ΜήλαΚόκκιναDelicious1kg', 'Μύρτιλα125g', 'ΜήλαΚίτριναDelicious1kg', 'Ακτινίδια500g', 'ΠορτοκάλιαMerlinAAA1kg', 'ΜήλαRoyalGala1kg', 'ΠορτοκάλιαΓιαΧυμό2kg']]
+'ΜήλαΚόκκιναDelicious1kg', 'Μύρτιλα125g', 'ΜήλαΚίτριναDelicious1kg', 'Ακτινίδια500g', 'ΠορτοκάλιαMerlinAAA1kg', 'ΜήλαRoyalGala1kg', 'ΠορτοκάλιαΓιαΧυμό1kg']]
 
 urls_pork= [["/klasikes-kopes-choirinou","/klasikes-kopes-choirinou?page=2"],['ΧοιρινόΚιμάςΜερί500g', 'ΧοιρινόΜπριζόλαΛαιμός4Τεμ1,200kg', 'ΧοιρινόΣούβλαΛαιμόςΛαπάςΜεΚόκκαλο1,1kg']]
 
@@ -178,9 +210,9 @@ urls_lamb = [["/arni"],['ΑρνίΓιαΣούβλα1kg']]
 
 urls_beaf= [["/vodino"],['ΒοδινόΚιμάς500g']]
 
-urls_fish= [["/psaria"],['ΤσιπούραΦρέσκιαΚαθαρισμένη3ΤεμMax1,500kg']]
+urls_fish= [["/psaria"],['ΤσιπούραΦρέσκιαΚαθαρισμένη3ΤεμMax1,700kg']]
 
-urls_preservedmilk= [["/makras-diarkeias"],['MlekovitaΠλήρες3.5%ΓάλαΜακράςΔιαρκείας1L', 'LauraΕλαφρύΓάλαΜακράςΔιαρκείας1,5%1L']]
+urls_preservedmilk= [["/makras-diarkeias"],['BertiΠλήρες3.5%ΓάλαΜακράςΔιαρκείας1L', 'BertiΕλαφρύ1.5%ΓάλαΜακράςΔιαρκείας1L']]
 
 urls_lowfatmilk= [["/ageladino","/ageladino?page=2"],['ΛανίτηςΕλαφρύΓάλα2L',  'ΛανίτηςΕλαφρύΓάλα1,5L','ΧαραλαμπίδηςΚρίστηςDelactΓάλα1L', 'ΧαραλαμπίδηςΚρίστηςΕλαφρύΓάλα2L',
  'ΧαραλαμπίδηςΚρίστηςΕλαφρύΓάλα1L','ΧαραλαμπίδηςΚρίστηςΕλαφρύΓάλα1,5L']]
@@ -210,6 +242,7 @@ class_labels = ['Bread','Other bakery products','Breakfast Cereals','Pasta produ
 'Other food products n.e.c.','Sugar','Flours and other cereals','Chocolate','Confectionery products','Fresh or chilled vegetables other than potatoes and other tubers',
 'Potatoes','Fresh or chilled fruit','Pork','Other meat','Poultry','Lamb and goat','Beef and veal','Fresh or chilled fish','Preserved milk','Low fat Milk',
 'Whole Milk','Yogurt','Butter','Margarine and other vegetable fats','Eggs']
+
 
 #the scrapper function
 def scrapper_supermarketcy(urls:list,products:list):
@@ -424,8 +457,7 @@ def scrapper_phoneservices_primetel(urls:list):
             prices_final_phone.append(float(prices_phoneservices[3].strip('\€')))
             prices_final_phone.append(float(prices_phoneservices[5].strip('\€')))
 
- # read csv file with product description, class and urls
-products_urls = pd.read_excel('products_bpp.xlsx')
+
 
 #put the rows in a list
 all_items_primetel = []
@@ -443,8 +475,10 @@ for i in range(len(all_items_primetel)):
 
 
 
+# read csv file with product description, class and urls
+products_urls = pd.read_excel('products_bpp.xlsx')
 marksspencerdf = products_urls.iloc[209:227,]
-marksspencerdf.head()
+
 
 #the scrapper function
 prices_final_marksspencer = []
@@ -484,80 +518,71 @@ labels = marksspencerdf['item.subclass'].values.tolist()
 #scrap the prices
 scrapper_marksspencer(urls)
 
-#put the rows in a list
-all_items_marksspencer = []
-for product,price,label in zip(products,prices_final_marksspencer,labels):
-    all_items_marksspencer.append([product,price,datetime.now(),label,'Marks&Spencer'])
+#create the dataframe
+df_marksspencer = initialise_df(products,prices_final_marksspencer,labels,'Marks&Spencer')
 
-#initialize a dataframe
-df_marksspencer=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','retailer'))
-
-#assign the values to each column
-for i in range(len(all_items_marksspencer)):
-    df.loc[len(df)] = (all_items_marksspencer[i][0],all_items_marksspencer[i][1],all_items_marksspencer[i][2],all_items_marksspencer[i][3],all_items_marksspencer[i][4],0)
-
-#change type of the item.price column
-df_marksspencer['item.price'] = df_marksspencer['item.price'].astype('float32')
+#calculating the mean price
+df_marksspencer = mean_price(df_marksspencer)
 
 
 
+#Internsport
+#the scrapper function
+internsportsdf = products_urls.iloc[226:243,]
 
-# internsportsdf = products_urls.iloc[226:243,]
-# internsportsdf.head()
+prices_final_internsports = []
 
-# #the scrapper function
-# prices_final_internsports = []
-
-# def scrapper_intersports(urls:list):
-#     #for the different urls, putting the prices in a list
-#     url_internsports = 'https://www.intersport.com.cy'
-#     for url in urls:
-#         try:
-#             url_new = url_internsports+url
-#             page = urlopen(url_new)
-#             html = page.read().decode("utf-8")
-#             bs = BeautifulSoup(html, "html.parser")
+def scrapper_intersports(urls:list):
+    #for the different urls, putting the prices in a list
+    url_internsports = 'https://www.intersport.com.cy'
+    for url in urls:
+        try:
+            url_new = url_internsports+url
+            page = urlopen(url_new)
+            html = page.read().decode("utf-8")
+            bs = BeautifulSoup(html, "html.parser")
     
-#             scripts = bs.find_all('span',{'itemprop':"price"},string=True)
-#             #initialize the value of the final price scrapped
-#             price_final = 0
+            scripts = bs.find_all('span',{'itemprop':"price"},string=True)
+            #initialize the value of the final price scrapped
+            price_final = 0
 
-#             #get only the first element
-#             price_final = round(float(str(scripts[0]).strip('<span class="current-price" itemprop="price">€ </span>').replace(',', '.')),2)
+            #get only the first element
+            price_final = round(float(str(scripts[0]).strip('<span class="current-price" itemprop="price">€ </span>').replace(',', '.')),2)
 
-#             #add the price in the list    
-#             prices_final_internsports.append(price_final)
+            #add the price in the list    
+            prices_final_internsports.append(price_final)
+
+        except ValueError as ve:
+            #get only the first element
+            price_final = round(float(str(scripts[0]).strip('<span class="current-price  price-with-discount   " itemprop="price">€ </span>').replace(',', '.')),2)
+
+            #add the price in the list    
+            prices_final_internsports.append(price_final)
             
-#         except urllib.error.HTTPError as err:
-#             prices_final_internsports.append('NaN')
+        except urllib.error.HTTPError as err:
+            prices_final_internsports.append('NaN')
 
-# #columns urls,products,labels into lists
-# urls = internsportsdf['item.url'].values.tolist()
-# products = internsportsdf['item.name'].values.tolist()
-# labels = internsportsdf['item.subclass'].values.tolist()
+        except IndexError:
+            prices_final_internsports.append('NaN')
 
-# #scrap the prices
-# scrapper_intersports(urls)
+#columns urls,products,labels into lists
+urls = internsportsdf['item.url'].values.tolist()
+products = internsportsdf['item.name'].values.tolist()
+labels = internsportsdf['item.subclass'].values.tolist()
 
-# #put the rows in a list
-# all_items_internsports = []
-# for product,price,label in zip(products,prices_final_internsports,labels):
-#     all_items_internsports.append([product,price,datetime.now(),label,'InternSports'])
+#scrap the prices
+scrapper_intersports(urls)
 
-# #initialize a dataframe
-# df_internsports=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','retailer'))
+#create the dataframe
+df_internsports = initialise_df(products,prices_final_internsports,labels,'Internsports')
 
-# #assign the values to each column
-# for i in range(len(all_items_internsports)):
-#     df_internsports.loc[i] = (all_items_internsports[i][0],all_items_internsports[i][1],all_items_internsports[i][2],all_items_internsports[i][3],all_items_internsports[i][4])
-
-# #change type of the item.price column
-# df_internsports['item.price'] = df_internsports['item.price'].astype('float32')
+#calculating the mean price
+df_internsports = mean_price(df_internsports)
 
 
 
 famoussportsdf = products_urls.iloc[243:262,]
-famoussportsdf.tail()
+
 
 #the scrapper function
 prices_final_famoussports = []
@@ -597,20 +622,56 @@ labels = famoussportsdf['item.subclass'].values.tolist()
 #scrap the prices
 scrapper_famoussports(urls)
 
-#put the rows in a list
-all_items_famoussports = []
-for product,price,label in zip(products,prices_final_famoussports,labels):
-    all_items_famoussports.append([product,price,datetime.now(),label,'FamousSports'])
+#create the dataframe
+df_famoussports = initialise_df(products,prices_final_famoussports,labels,'FamousSports')
 
-#initialize a dataframe
-df_famoussports=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','retailer'))
+#calculating the mean price
+df_famoussports = mean_price(df_famoussports)
 
-#assign the values to each column
-for i in range(len(all_items_famoussports)):
-    df.loc[len(df)] = (all_items_famoussports[i][0],all_items_famoussports[i][1],all_items_famoussports[i][2],all_items_famoussports[i][3],all_items_famoussports[i][4],0)
 
-#change type of the item.price column
-df_famoussports['item.price'] = df_famoussports['item.price'].astype('float32')
+#Athlokinisi
+athlokinisidf = products_urls.iloc[262:280,]
+
+#the scrapper function
+prices_final_athlokinisi = []
+
+def scrapper_athlokinisi(urls:list):
+    #for the different urls, putting the prices in a list
+    url_athlokinisi = 'https://athlokinisi.com.cy'
+    for url in urls:
+        try:
+            url_new = url_athlokinisi+url
+            page = urlopen(url_new)
+            html = page.read().decode("utf-8")
+            bs = BeautifulSoup(html, "html.parser")
+    
+            scripts = bs.find_all('span',{'class':'ammount'},string=True)
+            #get only the first element
+            price_final = round(float(str(scripts[0]).strip('<span class="ammount">€ </span>')),2)
+
+            #add the price in the list    
+            prices_final_athlokinisi.append(price_final)
+            
+        except urllib.error.HTTPError as err:
+            prices_final_athlokinisi.append('NaN')
+
+        except IndexError:
+            prices_final_athlokinisi.append('NaN')
+
+
+#columns urls,products,labels into lists
+urls = athlokinisidf['item.url'].values.tolist()
+products = athlokinisidf['item.name'].values.tolist()
+labels = athlokinisidf['item.subclass'].values.tolist()
+
+#scrap the prices
+scrapper_athlokinisi(urls)
+
+#create the dataframe
+df_athlokinisi = initialise_df(products,prices_final_athlokinisi,labels,'Athlokinisi')
+
+#calculating the mean price
+df_athlokinisi = mean_price(df_athlokinisi)
 
 
 def garments():
@@ -634,6 +695,139 @@ def garments():
         df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
 
 garments()
+
+
+#Novella Hair Salon
+prices_final_hairsalon = []
+url_new = 'https://novella.com.cy/#services'
+page = urlopen(url_new)
+html = page.read().decode("utf-8")
+bs = BeautifulSoup(html, "html.parser")
+
+scripts = bs.find_all('td',{'class':'column-2'},string=True)
+price_ini = re.findall(r'\€\d+,\d\d',str(scripts))
+
+prices_final_hairsalon.append(round(float(str(price_ini[0]).strip('€').replace(',','.')),2))
+prices_final_hairsalon.append(round(float(str(price_ini[4]).strip('€').replace(',','.')),2))
+
+#################################################################################################################
+
+df_hairsalon=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','retailer'))
+
+df_hairsalon.loc[0] = ("Women's Services, HAIRCUT Stylist",prices_final_hairsalon[0],datetime.now(),'Hairdressing for women','Novella Hair Salon')
+df_hairsalon.loc[1] = ("Men's Services, HAIRCUT Stylist",prices_final_hairsalon[1],datetime.now(),'Hairdressing for men','Novella Hair Salon')
+
+#calculating the mean price
+df_hairsalon = mean_price(df_hairsalon)
+
+
+#Cyprus Post
+file = 'https://www.cypruspost.post/uploads/2cf9ec4f5a.pdf'
+table_1 = tb.read_pdf(file, pages = '6',pandas_options={'header': None}, stream=True)
+table_2 = tb.read_pdf(file, pages = '11',pandas_options={'header': None}, stream=True)
+
+df_package_1 = table_1[0]
+df_package_2 = table_2[0]
+
+#change the type of columns that contain the prices
+df_package_1[2]=df_package_1[2].astype('string')
+df_package_2[1]=df_package_2[1].astype('string')
+
+df_post=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','retailer'))
+
+all_items_post = [("ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Μικρά (P) 50 γρ.",round(float(df_package_1[2][14].split(' ')[0].replace(',','.')),2),datetime.now(),'Letter handling services','Cyprus Post'),
+                 ("ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Μεγάλα (G) 500 γρ.",round(float(df_package_1[2][21].split(' ')[0].replace(',','.')),2),datetime.now(),'Letter handling services','Cyprus Post'),
+                 ("ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Ακανόνιστα (E) 2000 γρ.",round(float(df_package_1[2][44].split(' ')[0].replace(',','.')),2),datetime.now(),'Letter handling services','Cyprus Post'),
+                 ("ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 0.5 κιλό",round(float(df_package_2[1][2].replace(',','.')),2),datetime.now(),'Other postal services','Cyprus Post'),
+                 ("ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 15 κιλά",round(float(df_package_2[1][17].replace(',','.')),2),datetime.now(),'Other postal services','Cyprus Post'),
+                 ("ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 15 κιλά",round(float(df_package_2[1][32].replace(',','.')),2),datetime.now(),'Other postal services','Cyprus Post') ]
+
+for i in range(6):
+    df_post.loc[i] = all_items_post[i]
+
+#calculating the mean price
+df_post = mean_price(df_post)
+
+
+#Cyprus Ministry of Education
+#Caution the fees are for the year 2022-2023 based on the link:
+#http://www.moec.gov.cy/idiotiki_ekpaidefsi/didaktra.html 
+
+pdf_1 = tb.read_pdf('http://archeia.moec.gov.cy/mc/698/didaktra_idiotikon_mesi_ekpaidefsi.pdf', pages = '1',pandas_options={'header': None}, stream=True)
+pdf_2 = tb.read_pdf('http://archeia.moec.gov.cy/mc/698/didaktra_idiotikon_dimotikon_scholeion.pdf', pages = '1',pandas_options={'header': None}, stream=True)
+pdf_3 = tb.read_pdf('http://archeia.moec.gov.cy/mc/698/didaktra_idiotikon_nipiagogeion.pdf', pages = '3',pandas_options={'header': None}, stream=True)
+
+df_secondary = pdf_1[0]
+df_primary = pdf_2[0]
+df_nursery =pdf_3[0]
+
+#change the type of columns that contain the prices
+df_nursery[7] = df_nursery[7].astype('string')
+df_primary[3] = df_primary[3].astype('string')
+
+for i in range(2,8):
+    df_secondary[i]= df_secondary[i].astype('string')
+
+
+df_school=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','retailer'))
+
+avg_grammar_nic = (float(df_secondary[2][6])+float(df_secondary[3][6].split()[0])+float(df_secondary[3][6].split()[1])+float(df_secondary[4][6])+float(df_secondary[5][6])+float(df_secondary[6][6])+float(df_secondary[7][6]))/7
+avg_grammar_lim = (float(df_secondary[2][23])+float(df_secondary[3][23].split()[0])+float(df_secondary[3][23].split()[1])+float(df_secondary[4][23])+float(df_secondary[5][23])+float(df_secondary[6][23])+float(df_secondary[7][23]))/7
+
+all_items_school = [("THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΝΗΠΙΑΓΩΓΕΙΩΝ 2022-2023",float(df_nursery[7][30].strip('€*').replace(".", "")),datetime.now(),'Pre-primary education (ISCED-97 level 0)','Cyprus Ministry of Education, Sport and Youth'),
+                 ("THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΔΗΜΟΤΙΚΩΝ ΣΧΟΛΕΙΩΝ 2022-2023",float(df_primary[3][15].strip('€').replace(",", "")),datetime.now(),'Primary education (ISCED-97 level 1)','Cyprus Ministry of Education, Sport and Youth'),
+                 ("THE GRAMMAR SCHOOL (Nicosia), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2022-2023, Α-ΣΤ ΤΑΞΗ",avg_grammar_nic,datetime.now(),'Secondary education','Cyprus Ministry of Education, Sport and Youth'),
+                 ("THE GRAMMAR SCHOOL (Limassol), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2022-2023, Α-ΣΤ ΤΑΞΗ",avg_grammar_lim,datetime.now(),'Secondary education','Cyprus Ministry of Education, Sport and Youth'),
+                 ("THE GRAMMAR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2022-2023, Ζ ΤΑΞΗ",float(df_secondary[7][6]),datetime.now(),'Post-secondary non-tertiary education (ISCED 4)','Cyprus Ministry of Education, Sport and Youth'),
+                 ("THE GRAMMAR SCHOOL (Limassol), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2022-2023, Ζ ΤΑΞΗ",float(df_secondary[7][23]),datetime.now(),'Post-secondary non-tertiary education (ISCED 4)','Cyprus Ministry of Education, Sport and Youth') ]
+
+for i in range(6):
+    df_school.loc[i] = all_items_school[i]
+
+#calculating the mean price
+df_school = mean_price(df_school)
+
+
+#Consumer Protection Service: Fuels
+#https://eforms.eservices.cyprus.gov.cy/MCIT/MCIT/PetroleumPrices
+#alternative: https://gr.globalpetrolprices.com/Cyprus/
+
+user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
+headers={'User-Agent':user_agent} 
+
+prices_final_petrol = []
+url = 'https://gr.globalpetrolprices.com/Cyprus/'        
+
+#open and read the different urls
+url_new = url
+request=urllib.request.Request(url,headers=headers) 
+response = urllib.request.urlopen(request)
+data = response.read().decode("utf-8")
+data
+
+pattern = '\d\.\d+\s'
+price_ini = re.findall(pattern,data)
+
+prices_final_petrol.append(float(str(price_ini[3]).strip('\r')))
+prices_final_petrol.append(float(str(price_ini[6]).strip('\r')))
+prices_final_petrol.append(float(str(price_ini[9]).strip('\r')))
+prices_final_petrol.append(float(str(price_ini[12]).strip('\r')))
+
+####################################################################################################
+
+df_petrol=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','retailer'))
+
+df_petrol.loc[0] = ("Αμόλυβδη Μέση Τιμή Παγκύπρια",prices_final_petrol[0],datetime.now(),'Petrol','Global Petrol Prices')
+df_petrol.loc[1] = ("Πετρέλαιο Κίνησης Μέση Τιμή Παγκύπρια",prices_final_petrol[1],datetime.now(),'Diesel','Global Petrol Prices')
+df_petrol.loc[2] = ("Πετρέλαιο Μέση Τιμή Παγκύπρια",prices_final_petrol[2],datetime.now(),'Diesel','Global Petrol Prices')
+df_petrol.loc[3] = ("Πετρέλαιο Θέρμανσης Μέση Τιμή Παγκύπρια",prices_final_petrol[3],datetime.now(),'Liquid Fuels','Global Petrol Prices')
+
+#calculating the mean price
+df_petrol = mean_price(df_petrol)
+
+
+
+
 
 df.to_csv("BillionPricesProject_ProductList.csv", index=False)
 
