@@ -23,35 +23,6 @@ df = pd.read_csv("BillionPricesProject_ProductList.csv")
 # Returns scraped data
 
 
-#Define functions:
-#initialize dataframe
-def initialise_df(products,prices_final,labels,retailer):
-    #put the rows in a list
-    all_items = []
-    for product,price,label in zip(products,prices_final,labels):
-        all_items.append([product,price,datetime.now(),label,retailer])
-
-    #initialise a dataframe
-    df=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','retailer'))
-
-    #assign the values to each column
-    for i in range(len(all_items)):
-        df.loc[i] = (all_items[i][0],all_items[i][1],all_items[i][2],all_items[i][3],all_items[i][4])
-
-    return df
-
-#calculating the mean price 
-def mean_price(df):
-    #change type of the item.price column
-    df['item.price'] = df['item.price'].astype('float8')
-
-    #calculating the mean price of each category
-    df_mean  = round(df.groupby('item.subclass')[['item.price']].mean(),2)
-    df_mean.reset_index(drop=False, inplace=True)
-    df_mean.rename(columns={"item.price":"average price"},inplace=True)
-    df = pd.merge(df, df_mean, on="item.subclass", how="inner")
-    return df
-
 
 def supermarketCy(item):
     p=[]
@@ -341,9 +312,6 @@ for url,i,label in zip(urls_all,range(len(urls_all)),class_labels):
         all_items_supermarketcy.append([product,price,datetime.now(),label,'SupermarketCy',mean_price])
             
 
-#initialize a dataframe
-df_supermarketcy=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','retailer','average price'))
-
 #assign the values to each column
 for i in range(len(all_items_supermarketcy)):
     df.loc[len(df)] = (all_items_supermarketcy[i][0],all_items_supermarketcy[i][1],all_items_supermarketcy[i][2],all_items_supermarketcy[i][3],all_items_supermarketcy[i][4],0)
@@ -415,8 +383,6 @@ for url,i,label in zip(urls_all_phones,range(len(urls_all_phones)),class_labels_
     for product,price in zip(url[1],prices_final_phone):
         all_items_cyta.append([product,price,datetime.now(),label,'CYTA',price])
             
-#initialize a dataframe
-df_cyta=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','retailer','average price'))
 
 #assign the values to each column
 for i in range(len(all_items_cyta)):
@@ -466,8 +432,6 @@ for url,label in zip(urls_all_phones,class_labels_phones):
     for product,price in zip(url[1],prices_final_phone):
         all_items_primetel.append([product,price,datetime.now(),label,'Primetel'])
             
-#initialize a dataframe
-df_primetel=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','retailer'))
 
 #assign the values to each column
 for i in range(len(all_items_primetel)):
@@ -518,11 +482,16 @@ labels = marksspencerdf['item.subclass'].values.tolist()
 #scrap the prices
 scrapper_marksspencer(urls)
 
-#create the dataframe
-df_marksspencer = initialise_df(products,prices_final_marksspencer,labels,'Marks&Spencer')
+all_items_marksspencer = []
+for product,price,label in zip(products,prices_final_marksspencer,labels):
+    all_items_marksspencer.append([product,price,datetime.now(),label,'Marks&Spencer'])
 
-#calculating the mean price
-df_marksspencer = mean_price(df_marksspencer)
+#assign the values to each column
+for i in range(len(all_items_marksspencer)):
+    df.loc[len(df)] = (all_items_marksspencer[i][0],all_items_marksspencer[i][1],all_items_marksspencer[i][2],all_items_marksspencer[i][3],all_items_marksspencer[i][4])
+
+
+
 
 
 
@@ -573,11 +542,15 @@ labels = internsportsdf['item.subclass'].values.tolist()
 #scrap the prices
 scrapper_intersports(urls)
 
-#create the dataframe
-df_internsports = initialise_df(products,prices_final_internsports,labels,'Internsports')
+all_items_internsports = []
+for product,price,label in zip(products,prices_final_internsports,labels):
+    all_items_internsports.append([product,price,datetime.now(),label,'InternSports'])
 
-#calculating the mean price
-df_internsports = mean_price(df_internsports)
+
+#assign the values to each column
+for i in range(len(all_items_internsports)):
+    df.loc[len(df)] = (all_items_internsports[i][0],all_items_internsports[i][1],all_items_internsports[i][2],all_items_internsports[i][3],all_items_internsports[i][4])
+
 
 
 
@@ -622,11 +595,15 @@ labels = famoussportsdf['item.subclass'].values.tolist()
 #scrap the prices
 scrapper_famoussports(urls)
 
-#create the dataframe
-df_famoussports = initialise_df(products,prices_final_famoussports,labels,'FamousSports')
+all_items_famoussports = []
+for product,price,label in zip(products,prices_final_famoussports,labels):
+    all_items_famoussports.append([product,price,datetime.now(),label,'FamousSports'])
 
-#calculating the mean price
-df_famoussports = mean_price(df_famoussports)
+
+#assign the values to each column
+for i in range(len(all_items_famoussports)):
+    df.loc[len(df)] = (all_items_famoussports[i][0],all_items_famoussports[i][1],all_items_famoussports[i][2],all_items_famoussports[i][3],all_items_famoussports[i][4])
+
 
 
 #Athlokinisi
@@ -667,11 +644,15 @@ labels = athlokinisidf['item.subclass'].values.tolist()
 #scrap the prices
 scrapper_athlokinisi(urls)
 
-#create the dataframe
-df_athlokinisi = initialise_df(products,prices_final_athlokinisi,labels,'Athlokinisi')
+all_items_athlokinisi = []
+for product,price,label in zip(products,prices_final_athlokinisi,labels):
+    all_items_athlokinisi.append([product,price,datetime.now(),label,'Athlokinisi'])
 
-#calculating the mean price
-df_athlokinisi = mean_price(df_athlokinisi)
+
+#assign the values to each column
+for i in range(len(all_items_athlokinisi)):
+    df.loc[len(df)] = (all_items_athlokinisi[i][0],all_items_athlokinisi[i][1],all_items_athlokinisi[i][2],all_items_athlokinisi[i][3],all_items_athlokinisi[i][4])
+
 
 
 def garments():
@@ -712,13 +693,11 @@ prices_final_hairsalon.append(round(float(str(price_ini[4]).strip('€').replace
 
 #################################################################################################################
 
-df_hairsalon=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','retailer'))
 
-df_hairsalon.loc[0] = ("Women's Services, HAIRCUT Stylist",prices_final_hairsalon[0],datetime.now(),'Hairdressing for women','Novella Hair Salon')
-df_hairsalon.loc[1] = ("Men's Services, HAIRCUT Stylist",prices_final_hairsalon[1],datetime.now(),'Hairdressing for men','Novella Hair Salon')
+df.loc[len(df)] = ("Women's Services, HAIRCUT Stylist",prices_final_hairsalon[0],datetime.now(),'Hairdressing for women','Novella Hair Salon')
+df.loc[len(df)] = ("Men's Services, HAIRCUT Stylist",prices_final_hairsalon[1],datetime.now(),'Hairdressing for men','Novella Hair Salon')
 
-#calculating the mean price
-df_hairsalon = mean_price(df_hairsalon)
+
 
 
 #Cyprus Post
@@ -733,8 +712,6 @@ df_package_2 = table_2[0]
 df_package_1[2]=df_package_1[2].astype('string')
 df_package_2[1]=df_package_2[1].astype('string')
 
-df_post=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','retailer'))
-
 all_items_post = [("ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Μικρά (P) 50 γρ.",round(float(df_package_1[2][14].split(' ')[0].replace(',','.')),2),datetime.now(),'Letter handling services','Cyprus Post'),
                  ("ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Μεγάλα (G) 500 γρ.",round(float(df_package_1[2][21].split(' ')[0].replace(',','.')),2),datetime.now(),'Letter handling services','Cyprus Post'),
                  ("ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Ακανόνιστα (E) 2000 γρ.",round(float(df_package_1[2][44].split(' ')[0].replace(',','.')),2),datetime.now(),'Letter handling services','Cyprus Post'),
@@ -743,10 +720,8 @@ all_items_post = [("ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ Α�
                  ("ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 15 κιλά",round(float(df_package_2[1][32].replace(',','.')),2),datetime.now(),'Other postal services','Cyprus Post') ]
 
 for i in range(6):
-    df_post.loc[i] = all_items_post[i]
+    df.loc[len(df)] = all_items_post[i]
 
-#calculating the mean price
-df_post = mean_price(df_post)
 
 
 #Cyprus Ministry of Education
@@ -769,8 +744,6 @@ for i in range(2,8):
     df_secondary[i]= df_secondary[i].astype('string')
 
 
-df_school=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','retailer'))
-
 avg_grammar_nic = (float(df_secondary[2][6])+float(df_secondary[3][6].split()[0])+float(df_secondary[3][6].split()[1])+float(df_secondary[4][6])+float(df_secondary[5][6])+float(df_secondary[6][6])+float(df_secondary[7][6]))/7
 avg_grammar_lim = (float(df_secondary[2][23])+float(df_secondary[3][23].split()[0])+float(df_secondary[3][23].split()[1])+float(df_secondary[4][23])+float(df_secondary[5][23])+float(df_secondary[6][23])+float(df_secondary[7][23]))/7
 
@@ -782,10 +755,8 @@ all_items_school = [("THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑ
                  ("THE GRAMMAR SCHOOL (Limassol), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2022-2023, Ζ ΤΑΞΗ",float(df_secondary[7][23]),datetime.now(),'Post-secondary non-tertiary education (ISCED 4)','Cyprus Ministry of Education, Sport and Youth') ]
 
 for i in range(6):
-    df_school.loc[i] = all_items_school[i]
+    df.loc[len(df)] = all_items_school[i]
 
-#calculating the mean price
-df_school = mean_price(df_school)
 
 
 #Consumer Protection Service: Fuels
@@ -815,17 +786,21 @@ prices_final_petrol.append(float(str(price_ini[12]).strip('\r')))
 
 ####################################################################################################
 
-df_petrol=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','retailer'))
-
-df_petrol.loc[0] = ("Αμόλυβδη Μέση Τιμή Παγκύπρια",prices_final_petrol[0],datetime.now(),'Petrol','Global Petrol Prices')
-df_petrol.loc[1] = ("Πετρέλαιο Κίνησης Μέση Τιμή Παγκύπρια",prices_final_petrol[1],datetime.now(),'Diesel','Global Petrol Prices')
-df_petrol.loc[2] = ("Πετρέλαιο Μέση Τιμή Παγκύπρια",prices_final_petrol[2],datetime.now(),'Diesel','Global Petrol Prices')
-df_petrol.loc[3] = ("Πετρέλαιο Θέρμανσης Μέση Τιμή Παγκύπρια",prices_final_petrol[3],datetime.now(),'Liquid Fuels','Global Petrol Prices')
-
-#calculating the mean price
-df_petrol = mean_price(df_petrol)
+df.loc[len(df)] = ("Αμόλυβδη Μέση Τιμή Παγκύπρια",prices_final_petrol[0],datetime.now(),'Petrol','Global Petrol Prices')
+df.loc[len(df)] = ("Πετρέλαιο Κίνησης Μέση Τιμή Παγκύπρια",prices_final_petrol[1],datetime.now(),'Diesel','Global Petrol Prices')
+df.loc[len(df)] = ("Πετρέλαιο Μέση Τιμή Παγκύπρια",prices_final_petrol[2],datetime.now(),'Diesel','Global Petrol Prices')
+df.loc[len(df)] = ("Πετρέλαιο Θέρμανσης Μέση Τιμή Παγκύπρια",prices_final_petrol[3],datetime.now(),'Liquid Fuels','Global Petrol Prices')
 
 
+#Calculate the mean value for each category
+#change type of the item.price column
+df['product.price'] = df['product.price'].astype('float64')
+
+#calculating the mean price of each category
+df_mean  = round(df.groupby('product.subclass')[['product.price']].mean(),2)
+df_mean.reset_index(drop=False, inplace=True)
+df_mean.rename(columns={"product.price":"average price"},inplace=True)
+df = pd.merge(df, df_mean, on="product.subclass", how="inner")
 
 
 
