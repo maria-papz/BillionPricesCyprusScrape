@@ -7,6 +7,7 @@ from datetime import datetime
 import time
 import tabula as tb
 import xlsxwriter
+
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import urllib.request
@@ -655,6 +656,299 @@ for i in range(len(all_items_athlokinisi)):
 
 
 
+#the cygar shop
+prices_final_cigars=[]
+
+url = "https://www.thecygarshop.com/product-page/machetero-panatela"
+page = urlopen(url)
+html = page.read().decode("utf-8")
+bs = BeautifulSoup(html, "html.parser")
+    
+scripts = bs.find_all('span',{'data-hook':'formatted-primary-price'},string=True)
+scripts
+#get only the first element
+price_final = float(str(scripts[0]).strip('<span data-hook="formatted-primary-price">€ </span>'))
+
+#add the price in the list    
+prices_final_cigars.append(price_final)
+
+#numbeo
+url = "https://www.numbeo.com/cost-of-living/country_price_rankings?itemId=17&displayCurrency=EUR"
+page = urlopen(url)
+html = page.read().decode("utf-8")
+bs = BeautifulSoup(html, "html.parser")
+    
+scripts = bs.find_all('script',string=True)
+price_ini = re.findall(r"\['Cyprus', \d.+\]",str(scripts))
+#get only the first element
+price_final = float(str(price_ini[0]).strip("['Cyprus', ]"))
+
+#add the price in the list    
+prices_final_cigars.append(price_final)
+
+
+#ewhole-sale
+url = "https://www.ewsale.com/product-page/aspire-puxos-kit-%CE%B7%CE%BB%CE%B5%CE%BA%CF%84%CF%81%CE%BF%CE%BD%CE%B9%CE%BA%CE%AC-%CF%84%CF%83%CE%B9%CE%B3%CE%AC%CF%81%CE%B1-%CE%BC%CF%80%CE%B1%CF%84%CE%B1%CF%81%CE%AF%CE%B1-21700-200-ml-%CF%85%CE%B3%CF%81%CE%AC-%CE%AC%CF%84%CE%BC%CE%B9"
+page = urlopen(url)
+html = page.read().decode("utf-8")
+bs = BeautifulSoup(html, "html.parser")
+    
+scripts = bs.find_all('span',{'data-hook':'formatted-primary-price'},string=True)
+#get only the first element
+price_final = float(str(scripts[0]).strip('<span data-hook="formatted-primary-price">   €</span>').replace(',','.'))
+
+#add the price in the list    
+prices_final_cigars.append(price_final)
+
+#columns urls,products,labels into lists
+products = ['Machetero Panatela','Marlboro 20 Pack','Smok S-priv Kit E-Τσιγάρα + 2 μπαταρίες  + 200 ml Υγρά  άτμισης']
+labels = ['Cigars','Cigarettes','Other Tobaco Products']
+retailers = ['The CYgar Shop','NUMBEO','E-WHOLESALE']
+
+#put the rows in a list
+all_items_cigars = []
+for product,price,label,retailer in zip(products,prices_final_cigars,labels,retailers):
+    all_items_cigars.append([product,price,datetime.now(),label,retailer])
+
+
+#assign the values to each column
+for i in range(len(all_items_cigars)):
+    df.loc[len(df)] = (all_items_cigars[i][0],all_items_cigars[i][1],all_items_cigars[i][2],all_items_cigars[i][3],all_items_cigars[i][4])
+
+
+#stephanis
+stephanisdf = products_urls.iloc[302:343,]
+
+#the scrapper function
+prices_final_stephanis = []
+
+def scrapper_stephanis(urls:list):
+    #for the different urls, putting the prices in a list
+    url_stephanis = "https://www.stephanis.com.cy/en"
+    for url in urls:
+        try:
+            url_new = url_stephanis+url
+            page = urlopen(url_new)
+            html = page.read().decode("utf-8")
+            bs = BeautifulSoup(html, "html.parser")
+    
+            scripts = bs.find_all('span',{'class':'item-price'},string=True)
+            #get only the first element
+            price_final = float(str(scripts[0]).strip('<span class="item-price">€ </span>'))
+
+            #add the price in the list    
+            prices_final_stephanis.append(price_final)
+            
+        except urllib.error.HTTPError as err:
+            prices_final_stephanis.append('NaN')
+
+
+#columns urls,products,labels into lists
+urls = stephanisdf['item.url'].values.tolist()
+products = stephanisdf['item.name'].values.tolist()
+labels = stephanisdf['item.subclass'].values.tolist()
+
+#scrap the prices
+scrapper_stephanis(urls)
+
+all_items_stephanis = []
+for product,price,label in zip(products,prices_final_stephanis,labels):
+    all_items_stephanis.append([product,price,datetime.now(),label,'Stephanis'])
+
+#assign the values to each column
+for i in range(len(all_items_stephanis)):
+    df.loc[len(df)] = (all_items_stephanis[i][0],all_items_stephanis[i][1],all_items_stephanis[i][2],all_items_stephanis[i][3],all_items_stephanis[i][4])
+
+
+
+#electroline
+urls = ["https://electroline.com.cy/products/garden/garden-power-tools/%ce%b1%ce%bb%cf%85%cf%83%ce%bf%cf%80%cf%81%ce%af%ce%bf%ce%bd%ce%b1/oregon-cs1200-electric-chainsaw-1800w/",
+        "https://electroline.com.cy/products/tools/hand-tools-2/screwdrivers/kapriol-kap33533-set-screwdrivers-6pcs/",
+        "https://electroline.com.cy/products/garden-tools/hand-tools/hand-tools17002/tactix-900163-tool-set-14-pieces/"]
+
+prices_final_electroline = []
+
+for url in urls:
+    #used for the request, urlopen functions
+    user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
+    headers={'User-Agent':user_agent} 
+
+    #initial price list and the value of the final price scrapped
+    price_ini=[]
+        
+    #open and read the different urls
+    request=urllib.request.Request(url,headers=headers) 
+    response = urllib.request.urlopen(request)
+    data = response.read().decode("utf-8")
+
+    #get the strings for the prices of the products using regular expressions
+    pattern = '\<meta property="product:price:amount" content="\d+.\d+" \/>'
+    price_ini = re.findall(pattern,data)
+
+    prices_final_electroline.append(float(str(price_ini[0]).strip('<meta property="product:price:amount" content=" " />')))
+
+
+#columns urls,products,labels into lists
+products = ['WORX 30091701000 Ηλεκτρικό Aλυσοπρίονο','TACTIX MER-205604 Σετ Kατσαβίδια, 12 Tεμάχια','TACTIX 900163 Σετ Εργαλείων 14 Τεμάχια',]
+labels = ['Motorized major tools and equipment','Non-motorized small tools','Miscellaneous small tool accessories']
+
+#put the rows in a list
+all_items_electroline = []
+for product,price,label in zip(products,prices_final_electroline,labels):
+    all_items_electroline.append([product,price,datetime.now(),label,'Electroline'])
+
+
+#assign the values to each column
+for i in range(len(all_items_electroline)):
+    df.loc[len(df)] = (all_items_electroline[i][0],all_items_electroline[i][1],all_items_electroline[i][2],all_items_electroline[i][3],all_items_electroline[i][4])
+
+
+
+#awol
+awoldf = products_urls.iloc[280:288,]
+
+#the scrapper function
+prices_final_awol = []
+
+def scrapper_awol(urls:list):
+    #for the different urls, putting the prices in a list
+    url_awol = "https://www.awol.com.cy"
+    for url in urls:
+        try:
+            #used for the request, urlopen functions
+            user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
+            headers={'User-Agent':user_agent} 
+
+            #initial price list and the value of the final price scrapped
+            price_ini=[]
+        
+            #open and read the different urls
+            request=urllib.request.Request(url_awol+url,headers=headers) 
+            response = urllib.request.urlopen(request)
+            data = response.read().decode("utf-8")
+
+            #get the strings for the prices of the products using regular expressions
+            pattern = '<meta property="og:price:amount" content="\d+.\d+">'
+            price_ini = re.findall(pattern,data)
+
+            prices_final_awol.append(float(str(price_ini[0]).strip('<meta property="og:price:amount" content=" " >').replace(',','.')))
+            
+        except urllib.error.HTTPError as err:
+            prices_final_awol.append('NaN')
+
+
+#columns urls,products,labels into lists
+urls = awoldf['item.url'].values.tolist()
+products = awoldf['item.name'].values.tolist()
+labels = awoldf['item.subclass'].values.tolist()
+
+#scrap the prices
+scrapper_awol(urls)
+
+all_items_awol = []
+for product,price,label in zip(products,prices_final_awol,labels):
+    all_items_awol.append([product,price,datetime.now(),label,'AWOL'])
+
+#assign the values to each column
+for i in range(len(all_items_awol)):
+    df.loc[len(df)] = (all_items_awol[i][0],all_items_awol[i][1],all_items_awol[i][2],all_items_awol[i][3],all_items_awol[i][4])
+
+
+#motorace
+motoracedf = products_urls.iloc[288:302,]
+
+#the scrapper function
+prices_final_motorace = []
+
+def scrapper_motorace(urls:list):
+    #for the different urls, putting the prices in a list
+    url_motorace = "https://www.motorace.com.cy"
+    for url in urls:
+        try:
+            url_new = url_motorace+url
+            page = urlopen(url_new)
+            html = page.read().decode("utf-8")
+            bs = BeautifulSoup(html, "html.parser")
+    
+            scripts = bs.find_all('span',{'class':'price'},string=True)
+            #get only the first element
+            price_final = float(str(scripts[0]).strip('<span class="price">€ </span>').replace(',',''))
+
+            #add the price in the list    
+            prices_final_motorace.append(price_final)
+            
+        except urllib.error.HTTPError as err:
+            prices_final_motorace.append('NaN')
+
+#columns urls,products,labels into lists
+urls = motoracedf['item.url'].values.tolist()
+products = motoracedf['item.name'].values.tolist()
+labels = motoracedf['item.subclass'].values.tolist()
+
+#scrap the prices
+scrapper_motorace(urls)
+
+all_items_motorace = []
+for product,price,label in zip(products,prices_final_awol,labels):
+    all_items_motorace.append([product,price,datetime.now(),label,'MotoRace'])
+
+#assign the values to each column
+for i in range(len(all_items_motorace)):
+    df.loc[len(df)] = (all_items_motorace[i][0],all_items_motorace[i][1],all_items_motorace[i][2],all_items_motorace[i][3],all_items_motorace[i][4])
+
+
+#bwell pharmacy
+# Bwell Pharmacy (https://bwell.com.cy/)
+urls = ["https://bwell.com.cy/shop/health/cough-sore-throat/physiomer-hypertonic-eucalyptus-135-ml/",
+        "https://bwell.com.cy/shop/mother-child/pregnancy-supplements/vitabiotics-pregnacare-original-30-tabs/",
+        "https://bwell.com.cy/shop/health/medical-devices/geatherm-oxy-control-pulse-oximeter/",
+        "https://bwell.com.cy/shop/health/medical-devices/flaem-respirair-nebulizer/"]
+
+prices_final_bwell = []
+
+for url in urls:
+    #used for the request, urlopen functions
+    user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
+    headers={'User-Agent':user_agent} 
+
+    #initial price list and the value of the final price scrapped
+    price_ini=[]
+        
+    #open and read the different urls
+    request=urllib.request.Request(url,headers=headers) 
+    response = urllib.request.urlopen(request)
+    data = response.read().decode("utf-8")
+
+    #get the strings for the prices of the products using regular expressions
+    pattern = '<\/span>&nbsp;\d+.\d+<\/bdi>'
+    price_ini = re.findall(pattern,data)
+
+    prices_final_bwell.append(float(str(price_ini[1]).strip('</span>&nbsp; </bdi>')))
+
+#columns urls,products,labels into lists
+products = ['Physiomer Nasal Spray Hygiene Active Prevention 135ml','Vitabiotics Pregnacare Original 30 tabs','Geatherm Oxy Control – Pulse Oximeter',
+'Flaem RespirAir nebulizer']
+labels = ['Pharmaceutical products','Pregnancy tests and mechanical contraceptive devices','Other medical products n.e.c.','Other therapeutic appliances and equipment']
+
+#put the rows in a list
+all_items_bwell = []
+for product,price,label in zip(products,prices_final_bwell,labels):
+    all_items_bwell.append([product,price,datetime.now(),label,'Bwell Pharmacy'])
+
+
+#assign the values to each column
+for i in range(len(all_items_bwell)):
+    df.loc[len(df)] = (all_items_bwell[i][0],all_items_bwell[i][1],all_items_bwell[i][2],all_items_bwell[i][3],all_items_bwell[i][4])
+
+
+
+#ikea
+ikeadf = products_urls.iloc[342:372,]
+
+
+
+
+
 def garments():
     headers = {'User-agent': 'Mozilla/5.0'}  
     data_garmets = pd.read_csv("Garmets.csv")
@@ -800,7 +1094,7 @@ df['product.price'] = df['product.price'].astype('float64')
 df_mean  = round(df.groupby('product.subclass')[['product.price']].mean(),2)
 df_mean.reset_index(drop=False, inplace=True)
 df_mean.rename(columns={"product.price":"average price"},inplace=True)
-df = pd.merge(df, df_mean, on="product.subclass", how="inner")
+df = pd.merge(df, df_mean, on="product.subclass", how="left")
 
 
 
