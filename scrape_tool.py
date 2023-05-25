@@ -717,7 +717,7 @@ for i in range(len(all_items_cigars)):
 
 
 #stephanis
-stephanisdf = products_urls.iloc[302:343,]
+stephanisdf = products_urls.iloc[302:342,]
 
 #the scrapper function
 prices_final_stephanis = []
