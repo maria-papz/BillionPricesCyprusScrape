@@ -943,8 +943,56 @@ for i in range(len(all_items_bwell)):
 
 
 #ikea
-ikeadf = products_urls.iloc[342:372,]
+ikeadf = products_urls.iloc[342:371,]
 
+#the scrapper function
+prices_final_ikea = []
+
+def scrapper_ikea(urls:list):
+    #for the different urls, putting the prices in a list
+    url_ikea = "https://www.ikea.com.cy"
+    for url in urls:
+        try:
+            url_new = url_ikea+url
+            page = urlopen(url_new)
+            html = page.read().decode("utf-8")
+            bs = BeautifulSoup(html, "html.parser")
+    
+            scripts = bs.find_all('script',string=True)
+
+            #get the strings for the prices of the products using regular expressions
+            price_ini = re.findall(r'"fb_value": "\d+.\d+"',str(scripts))
+
+            #add the price in the list    
+            prices_final_ikea.append(float(price_ini[0].strip('"fb_value": " "')))
+            
+        except urllib.error.HTTPError as err:
+            prices_final_ikea.append('NaN')
+
+        except urllib.error.URLError:
+            prices_final_ikea.append('NaN')
+
+        except IndexError:
+            prices_final_ikea.append('NaN')
+
+
+#columns urls,products,labels into lists
+urls = ikeadf['item.url'].values.tolist()
+products = ikeadf['item.name'].values.tolist()
+labels = ikeadf['item.subclass'].values.tolist()
+
+#scrap the prices
+scrapper_ikea(urls)
+
+#put the rows in a list
+all_items_ikea = []
+for product,price,label in zip(products,prices_final_ikea,labels):
+    all_items_ikea.append([product,price,datetime.now(),label,'IKEA'])
+
+
+#assign the values to each column
+for i in range(len(all_items_ikea)):
+    df.loc[len(df)] = (all_items_ikea[i][0],all_items_ikea[i][1],all_items_ikea[i][2],all_items_ikea[i][3],all_items_ikea[i][4])
 
 
 
