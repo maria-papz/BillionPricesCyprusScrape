@@ -769,24 +769,27 @@ urls = ["https://electroline.com.cy/products/garden/garden-power-tools/%ce%b1%ce
 prices_final_electroline = []
 
 for url in urls:
-    #used for the request, urlopen functions
-    user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
-    headers={'User-Agent':user_agent} 
+    try:
+        #used for the request, urlopen functions
+        user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
+        headers={'User-Agent':user_agent}   
 
-    #initial price list and the value of the final price scrapped
-    price_ini=[]
+        #initial price list and the value of the final price scrapped
+        price_ini=[]
         
-    #open and read the different urls
-    request=urllib.request.Request(url,headers=headers) 
-    response = urllib.request.urlopen(request)
-    data = response.read().decode("utf-8")
+        #open and read the different urls
+        request=urllib.request.Request(url,headers=headers) 
+        response = urllib.request.urlopen(request)
+        data = response.read().decode("utf-8")
 
-    #get the strings for the prices of the products using regular expressions
-    pattern = '\<meta property="product:price:amount" content="\d+.\d+" \/>'
-    price_ini = re.findall(pattern,data)
+        #get the strings for the prices of the products using regular expressions
+        pattern = '\<meta property="product:price:amount" content="\d+.\d+" \/>'
+        price_ini = re.findall(pattern,data)
 
-    prices_final_electroline.append(float(str(price_ini[0]).strip('<meta property="product:price:amount" content=" " />')))
-
+        prices_final_electroline.append(float(str(price_ini[0]).strip('<meta property="product:price:amount" content=" " />')))
+        
+    except urllib.error.HTTPError as err:
+            prices_final_electroline.append('NaN')
 
 #columns urls,products,labels into lists
 products = ['WORX 30091701000 Ηλεκτρικό Aλυσοπρίονο','TACTIX MER-205604 Σετ Kατσαβίδια, 12 Tεμάχια','TACTIX 900163 Σετ Εργαλείων 14 Τεμάχια',]
