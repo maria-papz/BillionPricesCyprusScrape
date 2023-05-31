@@ -213,7 +213,8 @@ class_labels = ['Bread','Other bakery products','Breakfast Cereals','Pasta produ
 'Dried, smoked or salted fish and seafood','Other meat preparations','Dried vegetables, other preserved or processed vegetables','Other milk products',
 'Other food products n.e.c.','Sugar','Flours and other cereals','Chocolate','Confectionery products','Fresh or chilled vegetables other than potatoes and other tubers',
 'Potatoes','Fresh or chilled fruit','Pork','Other meat','Poultry','Lamb and goat','Beef and veal','Fresh or chilled fish','Preserved milk','Low fat Milk',
-'Whole Milk','Yogurt','Butter','Margarine and other vegetable fats','Eggs']
+'Whole Milk','Yoghurt','Butter','Margarine and other vegetable fats','Eggs']
+
 
 
 #the scrapper function
@@ -1139,13 +1140,13 @@ df.loc[len(df)] = ("Πετρέλαιο Θέρμανσης Μέση Τιμή Πα
 
 #Calculate the mean value for each category
 #change type of the item.price column
-df['product.price'] = df['product.price'].astype('float64')
+df['product_price'] = df['product_price'].astype('float64')
 
 #calculating the mean price of each category
-df_mean  = round(df.groupby('product.subclass')[['product.price']].mean(),2)
+df_mean  = round(df.groupby('product_subclass')[['product_price']].mean(),2)
 df_mean.reset_index(drop=False, inplace=True)
-df_mean.rename(columns={"product.price":"average price"},inplace=True)
-df = pd.merge(df, df_mean, on="product.subclass", how="left")
+df_mean.rename(columns={"product_price":"average price"},inplace=True)
+df = pd.merge(df, df_mean, on="product_subclass", how="left")
 
 
 
