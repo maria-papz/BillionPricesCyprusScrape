@@ -311,13 +311,14 @@ all_items_supermarketcy = []
 for url,i,label in zip(urls_all,range(len(urls_all)),class_labels):
     scrapper_supermarketcy(url[0],url[1])
     for product,price in zip(product_excelfinal,price_excelfinal):
-        all_items_supermarketcy.append([product,price,datetime.now(),label,'SupermarketCy',mean_price])
-            
+        all_items_supermarketcy.append([product,price,datetime.now(),label,'SupermarketCy'])
 
 #assign the values to each column
 for i in range(len(all_items_supermarketcy)):
-    df.loc[len(df)] = (all_items_supermarketcy[i][0],all_items_supermarketcy[i][1],all_items_supermarketcy[i][2],all_items_supermarketcy[i][3],all_items_supermarketcy[i][4],0)
+    df.loc[len(df)] = (all_items_supermarketcy[i][0],all_items_supermarketcy[i][1],all_items_supermarketcy[i][2],all_items_supermarketcy[i][3],all_items_supermarketcy[i][4])
 
+
+SupermarketCyScrape()
 
 
 def AlphaMega():
@@ -333,13 +334,14 @@ def AlphaMega():
         date_time_scraped = now.strftime("%d/%m/%Y %H:%M:%S")
         product_subclass=am['product_subclass']
         retailer= am['retailer']
-        df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
-
-
-SupermarketCyScrape()
+        df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer]
 
 
 
+AlphaMega()
+
+
+#Cyta 
 urls_phone1 = [['https://www.cyta.com.cy/upgraded-telephony/el'],['Κλήσειςπροςσταθερό']]
 urls_phone2 = [['https://www.cyta.com.cy/upgraded-telephony/el'],['Κλήσειςπροςκινητό']]
 urls_internet = [['https://www.cyta.com.cy/mobile-internet'],['MobileInternetHome1']]
@@ -383,12 +385,12 @@ all_items_cyta = []
 for url,i,label in zip(urls_all_phones,range(len(urls_all_phones)),class_labels_phones):
     scrapper_phoneservices_cyta(url[0])
     for product,price in zip(url[1],prices_final_phone):
-        all_items_cyta.append([product,price,datetime.now(),label,'CYTA',price])
+        all_items_cyta.append([product,price,datetime.now(),label,'CYTA'])
             
 
 #assign the values to each column
 for i in range(len(all_items_cyta)):
-    df.loc[len(df)] = (all_items_cyta[i][0],all_items_cyta[i][1],all_items_cyta[i][2],all_items_cyta[i][3],all_items_cyta[i][4],all_items_cyta[i][5])
+    df.loc[len(df)] = (all_items_cyta[i][0],all_items_cyta[i][1],all_items_cyta[i][2],all_items_cyta[i][3],all_items_cyta[i][4])
 
 urls_internet = [['https://primetel.com.cy/home-fiber-plans-en'],['HomeFiber60MBPS','HomeFiber150MBPS','Fiber200MBPS']]
 urls_freedom = [['https://primetel.com.cy/giga-unlimited-en'],['GIGAUnlimited','GIGAUnlimitedPlus','GIGAUnlimitedMax']]
@@ -437,15 +439,16 @@ for url,label in zip(urls_all_phones,class_labels_phones):
 
 #assign the values to each column
 for i in range(len(all_items_primetel)):
-    df.loc[len(df)] = (all_items_primetel[i][0],all_items_primetel[i][1],all_items_primetel[i][2],all_items_primetel[i][3],all_items_primetel[i][4],0)
+    df.loc[len(df)] = (all_items_primetel[i][0],all_items_primetel[i][1],all_items_primetel[i][2],all_items_primetel[i][3],all_items_primetel[i][4])
 
 
 
-# read csv file with product description, class and urls
+# read csv file with product description, class and urls (for some retailers this file is needed)
 products_urls = pd.read_excel('products_bpp.xlsx')
 marksspencerdf = products_urls.iloc[209:227,]
 
 
+#Marks&Spencer
 #the scrapper function
 prices_final_marksspencer = []
 
@@ -556,8 +559,8 @@ for i in range(len(all_items_internsports)):
 
 
 
+#FamousSports
 famoussportsdf = products_urls.iloc[243:262,]
-
 
 #the scrapper function
 prices_final_famoussports = []
@@ -1140,7 +1143,7 @@ df.loc[len(df)] = ("Πετρέλαιο Θέρμανσης Μέση Τιμή Πα
 
 #Calculate the mean value for each category
 #change type of the item.price column
-df['product_price'] = df['product_price'].astype('float64')
+df['product_price'] = df['product_price'].astype('float32')
 
 #calculating the mean price of each category
 df_mean  = round(df.groupby('product_subclass')[['product_price']].mean(),2)
