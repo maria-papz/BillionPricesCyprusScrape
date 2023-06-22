@@ -2,8 +2,7 @@
 from ast import Try
 import pandas as pd 
 import re
-from lxml import html
-from lxml import etree
+from lxml import html, etree
 import requests
 from datetime import datetime
 import time
@@ -323,21 +322,64 @@ df = pd.read_csv("BillionPricesProject_ProductList.csv")
 
 
 
+# def AlphaMega():
+#     data_alphaMega = pd.read_csv("AlphaMega.csv")
+#     for index, am in data_alphaMega.iterrows():
+#         page = requests.get(am['website'].strip())
+#         st=page.content.decode('utf-8')
+#         tree = html.fromstring(st)
+#         product_name = (''.join(am['product_name'])).replace(' ','').strip() 
+#         t=tree.xpath("//div[@class='grid grid--align-content-start']/script[@type='application/ld+json']/text()")
+#         if len(t)>0:
+#             product_price=t[0]
+#             if product_price:
+#                 try:
+#                     product_price = re.sub(r'"<[^>]+>"', '', product_price)
+#                     product_price = re.sub(r'[\x00-\x1F\x7F-\x9F]', '', product_price)
+#                     product_price = json.loads(product_price)['offers']['price']
+#                     now = datetime.now()
+#                     date_time_scraped = now
+#                     product_subclass=am['product_subclass']
+#                     retailer= am['retailer']
+#                     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+#                 except json.decoder.JSONDecodeError as e:
+#                     print(f"JSONDecodeError occurred for product: {product_name}")
+#                     print(f"Error details: {e}")
+#                     continue
+#                 except KeyError as e:
+#                     print(f"KeyError occurred for product: {product_name}")
+#                     print(f"Error details: {e}")
+#                     continue
+
+
 def AlphaMega():
     data_alphaMega = pd.read_csv("AlphaMega.csv")
     for index, am in data_alphaMega.iterrows():
         page = requests.get(am['website'].strip())
-        st=page.content.decode('utf-8')
-        tree = html.fromstring(st)
-        product_name = (''.join(am['product_name'])).replace(' ','').strip() 
-        product_price=tree.xpath("//div[@class='grid grid--align-content-start']/script[@type='application/ld+json']/text()")[0]
-        product_price = json.loads(product_price)['offers']['price']
-        now = datetime.now()
-        date_time_scraped = now
-        product_subclass=am['product_subclass']
-        retailer= am['retailer']
-        df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+        tree = html.fromstring(page.content)
+        product_name = (''.join(am['product_name'])).replace(' ', '').strip()
+        t = tree.xpath("//div[@class='grid grid--align-content-start']/script[@type='application/ld+json']/text()")
+        if len(t)>0:
+            product_price=t[0]
+            # Preprocess the product_price string
+            product_price = product_price.replace('\n', '').replace('\r', '')
 
+            # Use regex to extract the price
+            price_match = re.search(r'"price":\s*"([\d.]+)"', product_price)
+            if price_match:
+                product_price = price_match.group(1)
+            else:
+                print(f"No price found for product: {product_name}")
+                continue
+
+            now = datetime.now()
+            date_time_scraped = now
+            product_subclass = am['product_subclass']
+            retailer = am['retailer']
+            df.loc[len(df)] = [product_name, product_price, date_time_scraped, product_subclass, retailer, 0]
+
+
+AlphaMega()
 
 # SupermarketCyScrape()
 
@@ -401,6 +443,95 @@ urls_freedom = [['https://primetel.com.cy/giga-unlimited-en'],['GIGAUnlimited','
 urls_all_phones = [ urls_internet,urls_freedom]
 
 class_labels_phones = ['Internet access provision services','Bundled telecommunication services']
+
+def cablenet():
+    url = "https://cablenet.com.cy/τηλεφωνία/τέλη-τοπικών-κλήσεων/"
+    response = requests.get(url)
+
+
+    tree = html.fromstring(response.content)
+
+    price_element = tree.xpath("//tr/td[text()='CYTA Σταθερό Δίκτυο']/following-sibling::td[3]")
+    if price_element:
+        price = price_element[0].text
+        df.loc[len(df)]=['Κλήσειςπροςσταθερό',price,datetime.now(),'Wired telephone services','Cablenet',0]
+
+
+    url = "https://cablenet.com.cy/χρεώσεις/"
+    response = requests.get(url)
+    tree = html.fromstring(response.content)
+
+    price_element = tree.xpath("//tr/td[text()='National Mobile']/following-sibling::td[3]")
+    if price_element:
+        price = price_element[0].text
+        price= price.split('/')[0]
+        df.loc[len(df)]=['Κλήσειςπροςκινητό',price,datetime.now(),'Wireless telephone services','Cablenet',0]
+
+
+    # Make a GET request to the webpage
+    url = "https://cablenet.com.cy/purpleinternet/"
+    response = requests.get(url)
+
+    # Parse the HTML content
+    html_content = response.content
+    tree = etree.HTML(html_content)
+
+    price_xpath = "//p[contains(text(), 'χωρίς συμβόλαιο')]/preceding-sibling::p[2]//strong/text()"
+
+
+    if price_xpath:
+        price_with_euro_sign = tree.xpath(price_xpath)[0]
+        price = price_with_euro_sign.replace("€", "")
+        df.loc[len(df)]=['PurpleInternet',price,datetime.now(),'Internet access provision services','Cablenet',0]
+
+    # Make a GET request to the webpage
+    url = "https://cablenet.com.cy/en/packages-mobile/"
+    response = requests.get(url)
+
+    # Parse the HTML content
+    html_content = response.content
+    tree = etree.HTML(html_content)
+
+    price_xpath = "(//div[@class='wpb_text_column us_custom_1e54aa4c']//span[contains(@style, 'font-size: 300%')]/strong/text())[3]"
+    if price_xpath:
+        price_with_euro_sign = tree.xpath(price_xpath)[0]
+        price = price_with_euro_sign.replace("€", "")
+        df.loc[len(df)]=['PurpleMaxMobile',price,datetime.now(),'Bundled telecommunication services','Cablenet',0] 
+cablenet()
+
+def epic():
+    name='Internet and Telephony 10'
+    url = "https://www.epic.com.cy/en/page/H1r10tnT/internet-telephony"
+    response = requests.get(url)
+    tree = html.fromstring(response.content)
+    price=tree.xpath("(//div[@class='mtn-data'])[1]/div[@class='mtn-prices mtn-equal mtn-prices-bb']/div[@class='mtn-from']/div[@class='price']/text()")
+    if price:
+        price=price[0].replace("€","")
+        price=price.replace(".","")
+        df.loc[len(df)]=[name,price,datetime.now(),'Internet access provision services','epic',0]
+
+    name='Internet and Telephony 20'
+    url = "https://www.epic.com.cy/en/page/H1r10tnT/internet-telephony"
+    response = requests.get(url)
+    tree = html.fromstring(response.content)
+    price=tree.xpath("(//div[@class='mtn-data'])[2]/div[@class='mtn-prices mtn-equal mtn-prices-bb']/div[@class='mtn-from']/div[@class='price']/text()")
+    if price:
+        price=price[0].replace("€","")
+        price=price.replace(".","")
+        df.loc[len(df)]=[name,price,datetime.now(),'Internet access provision services','epic',0]  
+
+
+    name='Internet and Telephony 50'
+    url = "https://www.epic.com.cy/en/page/H1r10tnT/internet-telephony"
+    response = requests.get(url)
+    tree = html.fromstring(response.content)
+    price=tree.xpath("(//div[@class='mtn-data'])[3]/div[@class='mtn-prices mtn-equal mtn-prices-bb']/div[@class='mtn-from']/div[@class='price']/text()")
+    if price:
+        price=price[0].replace("€","")
+        price=price.replace(".","")
+        df.loc[len(df)]=[name,price,datetime.now(),'Internet access provision services','epic',0]
+
+epic()
 
 def scrappe_page(url,regex_exp):
     global prices_phoneservices
@@ -630,7 +761,7 @@ def garments():
         try:
             product_price=tree.xpath("//script[@type='application/ld+json']/text()")[0]
             if am['retailer'] == 'Bershka':
-                if product_prices:
+                if product_price:
                     product_price = json.loads(product_price)['offers'][0]['price']
                 else:
                     print('product price not found')
@@ -750,19 +881,15 @@ def Fuel():
     pattern = '\d\.\d+\s'
     price_ini = re.findall(pattern,data)
 
-    prices_final_petrol.append(float(str(price_ini[3]).strip('\r')))
-    prices_final_petrol.append(float(str(price_ini[6]).strip('\r')))
-    prices_final_petrol.append(float(str(price_ini[9]).strip('\r')))
-    prices_final_petrol.append(float(str(price_ini[12]).strip('\r')))
+    if len(price_ini)>=3:
+         df.loc[len(df)] = ("Αμόλυβδη Μέση Τιμή Παγκύπρια",price_ini[3],datetime.now(),'Petrol','Global Petrol Prices',0)
+    if len(price_ini)>=6:
+        df.loc[len(df)] = ("Πετρέλαιο Κίνησης Μέση Τιμή Παγκύπρια",price_ini[6],datetime.now(),'Diesel','Global Petrol Prices',0)
+    if len(price_ini)>=9:
+        df.loc[len(df)] =  ("Πετρέλαιο Μέση Τιμή Παγκύπρια",price_ini[9],datetime.now(),'Diesel','Global Petrol Prices',0)
+    if len(price_ini)>=12:
+        df.loc[len(df)] = ("Πετρέλαιο Θέρμανσης Μέση Τιμή Παγκύπρια",price_ini[12],datetime.now(),'Liquid Fuels','Global Petrol Prices',0)
 
-    ####################################################################################################
-
-    df_petrol=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','item.division','retailer'))
-
-    df.loc[len(df)] = ("Αμόλυβδη Μέση Τιμή Παγκύπρια",prices_final_petrol[0],datetime.now(),'Petrol','Global Petrol Prices',0)
-    df.loc[len(df)] = ("Πετρέλαιο Κίνησης Μέση Τιμή Παγκύπρια",prices_final_petrol[1],datetime.now(),'Diesel','Global Petrol Prices',0)
-    df.loc[len(df)] =  ("Πετρέλαιο Μέση Τιμή Παγκύπρια",prices_final_petrol[2],datetime.now(),'Diesel','Global Petrol Prices',0)
-    df.loc[len(df)] = ("Πετρέλαιο Θέρμανσης Μέση Τιμή Παγκύπρια",prices_final_petrol[3],datetime.now(),'Liquid Fuels','Global Petrol Prices',0)
 Fuel()
 
 def Tobacco():
@@ -1484,6 +1611,115 @@ def sewage():
 
 sewage()
 
+def waterSewageOtherCities():
+
+    url = "https://www.sbla.com.cy/Sewage-Charges"
+    response = requests.get(url)
+
+    tree = html.fromstring(response.content)
+    name='Λεμεσος Phase 1 Sewage Costs '
+    price=tree.xpath("//tbody/tr[last()]/td[4]/text()")
+    if price:
+        price=price[0].replace(".","") 
+        price=price.replace(",",".") 
+        df.loc[len(df)] =[name,price,datetime.now(),'Sewage collection','SBLA',0]
+    name='Λεμεσος Phase 2 Sewage Costs '
+    price=tree.xpath("//tbody/tr[last()]/td[7]/text()")
+    if price:
+        price=price[0].replace(".","") 
+        price=price.replace(",",".")
+        df.loc[len(df)] =[name,price,datetime.now(),'Sewage collection','SBLA',0]
+
+    name='Λεμεσος Τέλη Αποχέτευσης Ομβρίων'
+    price=tree.xpath("//tbody/tr[last()]/td[8]/text()")
+    if price:
+        price=price[0].replace(".","") 
+        price=price.replace(",",".") 
+        df.loc[len(df)] =[name,price,datetime.now(),'Sewage collection','SBLA',0]
+
+    url = "https://www.lsdb.org.cy/ypiresies/oikonomika/apocheteftika-teli/"
+    response = requests.get(url)
+    tree = html.fromstring(response.content)
+
+    name='Λαρνακα Phase 1 Sewage Costs '
+    price=tree.xpath("//tbody/tr[last()-1]/td[3]/text()")
+    if price:
+        price=price[0].replace(".","") 
+        price=price.replace(",",".") 
+        df.loc[len(df)] =[name,price,datetime.now(),'Sewage collection','LSDB',0]
+    name='Λαρνακα Phase 2 Sewage Costs '
+    price=tree.xpath("//tbody/tr[last()-1]/td[5]/text()")
+    if price:
+        price=price[0].replace(".","") 
+        price=price.replace(",",".")
+        df.loc[len(df)] =[name,price,datetime.now(),'Sewage collection','LSDB',0]
+
+    name='Λαρνακα Τέλη Αποχέτευσης Ομβρίων'
+    price=tree.xpath("//tbody/tr[last()-1]/td[8]/text()")
+    if price:
+        price=price[0].replace(".","") 
+        price=price.replace(",",".") 
+        df.loc[len(df)] =[name,price,datetime.now(),'Sewage collection','LSDB',0]
+
+    name='Τέλη Χρήσης €/m3'
+    price=tree.xpath("//tbody/tr[last()-1]/td[9]/text()")
+    if price:
+        price=price[0].replace(".","") 
+        price=price.replace(",",".") 
+        df.loc[len(df)] =[name,price,datetime.now(),'Sewage collection','SBLA',0]
+
+    url = "https://www.wbl.com.cy/el/page/water-rates"
+    response = requests.get(url)
+    tree = html.fromstring(response.content)
+    name= 'Λεμεσος Οικιακά τέλη ανά τετραμηνία (συντελεστής ΦΠΑ 5%)'
+    price1=tree.xpath('//table[1]/tbody/tr[2]/td[2]/text()')
+    price2=tree.xpath('//table[1]/tbody/tr[3]/td[2]/text()')
+    if price:
+        price1=price1[0].replace(".","") 
+        price1=price1.replace(",",".") 
+        price2=price2[0].replace(".","")
+        price2=price2.replace(",",".") 
+        price=float(price1)+float(price2)
+        df.loc[len(df)] =[name,price,datetime.now(),'Water Supply','WBL',0]
+
+    name= 'Λεμεσος Εμποροβιομηχανικά  τέλη ανά τετραμηνία (συντελεστής ΦΠΑ 5%)'
+    price1=tree.xpath('//table[5]/tbody/tr[2]/td[2]/text()')
+    price2=tree.xpath('//table[5]/tbody/tr[3]/td[2]/text()')
+    if price:
+        price1=price1[0].replace(".","") 
+        price1=price1.replace(",",".") 
+        price2=price2[0].replace(".","")
+        price2=price2.replace(",",".") 
+        price=float(price1)+float(price2)
+        df.loc[len(df)] =[name,price,datetime.now(),'Water Supply','WBL',0]
+
+    url = "https://www.lwb.org.cy/gr/fees-and-rights.html"
+    response = requests.get(url)
+    tree = html.fromstring(response.content)
+
+    name= 'Λαρνακα Οικιακά τέλη (ανά τριμηνία) (συντελεστής ΦΠΑ 5%)'
+    price1=tree.xpath('//*[@id="a_w_66"]/div/div/table/tbody/tr[2]/td[2]/text()')
+    price2=tree.xpath('//*[@id="a_w_66"]/div/div/table/tbody/tr[3]/td[2]/text()')
+    if price:
+        price1=price1[0].replace(".","") 
+        price1=price1.replace(",",".") 
+        price2=price2[0].replace(".","")
+        price2=price2.replace(",",".") 
+        price=float(price1)+float(price2)
+        df.loc[len(df)] =[name,price,datetime.now(),'Water Supply','LWB',0]
+
+    name= 'Λαρνακα Εμποροβιομηχανικά τέλη (ανά τριμηνία) (συντελεστής ΦΠΑ 5%)'
+    price1=tree.xpath('//*[@id="a_w_67"]/div/div/table/tbody/tr[2]/td[2]/text()')
+    price2=tree.xpath('//*[@id="a_w_67"]/div/div/table/tbody/tr[3]/td[2]/text()')
+    if price:
+        price1=price1[0].replace(".","") 
+        price1=price1.replace(",",".") 
+        price2=price2[0].replace(".","")
+        price2=price2.replace(",",".") 
+        price=float(price1)+float(price2)
+        df.loc[len(df)] =[name,price,datetime.now(),'Water Supply','LWB',0]
+
+waterSewageOtherCities()
 
 def extract_float_price(price_str):
     # Remove any non-digit characters except for the dot
@@ -1736,6 +1972,40 @@ def Booking():
         df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
 
 Booking()
+
+def GasCylinder():
+    #extract last month reported name
+    url = "https://consumer.gov.cy/en/price-observatories/learn-your-rights/66/?ctype=ar"
+    response = requests.get(url)
+    tree = html.fromstring(response.content)
+    month_name=tree.xpath('//div[@class="mar-top-a"]/ul[@id="docs-list"]/li[last()]/a[@class="grp-head expand"]/text()')
+    if month_name:
+        clean_month_name = re.sub(r'^\d+\s*-\s*', '', month_name[0])
+        clean_month_name=clean_month_name.replace(" ","_")
+        print(clean_month_name)
+
+    # remove unwanted characters
+    url = "https://consumer.gov.cy/assets/modules/wnp/articles/202302/66/docs/paratiritirio_"+clean_month_name.lower()+".pdf"  # Replace with the URL of the PDF file
+    response = requests.get(url)
+
+    with open("file.pdf", "wb") as f:
+        f.write(response.content)
+
+    pdf_file = open("file.pdf", "rb")
+    pdf_reader = PyPDF2.PdfReader(pdf_file)
+
+
+    # extracting price 
+
+    #assuming that text stays the same and prices change
+    page=pdf_reader.pages[5]
+    match = re.search(r"\d+\s+ΚΥΛΙΝΔΡΟΣ.*?(\d+\.\d+)\s+\d+\.\d+", page.extract_text())
+    if match:
+        middle_price = match.group(1)
+        print(middle_price)
+        df.loc[len(df)] =["ΚΥΛΙΝΔΡΟΣ 10kg ",middle_price,datetime.now(),'Liquefied hydrocarbons','Consumer Observatory',0]
+GasCylinder()
+
 def update_average_price():
     now = datetime.now()
     today = now.date()
@@ -1747,7 +2017,7 @@ def update_average_price():
     df['product_price'] = pd.to_numeric(df['product_price'], errors='coerce')
 
     # Group by 'product_subclass' and 'date_time_scraped', calculate average price, and update 'average.price' column
-    df['average.price'] = df.groupby(['product_subclass', df['date_time_scraped'].dt.date])['product_price'].transform('mean')
+    df['subclass_average'] = df.groupby(['product_subclass', df['date_time_scraped'].dt.date])['product_price'].transform('mean')
 
 update_average_price()
 
