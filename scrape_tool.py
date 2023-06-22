@@ -27,298 +27,298 @@ df = pd.read_csv("BillionPricesProject_ProductList.csv")
 
 
 
-# def supermarketCy(item):
-#     p=[]
+def supermarketCy(item):
+    p=[]
 
-#     for pages in range(1,11):
-#         flag=0
-#         ## retailer 
-#         retailer='SupermarketCy'
+    for pages in range(1,11):
+        flag=0
+        ## retailer 
+        retailer='SupermarketCy'
 
-#         ## product class
-#         # product_class=item['product_class']
+        ## product class
+        # product_class=item['product_class']
 
-#         ## product type
-#         product_subclass=item['product_subclass']
-#         # Request the page
-#         page = requests.get('https://www.supermarketcy.com.cy/'+item['webpage']+'?page='+str(pages))
+        ## product type
+        product_subclass=item['product_subclass']
+        # Request the page
+        page = requests.get('https://www.supermarketcy.com.cy/'+item['webpage']+'?page='+str(pages))
 
-#         # Parsing the page
-#         # (We need to use page.content rather than
-#         # page.text because html.fromstring implicitly
-#         # expects bytes as input.)
-#         tree = html.fromstring(page.content) 
+        # Parsing the page
+        # (We need to use page.content rather than
+        # page.text because html.fromstring implicitly
+        # expects bytes as input.)
+        tree = html.fromstring(page.content) 
 
-#         ## product name
-#         product_name=tree.xpath('//div[@data-title=\''+item['names']+'\']/a/h5/text()')
+        ## product name
+        product_name=tree.xpath('//div[@data-title=\''+item['names']+'\']/a/h5/text()')
 
-#         # convert to string and remove whitespace
-#         product_name = (''.join(product_name)).replace(' ','').strip()
+        # convert to string and remove whitespace
+        product_name = (''.join(product_name)).replace(' ','').strip()
  
-#         if(product_name==''):
-#             flag=1
-#         else:
-#             ## product price
-#             #print(product_name)
-#             product_price = tree.xpath('//div[contains(@data-title,\''+item['names']+'\')]/div[@class="flex-col sm:flex-row"]/div[@class=\'sm:mr-10 flex justify-between\']//div/div[@class=\'text-primary text-h4 font-medium mb-8\']/text()')
-#             product_price=float((''.join(product_price)).replace(' ','').replace('€','').replace(',','.').strip())
+        if(product_name==''):
+            flag=1
+        else:
+            ## product price
+            #print(product_name)
+            product_price = tree.xpath('//div[contains(@data-title,\''+item['names']+'\')]/div[@class="flex-col sm:flex-row"]/div[@class=\'sm:mr-10 flex justify-between\']//div/div[@class=\'text-primary text-h4 font-medium mb-8\']/text()')
+            product_price=float((''.join(product_price)).replace(' ','').replace('€','').replace(',','.').strip())
 
-#             ## scraping time
-#             now = datetime.now()
-#             date_time_scraped = now 
+            ## scraping time
+            now = datetime.now()
+            date_time_scraped = now 
 
-#             # returning list resembling row of dataframe
-#             new_row=[product_name, product_price,date_time_scraped,product_subclass,retailer,0]
-#             flag=0
-#             return new_row
-#     return
+            # returning list resembling row of dataframe
+            new_row=[product_name, product_price,date_time_scraped,product_subclass,retailer,0]
+            flag=0
+            return new_row
+    return
 
-# def SupermarketCyScrape():
-#     scy_data = pd.read_csv("SupermarketCy.csv")
-#     for index, row in scy_data.iterrows():
-#         scrape=supermarketCy(row)
-#         if(scrape==None):
-#             next
-#         else:
-#             df.loc[len(df)] = scrape
+def SupermarketCyScrape():
+    scy_data = pd.read_csv("SupermarketCy.csv")
+    for index, row in scy_data.iterrows():
+        scrape=supermarketCy(row)
+        if(scrape==None):
+            next
+        else:
+            df.loc[len(df)] = scrape
 
 
-# #put all the endings of the urls in lists based on the class they belong along
-# # with the descriptions of the products that should be scrapped
-# urls_bread = [['/psomi','/psomi?page=2','/psomi?page=3'],['ΣίφουναςΟλικήςΨωμίΚομμένο780g', 'ΣίφουναςΜαύροΜικρόΨωμίΚομμένο500g', 'ΣίφουναςΚοινόΨωμίΚομμένο560g', 
-# 'ΣίφουναςΚοινόΨωμίΚομμένο970g', 'ΣίφουναςΆσπροΨωμί560g', 'ΣίφουναςΚοινόΨωμί970g']]
+#put all the endings of the urls in lists based on the class they belong along
+# with the descriptions of the products that should be scrapped
+urls_bread = [['/psomi','/psomi?page=2','/psomi?page=3'],['ΣίφουναςΟλικήςΨωμίΚομμένο780g', 'ΣίφουναςΜαύροΜικρόΨωμίΚομμένο500g', 'ΣίφουναςΚοινόΨωμίΚομμένο560g', 
+'ΣίφουναςΚοινόΨωμίΚομμένο970g', 'ΣίφουναςΆσπροΨωμί560g', 'ΣίφουναςΚοινόΨωμί970g']]
 
-# urls_bakery=[["/pites","/tost","/psomakia","/almyra","/keik","/glyka-1","/glyka-1?page=2","/krakers","/krakers?page=2","/kritsinia","/kritsinia?page=2",
-# "/kroutons","/fryganies","/paximadia","/paximadia?page=2","/paximadia?page=3","/paximadia?page=4","/koulourakia"],
-# ['ΣίφουναςΠίττεςΆσπρεςΜεγάλες5Τεμ550g', 'ΣίφουναςΨωμίΦέτεςΤόστΆσπροΜικρό700g', 'ΣίφουναςΦραντζολάκιαΣτρογγυλά4Τεμ', 'ΣίφουναςΦραντζολάκιαΜακρόστεναΜεγάλα4Τεμ', 
-# 'ΣίφουναςΚρουασάνΒουτύρου1Τεμ', 'ΣίφουναςΛουκανικόπιτα1Τεμ', 'ΣίφουναςΠίταΣάτζιηςΜεΜέλι1Τεμ', 'ΣίφουναςΕλιόπιταΣφολιάτα1Τεμ', 'ΣίφουναςΚέικΓεωγραφίας750g', 'ΣίφουναςMixΣιροπιαστά410g',
-# "7DaysMiniBakeRollsΠίτσα80g","BakandysΧωριάτικαΚριτσίνιαΣιταρένια275g","ΜαρίαςΠαξιμάδιαΓλυκανίσου300g","JohnsofΚρουτόνιαΟλικήςΆλεσης320g",
-# "EliteΦρυγανιέςΜεΣίκαλη360g3+1Δώρο","EliteΦρυγανιέςΟλικήςΆλεσης360g3+1Δώρο","BakandysΠαξιμάδιαΣικάλεως250g","JohnsofNapolitanoΣταφίδαςΑμυγδάλου240g"]]
+urls_bakery=[["/pites","/tost","/psomakia","/almyra","/keik","/glyka-1","/glyka-1?page=2","/krakers","/krakers?page=2","/kritsinia","/kritsinia?page=2",
+"/kroutons","/fryganies","/paximadia","/paximadia?page=2","/paximadia?page=3","/paximadia?page=4","/koulourakia"],
+['ΣίφουναςΠίττεςΆσπρεςΜεγάλες5Τεμ550g', 'ΣίφουναςΨωμίΦέτεςΤόστΆσπροΜικρό700g', 'ΣίφουναςΦραντζολάκιαΣτρογγυλά4Τεμ', 'ΣίφουναςΦραντζολάκιαΜακρόστεναΜεγάλα4Τεμ', 
+'ΣίφουναςΚρουασάνΒουτύρου1Τεμ', 'ΣίφουναςΛουκανικόπιτα1Τεμ', 'ΣίφουναςΠίταΣάτζιηςΜεΜέλι1Τεμ', 'ΣίφουναςΕλιόπιταΣφολιάτα1Τεμ', 'ΣίφουναςΚέικΓεωγραφίας750g', 'ΣίφουναςMixΣιροπιαστά410g',
+"7DaysMiniBakeRollsΠίτσα80g","BakandysΧωριάτικαΚριτσίνιαΣιταρένια275g","ΜαρίαςΠαξιμάδιαΓλυκανίσου300g","JohnsofΚρουτόνιαΟλικήςΆλεσης320g",
+"EliteΦρυγανιέςΜεΣίκαλη360g3+1Δώρο","EliteΦρυγανιέςΟλικήςΆλεσης360g3+1Δώρο","BakandysΠαξιμάδιαΣικάλεως250g","JohnsofNapolitanoΣταφίδαςΑμυγδάλου240g"]]
 
-# urls_cereals=[["/dimitriaka?page=1","/dimitriaka?page=2","/dimitriaka?page=3","/dimitriaka?page=4","/dimitriaka?page=5","/dimitriaka?page=6","/dimitriaka?page=7","/dimitriaka?page=8","/dimitriaka?page=9"],
-# ['QuakerΝιφάδεςΒρώμης500g', 'QuakerΤραγανέςΜπουκιέςΒρώμηΣοκολάτα450g','OreoO&#039;sCereal350g','KelloggsCornFlakes375g', 'KelloggsCocoPopsChocos375g',
-#  'KelloggsCocoPops500g', 'KelloggsSpecialK500g','KelloggsMielPopsLoops330g']]
+urls_cereals=[["/dimitriaka?page=1","/dimitriaka?page=2","/dimitriaka?page=3","/dimitriaka?page=4","/dimitriaka?page=5","/dimitriaka?page=6","/dimitriaka?page=7","/dimitriaka?page=8","/dimitriaka?page=9"],
+['QuakerΝιφάδεςΒρώμης500g', 'QuakerΤραγανέςΜπουκιέςΒρώμηΣοκολάτα450g','OreoO&#039;sCereal350g','KelloggsCornFlakes375g', 'KelloggsCocoPopsChocos375g',
+ 'KelloggsCocoPops500g', 'KelloggsSpecialK500g','KelloggsMielPopsLoops330g']]
 
-# urls_pastas=[["/makaronia","/makaronia?page=2","/makaronia?page=3","/makaronia?page=4","/penes","/penes?page=2",
-# "/kritharaki"],['BarillaΣπαγγέτιNo5500g', 'ΜέλισσαPrimoGustoΣπαγγέτιNo6500g', 'ΜέλισσαPrimoGustoΚριθαράκι500g',
-# 'ΜιτσίδηΣπαγέττι500g','ΜιτσίδηΚριθαράκι500g','ΜιτσίδηΜακαρόνιαΑ500g','ΜιτσίδηΧωριάτικαΜακαρόνια500g','ΘίιαμβοςΣπαγέττο500g']]
+urls_pastas=[["/makaronia","/makaronia?page=2","/makaronia?page=3","/makaronia?page=4","/penes","/penes?page=2",
+"/kritharaki"],['BarillaΣπαγγέτιNo5500g', 'ΜέλισσαPrimoGustoΣπαγγέτιNo6500g', 'ΜέλισσαPrimoGustoΚριθαράκι500g',
+'ΜιτσίδηΣπαγέττι500g','ΜιτσίδηΚριθαράκι500g','ΜιτσίδηΜακαρόνιαΑ500g','ΜιτσίδηΧωριάτικαΜακαρόνια500g','ΘίιαμβοςΣπαγέττο500g']]
 
-# urls_rice = [["/parmpoil", "/parmpoil?page=2","/mpasmati","/karolina","/glase","/pourgouri","/diafora-ryzia"],
-# ['3ΑΡύζιΠάρποιλτ1kg', 'BensOriginalΡύζιΜακρύκοκκο10Λεπτά1kg', 'TildaΡυζιΜπασματι1kg', '3ΑΡύζιΜπασμάτι1kg',
-#  '3ΑΡύζιJasmine1kg', 'ΑφοίΑ.ΚεπόλαΠουργούρι1kg','ΑφοίΑ.ΚεπόλαΠουργούρι500g', 'ΜιτσίδηΠουργούρι500g', 'ΜιτσίδηΠουργούρι1kg',
-# '3ΑΠουργούρι500g','NaturalLifeΑποφλειωμένοΠουργούριΠιλάφι500g']]
+urls_rice = [["/parmpoil", "/parmpoil?page=2","/mpasmati","/karolina","/glase","/pourgouri","/diafora-ryzia"],
+['3ΑΡύζιΠάρποιλτ1kg', 'BensOriginalΡύζιΜακρύκοκκο10Λεπτά1kg', 'TildaΡυζιΜπασματι1kg', '3ΑΡύζιΜπασμάτι1kg',
+ '3ΑΡύζιJasmine1kg', 'ΑφοίΑ.ΚεπόλαΠουργούρι1kg','ΑφοίΑ.ΚεπόλαΠουργούρι500g', 'ΜιτσίδηΠουργούρι500g', 'ΜιτσίδηΠουργούρι1kg',
+'3ΑΠουργούρι500g','NaturalLifeΑποφλειωμένοΠουργούριΠιλάφι500g']]
 
-# urls_saltspices = [["/alati","/piperi","/mpacharika","/meigmata","/aromatika"],['SailorΑλάτι250g', 'CarnationSpicesΠιπέριΜαύροΑλεσμένο34g', 
-# 'CarnationSpicesΚανέλαΑλεσμένη34g', 'CarnationSpicesΠάπρικαΓλυκιά30g', 'CarnationSpicesΚουρκουμάςΚιτρινόριζα30g', 'KnorrAromatΜείγμαΛαχανικών&amp;Μυρωδικών90g', 
-# 'CarnationSpicesΔιάφοραΒότανα12g', 'CarnationSpicesΣκόρδοΣκόνη40g', 'CarnationSpicesΡίγανη30g', 'CarnationSpicesΘυμάρι10g', 'CarnationSpicesΚόλιανδροςΣκόνη20g', 
-# 'CarnationSpicesΜαϊδανός10g', 'CarnationSpicesΒασιλικός10g', 'CarnationSpicesΆνηθος10g', 'CarnationSpicesΔεντρολίβανοΛάσμαρι10g']]
+urls_saltspices = [["/alati","/piperi","/mpacharika","/meigmata","/aromatika"],['SailorΑλάτι250g', 'CarnationSpicesΠιπέριΜαύροΑλεσμένο34g', 
+'CarnationSpicesΚανέλαΑλεσμένη34g', 'CarnationSpicesΠάπρικαΓλυκιά30g', 'CarnationSpicesΚουρκουμάςΚιτρινόριζα30g', 'KnorrAromatΜείγμαΛαχανικών&amp;Μυρωδικών90g', 
+'CarnationSpicesΔιάφοραΒότανα12g', 'CarnationSpicesΣκόρδοΣκόνη40g', 'CarnationSpicesΡίγανη30g', 'CarnationSpicesΘυμάρι10g', 'CarnationSpicesΚόλιανδροςΣκόνη20g', 
+'CarnationSpicesΜαϊδανός10g', 'CarnationSpicesΒασιλικός10g', 'CarnationSpicesΆνηθος10g', 'CarnationSpicesΔεντρολίβανοΛάσμαρι10g']]
 
-# urls_nuts = [["/xiroi-karpoi","/xiroi-karpoi?page=2","/xiroi-karpoi?page=3","/xiroi-karpoi?page=4","/xiroi-karpoi?page=5","/apoxiramena-frouta",
-# "/apoxiramena-frouta?page=2","/apoxiramena-frouta?page=3","/apoxiramena-frouta?page=4"],['ΛειβαδιώτηΠράσινηΣφραγίδαΑμύγδαλα120g', 'SeranoΚάσιους140g', 
-# 'ΛειβαδιώτηΚαρυδόψιχα140g', 'SeranoEconomyPackΦουντούκιαΩμά350g', 'SeranoΦυστικόψιχαΚαβουρδισμένηΑλατισμένη175g','ΕποχέςΑποξηραμέναΣύκα350g', 
-# 'ΑμαλίαΧρυσόμηλαΑποξηραμένα250g', 'SeranoSnackin&#039;GoodΑποξηραμέναΔαμάσκηναΧωρίςΠρόσθετηΖάχαρη275g', 'ΚαρπόςΑπόΤηΓηΜαςΑποξηραμέναΒερίκοκα400g', 'ΑμαλίαΦοινίκιαΤυνησίας250g', 'SeranoΣταφίδες350g']]
+urls_nuts = [["/xiroi-karpoi","/xiroi-karpoi?page=2","/xiroi-karpoi?page=3","/xiroi-karpoi?page=4","/xiroi-karpoi?page=5","/apoxiramena-frouta",
+"/apoxiramena-frouta?page=2","/apoxiramena-frouta?page=3","/apoxiramena-frouta?page=4"],['ΛειβαδιώτηΠράσινηΣφραγίδαΑμύγδαλα120g', 'SeranoΚάσιους140g', 
+'ΛειβαδιώτηΚαρυδόψιχα140g', 'SeranoEconomyPackΦουντούκιαΩμά350g', 'SeranoΦυστικόψιχαΚαβουρδισμένηΑλατισμένη175g','ΕποχέςΑποξηραμέναΣύκα350g', 
+'ΑμαλίαΧρυσόμηλαΑποξηραμένα250g', 'SeranoSnackin&#039;GoodΑποξηραμέναΔαμάσκηναΧωρίςΠρόσθετηΖάχαρη275g', 'ΚαρπόςΑπόΤηΓηΜαςΑποξηραμέναΒερίκοκα400g', 'ΑμαλίαΦοινίκιαΤυνησίας250g', 'SeranoΣταφίδες350g']]
 
-# urls_jams = [["/meli","/meli?page=2","/meli?page=3","/marmelades","/pralines","/fystikovoutyro","/diafora-aleimmata"],['RoyalBeeΜέλι475g', 'MavroudesΜέλι380g',
-#  'ΤοΤζιβέρτιΜέλιΑνθέωνSqueeze485g', 'BonapiΜέλιΑνθέων450g','BlossomΜαρμελάδαΜερίδες6x30g', 'Nutella200g', 'ΌλυμποςSuperSpreadΦυστικοβούτυροΤραγανό350g', 'DfΤαχίνι250g']]
+urls_jams = [["/meli","/meli?page=2","/meli?page=3","/marmelades","/pralines","/fystikovoutyro","/diafora-aleimmata"],['RoyalBeeΜέλι475g', 'MavroudesΜέλι380g',
+ 'ΤοΤζιβέρτιΜέλιΑνθέωνSqueeze485g', 'BonapiΜέλιΑνθέων450g','BlossomΜαρμελάδαΜερίδες6x30g', 'Nutella200g', 'ΌλυμποςSuperSpreadΦυστικοβούτυροΤραγανό350g', 'DfΤαχίνι250g']]
 
-# urls_crisps = [["/patatakia"],['ΧαραλάμπουςΓαριδάκιαΜεΤυρί10X22g']]
+urls_crisps = [["/patatakia"],['ΧαραλάμπουςΓαριδάκιαΜεΤυρί10X22g']]
 
-# urls_sauces=[["/ntomatas","/ntomatas?page=2","/ntomatas?page=3","/zomoi","/zomoi?page=2","/zomoi?page=3"],['PelargosΚλασικό3X250g', 
-# 'ΜιτσίδηΠάσταΝτομάτας4X70g', 'BlossomΠάσταΝτομάτας4X70g', 'KeanPomiloriΠεραστήΝτομάτα690g', 'SwsΠάσταΝτομάτας425g','ΜιτσίδηΠεραστήΝτομάτα3x500g', 
-# 'MaggiΖωμόςΚότας12Τεμ','MaggiΖωμόςΛαχανικών16Τεμ','MaggiΖωμόςΓιαΖυμαρικά12Τεμ','KnorrΖωμόςΚότας12Τεμ','KnorrΖωμόςΛαχανικών12Τεμ']]
+urls_sauces=[["/ntomatas","/ntomatas?page=2","/ntomatas?page=3","/zomoi","/zomoi?page=2","/zomoi?page=3"],['PelargosΚλασικό3X250g', 
+'ΜιτσίδηΠάσταΝτομάτας4X70g', 'BlossomΠάσταΝτομάτας4X70g', 'KeanPomiloriΠεραστήΝτομάτα690g', 'SwsΠάσταΝτομάτας425g','ΜιτσίδηΠεραστήΝτομάτα3x500g', 
+'MaggiΖωμόςΚότας12Τεμ','MaggiΖωμόςΛαχανικών16Τεμ','MaggiΖωμόςΓιαΖυμαρικά12Τεμ','KnorrΖωμόςΚότας12Τεμ','KnorrΖωμόςΛαχανικών12Τεμ']]
 
-# urls_oil=[["/elaiolado","/elaiolado?page=2"],['ΆγιοςΓεώργιοςΚυπριακόΠαρθένοΕλαιόλαδο1L','ΕλιοχώριΠαρθένοΕλαιόλαδο2L', 'ΣεκέπΠαρθένοΕλαιόλαδο1L']]
+urls_oil=[["/elaiolado","/elaiolado?page=2"],['ΆγιοςΓεώργιοςΚυπριακόΠαρθένοΕλαιόλαδο1L','ΕλιοχώριΠαρθένοΕλαιόλαδο2L', 'ΣεκέπΠαρθένοΕλαιόλαδο1L']]
 
-# urls_otheroil=[["/ilianthelaio"],['LesieurΗλιανθέλαιο3L', 'AmbrosiaΗλιανθέλαιο3L','FloraΗλιανθέλαιο3L', 'AmbrosiaΗλιανθέλαιο4L']]
+urls_otheroil=[["/ilianthelaio"],['LesieurΗλιανθέλαιο3L', 'AmbrosiaΗλιανθέλαιο3L','FloraΗλιανθέλαιο3L', 'AmbrosiaΗλιανθέλαιο4L']]
 
-# urls_preservedfish=[["/tonou","/tonou?page=2","/tonou?page=3"],['SevycoΆσπροςΤόνοςΣεΕλαιόλαδο4X95g', 'SevycoΤόνοςΣεΝερό4X200g',
-#  'RioMareΤόνοςΣεΕλαιόλαδο160g2+1Δωρεάν', 'RioMareΤόνοςΣεΕλαιόλαδο80g3+1Δωρεάν','RioMareΤόνοςΣεΕλαιόλαδο80g3+1Δωρεάν']]
+urls_preservedfish=[["/tonou","/tonou?page=2","/tonou?page=3"],['SevycoΆσπροςΤόνοςΣεΕλαιόλαδο4X95g', 'SevycoΤόνοςΣεΝερό4X200g',
+ 'RioMareΤόνοςΣεΕλαιόλαδο160g2+1Δωρεάν', 'RioMareΤόνοςΣεΕλαιόλαδο80g3+1Δωρεάν','RioMareΤόνοςΣεΕλαιόλαδο80g3+1Δωρεάν']]
 
-# urls_driedfish = [["/psariou-1"],['ΚαμήλαΣαρδελάκιαΣεΝερό120g', 'TrataΡέγγαΚαπνιστή160g', 'FlokosΦιλέτοΣκουμπρίΚαπνιστόΣεΦυτικόΛάδι160g',
-#  'ΚαμήλαΑντζιούγες50g']]
+urls_driedfish = [["/psariou-1"],['ΚαμήλαΣαρδελάκιαΣεΝερό120g', 'TrataΡέγγαΚαπνιστή160g', 'FlokosΦιλέτοΣκουμπρίΚαπνιστόΣεΦυτικόΛάδι160g',
+ 'ΚαμήλαΑντζιούγες50g']]
 
-# urls_preservedmeat = [["/kreatos","/kreatos?page=2"],['KarlaCornedBeef340g','TulipPorkLuncheonMeat200g',
-#  'TulipChoppedHam200g','ZwanLuncheonMeat200g', 'ZwanChoppedHamAndPork200g','ZwanChickenLuncheonMeat200g']]
+urls_preservedmeat = [["/kreatos","/kreatos?page=2"],['KarlaCornedBeef340g','TulipPorkLuncheonMeat200g',
+ 'TulipChoppedHam200g','ZwanLuncheonMeat200g', 'ZwanChoppedHamAndPork200g','ZwanChickenLuncheonMeat200g']]
 
-# urls_preservedvegetable = [["/lachanikon"],['ΜεσόγειοςΡεβύθια400g', 'ΜεσόγειοςΦασόλιαΚόκκινα400g', 
-# 'ΜεσόγειοςΦασόλιαΆσπρα400g', 'ΜεσόγειοςΣιταροπούλα340g', 'ΜεσόγειοςΜανιτάριαΦέτες400g', 'ΜεσόγειοςΦασόλιαΣεΣάλτσαΝτομάτας400g']]
+urls_preservedvegetable = [["/lachanikon"],['ΜεσόγειοςΡεβύθια400g', 'ΜεσόγειοςΦασόλιαΚόκκινα400g', 
+'ΜεσόγειοςΦασόλιαΆσπρα400g', 'ΜεσόγειοςΣιταροπούλα340g', 'ΜεσόγειοςΜανιτάριαΦέτες400g', 'ΜεσόγειοςΦασόλιαΣεΣάλτσαΝτομάτας400g']]
 
-# urls_othermilk = [["/kremes-galaktos","/galaktos","/galaktos?page=2"],
-# ['ΝουνούLight400g', 'Νουνού400g', 'NestleMilkmaidΓάλαΖαχαρούχο397g','ΝουνούΓάλαΖαχαρούχο397g','ΝουνούLight10X15g',
-# 'ΧαραλαμπίδηςΚρίστηςΚρέμαΓάλακτος250ml']]
+urls_othermilk = [["/kremes-galaktos","/galaktos","/galaktos?page=2"],
+['ΝουνούLight400g', 'Νουνού400g', 'NestleMilkmaidΓάλαΖαχαρούχο397g','ΝουνούΓάλαΖαχαρούχο397g','ΝουνούLight10X15g',
+'ΧαραλαμπίδηςΚρίστηςΚρέμαΓάλακτος250ml']]
 
-# urls_otherfood = [["/soupes","/diafores-sokolates","/diafores-sokolates?page=2","/mpiskota","/mpiskota?page=2","/mpiskota?page=3","/mpiskota?page=4",
-# "/mpiskota?page=5","/mpiskota?page=6","/mpiskota?page=7","/mpiskota?page=8","/mpiskota?page=9","/mpiskota?page=10","/mpiskota?page=11","/mpiskota?page=12"],
-# ['HeinzΣούπαΜανιταριών400g', 'HeinzΣούπαΝτομάτας400g',"ΦρουΦρουJoker9Τεμ9+3Δωρεάν","ΦρουΦρουMorningCoffee150g","KinderCards5Τεμ128g",
-# "Oreo154g","ΠαπαδοπούλουΓεμιστάΣοκολάτα200g"]]
+urls_otherfood = [["/soupes","/diafores-sokolates","/diafores-sokolates?page=2","/mpiskota","/mpiskota?page=2","/mpiskota?page=3","/mpiskota?page=4",
+"/mpiskota?page=5","/mpiskota?page=6","/mpiskota?page=7","/mpiskota?page=8","/mpiskota?page=9","/mpiskota?page=10","/mpiskota?page=11","/mpiskota?page=12"],
+['HeinzΣούπαΜανιταριών400g', 'HeinzΣούπαΝτομάτας400g',"ΦρουΦρουJoker9Τεμ9+3Δωρεάν","ΦρουΦρουMorningCoffee150g","KinderCards5Τεμ128g",
+"Oreo154g","ΠαπαδοπούλουΓεμιστάΣοκολάτα200g"]]
 
-# urls_sugar = [["/aspri"],['SweetFamilyΛευκήΚρυσταλλικήΖάχαρη1kg']]
+urls_sugar = [["/aspri"],['SweetFamilyΛευκήΚρυσταλλικήΖάχαρη1kg']]
 
-# urls_flour= [["/alevri","/alevri?page=2"],['ΜιτσίδηΑλεύριΓιαΌλεςΤιςΧρήσεις1kg','ΜιτσίδηΑλεύριΦαρίνα&#039;&#039;00&#039;&#039;1kg',
-#  'ΜιτσίδηΑλεύριΧωριάτικο1kg','ΜιτσίδηΑλεύριΦαρίναΖαχαροπλαστικής1kg','ΑδελφοίΚαζάζηΑλεύριΦαρίνα001kg','ΑδελφοίΚαζάζηΑλεύριΧωριάτικο1kg']]
+urls_flour= [["/alevri","/alevri?page=2"],['ΜιτσίδηΑλεύριΓιαΌλεςΤιςΧρήσεις1kg','ΜιτσίδηΑλεύριΦαρίνα&#039;&#039;00&#039;&#039;1kg',
+ 'ΜιτσίδηΑλεύριΧωριάτικο1kg','ΜιτσίδηΑλεύριΦαρίναΖαχαροπλαστικής1kg','ΑδελφοίΚαζάζηΑλεύριΦαρίνα001kg','ΑδελφοίΚαζάζηΑλεύριΧωριάτικο1kg']]
 
-# urls_chocolate = [["/mavri-sokolata","/lefki-sokolata"],['BakandysΣοκολάταΓάλακτοςΚουβερτούρα4X37.5g', 
-# 'BakandysΆσπρηΣοκολάταΚουβερτούρα4x37.5g']]
+urls_chocolate = [["/mavri-sokolata","/lefki-sokolata"],['BakandysΣοκολάταΓάλακτοςΚουβερτούρα4X37.5g', 
+'BakandysΆσπρηΣοκολάταΚουβερτούρα4x37.5g']]
 
-# urls_confectionary= [["/diafora-alla-eidi", "/diafora-alla-eidi?page=2","/diafora-alla-eidi?page=3"],['ΜοναμίΜαγειρικήΣόδα10X7g', 
-# 'RoyalBakingPowder226g', 'ΣτέλλαΑνθόνεροΚιτρόμηλο500ml', 'ΑμαλίαΝησιαστέ400g', 'CarltonaΆμυλοΑραβοσίτου450g', 'BakandysΣαβουαγιάρ200g', 
-# 'ΓιώτηςΜαγιάΣτιγμής3x8g', 'SeranoΙνδοκάρυδοΑλεσμένο140g1+1Δωρεάν', 'SpryΦυτικόΜαγειρικόΠροιόν350g', 'ΑγρούΡοδόσταγμα500ml']]
+urls_confectionary= [["/diafora-alla-eidi", "/diafora-alla-eidi?page=2","/diafora-alla-eidi?page=3"],['ΜοναμίΜαγειρικήΣόδα10X7g', 
+'RoyalBakingPowder226g', 'ΣτέλλαΑνθόνεροΚιτρόμηλο500ml', 'ΑμαλίαΝησιαστέ400g', 'CarltonaΆμυλοΑραβοσίτου450g', 'BakandysΣαβουαγιάρ200g', 
+'ΓιώτηςΜαγιάΣτιγμής3x8g', 'SeranoΙνδοκάρυδοΑλεσμένο140g1+1Δωρεάν', 'SpryΦυτικόΜαγειρικόΠροιόν350g', 'ΑγρούΡοδόσταγμα500ml']]
 
-# urls_freshvegetables= [[ "/freska-lachanika","/freska-lachanika?page=2","/freska-lachanika?page=3","/freska-lachanika?page=4","/freska-lachanika?page=5","/freska-lachanika?page=6"],
-# ['Ντομάτες1kg', 'ΑγγουράκιαΧωραφιού1kg', 'Λεμόνια1kg', 'ΚρεμμύδιαΑκαθάριστα1kg', 'Αγγουράκια1kg', 'ΝτοματίνιαΜίνιΦοινικωτά500g',
-#  'ΚαρόταΑκαθάριστα1kg', 'Αβοκάντο1kg', 'ΜαρούλιΡομάναΔέσμη1Τεμ', 'ΠιπεριέςΧρωματιστές4Τεμ', 'Σκόρδος1Τεμ', 'ΜπανάνεςΕισαγωγής1kg']]
+urls_freshvegetables= [[ "/freska-lachanika","/freska-lachanika?page=2","/freska-lachanika?page=3","/freska-lachanika?page=4","/freska-lachanika?page=5","/freska-lachanika?page=6"],
+['Ντομάτες1kg', 'ΑγγουράκιαΧωραφιού1kg', 'Λεμόνια1kg', 'ΚρεμμύδιαΑκαθάριστα1kg', 'Αγγουράκια1kg', 'ΝτοματίνιαΜίνιΦοινικωτά500g',
+ 'ΚαρόταΑκαθάριστα1kg', 'Αβοκάντο1kg', 'ΜαρούλιΡομάναΔέσμη1Τεμ', 'ΠιπεριέςΧρωματιστές4Τεμ', 'Σκόρδος1Τεμ', 'ΜπανάνεςΕισαγωγής1kg']]
 
-# urls_potatoes =[["/freska-lachanika"],['ΦρέσκεςΠατάτεςΚυπριακέςΝέαςΣoδειάς2kg']]
+urls_potatoes =[["/freska-lachanika"],['ΦρέσκεςΠατάτεςΚυπριακέςΝέαςΣoδειάς2kg']]
 
-# urls_fruit = [["/freska-frouta","/freska-frouta?page=2","/freska-frouta?page=3"],['ΜπανάνεςΕισαγωγής1kg','ΜήλαPinkLady1kg', 'ΠράσινοΣταφύλι750g', 'ΜήλαGrannySmith1kg', 'ΑχλάδιαConference1kg', 
-# 'ΜήλαΚόκκιναDelicious1kg', 'Μύρτιλα125g', 'ΜήλαΚίτριναDelicious1kg', 'Ακτινίδια500g', 'ΠορτοκάλιαMerlinAAA1kg', 'ΜήλαRoyalGala1kg', 'ΠορτοκάλιαΓιαΧυμό2kg']]
+urls_fruit = [["/freska-frouta","/freska-frouta?page=2","/freska-frouta?page=3"],['ΜπανάνεςΕισαγωγής1kg','ΜήλαPinkLady1kg', 'ΠράσινοΣταφύλι750g', 'ΜήλαGrannySmith1kg', 'ΑχλάδιαConference1kg', 
+'ΜήλαΚόκκιναDelicious1kg', 'Μύρτιλα125g', 'ΜήλαΚίτριναDelicious1kg', 'Ακτινίδια500g', 'ΠορτοκάλιαMerlinAAA1kg', 'ΜήλαRoyalGala1kg', 'ΠορτοκάλιαΓιαΧυμό2kg']]
 
-# urls_pork= [["/klasikes-kopes-choirinou","/klasikes-kopes-choirinou?page=2"],['ΧοιρινόΚιμάςΜερί500g', 'ΧοιρινόΜπριζόλαΛαιμός4Τεμ1,200kg', 'ΧοιρινόΣούβλαΛαιμόςΛαπάςΜεΚόκκαλο1,1kg']]
+urls_pork= [["/klasikes-kopes-choirinou","/klasikes-kopes-choirinou?page=2"],['ΧοιρινόΚιμάςΜερί500g', 'ΧοιρινόΜπριζόλαΛαιμός4Τεμ1,200kg', 'ΧοιρινόΣούβλαΛαιμόςΛαπάςΜεΚόκκαλο1,1kg']]
 
-# urls_othermeat= [["/paraskeuasmata-choirinou"],['ΧοιρινόΣεφταλιές850g', 'ΛουκάνικαΧωριάτικα550g']]
+urls_othermeat= [["/paraskeuasmata-choirinou"],['ΧοιρινόΣεφταλιές850g', 'ΛουκάνικαΧωριάτικα550g']]
 
-# urls_poultry = [["/kotopoulo","/kotopoulo?page=2"],['ΚοτόπουλοΦιλέτο850g', 'ΚοτόπουλοΟλόκληρο2,8kg']]
+urls_poultry = [["/kotopoulo","/kotopoulo?page=2"],['ΚοτόπουλοΦιλέτο850g', 'ΚοτόπουλοΟλόκληρο2,8kg']]
 
-# urls_lamb = [["/arni"],['ΑρνίΓιαΣούβλα1kg']]
+urls_lamb = [["/arni"],['ΑρνίΓιαΣούβλα1kg']]
 
-# urls_beaf= [["/vodino"],['ΒοδινόΚιμάς500g']]
+urls_beaf= [["/vodino"],['ΒοδινόΚιμάς500g']]
 
-# urls_fish= [["/psaria"],['ΤσιπούραΦρέσκιαΚαθαρισμένη3ΤεμMax1,500kg']]
+urls_fish= [["/psaria"],['ΤσιπούραΦρέσκιαΚαθαρισμένη3ΤεμMax1,500kg']]
 
-# urls_preservedmilk= [["/makras-diarkeias"],['MlekovitaΠλήρες3.5%ΓάλαΜακράςΔιαρκείας1L', 'LauraΕλαφρύΓάλαΜακράςΔιαρκείας1,5%1L']]
+urls_preservedmilk= [["/makras-diarkeias"],['MlekovitaΠλήρες3.5%ΓάλαΜακράςΔιαρκείας1L', 'LauraΕλαφρύΓάλαΜακράςΔιαρκείας1,5%1L']]
 
-# urls_lowfatmilk= [["/ageladino","/ageladino?page=2"],['ΛανίτηςΕλαφρύΓάλα2L',  'ΛανίτηςΕλαφρύΓάλα1,5L','ΧαραλαμπίδηςΚρίστηςDelactΓάλα1L', 'ΧαραλαμπίδηςΚρίστηςΕλαφρύΓάλα2L',
-#  'ΧαραλαμπίδηςΚρίστηςΕλαφρύΓάλα1L','ΧαραλαμπίδηςΚρίστηςΕλαφρύΓάλα1,5L']]
+urls_lowfatmilk= [["/ageladino","/ageladino?page=2"],['ΛανίτηςΕλαφρύΓάλα2L',  'ΛανίτηςΕλαφρύΓάλα1,5L','ΧαραλαμπίδηςΚρίστηςDelactΓάλα1L', 'ΧαραλαμπίδηςΚρίστηςΕλαφρύΓάλα2L',
+ 'ΧαραλαμπίδηςΚρίστηςΕλαφρύΓάλα1L','ΧαραλαμπίδηςΚρίστηςΕλαφρύΓάλα1,5L']]
 
-# urls_wholemilk = [["/ageladino","/ageladino?page=2"],['ΛανίτηςΠλήρεςΓάλα2L','ΧαραλαμπίδηςΚρίστηςΠλήρεςΓάλα2L']]
+urls_wholemilk = [["/ageladino","/ageladino?page=2"],['ΛανίτηςΠλήρεςΓάλα2L','ΧαραλαμπίδηςΚρίστηςΠλήρεςΓάλα2L']]
 
-# urls_yogurt= [["/ageladino-giaourti", "/ageladino-giaourti?page=2","/proveio-giaourti"],['ΧαραλαμπίδηςΚρίστηςΣτραγγάτο1kg',
-#  'ZitaΣτραγγιστό1kg', 'ZitaΣτραγγιστόΆπαχο0%1kg', 'ΧαραλαμπίδηςΚρίστηςΣτραγγάτοΆπαχο0%1kg', 'ΑλάμπραΠρόβειοΓιαούρτιΗΓιαγιά700g']]
+urls_yogurt= [["/ageladino-giaourti", "/ageladino-giaourti?page=2","/proveio-giaourti"],['ΧαραλαμπίδηςΚρίστηςΣτραγγάτο1kg',
+ 'ZitaΣτραγγιστό1kg', 'ZitaΣτραγγιστόΆπαχο0%1kg', 'ΧαραλαμπίδηςΚρίστηςΣτραγγάτοΆπαχο0%1kg', 'ΑλάμπραΠρόβειοΓιαούρτιΗΓιαγιά700g']]
 
-# urls_butter= [["/voutyro"],['LurpakΑνάλατοΒούτυρο250g', 'KerrygoldΑλατισμένοΒούτυρο250g', 'LurpakΑλατισμένοΒούτυρο250g']]
+urls_butter= [["/voutyro"],['LurpakΑνάλατοΒούτυρο250g', 'KerrygoldΑλατισμένοΒούτυρο250g', 'LurpakΑλατισμένοΒούτυρο250g']]
 
-# urls_margarine= [["/margarines","/margarines?page=2"],['VitaliteLightΜαργαρίνη500g', 'ΧαραλαμπίδηςΚρίστηςOriginalΜαργαρίνη500g', 'ΧαραλαμπίδηςΚρίστηςLightΜαργαρίνη500g','FloraOriginal100%Φυτικό450g', 
-# 'FloraLight100%Φυτικό450g', 'ΜινέρβαΦαστSoft250g']]
+urls_margarine= [["/margarines","/margarines?page=2"],['VitaliteLightΜαργαρίνη500g', 'ΧαραλαμπίδηςΚρίστηςOriginalΜαργαρίνη500g', 'ΧαραλαμπίδηςΚρίστηςLightΜαργαρίνη500g','FloraOriginal100%Φυτικό450g', 
+'FloraLight100%Φυτικό450g', 'ΜινέρβαΦαστSoft250g']]
 
-# urls_eggs= [["/avga"],['VasilicoEggsΑυγάΜεσσαία15Τεμ']]
+urls_eggs= [["/avga"],['VasilicoEggsΑυγάΜεσσαία15Τεμ']]
 
-# #put all the different lists in one
-# urls_all = [urls_bread,urls_bakery,urls_cereals,urls_pastas,urls_rice,urls_saltspices,urls_nuts,urls_jams,urls_crisps,urls_sauces,urls_oil,urls_otheroil,
-# urls_preservedfish,urls_driedfish,urls_preservedmeat,urls_preservedvegetable,urls_othermilk,urls_otherfood,urls_sugar,urls_flour,
-# urls_chocolate,urls_confectionary,urls_freshvegetables,urls_potatoes,urls_fruit,urls_pork,urls_othermeat,urls_poultry,urls_lamb,urls_beaf
-# ,urls_fish,urls_preservedmilk,urls_lowfatmilk,urls_wholemilk,urls_yogurt,urls_butter,urls_margarine,urls_eggs]
+#put all the different lists in one
+urls_all = [urls_bread,urls_bakery,urls_cereals,urls_pastas,urls_rice,urls_saltspices,urls_nuts,urls_jams,urls_crisps,urls_sauces,urls_oil,urls_otheroil,
+urls_preservedfish,urls_driedfish,urls_preservedmeat,urls_preservedvegetable,urls_othermilk,urls_otherfood,urls_sugar,urls_flour,
+urls_chocolate,urls_confectionary,urls_freshvegetables,urls_potatoes,urls_fruit,urls_pork,urls_othermeat,urls_poultry,urls_lamb,urls_beaf
+,urls_fish,urls_preservedmilk,urls_lowfatmilk,urls_wholemilk,urls_yogurt,urls_butter,urls_margarine,urls_eggs]
 
-# #the class labels must represent the list category in urls_all, same length wiht the urls_all
-# class_labels = ['Bread','Other bakery products','Breakfast Cereals','Pasta products and couscous','Rice','Salt, spices and culinary herbs',
-# 'Dried fruit and nuts','Jams, marmalades and honey','Crisps','Sauces, condiments','Olive Oil', 'Other edible oils','Other preserved or processed fish and seafood-based preparations',
-# 'Dried, smoked or salted fish and seafood','Other meat preparations','Dried vegetables, other preserved or processed vegetables','Other milk products',
-# 'Other food products n.e.c.','Sugar','Flours and other cereals','Chocolate','Confectionery products','Fresh or chilled vegetables other than potatoes and other tubers',
-# 'Potatoes','Fresh or chilled fruit','Pork','Other meat','Poultry','Lamb and goat','Beef and veal','Fresh or chilled fish','Preserved milk','Low fat Milk',
-# 'Whole Milk','Yogurt','Butter','Margarine and other vegetable fats','Eggs']
+#the class labels must represent the list category in urls_all, same length wiht the urls_all
+class_labels = ['Bread','Other bakery products','Breakfast Cereals','Pasta products and couscous','Rice','Salt, spices and culinary herbs',
+'Dried fruit and nuts','Jams, marmalades and honey','Crisps','Sauces, condiments','Olive Oil', 'Other edible oils','Other preserved or processed fish and seafood-based preparations',
+'Dried, smoked or salted fish and seafood','Other meat preparations','Dried vegetables, other preserved or processed vegetables','Other milk products',
+'Other food products n.e.c.','Sugar','Flours and other cereals','Chocolate','Confectionery products','Fresh or chilled vegetables other than potatoes and other tubers',
+'Potatoes','Fresh or chilled fruit','Pork','Other meat','Poultry','Lamb and goat','Beef and veal','Fresh or chilled fish','Preserved milk','Low fat Milk',
+'Whole Milk','Yogurt','Butter','Margarine and other vegetable fats','Eggs']
 
-# #the scrapper function
-# def scrapper_supermarketcy(urls:list,products:list):
-#     #create lists for the products and the prices repsectively
-#     products_ini =[]
-#     prices_ini = []
+#the scrapper function
+def scrapper_supermarketcy(urls:list,products:list):
+    #create lists for the products and the prices repsectively
+    products_ini =[]
+    prices_ini = []
 
-#     #final list for the products and the prices, the text is cleaned up
-#     products_final =[]
-#     prices_final =[]
+    #final list for the products and the prices, the text is cleaned up
+    products_final =[]
+    prices_final =[]
 
-#     #lists for the excel file, store only the necessary elements that can be found in the list given in the function
-#     price_excel = []
-#     product_excel = []
+    #lists for the excel file, store only the necessary elements that can be found in the list given in the function
+    price_excel = []
+    product_excel = []
 
-#     #final lists for the not duplicated values
-#     global price_excelfinal
-#     global product_excelfinal
-#     price_excelfinal = []
-#     product_excelfinal = []
+    #final lists for the not duplicated values
+    global price_excelfinal
+    global product_excelfinal
+    price_excelfinal = []
+    product_excelfinal = []
 
-#     #mean value of the prices of the products
-#     global mean_price
-#     mean_price = 0
+    #mean value of the prices of the products
+    global mean_price
+    mean_price = 0
 
-#     #for the different urls, putting the prices and the description of the 
-#     # products in the two initial lists
-#     url_supermarket = "https://www.supermarketcy.com.cy"
-#     for url in urls:
-#         try:
-#             url_new = url_supermarket+url
-#             page = urlopen(url_new)
-#             html = page.read().decode("utf-8")
-#             bs = BeautifulSoup(html, "html.parser")
+    #for the different urls, putting the prices and the description of the 
+    # products in the two initial lists
+    url_supermarket = "https://www.supermarketcy.com.cy"
+    for url in urls:
+        try:
+            url_new = url_supermarket+url
+            page = urlopen(url_new)
+            html = page.read().decode("utf-8")
+            bs = BeautifulSoup(html, "html.parser")
         
-#             scripts = bs.find_all('script',string=True)
+            scripts = bs.find_all('script',string=True)
 
-#             #get the strings for the names and the prices of the products using regular expressions
-#             for script in scripts:
-#                 product= re.findall(r"'name':.*\'",str(script))
-#                 price= re.findall(r"'price':.*\'",str(script))
-#                 if len(product)> 0:
-#                     products_ini.append(product)
-#                     prices_ini.append(price)
-#         except urllib.error.HTTPError as e:
-#             print(f"HTTP error: {e.code}")
-#             continue
+            #get the strings for the names and the prices of the products using regular expressions
+            for script in scripts:
+                product= re.findall(r"'name':.*\'",str(script))
+                price= re.findall(r"'price':.*\'",str(script))
+                if len(product)> 0:
+                    products_ini.append(product)
+                    prices_ini.append(price)
+        except urllib.error.HTTPError as e:
+            print(f"HTTP error: {e.code}")
+            continue
 
             
-#     #get the description of the items, by removing the ':' and the additional quotation marks
-#     for j in range(len(products_ini)):
-#         for i in range(len(products_ini[j])):
-#             products_final.append(products_ini[j][i].split(':')[1].replace(" ","").strip('\''))
+    #get the description of the items, by removing the ':' and the additional quotation marks
+    for j in range(len(products_ini)):
+        for i in range(len(products_ini[j])):
+            products_final.append(products_ini[j][i].split(':')[1].replace(" ","").strip('\''))
         
-#     #get the price of the items, by removing the ':' and the additional quotation marks
-#     for j in range(len(prices_ini)):
-#         for i in range(len(prices_ini[j])):
-#             prices_final.append(prices_ini[j][i].split(':')[1].replace(" ","").strip('\''))
+    #get the price of the items, by removing the ':' and the additional quotation marks
+    for j in range(len(prices_ini)):
+        for i in range(len(prices_ini[j])):
+            prices_final.append(prices_ini[j][i].split(':')[1].replace(" ","").strip('\''))
         
 
-#     #check for the items if they belong in the list given in the function and store price/product in the new lists
-#     for item in products:
-#         for product in products_final:
-#             index = products_final.index(product)
-#             if item==product:
-#                 price_excel.append(prices_final[index])
-#                 product_excel.append(products_final[index])
+    #check for the items if they belong in the list given in the function and store price/product in the new lists
+    for item in products:
+        for product in products_final:
+            index = products_final.index(product)
+            if item==product:
+                price_excel.append(prices_final[index])
+                product_excel.append(products_final[index])
                 
-#     #round the prices to only two decimal points
-#     price_excel = [round(float(i),2) for i in price_excel]
+    #round the prices to only two decimal points
+    price_excel = [round(float(i),2) for i in price_excel]
 
-#     #check for duplicated values
-#     for item in product_excel:
-#         index = product_excel.index(item)
-#         if item not in product_excelfinal:
-#             price_excelfinal.append(price_excel[index])
-#             product_excelfinal.append(product_excel[index])
+    #check for duplicated values
+    for item in product_excel:
+        index = product_excel.index(item)
+        if item not in product_excelfinal:
+            price_excelfinal.append(price_excel[index])
+            product_excelfinal.append(product_excel[index])
 
-#     #calculate the mean value of the products
-#     if len(price_excelfinal)>0:
-#         mean_price = round(sum(price_excelfinal)/len(price_excelfinal),2)
-#     else:
-#         mean_price = 0
+    #calculate the mean value of the products
+    if len(price_excelfinal)>0:
+        mean_price = round(sum(price_excelfinal)/len(price_excelfinal),2)
+    else:
+        mean_price = 0
 
-#     # for products that can not be found in the website put a nan value by the price in the list
-#     for product in products:
-#         if product not in product_excelfinal:
-#             product_excelfinal.append(product)
-#             price_excelfinal.append("NaN")  
+    # for products that can not be found in the website put a nan value by the price in the list
+    for product in products:
+        if product not in product_excelfinal:
+            product_excelfinal.append(product)
+            price_excelfinal.append("NaN")  
     
-# #scrap all the websites and assign for each product the price,date, label class and retailer
-# all_items_supermarketcy = []
-# for url,i,label in zip(urls_all,range(len(urls_all)),class_labels):
-#     scrapper_supermarketcy(url[0],url[1])
-#     for product,price in zip(product_excelfinal,price_excelfinal):
-#         all_items_supermarketcy.append([product,price,datetime.now(),label,'SupermarketCy',mean_price])
+#scrap all the websites and assign for each product the price,date, label class and retailer
+all_items_supermarketcy = []
+for url,i,label in zip(urls_all,range(len(urls_all)),class_labels):
+    scrapper_supermarketcy(url[0],url[1])
+    for product,price in zip(product_excelfinal,price_excelfinal):
+        all_items_supermarketcy.append([product,price,datetime.now(),label,'SupermarketCy',mean_price])
             
 
-# #initialize a dataframe
-# df_supermarketcy=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','retailer','average price'))
+#initialize a dataframe
+df_supermarketcy=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','retailer','average price'))
 
-# #assign the values to each column
-# for i in range(len(all_items_supermarketcy)):
-#     df.loc[len(df)] = (all_items_supermarketcy[i][0],all_items_supermarketcy[i][1],all_items_supermarketcy[i][2],all_items_supermarketcy[i][3],all_items_supermarketcy[i][4],0)
+#assign the values to each column
+for i in range(len(all_items_supermarketcy)):
+    df.loc[len(df)] = (all_items_supermarketcy[i][0],all_items_supermarketcy[i][1],all_items_supermarketcy[i][2],all_items_supermarketcy[i][3],all_items_supermarketcy[i][4],0)
 
 
 
@@ -381,7 +381,7 @@ def AlphaMega():
 
 AlphaMega()
 
-# SupermarketCyScrape()
+SupermarketCyScrape()
 
 
 
