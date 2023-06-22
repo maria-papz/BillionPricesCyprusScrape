@@ -8,3 +8,4 @@ openpyxl==3.1.2
 xlsxWriter==3.1.0
 tabula==2.7.0
 urllib==1.26.14
+PyPDF2==3.0.1
