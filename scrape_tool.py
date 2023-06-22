@@ -1,5 +1,4 @@
 # Import libraries
-from ast import Try
 import pandas as pd 
 import re
 from lxml import html, etree
