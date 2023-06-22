@@ -3,7 +3,7 @@ name: run-daily-scrape
 run-name: Adding daily scrape to current CSV
 on:
   schedule:
-    - cron: "58 03 * * *"    #runs at 11:30 UTC everyday
+    - cron: "55 02 * * *"    #runs at 11:30 UTC everyday
 
 jobs:
   getdataandrefreshmap:
