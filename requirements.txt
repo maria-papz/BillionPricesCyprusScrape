@@ -6,5 +6,5 @@ beautifulsoup4==4.12.2
 xlrd==2.0.1
 openpyxl==3.1.2
 xlsxWriter==3.1.0
-tabula==2.7.0
-urllib==1.26.14
+PyPDF2==3.0.1
+tabula-py==2.7.0
