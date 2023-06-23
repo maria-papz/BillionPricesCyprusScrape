@@ -2006,6 +2006,22 @@ def GasCylinder():
         df.loc[len(df)] =["ΚΥΛΙΝΔΡΟΣ 10kg ",middle_price,datetime.now(),'Liquefied hydrocarbons','Consumer Observatory',0]
 GasCylinder()
 
+
+def euc():
+    euc = tb.read_pdf('https://syllabus.euc.ac.cy/tuitions/euc-tuition-fees-c.pdf', pages = '2',pandas_options={'header': None}, stream=True)
+
+    list_euc = []
+
+    for i in range(0,4):
+        euc[i][1] = euc[i][1].astype('string')
+        for word in euc[i][1].to_list():
+            word = word.replace(',','')
+            word = int(word)
+            list_euc.append(word)
+    df.loc[len(df)]=["EUROPEAN UNIVERSITY CYPRUS, Bachelors Programmes Average Yearly Tuition for 2022-2023",(sum(list_euc))/(len(list_euc)),datetime.now(),'Tertiary education','European University Cyprus',0]
+
+euc()
+
 def update_average_price():
     now = datetime.now()
     today = now.date()
