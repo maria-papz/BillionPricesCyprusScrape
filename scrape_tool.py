@@ -26,7 +26,7 @@ df = pd.read_csv("BillionPricesProject_ProductList.csv")
 # Returns scraped data
 
 
-
+#SUPERMARKETCY
 def supermarketCy(item):
     p=[]
 
@@ -313,45 +313,14 @@ for url,i,label in zip(urls_all,range(len(urls_all)),class_labels):
         all_items_supermarketcy.append([product,price,datetime.now(),label,'SupermarketCy',mean_price])
             
 
-#initialize a dataframe
-df_supermarketcy=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','retailer','average price'))
-
 #assign the values to each column
 for i in range(len(all_items_supermarketcy)):
     df.loc[len(df)] = (all_items_supermarketcy[i][0],all_items_supermarketcy[i][1],all_items_supermarketcy[i][2],all_items_supermarketcy[i][3],all_items_supermarketcy[i][4],0)
 
 
 
-# def AlphaMega():
-#     data_alphaMega = pd.read_csv("AlphaMega.csv")
-#     for index, am in data_alphaMega.iterrows():
-#         page = requests.get(am['website'].strip())
-#         st=page.content.decode('utf-8')
-#         tree = html.fromstring(st)
-#         product_name = (''.join(am['product_name'])).replace(' ','').strip() 
-#         t=tree.xpath("//div[@class='grid grid--align-content-start']/script[@type='application/ld+json']/text()")
-#         if len(t)>0:
-#             product_price=t[0]
-#             if product_price:
-#                 try:
-#                     product_price = re.sub(r'"<[^>]+>"', '', product_price)
-#                     product_price = re.sub(r'[\x00-\x1F\x7F-\x9F]', '', product_price)
-#                     product_price = json.loads(product_price)['offers']['price']
-#                     now = datetime.now()
-#                     date_time_scraped = now
-#                     product_subclass=am['product_subclass']
-#                     retailer= am['retailer']
-#                     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
-#                 except json.decoder.JSONDecodeError as e:
-#                     print(f"JSONDecodeError occurred for product: {product_name}")
-#                     print(f"Error details: {e}")
-#                     continue
-#                 except KeyError as e:
-#                     print(f"KeyError occurred for product: {product_name}")
-#                     print(f"Error details: {e}")
-#                     continue
 
-
+#ALPHAMEGA
 def AlphaMega():
     data_alphaMega = pd.read_csv("AlphaMega.csv")
     for index, am in data_alphaMega.iterrows():
@@ -384,7 +353,7 @@ AlphaMega()
 SupermarketCyScrape()
 
 
-
+#CYTA
 urls_phone1 = [['https://www.cyta.com.cy/upgraded-telephony/el'],['Κλήσειςπροςσταθερό']]
 urls_phone2 = [['https://www.cyta.com.cy/upgraded-telephony/el'],['Κλήσειςπροςκινητό']]
 urls_internet = [['https://www.cyta.com.cy/mobile-internet'],['MobileInternetHome1']]
@@ -430,13 +399,13 @@ for url,i,label in zip(urls_all_phones,range(len(urls_all_phones)),class_labels_
     for product,price in zip(url[1],prices_final_phone):
         all_items_cyta.append([product,price,datetime.now(),label,'CYTA',price])
             
-#initialize a dataframe
-df_cyta=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','retailer','average price'))
 
 #assign the values to each column
 for i in range(len(all_items_cyta)):
     df.loc[len(df)] = (all_items_cyta[i][0],all_items_cyta[i][1],all_items_cyta[i][2],all_items_cyta[i][3],all_items_cyta[i][4],all_items_cyta[i][5])
 
+
+#PRIMETEL
 urls_internet = [['https://primetel.com.cy/home-fiber-plans-en'],['HomeFiber60MBPS','HomeFiber150MBPS','Fiber200MBPS']]
 urls_freedom = [['https://primetel.com.cy/giga-unlimited-en'],['GIGAUnlimited','GIGAUnlimitedPlus','GIGAUnlimitedMax']]
 
@@ -444,6 +413,50 @@ urls_all_phones = [ urls_internet,urls_freedom]
 
 class_labels_phones = ['Internet access provision services','Bundled telecommunication services']
 
+def scrappe_page(url,regex_exp):
+    global prices_phoneservices
+    prices_phoneservices = []
+    page = urlopen(url)
+    html = page.read().decode("utf-8")
+    bs = BeautifulSoup(html, "html.parser")
+    scripts = bs.find_all('p',{'class':'price'})
+    #get the strings for the names and the prices of the products using regular expressions
+    prices_phoneservices= re.findall(regex_exp,str(scripts))
+
+
+def scrapper_phoneservices_primetel(urls:list):
+    #final list with prices
+    global prices_final_phone
+    prices_final_phone = []
+    for url in urls:
+        if url=='https://primetel.com.cy/home-fiber-plans-en':
+            scrappe_page(url, r"\€\d\d.\d\d\<\/p")
+            prices_final_phone.append(float(prices_phoneservices[0].strip('\€\<\/p').replace(',', '.')))
+            prices_final_phone.append(float(prices_phoneservices[1].strip('\€\<\/p').replace(',', '.')))
+            prices_final_phone.append(float(prices_phoneservices[2].strip('\€\<\/p').replace(',', '.')))
+
+        if url=='https://primetel.com.cy/giga-unlimited-en':
+            scrappe_page(url,r"\€\d.*" )
+            prices_final_phone.append(float(prices_phoneservices[1].strip('\€')))
+            prices_final_phone.append(float(prices_phoneservices[3].strip('\€')))
+            prices_final_phone.append(float(prices_phoneservices[5].strip('\€')))
+
+
+#put the rows in a list
+all_items_primetel = []
+for url,label in zip(urls_all_phones,class_labels_phones):
+    scrapper_phoneservices_primetel(url[0])
+    for product,price in zip(url[1],prices_final_phone):
+        all_items_primetel.append([product,price,datetime.now(),label,'Primetel'])
+            
+
+#assign the values to each column
+for i in range(len(all_items_primetel)):
+    df.loc[len(df)] = (all_items_primetel[i][0],all_items_primetel[i][1],all_items_primetel[i][2],all_items_primetel[i][3],all_items_primetel[i][4],0)
+
+
+
+#CABLENET
 def cablenet():
     url = "https://cablenet.com.cy/τηλεφωνία/τέλη-τοπικών-κλήσεων/"
     response = requests.get(url)
@@ -497,8 +510,10 @@ def cablenet():
         price_with_euro_sign = tree.xpath(price_xpath)[0]
         price = price_with_euro_sign.replace("€", "")
         df.loc[len(df)]=['PurpleMaxMobile',price,datetime.now(),'Bundled telecommunication services','Cablenet',0] 
+
 cablenet()
 
+#EPIC
 def epic():
     name='Internet and Telephony 10'
     url = "https://www.epic.com.cy/en/page/H1r10tnT/internet-telephony"
@@ -533,55 +548,13 @@ def epic():
 
 epic()
 
-def scrappe_page(url,regex_exp):
-    global prices_phoneservices
-    prices_phoneservices = []
-    page = urlopen(url)
-    html = page.read().decode("utf-8")
-    bs = BeautifulSoup(html, "html.parser")
-    scripts = bs.find_all('p',{'class':'price'})
-    #get the strings for the names and the prices of the products using regular expressions
-    prices_phoneservices= re.findall(regex_exp,str(scripts))
 
-
-def scrapper_phoneservices_primetel(urls:list):
-    #final list with prices
-    global prices_final_phone
-    prices_final_phone = []
-    for url in urls:
-        if url=='https://primetel.com.cy/home-fiber-plans-en':
-            scrappe_page(url, r"\€\d\d.\d\d\<\/p")
-            prices_final_phone.append(float(prices_phoneservices[0].strip('\€\<\/p').replace(',', '.')))
-            prices_final_phone.append(float(prices_phoneservices[1].strip('\€\<\/p').replace(',', '.')))
-            prices_final_phone.append(float(prices_phoneservices[2].strip('\€\<\/p').replace(',', '.')))
-
-        if url=='https://primetel.com.cy/giga-unlimited-en':
-            scrappe_page(url,r"\€\d.*" )
-            prices_final_phone.append(float(prices_phoneservices[1].strip('\€')))
-            prices_final_phone.append(float(prices_phoneservices[3].strip('\€')))
-            prices_final_phone.append(float(prices_phoneservices[5].strip('\€')))
-
- # read csv file with product description, class and urls
+# read csv file with product description, class and urls
 products_urls = pd.read_excel('products_bpp.xlsx')
 
-#put the rows in a list
-all_items_primetel = []
-for url,label in zip(urls_all_phones,class_labels_phones):
-    scrapper_phoneservices_primetel(url[0])
-    for product,price in zip(url[1],prices_final_phone):
-        all_items_primetel.append([product,price,datetime.now(),label,'Primetel'])
-            
-#initialize a dataframe
-df_primetel=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','retailer'))
 
-#assign the values to each column
-for i in range(len(all_items_primetel)):
-    df.loc[len(df)] = (all_items_primetel[i][0],all_items_primetel[i][1],all_items_primetel[i][2],all_items_primetel[i][3],all_items_primetel[i][4],0)
-
-
-
+#MARKS&SPENCER
 marksspencerdf = products_urls.iloc[209:227,]
-marksspencerdf.head()
 
 #the scrapper function
 prices_final_marksspencer = []
@@ -626,21 +599,17 @@ all_items_marksspencer = []
 for product,price,label in zip(products,prices_final_marksspencer,labels):
     all_items_marksspencer.append([product,price,datetime.now(),label,'Marks&Spencer'])
 
-#initialize a dataframe
-df_marksspencer=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','retailer'))
 
 #assign the values to each column
 for i in range(len(all_items_marksspencer)):
     df.loc[len(df)] = (all_items_marksspencer[i][0],all_items_marksspencer[i][1],all_items_marksspencer[i][2],all_items_marksspencer[i][3],all_items_marksspencer[i][4],0)
 
-#change type of the item.price column
-df_marksspencer['item.price'] = df_marksspencer['item.price'].astype('float32')
 
 
 
-
+#INTERNSPORT
 # internsportsdf = products_urls.iloc[226:243,]
-# internsportsdf.head()
+
 
 # #the scrapper function
 # prices_final_internsports = []
@@ -681,20 +650,17 @@ df_marksspencer['item.price'] = df_marksspencer['item.price'].astype('float32')
 # for product,price,label in zip(products,prices_final_internsports,labels):
 #     all_items_internsports.append([product,price,datetime.now(),label,'InternSports'])
 
-# #initialize a dataframe
-# df_internsports=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','retailer'))
 
 # #assign the values to each column
 # for i in range(len(all_items_internsports)):
 #     df_internsports.loc[i] = (all_items_internsports[i][0],all_items_internsports[i][1],all_items_internsports[i][2],all_items_internsports[i][3],all_items_internsports[i][4])
 
-# #change type of the item.price column
-# df_internsports['item.price'] = df_internsports['item.price'].astype('float32')
 
 
 
+#FAMOUSSPORT
 famoussportsdf = products_urls.iloc[243:262,]
-famoussportsdf.tail()
+
 
 #the scrapper function
 prices_final_famoussports = []
@@ -739,17 +705,14 @@ all_items_famoussports = []
 for product,price,label in zip(products,prices_final_famoussports,labels):
     all_items_famoussports.append([product,price,datetime.now(),label,'FamousSports'])
 
-#initialize a dataframe
-df_famoussports=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','retailer'))
 
 #assign the values to each column
 for i in range(len(all_items_famoussports)):
     df.loc[len(df)] = (all_items_famoussports[i][0],all_items_famoussports[i][1],all_items_famoussports[i][2],all_items_famoussports[i][3],all_items_famoussports[i][4],0)
 
-#change type of the item.price column
-df_famoussports['item.price'] = df_famoussports['item.price'].astype('float32')
 
 
+#BERSHKA/STRADIVARIOUS
 def garments():
     headers = {'User-agent': 'Mozilla/5.0'}  
     data_garmets = pd.read_csv("Garmets.csv")
@@ -778,6 +741,8 @@ def garments():
 
 garments()
 
+
+#NOVELLA HAIR SALON
 def Novella():
     prices_final_hairsalon = []
     url_new = 'https://novella.com.cy/#services'
@@ -793,12 +758,12 @@ def Novella():
 
     #################################################################################################################
 
-    df_hairsalon=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','item.division','retailer'))
-
     df.loc[len(df)] = ("Women's Services, HAIRCUT Stylist",prices_final_hairsalon[0],datetime.now(),'Hairdressing for women','Novella Hair Salon',0)
     df.loc[len(df)] = ("Men's Services, HAIRCUT Stylist",prices_final_hairsalon[1],datetime.now(),'Hairdressing for men','Novella Hair Salon',0)
+
 Novella()
 
+#CYPRUS POST
 def CyPost():
     file = 'https://www.cypruspost.post/uploads/2cf9ec4f5a.pdf'
     table_1 = tb.read_pdf(file, pages = '6',pandas_options={'header': None}, stream=True)
@@ -810,8 +775,6 @@ def CyPost():
     #change the type of columns that contain the prices
     df_package_1[2]=df_package_1[2].astype('string')
     df_package_2[1]=df_package_2[1].astype('string')
-
-    df_post=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','item.division','retailer'))
 
     all_items_post = [("ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Μικρά (P) 50 γρ.",round(float(df_package_1[2][14].split(' ')[0].replace(',','.')),2),datetime.now(),'Letter handling services','Cyprus Post',0),
                     ("ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Μεγάλα (G) 500 γρ.",round(float(df_package_1[2][21].split(' ')[0].replace(',','.')),2),datetime.now(),'Letter handling services','Cyprus Post',0),
@@ -825,9 +788,10 @@ def CyPost():
 
 CyPost()
 
+#CYPRUS MINISTRY OF EDUCATION
 def CyMinistryEducation():
     #Caution the fees are for the year 2022-2023 based on the link:
-#http://www.moec.gov.cy/idiotiki_ekpaidefsi/didaktra.html 
+    #http://www.moec.gov.cy/idiotiki_ekpaidefsi/didaktra.html 
 
     pdf_1 = tb.read_pdf('http://archeia.moec.gov.cy/mc/698/didaktra_idiotikon_mesi_ekpaidefsi.pdf', pages = '1',pandas_options={'header': None}, stream=True)
     pdf_2 = tb.read_pdf('http://archeia.moec.gov.cy/mc/698/didaktra_idiotikon_dimotikon_scholeion.pdf', pages = '1',pandas_options={'header': None}, stream=True)
@@ -844,7 +808,6 @@ def CyMinistryEducation():
     for i in range(2,8):
         df_secondary[i]= df_secondary[i].astype('string')
 
-    df_school=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','item.division','retailer'))
 
     avg_grammar_nic = (float(df_secondary[2][6])+float(df_secondary[3][6].split()[0])+float(df_secondary[3][6].split()[1])+float(df_secondary[4][6])+float(df_secondary[5][6])+float(df_secondary[6][6])+float(df_secondary[7][6]))/7
     avg_grammar_lim = (float(df_secondary[2][23])+float(df_secondary[3][23].split()[0])+float(df_secondary[3][23].split()[1])+float(df_secondary[4][23])+float(df_secondary[5][23])+float(df_secondary[6][23])+float(df_secondary[7][23]))/7
@@ -861,6 +824,7 @@ def CyMinistryEducation():
 
 CyMinistryEducation()
 
+#GLOBAL PETROL PRICES
 def Fuel():
     #https://eforms.eservices.cyprus.gov.cy/MCIT/MCIT/PetroleumPrices
     #alternative: https://gr.globalpetrolprices.com/Cyprus/
@@ -892,6 +856,7 @@ def Fuel():
 
 Fuel()
 
+#THE CYGAR SHOP/NOMBEO/E-WHOLE SALE
 def Tobacco():
     prices_final_cigars=[]
 
@@ -948,13 +913,14 @@ def Tobacco():
         df.loc[len(df)] =(all_items_cigars[i][0],all_items_cigars[i][1],all_items_cigars[i][2],all_items_cigars[i][3],all_items_cigars[i][4],all_items_cigars[i][5])
 Tobacco()
 
+#STEPHANI
 def Stephanis():
 
     #for the different urls, putting the prices in a list
     prices_final_stephanis = []
     stephanisdf = products_urls.iloc[302:342,]
-    stephanisdf.tail()
-        #columns urls,products,labels into lists
+    
+    #columns urls,products,labels into lists
     urls = stephanisdf['item.url'].values.tolist()
     products = stephanisdf['item.name'].values.tolist()
     labels = stephanisdf['item.subclass'].values.tolist()
@@ -981,6 +947,7 @@ def Stephanis():
 Stephanis()
 
 
+#ELECTROLINE
 def Electroline():
     urls = ["https://electroline.com.cy/products/garden/garden-power-tools/%ce%b1%ce%bb%cf%85%cf%83%ce%bf%cf%80%cf%81%ce%af%ce%bf%ce%bd%ce%b1/oregon-cs1200-electric-chainsaw-1800w/",
         "https://electroline.com.cy/products/tools/hand-tools-2/screwdrivers/kapriol-kap33533-set-screwdrivers-6pcs/",
@@ -1025,9 +992,9 @@ def Electroline():
         df.loc[len(df)] = (all_items_electroline[i][0],all_items_electroline[i][1],all_items_electroline[i][2],all_items_electroline[i][3],all_items_electroline[i][4],all_items_electroline[i][5])
 Electroline()                  
 
+#IKEA
 def ikea():
     ikeadf = products_urls.iloc[342:371,]
-    ikeadf.tail()
     prices_final_ikea = []
     url_ikea = "https://www.ikea.com.cy"
     #columns urls,products,labels into lists
@@ -1065,9 +1032,9 @@ def ikea():
 
 ikea()
 
+#AWOL
 def awol():
     awoldf = products_urls.iloc[280:288,]
-    awoldf.tail()
     urls = awoldf['item.url'].values.tolist()
     products = awoldf['item.name'].values.tolist()
     labels = awoldf['item.subclass'].values.tolist()
@@ -1103,9 +1070,9 @@ def awol():
         df.loc[len(df)] = (products[i],prices_final_awol[i],datetime.now(),labels[i],'AWOL',0)
 awol()
 
+#MOTORACE
 def moto_race():
     motoracedf = products_urls.iloc[288:302,]
-    motoracedf.tail()
     #the scrapper function
     prices_final_motorace = []
     #columns urls,products,labels into lists
@@ -1135,6 +1102,7 @@ def moto_race():
         df.loc[len(df)] = (products[i],prices_final_motorace[i],datetime.now(),labels[i],'MotoRace',0)
 moto_race()
 
+#BWELL PHARMACY
 def bwell():
     # Bwell Pharmacy (https://bwell.com.cy/)
     urls = ["https://bwell.com.cy/shop/health/cough-sore-throat/physiomer-hypertonic-eucalyptus-135-ml/",
@@ -1178,6 +1146,7 @@ def bwell():
 
 bwell()
 
+#MAZDA
 def mazda():
     url = "https://www.mazda.com.cy/Portals/7/adam/Contents/dDx4iz_W80eqne0jNZvsdA/Link/Mazda2_DEC22.pdf"  # Replace with the URL of the PDF file
     response = requests.get(url)
@@ -1198,6 +1167,7 @@ def mazda():
     pdf_file.close()
 mazda()
 
+#NISSAN
 def nissan():
         # Define the URL for the Booking.com page for hotel X
     url = "https://www.nissan.com.cy/vehicles/new-vehicles/juke-2022/prices-specifications.html#-"
@@ -1224,6 +1194,7 @@ def nissan():
     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
 nissan()
 
+#WOLT
 def Wolt():
     retailer="Wolt"
     product_subclass="Restaurants, cafes and dancing establishments"
@@ -1490,6 +1461,7 @@ def Wolt():
     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
 Wolt()
 
+#PIZZA HUT
 def PizzaHut():
     url = "https://www.pizzahut.com.cy/delivery-menu-mar.pdf?v=1"  # Replace with the URL of the PDF file
     response = requests.get(url)
@@ -1520,6 +1492,7 @@ def PizzaHut():
 
 PizzaHut()
 
+#CERA
 def cera():
     url = "https://www.cera.org.cy/Templates/00001/data/hlektrismos/kostos_xrisis.pdf"  # Replace with the URL of the PDF file
     response = requests.get(url)
@@ -1543,6 +1516,7 @@ def cera():
 
 cera()
 
+#WATER BOARD
 def water_board():
     url = "https://www.wbn.org.cy/καταναλωτής/διατιμήσεις/#content-d7d0c04646186e03a770"
     retailer="Water Board of Nicosia"
@@ -1561,6 +1535,7 @@ def water_board():
 
 water_board()
 
+#SEWAGE
 def sewage():
     url = "https://www.sbn.org.cy/el/apoxeteftika-teli"
 
@@ -1611,6 +1586,7 @@ def sewage():
 
 sewage()
 
+#WATERSEWAGE LARNACA AND LIMASSOL
 def waterSewageOtherCities():
 
     url = "https://www.sbla.com.cy/Sewage-Charges"
@@ -1727,6 +1703,7 @@ def extract_float_price(price_str):
     # Convert the string to a float
     return float(digits)
 
+#RIO CINEMA
 def Rio():
     retailer="Rio Cinemas"
     product_subclass="Cinemas, theatres, concerts"
@@ -1769,7 +1746,7 @@ def Rio():
     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
 Rio()
 
-
+#BOOKING
 def Booking():
 
     retailer="Booking"
@@ -1973,6 +1950,7 @@ def Booking():
 
 Booking()
 
+#GAS CYLINDER
 def GasCylinder():
     #extract last month reported name
     url = "https://consumer.gov.cy/en/price-observatories/learn-your-rights/66/?ctype=ar"
@@ -2006,7 +1984,7 @@ def GasCylinder():
         df.loc[len(df)] =["ΚΥΛΙΝΔΡΟΣ 10kg ",middle_price,datetime.now(),'Liquefied hydrocarbons','Consumer Observatory',0]
 GasCylinder()
 
-
+#EUROPEAN UNIVERSITY
 def euc():
     euc = tb.read_pdf('https://syllabus.euc.ac.cy/tuitions/euc-tuition-fees-c.pdf', pages = '2',pandas_options={'header': None}, stream=True)
 
