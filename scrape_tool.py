@@ -1,7 +1,8 @@
 # Import libraries
+from ast import Try
 import pandas as pd 
 import re
-from lxml import html
+from lxml import html, etree
 import requests
 from datetime import datetime
 import time
@@ -10,6 +11,10 @@ from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import urllib.request
 import json
+import tabula as tb
+from tabula import read_pdf
+import PyPDF2
+from datetime import date, timedelta
 
 
 #read from csv not to lose past records
@@ -21,7 +26,7 @@ df = pd.read_csv("BillionPricesProject_ProductList.csv")
 # Returns scraped data
 
 
-
+#SUPERMARKETCY
 def supermarketCy(item):
     p=[]
 
@@ -60,7 +65,7 @@ def supermarketCy(item):
 
             ## scraping time
             now = datetime.now()
-            date_time_scraped = now.strftime("%d/%m/%Y %H:%M:%S")
+            date_time_scraped = now 
 
             # returning list resembling row of dataframe
             new_row=[product_name, product_price,date_time_scraped,product_subclass,retailer,0]
@@ -308,35 +313,47 @@ for url,i,label in zip(urls_all,range(len(urls_all)),class_labels):
         all_items_supermarketcy.append([product,price,datetime.now(),label,'SupermarketCy',mean_price])
             
 
-#initialize a dataframe
-df_supermarketcy=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','retailer','average price'))
-
 #assign the values to each column
 for i in range(len(all_items_supermarketcy)):
     df.loc[len(df)] = (all_items_supermarketcy[i][0],all_items_supermarketcy[i][1],all_items_supermarketcy[i][2],all_items_supermarketcy[i][3],all_items_supermarketcy[i][4],0)
 
 
 
+
+#ALPHAMEGA
 def AlphaMega():
     data_alphaMega = pd.read_csv("AlphaMega.csv")
     for index, am in data_alphaMega.iterrows():
         page = requests.get(am['website'].strip())
-        st=page.content.decode('utf-8')
-        tree = html.fromstring(st)
-        product_name = (''.join(am['product_name'])).replace(' ','').strip() 
-        product_price=tree.xpath("//div[@class='grid grid--align-content-start']/script[@type='application/ld+json']/text()")[0]
-        product_price = json.loads(product_price)['offers']['price']
-        now = datetime.now()
-        date_time_scraped = now.strftime("%d/%m/%Y %H:%M:%S")
-        product_subclass=am['product_subclass']
-        retailer= am['retailer']
-        df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+        tree = html.fromstring(page.content)
+        product_name = (''.join(am['product_name'])).replace(' ', '').strip()
+        t = tree.xpath("//div[@class='grid grid--align-content-start']/script[@type='application/ld+json']/text()")
+        if len(t)>0:
+            product_price=t[0]
+            # Preprocess the product_price string
+            product_price = product_price.replace('\n', '').replace('\r', '')
 
+            # Use regex to extract the price
+            price_match = re.search(r'"price":\s*"([\d.]+)"', product_price)
+            if price_match:
+                product_price = price_match.group(1)
+            else:
+                print(f"No price found for product: {product_name}")
+                continue
+
+            now = datetime.now()
+            date_time_scraped = now
+            product_subclass = am['product_subclass']
+            retailer = am['retailer']
+            df.loc[len(df)] = [product_name, product_price, date_time_scraped, product_subclass, retailer, 0]
+
+
+AlphaMega()
 
 SupermarketCyScrape()
 
 
-
+#CYTA
 urls_phone1 = [['https://www.cyta.com.cy/upgraded-telephony/el'],['Κλήσειςπροςσταθερό']]
 urls_phone2 = [['https://www.cyta.com.cy/upgraded-telephony/el'],['Κλήσειςπροςκινητό']]
 urls_internet = [['https://www.cyta.com.cy/mobile-internet'],['MobileInternetHome1']]
@@ -364,16 +381,28 @@ def scrapper_phoneservices_cyta(urls:list):
     for url in urls:
         if url=='https://www.cyta.com.cy/upgraded-telephony/el':
             scrappe_page(url,'td',r"\€\d.\d*\s\/")
-            prices_final_phone.append(float(prices_phoneservices[0].strip('\€').strip('\/').replace(',', '.')))
-            prices_final_phone.append(float(prices_phoneservices[1].strip('\€').strip('\/').replace(',', '.')))
+            if prices_phoneservices:
+                prices_final_phone.append(float(prices_phoneservices[0].strip('\€').strip('\/').replace(',', '.')))
+            else:
+                prices_final_phone.append(None)
+            if len(prices_phoneservices)>1:
+                prices_final_phone.append(float(prices_phoneservices[1].strip('\€').strip('\/').replace(',', '.')))
+            else:
+                prices_final_phone.append(None)
 
         if url=='https://www.cyta.com.cy/mobile-internet':
             scrappe_page(url,'strong',r"\€\d\d.\d\d")
-            prices_final_phone.append(float(prices_phoneservices[0].strip('\€').replace(',', '.')))
+            if prices_phoneservices:
+                prices_final_phone.append(float(prices_phoneservices[0].strip('\€').replace(',', '.')))
+            else:
+                prices_final_phone.append(None)
 
         if url == 'https://www.cyta.com.cy/freedom-plans':
             scrappe_page(url,'span',r"\€\d\d.\d\d")
-            prices_final_phone.append(float(prices_phoneservices[0].strip('\€').replace(',', '.')))
+            if prices_phoneservices:
+                prices_final_phone.append(float(prices_phoneservices[0].strip('\€').replace(',', '.')))
+            else:
+                prices_final_phone.append(None)
 
 #put the rows in a list
 all_items_cyta = []
@@ -382,13 +411,13 @@ for url,i,label in zip(urls_all_phones,range(len(urls_all_phones)),class_labels_
     for product,price in zip(url[1],prices_final_phone):
         all_items_cyta.append([product,price,datetime.now(),label,'CYTA',price])
             
-#initialize a dataframe
-df_cyta=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','retailer','average price'))
 
 #assign the values to each column
 for i in range(len(all_items_cyta)):
     df.loc[len(df)] = (all_items_cyta[i][0],all_items_cyta[i][1],all_items_cyta[i][2],all_items_cyta[i][3],all_items_cyta[i][4],all_items_cyta[i][5])
 
+
+#PRIMETEL
 urls_internet = [['https://primetel.com.cy/home-fiber-plans-en'],['HomeFiber60MBPS','HomeFiber150MBPS','Fiber200MBPS']]
 urls_freedom = [['https://primetel.com.cy/giga-unlimited-en'],['GIGAUnlimited','GIGAUnlimitedPlus','GIGAUnlimitedMax']]
 
@@ -414,18 +443,34 @@ def scrapper_phoneservices_primetel(urls:list):
     for url in urls:
         if url=='https://primetel.com.cy/home-fiber-plans-en':
             scrappe_page(url, r"\€\d\d.\d\d\<\/p")
-            prices_final_phone.append(float(prices_phoneservices[0].strip('\€\<\/p').replace(',', '.')))
-            prices_final_phone.append(float(prices_phoneservices[1].strip('\€\<\/p').replace(',', '.')))
-            prices_final_phone.append(float(prices_phoneservices[2].strip('\€\<\/p').replace(',', '.')))
+            if prices_phoneservices:
+                prices_final_phone.append(float(prices_phoneservices[0].strip('\€\<\/p').replace(',', '.')))
+            else:
+                prices_final_phone.append(None)
+            if len(prices_phoneservices)>1:
+                prices_final_phone.append(float(prices_phoneservices[1].strip('\€\<\/p').replace(',', '.')))
+            else:
+                prices_final_phone.append(None)
+            if len(prices_phoneservices)>2:
+                prices_final_phone.append(float(prices_phoneservices[2].strip('\€\<\/p').replace(',', '.')))
+            else:
+                prices_final_phone.append(None)
 
         if url=='https://primetel.com.cy/giga-unlimited-en':
             scrappe_page(url,r"\€\d.*" )
-            prices_final_phone.append(float(prices_phoneservices[1].strip('\€')))
-            prices_final_phone.append(float(prices_phoneservices[3].strip('\€')))
-            prices_final_phone.append(float(prices_phoneservices[5].strip('\€')))
+            if len(prices_phoneservices)>1:
+                prices_final_phone.append(float(prices_phoneservices[1].strip('\€')))
+            else:
+                prices_final_phone.append(None)
+            if len(prices_phoneservices)>3:
+                prices_final_phone.append(float(prices_phoneservices[3].strip('\€')))
+            else:
+                prices_final_phone.append(None)
+            if len(prices_final_phone)>5:
+                prices_final_phone.append(float(prices_phoneservices[5].strip('\€')))
+            else:
+                prices_final_phone.append(None)
 
- # read csv file with product description, class and urls
-products_urls = pd.read_excel('products_bpp.xlsx')
 
 #put the rows in a list
 all_items_primetel = []
@@ -434,8 +479,6 @@ for url,label in zip(urls_all_phones,class_labels_phones):
     for product,price in zip(url[1],prices_final_phone):
         all_items_primetel.append([product,price,datetime.now(),label,'Primetel'])
             
-#initialize a dataframe
-df_primetel=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','retailer'))
 
 #assign the values to each column
 for i in range(len(all_items_primetel)):
@@ -443,8 +486,105 @@ for i in range(len(all_items_primetel)):
 
 
 
+#CABLENET
+def cablenet():
+    url = "https://cablenet.com.cy/τηλεφωνία/τέλη-τοπικών-κλήσεων/"
+    response = requests.get(url)
+
+
+    tree = html.fromstring(response.content)
+
+    price_element = tree.xpath("//tr/td[text()='CYTA Σταθερό Δίκτυο']/following-sibling::td[3]")
+    if price_element:
+        price = price_element[0].text
+        df.loc[len(df)]=['Κλήσειςπροςσταθερό',price,datetime.now(),'Wired telephone services','Cablenet',0]
+
+
+    url = "https://cablenet.com.cy/χρεώσεις/"
+    response = requests.get(url)
+    tree = html.fromstring(response.content)
+
+    price_element = tree.xpath("//tr/td[text()='National Mobile']/following-sibling::td[3]")
+    if price_element:
+        price = price_element[0].text
+        price= price.split('/')[0]
+        df.loc[len(df)]=['Κλήσειςπροςκινητό',price,datetime.now(),'Wireless telephone services','Cablenet',0]
+
+
+    # Make a GET request to the webpage
+    url = "https://cablenet.com.cy/purpleinternet/"
+    response = requests.get(url)
+
+    # Parse the HTML content
+    html_content = response.content
+    tree = etree.HTML(html_content)
+
+    price_with_euro_sign_l = tree.xpath( "//p[contains(text(), 'χωρίς συμβόλαιο')]/preceding-sibling::p[2]//strong/text()")
+
+
+    if price_with_euro_sign_l:
+        price_with_euro_sign = price_with_euro_sign_l[0]
+        price = price_with_euro_sign.replace("€", "")
+        df.loc[len(df)]=['PurpleInternet',price,datetime.now(),'Internet access provision services','Cablenet',0]
+
+    # Make a GET request to the webpage
+    url = "https://cablenet.com.cy/en/packages-mobile/"
+    response = requests.get(url)
+
+    # Parse the HTML content
+    html_content = response.content
+    tree = etree.HTML(html_content)
+
+    price_with_euro_sign_l = tree.xpath( "(//div[@class='wpb_text_column us_custom_1e54aa4c']//span[contains(@style, 'font-size: 300%')]/strong/text())[3]")
+    if price_with_euro_sign_l:
+        price_with_euro_sign = price_with_euro_sign_l[0]
+        price = price_with_euro_sign.replace("€", "")
+        df.loc[len(df)]=['PurpleMaxMobile',price,datetime.now(),'Bundled telecommunication services','Cablenet',0] 
+
+cablenet()
+
+#EPIC
+def epic():
+    name='Internet and Telephony 10'
+    url = "https://www.epic.com.cy/en/page/H1r10tnT/internet-telephony"
+    response = requests.get(url)
+    tree = html.fromstring(response.content)
+    price=tree.xpath("(//div[@class='mtn-data'])[1]/div[@class='mtn-prices mtn-equal mtn-prices-bb']/div[@class='mtn-from']/div[@class='price']/text()")
+    if price:
+        price=price[0].replace("€","")
+        price=price.replace(".","")
+        df.loc[len(df)]=[name,price,datetime.now(),'Internet access provision services','epic',0]
+
+    name='Internet and Telephony 20'
+    url = "https://www.epic.com.cy/en/page/H1r10tnT/internet-telephony"
+    response = requests.get(url)
+    tree = html.fromstring(response.content)
+    price=tree.xpath("(//div[@class='mtn-data'])[2]/div[@class='mtn-prices mtn-equal mtn-prices-bb']/div[@class='mtn-from']/div[@class='price']/text()")
+    if price:
+        price=price[0].replace("€","")
+        price=price.replace(".","")
+        df.loc[len(df)]=[name,price,datetime.now(),'Internet access provision services','epic',0]  
+
+
+    name='Internet and Telephony 50'
+    url = "https://www.epic.com.cy/en/page/H1r10tnT/internet-telephony"
+    response = requests.get(url)
+    tree = html.fromstring(response.content)
+    price=tree.xpath("(//div[@class='mtn-data'])[3]/div[@class='mtn-prices mtn-equal mtn-prices-bb']/div[@class='mtn-from']/div[@class='price']/text()")
+    if price:
+        price=price[0].replace("€","")
+        price=price.replace(".","")
+        df.loc[len(df)]=[name,price,datetime.now(),'Internet access provision services','epic',0]
+
+epic()
+
+
+# read csv file with product description, class and urls
+products_urls = pd.read_excel('products_bpp.xlsx')
+
+
+#MARKS&SPENCER
 marksspencerdf = products_urls.iloc[209:227,]
-marksspencerdf.head()
 
 #the scrapper function
 prices_final_marksspencer = []
@@ -468,10 +608,13 @@ def scrapper_marksspencer(urls:list):
             price_ini = re.findall(r'content=".+\>',str(scripts))
 
             #get only the first element
-            price_final = float(price_ini[0].strip('content="">'))
+            if price_ini:
+                price_final = float(price_ini[0].strip('content="">'))
 
-            #add the price in the list    
-            prices_final_marksspencer.append(price_final)
+                #add the price in the list    
+                prices_final_marksspencer.append(price_final)
+            else:
+                prices_final_marksspencer.append(None)
             
         except urllib.error.HTTPError as err:
             prices_final_marksspencer.append('NaN')
@@ -489,21 +632,17 @@ all_items_marksspencer = []
 for product,price,label in zip(products,prices_final_marksspencer,labels):
     all_items_marksspencer.append([product,price,datetime.now(),label,'Marks&Spencer'])
 
-#initialize a dataframe
-df_marksspencer=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','retailer'))
 
 #assign the values to each column
 for i in range(len(all_items_marksspencer)):
     df.loc[len(df)] = (all_items_marksspencer[i][0],all_items_marksspencer[i][1],all_items_marksspencer[i][2],all_items_marksspencer[i][3],all_items_marksspencer[i][4],0)
 
-#change type of the item.price column
-df_marksspencer['item.price'] = df_marksspencer['item.price'].astype('float32')
 
 
 
-
+#INTERNSPORT
 # internsportsdf = products_urls.iloc[226:243,]
-# internsportsdf.head()
+
 
 # #the scrapper function
 # prices_final_internsports = []
@@ -544,20 +683,17 @@ df_marksspencer['item.price'] = df_marksspencer['item.price'].astype('float32')
 # for product,price,label in zip(products,prices_final_internsports,labels):
 #     all_items_internsports.append([product,price,datetime.now(),label,'InternSports'])
 
-# #initialize a dataframe
-# df_internsports=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','retailer'))
 
 # #assign the values to each column
 # for i in range(len(all_items_internsports)):
 #     df_internsports.loc[i] = (all_items_internsports[i][0],all_items_internsports[i][1],all_items_internsports[i][2],all_items_internsports[i][3],all_items_internsports[i][4])
 
-# #change type of the item.price column
-# df_internsports['item.price'] = df_internsports['item.price'].astype('float32')
 
 
 
+#FAMOUSSPORT
 famoussportsdf = products_urls.iloc[243:262,]
-famoussportsdf.tail()
+
 
 #the scrapper function
 prices_final_famoussports = []
@@ -581,10 +717,13 @@ def scrapper_famoussports(urls:list):
             price_ini = re.findall(r'\>\d.*\€',str(scripts))
 
             #get only the first element
-            price_final = round(float(str(price_ini[0]).strip('>€').replace(',','.')),2)
+            if price_ini:
+                price_final = round(float(str(price_ini[0]).strip('>€').replace(',','.')),2)
 
-            #add the price in the list    
-            prices_final_famoussports.append(price_final)
+                #add the price in the list    
+                prices_final_famoussports.append(price_final)
+            else:
+                prices_final_famoussports.append(None)
             
         except urllib.error.HTTPError as err:
             prices_final_famoussports.append('NaN')
@@ -602,17 +741,14 @@ all_items_famoussports = []
 for product,price,label in zip(products,prices_final_famoussports,labels):
     all_items_famoussports.append([product,price,datetime.now(),label,'FamousSports'])
 
-#initialize a dataframe
-df_famoussports=pd.DataFrame(columns=('item.name','item.price','date.time','item.subclass','retailer'))
 
 #assign the values to each column
 for i in range(len(all_items_famoussports)):
     df.loc[len(df)] = (all_items_famoussports[i][0],all_items_famoussports[i][1],all_items_famoussports[i][2],all_items_famoussports[i][3],all_items_famoussports[i][4],0)
 
-#change type of the item.price column
-df_famoussports['item.price'] = df_famoussports['item.price'].astype('float32')
 
 
+#BERSHKA/STRADIVARIOUS
 def garments():
     headers = {'User-agent': 'Mozilla/5.0'}  
     data_garmets = pd.read_csv("Garmets.csv")
@@ -620,22 +756,1503 @@ def garments():
         page = requests.get(am['website'].strip(),headers=headers)
         st=page.content.decode('utf-8')
         tree = html.fromstring(st)
-        product_name = (''.join(am['product_name'])).replace(' ','').strip() 
-        product_price=tree.xpath("//script[@type='application/ld+json']/text()")[0]
-        if am['retailer'] == 'Bershka':
-            product_price = json.loads(product_price)['offers'][0]['price']
-        else:
-            product_price = json.loads(product_price)['offers']['price']
-        print(product_price)
-        now = datetime.now()
-        date_time_scraped = now.strftime("%d/%m/%Y %H:%M:%S")
-        product_subclass=am['product_subclass']
-        retailer= am['retailer']
-        df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+        product_name = (''.join(am['product_name'])).replace(' ','').strip()
+        try:
+            pp=tree.xpath("//script[@type='application/ld+json']/text()")
+            product_price=pp[0]
+            if am['retailer'] == 'Bershka':
+                if product_price:
+                    product_price = json.loads(product_price)['offers'][0]['price']
+                else:
+                    print('product price not found')
+            else:
+                if product_price:
+                    product_price = json.loads(product_price)['offers']['price']
+            print(product_price)
+            now = datetime.now()
+            date_time_scraped = now
+            product_subclass=am['product_subclass']
+            retailer= am['retailer']
+            df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+        except IndexError:
+            print("Index Error")
 
 garments()
 
-df.to_csv("BillionPricesProject_ProductList.csv", index=False)
 
+#NOVELLA HAIR SALON
+def Novella():
+    prices_final_hairsalon = []
+    url_new = 'https://novella.com.cy/#services'
+    page = urlopen(url_new)
+    html = page.read().decode("utf-8")
+    bs = BeautifulSoup(html, "html.parser")
+
+    scripts = bs.find_all('td',{'class':'column-2'},string=True)
+    price_ini = re.findall(r'\€\d+,\d\d',str(scripts))
+
+    if len(price_ini)>0:
+        prices_final_hairsalon.append(round(float(str(price_ini[0]).strip('€').replace(',','.')),2))
+    else:
+        prices_final_hairsalon.append(None)
+    if len(price_ini)>4:
+        prices_final_hairsalon.append(round(float(str(price_ini[4]).strip('€').replace(',','.')),2))
+    else:
+        prices_final_hairsalon.append(None)
+
+    #################################################################################################################
+
+    df.loc[len(df)] = ("Women's Services, HAIRCUT Stylist",prices_final_hairsalon[0],datetime.now(),'Hairdressing for women','Novella Hair Salon',0)
+    df.loc[len(df)] = ("Men's Services, HAIRCUT Stylist",prices_final_hairsalon[1],datetime.now(),'Hairdressing for men','Novella Hair Salon',0)
+
+Novella()
+
+#CYPRUS POST
+def CyPost():
+    file = 'https://www.cypruspost.post/uploads/2cf9ec4f5a.pdf'
+    table_1 = tb.read_pdf(file, pages = '6',pandas_options={'header': None}, stream=True)
+    table_2 = tb.read_pdf(file, pages = '11',pandas_options={'header': None}, stream=True)
+
+    df_package_1 = table_1[0]
+    df_package_2 = table_2[0]
+
+    #change the type of columns that contain the prices
+    df_package_1[2]=df_package_1[2].astype('string')
+    df_package_2[1]=df_package_2[1].astype('string')
+
+    all_items_post = [("ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Μικρά (P) 50 γρ.",round(float(df_package_1[2][14].split(' ')[0].replace(',','.')),2),datetime.now(),'Letter handling services','Cyprus Post',0),
+                    ("ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Μεγάλα (G) 500 γρ.",round(float(df_package_1[2][21].split(' ')[0].replace(',','.')),2),datetime.now(),'Letter handling services','Cyprus Post',0),
+                    ("ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Ακανόνιστα (E) 2000 γρ.",round(float(df_package_1[2][44].split(' ')[0].replace(',','.')),2),datetime.now(),'Letter handling services','Cyprus Post',0),
+                    ("ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 0.5 κιλό",round(float(df_package_2[1][2].replace(',','.')),2),datetime.now(),'Other postal services','Cyprus Post',0),
+                    ("ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 15 κιλά",round(float(df_package_2[1][17].replace(',','.')),2),datetime.now(),'Other postal services','Cyprus Post',0),
+                    ("ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 15 κιλά",round(float(df_package_2[1][32].replace(',','.')),2),datetime.now(),'Other postal services','Cyprus Post',0) ]
+
+    for i in range(6):
+        df.loc[len(df)] = all_items_post[i]
+
+CyPost()
+
+#CYPRUS MINISTRY OF EDUCATION
+def CyMinistryEducation():
+    #Caution the fees are for the year 2022-2023 based on the link:
+    #http://www.moec.gov.cy/idiotiki_ekpaidefsi/didaktra.html 
+
+    pdf_1 = tb.read_pdf('http://archeia.moec.gov.cy/mc/698/didaktra_idiotikon_mesi_ekpaidefsi.pdf', pages = '1',pandas_options={'header': None}, stream=True)
+    pdf_2 = tb.read_pdf('http://archeia.moec.gov.cy/mc/698/didaktra_idiotikon_dimotikon_scholeion.pdf', pages = '1',pandas_options={'header': None}, stream=True)
+    pdf_3 = tb.read_pdf('http://archeia.moec.gov.cy/mc/698/didaktra_idiotikon_nipiagogeion.pdf', pages = '3',pandas_options={'header': None}, stream=True)
+
+    df_secondary = pdf_1[0]
+    df_primary = pdf_2[0]
+    df_nursery =pdf_3[0]
+
+    #change the type of columns that contain the prices
+    df_nursery[7] = df_nursery[7].astype('string')
+    df_primary[3] = df_primary[3].astype('string')
+
+    for i in range(2,8):
+        df_secondary[i]= df_secondary[i].astype('string')
+
+
+    avg_grammar_nic = (float(df_secondary[2][6])+float(df_secondary[3][6].split()[0])+float(df_secondary[3][6].split()[1])+float(df_secondary[4][6])+float(df_secondary[5][6])+float(df_secondary[6][6])+float(df_secondary[7][6]))/7
+    avg_grammar_lim = (float(df_secondary[2][23])+float(df_secondary[3][23].split()[0])+float(df_secondary[3][23].split()[1])+float(df_secondary[4][23])+float(df_secondary[5][23])+float(df_secondary[6][23])+float(df_secondary[7][23]))/7
+
+    all_items_school = [("THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΝΗΠΙΑΓΩΓΕΙΩΝ 2022-2023",float(df_nursery[7][30].strip('€*').replace(".", "")),datetime.now(),'Pre-primary education (ISCED-97 level 0)','Cyprus Ministry of Education, Sport and Youth',0),
+                    ("THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΔΗΜΟΤΙΚΩΝ ΣΧΟΛΕΙΩΝ 2022-2023",float(df_primary[3][15].strip('€').replace(",", "")),datetime.now(),'Primary education (ISCED-97 level 1)','Cyprus Ministry of Education, Sport and Youth',0),
+                    ("THE GRAMMAR SCHOOL (Nicosia), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2022-2023, Α-ΣΤ ΤΑΞΗ",avg_grammar_nic,datetime.now(),'Secondary education','Cyprus Ministry of Education, Sport and Youth',0),
+                    ("THE GRAMMAR SCHOOL (Limassol), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2022-2023, Α-ΣΤ ΤΑΞΗ",avg_grammar_lim,datetime.now(),'Secondary education','Cyprus Ministry of Education, Sport and Youth',0),
+                    ("THE GRAMMAR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2022-2023, Ζ ΤΑΞΗ",float(df_secondary[7][6]),datetime.now(),'Post-secondary non-tertiary education (ISCED 4)','Cyprus Ministry of Education, Sport and Youth',0),
+                    ("THE GRAMMAR SCHOOL (Limassol), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2022-2023, Ζ ΤΑΞΗ",float(df_secondary[7][23]),datetime.now(),'Post-secondary non-tertiary education (ISCED 4)','Cyprus Ministry of Education, Sport and Youth',0) ]
+
+    for i in range(6):
+        df.loc[len(df)] =  all_items_school[i]
+
+CyMinistryEducation()
+
+#GLOBAL PETROL PRICES
+def Fuel():
+    #https://eforms.eservices.cyprus.gov.cy/MCIT/MCIT/PetroleumPrices
+    #alternative: https://gr.globalpetrolprices.com/Cyprus/
+
+    user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
+    headers={'User-Agent':user_agent} 
+
+    prices_final_petrol = []
+    url = 'https://gr.globalpetrolprices.com/Cyprus/'        
+
+    #open and read the different urls
+    url_new = url
+    request=urllib.request.Request(url,headers=headers) 
+    response = urllib.request.urlopen(request)
+    data = response.read().decode("utf-8")
+    data
+
+    pattern = '\d\.\d+\s'
+    price_ini = re.findall(pattern,data)
+
+    if len(price_ini)>3:
+         df.loc[len(df)] = ("Αμόλυβδη Μέση Τιμή Παγκύπρια",price_ini[3],datetime.now(),'Petrol','Global Petrol Prices',0)
+    if len(price_ini)>6:
+        df.loc[len(df)] = ("Πετρέλαιο Κίνησης Μέση Τιμή Παγκύπρια",price_ini[6],datetime.now(),'Diesel','Global Petrol Prices',0)
+    if len(price_ini)>9:
+        df.loc[len(df)] =  ("Πετρέλαιο Μέση Τιμή Παγκύπρια",price_ini[9],datetime.now(),'Diesel','Global Petrol Prices',0)
+    if len(price_ini)>12:
+        df.loc[len(df)] = ("Πετρέλαιο Θέρμανσης Μέση Τιμή Παγκύπρια",price_ini[12],datetime.now(),'Liquid Fuels','Global Petrol Prices',0)
+
+Fuel()
+
+#THE CYGAR SHOP/NOMBEO/E-WHOLE SALE
+def Tobacco():
+    prices_final_cigars=[]
+
+    url = "https://www.thecygarshop.com/product-page/machetero-panatela"
+    page = urlopen(url)
+    html = page.read().decode("utf-8")
+    bs = BeautifulSoup(html, "html.parser")
+        
+    scripts = bs.find_all('span',{'data-hook':'formatted-primary-price'},string=True)
+    scripts
+    #get only the first element
+    if scripts:
+        price_final = float(str(scripts[0]).strip('<span data-hook="formatted-primary-price">€ </span>'))
+
+        #add the price in the list    
+        prices_final_cigars.append(price_final)
+    else:
+        prices_final_cigars.append(None)
+
+    url = "https://www.numbeo.com/cost-of-living/country_price_rankings?itemId=17&displayCurrency=EUR"
+    page = urlopen(url)
+    html = page.read().decode("utf-8")
+    bs = BeautifulSoup(html, "html.parser")
+        
+    scripts = bs.find_all('script',string=True)
+    price_ini = re.findall(r"\['Cyprus', \d.+\]",str(scripts))
+    #get only the first element
+    if price_ini:
+        price_final = float(str(price_ini[0]).strip("['Cyprus', ]"))
+
+        #add the price in the list    
+        prices_final_cigars.append(price_final)
+    else:
+        prices_final_cigars.append(None)
+
+    url = "https://www.ewsale.com/product-page/aspire-puxos-kit-%CE%B7%CE%BB%CE%B5%CE%BA%CF%84%CF%81%CE%BF%CE%BD%CE%B9%CE%BA%CE%AC-%CF%84%CF%83%CE%B9%CE%B3%CE%AC%CF%81%CE%B1-%CE%BC%CF%80%CE%B1%CF%84%CE%B1%CF%81%CE%AF%CE%B1-21700-200-ml-%CF%85%CE%B3%CF%81%CE%AC-%CE%AC%CF%84%CE%BC%CE%B9"
+    page = urlopen(url)
+    html = page.read().decode("utf-8")
+    bs = BeautifulSoup(html, "html.parser")
+        
+    scripts = bs.find_all('span',{'data-hook':'formatted-primary-price'},string=True)
+    #get only the first element
+    if scripts:
+        price_final = float(str(scripts[0]).strip('<span data-hook="formatted-primary-price">   €</span>').replace(',','.'))
+
+        #add the price in the list    
+        prices_final_cigars.append(price_final)
+    else:
+        prices_final_cigars.append(None)
+
+    #columns urls,products,labels into lists
+    products = ['Machetero Panatela','Marlboro 20 Pack','Smok S-priv Kit E-Τσιγάρα + 2 μπαταρίες  + 200 ml Υγρά  άτμισης']
+    labels = ['Cigars','Cigarettes','Other Tobaco Products']
+    retailers = ['The CYgar Shop','NUMBEO','E-WHOLESALE']
+
+    #put the rows in a list
+    all_items_cigars = []
+    for product,price,label,retailer in zip(products,prices_final_cigars,labels,retailers):
+        all_items_cigars.append([product,price,datetime.now(),label,retailer,0])
+
+    #assign the values to each column
+    for i in range(len(all_items_cigars)):
+        df.loc[len(df)] =(all_items_cigars[i][0],all_items_cigars[i][1],all_items_cigars[i][2],all_items_cigars[i][3],all_items_cigars[i][4],all_items_cigars[i][5])
+Tobacco()
+
+#STEPHANI
+def Stephanis():
+
+    #for the different urls, putting the prices in a list
+    prices_final_stephanis = []
+    stephanisdf = products_urls.iloc[302:342,]
+    
+    #columns urls,products,labels into lists
+    urls = stephanisdf['item.url'].values.tolist()
+    products = stephanisdf['item.name'].values.tolist()
+    labels = stephanisdf['item.subclass'].values.tolist()
+    url_stephanis = "https://www.stephanis.com.cy/en"
+    for url in urls:
+        try:
+            url_new = url_stephanis+url
+            page = urlopen(url_new)
+            html = page.read().decode("utf-8")
+            bs = BeautifulSoup(html, "html.parser")
+    
+            scripts = bs.find_all('span',{'class':'item-price'},string=True)
+            #get only the first element
+            if scripts:
+                price_final = float(str(scripts[0]).strip('<span class="item-price">€ </span>'))
+
+                #add the price in the list    
+                prices_final_stephanis.append(price_final)
+            else:
+                prices_final_stephanis.append(None)
+            
+        except urllib.error.HTTPError as err:
+            prices_final_stephanis.append('NaN')
+    for i in range(len(products)):
+        df.loc[len(df)]=(products[i],prices_final_stephanis[i],datetime.now(),labels[i],'Stephanis',0)
+
+Stephanis()
+
+
+#ELECTROLINE
+def Electroline():
+    urls = ["https://electroline.com.cy/products/garden/garden-power-tools/%ce%b1%ce%bb%cf%85%cf%83%ce%bf%cf%80%cf%81%ce%af%ce%bf%ce%bd%ce%b1/oregon-cs1200-electric-chainsaw-1800w/",
+        "https://electroline.com.cy/products/tools/hand-tools-2/screwdrivers/kapriol-kap33533-set-screwdrivers-6pcs/",
+        "https://electroline.com.cy/products/garden-tools/hand-tools/hand-tools17002/tactix-900163-tool-set-14-pieces/"]
+
+    prices_final_electroline = []
+
+    for url in urls:
+            try:
+                    #used for the request, urlopen functions
+                    user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
+                    headers={'User-Agent':user_agent} 
+
+                    #initial price list and the value of the final price scrapped
+                    price_ini=[]
+            
+                    #open and read the different urls
+                    request=urllib.request.Request(url,headers=headers) 
+                    response = urllib.request.urlopen(request)
+                    data = response.read().decode("utf-8")
+
+                    #get the strings for the prices of the products using regular expressions
+                    pattern = '\<meta property="product:price:amount" content="\d+.\d+" \/>'
+                    price_ini = re.findall(pattern,data)
+                    if price_ini:
+                        prices_final_electroline.append(float(str(price_ini[0]).strip('<meta property="product:price:amount" content=" " />')))
+                    else:
+                        prices_final_electroline.append(None)
+
+            except urllib.error.HTTPError as err:
+                prices_final_electroline.append('NaN')
+
+            #columns urls,products,labels into lists
+    products = ['WORX 30091701000 Ηλεκτρικό Aλυσοπρίονο','TACTIX MER-205604 Σετ Kατσαβίδια, 12 Tεμάχια','TACTIX 900163 Σετ Εργαλείων 14 Τεμάχια',]
+    labels = ['Motorized major tools and equipment','Non-motorized small tools','Miscellaneous small tool accessories']
+
+    #put the rows in a list
+    all_items_electroline = []
+    for product,price,label in zip(products,prices_final_electroline,labels):
+        all_items_electroline.append([product,price,datetime.now(),label,'Electroline',0])
+
+    #assign the values to each column
+    for i in range(len(all_items_electroline)):
+        df.loc[len(df)] = (all_items_electroline[i][0],all_items_electroline[i][1],all_items_electroline[i][2],all_items_electroline[i][3],all_items_electroline[i][4],all_items_electroline[i][5])
+Electroline()                  
+
+#IKEA
+def ikea():
+    ikeadf = products_urls.iloc[342:371,]
+    prices_final_ikea = []
+    url_ikea = "https://www.ikea.com.cy"
+    #columns urls,products,labels into lists
+    urls = ikeadf['item.url'].values.tolist()
+    products = ikeadf['item.name'].values.tolist()
+    labels = ikeadf['item.subclass'].values.tolist()
+    division = ikeadf['item.division'].values.tolist()
+
+    for url in urls:
+        try:
+            url_new = url_ikea+url
+            page = urlopen(url_new)
+            html = page.read().decode("utf-8")
+            bs = BeautifulSoup(html, "html.parser")
+    
+            scripts = bs.find_all('script',string=True)
+
+            #get the strings for the prices of the products using regular expressions
+            price_ini = re.findall(r'"fb_value": "\d+.\d+"',str(scripts))
+            if price_ini:
+                #add the price in the list    
+                prices_final_ikea.append(float(price_ini[0].strip('"fb_value": " "')))
+            else:
+                prices_final_ikea.append(None)
+            
+        except urllib.error.HTTPError as err:
+            prices_final_ikea.append('NaN')
+
+        except urllib.error.URLError:
+            prices_final_ikea.append('NaN')
+
+        except IndexError:
+            prices_final_ikea.append('NaN')
+
+    for i in range(len(products)):
+        df.loc[len(df)]= (products[i],prices_final_ikea[i],datetime.now(),labels[i],'IKEA',0)
+
+ikea()
+
+#AWOL
+def awol():
+    awoldf = products_urls.iloc[280:288,]
+    urls = awoldf['item.url'].values.tolist()
+    products = awoldf['item.name'].values.tolist()
+    labels = awoldf['item.subclass'].values.tolist()
+    division = awoldf['item.division'].values.tolist()
+    #the scrapper function
+    prices_final_awol = []
+     #for the different urls, putting the prices in a list
+    url_awol = "https://www.awol.com.cy"
+    for url in urls:
+        try:
+            #used for the request, urlopen functions
+            user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
+            headers={'User-Agent':user_agent} 
+
+            #initial price list and the value of the final price scrapped
+            price_ini=[]
+        
+            #open and read the different urls
+            request=urllib.request.Request(url_awol+url,headers=headers) 
+            response = urllib.request.urlopen(request)
+            data = response.read().decode("utf-8")
+
+            #get the strings for the prices of the products using regular expressions
+            pattern = '<meta property="og:price:amount" content="\d+.\d+">'
+            price_ini = re.findall(pattern,data)
+            if price_ini:
+                prices_final_awol.append(float(str(price_ini[0]).strip('<meta property="og:price:amount" content=" " >').replace(',','.')))
+            else:
+                prices_final_awol.append(None)
+            
+        except urllib.error.HTTPError as err:
+            prices_final_awol.append('NaN')
+    #create the dataframe
+    for i in range(len(products)):
+        df.loc[len(df)] = (products[i],prices_final_awol[i],datetime.now(),labels[i],'AWOL',0)
+awol()
+
+#MOTORACE
+def moto_race():
+    motoracedf = products_urls.iloc[288:302,]
+    #the scrapper function
+    prices_final_motorace = []
+    #columns urls,products,labels into lists
+    urls = motoracedf['item.url'].values.tolist()
+    products = motoracedf['item.name'].values.tolist()
+    labels = motoracedf['item.subclass'].values.tolist()
+    division = motoracedf['item.division'].values.tolist()
+    #for the different urls, putting the prices in a list
+    url_motorace = "https://www.motorace.com.cy"
+    for url in urls:
+        try:
+            url_new = url_motorace+url
+            page = urlopen(url_new)
+            html = page.read().decode("utf-8")
+            bs = BeautifulSoup(html, "html.parser")
+            scripts = bs.find_all('span',{'class':'price'},string=True)
+            #get only the first element
+            if scripts:
+                price_final = float(str(scripts[0]).strip('<span class="price">€ </span>').replace(',',''))
+
+                #add the price in the list    
+                prices_final_motorace.append(price_final)
+            else:
+                prices_final_motorace.append(None)
+            
+        except urllib.error.HTTPError as err:
+            prices_final_motorace.append('NaN')
+    for i in range(len(products)):
+        df.loc[len(df)] = (products[i],prices_final_motorace[i],datetime.now(),labels[i],'MotoRace',0)
+moto_race()
+
+#BWELL PHARMACY
+def bwell():
+    # Bwell Pharmacy (https://bwell.com.cy/)
+    urls = ["https://bwell.com.cy/shop/health/cough-sore-throat/physiomer-hypertonic-eucalyptus-135-ml/",
+            "https://bwell.com.cy/shop/mother-child/pregnancy-supplements/vitabiotics-pregnacare-original-30-tabs/",
+            "https://bwell.com.cy/shop/health/medical-devices/geatherm-oxy-control-pulse-oximeter/",
+            "https://bwell.com.cy/shop/health/medical-devices/flaem-respirair-nebulizer/"]
+
+    prices_final_bwell = []
+
+    for url in urls:
+        #used for the request, urlopen functions
+        user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
+        headers={'User-Agent':user_agent} 
+
+        #initial price list and the value of the final price scrapped
+        price_ini=[]
+            
+        #open and read the different urls
+        request=urllib.request.Request(url,headers=headers) 
+        response = urllib.request.urlopen(request)
+        data = response.read().decode("utf-8")
+
+        #get the strings for the prices of the products using regular expressions
+        pattern = '<\/span>&nbsp;\d+.\d+<\/bdi>'
+        price_ini = re.findall(pattern,data)
+        if len(price_ini)>1:
+
+            prices_final_bwell.append(float(str(price_ini[1]).strip('</span>&nbsp; </bdi>')))
+        else:
+            prices_final_bwell.append(None)
+    #columns urls,products,labels into lists
+    products = ['Physiomer Nasal Spray Hygiene Active Prevention 135ml','Vitabiotics Pregnacare Original 30 tabs','Geatherm Oxy Control – Pulse Oximeter',
+    'Flaem RespirAir nebulizer']
+    labels = ['Pharmaceutical products','Pregnancy tests and mechanical contraceptive devices','Other medical products n.e.c.','Other therapeutic appliances and equipment']
+
+    #put the rows in a list
+    all_items_bwell = []
+    for product,price,label in zip(products,prices_final_bwell,labels):
+        all_items_bwell.append([product,price,datetime.now(),label,'Bwell Pharmacy',0])
+
+    #assign the values to each column
+    for i in range(len(all_items_bwell)):
+        df.loc[len(df)] = (all_items_bwell[i][0],all_items_bwell[i][1],all_items_bwell[i][2],all_items_bwell[i][3],all_items_bwell[i][4],all_items_bwell[i][5])
+
+bwell()
+
+#MAZDA
+def mazda():
+    url = "https://www.mazda.com.cy/Portals/7/adam/Contents/dDx4iz_W80eqne0jNZvsdA/Link/Mazda2_DEC22.pdf"  # Replace with the URL of the PDF file
+    response = requests.get(url)
+    with open("file.pdf", "wb") as f:
+        f.write(response.content)
+    pdf_file = open("file.pdf", "rb")
+    pdf_reader = PyPDF2.PdfReader(pdf_file)
+    page=pdf_reader.pages[0]
+    prices = re.findall(r"€ (\d+\,\d{3}).*?", page.extract_text())
+    prices[0] = prices[0].replace(',', '')
+    product_price=int(prices[0])
+    now = datetime.now()
+    date_time_scraped = now
+    product_name="New Mazda 2"
+    product_subclass="New motor cars"
+    retailer="Mazda"
+    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+    pdf_file.close()
+mazda()
+
+#NISSAN
+def nissan():
+        # Define the URL for the Booking.com page for hotel X
+    url = "https://www.nissan.com.cy/vehicles/new-vehicles/juke-2022/prices-specifications.html#-"
+
+    # Define the headers for the HTTP request
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+
+    response = requests.get(url, headers=headers)
+    tree = html.fromstring(response.content)
+    # Use XPath to extract the price value
+    price_tree = tree.xpath('//iframe[@id="individualVehiclePriceJSON"]/text()')
+    if price_tree:
+        price_json = price_tree[0]
+
+        # Extract the price of 23500 from the JSON string
+        import json
+        price_data = json.loads(price_json)
+        product_price = price_data['juke_2019']['default']['grades']['LVL001']['gradePrice']
+    else:
+        product_price=None
+    now = datetime.now()
+    date_time_scraped = now
+    product_name="Nissan Juke"
+    product_subclass="New motor cars"
+    retailer="Nissan"
+    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+nissan()
+
+# #WOLT
+# def Wolt():
+#     retailer="Wolt"
+#     product_subclass="Restaurants, cafes and dancing establishments"
+#     # Define the URL for the Booking.com page for hotel X
+#     url = "https://wolt.com/en/cyp/nicosia/restaurant/costanicosia"
+
+#     # Define the headers for the HTTP request
+#     headers = {
+#         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+
+#     url = 'https://wolt.com/en/cyp/nicosia/restaurant/costanicosia'
+#     response = requests.get(url)
+#     html_content = response.text
+
+#     tree = etree.HTML(html_content)
+
+#     # Find the button element containing the cappuccino information
+#     button_xpath = tree.xpath('//button[descendant::h3[text()="Cappuccino"]]')
+#     if button_xpath:
+#         button_element = button_xpath[0]
+
+#         # Extract the price from the button element
+#         price_xpath_cappuccino = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+#         if button_element.xpath(price_xpath_cappuccino):
+#             product_price = float(button_element.xpath(price_xpath_cappuccino)[0].replace('€', ''))
+#     else:
+#         product_price=None
+
+#     product_name="Costa Coffee Cappuccino Medio"
+#     now = datetime.now()
+#     date_time_scraped = now
+#     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+
+#     # Find the button element containing the cappuccino information
+#     product_name="Costa Coffee Espresso Single"
+#     now = datetime.now()
+#     date_time_scraped = now
+#     button_xpath = '//button[descendant::h3[text()="Espresso"]]'
+#     button_element= tree.xpath(button_xpath)[0]
+
+#     # Extract the price from the button element
+#     price_xpath_espresso = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+#     product_price = float(button_element.xpath(price_xpath_espresso)[0].replace('€', ''))
+
+#     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+#     product_name="Costa Coffee Freddo Cappuccino Medio"
+#     # Find the button element containing the cappuccino information
+#     button_xpath = '//button[descendant::h3[text()="Freddo Cappuccino"]]'
+#     button_element = tree.xpath(button_xpath)[0]
+
+#     # Extract the price from the button element
+#     price_xpath_fcappuccino = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+#     product_price = float(button_element.xpath(price_xpath_fcappuccino)[0].replace('€', ''))
+#     now = datetime.now()
+#     date_time_scraped = now
+#     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+#     product_name="Costa Coffee Freddo Espresso Medio"
+#     # Find the button element containing the cappuccino information
+#     button_xpath = '//button[descendant::h3[text()="Freddo Espresso"]]'
+#     button_element= tree.xpath(button_xpath)[0]
+
+#     # Extract the price from the button element
+#     price_xpath_fespresso = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+#     price_fespresso = float(button_element.xpath(price_xpath_fespresso)[0].replace('€', ''))
+#     product_price = float(button_element.xpath(price_xpath_fcappuccino)[0].replace('€', ''))
+#     now = datetime.now()
+#     date_time_scraped = now
+#     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+#     ###PIATSA GOUROUNAKI
+
+#     product_name="Piatsa Gourounaki, Meat platter for 2 persons  (Nicosia)"
+#     url = 'https://wolt.com/en/cyp/nicosia/restaurant/piatsa-gourounaki-mall-of-egkomi'
+#     response = requests.get(url)
+#     html_content = response.text
+
+#     tree = etree.HTML(html_content)
+
+#     # Find the button element containing the cappuccino information
+#     button_xpath = '//button[descendant::h3[text()="Ποικιλία Κρεάτων Για Δυο"]]'
+#     button_element = tree.xpath(button_xpath)[0]
+
+#     # Extract the price from the button element
+#     price_xpath_pk2 = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+#     product_price = float(button_element.xpath(price_xpath_pk2)[0].replace('€', ''))
+
+#     now = datetime.now()
+#     date_time_scraped = now 
+#     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+#     ####PIXIDA  
+#     # Define the URL for the Booking.com page for hotel X
+#     product_name="Pixida, Fish meze for each guest with minimum 2 guests (Nicosia)"
+#     url = 'https://wolt.com/en/cyp/nicosia/restaurant/pyxida'
+#     response = requests.get(url)
+#     html_content = response.text
+
+#     tree = etree.HTML(html_content)
+
+#     # Find the button element containing the cappuccino information
+#     button_xpath = '//button[descendant::h3[text()="Meze Platter for 2"]]'
+#     button_element = tree.xpath(button_xpath)[0]
+
+#     # Extract the price from the button element
+#     price_xpath_mp2 = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+#     product_price = float(button_element.xpath(price_xpath_mp2)[0].replace('€', ''))
+#     now = datetime.now()
+#     date_time_scraped = now 
+#     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+
+#     ###LIMASSOL
+#     product_name="Kofini Tavern Mix Grill for 2"
+#     url = 'https://wolt.com/en/cyp/limassol/restaurant/kofini-tavern#mix-grills-platters-6'
+#     response = requests.get(url)
+#     html_content = response.text
+
+#     tree = etree.HTML(html_content)
+
+#     # Find the button element containing the cappuccino information
+#     button_xpath = '//button[descendant::h3[text()="Mix Grill For 2"]]'
+#     button_element = tree.xpath(button_xpath)[0]
+
+#     # Extract the price from the button element
+#     price_xpath_mg2 = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+#     product_price = float(button_element.xpath(price_xpath_mg2)[0].replace('€', ''))
+#     now = datetime.now()
+#     date_time_scraped = now 
+#     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+#     product_name="Kofini Tavern, Seafood Platter"
+#     # Find the button element containing the cappuccino information
+#     button_xpath = '//button[descendant::h3[text()="Seafood Platter"]]'
+#     button_element = tree.xpath(button_xpath)[0]
+
+#     # Extract the price from the button element
+#     price_xpath_sfp = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+#     product_price= float(button_element.xpath(price_xpath_sfp)[0].replace('€', ''))
+#     now = datetime.now()
+#     date_time_scraped = now 
+#     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+#     ## LARNACA VLACHOS
+#     product_name="Vlachos Taverna, Ποικιλία Σχάρας Για 2 Άτομα"
+#     url = 'https://wolt.com/en/cyp/larnaca/restaurant/vlachos-taverna#itemcategory-3'
+#     response = requests.get(url)
+#     html_content = response.text
+
+#     tree = etree.HTML(html_content)
+
+#     # Find the button element containing the cappuccino information
+#     button_xpath = '//button[descendant::h3[text()="Ποικιλία Σχάρας Για 2 Άτομα"]]'
+#     button_element = tree.xpath(button_xpath)[0]
+
+#     # Extract the price from the button element
+#     price_xpath_mg2 = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+#     product_price = float(button_element.xpath(price_xpath_mg2)[0].replace('€', ''))
+#     now = datetime.now()
+#     date_time_scraped = now 
+#     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+
+#     ### Larnaca ZAKOS
+#     product_name="Zakos Beach Restaurant, Ψαρομεζέδες Ζάκος (Για 2 Άτομα)"
+#     url = 'https://wolt.com/en/cyp/larnaca/restaurant/zakos-beach-restaurant'
+#     response = requests.get(url)
+#     html_content = response.text
+
+#     tree = etree.HTML(html_content)
+
+#     # Find the button element containing the cappuccino information
+#     button_xpath = '//button[descendant::h3[text()="Ψαρομεζέδες Ζάκος (Για 2 Άτομα)"]]'
+#     button_element = tree.xpath(button_xpath)[0]
+
+#     # Extract the price from the button element
+#     price_xpath_psz2 = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+#     product_price = float(button_element.xpath(price_xpath_psz2)[0].replace('€', ''))
+#     now = datetime.now()
+#     date_time_scraped = now 
+#     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+
+#     ### Paphos Tavernaki
+#     product_name="Paphos Tavernaki, Ποικιλία Σχάρας Για 2 Άτομα"
+#     url = 'https://wolt.com/en/cyp/paphos/restaurant/tavernaki-paphos#itemcategory-3'
+#     response = requests.get(url)
+#     html_content = response.text
+
+#     tree = etree.HTML(html_content)
+
+#     # Find the button element containing the cappuccino information
+#     button_xpath = '//button[descendant::h3[text()="Ποικιλία Σχάρας Για 2 Άτομα"]]'
+#     button_element = tree.xpath(button_xpath)[0]
+
+#     # Extract the price from the button element
+#     price_xpath_ps2 = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+#     product_price = float(button_element.xpath(price_xpath_ps2)[0].replace('€', ''))
+#     now = datetime.now()
+#     date_time_scraped = now 
+#     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+
+#     ### Paphos Ocean Basket
+#     product_name="Ocean Basket, Platter for 2"
+#     url = 'https://wolt.com/en/cyp/paphos/restaurant/ocean-basket-paphos'
+#     response = requests.get(url)
+#     html_content = response.text
+
+#     tree = etree.HTML(html_content)
+
+#     # Find the button element containing the cappuccino information
+#     button_xpath = '//button[descendant::h3[text()="Platter For 2"]]'
+#     button_element = tree.xpath(button_xpath)[0]
+
+#     # Extract the price from the button element
+#     price_xpath_p2 = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+#     product_price = float(button_element.xpath(price_xpath_p2)[0].replace('€', ''))
+#     now = datetime.now()
+#     date_time_scraped = now 
+#     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+#     product_subclass="Fast food and take away food services"
+
+#     ###MACCIES
+
+#     url = 'https://wolt.com/en/cyp/limassol/restaurant/mcdonalds-oldport'
+#     response = requests.get(url)
+#     html_content = response.text
+
+#     tree = etree.HTML(html_content)
+
+#     # Find the button element containing the cappuccino information
+#     button_xpath = '//button[descendant::h3[text()="Share Box"]]'
+#     button_element = tree.xpath(button_xpath)[0]
+#     product_name="McDonald's Sharebox"
+#     # Extract the price from the button element
+#     price_xpath_sb = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+#     product_price = float(button_element.xpath(price_xpath_sb)[0].replace('€', ''))
+#     now = datetime.now()
+#     date_time_scraped = now 
+#     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+#     product_name="McDonald's Big Mac"
+#     # Find the button element containing the cappuccino information
+#     button_xpath = '//button[descendant::h3[text()="Big Mac"]]'
+#     button_element = tree.xpath(button_xpath)[0]
+
+#     # Extract the price from the button element
+#     price_xpath_bm = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+#     product_price = float(button_element.xpath(price_xpath_bm)[0].replace('€', ''))
+#     now = datetime.now()
+#     date_time_scraped = now 
+#     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+#     product_name="McDonald's McChicken"
+#     # Find the button element containing the cappuccino information
+#     button_xpath = '//button[descendant::h3[text()="McChicken"]]'
+#     button_element = tree.xpath(button_xpath)[0]
+
+#     # Extract the price from the button element
+#     price_xpath_mc = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+#     product_price = float(button_element.xpath(price_xpath_mc)[0].replace('€', ''))
+#     now = datetime.now()
+#     date_time_scraped = now 
+#     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+# Wolt()
+
+
+def Wolt():
+    retailer = "Wolt"
+    product_subclass = "Restaurants, cafes and dancing establishments"
+
+    def handle_error(error):
+        # Handle specific error cases
+        if isinstance(error, (requests.ConnectionError, requests.Timeout)):
+            # Connection errors
+            print("Error: Connection error occurred.")
+        elif isinstance(error, etree.XPathError):
+            # XPath errors
+            print("Error: Invalid XPath expression.")
+        else:
+            # Other errors
+            print(f"Error: {str(error)}")
+
+    def scrape_price(url, product_name, xpath, date_time_scraped):
+        try:
+            response = requests.get(url)
+            html_content = response.text
+            tree = etree.HTML(html_content)
+
+            button_element = tree.xpath(xpath)[0]
+            price_xpath = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+            product_price = float(button_element.xpath(price_xpath)[0].replace('€', ''))
+
+            df.loc[len(df)] = [product_name, product_price, date_time_scraped, product_subclass, retailer, 0]
+        except (IndexError, requests.RequestException, etree.XPathError) as error:
+            handle_error(error)
+            df.loc[len(df)] = [product_name, None, date_time_scraped, product_subclass, retailer, 0]
+
+    # Costa Coffee
+    now = datetime.now()
+    date_time_scraped = now
+
+    scrape_price('https://wolt.com/en/cyp/nicosia/restaurant/costanicosia',
+                 "Costa Coffee Cappuccino Medio",
+                 '//button[descendant::h3[text()="Cappuccino"]]',
+                 date_time_scraped)
+
+    scrape_price('https://wolt.com/en/cyp/nicosia/restaurant/costanicosia',
+                 "Costa Coffee Espresso Single",
+                 '//button[descendant::h3[text()="Espresso"]]',
+                 date_time_scraped)
+
+    scrape_price('https://wolt.com/en/cyp/nicosia/restaurant/costanicosia',
+                 "Costa Coffee Freddo Cappuccino Medio",
+                 '//button[descendant::h3[text()="Freddo Cappuccino"]]',
+                 date_time_scraped)
+
+    scrape_price('https://wolt.com/en/cyp/nicosia/restaurant/costanicosia',
+                 "Costa Coffee Freddo Espresso Medio",
+                 '//button[descendant::h3[text()="Freddo Espresso"]]',
+                 date_time_scraped)
+
+    # Piatsa Gourounaki
+    scrape_price('https://wolt.com/en/cyp/nicosia/restaurant/piatsa-gourounaki-mall-of-egkomi',
+                 "Piatsa Gourounaki, Meat platter for 2 persons (Nicosia)",
+                 '//button[descendant::h3[text()="Ποικιλία Κρεάτων Για Δυο"]]',
+                 date_time_scraped)
+
+    # Pixida
+    scrape_price('https://wolt.com/en/cyp/nicosia/restaurant/pixida',
+                 "Pixida, Fish meze for each guest with minimum 2 persons",
+                 '//button[descendant::h3[text()="Fish meze for each guest with minimum 2 persons"]]',
+                 date_time_scraped)
+    # Kofini Tavern
+    scrape_price('https://wolt.com/en/cyp/limassol/restaurant/kofini-tavern#mix-grills-platters-6',
+                 "Kofini Tavern Mix Grill for 2",
+                 '//button[descendant::h3[text()="Mix Grill For 2"]]',
+                 date_time_scraped)
+
+    scrape_price('https://wolt.com/en/cyp/limassol/restaurant/kofini-tavern#mix-grills-platters-6',
+                 "Kofini Tavern, Seafood Platter",
+                 '//button[descendant::h3[text()="Seafood Platter"]]',
+                 date_time_scraped)
+
+    # Vlachos Taverna
+    scrape_price('https://wolt.com/en/cyp/larnaca/restaurant/vlachos-taverna#itemcategory-3',
+                 "Vlachos Taverna, Ποικιλία Σχάρας Για 2 Άτομα",
+                 '//button[descendant::h3[text()="Ποικιλία Σχάρας Για 2 Άτομα"]]',
+                 date_time_scraped)
+
+    # Zakos Beach Restaurant
+    scrape_price('https://wolt.com/en/cyp/larnaca/restaurant/zakos-beach-restaurant',
+                 "Zakos Beach Restaurant, Ψαρομεζέδες Ζάκος (Για 2 Άτομα)",
+                 '//button[descendant::h3[text()="Ψαρομεζέδες Ζάκος (Για 2 Άτομα)"]]',
+                 date_time_scraped)
+
+    # Paphos Tavernaki
+    scrape_price('https://wolt.com/en/cyp/paphos/restaurant/tavernaki-paphos#itemcategory-3',
+                 "Paphos Tavernaki, Ποικιλία Σχάρας Για 2 Άτομα",
+                 '//button[descendant::h3[text()="Ποικιλία Σχάρας Για 2 Άτομα"]]',
+                 date_time_scraped)
+
+    # Paphos Ocean Basket
+    scrape_price('https://wolt.com/en/cyp/paphos/restaurant/ocean-basket-paphos',
+                 "Ocean Basket, Platter for 2",
+                 '//button[descendant::h3[text()="Platter For 2"]]',
+                 date_time_scraped)
+
+    product_subclass = "Fast food and take away food services"
+
+    # McDonald's
+    scrape_price('https://wolt.com/en/cyp/limassol/restaurant/mcdonalds-oldport',
+                 "McDonald's Sharebox",
+                 '//button[descendant::h3[text()="Share Box"]]',
+                 date_time_scraped)
+
+    scrape_price('https://wolt.com/en/cyp/limassol/restaurant/mcdonalds-oldport',
+                 "McDonald's Big Mac",
+                 '//button[descendant::h3[text()="Big Mac"]]',
+                 date_time_scraped)
+
+    scrape_price('https://wolt.com/en/cyp/limassol/restaurant/mcdonalds-oldport',
+                 "McDonald's McChicken",
+                 '//button[descendant::h3[text()="McChicken"]]',
+                 date_time_scraped)
+
+
+Wolt()
+
+
+#PIZZA HUT
+def PizzaHut():
+    url = "https://www.pizzahut.com.cy/delivery-menu-mar.pdf?v=1"  # Replace with the URL of the PDF file
+    response = requests.get(url)
+    retailer="Pizza Hut"
+    with open("file.pdf", "wb") as f:
+        f.write(response.content)
+
+    pdf_file = open("file.pdf", "rb")
+    pdf_reader = PyPDF2.PdfReader(pdf_file)
+
+    product_subclass="Fast food and take away food services"
+    # extracting price for margherita
+    product_name="Pizza Hut Margherita Large"
+    #assuming that text stays the same and prices change
+    page=pdf_reader.pages[1]
+    prices = re.findall(r"\b(\d+\.\d{2}).*?\b", page.extract_text())
+    now = datetime.now()
+    date_time_scraped = now 
+    product_price= prices[4]
+    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+    product_name="Pizza Hut Classic Large"
+    product_price=prices[8]
+    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+    product_name="Pizza Hut Special Large"
+    product_price=prices[16]
+    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+    pdf_file.close()
+
+PizzaHut()
+
+#CERA
+def cera():
+    url = "https://www.cera.org.cy/Templates/00001/data/hlektrismos/kostos_xrisis.pdf"  # Replace with the URL of the PDF file
+    response = requests.get(url)
+    retailer="Cyprus Energy Regulatory Authority"
+    product_subclass="Electricity"
+    with open("file.pdf", "wb") as f:
+        f.write(response.content)
+
+    cdf = read_pdf("file.pdf",pages="all")[0]
+    now = datetime.now()
+    date_time_scraped = now 
+    product_name="Καταναλωτές συνδεδεμένοι στο δίκτυο Χαμηλής Τάσης"
+    product_price=cdf.loc[9][1]
+    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+    product_name="Καταναλωτές συνδεδεμένοι στο δίκτυο Μέσης Τάσης"
+    product_price=cdf.loc[9][2]
+    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+    product_name="Καταναλωτές συνδεδεμένοι στο δίκτυο Υψηλής Τάσης"
+    product_price=cdf.loc[9][3]
+    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+cera()
+
+#WATER BOARD
+def water_board():
+    url = "https://www.wbn.org.cy/καταναλωτής/διατιμήσεις/#content-d7d0c04646186e03a770"
+    retailer="Water Board of Nicosia"
+    product_subclass="Water supply"
+    product_name='Water Board of Nicosia, Οικιακό Πάγιο Τέλος Νερού ανά διμηνία (Διατίμηση "Α" από 1 Σεπ 2017)'
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+    # Send the HTTP request and get the HTML content of the page
+    response = requests.get(url, headers=headers)
+    tree = html.fromstring(response.content)
+    price=tree.xpath("(//table[@id='ekit-table-container-9f0855a']/tbody/tr/td)[2]/div/text()")
+    product_price=float((''.join(price)).replace(' ','').replace('€','').replace(',','.').strip())
+    now = datetime.now()
+    date_time_scraped = now 
+    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+water_board()
+
+#SEWAGE
+def sewage():
+    url = "https://www.sbn.org.cy/el/apoxeteftika-teli"
+
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+
+    # Send the HTTP request and get the HTML content of the page
+    response = requests.get(url, headers=headers)
+    tree = html.fromstring(response.content)
+    retailer="Sewerage Board of Nicosia"
+    product_subclass="Sewage Collection"
+
+    text_list=tree.xpath("/html/body/main/div[2]/div/div/ol/li[1]/text()")
+    text1 = "".join(text_list)
+    text_list2=tree.xpath("/html/body/main/div[2]/div/div/ol/li[2]/b[2]/text()")
+    text2 = "".join(text_list2)
+
+    product_name="Sewerage Board of Nicosia, Ετήσιο Τέλος Αποχέτευσης 2022 (€ για κάθε €1000 εκτιμημένης αξίας)"
+    price_match = re.search(r"€([\d,\.]+) για κάθε €1000 εκτιμημένης αξίας", text1)
+    if price_match:
+        product_price = float(price_match.group(1).replace(",", "."))
+        now = datetime.now()
+        date_time_scraped = now 
+        df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+    else:
+        print("Price not found in text.")
+
+    # Extract the price from the text using a regular expression
+    product_name="Sewerage Board of Nicosia, Τέλος Χρήσης Αποχέτευσης (€ ανά κυβικό μέτρο καταναλισκόμενου νερού)"
+    price_match = re.search(r'(\d+(?:\.\d+)?)(?: σεντ)? ανά κυβικό μέτρο καταναλισκόμενου νερού', text2)
+
+    # Check if the match was successful
+    if price_match:
+        # Get the matched string (including the optional " σεντ")
+        price_str = price_match.group(1)
+
+        # Convert the price to a float, accounting for cents if necessary
+        if 'σεντ' in text2:
+            product_price = float(price_str) / 100
+        else:
+            product_price = float(price_str)
+        now = datetime.now()
+        date_time_scraped = now 
+        df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+        
+    else:
+        print('No price found in text')
+
+sewage()
+
+#WATERSEWAGE LARNACA AND LIMASSOL
+def waterSewageOtherCities():
+
+    url = "https://www.sbla.com.cy/Sewage-Charges"
+    response = requests.get(url)
+
+    tree = html.fromstring(response.content)
+    name='Λεμεσος Phase 1 Sewage Costs '
+    price=tree.xpath("//tbody/tr[last()]/td[4]/text()")
+    if price:
+        price=price[0].replace(".","") 
+        price=price.replace(",",".") 
+        df.loc[len(df)] =[name,price,datetime.now(),'Sewage collection','SBLA',0]
+    name='Λεμεσος Phase 2 Sewage Costs '
+    price=tree.xpath("//tbody/tr[last()]/td[7]/text()")
+    if price:
+        price=price[0].replace(".","") 
+        price=price.replace(",",".")
+        df.loc[len(df)] =[name,price,datetime.now(),'Sewage collection','SBLA',0]
+
+    name='Λεμεσος Τέλη Αποχέτευσης Ομβρίων'
+    price=tree.xpath("//tbody/tr[last()]/td[8]/text()")
+    if price:
+        price=price[0].replace(".","") 
+        price=price.replace(",",".") 
+        df.loc[len(df)] =[name,price,datetime.now(),'Sewage collection','SBLA',0]
+
+    url = "https://www.lsdb.org.cy/ypiresies/oikonomika/apocheteftika-teli/"
+    response = requests.get(url)
+    tree = html.fromstring(response.content)
+
+    name='Λαρνακα Phase 1 Sewage Costs '
+    price=tree.xpath("//tbody/tr[last()-1]/td[3]/text()")
+    if price:
+        price=price[0].replace(".","") 
+        price=price.replace(",",".") 
+        df.loc[len(df)] =[name,price,datetime.now(),'Sewage collection','LSDB',0]
+    name='Λαρνακα Phase 2 Sewage Costs '
+    price=tree.xpath("//tbody/tr[last()-1]/td[5]/text()")
+    if price:
+        price=price[0].replace(".","") 
+        price=price.replace(",",".")
+        df.loc[len(df)] =[name,price,datetime.now(),'Sewage collection','LSDB',0]
+
+    name='Λαρνακα Τέλη Αποχέτευσης Ομβρίων'
+    price=tree.xpath("//tbody/tr[last()-1]/td[8]/text()")
+    if price:
+        price=price[0].replace(".","") 
+        price=price.replace(",",".") 
+        df.loc[len(df)] =[name,price,datetime.now(),'Sewage collection','LSDB',0]
+
+    name='Τέλη Χρήσης €/m3'
+    price=tree.xpath("//tbody/tr[last()-1]/td[9]/text()")
+    if price:
+        price=price[0].replace(".","") 
+        price=price.replace(",",".") 
+        df.loc[len(df)] =[name,price,datetime.now(),'Sewage collection','SBLA',0]
+
+    url = "https://www.wbl.com.cy/el/page/water-rates"
+    response = requests.get(url)
+    tree = html.fromstring(response.content)
+    name= 'Λεμεσος Οικιακά τέλη ανά τετραμηνία (συντελεστής ΦΠΑ 5%)'
+    price1=tree.xpath('//table[1]/tbody/tr[2]/td[2]/text()')
+    price2=tree.xpath('//table[1]/tbody/tr[3]/td[2]/text()')
+    if price:
+        price1=price1[0].replace(".","") 
+        price1=price1.replace(",",".") 
+        price2=price2[0].replace(".","")
+        price2=price2.replace(",",".") 
+        price=float(price1)+float(price2)
+        df.loc[len(df)] =[name,price,datetime.now(),'Water Supply','WBL',0]
+
+    name= 'Λεμεσος Εμποροβιομηχανικά  τέλη ανά τετραμηνία (συντελεστής ΦΠΑ 5%)'
+    price1=tree.xpath('//table[5]/tbody/tr[2]/td[2]/text()')
+    price2=tree.xpath('//table[5]/tbody/tr[3]/td[2]/text()')
+    if price:
+        price1=price1[0].replace(".","") 
+        price1=price1.replace(",",".") 
+        price2=price2[0].replace(".","")
+        price2=price2.replace(",",".") 
+        price=float(price1)+float(price2)
+        df.loc[len(df)] =[name,price,datetime.now(),'Water Supply','WBL',0]
+
+    url = "https://www.lwb.org.cy/gr/fees-and-rights.html"
+    response = requests.get(url)
+    tree = html.fromstring(response.content)
+
+    name= 'Λαρνακα Οικιακά τέλη (ανά τριμηνία) (συντελεστής ΦΠΑ 5%)'
+    price1=tree.xpath('//*[@id="a_w_66"]/div/div/table/tbody/tr[2]/td[2]/text()')
+    price2=tree.xpath('//*[@id="a_w_66"]/div/div/table/tbody/tr[3]/td[2]/text()')
+    if price:
+        price1=price1[0].replace(".","") 
+        price1=price1.replace(",",".") 
+        price2=price2[0].replace(".","")
+        price2=price2.replace(",",".") 
+        price=float(price1)+float(price2)
+        df.loc[len(df)] =[name,price,datetime.now(),'Water Supply','LWB',0]
+
+    name= 'Λαρνακα Εμποροβιομηχανικά τέλη (ανά τριμηνία) (συντελεστής ΦΠΑ 5%)'
+    price1=tree.xpath('//*[@id="a_w_67"]/div/div/table/tbody/tr[2]/td[2]/text()')
+    price2=tree.xpath('//*[@id="a_w_67"]/div/div/table/tbody/tr[3]/td[2]/text()')
+    if price:
+        price1=price1[0].replace(".","") 
+        price1=price1.replace(",",".") 
+        price2=price2[0].replace(".","")
+        price2=price2.replace(",",".") 
+        price=float(price1)+float(price2)
+        df.loc[len(df)] =[name,price,datetime.now(),'Water Supply','LWB',0]
+
+waterSewageOtherCities()
+
+
+def extract_float_price(price_str):
+    # Remove any non-digit characters except for the dot
+    digits = ''.join(c for c in price_str if c.isdigit() or c == '.')
+    # Convert the string to a float
+    return float(digits)
+
+def Rio():
+    retailer = "Rio Cinemas"
+    product_subclass = "Cinemas, theatres, concerts"
+    url = 'https://www.riopremiercinemas.com.cy/price-policy/'
+    response = requests.get(url)
+    tree = html.fromstring(response.content)
+
+    try:
+        product_price = extract_float_price(tree.xpath("//div[@class='txt']/p[2]/span/strong/text()")[0])
+        product_name = "Rio Cinemas, Adults ticket"
+        now = datetime.now()
+        date_time_scraped = now
+        df.loc[len(df)] = [product_name, product_price, date_time_scraped, product_subclass, retailer, 0]
+    except (IndexError, ValueError) as e:
+        print(f"Error retrieving price for Rio Cinemas, Adults ticket: {e}")
+
+    try:
+        product_price = extract_float_price(tree.xpath("//div[@class='txt']/p[3]/span/strong/text()")[0])
+        product_name = "Rio Cinemas, Children (up to 11) ticket"
+        now = datetime.now()
+        date_time_scraped = now
+        df.loc[len(df)] = [product_name, product_price, date_time_scraped, product_subclass, retailer, 0]
+    except (IndexError, ValueError) as e:
+        print(f"Error retrieving price for Rio Cinemas, Children (up to 11) ticket: {e}")
+
+    try:
+        product_price = extract_float_price(tree.xpath("//div[@class='txt']/p[4]/span/strong/text()")[0])
+        product_name = "Rio Cinemas, Senior (64+)/ Student ticket"
+        now = datetime.now()
+        date_time_scraped = now
+        df.loc[len(df)] = [product_name, product_price, date_time_scraped, product_subclass, retailer, 0]
+    except (IndexError, ValueError) as e:
+        print(f"Error retrieving price for Rio Cinemas, Senior (64+)/ Student ticket: {e}")
+
+    try:
+        product_price = extract_float_price(tree.xpath("//div[@class='txt']/p[6]/span/strong/text()")[0])
+        product_name = "Rio Cinemas, Adults 3D ticket"
+        now = datetime.now()
+        date_time_scraped = now
+        df.loc[len(df)] = [product_name, product_price, date_time_scraped, product_subclass, retailer, 0]
+    except (IndexError, ValueError) as e:
+        print(f"Error retrieving price for Rio Cinemas, Adults 3D ticket: {e}")
+
+    try:
+        product_price = extract_float_price(tree.xpath("//div[@class='txt']/p[7]/span/strong/text()")[0])
+        product_name = "Rio Cinemas, Children 3D ticket"
+        now = datetime.now()
+        date_time_scraped = now
+        df.loc[len(df)] = [product_name, product_price, date_time_scraped, product_subclass, retailer, 0]
+    except (IndexError, ValueError) as e:
+        print(f"Error retrieving price for Rio Cinemas, Children 3D ticket: {e}")
+
+    try:
+        product_price = extract_float_price(tree.xpath("//div[@class='txt']/p[8]/span/strong/text()")[0])
+        product_name = "Rio Cinemas, Senior/Students 3D ticket"
+        now = datetime.now()
+        date_time_scraped = now
+        df.loc[len(df)] = [product_name, product_price, date_time_scraped, product_subclass, retailer, 0]
+    except (IndexError, ValueError) as e:
+        print(f"Error retrieving price for Rio Cinemas, Senior/Students 3D ticket: {e}")
+
+Rio()
+
+
+#BOOKING
+def Booking():
+
+    retailer="Booking"
+    product_subclass="Hotels, motels, inns and similar accommodation services"
+   
+# Define the URL for the Booking.com page for hotel X
+    url = "https://www.booking.com/hotel/cy/frangiorgio-apartments.el.html"
+
+    product_name="Frangiorgio Hotel, Τιμή για Δίκλινο για 1 βράδυ (Larnaca)"
+
+    # Define the current month and year
+    now = date.today()
+    year = now.year
+    month = now.month
+
+
+    
+    # Find the last weekend (last Saturday and Sunday) of the current month
+    last_day_of_month = date(year, month+1, 1) - timedelta(days=1)
+    last_weekend = None
+
+    for d in range(last_day_of_month.day, 0, -1):
+        current_date = date(year, month, d)
+        if current_date.weekday() == 5:  # Saturday
+            last_weekend = current_date
+            break
+
+    if last_weekend is None:
+        for d in range(last_day_of_month.day, 0, -1):
+            current_date = date(year, month, d)
+            if current_date.weekday() == 6:  # Sunday
+                last_weekend = current_date
+                break
+
+    if last_weekend is None:
+        print("No valid last weekend found for the current month.")
+        exit()
+
+    # Define the date range and room type for the last weekend of the current month
+    check_in_date = f"{year}-{month}-{last_weekend.day}"
+    check_out_date = f"{year}-{month}-{last_weekend.day + 1}"
+    room_type_id = "4936308" 
+
+    # Define the headers for the HTTP request
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+
+    # Send the HTTP request and get the HTML content of the page
+    params = {'checkin': check_in_date, 'checkout': check_out_date, 'room_id': room_type_id,'group_adult': 2}
+    response = requests.get(url, headers=headers, params=params)
+    tree = html.fromstring(response.content)
+
+
+
+    # Check if the room type is available for the specified date range
+    not_available = tree.xpath(f"//div[@id='{room_type_id}' and @class='room js-soldout-room-rate']")
+    if not_available:
+        print(f"Room type '{room_type_id}' is not available for the date range {check_in_date} - {check_out_date}")
+    else:
+        # Extract the relevant information from the HTML using XPath
+        product_price = tree.xpath(f"(//tr[contains(@data-block-id,'{room_type_id}')])[1]/@data-hotel-rounded-price")
+        if product_price:
+            product_price=float(product_price[0])
+        now = datetime.now()
+        date_time_scraped = now 
+        df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+    product_name="Navarria Blue Hotel, Τιμή για Δίκλινο για 1 βράδυ (Λεμεσός)"
+    # Define the URL for the Booking.com page for hotel X
+    url = "https://www.booking.com/hotel/cy/navarria-ag-tychonas.el.html"
+    #  Δίκλινο Δωμάτιο με 1 Διπλό ή 2 Μονά Κρεβάτια 
+    room_type_id = "23971501" 
+
+    # Define the headers for the HTTP request
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+
+    # Send the HTTP request and get the HTML content of the page
+    params = {'checkin': check_in_date, 'checkout': check_out_date, 'room_id': room_type_id,'group_adult': 2}
+    response = requests.get(url, headers=headers, params=params)
+    tree = html.fromstring(response.content)
+
+    # Check if the room type is available for the specified date range
+    not_available = tree.xpath(f"//div[@id='{room_type_id}' and @class='room js-soldout-room-rate']")
+    if not_available:
+        print(f"Room type '{room_type_id}' is not available for the date range {check_in_date} - {check_out_date}")
+    else:
+        # Extract the relevant information from the HTML using XPath
+        product_price = tree.xpath(f"(//tr[contains(@data-block-id,'{room_type_id}')])[1]/@data-hotel-rounded-price")
+        if product_price:
+            product_price=float(product_price[0])
+        now = datetime.now()
+        date_time_scraped = now 
+        df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+    room_type_id = "105656305" 
+    url="https://www.booking.com/hotel/cy/new-famagusta.el.html"
+    product_name="New Famagusta Hotel & Suites, Τιμή για Δίκλινο για 1 βράδυ (Αγία Νάπα)"
+
+    # Define the headers for the HTTP request
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+
+    # Send the HTTP request and get the HTML content of the page
+    params = {'checkin': check_in_date, 'checkout': check_out_date, 'room_id': room_type_id,'group_adult': 2}
+    response = requests.get(url, headers=headers, params=params)
+    tree = html.fromstring(response.content)
+
+    # Check if the room type is available for the specified date range
+    not_available = tree.xpath(f"//div[@id='{room_type_id}' and @class='room js-soldout-room-rate']")
+    if not_available:
+        print(f"Room type '{room_type_id}' is not available for the date range {check_in_date} - {check_out_date}")
+    else:
+        # Extract the relevant information from the HTML using XPath
+        product_price = tree.xpath(f"(//tr[contains(@data-block-id,'{room_type_id}')])[1]/@data-hotel-rounded-price")
+        if product_price:
+            product_price=float(product_price[0])
+        now = datetime.now()
+        date_time_scraped = now 
+        df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+
+    room_type_id = "43130601" 
+    url="https://www.booking.com/hotel/cy/flokkas-apartments.el.html"
+    product_name="Flokkas Hotel Apartments, Τιμή για Δίκλινο για 1 βράδυ (Πρωταράς)"
+
+    # Define the headers for the HTTP request
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+
+    # Send the HTTP request and get the HTML content of the page
+    params = {'checkin': check_in_date, 'checkout': check_out_date, 'room_id': room_type_id,'group_adult': 2}
+    response = requests.get(url, headers=headers, params=params)
+    tree = html.fromstring(response.content)
+
+    # Check if the room type is available for the specified date range
+    not_available = tree.xpath(f"//div[@id='{room_type_id}' and @class='room js-soldout-room-rate']")
+    if not_available:
+        print(f"Room type '{room_type_id}' is not available for the date range {check_in_date} - {check_out_date}")
+    else:
+        # Extract the relevant information from the HTML using XPath
+        product_price = tree.xpath(f"(//tr[contains(@data-block-id,'{room_type_id}')])[1]/@data-hotel-rounded-price")
+        if product_price:
+            product_price=float(product_price[0])
+        now = datetime.now()
+        date_time_scraped = now 
+        df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+
+    room_type_id = "28716002" 
+    url="https://www.booking.com/hotel/cy/asty-nicosia.el.html"
+    product_name="Ξενοδοχείο Άστυ, Τιμή για Δίκλινο για 1 βράδυ (Λευκωσία)"
+
+    # Define the headers for the HTTP request
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+
+    # Send the HTTP request and get the HTML content of the page
+    params = {'checkin': check_in_date, 'checkout': check_out_date, 'room_id': room_type_id,'group_adult': 2}
+    response = requests.get(url, headers=headers, params=params)
+    tree = html.fromstring(response.content)
+
+    # Check if the room type is available for the specified date range
+    not_available = tree.xpath(f"//div[@id='{room_type_id}' and @class='room js-soldout-room-rate']")
+    if not_available:
+        print(f"Room type '{room_type_id}' is not available for the date range {check_in_date} - {check_out_date}")
+    else:
+        # Extract the relevant information from the HTML using XPath
+        product_price = tree.xpath(f"(//tr[contains(@data-block-id,'{room_type_id}')])[1]/@data-hotel-rounded-price")
+        if product_price:
+            product_price=float(product_price[0])
+        now = datetime.now()
+        date_time_scraped = now 
+        df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+    room_type_id = "106235701" 
+    url="https://www.booking.com/hotel/cy/princessa-vera-apartments.el.html"
+    product_name="Princessa Vera Hotel Apartments, Τιμή για Standard Στούντιο 2 μονά κρεβάτι 1 βράδυ (Paphos)"
+
+    # Define the headers for the HTTP request
+    headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+
+    # Send the HTTP request and get the HTML content of the page
+    params = {'checkin': check_in_date, 'checkout': check_out_date, 'room_id': room_type_id,'group_adult': 2}
+    response = requests.get(url, headers=headers, params=params)
+    tree = html.fromstring(response.content)
+
+    # Check if the room type is available for the specified date range
+    not_available = tree.xpath(f"//div[@id='{room_type_id}' and @class='room js-soldout-room-rate']")
+    if not_available:
+        print(f"Room type '{room_type_id}' is not available for the date range {check_in_date} - {check_out_date}")
+    else:
+    # Extract the relevant information from the HTML using XPath
+        product_price = tree.xpath(f"(//tr[contains(@data-block-id,'{room_type_id}')])[1]/@data-hotel-rounded-price")
+        if product_price:
+            product_price=float(product_price[0])
+        now = datetime.now()
+        date_time_scraped = now 
+        df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+Booking()
+
+
+def GasCylinder():
+    try:
+        # Extract last month reported name
+        url = "https://consumer.gov.cy/en/price-observatories/learn-your-rights/66/?ctype=ar"
+        response = requests.get(url)
+        response.raise_for_status()  # Check for connection errors
+
+        tree = html.fromstring(response.content)
+        month_name = tree.xpath('//div[@class="mar-top-a"]/ul[@id="docs-list"]/li[last()]/a[@class="grp-head expand"]/text()')
+
+        if month_name:
+            clean_month_name = re.sub(r'^\d+\s*-\s*', '', month_name[0])
+            clean_month_name = clean_month_name.replace(" ", "_")
+            print(clean_month_name)
+
+            # Remove unwanted characters
+            url = "https://consumer.gov.cy/assets/modules/wnp/articles/202302/66/docs/paratiritirio_" + clean_month_name.lower() + ".pdf"
+            response = requests.get(url)
+            response.raise_for_status()  # Check for connection errors
+
+            with open("file.pdf", "wb") as f:
+                f.write(response.content)
+
+            pdf_file = open("file.pdf", "rb")
+            pdf_reader = PyPDF2.PdfReader(pdf_file)
+
+            # Extracting price
+            if len(pdf_reader.pages) >= 6:  # Check if the required page exists
+                page = pdf_reader.pages[5]
+                match = re.search(r"\d+\s+ΚΥΛΙΝΔΡΟΣ.*?(\d+\.\d+)\s+\d+\.\d+", page.extract_text())
+
+                if match:
+                    middle_price = match.group(1)
+                    print(middle_price)
+                    df.loc[len(df)] = ["ΚΥΛΙΝΔΡΟΣ 10kg ", middle_price, datetime.now(), 'Liquefied hydrocarbons', 'Consumer Observatory', 0]
+                else:
+                    print("Price extraction failed.")
+            else:
+                print("Required page does not exist.")
+        else:
+            print("Month name not found.")
+    except requests.exceptions.RequestException as e:
+        print("Connection error:", e)
+    except IndexError:
+        print("Index error occurred.")
+    except Exception as e:
+        print("An error occurred:", e)
+
+GasCylinder()
+
+#EUROPEAN UNIVERSITY
+def euc():
+    euc = tb.read_pdf('https://syllabus.euc.ac.cy/tuitions/euc-tuition-fees-c.pdf', pages = '2',pandas_options={'header': None}, stream=True)
+
+    list_euc = []
+
+    for i in range(0,4):
+        euc[i][1] = euc[i][1].astype('string')
+        for word in euc[i][1].to_list():
+            word = word.replace(',','')
+            word = int(word)
+            list_euc.append(word)
+    df.loc[len(df)]=["EUROPEAN UNIVERSITY CYPRUS, Bachelors Programmes Average Yearly Tuition for 2022-2023",(sum(list_euc))/(len(list_euc)),datetime.now(),'Tertiary education','European University Cyprus',0]
+
+euc()
+
+def update_average_price():
+    now = datetime.now()
+    today = now.date()
+
+    # Convert 'date_time_scraped' column to datetime
+    df['date_time_scraped'] = pd.to_datetime(df['date_time_scraped'])
+
+    # Convert 'product_price' column to numeric, ignoring non-numeric values
+    df['product_price'] = pd.to_numeric(df['product_price'], errors='coerce')
+
+    # Group by 'product_subclass' and 'date_time_scraped', calculate average price, and update 'average.price' column
+    df['subclass_average'] = df.groupby(['product_subclass', df['date_time_scraped'].dt.date])['product_price'].transform('mean')
+
+update_average_price()
+
+
+df.to_csv("BillionPricesProject_ProductList.csv", index=False)
 
 

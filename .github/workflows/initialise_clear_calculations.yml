@@ -1,10 +1,12 @@
 # Whenever pull request is made targeting branch initialise and initialize, csv is reset
-name: run-daily-scrape
-run-name: Adding daily scrape to current CSV
+name: initialise-clear-calculations
+run-name: Creating blank CSV, clearing current data
 on:
-  schedule:
-    - cron: "30 22 * * *"    #runs at 11:30 UTC everyday
-
+  pull_request:
+    # Sequence of patterns matched against refs/heads
+    branches:
+      - initialise_c
+      - initialize_c
 jobs:
   getdataandrefreshmap:
     runs-on: ubuntu-latest
@@ -20,18 +22,9 @@ jobs:
       - name: Install dependencies
         run: |
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-      - name: execute py script products
+      - name: execute py script
         run: |
-          python scrape_tool.py
-          git status
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add .
-          git commit -m "crongenerated"
-          git push origin HEAD:main
-      - name: execute py script calculations
-        run: |
-          python calculations.py
+          python initialise_calculations.py
           git status
           git config user.name github-actions
           git config user.email github-actions@github.com
