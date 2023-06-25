@@ -103,7 +103,7 @@ The project utilizes GitHub Actions to automate the scraping process. The reposi
 ### run-daily-scrape.yml: 
 This file schedules the execution of scrape_tool.py and calculations.py scripts on a daily basis.
 ### initialise-clear-csv.yml: 
-Whenever a pull request is made targeting the initialise or initialize branch, this file resets the BillionPricesProject_ProductList.csv file.
+Whenever a pull request is made targeting the initialise or initialize branch, this file runs initial.py to reset the BillionPricesProject_ProductList.csv file.
 ### initialise_clear_calculations.yml: 
-Whenever a pull request is made targeting the initialise_c or initialize_c branch, this file resets the Calculations.csv file.
+Whenever a pull request is made targeting the initialise_c or initialize_c branch, this file runs initialise_calculations.py to reset the Calculations.csv file.
 
