@@ -381,16 +381,28 @@ def scrapper_phoneservices_cyta(urls:list):
     for url in urls:
         if url=='https://www.cyta.com.cy/upgraded-telephony/el':
             scrappe_page(url,'td',r"\€\d.\d*\s\/")
-            prices_final_phone.append(float(prices_phoneservices[0].strip('\€').strip('\/').replace(',', '.')))
-            prices_final_phone.append(float(prices_phoneservices[1].strip('\€').strip('\/').replace(',', '.')))
+            if prices_phoneservices:
+                prices_final_phone.append(float(prices_phoneservices[0].strip('\€').strip('\/').replace(',', '.')))
+            else:
+                prices_final_phone.append(None)
+            if len(prices_phoneservices)>1:
+                prices_final_phone.append(float(prices_phoneservices[1].strip('\€').strip('\/').replace(',', '.')))
+            else:
+                prices_final_phone.append(None)
 
         if url=='https://www.cyta.com.cy/mobile-internet':
             scrappe_page(url,'strong',r"\€\d\d.\d\d")
-            prices_final_phone.append(float(prices_phoneservices[0].strip('\€').replace(',', '.')))
+            if prices_phoneservices:
+                prices_final_phone.append(float(prices_phoneservices[0].strip('\€').replace(',', '.')))
+            else:
+                prices_final_phone.append(None)
 
         if url == 'https://www.cyta.com.cy/freedom-plans':
             scrappe_page(url,'span',r"\€\d\d.\d\d")
-            prices_final_phone.append(float(prices_phoneservices[0].strip('\€').replace(',', '.')))
+            if prices_phoneservices:
+                prices_final_phone.append(float(prices_phoneservices[0].strip('\€').replace(',', '.')))
+            else:
+                prices_final_phone.append(None)
 
 #put the rows in a list
 all_items_cyta = []
@@ -431,15 +443,33 @@ def scrapper_phoneservices_primetel(urls:list):
     for url in urls:
         if url=='https://primetel.com.cy/home-fiber-plans-en':
             scrappe_page(url, r"\€\d\d.\d\d\<\/p")
-            prices_final_phone.append(float(prices_phoneservices[0].strip('\€\<\/p').replace(',', '.')))
-            prices_final_phone.append(float(prices_phoneservices[1].strip('\€\<\/p').replace(',', '.')))
-            prices_final_phone.append(float(prices_phoneservices[2].strip('\€\<\/p').replace(',', '.')))
+            if prices_phoneservices:
+                prices_final_phone.append(float(prices_phoneservices[0].strip('\€\<\/p').replace(',', '.')))
+            else:
+                prices_final_phone.append(None)
+            if len(prices_phoneservices)>1:
+                prices_final_phone.append(float(prices_phoneservices[1].strip('\€\<\/p').replace(',', '.')))
+            else:
+                prices_final_phone.append(None)
+            if len(prices_phoneservices)>2:
+                prices_final_phone.append(float(prices_phoneservices[2].strip('\€\<\/p').replace(',', '.')))
+            else:
+                prices_final_phone.append(None)
 
         if url=='https://primetel.com.cy/giga-unlimited-en':
             scrappe_page(url,r"\€\d.*" )
-            prices_final_phone.append(float(prices_phoneservices[1].strip('\€')))
-            prices_final_phone.append(float(prices_phoneservices[3].strip('\€')))
-            prices_final_phone.append(float(prices_phoneservices[5].strip('\€')))
+            if len(prices_phoneservices)>1:
+                prices_final_phone.append(float(prices_phoneservices[1].strip('\€')))
+            else:
+                prices_final_phone.append(None)
+            if len(prices_phoneservices)>3:
+                prices_final_phone.append(float(prices_phoneservices[3].strip('\€')))
+            else:
+                prices_final_phone.append(None)
+            if len(prices_final_phone)>5:
+                prices_final_phone.append(float(prices_phoneservices[5].strip('\€')))
+            else:
+                prices_final_phone.append(None)
 
 
 #put the rows in a list
@@ -489,11 +519,11 @@ def cablenet():
     html_content = response.content
     tree = etree.HTML(html_content)
 
-    price_xpath = "//p[contains(text(), 'χωρίς συμβόλαιο')]/preceding-sibling::p[2]//strong/text()"
+    price_with_euro_sign_l = tree.xpath( "//p[contains(text(), 'χωρίς συμβόλαιο')]/preceding-sibling::p[2]//strong/text()")
 
 
-    if price_xpath:
-        price_with_euro_sign = tree.xpath(price_xpath)[0]
+    if price_with_euro_sign_l:
+        price_with_euro_sign = price_with_euro_sign_l[0]
         price = price_with_euro_sign.replace("€", "")
         df.loc[len(df)]=['PurpleInternet',price,datetime.now(),'Internet access provision services','Cablenet',0]
 
@@ -505,9 +535,9 @@ def cablenet():
     html_content = response.content
     tree = etree.HTML(html_content)
 
-    price_xpath = "(//div[@class='wpb_text_column us_custom_1e54aa4c']//span[contains(@style, 'font-size: 300%')]/strong/text())[3]"
-    if price_xpath:
-        price_with_euro_sign = tree.xpath(price_xpath)[0]
+    price_with_euro_sign_l = tree.xpath( "(//div[@class='wpb_text_column us_custom_1e54aa4c']//span[contains(@style, 'font-size: 300%')]/strong/text())[3]")
+    if price_with_euro_sign_l:
+        price_with_euro_sign = price_with_euro_sign_l[0]
         price = price_with_euro_sign.replace("€", "")
         df.loc[len(df)]=['PurpleMaxMobile',price,datetime.now(),'Bundled telecommunication services','Cablenet',0] 
 
@@ -578,10 +608,13 @@ def scrapper_marksspencer(urls:list):
             price_ini = re.findall(r'content=".+\>',str(scripts))
 
             #get only the first element
-            price_final = float(price_ini[0].strip('content="">'))
+            if price_ini:
+                price_final = float(price_ini[0].strip('content="">'))
 
-            #add the price in the list    
-            prices_final_marksspencer.append(price_final)
+                #add the price in the list    
+                prices_final_marksspencer.append(price_final)
+            else:
+                prices_final_marksspencer.append(None)
             
         except urllib.error.HTTPError as err:
             prices_final_marksspencer.append('NaN')
@@ -684,10 +717,13 @@ def scrapper_famoussports(urls:list):
             price_ini = re.findall(r'\>\d.*\€',str(scripts))
 
             #get only the first element
-            price_final = round(float(str(price_ini[0]).strip('>€').replace(',','.')),2)
+            if price_ini:
+                price_final = round(float(str(price_ini[0]).strip('>€').replace(',','.')),2)
 
-            #add the price in the list    
-            prices_final_famoussports.append(price_final)
+                #add the price in the list    
+                prices_final_famoussports.append(price_final)
+            else:
+                prices_final_famoussports.append(None)
             
         except urllib.error.HTTPError as err:
             prices_final_famoussports.append('NaN')
@@ -722,14 +758,16 @@ def garments():
         tree = html.fromstring(st)
         product_name = (''.join(am['product_name'])).replace(' ','').strip()
         try:
-            product_price=tree.xpath("//script[@type='application/ld+json']/text()")[0]
+            pp=tree.xpath("//script[@type='application/ld+json']/text()")
+            product_price=pp[0]
             if am['retailer'] == 'Bershka':
                 if product_price:
                     product_price = json.loads(product_price)['offers'][0]['price']
                 else:
                     print('product price not found')
             else:
-                product_price = json.loads(product_price)['offers']['price']
+                if product_price:
+                    product_price = json.loads(product_price)['offers']['price']
             print(product_price)
             now = datetime.now()
             date_time_scraped = now
@@ -753,8 +791,14 @@ def Novella():
     scripts = bs.find_all('td',{'class':'column-2'},string=True)
     price_ini = re.findall(r'\€\d+,\d\d',str(scripts))
 
-    prices_final_hairsalon.append(round(float(str(price_ini[0]).strip('€').replace(',','.')),2))
-    prices_final_hairsalon.append(round(float(str(price_ini[4]).strip('€').replace(',','.')),2))
+    if len(price_ini)>0:
+        prices_final_hairsalon.append(round(float(str(price_ini[0]).strip('€').replace(',','.')),2))
+    else:
+        prices_final_hairsalon.append(None)
+    if len(price_ini)>4:
+        prices_final_hairsalon.append(round(float(str(price_ini[4]).strip('€').replace(',','.')),2))
+    else:
+        prices_final_hairsalon.append(None)
 
     #################################################################################################################
 
@@ -845,13 +889,13 @@ def Fuel():
     pattern = '\d\.\d+\s'
     price_ini = re.findall(pattern,data)
 
-    if len(price_ini)>=3:
+    if len(price_ini)>3:
          df.loc[len(df)] = ("Αμόλυβδη Μέση Τιμή Παγκύπρια",price_ini[3],datetime.now(),'Petrol','Global Petrol Prices',0)
-    if len(price_ini)>=6:
+    if len(price_ini)>6:
         df.loc[len(df)] = ("Πετρέλαιο Κίνησης Μέση Τιμή Παγκύπρια",price_ini[6],datetime.now(),'Diesel','Global Petrol Prices',0)
-    if len(price_ini)>=9:
+    if len(price_ini)>9:
         df.loc[len(df)] =  ("Πετρέλαιο Μέση Τιμή Παγκύπρια",price_ini[9],datetime.now(),'Diesel','Global Petrol Prices',0)
-    if len(price_ini)>=12:
+    if len(price_ini)>12:
         df.loc[len(df)] = ("Πετρέλαιο Θέρμανσης Μέση Τιμή Παγκύπρια",price_ini[12],datetime.now(),'Liquid Fuels','Global Petrol Prices',0)
 
 Fuel()
@@ -868,10 +912,13 @@ def Tobacco():
     scripts = bs.find_all('span',{'data-hook':'formatted-primary-price'},string=True)
     scripts
     #get only the first element
-    price_final = float(str(scripts[0]).strip('<span data-hook="formatted-primary-price">€ </span>'))
+    if scripts:
+        price_final = float(str(scripts[0]).strip('<span data-hook="formatted-primary-price">€ </span>'))
 
-    #add the price in the list    
-    prices_final_cigars.append(price_final)
+        #add the price in the list    
+        prices_final_cigars.append(price_final)
+    else:
+        prices_final_cigars.append(None)
 
     url = "https://www.numbeo.com/cost-of-living/country_price_rankings?itemId=17&displayCurrency=EUR"
     page = urlopen(url)
@@ -881,10 +928,13 @@ def Tobacco():
     scripts = bs.find_all('script',string=True)
     price_ini = re.findall(r"\['Cyprus', \d.+\]",str(scripts))
     #get only the first element
-    price_final = float(str(price_ini[0]).strip("['Cyprus', ]"))
+    if price_ini:
+        price_final = float(str(price_ini[0]).strip("['Cyprus', ]"))
 
-    #add the price in the list    
-    prices_final_cigars.append(price_final)
+        #add the price in the list    
+        prices_final_cigars.append(price_final)
+    else:
+        prices_final_cigars.append(None)
 
     url = "https://www.ewsale.com/product-page/aspire-puxos-kit-%CE%B7%CE%BB%CE%B5%CE%BA%CF%84%CF%81%CE%BF%CE%BD%CE%B9%CE%BA%CE%AC-%CF%84%CF%83%CE%B9%CE%B3%CE%AC%CF%81%CE%B1-%CE%BC%CF%80%CE%B1%CF%84%CE%B1%CF%81%CE%AF%CE%B1-21700-200-ml-%CF%85%CE%B3%CF%81%CE%AC-%CE%AC%CF%84%CE%BC%CE%B9"
     page = urlopen(url)
@@ -893,10 +943,13 @@ def Tobacco():
         
     scripts = bs.find_all('span',{'data-hook':'formatted-primary-price'},string=True)
     #get only the first element
-    price_final = float(str(scripts[0]).strip('<span data-hook="formatted-primary-price">   €</span>').replace(',','.'))
+    if scripts:
+        price_final = float(str(scripts[0]).strip('<span data-hook="formatted-primary-price">   €</span>').replace(',','.'))
 
-    #add the price in the list    
-    prices_final_cigars.append(price_final)
+        #add the price in the list    
+        prices_final_cigars.append(price_final)
+    else:
+        prices_final_cigars.append(None)
 
     #columns urls,products,labels into lists
     products = ['Machetero Panatela','Marlboro 20 Pack','Smok S-priv Kit E-Τσιγάρα + 2 μπαταρίες  + 200 ml Υγρά  άτμισης']
@@ -934,10 +987,13 @@ def Stephanis():
     
             scripts = bs.find_all('span',{'class':'item-price'},string=True)
             #get only the first element
-            price_final = float(str(scripts[0]).strip('<span class="item-price">€ </span>'))
+            if scripts:
+                price_final = float(str(scripts[0]).strip('<span class="item-price">€ </span>'))
 
-            #add the price in the list    
-            prices_final_stephanis.append(price_final)
+                #add the price in the list    
+                prices_final_stephanis.append(price_final)
+            else:
+                prices_final_stephanis.append(None)
             
         except urllib.error.HTTPError as err:
             prices_final_stephanis.append('NaN')
@@ -972,8 +1028,10 @@ def Electroline():
                     #get the strings for the prices of the products using regular expressions
                     pattern = '\<meta property="product:price:amount" content="\d+.\d+" \/>'
                     price_ini = re.findall(pattern,data)
-
-                    prices_final_electroline.append(float(str(price_ini[0]).strip('<meta property="product:price:amount" content=" " />')))
+                    if price_ini:
+                        prices_final_electroline.append(float(str(price_ini[0]).strip('<meta property="product:price:amount" content=" " />')))
+                    else:
+                        prices_final_electroline.append(None)
 
             except urllib.error.HTTPError as err:
                 prices_final_electroline.append('NaN')
@@ -1014,9 +1072,11 @@ def ikea():
 
             #get the strings for the prices of the products using regular expressions
             price_ini = re.findall(r'"fb_value": "\d+.\d+"',str(scripts))
-
-            #add the price in the list    
-            prices_final_ikea.append(float(price_ini[0].strip('"fb_value": " "')))
+            if price_ini:
+                #add the price in the list    
+                prices_final_ikea.append(float(price_ini[0].strip('"fb_value": " "')))
+            else:
+                prices_final_ikea.append(None)
             
         except urllib.error.HTTPError as err:
             prices_final_ikea.append('NaN')
@@ -1060,8 +1120,10 @@ def awol():
             #get the strings for the prices of the products using regular expressions
             pattern = '<meta property="og:price:amount" content="\d+.\d+">'
             price_ini = re.findall(pattern,data)
-
-            prices_final_awol.append(float(str(price_ini[0]).strip('<meta property="og:price:amount" content=" " >').replace(',','.')))
+            if price_ini:
+                prices_final_awol.append(float(str(price_ini[0]).strip('<meta property="og:price:amount" content=" " >').replace(',','.')))
+            else:
+                prices_final_awol.append(None)
             
         except urllib.error.HTTPError as err:
             prices_final_awol.append('NaN')
@@ -1088,13 +1150,15 @@ def moto_race():
             page = urlopen(url_new)
             html = page.read().decode("utf-8")
             bs = BeautifulSoup(html, "html.parser")
-    
             scripts = bs.find_all('span',{'class':'price'},string=True)
             #get only the first element
-            price_final = float(str(scripts[0]).strip('<span class="price">€ </span>').replace(',',''))
+            if scripts:
+                price_final = float(str(scripts[0]).strip('<span class="price">€ </span>').replace(',',''))
 
-            #add the price in the list    
-            prices_final_motorace.append(price_final)
+                #add the price in the list    
+                prices_final_motorace.append(price_final)
+            else:
+                prices_final_motorace.append(None)
             
         except urllib.error.HTTPError as err:
             prices_final_motorace.append('NaN')
@@ -1128,8 +1192,11 @@ def bwell():
         #get the strings for the prices of the products using regular expressions
         pattern = '<\/span>&nbsp;\d+.\d+<\/bdi>'
         price_ini = re.findall(pattern,data)
+        if len(price_ini)>1:
 
-        prices_final_bwell.append(float(str(price_ini[1]).strip('</span>&nbsp; </bdi>')))
+            prices_final_bwell.append(float(str(price_ini[1]).strip('</span>&nbsp; </bdi>')))
+        else:
+            prices_final_bwell.append(None)
     #columns urls,products,labels into lists
     products = ['Physiomer Nasal Spray Hygiene Active Prevention 135ml','Vitabiotics Pregnacare Original 30 tabs','Geatherm Oxy Control – Pulse Oximeter',
     'Flaem RespirAir nebulizer']
@@ -1179,13 +1246,16 @@ def nissan():
     response = requests.get(url, headers=headers)
     tree = html.fromstring(response.content)
     # Use XPath to extract the price value
-    price_xpath = '//iframe[@id="individualVehiclePriceJSON"]/text()'
-    price_json = tree.xpath(price_xpath)[0]
+    price_tree = tree.xpath('//iframe[@id="individualVehiclePriceJSON"]/text()')
+    if price_tree:
+        price_json = price_tree[0]
 
-    # Extract the price of 23500 from the JSON string
-    import json
-    price_data = json.loads(price_json)
-    product_price = price_data['juke_2019']['default']['grades']['LVL001']['gradePrice']
+        # Extract the price of 23500 from the JSON string
+        import json
+        price_data = json.loads(price_json)
+        product_price = price_data['juke_2019']['default']['grades']['LVL001']['gradePrice']
+    else:
+        product_price=None
     now = datetime.now()
     date_time_scraped = now
     product_name="Nissan Juke"
@@ -1194,272 +1264,400 @@ def nissan():
     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
 nissan()
 
-#WOLT
+# #WOLT
+# def Wolt():
+#     retailer="Wolt"
+#     product_subclass="Restaurants, cafes and dancing establishments"
+#     # Define the URL for the Booking.com page for hotel X
+#     url = "https://wolt.com/en/cyp/nicosia/restaurant/costanicosia"
+
+#     # Define the headers for the HTTP request
+#     headers = {
+#         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+
+#     url = 'https://wolt.com/en/cyp/nicosia/restaurant/costanicosia'
+#     response = requests.get(url)
+#     html_content = response.text
+
+#     tree = etree.HTML(html_content)
+
+#     # Find the button element containing the cappuccino information
+#     button_xpath = tree.xpath('//button[descendant::h3[text()="Cappuccino"]]')
+#     if button_xpath:
+#         button_element = button_xpath[0]
+
+#         # Extract the price from the button element
+#         price_xpath_cappuccino = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+#         if button_element.xpath(price_xpath_cappuccino):
+#             product_price = float(button_element.xpath(price_xpath_cappuccino)[0].replace('€', ''))
+#     else:
+#         product_price=None
+
+#     product_name="Costa Coffee Cappuccino Medio"
+#     now = datetime.now()
+#     date_time_scraped = now
+#     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+
+#     # Find the button element containing the cappuccino information
+#     product_name="Costa Coffee Espresso Single"
+#     now = datetime.now()
+#     date_time_scraped = now
+#     button_xpath = '//button[descendant::h3[text()="Espresso"]]'
+#     button_element= tree.xpath(button_xpath)[0]
+
+#     # Extract the price from the button element
+#     price_xpath_espresso = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+#     product_price = float(button_element.xpath(price_xpath_espresso)[0].replace('€', ''))
+
+#     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+#     product_name="Costa Coffee Freddo Cappuccino Medio"
+#     # Find the button element containing the cappuccino information
+#     button_xpath = '//button[descendant::h3[text()="Freddo Cappuccino"]]'
+#     button_element = tree.xpath(button_xpath)[0]
+
+#     # Extract the price from the button element
+#     price_xpath_fcappuccino = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+#     product_price = float(button_element.xpath(price_xpath_fcappuccino)[0].replace('€', ''))
+#     now = datetime.now()
+#     date_time_scraped = now
+#     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+#     product_name="Costa Coffee Freddo Espresso Medio"
+#     # Find the button element containing the cappuccino information
+#     button_xpath = '//button[descendant::h3[text()="Freddo Espresso"]]'
+#     button_element= tree.xpath(button_xpath)[0]
+
+#     # Extract the price from the button element
+#     price_xpath_fespresso = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+#     price_fespresso = float(button_element.xpath(price_xpath_fespresso)[0].replace('€', ''))
+#     product_price = float(button_element.xpath(price_xpath_fcappuccino)[0].replace('€', ''))
+#     now = datetime.now()
+#     date_time_scraped = now
+#     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+#     ###PIATSA GOUROUNAKI
+
+#     product_name="Piatsa Gourounaki, Meat platter for 2 persons  (Nicosia)"
+#     url = 'https://wolt.com/en/cyp/nicosia/restaurant/piatsa-gourounaki-mall-of-egkomi'
+#     response = requests.get(url)
+#     html_content = response.text
+
+#     tree = etree.HTML(html_content)
+
+#     # Find the button element containing the cappuccino information
+#     button_xpath = '//button[descendant::h3[text()="Ποικιλία Κρεάτων Για Δυο"]]'
+#     button_element = tree.xpath(button_xpath)[0]
+
+#     # Extract the price from the button element
+#     price_xpath_pk2 = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+#     product_price = float(button_element.xpath(price_xpath_pk2)[0].replace('€', ''))
+
+#     now = datetime.now()
+#     date_time_scraped = now 
+#     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+#     ####PIXIDA  
+#     # Define the URL for the Booking.com page for hotel X
+#     product_name="Pixida, Fish meze for each guest with minimum 2 guests (Nicosia)"
+#     url = 'https://wolt.com/en/cyp/nicosia/restaurant/pyxida'
+#     response = requests.get(url)
+#     html_content = response.text
+
+#     tree = etree.HTML(html_content)
+
+#     # Find the button element containing the cappuccino information
+#     button_xpath = '//button[descendant::h3[text()="Meze Platter for 2"]]'
+#     button_element = tree.xpath(button_xpath)[0]
+
+#     # Extract the price from the button element
+#     price_xpath_mp2 = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+#     product_price = float(button_element.xpath(price_xpath_mp2)[0].replace('€', ''))
+#     now = datetime.now()
+#     date_time_scraped = now 
+#     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+
+#     ###LIMASSOL
+#     product_name="Kofini Tavern Mix Grill for 2"
+#     url = 'https://wolt.com/en/cyp/limassol/restaurant/kofini-tavern#mix-grills-platters-6'
+#     response = requests.get(url)
+#     html_content = response.text
+
+#     tree = etree.HTML(html_content)
+
+#     # Find the button element containing the cappuccino information
+#     button_xpath = '//button[descendant::h3[text()="Mix Grill For 2"]]'
+#     button_element = tree.xpath(button_xpath)[0]
+
+#     # Extract the price from the button element
+#     price_xpath_mg2 = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+#     product_price = float(button_element.xpath(price_xpath_mg2)[0].replace('€', ''))
+#     now = datetime.now()
+#     date_time_scraped = now 
+#     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+#     product_name="Kofini Tavern, Seafood Platter"
+#     # Find the button element containing the cappuccino information
+#     button_xpath = '//button[descendant::h3[text()="Seafood Platter"]]'
+#     button_element = tree.xpath(button_xpath)[0]
+
+#     # Extract the price from the button element
+#     price_xpath_sfp = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+#     product_price= float(button_element.xpath(price_xpath_sfp)[0].replace('€', ''))
+#     now = datetime.now()
+#     date_time_scraped = now 
+#     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+#     ## LARNACA VLACHOS
+#     product_name="Vlachos Taverna, Ποικιλία Σχάρας Για 2 Άτομα"
+#     url = 'https://wolt.com/en/cyp/larnaca/restaurant/vlachos-taverna#itemcategory-3'
+#     response = requests.get(url)
+#     html_content = response.text
+
+#     tree = etree.HTML(html_content)
+
+#     # Find the button element containing the cappuccino information
+#     button_xpath = '//button[descendant::h3[text()="Ποικιλία Σχάρας Για 2 Άτομα"]]'
+#     button_element = tree.xpath(button_xpath)[0]
+
+#     # Extract the price from the button element
+#     price_xpath_mg2 = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+#     product_price = float(button_element.xpath(price_xpath_mg2)[0].replace('€', ''))
+#     now = datetime.now()
+#     date_time_scraped = now 
+#     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+
+#     ### Larnaca ZAKOS
+#     product_name="Zakos Beach Restaurant, Ψαρομεζέδες Ζάκος (Για 2 Άτομα)"
+#     url = 'https://wolt.com/en/cyp/larnaca/restaurant/zakos-beach-restaurant'
+#     response = requests.get(url)
+#     html_content = response.text
+
+#     tree = etree.HTML(html_content)
+
+#     # Find the button element containing the cappuccino information
+#     button_xpath = '//button[descendant::h3[text()="Ψαρομεζέδες Ζάκος (Για 2 Άτομα)"]]'
+#     button_element = tree.xpath(button_xpath)[0]
+
+#     # Extract the price from the button element
+#     price_xpath_psz2 = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+#     product_price = float(button_element.xpath(price_xpath_psz2)[0].replace('€', ''))
+#     now = datetime.now()
+#     date_time_scraped = now 
+#     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+
+#     ### Paphos Tavernaki
+#     product_name="Paphos Tavernaki, Ποικιλία Σχάρας Για 2 Άτομα"
+#     url = 'https://wolt.com/en/cyp/paphos/restaurant/tavernaki-paphos#itemcategory-3'
+#     response = requests.get(url)
+#     html_content = response.text
+
+#     tree = etree.HTML(html_content)
+
+#     # Find the button element containing the cappuccino information
+#     button_xpath = '//button[descendant::h3[text()="Ποικιλία Σχάρας Για 2 Άτομα"]]'
+#     button_element = tree.xpath(button_xpath)[0]
+
+#     # Extract the price from the button element
+#     price_xpath_ps2 = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+#     product_price = float(button_element.xpath(price_xpath_ps2)[0].replace('€', ''))
+#     now = datetime.now()
+#     date_time_scraped = now 
+#     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+
+#     ### Paphos Ocean Basket
+#     product_name="Ocean Basket, Platter for 2"
+#     url = 'https://wolt.com/en/cyp/paphos/restaurant/ocean-basket-paphos'
+#     response = requests.get(url)
+#     html_content = response.text
+
+#     tree = etree.HTML(html_content)
+
+#     # Find the button element containing the cappuccino information
+#     button_xpath = '//button[descendant::h3[text()="Platter For 2"]]'
+#     button_element = tree.xpath(button_xpath)[0]
+
+#     # Extract the price from the button element
+#     price_xpath_p2 = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+#     product_price = float(button_element.xpath(price_xpath_p2)[0].replace('€', ''))
+#     now = datetime.now()
+#     date_time_scraped = now 
+#     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+#     product_subclass="Fast food and take away food services"
+
+#     ###MACCIES
+
+#     url = 'https://wolt.com/en/cyp/limassol/restaurant/mcdonalds-oldport'
+#     response = requests.get(url)
+#     html_content = response.text
+
+#     tree = etree.HTML(html_content)
+
+#     # Find the button element containing the cappuccino information
+#     button_xpath = '//button[descendant::h3[text()="Share Box"]]'
+#     button_element = tree.xpath(button_xpath)[0]
+#     product_name="McDonald's Sharebox"
+#     # Extract the price from the button element
+#     price_xpath_sb = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+#     product_price = float(button_element.xpath(price_xpath_sb)[0].replace('€', ''))
+#     now = datetime.now()
+#     date_time_scraped = now 
+#     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+#     product_name="McDonald's Big Mac"
+#     # Find the button element containing the cappuccino information
+#     button_xpath = '//button[descendant::h3[text()="Big Mac"]]'
+#     button_element = tree.xpath(button_xpath)[0]
+
+#     # Extract the price from the button element
+#     price_xpath_bm = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+#     product_price = float(button_element.xpath(price_xpath_bm)[0].replace('€', ''))
+#     now = datetime.now()
+#     date_time_scraped = now 
+#     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+#     product_name="McDonald's McChicken"
+#     # Find the button element containing the cappuccino information
+#     button_xpath = '//button[descendant::h3[text()="McChicken"]]'
+#     button_element = tree.xpath(button_xpath)[0]
+
+#     # Extract the price from the button element
+#     price_xpath_mc = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+#     product_price = float(button_element.xpath(price_xpath_mc)[0].replace('€', ''))
+#     now = datetime.now()
+#     date_time_scraped = now 
+#     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+# Wolt()
+
+
 def Wolt():
-    retailer="Wolt"
-    product_subclass="Restaurants, cafes and dancing establishments"
-    # Define the URL for the Booking.com page for hotel X
-    url = "https://wolt.com/en/cyp/nicosia/restaurant/costanicosia"
+    retailer = "Wolt"
+    product_subclass = "Restaurants, cafes and dancing establishments"
 
-    # Define the headers for the HTTP request
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+    def handle_error(error):
+        # Handle specific error cases
+        if isinstance(error, (requests.ConnectionError, requests.Timeout)):
+            # Connection errors
+            print("Error: Connection error occurred.")
+        elif isinstance(error, etree.XPathError):
+            # XPath errors
+            print("Error: Invalid XPath expression.")
+        else:
+            # Other errors
+            print(f"Error: {str(error)}")
 
-    url = 'https://wolt.com/en/cyp/nicosia/restaurant/costanicosia'
-    response = requests.get(url)
-    html_content = response.text
+    def scrape_price(url, product_name, xpath, date_time_scraped):
+        try:
+            response = requests.get(url)
+            html_content = response.text
+            tree = etree.HTML(html_content)
 
-    tree = etree.HTML(html_content)
+            button_element = tree.xpath(xpath)[0]
+            price_xpath = './/span[@data-test-id="horizontal-item-card-price"]/text()'
+            product_price = float(button_element.xpath(price_xpath)[0].replace('€', ''))
 
-    # Find the button element containing the cappuccino information
-    button_xpath = '//button[descendant::h3[text()="Cappuccino"]]'
-    button_element = tree.xpath(button_xpath)[0]
+            df.loc[len(df)] = [product_name, product_price, date_time_scraped, product_subclass, retailer, 0]
+        except (IndexError, requests.RequestException, etree.XPathError) as error:
+            handle_error(error)
+            df.loc[len(df)] = [product_name, None, date_time_scraped, product_subclass, retailer, 0]
 
-    # Extract the price from the button element
-    price_xpath_cappuccino = './/span[@data-test-id="horizontal-item-card-price"]/text()'
-    product_price = float(button_element.xpath(price_xpath_cappuccino)[0].replace('€', ''))
-
-    product_name="Costa Coffee Cappuccino Medio"
+    # Costa Coffee
     now = datetime.now()
     date_time_scraped = now
-    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+    scrape_price('https://wolt.com/en/cyp/nicosia/restaurant/costanicosia',
+                 "Costa Coffee Cappuccino Medio",
+                 '//button[descendant::h3[text()="Cappuccino"]]',
+                 date_time_scraped)
+
+    scrape_price('https://wolt.com/en/cyp/nicosia/restaurant/costanicosia',
+                 "Costa Coffee Espresso Single",
+                 '//button[descendant::h3[text()="Espresso"]]',
+                 date_time_scraped)
+
+    scrape_price('https://wolt.com/en/cyp/nicosia/restaurant/costanicosia',
+                 "Costa Coffee Freddo Cappuccino Medio",
+                 '//button[descendant::h3[text()="Freddo Cappuccino"]]',
+                 date_time_scraped)
+
+    scrape_price('https://wolt.com/en/cyp/nicosia/restaurant/costanicosia',
+                 "Costa Coffee Freddo Espresso Medio",
+                 '//button[descendant::h3[text()="Freddo Espresso"]]',
+                 date_time_scraped)
+
+    # Piatsa Gourounaki
+    scrape_price('https://wolt.com/en/cyp/nicosia/restaurant/piatsa-gourounaki-mall-of-egkomi',
+                 "Piatsa Gourounaki, Meat platter for 2 persons (Nicosia)",
+                 '//button[descendant::h3[text()="Ποικιλία Κρεάτων Για Δυο"]]',
+                 date_time_scraped)
+
+    # Pixida
+    scrape_price('https://wolt.com/en/cyp/nicosia/restaurant/pixida',
+                 "Pixida, Fish meze for each guest with minimum 2 persons",
+                 '//button[descendant::h3[text()="Fish meze for each guest with minimum 2 persons"]]',
+                 date_time_scraped)
+    # Kofini Tavern
+    scrape_price('https://wolt.com/en/cyp/limassol/restaurant/kofini-tavern#mix-grills-platters-6',
+                 "Kofini Tavern Mix Grill for 2",
+                 '//button[descendant::h3[text()="Mix Grill For 2"]]',
+                 date_time_scraped)
+
+    scrape_price('https://wolt.com/en/cyp/limassol/restaurant/kofini-tavern#mix-grills-platters-6',
+                 "Kofini Tavern, Seafood Platter",
+                 '//button[descendant::h3[text()="Seafood Platter"]]',
+                 date_time_scraped)
+
+    # Vlachos Taverna
+    scrape_price('https://wolt.com/en/cyp/larnaca/restaurant/vlachos-taverna#itemcategory-3',
+                 "Vlachos Taverna, Ποικιλία Σχάρας Για 2 Άτομα",
+                 '//button[descendant::h3[text()="Ποικιλία Σχάρας Για 2 Άτομα"]]',
+                 date_time_scraped)
+
+    # Zakos Beach Restaurant
+    scrape_price('https://wolt.com/en/cyp/larnaca/restaurant/zakos-beach-restaurant',
+                 "Zakos Beach Restaurant, Ψαρομεζέδες Ζάκος (Για 2 Άτομα)",
+                 '//button[descendant::h3[text()="Ψαρομεζέδες Ζάκος (Για 2 Άτομα)"]]',
+                 date_time_scraped)
+
+    # Paphos Tavernaki
+    scrape_price('https://wolt.com/en/cyp/paphos/restaurant/tavernaki-paphos#itemcategory-3',
+                 "Paphos Tavernaki, Ποικιλία Σχάρας Για 2 Άτομα",
+                 '//button[descendant::h3[text()="Ποικιλία Σχάρας Για 2 Άτομα"]]',
+                 date_time_scraped)
+
+    # Paphos Ocean Basket
+    scrape_price('https://wolt.com/en/cyp/paphos/restaurant/ocean-basket-paphos',
+                 "Ocean Basket, Platter for 2",
+                 '//button[descendant::h3[text()="Platter For 2"]]',
+                 date_time_scraped)
+
+    product_subclass = "Fast food and take away food services"
+
+    # McDonald's
+    scrape_price('https://wolt.com/en/cyp/limassol/restaurant/mcdonalds-oldport',
+                 "McDonald's Sharebox",
+                 '//button[descendant::h3[text()="Share Box"]]',
+                 date_time_scraped)
+
+    scrape_price('https://wolt.com/en/cyp/limassol/restaurant/mcdonalds-oldport',
+                 "McDonald's Big Mac",
+                 '//button[descendant::h3[text()="Big Mac"]]',
+                 date_time_scraped)
+
+    scrape_price('https://wolt.com/en/cyp/limassol/restaurant/mcdonalds-oldport',
+                 "McDonald's McChicken",
+                 '//button[descendant::h3[text()="McChicken"]]',
+                 date_time_scraped)
 
 
-    # Find the button element containing the cappuccino information
-    product_name="Costa Coffee Espresso Single"
-    now = datetime.now()
-    date_time_scraped = now
-    button_xpath = '//button[descendant::h3[text()="Espresso"]]'
-    button_element= tree.xpath(button_xpath)[0]
-
-    # Extract the price from the button element
-    price_xpath_espresso = './/span[@data-test-id="horizontal-item-card-price"]/text()'
-    product_price = float(button_element.xpath(price_xpath_espresso)[0].replace('€', ''))
-
-    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
-
-    product_name="Costa Coffee Freddo Cappuccino Medio"
-    # Find the button element containing the cappuccino information
-    button_xpath = '//button[descendant::h3[text()="Freddo Cappuccino"]]'
-    button_element = tree.xpath(button_xpath)[0]
-
-    # Extract the price from the button element
-    price_xpath_fcappuccino = './/span[@data-test-id="horizontal-item-card-price"]/text()'
-    product_price = float(button_element.xpath(price_xpath_fcappuccino)[0].replace('€', ''))
-    now = datetime.now()
-    date_time_scraped = now
-    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
-
-    product_name="Costa Coffee Freddo Espresso Medio"
-    # Find the button element containing the cappuccino information
-    button_xpath = '//button[descendant::h3[text()="Freddo Espresso"]]'
-    button_element= tree.xpath(button_xpath)[0]
-
-    # Extract the price from the button element
-    price_xpath_fespresso = './/span[@data-test-id="horizontal-item-card-price"]/text()'
-    price_fespresso = float(button_element.xpath(price_xpath_fespresso)[0].replace('€', ''))
-    product_price = float(button_element.xpath(price_xpath_fcappuccino)[0].replace('€', ''))
-    now = datetime.now()
-    date_time_scraped = now
-    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
-
-    ###PIATSA GOUROUNAKI
-
-    product_name="Piatsa Gourounaki, Meat platter for 2 persons  (Nicosia)"
-    url = 'https://wolt.com/en/cyp/nicosia/restaurant/piatsa-gourounaki-mall-of-egkomi'
-    response = requests.get(url)
-    html_content = response.text
-
-    tree = etree.HTML(html_content)
-
-    # Find the button element containing the cappuccino information
-    button_xpath = '//button[descendant::h3[text()="Ποικιλία Κρεάτων Για Δυο"]]'
-    button_element = tree.xpath(button_xpath)[0]
-
-    # Extract the price from the button element
-    price_xpath_pk2 = './/span[@data-test-id="horizontal-item-card-price"]/text()'
-    product_price = float(button_element.xpath(price_xpath_pk2)[0].replace('€', ''))
-
-    now = datetime.now()
-    date_time_scraped = now 
-    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
-
-    ####PIXIDA  
-    # Define the URL for the Booking.com page for hotel X
-    product_name="Pixida, Fish meze for each guest with minimum 2 guests (Nicosia)"
-    url = 'https://wolt.com/en/cyp/nicosia/restaurant/pyxida'
-    response = requests.get(url)
-    html_content = response.text
-
-    tree = etree.HTML(html_content)
-
-    # Find the button element containing the cappuccino information
-    button_xpath = '//button[descendant::h3[text()="Meze Platter for 2"]]'
-    button_element = tree.xpath(button_xpath)[0]
-
-    # Extract the price from the button element
-    price_xpath_mp2 = './/span[@data-test-id="horizontal-item-card-price"]/text()'
-    product_price = float(button_element.xpath(price_xpath_mp2)[0].replace('€', ''))
-    now = datetime.now()
-    date_time_scraped = now 
-    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
-
-
-    ###LIMASSOL
-    product_name="Kofini Tavern Mix Grill for 2"
-    url = 'https://wolt.com/en/cyp/limassol/restaurant/kofini-tavern#mix-grills-platters-6'
-    response = requests.get(url)
-    html_content = response.text
-
-    tree = etree.HTML(html_content)
-
-    # Find the button element containing the cappuccino information
-    button_xpath = '//button[descendant::h3[text()="Mix Grill For 2"]]'
-    button_element = tree.xpath(button_xpath)[0]
-
-    # Extract the price from the button element
-    price_xpath_mg2 = './/span[@data-test-id="horizontal-item-card-price"]/text()'
-    product_price = float(button_element.xpath(price_xpath_mg2)[0].replace('€', ''))
-    now = datetime.now()
-    date_time_scraped = now 
-    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
-
-    product_name="Kofini Tavern, Seafood Platter"
-    # Find the button element containing the cappuccino information
-    button_xpath = '//button[descendant::h3[text()="Seafood Platter"]]'
-    button_element = tree.xpath(button_xpath)[0]
-
-    # Extract the price from the button element
-    price_xpath_sfp = './/span[@data-test-id="horizontal-item-card-price"]/text()'
-    product_price= float(button_element.xpath(price_xpath_sfp)[0].replace('€', ''))
-    now = datetime.now()
-    date_time_scraped = now 
-    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
-
-    ## LARNACA VLACHOS
-    product_name="Vlachos Taverna, Ποικιλία Σχάρας Για 2 Άτομα"
-    url = 'https://wolt.com/en/cyp/larnaca/restaurant/vlachos-taverna#itemcategory-3'
-    response = requests.get(url)
-    html_content = response.text
-
-    tree = etree.HTML(html_content)
-
-    # Find the button element containing the cappuccino information
-    button_xpath = '//button[descendant::h3[text()="Ποικιλία Σχάρας Για 2 Άτομα"]]'
-    button_element = tree.xpath(button_xpath)[0]
-
-    # Extract the price from the button element
-    price_xpath_mg2 = './/span[@data-test-id="horizontal-item-card-price"]/text()'
-    product_price = float(button_element.xpath(price_xpath_mg2)[0].replace('€', ''))
-    now = datetime.now()
-    date_time_scraped = now 
-    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
-
-
-    ### Larnaca ZAKOS
-    product_name="Zakos Beach Restaurant, Ψαρομεζέδες Ζάκος (Για 2 Άτομα)"
-    url = 'https://wolt.com/en/cyp/larnaca/restaurant/zakos-beach-restaurant'
-    response = requests.get(url)
-    html_content = response.text
-
-    tree = etree.HTML(html_content)
-
-    # Find the button element containing the cappuccino information
-    button_xpath = '//button[descendant::h3[text()="Ψαρομεζέδες Ζάκος (Για 2 Άτομα)"]]'
-    button_element = tree.xpath(button_xpath)[0]
-
-    # Extract the price from the button element
-    price_xpath_psz2 = './/span[@data-test-id="horizontal-item-card-price"]/text()'
-    product_price = float(button_element.xpath(price_xpath_psz2)[0].replace('€', ''))
-    now = datetime.now()
-    date_time_scraped = now 
-    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
-
-
-    ### Paphos Tavernaki
-    product_name="Paphos Tavernaki, Ποικιλία Σχάρας Για 2 Άτομα"
-    url = 'https://wolt.com/en/cyp/paphos/restaurant/tavernaki-paphos#itemcategory-3'
-    response = requests.get(url)
-    html_content = response.text
-
-    tree = etree.HTML(html_content)
-
-    # Find the button element containing the cappuccino information
-    button_xpath = '//button[descendant::h3[text()="Ποικιλία Σχάρας Για 2 Άτομα"]]'
-    button_element = tree.xpath(button_xpath)[0]
-
-    # Extract the price from the button element
-    price_xpath_ps2 = './/span[@data-test-id="horizontal-item-card-price"]/text()'
-    product_price = float(button_element.xpath(price_xpath_ps2)[0].replace('€', ''))
-    now = datetime.now()
-    date_time_scraped = now 
-    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
-
-
-    ### Paphos Ocean Basket
-    product_name="Ocean Basket, Platter for 2"
-    url = 'https://wolt.com/en/cyp/paphos/restaurant/ocean-basket-paphos'
-    response = requests.get(url)
-    html_content = response.text
-
-    tree = etree.HTML(html_content)
-
-    # Find the button element containing the cappuccino information
-    button_xpath = '//button[descendant::h3[text()="Platter For 2"]]'
-    button_element = tree.xpath(button_xpath)[0]
-
-    # Extract the price from the button element
-    price_xpath_p2 = './/span[@data-test-id="horizontal-item-card-price"]/text()'
-    product_price = float(button_element.xpath(price_xpath_p2)[0].replace('€', ''))
-    now = datetime.now()
-    date_time_scraped = now 
-    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
-
-    product_subclass="Fast food and take away food services"
-
-    ###MACCIES
-
-    url = 'https://wolt.com/en/cyp/limassol/restaurant/mcdonalds-oldport'
-    response = requests.get(url)
-    html_content = response.text
-
-    tree = etree.HTML(html_content)
-
-    # Find the button element containing the cappuccino information
-    button_xpath = '//button[descendant::h3[text()="Share Box"]]'
-    button_element = tree.xpath(button_xpath)[0]
-    product_name="McDonald's Sharebox"
-    # Extract the price from the button element
-    price_xpath_sb = './/span[@data-test-id="horizontal-item-card-price"]/text()'
-    product_price = float(button_element.xpath(price_xpath_sb)[0].replace('€', ''))
-    now = datetime.now()
-    date_time_scraped = now 
-    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
-
-    product_name="McDonald's Big Mac"
-    # Find the button element containing the cappuccino information
-    button_xpath = '//button[descendant::h3[text()="Big Mac"]]'
-    button_element = tree.xpath(button_xpath)[0]
-
-    # Extract the price from the button element
-    price_xpath_bm = './/span[@data-test-id="horizontal-item-card-price"]/text()'
-    product_price = float(button_element.xpath(price_xpath_bm)[0].replace('€', ''))
-    now = datetime.now()
-    date_time_scraped = now 
-    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
-
-    product_name="McDonald's McChicken"
-    # Find the button element containing the cappuccino information
-    button_xpath = '//button[descendant::h3[text()="McChicken"]]'
-    button_element = tree.xpath(button_xpath)[0]
-
-    # Extract the price from the button element
-    price_xpath_mc = './/span[@data-test-id="horizontal-item-card-price"]/text()'
-    product_price = float(button_element.xpath(price_xpath_mc)[0].replace('€', ''))
-    now = datetime.now()
-    date_time_scraped = now 
-    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
 Wolt()
+
 
 #PIZZA HUT
 def PizzaHut():
@@ -1697,54 +1895,76 @@ def waterSewageOtherCities():
 
 waterSewageOtherCities()
 
+
 def extract_float_price(price_str):
     # Remove any non-digit characters except for the dot
     digits = ''.join(c for c in price_str if c.isdigit() or c == '.')
     # Convert the string to a float
     return float(digits)
 
-#RIO CINEMA
 def Rio():
-    retailer="Rio Cinemas"
-    product_subclass="Cinemas, theatres, concerts"
+    retailer = "Rio Cinemas"
+    product_subclass = "Cinemas, theatres, concerts"
     url = 'https://www.riopremiercinemas.com.cy/price-policy/'
     response = requests.get(url)
     tree = html.fromstring(response.content)
-    product_price = extract_float_price(tree.xpath("//div[@class='txt']/p[2]/span/strong/text()")[0])
-    product_name="Rio Cinemas, Adults ticket"
-    now = datetime.now()
-    date_time_scraped = now 
-    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
 
-    product_price = extract_float_price(tree.xpath("//div[@class='txt']/p[3]/span/strong/text()")[0])
-    product_name="Rio Cinemas, Children (up to 11) ticket"
-    now = datetime.now()
-    date_time_scraped = now 
-    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
-    product_price = extract_float_price(tree.xpath("//div[@class='txt']/p[4]/span/strong/text()")[0])
-    product_name="Rio Cinemas, Senior (64+)/ Student ticket"
-    now = datetime.now()
-    date_time_scraped = now 
-    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+    try:
+        product_price = extract_float_price(tree.xpath("//div[@class='txt']/p[2]/span/strong/text()")[0])
+        product_name = "Rio Cinemas, Adults ticket"
+        now = datetime.now()
+        date_time_scraped = now
+        df.loc[len(df)] = [product_name, product_price, date_time_scraped, product_subclass, retailer, 0]
+    except (IndexError, ValueError) as e:
+        print(f"Error retrieving price for Rio Cinemas, Adults ticket: {e}")
 
-    product_price = extract_float_price(tree.xpath("//div[@class='txt']/p[6]/span/strong/text()")[0])
-    product_name="Rio Cinemas, Adults 3D ticket"
-    now = datetime.now()
-    date_time_scraped = now 
-    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+    try:
+        product_price = extract_float_price(tree.xpath("//div[@class='txt']/p[3]/span/strong/text()")[0])
+        product_name = "Rio Cinemas, Children (up to 11) ticket"
+        now = datetime.now()
+        date_time_scraped = now
+        df.loc[len(df)] = [product_name, product_price, date_time_scraped, product_subclass, retailer, 0]
+    except (IndexError, ValueError) as e:
+        print(f"Error retrieving price for Rio Cinemas, Children (up to 11) ticket: {e}")
 
+    try:
+        product_price = extract_float_price(tree.xpath("//div[@class='txt']/p[4]/span/strong/text()")[0])
+        product_name = "Rio Cinemas, Senior (64+)/ Student ticket"
+        now = datetime.now()
+        date_time_scraped = now
+        df.loc[len(df)] = [product_name, product_price, date_time_scraped, product_subclass, retailer, 0]
+    except (IndexError, ValueError) as e:
+        print(f"Error retrieving price for Rio Cinemas, Senior (64+)/ Student ticket: {e}")
 
-    product_price = extract_float_price(tree.xpath("//div[@class='txt']/p[7]/span/strong/text()")[0])
-    product_name="Rio Cinemas, Children 3D ticket"
-    now = datetime.now()
-    date_time_scraped = now 
-    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
-    product_price = extract_float_price(tree.xpath("//div[@class='txt']/p[8]/span/strong/text()")[0])
-    product_name="Rio Cinemas, Senior/Students 3D ticket"
-    now = datetime.now()
-    date_time_scraped = now 
-    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+    try:
+        product_price = extract_float_price(tree.xpath("//div[@class='txt']/p[6]/span/strong/text()")[0])
+        product_name = "Rio Cinemas, Adults 3D ticket"
+        now = datetime.now()
+        date_time_scraped = now
+        df.loc[len(df)] = [product_name, product_price, date_time_scraped, product_subclass, retailer, 0]
+    except (IndexError, ValueError) as e:
+        print(f"Error retrieving price for Rio Cinemas, Adults 3D ticket: {e}")
+
+    try:
+        product_price = extract_float_price(tree.xpath("//div[@class='txt']/p[7]/span/strong/text()")[0])
+        product_name = "Rio Cinemas, Children 3D ticket"
+        now = datetime.now()
+        date_time_scraped = now
+        df.loc[len(df)] = [product_name, product_price, date_time_scraped, product_subclass, retailer, 0]
+    except (IndexError, ValueError) as e:
+        print(f"Error retrieving price for Rio Cinemas, Children 3D ticket: {e}")
+
+    try:
+        product_price = extract_float_price(tree.xpath("//div[@class='txt']/p[8]/span/strong/text()")[0])
+        product_name = "Rio Cinemas, Senior/Students 3D ticket"
+        now = datetime.now()
+        date_time_scraped = now
+        df.loc[len(df)] = [product_name, product_price, date_time_scraped, product_subclass, retailer, 0]
+    except (IndexError, ValueError) as e:
+        print(f"Error retrieving price for Rio Cinemas, Senior/Students 3D ticket: {e}")
+
 Rio()
+
 
 #BOOKING
 def Booking():
@@ -1950,38 +2170,55 @@ def Booking():
 
 Booking()
 
-#GAS CYLINDER
+
 def GasCylinder():
-    #extract last month reported name
-    url = "https://consumer.gov.cy/en/price-observatories/learn-your-rights/66/?ctype=ar"
-    response = requests.get(url)
-    tree = html.fromstring(response.content)
-    month_name=tree.xpath('//div[@class="mar-top-a"]/ul[@id="docs-list"]/li[last()]/a[@class="grp-head expand"]/text()')
-    if month_name:
-        clean_month_name = re.sub(r'^\d+\s*-\s*', '', month_name[0])
-        clean_month_name=clean_month_name.replace(" ","_")
-        print(clean_month_name)
+    try:
+        # Extract last month reported name
+        url = "https://consumer.gov.cy/en/price-observatories/learn-your-rights/66/?ctype=ar"
+        response = requests.get(url)
+        response.raise_for_status()  # Check for connection errors
 
-    # remove unwanted characters
-    url = "https://consumer.gov.cy/assets/modules/wnp/articles/202302/66/docs/paratiritirio_"+clean_month_name.lower()+".pdf"  # Replace with the URL of the PDF file
-    response = requests.get(url)
+        tree = html.fromstring(response.content)
+        month_name = tree.xpath('//div[@class="mar-top-a"]/ul[@id="docs-list"]/li[last()]/a[@class="grp-head expand"]/text()')
 
-    with open("file.pdf", "wb") as f:
-        f.write(response.content)
+        if month_name:
+            clean_month_name = re.sub(r'^\d+\s*-\s*', '', month_name[0])
+            clean_month_name = clean_month_name.replace(" ", "_")
+            print(clean_month_name)
 
-    pdf_file = open("file.pdf", "rb")
-    pdf_reader = PyPDF2.PdfReader(pdf_file)
+            # Remove unwanted characters
+            url = "https://consumer.gov.cy/assets/modules/wnp/articles/202302/66/docs/paratiritirio_" + clean_month_name.lower() + ".pdf"
+            response = requests.get(url)
+            response.raise_for_status()  # Check for connection errors
 
+            with open("file.pdf", "wb") as f:
+                f.write(response.content)
 
-    # extracting price 
+            pdf_file = open("file.pdf", "rb")
+            pdf_reader = PyPDF2.PdfReader(pdf_file)
 
-    #assuming that text stays the same and prices change
-    page=pdf_reader.pages[5]
-    match = re.search(r"\d+\s+ΚΥΛΙΝΔΡΟΣ.*?(\d+\.\d+)\s+\d+\.\d+", page.extract_text())
-    if match:
-        middle_price = match.group(1)
-        print(middle_price)
-        df.loc[len(df)] =["ΚΥΛΙΝΔΡΟΣ 10kg ",middle_price,datetime.now(),'Liquefied hydrocarbons','Consumer Observatory',0]
+            # Extracting price
+            if len(pdf_reader.pages) >= 6:  # Check if the required page exists
+                page = pdf_reader.pages[5]
+                match = re.search(r"\d+\s+ΚΥΛΙΝΔΡΟΣ.*?(\d+\.\d+)\s+\d+\.\d+", page.extract_text())
+
+                if match:
+                    middle_price = match.group(1)
+                    print(middle_price)
+                    df.loc[len(df)] = ["ΚΥΛΙΝΔΡΟΣ 10kg ", middle_price, datetime.now(), 'Liquefied hydrocarbons', 'Consumer Observatory', 0]
+                else:
+                    print("Price extraction failed.")
+            else:
+                print("Required page does not exist.")
+        else:
+            print("Month name not found.")
+    except requests.exceptions.RequestException as e:
+        print("Connection error:", e)
+    except IndexError:
+        print("Index error occurred.")
+    except Exception as e:
+        print("An error occurred:", e)
+
 GasCylinder()
 
 #EUROPEAN UNIVERSITY
