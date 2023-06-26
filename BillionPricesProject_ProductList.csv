@@ -1,28 +1,28 @@
 product_name,product_price,date_time_scraped,product_subclass,retailer,subclass_average
-ΣίφουναςΟλικήςΨωμίΚομμένο780g,2.29,2023-06-25 20:50:30.724087,Bread,SupermarketCy,1.7366666666666664
-ΣίφουναςΜαύροΜικρόΨωμίΚομμένο500g,1.76,2023-06-25 20:50:30.724092,Bread,SupermarketCy,1.7366666666666664
-ΣίφουναςΚοινόΨωμίΚομμένο560g,1.48,2023-06-25 20:50:30.724093,Bread,SupermarketCy,1.7366666666666664
-ΣίφουναςΚοινόΨωμίΚομμένο970g,1.9,2023-06-25 20:50:30.724093,Bread,SupermarketCy,1.7366666666666664
-ΣίφουναςΆσπροΨωμί560g,1.67,2023-06-25 20:50:30.724094,Bread,SupermarketCy,1.7366666666666664
-ΣίφουναςΚοινόΨωμί970g,1.9,2023-06-25 20:50:30.724095,Bread,SupermarketCy,1.7366666666666664
-ΣίφουναςΠίττεςΆσπρεςΜεγάλες5Τεμ550g,1.76,2023-06-25 20:50:57.782891,Other bakery products,SupermarketCy,2.9862499999999996
-ΣίφουναςΨωμίΦέτεςΤόστΆσπροΜικρό700g,2.1,2023-06-25 20:50:57.782896,Other bakery products,SupermarketCy,2.9862499999999996
-ΣίφουναςΦραντζολάκιαΣτρογγυλά4Τεμ,1.52,2023-06-25 20:50:57.782896,Other bakery products,SupermarketCy,2.9862499999999996
-ΣίφουναςΦραντζολάκιαΜακρόστεναΜεγάλα4Τεμ,1.52,2023-06-25 20:50:57.782897,Other bakery products,SupermarketCy,2.9862499999999996
-ΣίφουναςΚρουασάνΒουτύρου1Τεμ,1.95,2023-06-25 20:50:57.782898,Other bakery products,SupermarketCy,2.9862499999999996
-ΣίφουναςΛουκανικόπιτα1Τεμ,2.15,2023-06-25 20:50:57.782898,Other bakery products,SupermarketCy,2.9862499999999996
-ΣίφουναςΠίταΣάτζιηςΜεΜέλι1Τεμ,1.8,2023-06-25 20:50:57.782899,Other bakery products,SupermarketCy,2.9862499999999996
-ΣίφουναςΕλιόπιταΣφολιάτα1Τεμ,2.1,2023-06-25 20:50:57.782899,Other bakery products,SupermarketCy,2.9862499999999996
-ΣίφουναςΚέικΓεωγραφίας750g,10.95,2023-06-25 20:50:57.782900,Other bakery products,SupermarketCy,2.9862499999999996
-ΣίφουναςMixΣιροπιαστά410g,5.95,2023-06-25 20:50:57.782900,Other bakery products,SupermarketCy,2.9862499999999996
-7DaysMiniBakeRollsΠίτσα80g,1.17,2023-06-25 20:50:57.782901,Other bakery products,SupermarketCy,2.9862499999999996
-ΜαρίαςΠαξιμάδιαΓλυκανίσου300g,2.39,2023-06-25 20:50:57.782901,Other bakery products,SupermarketCy,2.9862499999999996
-JohnsofΚρουτόνιαΟλικήςΆλεσης320g,3.32,2023-06-25 20:50:57.782902,Other bakery products,SupermarketCy,2.9862499999999996
-EliteΦρυγανιέςΜεΣίκαλη360g3+1Δώρο,2.55,2023-06-25 20:50:57.782903,Other bakery products,SupermarketCy,2.9862499999999996
-EliteΦρυγανιέςΟλικήςΆλεσης360g3+1Δώρο,2.34,2023-06-25 20:50:57.782903,Other bakery products,SupermarketCy,2.9862499999999996
-BakandysΠαξιμάδιαΣικάλεως250g,2.79,2023-06-25 20:50:57.782904,Other bakery products,SupermarketCy,2.9862499999999996
-JohnsofNapolitanoΣταφίδαςΑμυγδάλου240g,4.16,2023-06-25 20:50:57.782904,Other bakery products,SupermarketCy,2.9862499999999996
-BakandysΧωριάτικαΚριτσίνιαΣιταρένια275g,,2023-06-25 20:50:57.782905,Other bakery products,SupermarketCy,2.9862499999999996
+"PUMA ESSENTIALS 10"" MENS SHORTS",28.0,2023-06-26 21:16:32.984368,Garments for men,Athlokinisi,28.7
+ADIDAS SPRINTER SHORTS,50.0,2023-06-26 21:16:32.984374,Garments for men,Athlokinisi,28.7
+NORTH FACE MENS SIMPLE DOME TEE,30.0,2023-06-26 21:16:32.984375,Garments for men,Athlokinisi,28.7
+NORTH FACE MENS SIMPLE DOME TEE,30.0,2023-06-26 21:16:32.984375,Garments for men,Athlokinisi,28.7
+PUMA CA PRO CLASSIC SHOES,100.0,2023-06-26 21:16:32.984376,Footwear for men,Athlokinisi,69.58333333333333
+NIKE AIR MAX DAWN MENS SHOES,115.0,2023-06-26 21:16:32.984377,Footwear for men,Athlokinisi,69.58333333333333
+ADIDAS M20 SHORT,30.0,2023-06-26 21:16:32.984378,Garments for women,Athlokinisi,28.408823529411766
+ADIDAS OPT ST 78 TIG,60.0,2023-06-26 21:16:32.984379,Garments for women,Athlokinisi,28.408823529411766
+ADIDAS W WINRS TEE,35.0,2023-06-26 21:16:32.984380,Garments for women,Athlokinisi,28.408823529411766
+PUMA DARE TO FEELIN XTRA WOMENS OVERSIZED TEE,38.0,2023-06-26 21:16:32.984380,Garments for women,Athlokinisi,28.408823529411766
+PUMA ESS+ LOVE IS LOVE RELAXED TEE,27.0,2023-06-26 21:16:32.984381,Garments for women,Athlokinisi,28.408823529411766
+NIKE AIR MAX SC WOMEN SNEAKERS,68.0,2023-06-26 21:16:32.984382,Footwear for women,Athlokinisi,64.0
+NIKE JORDAN LITTLE KIDSAIR GRAPHIC CREW SET,59.9,2023-06-26 21:16:32.984383,Garments for infants (0 to 2 years) and children (3 to 13 years),Athlokinisi,30.916666666666668
+NIKE LITTLE GIRLS BOXY TEE & BIKE SHORT SET,46.5,2023-06-26 21:16:32.984384,Garments for infants (0 to 2 years) and children (3 to 13 years),Athlokinisi,30.916666666666668
+ADIDAS RUNFALCON 3.0 K,45.0,2023-06-26 21:16:32.984385,Footwear for infants and children,Athlokinisi,47.324999999999996
+SKECHERS GIRLS FLUTTER HEART - LOVE LIGHT SHOES,64.95,2023-06-26 21:16:32.984385,Footwear for infants and children,Athlokinisi,47.324999999999996
+ADIDAS LIGHT NOSH 3-PAIRS,12.0,2023-06-26 21:16:32.984386,Clothing accessories,Athlokinisi,17.0
+ADIDAS BASEB CLASS TRE,20.0,2023-06-26 21:16:32.984387,Clothing accessories,Athlokinisi,17.0
+JohnsofΚρουτόνιαΟλικήςΆλεσης320g,3.32,2023-06-25 20:50:57.782902,Other bakery products,SupermarketCy,3.009999999999999
+EliteΦρυγανιέςΜεΣίκαλη360g3+1Δώρο,2.55,2023-06-25 20:50:57.782903,Other bakery products,SupermarketCy,3.009999999999999
+EliteΦρυγανιέςΟλικήςΆλεσης360g3+1Δώρο,2.34,2023-06-25 20:50:57.782903,Other bakery products,SupermarketCy,3.009999999999999
+BakandysΠαξιμάδιαΣικάλεως250g,2.79,2023-06-25 20:50:57.782904,Other bakery products,SupermarketCy,3.009999999999999
+JohnsofNapolitanoΣταφίδαςΑμυγδάλου240g,4.16,2023-06-25 20:50:57.782904,Other bakery products,SupermarketCy,3.009999999999999
+BakandysΧωριάτικαΚριτσίνιαΣιταρένια275g,,2023-06-25 20:50:57.782905,Other bakery products,SupermarketCy,3.009999999999999
 QuakerΝιφάδεςΒρώμης500g,2.63,2023-06-25 20:51:11.953784,Breakfast Cereals,SupermarketCy,3.4814285714285718
 QuakerΤραγανέςΜπουκιέςΒρώμηΣοκολάτα450g,4.25,2023-06-25 20:51:11.953789,Breakfast Cereals,SupermarketCy,3.4814285714285718
 OreoO&#039;sCereal350g,3.99,2023-06-25 20:51:11.953790,Breakfast Cereals,SupermarketCy,3.4814285714285718
@@ -295,27 +295,27 @@ KeanitaΠορτοκάλιΦρουτοποτό9x250ml,4.15,2023-06-25 20:56:04.04
 "LifeΧυμόςμεΜήλο,Καρότο&Πορτοκάλι400ml",1.39,2023-06-25 20:56:05.583354,Fruit and vegetable juices,Alpha Mega,2.1068421052631585
 LifeΚαλημέραΧυμόςΠορτοκάλι1L,2.45,2023-06-25 20:56:06.608126,Fruit and vegetable juices,Alpha Mega,2.1068421052631585
 LifeΧυμόςΠορτοκάλι400ml,1.39,2023-06-25 20:56:07.542968,Fruit and vegetable juices,Alpha Mega,2.1068421052631585
-ΑλφαμέγαΨωµίΟλικήςΑλέσεωςσεΦέτες900g,2.05,2023-06-25 20:56:09.007594,Bread,Alpha Mega,1.7366666666666664
-ΑλφαμέγαΨωµίΟλικήςΑλέσεωςσεΦέτες500g,1.61,2023-06-25 20:56:10.008001,Bread,Alpha Mega,1.7366666666666664
-ΑλφαμέγαΛευκόΨωμί500g,1.29,2023-06-25 20:56:10.971250,Bread,Alpha Mega,1.7366666666666664
-ΑλφαμέγαΧωριάτικοψωμί850g,1.61,2023-06-25 20:56:12.038222,Bread,Alpha Mega,1.7366666666666664
-ΑλφαμέγαΆσπροΨωµίσεΦέτες900g,1.86,2023-06-25 20:56:13.053576,Bread,Alpha Mega,1.7366666666666664
-ΑλφαμέγαΆσπροΨωµίσεΦέτες500g,1.42,2023-06-25 20:56:14.117313,Bread,Alpha Mega,1.7366666666666664
-Άρτοζυμ5ΠαφίτικεςΠίττεςγιαΣουβλάκια750g,2.47,2023-06-25 20:56:15.118731,Other bakery products,Alpha Mega,2.9862499999999996
-NutriFreeψωμάκιαγιαΜπέργκερx3110g,2.56,2023-06-25 20:56:16.295735,Other bakery products,Alpha Mega,2.9862499999999996
-ΚρουασάνΒουτύρου80g,0.99,2023-06-25 20:56:17.772363,Other bakery products,Alpha Mega,2.9862499999999996
-ΧαλλουμωτήΤυλιχτή165g,1.99,2023-06-25 20:56:18.833247,Other bakery products,Alpha Mega,2.9862499999999996
-ΕλιωτήΤυλιχτή165g,1.99,2023-06-25 20:56:19.963309,Other bakery products,Alpha Mega,2.9862499999999996
-SweetVanillaΚέικΓεωγραφίας1kg,8.99,2023-06-25 20:56:21.026121,Other bakery products,Alpha Mega,2.9862499999999996
-Jenny’sHomeΔάκτυλα300g,4.55,2023-06-25 20:56:22.107926,Other bakery products,Alpha Mega,2.9862499999999996
-7DaysMiniBakeRollsμεΓεύσηΠίτσα80g,1.19,2023-06-25 20:56:23.100144,Other bakery products,Alpha Mega,2.9862499999999996
-BakandysΚριτσίνιαμεΕλαιόλαδο250g,3.5,2023-06-25 20:56:24.130858,Other bakery products,Alpha Mega,2.9862499999999996
-ΑλφαμέγαΠαξιμαδάκιαΚανέλας350g,3.19,2023-06-25 20:56:25.277117,Other bakery products,Alpha Mega,2.9862499999999996
-JohnsofΔιπλοφουρνιστάΚρουτόνιαΟλικήςΑλέσεως320g,2.69,2023-06-25 20:56:26.226664,Other bakery products,Alpha Mega,2.9862499999999996
-EliteΦρυγανιέςΣίτουμεΣίκαλη3+1Δώρο360g,2.6,2023-06-25 20:56:27.248484,Other bakery products,Alpha Mega,2.9862499999999996
-EliteΦρυγανιέςΟλικήςΆλεσης3+1Δώρο360g,2.75,2023-06-25 20:56:28.223819,Other bakery products,Alpha Mega,2.9862499999999996
-BakandysΠαξιμάδιαμεΣικάλη250g,2.39,2023-06-25 20:56:29.320135,Other bakery products,Alpha Mega,2.9862499999999996
-JohnsofΤραγανόΚείκΣταφίδας&ΑμυγδάλουNapolitano240g,3.19,2023-06-25 20:56:30.367588,Other bakery products,Alpha Mega,2.9862499999999996
+ΑλφαμέγαΨωµίΟλικήςΑλέσεωςσεΦέτες900g,2.05,2023-06-25 20:56:09.007594,Bread,Alpha Mega,1.64
+ΑλφαμέγαΨωµίΟλικήςΑλέσεωςσεΦέτες500g,1.61,2023-06-25 20:56:10.008001,Bread,Alpha Mega,1.64
+ΑλφαμέγαΛευκόΨωμί500g,1.29,2023-06-25 20:56:10.971250,Bread,Alpha Mega,1.64
+ΑλφαμέγαΧωριάτικοψωμί850g,1.61,2023-06-25 20:56:12.038222,Bread,Alpha Mega,1.64
+ΑλφαμέγαΆσπροΨωµίσεΦέτες900g,1.86,2023-06-25 20:56:13.053576,Bread,Alpha Mega,1.64
+ΑλφαμέγαΆσπροΨωµίσεΦέτες500g,1.42,2023-06-25 20:56:14.117313,Bread,Alpha Mega,1.64
+Άρτοζυμ5ΠαφίτικεςΠίττεςγιαΣουβλάκια750g,2.47,2023-06-25 20:56:15.118731,Other bakery products,Alpha Mega,3.009999999999999
+NutriFreeψωμάκιαγιαΜπέργκερx3110g,2.56,2023-06-25 20:56:16.295735,Other bakery products,Alpha Mega,3.009999999999999
+ΚρουασάνΒουτύρου80g,0.99,2023-06-25 20:56:17.772363,Other bakery products,Alpha Mega,3.009999999999999
+ΧαλλουμωτήΤυλιχτή165g,1.99,2023-06-25 20:56:18.833247,Other bakery products,Alpha Mega,3.009999999999999
+ΕλιωτήΤυλιχτή165g,1.99,2023-06-25 20:56:19.963309,Other bakery products,Alpha Mega,3.009999999999999
+SweetVanillaΚέικΓεωγραφίας1kg,8.99,2023-06-25 20:56:21.026121,Other bakery products,Alpha Mega,3.009999999999999
+Jenny’sHomeΔάκτυλα300g,4.55,2023-06-25 20:56:22.107926,Other bakery products,Alpha Mega,3.009999999999999
+7DaysMiniBakeRollsμεΓεύσηΠίτσα80g,1.19,2023-06-25 20:56:23.100144,Other bakery products,Alpha Mega,3.009999999999999
+BakandysΚριτσίνιαμεΕλαιόλαδο250g,3.5,2023-06-25 20:56:24.130858,Other bakery products,Alpha Mega,3.009999999999999
+ΑλφαμέγαΠαξιμαδάκιαΚανέλας350g,3.19,2023-06-25 20:56:25.277117,Other bakery products,Alpha Mega,3.009999999999999
+JohnsofΔιπλοφουρνιστάΚρουτόνιαΟλικήςΑλέσεως320g,2.69,2023-06-25 20:56:26.226664,Other bakery products,Alpha Mega,3.009999999999999
+EliteΦρυγανιέςΣίτουμεΣίκαλη3+1Δώρο360g,2.6,2023-06-25 20:56:27.248484,Other bakery products,Alpha Mega,3.009999999999999
+EliteΦρυγανιέςΟλικήςΆλεσης3+1Δώρο360g,2.75,2023-06-25 20:56:28.223819,Other bakery products,Alpha Mega,3.009999999999999
+BakandysΠαξιμάδιαμεΣικάλη250g,2.39,2023-06-25 20:56:29.320135,Other bakery products,Alpha Mega,3.009999999999999
+JohnsofΤραγανόΚείκΣταφίδας&ΑμυγδάλουNapolitano240g,3.19,2023-06-25 20:56:30.367588,Other bakery products,Alpha Mega,3.009999999999999
 Quaker100%ΝιφάδεςΒρώμηςΟλικήςΆλεσης500g,2.25,2023-06-25 20:56:31.404603,Breakfast Cereals,Alpha Mega,3.4814285714285718
 QuakerΤραγανέςΜπουκιέςΔημητριακάμεΒρώμη&ΣοκολάταΓάλακτος450g,3.49,2023-06-25 20:56:32.612155,Breakfast Cereals,Alpha Mega,3.4814285714285718
 OreoO’sΔημητριακά350g,3.29,2023-06-25 20:56:33.663704,Breakfast Cereals,Alpha Mega,3.4814285714285718
@@ -939,3 +939,939 @@ Pizza Hut Special Large,19.2,2023-06-25 21:22:31.669607,Fast food and take away 
 "Princessa Vera Hotel Apartments, Τιμή για Standard Στούντιο 2 μονά κρεβάτι 1 βράδυ (Paphos)",,2023-06-25 21:22:56.558602,"Hotels, motels, inns and similar accommodation services",Booking,
 ΚΥΛΙΝΔΡΟΣ 10kg ,20.9,2023-06-25 21:22:58.841403,Liquefied hydrocarbons,Consumer Observatory,20.9
 "EUROPEAN UNIVERSITY CYPRUS, Bachelors Programmes Average Yearly Tuition for 2022-2023",9357.6,2023-06-25 21:23:02.163706,Tertiary education,European University Cyprus,9357.6
+ΣίφουναςΟλικήςΨωμίΚομμένο780g,2.29,2023-06-26 20:50:25.731439,Bread,SupermarketCy,1.7366666666666664
+ΣίφουναςΜαύροΜικρόΨωμίΚομμένο500g,1.76,2023-06-26 20:50:25.731444,Bread,SupermarketCy,1.7366666666666664
+ΣίφουναςΚοινόΨωμίΚομμένο560g,1.48,2023-06-26 20:50:25.731445,Bread,SupermarketCy,1.7366666666666664
+ΣίφουναςΚοινόΨωμίΚομμένο970g,1.9,2023-06-26 20:50:25.731446,Bread,SupermarketCy,1.7366666666666664
+ΣίφουναςΆσπροΨωμί560g,1.67,2023-06-26 20:50:25.731446,Bread,SupermarketCy,1.7366666666666664
+ΣίφουναςΚοινόΨωμί970g,1.9,2023-06-26 20:50:25.731447,Bread,SupermarketCy,1.7366666666666664
+ΣίφουναςΠίττεςΆσπρεςΜεγάλες5Τεμ550g,1.76,2023-06-26 20:50:51.757554,Other bakery products,SupermarketCy,3.001818181818181
+ΣίφουναςΨωμίΦέτεςΤόστΆσπροΜικρό700g,2.1,2023-06-26 20:50:51.757559,Other bakery products,SupermarketCy,3.001818181818181
+ΣίφουναςΦραντζολάκιαΣτρογγυλά4Τεμ,1.52,2023-06-26 20:50:51.757560,Other bakery products,SupermarketCy,3.001818181818181
+ΣίφουναςΦραντζολάκιαΜακρόστεναΜεγάλα4Τεμ,1.52,2023-06-26 20:50:51.757561,Other bakery products,SupermarketCy,3.001818181818181
+ΣίφουναςΚρουασάνΒουτύρου1Τεμ,1.95,2023-06-26 20:50:51.757561,Other bakery products,SupermarketCy,3.001818181818181
+ΣίφουναςΛουκανικόπιτα1Τεμ,2.15,2023-06-26 20:50:51.757562,Other bakery products,SupermarketCy,3.001818181818181
+ΣίφουναςΠίταΣάτζιηςΜεΜέλι1Τεμ,1.8,2023-06-26 20:50:51.757563,Other bakery products,SupermarketCy,3.001818181818181
+ΣίφουναςΕλιόπιταΣφολιάτα1Τεμ,2.1,2023-06-26 20:50:51.757563,Other bakery products,SupermarketCy,3.001818181818181
+ΣίφουναςΚέικΓεωγραφίας750g,10.95,2023-06-26 20:50:51.757564,Other bakery products,SupermarketCy,3.001818181818181
+ΣίφουναςMixΣιροπιαστά410g,5.95,2023-06-26 20:50:51.757564,Other bakery products,SupermarketCy,3.001818181818181
+7DaysMiniBakeRollsΠίτσα80g,1.17,2023-06-26 20:50:51.757565,Other bakery products,SupermarketCy,3.001818181818181
+BakandysΧωριάτικαΚριτσίνιαΣιταρένια275g,3.5,2023-06-26 20:50:51.757566,Other bakery products,SupermarketCy,3.001818181818181
+ΜαρίαςΠαξιμάδιαΓλυκανίσου300g,2.39,2023-06-26 20:50:51.757567,Other bakery products,SupermarketCy,3.001818181818181
+JohnsofΚρουτόνια320g,3.32,2023-06-26 20:50:51.757567,Other bakery products,SupermarketCy,3.001818181818181
+EliteΦρυγανιέςΜεΣίκαλη360g3+1Δώρο,2.55,2023-06-26 20:50:51.757568,Other bakery products,SupermarketCy,3.001818181818181
+EliteΦρυγανιέςΟλικήςΆλεσης360g3+1Δώρο,2.34,2023-06-26 20:50:51.757569,Other bakery products,SupermarketCy,3.001818181818181
+BakandysΠαξιμάδιαΣικάλεως250g,2.79,2023-06-26 20:50:51.757569,Other bakery products,SupermarketCy,3.001818181818181
+JohnsofNapolitanoΣταφίδαςΑμυγδάλου240g,4.16,2023-06-26 20:50:51.757570,Other bakery products,SupermarketCy,3.001818181818181
+QuakerΝιφάδεςΒρώμης500g,2.63,2023-06-26 20:51:22.732721,Breakfast Cereals,SupermarketCy,3.6726666666666667
+QuakerΤραγανέςΜπουκιέςΒρώμηΣοκολάτα450g,4.25,2023-06-26 20:51:22.732727,Breakfast Cereals,SupermarketCy,3.6726666666666667
+OreoO&#039;sCereal350g,3.99,2023-06-26 20:51:22.732728,Breakfast Cereals,SupermarketCy,3.6726666666666667
+KelloggsCornFlakes375g,3.19,2023-06-26 20:51:22.732728,Breakfast Cereals,SupermarketCy,3.6726666666666667
+KelloggsCocoPopsChocos375g,3.45,2023-06-26 20:51:22.732729,Breakfast Cereals,SupermarketCy,3.6726666666666667
+KelloggsCocoPops500g,4.45,2023-06-26 20:51:22.732729,Breakfast Cereals,SupermarketCy,3.6726666666666667
+KelloggsSpecialK750g,6.35,2023-06-26 20:51:22.732730,Breakfast Cereals,SupermarketCy,3.6726666666666667
+KelloggsMielPopsLoops330g,3.79,2023-06-26 20:51:22.732730,Breakfast Cereals,SupermarketCy,3.6726666666666667
+BarillaΣπαγγέτιNo5500g,1.4,2023-06-26 20:51:32.686183,Pasta products and couscous,SupermarketCy,2.075909090909091
+ΜέλισσαPrimoGustoΣπαγγέτιNo6500g,1.47,2023-06-26 20:51:32.686191,Pasta products and couscous,SupermarketCy,2.075909090909091
+ΜέλισσαPrimoGustoΚριθαράκι500g,1.59,2023-06-26 20:51:32.686191,Pasta products and couscous,SupermarketCy,2.075909090909091
+ΜιτσίδηΣπαγέττι500g,1.1,2023-06-26 20:51:32.686192,Pasta products and couscous,SupermarketCy,2.075909090909091
+ΜιτσίδηΚριθαράκι500g,1.6,2023-06-26 20:51:32.686193,Pasta products and couscous,SupermarketCy,2.075909090909091
+ΜιτσίδηΜακαρόνιαΑ500g,1.59,2023-06-26 20:51:32.686194,Pasta products and couscous,SupermarketCy,2.075909090909091
+ΜιτσίδηΧωριάτικαΜακαρόνια500g,1.78,2023-06-26 20:51:32.686194,Pasta products and couscous,SupermarketCy,2.075909090909091
+ΘίιαμβοςΣπαγέττο500g,1.09,2023-06-26 20:51:32.686195,Pasta products and couscous,SupermarketCy,2.075909090909091
+3ΑΡύζιΠάρποιλτ1kg,1.93,2023-06-26 20:51:42.931692,Rice,SupermarketCy,3.0185000000000004
+BensOriginalΡύζιΜακρύκοκκο10Λεπτά1kg,5.26,2023-06-26 20:51:42.931698,Rice,SupermarketCy,3.0185000000000004
+TildaΡυζιΜπασματι1kg,5.99,2023-06-26 20:51:42.931698,Rice,SupermarketCy,3.0185000000000004
+3ΑΡύζιΜπασμάτι1kg,3.89,2023-06-26 20:51:42.931699,Rice,SupermarketCy,3.0185000000000004
+3ΑΡύζιJasmine1kg,3.1,2023-06-26 20:51:42.931699,Rice,SupermarketCy,3.0185000000000004
+ΑφοίΑ.ΚεπόλαΠουργούρι1kg,2.95,2023-06-26 20:51:42.931700,Rice,SupermarketCy,3.0185000000000004
+ΑφοίΑ.ΚεπόλαΠουργούριΓιαΚούπες500g,1.79,2023-06-26 20:51:42.931700,Rice,SupermarketCy,3.0185000000000004
+ΜιτσίδηΠουργούρι500g,1.99,2023-06-26 20:51:42.931719,Rice,SupermarketCy,3.0185000000000004
+ΜιτσίδηΠουργούρι1kg,3.51,2023-06-26 20:51:42.931720,Rice,SupermarketCy,3.0185000000000004
+3ΑΠουργούρι500g,1.49,2023-06-26 20:51:42.931720,Rice,SupermarketCy,3.0185000000000004
+NaturalLifeΑποφλειωμένοΠουργούριΠιλάφι500g,0.99,2023-06-26 20:51:42.931721,Rice,SupermarketCy,3.0185000000000004
+SailorΑλάτι250g,0.6,2023-06-26 20:51:50.641133,"Salt, spices and culinary herbs",SupermarketCy,1.0934482758620687
+CarnationSpicesΠιπέριΜαύροΑλεσμένο34g,1.45,2023-06-26 20:51:50.641139,"Salt, spices and culinary herbs",SupermarketCy,1.0934482758620687
+CarnationSpicesΚανέλαΑλεσμένη34g,1.2,2023-06-26 20:51:50.641140,"Salt, spices and culinary herbs",SupermarketCy,1.0934482758620687
+CarnationSpicesΠάπρικαΓλυκιά30g,1.25,2023-06-26 20:51:50.641140,"Salt, spices and culinary herbs",SupermarketCy,1.0934482758620687
+CarnationSpicesΚουρκουμάςΚιτρινόριζα30g,1.2,2023-06-26 20:51:50.641141,"Salt, spices and culinary herbs",SupermarketCy,1.0934482758620687
+KnorrAromatΜείγμαΛαχανικών&amp;Μυρωδικών90g,2.35,2023-06-26 20:51:50.641141,"Salt, spices and culinary herbs",SupermarketCy,1.0934482758620687
+CarnationSpicesΔιάφοραΒότανα12g,0.95,2023-06-26 20:51:50.641142,"Salt, spices and culinary herbs",SupermarketCy,1.0934482758620687
+CarnationSpicesΣκόρδοΣκόνη40g,1.2,2023-06-26 20:51:50.641142,"Salt, spices and culinary herbs",SupermarketCy,1.0934482758620687
+CarnationSpicesΡίγανη30g,1.3,2023-06-26 20:51:50.641143,"Salt, spices and culinary herbs",SupermarketCy,1.0934482758620687
+CarnationSpicesΘυμάρι10g,0.95,2023-06-26 20:51:50.641144,"Salt, spices and culinary herbs",SupermarketCy,1.0934482758620687
+CarnationSpicesΚόλιανδροςΣκόνη20g,0.95,2023-06-26 20:51:50.641144,"Salt, spices and culinary herbs",SupermarketCy,1.0934482758620687
+CarnationSpicesΜαϊδανός10g,0.95,2023-06-26 20:51:50.641145,"Salt, spices and culinary herbs",SupermarketCy,1.0934482758620687
+CarnationSpicesΒασιλικός10g,0.95,2023-06-26 20:51:50.641145,"Salt, spices and culinary herbs",SupermarketCy,1.0934482758620687
+CarnationSpicesΆνηθος10g,0.95,2023-06-26 20:51:50.641146,"Salt, spices and culinary herbs",SupermarketCy,1.0934482758620687
+CarnationSpicesΔεντρολίβανοΛάσμαρι10g,0.95,2023-06-26 20:51:50.641146,"Salt, spices and culinary herbs",SupermarketCy,1.0934482758620687
+ΛειβαδιώτηΠράσινηΣφραγίδαΑμύγδαλα120g,2.59,2023-06-26 20:52:03.702594,Dried fruit and nuts,SupermarketCy,3.6031818181818185
+SeranoΚάσιους140g,3.85,2023-06-26 20:52:03.702600,Dried fruit and nuts,SupermarketCy,3.6031818181818185
+ΛειβαδιώτηΚαρυδόψιχα140g,3.65,2023-06-26 20:52:03.702601,Dried fruit and nuts,SupermarketCy,3.6031818181818185
+SeranoΦουντούκιαΩμά150g,3.49,2023-06-26 20:52:03.702601,Dried fruit and nuts,SupermarketCy,3.6031818181818185
+SeranoΦυστικόψιχαΚαβουρδισμένηΑλατισμένη175g,1.79,2023-06-26 20:52:03.702602,Dried fruit and nuts,SupermarketCy,3.6031818181818185
+ΕποχέςΑποξηραμέναΣύκα350g,4.95,2023-06-26 20:52:03.702602,Dried fruit and nuts,SupermarketCy,3.6031818181818185
+ΑμαλίαΧρυσόμηλαΑποξηραμένα250g,4.19,2023-06-26 20:52:03.702603,Dried fruit and nuts,SupermarketCy,3.6031818181818185
+SeranoSnackin&#039;GoodΑποξηραμέναΔαμάσκηναΧωρίςΚουκούτσιΧωρίςΠρόσθετηΖάχαρη250g,3.75,2023-06-26 20:52:03.702604,Dried fruit and nuts,SupermarketCy,3.6031818181818185
+ΚαρπόςΑπόΤηΓηΜαςΑποξηραμέναΔαμάσκηναΜεΚουκούτσι400g,4.3,2023-06-26 20:52:03.702605,Dried fruit and nuts,SupermarketCy,3.6031818181818185
+ΑμαλίαΦοινίκιαΤυνησίας250g,1.99,2023-06-26 20:52:03.702605,Dried fruit and nuts,SupermarketCy,3.6031818181818185
+SeranoΣταφίδες350g,2.25,2023-06-26 20:52:03.702606,Dried fruit and nuts,SupermarketCy,3.6031818181818185
+RoyalBeeΜέλι475g,3.89,2023-06-26 20:52:13.392555,"Jams, marmalades and honey",SupermarketCy,3.6856250000000004
+MavroudesΜέλι380g,3.03,2023-06-26 20:52:13.392561,"Jams, marmalades and honey",SupermarketCy,3.6856250000000004
+ΤοΤζιβέρτιΜέλιΑνθέωνSqueeze485g,5.99,2023-06-26 20:52:13.392562,"Jams, marmalades and honey",SupermarketCy,3.6856250000000004
+BonapiΜέλιΑνθέων450g,3.95,2023-06-26 20:52:13.392562,"Jams, marmalades and honey",SupermarketCy,3.6856250000000004
+BlossomΜαρμελάδαΜερίδες6x30g,1.29,2023-06-26 20:52:13.392563,"Jams, marmalades and honey",SupermarketCy,3.6856250000000004
+Nutella200g,2.5,2023-06-26 20:52:13.392563,"Jams, marmalades and honey",SupermarketCy,3.6856250000000004
+ΌλυμποςSuperSpreadΦυστικοβούτυροΤραγανό350g,3.49,2023-06-26 20:52:13.392564,"Jams, marmalades and honey",SupermarketCy,3.6856250000000004
+DfΤαχίνι250g,2.52,2023-06-26 20:52:13.392564,"Jams, marmalades and honey",SupermarketCy,3.6856250000000004
+ΧαραλάμπουςΓαριδάκιαΜεΤυρί10X22g,2.25,2023-06-26 20:52:14.760273,Crisps,SupermarketCy,2.3
+PelargosΚλασικό3X250g,1.39,2023-06-26 20:52:40.113094,"Sauces, condiments",SupermarketCy,1.9023809523809523
+ΜιτσίδηΠάσταΝτομάτας4X70g,1.84,2023-06-26 20:52:40.113100,"Sauces, condiments",SupermarketCy,1.9023809523809523
+BlossomΠάσταΝτομάτας4X70g,2.19,2023-06-26 20:52:40.113100,"Sauces, condiments",SupermarketCy,1.9023809523809523
+KeanPomiloriΠεραστήΝτομάτα690g,1.79,2023-06-26 20:52:40.113102,"Sauces, condiments",SupermarketCy,1.9023809523809523
+SwsΠάσταΝτομάτας425g,2.05,2023-06-26 20:52:40.113103,"Sauces, condiments",SupermarketCy,1.9023809523809523
+ΜιτσίδηΠεραστήΝτομάτα3x500g,3.1,2023-06-26 20:52:40.113103,"Sauces, condiments",SupermarketCy,1.9023809523809523
+MaggiΖωμόςΚότας12Τεμ,1.6,2023-06-26 20:52:40.113104,"Sauces, condiments",SupermarketCy,1.9023809523809523
+MaggiΖωμόςΛαχανικών16Τεμ,2.91,2023-06-26 20:52:40.113105,"Sauces, condiments",SupermarketCy,1.9023809523809523
+MaggiΖωμόςΓιαΖυμαρικά12Τεμ,2.32,2023-06-26 20:52:40.113105,"Sauces, condiments",SupermarketCy,1.9023809523809523
+KnorrΖωμόςΚότας12Τεμ,1.26,2023-06-26 20:52:40.113106,"Sauces, condiments",SupermarketCy,1.9023809523809523
+KnorrΖωμόςΛαχανικών12Τεμ,1.79,2023-06-26 20:52:40.113106,"Sauces, condiments",SupermarketCy,1.9023809523809523
+ΆγιοςΓεώργιοςΠαρθένοΕλαιόλαδο2L,13.95,2023-06-26 20:52:42.720044,Olive Oil,SupermarketCy,10.195
+ΕλιοχώριΠαρθένοΕλαιόλαδο2L,12.95,2023-06-26 20:52:42.720049,Olive Oil,SupermarketCy,10.195
+ΣεκέπΠαρθένοΕλαιόλαδο1L,7.99,2023-06-26 20:52:42.720050,Olive Oil,SupermarketCy,10.195
+AlokozayΗλιανθέλαιο1L,3.6,2023-06-26 20:52:43.943470,Other edible oils,SupermarketCy,8.014285714285714
+AmbrosiaΗλιανθέλαιο3L,8.99,2023-06-26 20:52:43.943476,Other edible oils,SupermarketCy,8.014285714285714
+ΕμμέλειαΡαφιναρισμένοΗλιανθέλαιο3L,7.09,2023-06-26 20:52:43.943476,Other edible oils,SupermarketCy,8.014285714285714
+AmbrosiaΗλιανθέλαιο4L,15.65,2023-06-26 20:52:43.943477,Other edible oils,SupermarketCy,8.014285714285714
+SevycoΆσπροςΤόνοςΣεΕλαιόλαδο4X95g,4.9,2023-06-26 20:52:48.108380,Other preserved or processed fish and seafood-based preparations,SupermarketCy,6.3325000000000005
+SevycoΡοζέΤόνοςΣεΣογιέλαιο4X200g,6.49,2023-06-26 20:52:48.108384,Other preserved or processed fish and seafood-based preparations,SupermarketCy,6.3325000000000005
+RioMareΤόνοςΣεΕλαιόλαδο160g2+1Δωρεάν,9.05,2023-06-26 20:52:48.108385,Other preserved or processed fish and seafood-based preparations,SupermarketCy,6.3325000000000005
+RioMareΤόνοςΣεΝερό80g3+1Δωρεάν,7.04,2023-06-26 20:52:48.108386,Other preserved or processed fish and seafood-based preparations,SupermarketCy,6.3325000000000005
+ΚαμήλαΣαρδελάκιαΣεΝερό120g,1.29,2023-06-26 20:53:07.297114,"Dried, smoked or salted fish and seafood",SupermarketCy,1.9275000000000002
+TrataΡέγγαΚαπνιστή160g,2.6,2023-06-26 20:53:07.297118,"Dried, smoked or salted fish and seafood",SupermarketCy,1.9275000000000002
+FlokosΦιλέτοΣκουμπρίΚαπνιστόΣεΦυτικόΛάδι160g,3.15,2023-06-26 20:53:07.297119,"Dried, smoked or salted fish and seafood",SupermarketCy,1.9275000000000002
+ΚαμήλαΑντζιούγες50g,1.45,2023-06-26 20:53:07.297119,"Dried, smoked or salted fish and seafood",SupermarketCy,1.9275000000000002
+KarlaCornedBeef340g,3.24,2023-06-26 20:53:10.076700,Other meat preparations,SupermarketCy,4.335999999999999
+TulipPorkLuncheonMeat200g,2.79,2023-06-26 20:53:10.076705,Other meat preparations,SupermarketCy,4.335999999999999
+TulipChoppedHam200g,2.99,2023-06-26 20:53:10.076706,Other meat preparations,SupermarketCy,4.335999999999999
+ZwanLuncheonMeat200g,2.6,2023-06-26 20:53:10.076706,Other meat preparations,SupermarketCy,4.335999999999999
+ZwanChoppedHamAndPork200g,3.65,2023-06-26 20:53:10.076707,Other meat preparations,SupermarketCy,4.335999999999999
+ZwanChickenLuncheonMeat200g,2.59,2023-06-26 20:53:10.076708,Other meat preparations,SupermarketCy,4.335999999999999
+ΜεσόγειοςΡεβύθια400g,0.99,2023-06-26 20:53:11.474520,"Dried vegetables, other preserved or processed vegetables",SupermarketCy,1.2141666666666666
+ΜεσόγειοςΦασόλιαΚόκκινα400g,1.19,2023-06-26 20:53:11.474525,"Dried vegetables, other preserved or processed vegetables",SupermarketCy,1.2141666666666666
+ΜεσόγειοςΦασόλιαΆσπρα400g,1.0,2023-06-26 20:53:11.474526,"Dried vegetables, other preserved or processed vegetables",SupermarketCy,1.2141666666666666
+ΜεσόγειοςΣιταροπούλα340g,0.99,2023-06-26 20:53:11.474527,"Dried vegetables, other preserved or processed vegetables",SupermarketCy,1.2141666666666666
+ΜεσόγειοςΜανιτάριαΦέτες400g,1.25,2023-06-26 20:53:11.474527,"Dried vegetables, other preserved or processed vegetables",SupermarketCy,1.2141666666666666
+ΜεσόγειοςΦασόλιαΣεΣάλτσαΝτομάτας400g,0.99,2023-06-26 20:53:11.474528,"Dried vegetables, other preserved or processed vegetables",SupermarketCy,1.2141666666666666
+ΝουνούLight400g,1.45,2023-06-26 20:53:15.219157,Other milk products,SupermarketCy,1.789090909090909
+Νουνού400g,1.45,2023-06-26 20:53:15.219162,Other milk products,SupermarketCy,1.789090909090909
+NestleMilkmaidΓάλαΖαχαρούχο397g,2.31,2023-06-26 20:53:15.219163,Other milk products,SupermarketCy,1.789090909090909
+ΝουνούΓάλαΖαχαρούχο397g,1.75,2023-06-26 20:53:15.219164,Other milk products,SupermarketCy,1.789090909090909
+ΝουνούLight10X15g,1.1,2023-06-26 20:53:15.219165,Other milk products,SupermarketCy,1.789090909090909
+ΧαραλαμπίδηςΚρίστηςΚρέμαΓάλακτος250ml,2.5,2023-06-26 20:53:15.219166,Other milk products,SupermarketCy,1.789090909090909
+HeinzΣούπαΜινεστρόνι400g,2.48,2023-06-26 20:53:53.707454,Other food products n.e.c.,SupermarketCy,2.0766666666666667
+HeinzΣούπαΝτομάτας400g,2.28,2023-06-26 20:53:53.707460,Other food products n.e.c.,SupermarketCy,2.0766666666666667
+ΦρουΦρουJoker9Τεμ9+3Δωρεάν,3.7,2023-06-26 20:53:53.707461,Other food products n.e.c.,SupermarketCy,2.0766666666666667
+ΦρουΦρουMorningCoffee150g,1.25,2023-06-26 20:53:53.707462,Other food products n.e.c.,SupermarketCy,2.0766666666666667
+KinderCards5Τεμ128g,2.25,2023-06-26 20:53:53.707462,Other food products n.e.c.,SupermarketCy,2.0766666666666667
+Oreo154g,1.55,2023-06-26 20:53:53.707463,Other food products n.e.c.,SupermarketCy,2.0766666666666667
+ΠαπαδοπούλουΓεμιστάΣοκολάτα200g,1.49,2023-06-26 20:53:53.707463,Other food products n.e.c.,SupermarketCy,2.0766666666666667
+SweetFamilyΛευκήΚρυσταλλικήΖάχαρη1kg,1.49,2023-06-26 20:53:54.853593,Sugar,SupermarketCy,1.44
+ΜιτσίδηΑλεύριΓιαΌλεςΤιςΧρήσεις1kg,1.37,2023-06-26 20:53:57.721615,Flours and other cereals,SupermarketCy,1.4958333333333336
+ΜιτσίδηΑλεύριΦαρίνα001kg,1.69,2023-06-26 20:53:57.721621,Flours and other cereals,SupermarketCy,1.4958333333333336
+ΜιτσίδηΑλεύριΧωριάτικο1kg,1.89,2023-06-26 20:53:57.721621,Flours and other cereals,SupermarketCy,1.4958333333333336
+ΜιτσίδηΑλεύριΦαρίναΖαχαροπλαστικής1kg,1.69,2023-06-26 20:53:57.721622,Flours and other cereals,SupermarketCy,1.4958333333333336
+ΑδελφοίΚαζάζηΑλεύριΦαρίνα001kg,1.29,2023-06-26 20:53:57.721623,Flours and other cereals,SupermarketCy,1.4958333333333336
+ΑδελφοίΚαζάζηΑλεύριΧωριάτικο1kg,1.29,2023-06-26 20:53:57.721623,Flours and other cereals,SupermarketCy,1.4958333333333336
+BakandysΣοκολάταΓάλακτοςΚουβερτούρα4x37.5g,1.62,2023-06-26 20:54:00.114352,Chocolate,SupermarketCy,1.9900000000000002
+BakandysΆσπρηΣοκολάταΚουβερτούρα4x37.5g,1.86,2023-06-26 20:54:00.114358,Chocolate,SupermarketCy,1.9900000000000002
+HristalΜαγειρικήΣόδα125g,0.95,2023-06-26 20:54:07.424695,Confectionery products,SupermarketCy,1.9326315789473683
+RoyalBakingPowder226g,2.1,2023-06-26 20:54:07.424700,Confectionery products,SupermarketCy,1.9326315789473683
+ΣτέλλαΑνθόνεροΚιτρόμηλο500ml,1.1,2023-06-26 20:54:07.424700,Confectionery products,SupermarketCy,1.9326315789473683
+ΑμαλίαΝησιαστέ400g,0.99,2023-06-26 20:54:07.424702,Confectionery products,SupermarketCy,1.9326315789473683
+CarltonaΆμυλοΑραβοσίτου450g,2.45,2023-06-26 20:54:07.424702,Confectionery products,SupermarketCy,1.9326315789473683
+BakandysΣαβουαγιάρ200g,2.0,2023-06-26 20:54:07.424703,Confectionery products,SupermarketCy,1.9326315789473683
+ΓιώτηςΜαγιάΣτιγμής3x8g,1.25,2023-06-26 20:54:07.424703,Confectionery products,SupermarketCy,1.9326315789473683
+ΑμαλίαΙνδοκάρυδοΑλεσμένο250g,1.35,2023-06-26 20:54:07.424704,Confectionery products,SupermarketCy,1.9326315789473683
+SpryΦυτικόΜαγειρικόΠροιόν350g,3.3,2023-06-26 20:54:07.424705,Confectionery products,SupermarketCy,1.9326315789473683
+ΑγρούΡοδόσταγμα500ml,4.99,2023-06-26 20:54:07.424705,Confectionery products,SupermarketCy,1.9326315789473683
+Ντομάτες1kg,2.4,2023-06-26 20:54:18.451601,Fresh or chilled vegetables other than potatoes and other tubers,SupermarketCy,1.8539999999999999
+ΑγγουράκιαΧωραφιού1kg,1.5,2023-06-26 20:54:18.451607,Fresh or chilled vegetables other than potatoes and other tubers,SupermarketCy,1.8539999999999999
+Λεμόνια1kg,2.3,2023-06-26 20:54:18.451607,Fresh or chilled vegetables other than potatoes and other tubers,SupermarketCy,1.8539999999999999
+ΚρεμμύδιαΑκαθάριστα1kg,1.1,2023-06-26 20:54:18.451608,Fresh or chilled vegetables other than potatoes and other tubers,SupermarketCy,1.8539999999999999
+Αγγουράκια1kg,1.4,2023-06-26 20:54:18.451609,Fresh or chilled vegetables other than potatoes and other tubers,SupermarketCy,1.8539999999999999
+ΝτοματίνιαΜίνιΦοινικωτά500g,2.1,2023-06-26 20:54:18.451609,Fresh or chilled vegetables other than potatoes and other tubers,SupermarketCy,1.8539999999999999
+ΚαρόταΑκαθάριστα1kg,1.75,2023-06-26 20:54:18.451610,Fresh or chilled vegetables other than potatoes and other tubers,SupermarketCy,1.8539999999999999
+Αβοκάντο1kg,4.1,2023-06-26 20:54:18.451610,Fresh or chilled vegetables other than potatoes and other tubers,SupermarketCy,1.8539999999999999
+ΜαρούλιΡομάναΔέσμη1Τεμ,0.55,2023-06-26 20:54:18.451611,Fresh or chilled vegetables other than potatoes and other tubers,SupermarketCy,1.8539999999999999
+ΠιπεριέςΧρωματιστές4Τεμ,3.9,2023-06-26 20:54:18.451612,Fresh or chilled vegetables other than potatoes and other tubers,SupermarketCy,1.8539999999999999
+Σκόρδος1Τεμ,1.0,2023-06-26 20:54:18.451612,Fresh or chilled vegetables other than potatoes and other tubers,SupermarketCy,1.8539999999999999
+ΦρέσκεςΠατάτεςΚυπριακέςΝέαςΣoδειάς2kg,2.3,2023-06-26 20:54:19.645678,Potatoes,SupermarketCy,2.04
+ΜπανάνεςΕισαγωγής1kg,2.0,2023-06-26 20:54:23.257135,Fresh or chilled fruit,SupermarketCy,2.9978947368421047
+ΜήλαPinkLady1kg,3.95,2023-06-26 20:54:23.257142,Fresh or chilled fruit,SupermarketCy,2.9978947368421047
+ΠράσινοΣταφύλι750g,4.5,2023-06-26 20:54:23.257143,Fresh or chilled fruit,SupermarketCy,2.9978947368421047
+ΜήλαGrannySmith1kg,2.75,2023-06-26 20:54:23.257143,Fresh or chilled fruit,SupermarketCy,2.9978947368421047
+ΑχλάδιαConference1kg,3.4,2023-06-26 20:54:23.257144,Fresh or chilled fruit,SupermarketCy,2.9978947368421047
+ΜήλαΚόκκιναDelicious1kg,2.75,2023-06-26 20:54:23.257145,Fresh or chilled fruit,SupermarketCy,2.9978947368421047
+Μύρτιλα125g,3.5,2023-06-26 20:54:23.257146,Fresh or chilled fruit,SupermarketCy,2.9978947368421047
+ΜήλαΚίτριναDelicious1kg,2.7,2023-06-26 20:54:23.257147,Fresh or chilled fruit,SupermarketCy,2.9978947368421047
+Ακτινίδια500g,2.7,2023-06-26 20:54:23.257147,Fresh or chilled fruit,SupermarketCy,2.9978947368421047
+ΜήλαRoyalGala1kg,3.4,2023-06-26 20:54:23.257148,Fresh or chilled fruit,SupermarketCy,2.9978947368421047
+ΠορτοκάλιαΓιαΧυμό1kg,0.95,2023-06-26 20:54:23.257148,Fresh or chilled fruit,SupermarketCy,2.9978947368421047
+ΧοιρινόΚιμάςΜερί500g,3.9,2023-06-26 20:54:25.793241,Pork,SupermarketCy,5.125
+"ΧοιρινόΜπριζόλαΛαιμός4Τεμ1,200kg",6.6,2023-06-26 20:54:25.793247,Pork,SupermarketCy,5.125
+"ΧοιρινόΣούβλαΛαιμόςΛαπάςΜεΚόκκαλο1,1kg",8.03,2023-06-26 20:54:25.793247,Pork,SupermarketCy,5.125
+ΧοιρινόΣεφταλιές850g,6.04,2023-06-26 20:54:27.030486,Other meat,SupermarketCy,6.1
+ΛουκάνικαΧωριάτικα550g,6.16,2023-06-26 20:54:27.030491,Other meat,SupermarketCy,6.1
+ΚοτόπουλοΦιλέτο850g,8.07,2023-06-26 20:54:29.789541,Poultry,SupermarketCy,9.885
+"ΚοτόπουλοΟλόκληρο2,8kg",13.3,2023-06-26 20:54:29.789547,Poultry,SupermarketCy,9.885
+ΑρνίΓιαΣούβλα1kg,12.95,2023-06-26 20:54:30.938381,Lamb and goat,SupermarketCy,14.719999999999999
+ΒοδινόΚιμάς500g,5.6,2023-06-26 20:54:32.151270,Beef and veal,SupermarketCy,6.395
+"ΤσιπούραΦρέσκιαΚαθαρισμένη3ΤεμMax1,700kg",17.0,2023-06-26 20:54:33.316491,Fresh or chilled fish,SupermarketCy,9.2
+BertiΠλήρες3.5%ΓάλαΜακράςΔιαρκείας1L,1.32,2023-06-26 20:54:34.490320,Preserved milk,SupermarketCy,1.2325
+BertiΕλαφρύ1.5%ΓάλαΜακράςΔιαρκείας1L,1.29,2023-06-26 20:54:34.490324,Preserved milk,SupermarketCy,1.2325
+ΛανίτηςΕλαφρύΓάλα2L,2.85,2023-06-26 20:54:36.908743,Low fat Milk,SupermarketCy,2.3425000000000002
+"ΛανίτηςΕλαφρύΓάλα1,5L",2.24,2023-06-26 20:54:36.908749,Low fat Milk,SupermarketCy,2.3425000000000002
+ΧαραλαμπίδηςΚρίστηςDelactΓάλα1L,1.73,2023-06-26 20:54:36.908750,Low fat Milk,SupermarketCy,2.3425000000000002
+ΧαραλαμπίδηςΚρίστηςΕλαφρύΓάλα2L,2.99,2023-06-26 20:54:36.908750,Low fat Milk,SupermarketCy,2.3425000000000002
+ΧαραλαμπίδηςΚρίστηςΕλαφρύΓάλα1L,1.5,2023-06-26 20:54:36.908751,Low fat Milk,SupermarketCy,2.3425000000000002
+"ΧαραλαμπίδηςΚρίστηςΕλαφρύΓάλα1,5L",2.26,2023-06-26 20:54:36.908751,Low fat Milk,SupermarketCy,2.3425000000000002
+ΛανίτηςΠλήρεςΓάλα2L,2.85,2023-06-26 20:54:39.333217,Whole Milk,SupermarketCy,2.8699999999999997
+ΧαραλαμπίδηςΚρίστηςΠλήρεςΓάλα2L,2.99,2023-06-26 20:54:39.333223,Whole Milk,SupermarketCy,2.8699999999999997
+ΧαραλαμπίδηςΚρίστηςΣτραγγάτο1kg,4.15,2023-06-26 20:54:43.534802,Yoghurt,SupermarketCy,4.03
+ZitaΣτραγγιστό1kg,4.49,2023-06-26 20:54:43.534808,Yoghurt,SupermarketCy,4.03
+ZitaΣτραγγιστόΆπαχο0%1kg,4.49,2023-06-26 20:54:43.534808,Yoghurt,SupermarketCy,4.03
+ΧαραλαμπίδηςΚρίστηςΣτραγγάτοΆπαχο0%1kg,4.15,2023-06-26 20:54:43.534811,Yoghurt,SupermarketCy,4.03
+ΑλάμπραΠρόβειοΓιαούρτιΗΓιαγιά700g,2.87,2023-06-26 20:54:43.534811,Yoghurt,SupermarketCy,4.03
+LurpakΑνάλατοΒούτυρο250g,4.49,2023-06-26 20:55:02.139584,Butter,SupermarketCy,4.033333333333333
+KerrygoldΑλατισμένοΒούτυρο250g,3.99,2023-06-26 20:55:02.139590,Butter,SupermarketCy,4.033333333333333
+LurpakΑλατισμένοΒούτυρο250g,4.55,2023-06-26 20:55:02.139590,Butter,SupermarketCy,4.033333333333333
+VitaliteLightΜαργαρίνη500g,3.69,2023-06-26 20:55:05.372153,Margarine and other vegetable fats,SupermarketCy,2.9000000000000004
+ΧαραλαμπίδηςΚρίστηςOriginalΜαργαρίνη500g,3.15,2023-06-26 20:55:05.372159,Margarine and other vegetable fats,SupermarketCy,2.9000000000000004
+ΧαραλαμπίδηςΚρίστηςLightΜαργαρίνη500g,3.15,2023-06-26 20:55:05.372159,Margarine and other vegetable fats,SupermarketCy,2.9000000000000004
+FloraOriginal100%Φυτικό450g,2.66,2023-06-26 20:55:05.372160,Margarine and other vegetable fats,SupermarketCy,2.9000000000000004
+FloraLight100%Φυτικό450g,2.74,2023-06-26 20:55:05.372161,Margarine and other vegetable fats,SupermarketCy,2.9000000000000004
+ΜινέρβαΦαστSoft250g,1.89,2023-06-26 20:55:05.372161,Margarine and other vegetable fats,SupermarketCy,2.9000000000000004
+VasilicoEggsΑυγάΜεσσαία15Τεμ,3.8,2023-06-26 20:55:06.615673,Eggs,SupermarketCy,3.735
+ΧαραλαμπίδηςΚρίστηςΡαβιόλεςμε100%ΠισσουρκώτικοΧαλλούμι400g,4.79,2023-06-26 20:55:08.455581,Pasta products and couscous,Alpha Mega,2.075909090909091
+HerculesΡαβιόλεςμεΦρέσκοΧαλλούμι&Αναρή400g,2.99,2023-06-26 20:55:09.487993,Pasta products and couscous,Alpha Mega,2.075909090909091
+MitsidesΧωριάτικεςΡαβιόλες375g,2.99,2023-06-26 20:55:10.719003,Pasta products and couscous,Alpha Mega,2.075909090909091
+7ΘΑΛΑΣΣΕΣΚατεψυγμένεςΒρασμένεςΓαρίδεςVannamei40/60500g,11.95,2023-06-26 20:55:11.840704,Frozen Seafood,Alpha Mega,6.640000000000001
+EdesmaΧταπόδιΟλόκληροΚαθαρισμένο500/1000800g,10.16,2023-06-26 20:55:12.980083,Frozen Seafood,Alpha Mega,6.640000000000001
+EdesmaΘράψαλοΡοδέλες700g,5.59,2023-06-26 20:55:14.252637,Frozen Seafood,Alpha Mega,6.640000000000001
+DonegalCatch4ΦιλέταΣολομούμεΔέρμα400g,12.99,2023-06-26 20:55:15.698703,Frozen Fish,Alpha Mega,9.542222222222223
+NordseaΚοκκινόψαροΑκέφαλοΚαθαρισμένο900g,7.99,2023-06-26 20:55:16.876454,Frozen Fish,Alpha Mega,9.542222222222223
+FindusΣολομός4Φιλέτα4x125g,16.5,2023-06-26 20:55:18.722277,Frozen Fish,Alpha Mega,9.542222222222223
+QualifoodΣολομός4x125g,12.99,2023-06-26 20:55:19.745662,Frozen Fish,Alpha Mega,9.542222222222223
+QualifoodΠανγκάσιουςΦιλέτο800g,5.5,2023-06-26 20:55:21.135282,Frozen Fish,Alpha Mega,9.542222222222223
+Casino8ΠαναρισμέναΦιλέταΜπακαλιάρου400g,4.99,2023-06-26 20:55:22.513727,Frozen Seafood,Alpha Mega,6.640000000000001
+BirdsEye14FishFingers350g,6.99,2023-06-26 20:55:23.697614,Frozen Seafood,Alpha Mega,6.640000000000001
+BirdsEye4ΜεγάλαΠαναρισμέναΦιλέταΜπακαλιάρου440g,13.99,2023-06-26 20:55:24.797595,Frozen Seafood,Alpha Mega,6.640000000000001
+Nordsea4ΠαναρισμέναΦιλέταΨαριού300g,4.95,2023-06-26 20:55:26.041737,Frozen Seafood,Alpha Mega,6.640000000000001
+BlackAngusΜπιφτέκιαΒlackΑngus2x170g,5.15,2023-06-26 20:55:27.154393,Other meat preparations,Alpha Mega,4.335999999999999
+Edesma4ΜπιφτέκιαΛαχανικών380g,4.99,2023-06-26 20:55:28.249639,Ready-made meals,Alpha Mega,4.8420000000000005
+Γρηγορίου4ΒοδινάΜπιφτέκια480g,4.99,2023-06-26 20:55:29.374837,Other meat preparations,Alpha Mega,4.335999999999999
+Γρηγορίου6ΧοιρινάΜπιφτέκια480g,4.75,2023-06-26 20:55:30.602047,Other meat preparations,Alpha Mega,4.335999999999999
+ΓρηγορίουΜπιφτέκιαΓαλοπούλας480g,3.99,2023-06-26 20:55:31.714433,Other meat preparations,Alpha Mega,4.335999999999999
+KyprianouSpecialFood6ΜπιφτέκιαΧοιρινά900g,5.99,2023-06-26 20:55:32.932196,Other meat preparations,Alpha Mega,4.335999999999999
+EdesmaΜπουκιέςΚοτόπουλου500g,5.5,2023-06-26 20:55:34.553799,Other meat preparations,Alpha Mega,4.335999999999999
+EdesmaΜπουκιέςΚοτόπουλου900g,7.69,2023-06-26 20:55:35.763340,Other meat preparations,Alpha Mega,4.335999999999999
+AleraΚοτομπουκιές1kg,5.99,2023-06-26 20:55:36.853527,Other meat preparations,Alpha Mega,4.335999999999999
+CretaFarmsΕνEλλάδιΚοτομπουκιές400g,4.35,2023-06-26 20:55:38.395814,Other meat preparations,Alpha Mega,4.335999999999999
+CretaFarmsΕνEλλάδιΣουτζουκάκιασεΣάλτσα500g,6.35,2023-06-26 20:55:39.606664,Other meat preparations,Alpha Mega,4.335999999999999
+Γ.ΧαραλάμπουςΚλασικόςΚαφές200g,2.75,2023-06-26 20:55:40.799468,Coffee,Alpha Mega,5.111428571428571
+Γ.ΧαραλάμπουςΚλασικόςΚαφές500g,7.45,2023-06-26 20:55:42.063690,Coffee,Alpha Mega,5.111428571428571
+ΚαφέςΛαϊκούΧρυσός200g,2.95,2023-06-26 20:55:43.284899,Coffee,Alpha Mega,5.111428571428571
+ΛαϊκόςΧρυσόςΚαφέςΠαραδοσιακός500g,7.3,2023-06-26 20:55:44.474382,Coffee,Alpha Mega,5.111428571428571
+CelestΣτιγμιαίοςΚαφές200g,4.95,2023-06-26 20:55:45.809316,Coffee,Alpha Mega,5.111428571428571
+JacobsMonarchΕκλεκτόςΣτιγμιαίοςΚαφές95g,3.99,2023-06-26 20:55:47.075949,Coffee,Alpha Mega,5.111428571428571
+NescaféAzeraΕσπρέσο100g,5.99,2023-06-26 20:55:48.840850,Coffee,Alpha Mega,5.111428571428571
+NescafeClassicΣτιγμιαίοςΚαφέςχωρίςΚαφεΐνη100g,4.95,2023-06-26 20:55:49.954609,Coffee,Alpha Mega,5.111428571428571
+NescafeΣτιγμιαίοςΚαφέςΚλασσικός100g,3.99,2023-06-26 20:55:51.163571,Coffee,Alpha Mega,5.111428571428571
+NescafeΣτιγμιαίοςΚαφέςΚλασσικός200g,5.99,2023-06-26 20:55:52.792485,Coffee,Alpha Mega,5.111428571428571
+JacobsGoldΣτιγμιαίοςΚαφές95g,4.49,2023-06-26 20:55:53.886805,Coffee,Alpha Mega,5.111428571428571
+EtoshaΚάρβουνα5Kg,6.69,2023-06-26 20:55:54.964685,Other Products,Alpha Mega,6.52
+ΠΥΡΣΟΣΚάρβουνα5kg,6.45,2023-06-26 20:55:56.411454,Other Products,Alpha Mega,6.52
+ArielMountainSpringΥγρόΑπορρυπαντικόΡούχων40Πλύσεις2.2L,8.49,2023-06-26 20:55:57.522893,Cleaning and maintenance products,Alpha Mega,5.687826086956521
+DixanΥγρόΑπορρυπαντικόΤζελMulticolor42Πλύσεων2.1L,6.39,2023-06-26 20:55:58.533484,Cleaning and maintenance products,Alpha Mega,5.687826086956521
+DIXANPlusActiveFreshΑπορρυπαντικήΣκόνηΠλυσίματοςXXLPack66Πλύσεις3.63kg,10.75,2023-06-26 20:55:59.606005,Cleaning and maintenance products,Alpha Mega,5.687826086956521
+ΕύρηκαActiveCareΣκόνηΠλυντηρίουXXL75Πλύσεις4.125Kg,9.79,2023-06-26 20:56:00.742460,Cleaning and maintenance products,Alpha Mega,5.687826086956521
+ΕύρηκαΜασσαλίαςΚλασσικόΥγρόΑπορρυπαντικόΡούχων2.4L,5.79,2023-06-26 20:56:02.527326,Cleaning and maintenance products,Alpha Mega,5.687826086956521
+ΕύρηκαΜασσαλίαςYlang-Ylang&ΛεβάνταΥγρόΑπορρυπαντικόΡούχων2.4L,5.79,2023-06-26 20:56:03.971747,Cleaning and maintenance products,Alpha Mega,5.687826086956521
+ComfortGoldΜαλακτικόρούχωνLilies&WildBerries4L,5.79,2023-06-26 20:56:04.930170,Cleaning and maintenance products,Alpha Mega,5.687826086956521
+ComfortGoldΜαλακτικόΡούχωνWildOrchid&Sandalwood4L,3.49,2023-06-26 20:56:06.066823,Cleaning and maintenance products,Alpha Mega,5.687826086956521
+ComfortΜαλακτικόΡούχωνPureSoft4L,5.29,2023-06-26 20:56:07.123129,Cleaning and maintenance products,Alpha Mega,5.687826086956521
+AlwaysPlatinum4SecureNightΆνεση&Προστασία10UltraΣερβιέτεςμεΆρωμα,2.28,2023-06-26 20:56:08.418587,"Articles for personal hygiene and wellness, esoteric products and beauty products",Alpha Mega,5.302272727272728
+AlwaysUltraΣερβιέτεςLongPlus16+8Δώρο24Τεμάχια,2.66,2023-06-26 20:56:09.475626,"Articles for personal hygiene and wellness, esoteric products and beauty products",Alpha Mega,5.302272727272728
+AlwaysUltraΣερβιέτεςNormalPlus20+8Δώρο28Τεμάχια,2.66,2023-06-26 20:56:10.496954,"Articles for personal hygiene and wellness, esoteric products and beauty products",Alpha Mega,5.302272727272728
+EverydayHyperdryXLΣερβιέτες18Τεμάχια,4.75,2023-06-26 20:56:11.531847,"Articles for personal hygiene and wellness, esoteric products and beauty products",Alpha Mega,5.302272727272728
+KleenexScottonelleΔίφυλλοΧαρτίΥγείας16Ρολ,13.95,2023-06-26 20:56:12.508966,"Articles for personal hygiene and wellness, esoteric products and beauty products",Alpha Mega,5.302272727272728
+KleenexScottonelleΧαρτίΥγείαςSoft&Strong24+8Δώρο32Ρολά,14.95,2023-06-26 20:56:13.805839,"Articles for personal hygiene and wellness, esoteric products and beauty products",Alpha Mega,5.302272727272728
+ΑλφαμέγαΧαρτίΥγείας2φύλλα24Ρολά,5.99,2023-06-26 20:56:14.836172,"Articles for personal hygiene and wellness, esoteric products and beauty products",Alpha Mega,5.302272727272728
+NannysSensitiveΒρεφικάΠανάκιαJuniorΝο512-25kg44Τεμάχια,9.62,2023-06-26 20:56:15.972652,Baby Care,Alpha Mega,11.427500000000002
+NannysBabyLoveΠάνεςNo6Jumbo18-27Kg30Τεμάχια,6.47,2023-06-26 20:56:17.152518,Baby Care,Alpha Mega,11.427500000000002
+PampersActiveBabyΠάνεςμίαςΧρήσεωςNo.613-18kg68Τεμάχια,15.08,2023-06-26 20:56:18.171648,Baby Care,Alpha Mega,11.427500000000002
+PampersPremiumCareΒρεφικάΠανάκιαNo.12-5kg52Τεμάχια,11.34,2023-06-26 20:56:19.394473,Baby Care,Alpha Mega,11.427500000000002
+HippΒιολογικήΒρεφικήΒρώμηΔημητριακών200g,3.32,2023-06-26 20:56:20.702651,Baby food,Alpha Mega,10.073125000000001
+ΝΟΥΝΟΥΦαρίνΛακτέΣιτάλευρο&Γάλααπό6+Μηνών300g,3.04,2023-06-26 20:56:22.769488,Baby food,Alpha Mega,10.073125000000001
+ΓιώτηςΦαρίνΛακτέαπό6+Μηνών-0.50€300g,2.3,2023-06-26 20:56:23.950247,Baby food,Alpha Mega,10.073125000000001
+ΝΟΥΝΟΥFrisogrowΡόφημαΓάλακτοςσεΣκόνη1-3ΕτώνΝο.3800g,20.24,2023-06-26 20:56:25.134776,Baby food,Alpha Mega,10.073125000000001
+ΝΟΥΝΟΥFrisogrowΓάλαγιαΒρέφησεΣκόνηΝο16+Μηνών800g,23.33,2023-06-26 20:56:26.289902,Baby food,Alpha Mega,10.073125000000001
+ΝΟΥΝΟΥFrisomelΡόφημαΓάλακτοςσεΣκόνηΝο26+Μηνών800g,20.24,2023-06-26 20:56:27.451903,Baby food,Alpha Mega,10.073125000000001
+NestleNanOptiproΒρεφικόΓάλασεΣκόνηΝο4400g,9.51,2023-06-26 20:56:28.553712,Baby food,Alpha Mega,10.073125000000001
+S-26ProgressGoldΡόφημαΓάλακτοςσεΣκόνηNo.3απότον1οΧρόνο400g,7.39,2023-06-26 20:56:29.857004,Baby food,Alpha Mega,10.073125000000001
+7UPΑναψυκτικό8x330ml,4.35,2023-06-26 20:56:30.999229,Soft drinks,Alpha Mega,4.353846153846154
+7UPFreeΑναψυκτικό8x330ml,4.35,2023-06-26 20:56:32.036022,Soft drinks,Alpha Mega,4.353846153846154
+CocaColaΑυθεντικήΓεύση8x330ml,4.45,2023-06-26 20:56:33.500376,Soft drinks,Alpha Mega,4.353846153846154
+CocaColaZeroΑναψυκτικό8x330ml,4.65,2023-06-26 20:56:34.567399,Soft drinks,Alpha Mega,4.353846153846154
+ΚΕΟΆγιοςΝικόλαοςΦυσικόΜεταλλικόΝερό12x500ml,2.99,2023-06-26 20:56:35.831292,Mineral or spring waters,Alpha Mega,2.7870000000000004
+KykkosΦυσικόΜεταλλικόΝερό12x500ml,2.69,2023-06-26 20:56:37.255444,Mineral or spring waters,Alpha Mega,2.7870000000000004
+KykkosΦυσικόΜεταλλικόΝερό6x1.5L,2.35,2023-06-26 20:56:38.385133,Mineral or spring waters,Alpha Mega,2.7870000000000004
+KeanΧυμόςΜάνγκο&ΡόδιΝέκταρ1L,1.69,2023-06-26 20:56:39.587188,Fruit and vegetable juices,Alpha Mega,2.1068421052631585
+ΛανίτηςΧυμόςΠορτοκάλι1L,1.59,2023-06-26 20:56:40.634026,Fruit and vegetable juices,Alpha Mega,2.1068421052631585
+KeanitaΠορτοκάλιΦρουτοποτό9x250ml,4.15,2023-06-26 20:56:41.764110,Fruit and vegetable juices,Alpha Mega,2.1068421052631585
+"LifeΧυμόςμεΜήλο,Καρότο&Πορτοκάλι400ml",1.39,2023-06-26 20:56:42.940696,Fruit and vegetable juices,Alpha Mega,2.1068421052631585
+LifeΚαλημέραΧυμόςΠορτοκάλι1L,2.45,2023-06-26 20:56:44.127849,Fruit and vegetable juices,Alpha Mega,2.1068421052631585
+LifeΧυμόςΠορτοκάλι400ml,1.39,2023-06-26 20:56:45.354124,Fruit and vegetable juices,Alpha Mega,2.1068421052631585
+ΑλφαμέγαΨωµίΟλικήςΑλέσεωςσεΦέτες900g,2.05,2023-06-26 20:56:46.442640,Bread,Alpha Mega,1.7366666666666664
+ΑλφαμέγαΨωµίΟλικήςΑλέσεωςσεΦέτες500g,1.61,2023-06-26 20:56:47.480451,Bread,Alpha Mega,1.7366666666666664
+ΑλφαμέγαΛευκόΨωμί500g,1.29,2023-06-26 20:56:48.648674,Bread,Alpha Mega,1.7366666666666664
+ΑλφαμέγαΧωριάτικοψωμί850g,1.61,2023-06-26 20:56:49.628776,Bread,Alpha Mega,1.7366666666666664
+ΑλφαμέγαΆσπροΨωµίσεΦέτες900g,1.86,2023-06-26 20:56:50.633340,Bread,Alpha Mega,1.7366666666666664
+ΑλφαμέγαΆσπροΨωµίσεΦέτες500g,1.42,2023-06-26 20:56:51.733461,Bread,Alpha Mega,1.7366666666666664
+Άρτοζυμ5ΠαφίτικεςΠίττεςγιαΣουβλάκια750g,2.47,2023-06-26 20:56:52.878197,Other bakery products,Alpha Mega,3.001818181818181
+NutriFreeψωμάκιαγιαΜπέργκερx3110g,2.56,2023-06-26 20:56:54.319775,Other bakery products,Alpha Mega,3.001818181818181
+ΚρουασάνΒουτύρου80g,0.99,2023-06-26 20:56:55.492552,Other bakery products,Alpha Mega,3.001818181818181
+ΧαλλουμωτήΤυλιχτή165g,1.99,2023-06-26 20:56:56.986360,Other bakery products,Alpha Mega,3.001818181818181
+ΕλιωτήΤυλιχτή165g,1.99,2023-06-26 20:56:58.351548,Other bakery products,Alpha Mega,3.001818181818181
+SweetVanillaΚέικΓεωγραφίας1kg,8.99,2023-06-26 20:56:59.468708,Other bakery products,Alpha Mega,3.001818181818181
+Jenny’sHomeΔάκτυλα300g,4.55,2023-06-26 20:57:00.897032,Other bakery products,Alpha Mega,3.001818181818181
+7DaysMiniBakeRollsμεΓεύσηΠίτσα80g,1.19,2023-06-26 20:57:01.992135,Other bakery products,Alpha Mega,3.001818181818181
+BakandysΚριτσίνιαμεΕλαιόλαδο250g,3.5,2023-06-26 20:57:03.155355,Other bakery products,Alpha Mega,3.001818181818181
+ΑλφαμέγαΠαξιμαδάκιαΚανέλας350g,3.19,2023-06-26 20:57:04.395807,Other bakery products,Alpha Mega,3.001818181818181
+JohnsofΔιπλοφουρνιστάΚρουτόνιαΟλικήςΑλέσεως320g,2.69,2023-06-26 20:57:05.506556,Other bakery products,Alpha Mega,3.001818181818181
+EliteΦρυγανιέςΣίτουμεΣίκαλη3+1Δώρο360g,2.6,2023-06-26 20:57:06.594979,Other bakery products,Alpha Mega,3.001818181818181
+EliteΦρυγανιέςΟλικήςΆλεσης3+1Δώρο360g,2.75,2023-06-26 20:57:07.675795,Other bakery products,Alpha Mega,3.001818181818181
+BakandysΠαξιμάδιαμεΣικάλη250g,2.39,2023-06-26 20:57:08.978308,Other bakery products,Alpha Mega,3.001818181818181
+JohnsofΤραγανόΚείκΣταφίδας&ΑμυγδάλουNapolitano240g,3.19,2023-06-26 20:57:10.113982,Other bakery products,Alpha Mega,3.001818181818181
+Quaker100%ΝιφάδεςΒρώμηςΟλικήςΆλεσης500g,2.25,2023-06-26 20:57:11.163223,Breakfast Cereals,Alpha Mega,3.6726666666666667
+QuakerΤραγανέςΜπουκιέςΔημητριακάμεΒρώμη&ΣοκολάταΓάλακτος450g,3.49,2023-06-26 20:57:12.206008,Breakfast Cereals,Alpha Mega,3.6726666666666667
+OreoO’sΔημητριακά350g,3.29,2023-06-26 20:57:13.451908,Breakfast Cereals,Alpha Mega,3.6726666666666667
+Kellogg'sCornFlakesΔημητριακά375g,2.79,2023-06-26 20:57:14.511397,Breakfast Cereals,Alpha Mega,3.6726666666666667
+Kellogg’sCocoPopsChocosΔημητριακάμεΓεύσηΣοκολάτας375g,3.39,2023-06-26 20:57:15.516502,Breakfast Cereals,Alpha Mega,3.6726666666666667
+Kellogg’sCocoPopsΔημητριακάμεΓεύσηΣοκολάτας500g,3.99,2023-06-26 20:57:16.577722,Breakfast Cereals,Alpha Mega,3.6726666666666667
+Kellogg’sMielPopsLoopsΔημητριακά330g,3.79,2023-06-26 20:57:18.681941,Breakfast Cereals,Alpha Mega,3.6726666666666667
+BarillaΣπαγγέτιNo5500g,1.15,2023-06-26 20:57:19.731922,Pasta products and couscous,Alpha Mega,2.075909090909091
+MelissaPrimoGustoΣπαγγέτιNo6500g,1.39,2023-06-26 20:57:20.868645,Pasta products and couscous,Alpha Mega,2.075909090909091
+MelissaPrimoGustoΚριθαράκι500g,1.49,2023-06-26 20:57:21.936613,Pasta products and couscous,Alpha Mega,2.075909090909091
+ΜιτσίδηςΜακαρόνιαΣπαγέττι500g,1.35,2023-06-26 20:57:22.981220,Pasta products and couscous,Alpha Mega,2.075909090909091
+ΜιτσίδηςΚριθαράκι500g,1.2,2023-06-26 20:57:23.999284,Pasta products and couscous,Alpha Mega,2.075909090909091
+ΜιτσίδηςΜακαρόνιαMezzani'Α'500g,1.49,2023-06-26 20:57:25.148875,Pasta products and couscous,Alpha Mega,2.075909090909091
+ΜιτσίδηςΧωριάτικαΜακαρόνια500g,1.45,2023-06-26 20:57:26.166499,Pasta products and couscous,Alpha Mega,2.075909090909091
+ΑΛΦΑΜΕΓΑΣπαγγέτι500g,0.79,2023-06-26 20:57:27.179748,Pasta products and couscous,Alpha Mega,2.075909090909091
+3AΡύζιΜπαρποϊλΟυραγουάης1kg,2.39,2023-06-26 20:57:28.438920,Rice,Alpha Mega,3.0185000000000004
+Ben'sOriginalΜακρύκοκκοΡύζιParboiledΤέλειοσε10Λεπτά1kg,3.99,2023-06-26 20:57:29.851011,Rice,Alpha Mega,3.0185000000000004
+TildaΡυζιbasmati1kg,4.99,2023-06-26 20:57:31.123529,Rice,Alpha Mega,3.0185000000000004
+3ΑΡύζιΜπασμάτι1kg,3.39,2023-06-26 20:57:32.368542,Rice,Alpha Mega,3.0185000000000004
+3ΑΡύζιΤζιασμίν1kg,3.39,2023-06-26 20:57:33.537716,Rice,Alpha Mega,3.0185000000000004
+LiskoΠουργούριΟλικήςΆλεσης500g,1.49,2023-06-26 20:57:34.630370,Rice,Alpha Mega,3.0185000000000004
+ΜιτσίδηςΠουργούριγιαΠιλάφι500g,1.99,2023-06-26 20:57:35.694692,Rice,Alpha Mega,3.0185000000000004
+ΜιτσίδηςΠουργούριγιαΠιλάφι1kg,3.5,2023-06-26 20:57:36.859503,Rice,Alpha Mega,3.0185000000000004
+ΑγίαΣκέπηΠλιγούριΟργανικήςΓεωργίας500gr,2.35,2023-06-26 20:57:38.023813,Rice,Alpha Mega,3.0185000000000004
+ΑλφαμέγαΨιλόΘαλασσινόΕπιτραπέζιοΑλάτι500g,0.59,2023-06-26 20:57:39.194242,"Salt, spices and culinary herbs",Alpha Mega,1.0934482758620687
+CarnationSpicesΠιπέριΜαύροΑλεσμένο34g,1.5,2023-06-26 20:57:40.382096,"Salt, spices and culinary herbs",Alpha Mega,1.0934482758620687
+CarnationΚανέλαΑλεσμένη40g,1.09,2023-06-26 20:57:41.553036,"Salt, spices and culinary herbs",Alpha Mega,1.0934482758620687
+CarnationΠάπρικα(ΠιπέριΓλυκό)50g,1.29,2023-06-26 20:57:42.697414,"Salt, spices and culinary herbs",Alpha Mega,1.0934482758620687
+CarnationΚουρκουμάς(Κιτρινόριζα)50g,1.09,2023-06-26 20:57:43.702092,"Salt, spices and culinary herbs",Alpha Mega,1.0934482758620687
+CarnationSpicesΔιάφοραΒότανα15g,0.95,2023-06-26 20:57:44.816271,"Salt, spices and culinary herbs",Alpha Mega,1.0934482758620687
+CarnationSpicesΣκόρδοΣκόνη50g,1.35,2023-06-26 20:57:45.990463,"Salt, spices and culinary herbs",Alpha Mega,1.0934482758620687
+CarnationSpicesΡίγανη15g,0.95,2023-06-26 20:57:47.055113,"Salt, spices and culinary herbs",Alpha Mega,1.0934482758620687
+CarnationSpicesΘυμάρι20g,0.95,2023-06-26 20:57:48.144655,"Salt, spices and culinary herbs",Alpha Mega,1.0934482758620687
+CarnationSpicesΚόλιανδροςσεΣκόνη535g,0.95,2023-06-26 20:57:49.140445,"Salt, spices and culinary herbs",Alpha Mega,1.0934482758620687
+CarnationSpicesΜαϊντανός15g,0.95,2023-06-26 20:57:50.185556,"Salt, spices and culinary herbs",Alpha Mega,1.0934482758620687
+CarnationSpicesΒασιλικός20g,0.95,2023-06-26 20:57:51.353383,"Salt, spices and culinary herbs",Alpha Mega,1.0934482758620687
+CarnationSpicesΆνηθος15g,0.95,2023-06-26 20:57:52.422328,"Salt, spices and culinary herbs",Alpha Mega,1.0934482758620687
+CarnationSpicesΔεντρολίβανο(Λασμαρί)20g,0.95,2023-06-26 20:57:53.525367,"Salt, spices and culinary herbs",Alpha Mega,1.0934482758620687
+ΛειβαδιώτηςΑμύγδαλα200g,3.95,2023-06-26 20:57:54.564515,Dried fruit and nuts,Alpha Mega,3.6031818181818185
+SeranoΚάσιουςΩμά140g,3.19,2023-06-26 20:57:55.742079,Dried fruit and nuts,Alpha Mega,3.6031818181818185
+ΛειβαδιώτηΚαρυδόψιχα140g,3.7,2023-06-26 20:57:57.257941,Dried fruit and nuts,Alpha Mega,3.6031818181818185
+SeranoΚαρυδόψιχες130g,3.35,2023-06-26 20:57:58.198013,Dried fruit and nuts,Alpha Mega,3.6031818181818185
+SeranoΦιστικόψιχεςΨημένεςμεΑλάτι1+1Δώρο125g,1.7,2023-06-26 20:57:59.214364,Dried fruit and nuts,Alpha Mega,3.6031818181818185
+ΠαστάΣύκα500g,6.25,2023-06-26 20:58:00.351917,Dried fruit and nuts,Alpha Mega,3.6031818181818185
+SeranoSnackingGoodΑποξηραμέναΒερίκοκα250g,4.5,2023-06-26 20:58:01.271423,Dried fruit and nuts,Alpha Mega,3.6031818181818185
+SeranoSnackingGoodΑποξηραμέναΔαμάσκηνα275g,3.75,2023-06-26 20:58:02.341862,Dried fruit and nuts,Alpha Mega,3.6031818181818185
+TascoNaturalΑποξηραμέναΧρυσόμηλα300g,7.59,2023-06-26 20:58:03.491484,Dried fruit and nuts,Alpha Mega,3.6031818181818185
+ΦοινίκιαDegler500g,2.5,2023-06-26 20:58:04.473652,Dried fruit and nuts,Alpha Mega,3.6031818181818185
+SeranoΣταφίδες350g,1.99,2023-06-26 20:58:05.589310,Dried fruit and nuts,Alpha Mega,3.6031818181818185
+ΑλφαμεγαΜέλι475g,3.19,2023-06-26 20:58:06.692844,"Jams, marmalades and honey",Alpha Mega,3.6856250000000004
+HΩραίαΆλωνΜέλιΑνθέων475g,4.95,2023-06-26 20:58:08.094222,"Jams, marmalades and honey",Alpha Mega,3.6856250000000004
+ΤοΤζιβέρτιΜέλιΑνθέων500g,6.4,2023-06-26 20:58:09.176850,"Jams, marmalades and honey",Alpha Mega,3.6856250000000004
+ΤζιβέρτιΚυπριακόΜέλιΑνθέων485g,5.95,2023-06-26 20:58:10.297443,"Jams, marmalades and honey",Alpha Mega,3.6856250000000004
+CasinoΜαρμελάδαΦράουλας370g,2.29,2023-06-26 20:58:11.424497,"Jams, marmalades and honey",Alpha Mega,3.6856250000000004
+NutellaΚρέμαΦουντουκιούκαιΚακάο200g,2.59,2023-06-26 20:58:12.535651,"Jams, marmalades and honey",Alpha Mega,3.6856250000000004
+JohnsofΦυστικοβούτυροΤραγανό340g,3.45,2023-06-26 20:58:13.700079,"Jams, marmalades and honey",Alpha Mega,3.6856250000000004
+ΌλυμποςΦυστικοβούτυροΑπαλό350g,3.49,2023-06-26 20:58:14.891182,"Jams, marmalades and honey",Alpha Mega,3.6856250000000004
+Γ.ΧαραλάμπουςΓαριδάκια10x22g,2.35,2023-06-26 20:58:16.014727,Crisps,Alpha Mega,2.3
+PelargosΕλαφράΣυμπυκνωμένοςΧυμόςΤομάτας3x250g,1.35,2023-06-26 20:58:17.272315,"Sauces, condiments",Alpha Mega,1.9023809523809523
+ΜιτσίδηςΠάσταΝτομάτας4X70g,2.3,2023-06-26 20:58:18.876772,"Sauces, condiments",Alpha Mega,1.9023809523809523
+BlossomΠάσταΝτομάτας4X70g,2.19,2023-06-26 20:58:20.235551,"Sauces, condiments",Alpha Mega,1.9023809523809523
+KyknosΤοματοπολτόςΔιπλήςΣυμπύκνωσης410g,1.65,2023-06-26 20:58:21.333090,"Sauces, condiments",Alpha Mega,1.9023809523809523
+ΜιτσίδησΠεραστήΝτομάτα-PassataΟικονομικήΣυσκευασία3x200g,1.59,2023-06-26 20:58:22.341782,"Sauces, condiments",Alpha Mega,1.9023809523809523
+MaggiΖωμόςΚότας132g,1.65,2023-06-26 20:58:23.802127,"Sauces, condiments",Alpha Mega,1.9023809523809523
+MaggiΖωμόςΛαχανικών176g,2.15,2023-06-26 20:58:24.816101,"Sauces, condiments",Alpha Mega,1.9023809523809523
+MaggiΖωμόςΓιαΖυμαρικά132g,2.19,2023-06-26 20:58:25.890864,"Sauces, condiments",Alpha Mega,1.9023809523809523
+KnorrΖωμόςΚότας120g,1.19,2023-06-26 20:58:26.939002,"Sauces, condiments",Alpha Mega,1.9023809523809523
+KnorrΖωμόςΛαχανικών120g,1.45,2023-06-26 20:58:27.980234,"Sauces, condiments",Alpha Mega,1.9023809523809523
+ΆγιοςΓεώργιοςΚυπριακόΕξαιρετικόΠαρθένοΕλαιόλαδο1L,6.3,2023-06-26 20:58:29.032557,Olive Oil,Alpha Mega,10.195
+ΑλφαμέγαΚυπριακόΕξαιρετικόΠαρθένοΕλαιόλαδο2L,12.49,2023-06-26 20:58:30.054556,Olive Oil,Alpha Mega,10.195
+ΣΕΚΕΠΕξαιρετικόΠαρθένοΕλαιόλαδο1L,7.49,2023-06-26 20:58:31.105780,Olive Oil,Alpha Mega,10.195
+LesieurΗλιανθέλαιο3L,8.79,2023-06-26 20:58:32.655455,Other edible oils,Alpha Mega,8.014285714285714
+AmbrosiaΗλιανθέλαιο2L,4.99,2023-06-26 20:58:33.752400,Other edible oils,Alpha Mega,8.014285714285714
+AmbrosiaΗλιανθέλαιο3L,6.99,2023-06-26 20:58:34.972715,Other edible oils,Alpha Mega,8.014285714285714
+SevycoΆσπροςΤόνοςΣεΕλαιόλαδο4X95g,4.6,2023-06-26 20:58:36.383106,Other preserved or processed fish and seafood-based preparations,Alpha Mega,6.3325000000000005
+SevycoΤόνοςΣεΝερό4X185g,7.6,2023-06-26 20:58:37.430185,Other preserved or processed fish and seafood-based preparations,Alpha Mega,6.3325000000000005
+RioMareΤόνοςΣεΕλαιόλαδο2x160g,5.99,2023-06-26 20:58:38.502299,Other preserved or processed fish and seafood-based preparations,Alpha Mega,6.3325000000000005
+RioMareΤόνοςΣεΕλαιόλαδο3x80g,4.99,2023-06-26 20:58:39.538896,Other preserved or processed fish and seafood-based preparations,Alpha Mega,6.3325000000000005
+ChameauΣαρδελάκιασεΝερό125g,1.25,2023-06-26 20:58:40.691189,"Dried, smoked or salted fish and seafood",Alpha Mega,1.9275000000000002
+TrataΡέγγαΚαπνιστήΦιλέτοσεΦυτικόΛάδι160g,2.2,2023-06-26 20:58:41.768202,"Dried, smoked or salted fish and seafood",Alpha Mega,1.9275000000000002
+CasinoΦιλέτοΣκουμπρίσεΣάλτσαEscabeche169g,1.99,2023-06-26 20:58:42.782561,"Dried, smoked or salted fish and seafood",Alpha Mega,1.9275000000000002
+ΚαμήλαΑντσούγιεςΦιλέτoσεΗλιανθέλαιο50g,1.49,2023-06-26 20:58:44.010279,"Dried, smoked or salted fish and seafood",Alpha Mega,1.9275000000000002
+KarlaΚορνΜπηφ340g,3.19,2023-06-26 20:58:45.179611,Other meat preparations,Alpha Mega,4.335999999999999
+TulipΧοιρινόΛάντσιον200g,2.19,2023-06-26 20:58:46.320819,Other meat preparations,Alpha Mega,4.335999999999999
+TulipΤσόπτΧάμ200g,2.49,2023-06-26 20:58:47.556328,Other meat preparations,Alpha Mega,4.335999999999999
+ZwanΛάντσιονΜητ200g,2.25,2023-06-26 20:58:48.630067,Other meat preparations,Alpha Mega,4.335999999999999
+ZwanΤσόπτΧαμ&Χοιρινό200g,3.49,2023-06-26 20:58:49.686235,Other meat preparations,Alpha Mega,4.335999999999999
+ZwanLuncheonΚοτόπουλο200g,2.45,2023-06-26 20:58:50.735978,Other meat preparations,Alpha Mega,4.335999999999999
+BonduelleΚόκκιναΦασολιά200g,1.49,2023-06-26 20:58:51.889826,"Dried vegetables, other preserved or processed vegetables",Alpha Mega,1.2141666666666666
+CampagnaΡεβίθια400g,1.09,2023-06-26 20:58:52.858968,"Dried vegetables, other preserved or processed vegetables",Alpha Mega,1.2141666666666666
+CampagnaΦασόλιαΆσπρα400g,1.15,2023-06-26 20:58:53.891483,"Dried vegetables, other preserved or processed vegetables",Alpha Mega,1.2141666666666666
+ΑλφαμέγαΚαλαμπόκι340g,1.29,2023-06-26 20:58:54.930936,"Dried vegetables, other preserved or processed vegetables",Alpha Mega,1.2141666666666666
+MorrisonsΦασόλιασεΣάλτσαΝτομάτας410g,1.35,2023-06-26 20:58:56.154019,"Dried vegetables, other preserved or processed vegetables",Alpha Mega,1.2141666666666666
+ΑλφαμέγαΜανιτάριαΚομμένα400g,1.79,2023-06-26 20:58:57.230561,"Dried vegetables, other preserved or processed vegetables",Alpha Mega,1.2141666666666666
+ΝΟΥΝΟΥΓάλαΣυμπυκνωμένο400g,1.48,2023-06-26 20:58:58.295861,Other milk products,Alpha Mega,1.789090909090909
+NestleΖαχαρούχοΓάλαΣυμπυκνωμένο397g,2.56,2023-06-26 20:58:59.374777,Other milk products,Alpha Mega,1.789090909090909
+ΝουνούΓάλαΖαχαρούχο397g,1.4,2023-06-26 20:59:00.481630,Other milk products,Alpha Mega,1.789090909090909
+ΝΟΥΝΟΥΣυμπυκνωμένοΓάλα10Χ15g,1.29,2023-06-26 20:59:01.682702,Other milk products,Alpha Mega,1.789090909090909
+ΧαραλαμπίδηςΚρίστηςΚρέμαΓάλακτος35%Λιπαρά250ml,2.39,2023-06-26 20:59:02.779194,Other milk products,Alpha Mega,1.789090909090909
+HeinzΣούπαΜανιταριών400g,2.29,2023-06-26 20:59:03.729145,Other food products n.e.c.,Alpha Mega,2.0766666666666667
+HeinzΣούπαΝτομάτας400g,2.29,2023-06-26 20:59:04.799679,Other food products n.e.c.,Alpha Mega,2.0766666666666667
+FrouFrouJokerΜπισκότομεΓεύσηΣοκολάταΓάλακτος9+3Δώρο300g,3.69,2023-06-26 20:59:05.811449,Other food products n.e.c.,Alpha Mega,2.0766666666666667
+FrouFrouΜπισκόταMorningCoffee150g,1.29,2023-06-26 20:59:07.010687,Other food products n.e.c.,Alpha Mega,2.0766666666666667
+ΠαπαδοπούλουΜπισκόταΠτι-ΜπερΟλικήςΆλεσης225g,1.55,2023-06-26 20:59:08.186422,Other food products n.e.c.,Alpha Mega,2.0766666666666667
+OreoΜπισκόταμεΚρέμαΒανίλιας154g,1.2,2023-06-26 20:59:09.194172,Other food products n.e.c.,Alpha Mega,2.0766666666666667
+KinderCardsΓκοφρέταμεΚρεμώδηΓέμισηαπόΓάλα&Κακάο128g,2.29,2023-06-26 20:59:10.179536,Other food products n.e.c.,Alpha Mega,2.0766666666666667
+ΠαπαδοπούλουΜπισκόταΓεμιστάμεΣοκολάτα200g,1.55,2023-06-26 20:59:11.508854,Other food products n.e.c.,Alpha Mega,2.0766666666666667
+ΑλφαμέγαΛευκήΚρυστάλλινηΖάχαρη1kg,1.39,2023-06-26 20:59:12.595445,Sugar,Alpha Mega,1.44
+ΜιτσίδηςΑλεύριΓιαΌλεςΤιςΧρήσεις1kg,1.35,2023-06-26 20:59:13.777935,Flours and other cereals,Alpha Mega,1.4958333333333336
+ΜιτσίδηςΑλεύριΦαρίνα«00»1kg,1.65,2023-06-26 20:59:14.687139,Flours and other cereals,Alpha Mega,1.4958333333333336
+ΜιτσίδηςΧωριάτικοΑλεύρι1kg,1.7,2023-06-26 20:59:15.974946,Flours and other cereals,Alpha Mega,1.4958333333333336
+ΜιτσίδηςΑλεύριΦαρίναΖαχαροπλαστικής1kg,1.65,2023-06-26 20:59:17.055370,Flours and other cereals,Alpha Mega,1.4958333333333336
+ΑλφαμέγαΑλεύριΦαρίνα«00»1kg,1.19,2023-06-26 20:59:18.227037,Flours and other cereals,Alpha Mega,1.4958333333333336
+ΑλφαμέγαΧωριάτικοΑλεύρι1kg,1.19,2023-06-26 20:59:19.226994,Flours and other cereals,Alpha Mega,1.4958333333333336
+NestleDessertΚουβερτούρα200g,2.49,2023-06-26 20:59:20.589005,Chocolate,Alpha Mega,1.9900000000000002
+CarltonaΣόδα175g,1.09,2023-06-26 20:59:21.656040,Confectionery products,Alpha Mega,1.9326315789473683
+RoyalΜπέικινΠάουντερ226g,1.99,2023-06-26 20:59:22.842861,Confectionery products,Alpha Mega,1.9326315789473683
+ΑμαλίαΑνθόνερομεΆρωμαΆνθηΚιτρομηλιάς500ml,0.99,2023-06-26 20:59:23.833293,Confectionery products,Alpha Mega,1.9326315789473683
+CarltonaΆμυλοΑραβοσίτου450g,2.39,2023-06-26 20:59:24.907718,Confectionery products,Alpha Mega,1.9326315789473683
+JohnsofΣαβουαγιάρ200g,1.59,2023-06-26 20:59:25.888622,Confectionery products,Alpha Mega,1.9326315789473683
+ΓιώτηςΜαγιάΣτιγμής3x8g,1.05,2023-06-26 20:59:27.042613,Confectionery products,Alpha Mega,1.9326315789473683
+ΑμαλίαΙνδοκάρυδοΑλεσμένο250g,0.85,2023-06-26 20:59:28.207712,Confectionery products,Alpha Mega,1.9326315789473683
+SpryΦυτικόΜαγειρικόΠροιόν350g,3.3,2023-06-26 20:59:29.479039,Confectionery products,Alpha Mega,1.9326315789473683
+ΑγρούΡοδόσταγμα250ml,2.99,2023-06-26 20:59:31.086136,Confectionery products,Alpha Mega,1.9326315789473683
+ΣυσκευασμένεςΤομάτες1100g,2.52,2023-06-26 20:59:32.195328,Fresh or chilled vegetables other than potatoes and other tubers,Alpha Mega,1.8539999999999999
+ΑγγουράκιαΧωραφιού1kg,1.67,2023-06-26 20:59:33.313218,Fresh or chilled vegetables other than potatoes and other tubers,Alpha Mega,1.8539999999999999
+ΞεράΚρεμμύδια1kg,0.89,2023-06-26 20:59:34.650506,Fresh or chilled vegetables other than potatoes and other tubers,Alpha Mega,1.8539999999999999
+ΣυσκευασμέναΑγγουράκιαΘερμοκηπίου700g,1.25,2023-06-26 20:59:35.648710,Fresh or chilled vegetables other than potatoes and other tubers,Alpha Mega,1.8539999999999999
+GardenFreshΣυσκευασμέναΝτοματίνιαΚυπριακά250g,1.69,2023-06-26 20:59:36.597828,Fresh or chilled vegetables other than potatoes and other tubers,Alpha Mega,1.8539999999999999
+ΣυσκευασμέναΚαρότα750g,1.42,2023-06-26 20:59:37.739962,Fresh or chilled vegetables other than potatoes and other tubers,Alpha Mega,1.8539999999999999
+ΑλφαμέγαΣυσκευασμένοΦρέσκοΜαρούλιΤεμάχιο,0.75,2023-06-26 20:59:39.503440,Fresh or chilled vegetables other than potatoes and other tubers,Alpha Mega,1.8539999999999999
+ΣυσκευασμένεςΧρωματιστέςΠιπεριές700g,4.4,2023-06-26 20:59:40.577791,Fresh or chilled vegetables other than potatoes and other tubers,Alpha Mega,1.8539999999999999
+Σκόρδο70g,0.39,2023-06-26 20:59:41.622649,Fresh or chilled vegetables other than potatoes and other tubers,Alpha Mega,1.8539999999999999
+ΦρέσκεςΠατάτες2kg,1.78,2023-06-26 20:59:42.539222,Potatoes,Alpha Mega,2.04
+ΜπανάνεςChiquita1kg,2.29,2023-06-26 20:59:43.442566,Fresh or chilled fruit,Alpha Mega,2.9978947368421047
+PinkLadyΜήλα1200g,4.67,2023-06-26 20:59:44.475228,Fresh or chilled fruit,Alpha Mega,2.9978947368421047
+ΣταφύλιΆσπροχωρίςΚουκούτσια500g,3.0,2023-06-26 20:59:45.774243,Fresh or chilled fruit,Alpha Mega,2.9978947368421047
+ΣυσκευασμέναΜήλαGrannySmith1200g,3.59,2023-06-26 20:59:46.806695,Fresh or chilled fruit,Alpha Mega,2.9978947368421047
+ΣυσκευασμέναΑχλάδιαΣούπερ800g,2.63,2023-06-26 20:59:47.877236,Fresh or chilled fruit,Alpha Mega,2.9978947368421047
+ΑλφαμέγαΜύρτιλα125g,3.49,2023-06-26 20:59:49.126083,Fresh or chilled fruit,Alpha Mega,2.9978947368421047
+ΣυσκευασμέναΑκτινίδια900g,3.5,2023-06-26 20:59:50.454035,Fresh or chilled fruit,Alpha Mega,2.9978947368421047
+ΠορτοκάλιαγιαΧυμό1.2kg,1.19,2023-06-26 20:59:52.095751,Fresh or chilled fruit,Alpha Mega,2.9978947368421047
+ΑλφαμέγαFreshToGoΣυσκευασμένοςΧοιρινόςΚιμάς800g,3.19,2023-06-26 20:59:53.155681,Pork,Alpha Mega,5.125
+ΑλφαμέγαΧοιρινέςΣεφταλιές850g,4.24,2023-06-26 20:59:54.193213,Pork,Alpha Mega,5.125
+ΑλφαμέγαFreshToGoΧοιρινήΣούβλασεΣυσκευασία1kg,4.79,2023-06-26 20:59:55.346335,Pork,Alpha Mega,5.125
+ΑλφαμέγαFreshToGoΧοιρινέςΜπριζόλεςΛαιμούσεΣυσκευασία750g,4.34,2023-06-26 20:59:56.479503,Other meats,Alpha Mega,5.126666666666666
+ChickenFarmΣτήθοςΦιλέτοΚοτόπουλου850g,6.79,2023-06-26 20:59:57.451724,Poultry,Alpha Mega,9.885
+ChickenFarmΝωπόΟλόκληροΚοτόπουλοΚομμένο2kg,11.38,2023-06-26 20:59:58.406717,Poultry,Alpha Mega,9.885
+ΑλφαμέγαΣυσκευασμένοΑρνίγιαΣούβλα1500g,16.49,2023-06-26 20:59:59.390093,Lamb and goat,Alpha Mega,14.719999999999999
+ΑλφαμέγαFreshToGoΜοσχαρίσιοςΚιμάςσεΣυσκευασία800g,7.19,2023-06-26 21:00:00.442742,Beef and veal,Alpha Mega,6.395
+ΦιλέτοΦρέσκουΣολομούΝορβηγίας250g,8.0,2023-06-26 21:00:02.430974,Fresh or chilled fish,Alpha Mega,9.2
+ΦρέσκοΚυπριακόΛαβράκι550g,7.14,2023-06-26 21:00:03.780296,Fresh or chilled fish,Alpha Mega,9.2
+ΦρέσκιαΚυπριακήΤσιπούρα550g,5.49,2023-06-26 21:00:05.049333,Fresh or chilled fish,Alpha Mega,9.2
+LevantinaFishΤσιπούραΑπολεπισμένο&Καθαρισμένο700g,8.37,2023-06-26 21:00:06.437055,Fresh or chilled fish,Alpha Mega,9.2
+MeggleUHTΠλήρεςΓάλαΜακρύςΔιάρκειας3.5%Λιπαρά1L,1.19,2023-06-26 21:00:07.776179,Preserved milk,Alpha Mega,1.2325
+LauraΟμοιογενοποιημένοΓάλα1.5%Λιπαρά1L,1.13,2023-06-26 21:00:08.886488,Preserved milk,Alpha Mega,1.2325
+ΛανίτηςΦρέσκοΓάλαΕλαφρύ1.5%Λιπαρά2L,2.79,2023-06-26 21:00:10.732492,Low fat Milk,Alpha Mega,2.3425000000000002
+ΛανίτηςΦρέσκοΓάλαΕλαφρύ1.5%Λιπαρά1.5L,2.14,2023-06-26 21:00:11.951123,Low fat Milk,Alpha Mega,2.3425000000000002
+ΧαραλαμπίδηςΚρίστηςΦρέσκοΓάλαDelact1.5%Λιπαρά2L,3.14,2023-06-26 21:00:13.284577,Low fat Milk,Alpha Mega,2.3425000000000002
+"ΧαραλαμπίδηςΚρίστηςΦρέσκοΓάλαΕλαφρύ,1.5%λιπαρά2L",2.85,2023-06-26 21:00:14.426275,Low fat Milk,Alpha Mega,2.3425000000000002
+"ΧαραλαμπίδηςΚρίστηςΦρέσκοΓάλαΕλαφρύ,1.5%Λιπαρά1L",1.48,2023-06-26 21:00:15.545503,Low fat Milk,Alpha Mega,2.3425000000000002
+"ΧαραλαμπίδηςΚρίστηςΦρέσκοΓάλαΕλαφρύ,1.5%Λιπαρά1.5L",2.14,2023-06-26 21:00:16.473612,Low fat Milk,Alpha Mega,2.3425000000000002
+ΛανίτηςΦρέσκοΓάλα3%Λιπαρά2L,2.79,2023-06-26 21:00:17.473319,Whole Milk,Alpha Mega,2.8699999999999997
+"ΧαραλαμπίδηςΚρίστηςφρέσκογάλαΠλήρες,3%λιπαρά2L",2.85,2023-06-26 21:00:18.503097,Whole Milk,Alpha Mega,2.8699999999999997
+ΧαραλαμπίδηςΚρίστηςΑυθεντικόΓιαούρτιΣτραγγάτοLight1kg,3.99,2023-06-26 21:00:19.571285,Yogurt,Alpha Mega,3.886
+ZitaSuperΣτραγγιστόΓιαούρτι1kg,4.15,2023-06-26 21:00:20.564715,Yogurt,Alpha Mega,3.886
+ZitaΣτραγγιστόΆπαχοΓιαούρτι0%Λιπαρά1kg,4.15,2023-06-26 21:00:21.662684,Yogurt,Alpha Mega,3.886
+ΧαραλαμπίδηςΚρίστηςΣτραγγιστόΓιαούρτι«Στραγγάτο»0%Λιπαρά1kg,4.15,2023-06-26 21:00:22.744139,Yogurt,Alpha Mega,3.886
+AlambraΠρόβειοΓιαούρτι700g,2.99,2023-06-26 21:00:23.851606,Yogurt,Alpha Mega,3.886
+LurpakΒούτυροΑνάλατο250g,3.59,2023-06-26 21:00:24.857056,Butter,Alpha Mega,4.033333333333333
+KerrygoldΑγνόΙρλανδικόΒούτυροAλατισμένο250g,3.99,2023-06-26 21:00:25.941500,Butter,Alpha Mega,4.033333333333333
+LurpakΒούτυροΕλαφρώςΑλατισμένο250g,3.59,2023-06-26 21:00:26.997722,Butter,Alpha Mega,4.033333333333333
+VitaliteΦυτικόΆλειμμα500g,3.69,2023-06-26 21:00:28.624850,Margarine and other vegetable fats,Alpha Mega,2.9000000000000004
+CharalambidesChristisΜαργαρίνηOriginal500g,2.69,2023-06-26 21:00:29.582679,Margarine and other vegetable fats,Alpha Mega,2.9000000000000004
+CharalambidesChristisΜαργαρίνηLight500g,2.69,2023-06-26 21:00:30.698021,Margarine and other vegetable fats,Alpha Mega,2.9000000000000004
+FloraOriginalΜαργαρίνη100%Φυτικό450g,3.55,2023-06-26 21:00:31.806517,Margarine and other vegetable fats,Alpha Mega,2.9000000000000004
+FloraLightΜαργαρίνη100%Φυτικό450g,3.65,2023-06-26 21:00:32.894982,Margarine and other vegetable fats,Alpha Mega,2.9000000000000004
+Βιτάμ100%ΦυτικήΜαργαρίνημεΜειωμένεςΘερμίδες225g,1.25,2023-06-26 21:00:34.026403,Margarine and other vegetable fats,Alpha Mega,2.9000000000000004
+ΝικηφόρουΦρέσκαΑυγάΑχυρώναΜεγάλα12Τεμάχια,3.67,2023-06-26 21:00:35.062326,Eggs,Alpha Mega,3.735
+ΑλφαμέγαFreshToGoΜπιφτέκιαΓαλοπούλας600g,7.49,2023-06-26 21:00:36.446984,Other meats,Alpha Mega,5.126666666666666
+ΑλφαμέγαFreshToGoΧοιρινέςΜπριζόλεςμεΜεξικάνικηΜαρινάδα750g,4.13,2023-06-26 21:00:37.447976,Other meats,Alpha Mega,5.126666666666666
+ΑλφαμέγαFreshToGoΧοιρινόΠαναρισμένο500g,3.75,2023-06-26 21:00:38.418923,Other meats,Alpha Mega,5.126666666666666
+ΑλφαμέγαFreshToGoΧοιρινάΣτηθόπλευραμεΜαρινάδαΤέξας700g,6.06,2023-06-26 21:00:39.441656,Other meats,Alpha Mega,5.126666666666666
+ΑλφαμέγαFreshToGoΧοιρινάΜπιφτέκια600g,4.99,2023-06-26 21:00:40.490616,Other meats,Alpha Mega,5.126666666666666
+BarbersΤυρίΤσένταρΕλαφρύ400g,5.6,2023-06-26 21:00:41.450307,Cheese and Curd,Alpha Mega,5.551428571428572
+BarbersΚόκκινοΤυρίΤσένταρLeicester400g,6.4,2023-06-26 21:00:42.384049,Cheese and Curd,Alpha Mega,5.551428571428572
+IleDeFranceΚαμαμπέρΤυρί125g,4.79,2023-06-26 21:00:43.465845,Cheese and Curd,Alpha Mega,5.551428571428572
+IleDeFranceAuBleuΤυρίΜπρι125g,5.5,2023-06-26 21:00:44.461407,Cheese and Curd,Alpha Mega,5.551428571428572
+IleDeFranceΚαμαμπέρΤυρί125g,4.79,2023-06-26 21:00:45.463382,Cheese and Curd,Alpha Mega,5.551428571428572
+ΑλφαμέγαΚεφαλοτύριΚρήτης450g,7.88,2023-06-26 21:00:46.447565,Cheese and Curd,Alpha Mega,5.551428571428572
+IledeFranceΚατσικίσιοΤυρίChevre200g,3.9,2023-06-26 21:00:48.114530,Cheese and Curd,Alpha Mega,5.551428571428572
+ΑλφαμέγαΜπέικον150g,2.19,2023-06-26 21:00:49.143835,"Dried, salted or smoked meat",Alpha Mega,2.902
+ΑλφαμέγαΧαμ150g,2.19,2023-06-26 21:00:50.222933,"Dried, salted or smoked meat",Alpha Mega,2.902
+ΑλφαμέγαΛούντζα150g,2.69,2023-06-26 21:00:51.248890,"Dried, salted or smoked meat",Alpha Mega,2.902
+AlphamegaHungarianTypeSalami100g,2.19,2023-06-26 21:00:52.215752,"Dried, salted or smoked meat",Alpha Mega,2.902
+CitterioProsciuttodiParma60g,5.25,2023-06-26 21:00:53.196520,"Dried, salted or smoked meat",Alpha Mega,2.902
+ExcellentHousewareΕργαλείαΚουζίναςσεΒάση30cm5Τεμάχια,5.99,2023-06-26 21:00:54.784043,Non-Electric Kitchen Utensils and Articles,Alpha Mega,19.306
+MetaltexΞύλοΚοπήςΛαχανικώνΜπαμπού35x25cm,15.95,2023-06-26 21:00:55.831278,Non-Electric Kitchen Utensils and Articles,Alpha Mega,19.306
+TefalUnlimitedΤηγάνι20cmCE,39.95,2023-06-26 21:00:56.836145,Non-Electric Kitchen Utensils and Articles,Alpha Mega,19.306
+BerlingerHausΚατσαρόλαμεΚαπάκι16x8cm,31.95,2023-06-26 21:00:57.801935,Non-Electric Kitchen Utensils and Articles,Alpha Mega,19.306
+FackelmannΑποφλοιωτήςΛαχανικώναπόΑνοξείδωτοΑτσάλι,2.69,2023-06-26 21:00:58.848021,Non-Electric Kitchen Utensils and Articles,Alpha Mega,19.306
+MorphyRichardsΜπλέντερΧειρός600WCE,49.95,2023-06-26 21:00:59.886220,Other Small Electric Household Appliances,Alpha Mega,36.95
+MatesterΦραπέΜίξερμαύρο100wattCE,23.95,2023-06-26 21:01:00.943661,Other Small Electric Household Appliances,Alpha Mega,36.95
+TatayΒούρτσαΤουαλέταςTaupe,4.19,2023-06-26 21:01:02.199939,Repair of Household Appliances,Alpha Mega,13.323333333333332
+TatayΤηλέφωνοΜπάνιουBombay10cm,17.39,2023-06-26 21:01:03.263997,Repair of Household Appliances,Alpha Mega,13.323333333333332
+TatayPVCΕύκαμπτοςΣωλήναςΝτουςΓκρί2m,18.39,2023-06-26 21:01:04.259794,Repair of Household Appliances,Alpha Mega,13.323333333333332
+CanderelμεΓλυκαντικόαπόΕκχύλισματουΦυτούStevia100Δισκία,2.99,2023-06-26 21:01:05.240635,artificial sugar substitutes,Alpha Mega,3.33
+SplendaΕναλλακτικόΖάχαρης75g,4.85,2023-06-26 21:01:06.261614,artificial sugar substitutes,Alpha Mega,3.33
+ΓιώτηςSweet&BalanceΕπιτραπέζιοΓλυκαντικόσεΣκόνη80g,3.49,2023-06-26 21:01:07.341290,artificial sugar substitutes,Alpha Mega,3.33
+CasinoΣουκραλόζηΓλυκαντικόσεΣκόνη75g,1.99,2023-06-26 21:01:08.578110,artificial sugar substitutes,Alpha Mega,3.33
+3AQuinoa400g,2.89,2023-06-26 21:01:09.658737,other cereal products,Alpha Mega,3.295
+GreenMamaBioQuinoa400g,3.95,2023-06-26 21:01:10.687777,other cereal products,Alpha Mega,3.295
+GreenMamaBioChiaSeeds135g,2.35,2023-06-26 21:01:11.806839,other cereal products,Alpha Mega,3.295
+3AChiaSeeds400g,3.99,2023-06-26 21:01:12.890892,other cereal products,Alpha Mega,3.295
+ΣίφουναςΜαύροΜικρόΨωμίΚομμένο500g,1.76,2023-06-26 21:01:13.952936,bread,SupermarketCy,2.039
+ΣίφουναςΟλικήςΨωμίΚομμένο780g,2.29,2023-06-26 21:01:14.905317,bread,SupermarketCy,2.039
+ΣίφουναςΚοινόΨωμίΚομμένο560g,1.48,2023-06-26 21:01:15.893465,bread,SupermarketCy,2.039
+ΣίφουναςΚοινόΨωμίΚομμένο970g,1.9,2023-06-26 21:01:16.895303,bread,SupermarketCy,2.039
+ΣίφουναςΆσπροΨωμί560g,1.67,2023-06-26 21:01:19.878995,bread,SupermarketCy,2.039
+ΣίφουναςΚοινόΨωμί970g,1.9,2023-06-26 21:01:22.760528,bread,SupermarketCy,2.039
+3ΑΑπλήΖωοτροφήΜίλλετΚεχρίΚίτρινο800g,1.25,2023-06-26 21:01:23.754436,Products for Pets,SupermarketCy,1.5
+PedigreeΜεΜοσχάρι400g,1.75,2023-06-26 21:01:35.968564,Products for Pets,SupermarketCy,1.5
+MarobΜαχαίρια12Τεμ,5.99,2023-06-26 21:02:53.500895,"Cutlery, flatware and silverware",SupermarketCy,9.99
+KlemexΣακούλεςΜπλέΜεΚορδόνι75X8059L20Τεμ,1.9,2023-06-26 21:03:17.944127,Cleaning equipment,SupermarketCy,8.172
+LordosΣακούλεςΑνακύκλωσηςΠλαστικό75X8020Τεμ,3.28,2023-06-26 21:03:18.851182,Cleaning equipment,SupermarketCy,8.172
+LordosΣακούλεςΑνακύκλωσηςΧαρτί60X7320Τεμ,1.99,2023-06-26 21:03:20.022862,Cleaning equipment,SupermarketCy,8.172
+KlemexΜεγάλαΣακούλιαΓιαΤρόφιμα100Τεμ,0.95,2023-06-26 21:03:22.900374,Cleaning equipment,SupermarketCy,8.172
+ScotchBriteΠράσινοΣφουγγάριΚουζίνας2+1Δώρο,1.99,2023-06-26 21:03:23.853140,Cleaning equipment,SupermarketCy,8.172
+ViledaΣφουγγάριΓιαΜπάνιο1Τεμ,1.65,2023-06-26 21:03:25.804796,Cleaning equipment,SupermarketCy,8.172
+SanitasΑνοξείδωτοΣύρμα2Τεμ,1.01,2023-06-26 21:03:27.665036,Cleaning equipment,SupermarketCy,8.172
+WettexΣπογγοπετσέτα26cmx20cm,0.89,2023-06-26 21:03:28.658129,Cleaning equipment,SupermarketCy,8.172
+ViledaΞεσκονόπαναΓενικούΚαθαρισμού3Τεμ,3.11,2023-06-26 21:03:30.542901,Cleaning equipment,SupermarketCy,8.172
+StadioΣκούπα1Τεμ,1.99,2023-06-26 21:03:40.522871,Cleaning Equipment,SupermarketCy,3.1922222222222225
+ViledaΣκούπαStandard1Τεμ,4.57,2023-06-26 21:03:41.498035,Cleaning Equipment,SupermarketCy,3.1922222222222225
+PolaΣκούπα1Τεμ,2.49,2023-06-26 21:03:42.418285,Cleaning Equipment,SupermarketCy,3.1922222222222225
+ViledaΣφουγγαρίστραStandard1Τεμ,4.29,2023-06-26 21:03:52.329007,Cleaning Equipment,SupermarketCy,3.1922222222222225
+MyreonΣφουγγαρίστραYellowStrips1Τεμ,2.62,2023-06-26 21:03:54.175514,Cleaning Equipment,SupermarketCy,3.1922222222222225
+ScotchBriteΣφουγγαρίστραClikClak1Τεμ,3.99,2023-06-26 21:03:56.117708,Cleaning Equipment,SupermarketCy,3.1922222222222225
+ViledaUniversalΚοντάρι1Τεμ,2.15,2023-06-26 21:03:57.353791,Cleaning Equipment,SupermarketCy,3.1922222222222225
+SwipeΚοντάριΑσημί1Τεμ,2.35,2023-06-26 21:03:59.210159,Cleaning Equipment,SupermarketCy,3.1922222222222225
+MyreonAluminiumΚοντάρι1Τεμ,4.28,2023-06-26 21:04:02.312428,Cleaning Equipment,SupermarketCy,3.1922222222222225
+Dettol500ml,5.99,2023-06-26 21:04:13.495248,Cleaning and maintenance products,SupermarketCy,5.687826086956521
+CifClassicΚρέμαΓενικούΚαθαρισμού750ml,2.74,2023-06-26 21:04:15.706678,Cleaning and maintenance products,SupermarketCy,5.687826086956521
+RoklinSprayAntibacterialΠολυκαθαριστικό750ml-1€,2.59,2023-06-26 21:04:21.322644,Cleaning and maintenance products,SupermarketCy,5.687826086956521
+"DixanDeepCleanΣκόνη70Πλύσεις3,85kg",11.99,2023-06-26 21:04:44.425685,Cleaning and maintenance products,SupermarketCy,5.687826086956521
+"ΕύρηκαΜασσαλίαςClassicΥγρό48Πλύσεις2,4L-4€",7.05,2023-06-26 21:05:37.689810,Cleaning and maintenance products,SupermarketCy,5.687826086956521
+ComfortPureΜαλακτικόΡούχων2L,3.07,2023-06-26 21:06:00.272251,Cleaning and maintenance products,SupermarketCy,5.687826086956521
+SecretsΛεβάντα&YlangYlangΜαλακτικόΡούχων2L-1€,2.75,2023-06-26 21:06:01.343463,Cleaning and maintenance products,SupermarketCy,5.687826086956521
+LenorLaCollectionLoveΣυμπυκνωμένοΜαλακτικό60Πλύσεις1.38L,4.49,2023-06-26 21:06:17.986252,Cleaning and maintenance products,SupermarketCy,5.687826086956521
+PalmoliveDeliciousOrchidΥγρόΠιάτων500ml,1.98,2023-06-26 21:06:29.677971,Cleaning and maintenance products,SupermarketCy,5.687826086956521
+ΕύρηκαΥγρόΠιάτωνΛεμόνι750ml,1.59,2023-06-26 21:06:31.557984,Cleaning and maintenance products,SupermarketCy,5.687826086956521
+Humana5ΔημητριακαΜεΜπανάναΧωρίςΠροσθήκηΖάχαρης200g,3.57,2023-06-26 21:07:07.721015,Baby food,SupermarketCy,10.073125000000001
+NeutroRobertsDeodorantPowderFreshRollOn50ml,3.3,2023-06-26 21:07:08.662435,"Articles for personal hygiene and wellness, esoteric products and beauty products",SupermarketCy,5.302272727272728
+GarnierSkinActiveMoistureBombTissueMask1Τεμ28g,1.99,2023-06-26 21:07:28.736208,"Articles for personal hygiene and wellness, esoteric products and beauty products",SupermarketCy,5.302272727272728
+JohnsonsΜπατονέτες200Τεμ,2.33,2023-06-26 21:07:39.869870,"Articles for personal hygiene and wellness, esoteric products and beauty products",SupermarketCy,5.302272727272728
+TippysΔίσκοιΝτεμακιγιάζ80Τεμ,1.85,2023-06-26 21:07:49.896665,Pharmaceutical products,SupermarketCy,4.4799999999999995
+GrecoDrugΟινόπνευμα96%350ml,4.99,2023-06-26 21:07:50.843193,Pharmaceutical products,SupermarketCy,4.4799999999999995
+AlokozayΙατρικέςΜάσκεςΠροσώπου10Τεμ,1.2,2023-06-26 21:07:52.710825,Pharmaceutical products,SupermarketCy,4.4799999999999995
+AsproClear18Τεμ,3.45,2023-06-26 21:07:53.618537,Pharmaceutical products,SupermarketCy,4.4799999999999995
+PalmoliveSilkyShineEffectΣαμπουάνΜεΑλόεΒέρα350ml,1.59,2023-06-26 21:08:03.974806,Personal grooming treatments,SupermarketCy,1.59
+DermomedArganOilΚρεμοσάπουνο1000ml,2.89,2023-06-26 21:08:34.305712,"Articles for personal hygiene and wellness, esoteric products and beauty products",SupermarketCy,5.302272727272728
+DermomedΑλόεΒέραΚρεμοσάπουνο1000ml,2.89,2023-06-26 21:09:03.033164,"Articles for personal hygiene and wellness, esoteric products and beauty products",SupermarketCy,5.302272727272728
+ColgateMaxWhiteCrystalMint75ml1+1Δώρο,3.49,2023-06-26 21:09:04.030080,Non-electrical appliances,SupermarketCy,3.49
+ColgateΟδοντόβουρτσαExtraCleanMedium1+1Δωρεάν,1.99,2023-06-26 21:09:05.006447,"Articles for personal hygiene and wellness, esoteric products and beauty products",SupermarketCy,5.302272727272728
+ListerineCoolMintMildTaste500ml1+1,8.15,2023-06-26 21:09:05.971455,"Articles for personal hygiene and wellness, esoteric products and beauty products",SupermarketCy,5.302272727272728
+GilletteBlueIiPlusSlalomΞυραφάκια10Τεμ,5.99,2023-06-26 21:09:15.400460,"Articles for personal hygiene and wellness, esoteric products and beauty products",SupermarketCy,5.302272727272728
+NiveaMenFreshKickAfterShaveBalm100ml,7.9,2023-06-26 21:09:24.835404,"Articles for personal hygiene and wellness, esoteric products and beauty products",SupermarketCy,5.302272727272728
+AlwaysUltraSecureNight12Τεμ,2.28,2023-06-26 21:09:25.797050,"Articles for personal hygiene and wellness, esoteric products and beauty products",SupermarketCy,5.302272727272728
+ΚεοVsopBrandy1L,12.49,2023-06-26 21:09:44.690320,Spirits and liqueurs,SupermarketCy,15.506
+GordonsDryGin700ml,16.15,2023-06-26 21:09:45.658044,Spirits and liqueurs,SupermarketCy,15.506
+BaileysOriginalLiqueur700ml,16.95,2023-06-26 21:09:46.593227,Spirits and liqueurs,SupermarketCy,15.506
+AperolAperitivo1L,16.99,2023-06-26 21:09:47.512523,Spirits and liqueurs,SupermarketCy,15.506
+BacardiSuperiorRum700ml,14.95,2023-06-26 21:09:49.364002,Spirits and liqueurs,SupermarketCy,15.506
+Κεο8X330ml,5.8,2023-06-26 21:09:50.318040,Lager beer,SupermarketCy,6.29
+Carlsberg8X330ml,6.78,2023-06-26 21:09:51.243487,Lager beer,SupermarketCy,6.29
+ΚεοΛευκόΞηρόΚρασί1L,2.59,2023-06-26 21:09:52.314730,Wine from grapes,SupermarketCy,3.2099999999999995
+MateusRoseΚρασί750ml,4.45,2023-06-26 21:09:53.231259,Wine from grapes,SupermarketCy,3.2099999999999995
+ΚεοΕρυθρόΞηρόΚρασί1L,2.59,2023-06-26 21:09:54.284366,Wine from grapes,SupermarketCy,3.2099999999999995
+NescafeClassic200g,6.3,2023-06-26 21:09:55.224688,Coffee,SupermarketCy,5.111428571428571
+NescafeClassic100g,3.99,2023-06-26 21:09:56.139249,Coffee,SupermarketCy,5.111428571428571
+JacobsGoldΕπιλεγμένοΧαρμάνι100g,4.46,2023-06-26 21:09:57.061296,Coffee,SupermarketCy,5.111428571428571
+JacobsΕκλεκτός100g,4.9,2023-06-26 21:09:59.820109,Coffee,SupermarketCy,5.111428571428571
+NescafeAzeraEspresso100g,6.99,2023-06-26 21:10:13.976476,Coffee,SupermarketCy,5.111428571428571
+ΛαϊκούΚυπριακόςΚαφέςΧρυσός200g,2.99,2023-06-26 21:10:41.974826,Coffee,SupermarketCy,5.111428571428571
+ΧαραλάμπουςΚυπριακόςΚαφές200g,3.15,2023-06-26 21:10:42.898220,Coffee,SupermarketCy,5.111428571428571
+ΛαϊκούΚυπριακόςΚαφέςΧρυσός500g,7.49,2023-06-26 21:10:43.806675,Coffee,SupermarketCy,5.111428571428571
+ΧαραλάμπουςΚυπριακόςΚαφές500g,7.69,2023-06-26 21:10:48.576978,Coffee,SupermarketCy,5.111428571428571
+LiptonYellowLabelΤσάι20Τεμ,1.45,2023-06-26 21:10:49.519171,Tea,SupermarketCy,1.7349999999999999
+AhmadTeaΠράσινοΤσάι25Τεμ,1.65,2023-06-26 21:10:50.426298,Tea,SupermarketCy,1.7349999999999999
+NaturalLifeΤσάιΧαμομήλι20Τεμ,1.95,2023-06-26 21:10:51.379992,Tea,SupermarketCy,1.7349999999999999
+AhmadTeaΑγγλικόΠρόγευμα20Τεμ,1.89,2023-06-26 21:10:52.352608,Tea,SupermarketCy,1.7349999999999999
+CadburyΡόφημαΣοκολάτας500g,3.65,2023-06-26 21:10:53.315907,Cocoa and powdered chocolate,SupermarketCy,2.71
+CadburyΚακάο125g,1.77,2023-06-26 21:10:54.235397,Cocoa and powdered chocolate,SupermarketCy,2.71
+"ΆγιοςΝικόλαος6X1,5L",2.69,2023-06-26 21:10:55.176895,Mineral or spring waters,SupermarketCy,2.7870000000000004
+Αγρός12X500ml,3.3,2023-06-26 21:10:56.078476,Mineral or spring waters,SupermarketCy,2.7870000000000004
+"Αγρός6X1,5L",2.49,2023-06-26 21:10:57.020096,Mineral or spring waters,SupermarketCy,2.7870000000000004
+ΆγιοςΝικόλαος12X500ml,2.99,2023-06-26 21:10:57.936921,Mineral or spring waters,SupermarketCy,2.7870000000000004
+Κύκκος12Χ500ml,3.49,2023-06-26 21:10:58.853524,Mineral or spring waters,SupermarketCy,2.7870000000000004
+"Κύκκος6Χ1,5L",2.19,2023-06-26 21:10:59.773573,Mineral or spring waters,SupermarketCy,2.7870000000000004
+KeanΧυμόςΠορτοκάλι1L,1.6,2023-06-26 21:11:00.693783,Fruit and vegetable juices,SupermarketCy,2.1068421052631585
+ΚεανίταΧυμόςΠορτοκάλι9X250ml,4.35,2023-06-26 21:11:11.612681,Fruit and vegetable juices,SupermarketCy,2.1068421052631585
+ΚεοΧυμόςΠορτοκάλι1L,1.5,2023-06-26 21:11:13.402562,Fruit and vegetable juices,SupermarketCy,2.1068421052631585
+ΈναΧυμόςΠορτοκάλι1L,1.25,2023-06-26 21:11:17.033702,Fruit and vegetable juices,SupermarketCy,2.1068421052631585
+KeanΧυμόςΜήλο9X250ml,5.42,2023-06-26 21:11:17.958839,Fruit and vegetable juices,SupermarketCy,2.1068421052631585
+KeanΧυμόςΜήλο1L,1.75,2023-06-26 21:11:18.877030,Fruit and vegetable juices,SupermarketCy,2.1068421052631585
+ΛανίτηςΧυμόςΜήλο1L,1.95,2023-06-26 21:11:20.663377,Fruit and vegetable juices,SupermarketCy,2.1068421052631585
+ΚεοΧυμόςΜήλο1L,1.5,2023-06-26 21:11:23.402057,Fruit and vegetable juices,SupermarketCy,2.1068421052631585
+KeanΧυμός5Φρούτα1L,1.75,2023-06-26 21:11:42.629957,Fruit and vegetable juices,SupermarketCy,2.1068421052631585
+KeanΧυμόςΠορτοκάλιΜήλο&Καρότο1L,1.6,2023-06-26 21:11:43.550792,Fruit and vegetable juices,SupermarketCy,2.1068421052631585
+KeanΧυμόςΝτομάτας1L,1.6,2023-06-26 21:11:46.299010,Fruit and vegetable juices,SupermarketCy,2.1068421052631585
+ΚεοΧυμόςΤομάτα1L,1.5,2023-06-26 21:11:49.952011,Fruit and vegetable juices,SupermarketCy,2.1068421052631585
+CocaCola8X330ml,5.25,2023-06-26 21:11:50.901882,Soft drinks,SupermarketCy,4.353846153846154
+Sprite6X330ml,3.4,2023-06-26 21:11:51.826009,Soft drinks,SupermarketCy,4.353846153846154
+SchweppesPinkGrapefruit6X330ml,4.23,2023-06-26 21:11:52.739052,Soft drinks,SupermarketCy,4.353846153846154
+Fanta6X330ml,4.65,2023-06-26 21:11:53.675915,Soft drinks,SupermarketCy,4.353846153846154
+PepsiMax8X330ml,3.49,2023-06-26 21:11:55.543806,Soft drinks,SupermarketCy,4.353846153846154
+7Up8X330ml,4.25,2023-06-26 21:11:57.407099,Soft drinks,SupermarketCy,4.353846153846154
+SchweppesLemonade6X330ml,3.83,2023-06-26 21:12:00.185430,Soft drinks,SupermarketCy,4.353846153846154
+RegisΠαγωτόAgrinoΧωνάκιαΒανίλιαΣοκολάτα4Χ135ml,4.59,2023-06-26 21:12:01.095261,Edible ices and ice cream,SupermarketCy,3.5349999999999997
+"ΠαπαφιλίπουN-iceΠαγάκια4,5kg",3.95,2023-06-26 21:12:02.498145,Edible ices and ice cream,SupermarketCy,3.5349999999999997
+"ΠαπαφιλίπουN-iceΠαγάκια2,7kg",2.95,2023-06-26 21:12:03.388965,Edible ices and ice cream,SupermarketCy,3.5349999999999997
+"ΠαπαφιλίπουN-iceΠαγάκια1,5kg",2.65,2023-06-26 21:12:04.255255,Edible ices and ice cream,SupermarketCy,3.5349999999999997
+7SeasΦασόλιαΞεκούνιαΆσπρα900g,3.29,2023-06-26 21:12:05.197753,Frozen vegetables other than potatoes and other tubers,SupermarketCy,2.728
+7SeasΑνάμικταΜπρόκολοΚαρότοΚουνουπίδι900g,2.4,2023-06-26 21:12:06.160840,Frozen vegetables other than potatoes and other tubers,SupermarketCy,2.728
+7SeasΜπιζέλι900g,2.49,2023-06-26 21:12:09.005883,Frozen vegetables other than potatoes and other tubers,SupermarketCy,2.728
+7SeasΑνάμικταΜπιζέλιΚαρότοΑγκινάρες900g,2.56,2023-06-26 21:12:11.781853,Frozen vegetables other than potatoes and other tubers,SupermarketCy,2.728
+7SeasΧρωματιστέςΠιπεριές900g,2.9,2023-06-26 21:12:15.441596,Frozen vegetables other than potatoes and other tubers,SupermarketCy,2.728
+FindusΣολωμόςΦιλέτο500g,19.29,2023-06-26 21:12:16.374628,Frozen fish,SupermarketCy,13.14
+FoodpaxΦιλέτοΜπαρμπούνιΕιρηνικού400g,6.99,2023-06-26 21:12:17.269043,Frozen fish,SupermarketCy,13.14
+7SeasΜαρίδα950g,4.39,2023-06-26 21:12:27.547431,Frozen Fish,SupermarketCy,9.542222222222223
+7SeasΓόππα900g,4.25,2023-06-26 21:12:30.250415,Frozen Fish,SupermarketCy,9.542222222222223
+BlueGreenWaveΧταπόδιαΟλόκληραΚαθαρισμένα1kg,8.13,2023-06-26 21:12:31.141588,Frozen seafood,SupermarketCy,9.925
+FoodpaxΜικρόΧταπόδιΙνδοειρηνικούΚαθαρισμένο400g,5.15,2023-06-26 21:12:32.062229,Frozen Seafood,SupermarketCy,6.640000000000001
+ReddaΘράψαλαΕιρηνικούΡοδέλες1kg,5.5,2023-06-26 21:12:32.978838,Frozen Seafood,SupermarketCy,6.640000000000001
+BlueGreenWaveΚαλαμάριΡοδέλες1kg,5.75,2023-06-26 21:12:34.833633,Frozen Seafood,SupermarketCy,6.640000000000001
+EdesmaΚαβουρόψιχα250g,2.24,2023-06-26 21:12:35.756025,Frozen Seafood,SupermarketCy,6.640000000000001
+BirdsEyeBreadedCodLargeFillets4Τεμ,11.72,2023-06-26 21:12:36.703503,Frozen seafood,SupermarketCy,9.925
+NordseaΤραγανιστάΦιλέταΨαριού4Τεμ300g,5.49,2023-06-26 21:12:37.614177,Frozen Seafood,SupermarketCy,6.640000000000001
+ReginaΜακαρόνιαΠαστίτσιο425g,4.49,2023-06-26 21:12:38.578894,Ready-made meals,SupermarketCy,4.8420000000000005
+ReginaΜουσακάς425g,4.49,2023-06-26 21:12:39.533158,Ready-made meals,SupermarketCy,4.8420000000000005
+ReginaΚανελόνια400g,4.49,2023-06-26 21:12:40.480884,Ready-made meals,SupermarketCy,4.8420000000000005
+ΓρηγορίουΜπιφτέκιαΓαλοπούλας6Τεμ480g,4.85,2023-06-26 21:12:50.394724,Other meat preparations,SupermarketCy,4.335999999999999
+ΓρηγορίουΜπιφτέκιαΒοδινά4Τεμ600g,5.8,2023-06-26 21:12:51.333144,Other meat preparations,SupermarketCy,4.335999999999999
+ΜιτσίδηΡαβιόλες375g,3.99,2023-06-26 21:12:52.333940,Pasta products and couscous,SupermarketCy,2.075909090909091
+ReginaΠίτσαΠεπερόνι1Τεμ300g,2.99,2023-06-26 21:12:53.360893,Pizza and quiche,SupermarketCy,3.3975000000000004
+BuitoniPiccolinisProsciutto9x30g,4.89,2023-06-26 21:12:54.296352,Pizza and quiche,SupermarketCy,3.3975000000000004
+ReginaΠίτσαΣπέσιαλ1Τεμ330g,2.99,2023-06-26 21:12:55.228450,Pizza and quiche,SupermarketCy,3.3975000000000004
+ReginaΠίτσαΤυρί&Ντομάτα1Τεμ300g,2.72,2023-06-26 21:12:56.155372,Pizza and quiche,SupermarketCy,3.3975000000000004
+ΧαραλαμπίδηςΚρίστηςΡαβιόλεςΜεΠισσουρκώτικοΧαλλούμι400g,4.99,2023-06-26 21:13:05.878848,Pasta products and couscous,SupermarketCy,2.075909090909091
+HerculesΡαβιόλεςΜεΧαλλούμι&Αναρή400g,3.99,2023-06-26 21:13:07.690243,Pasta products and couscous,SupermarketCy,2.075909090909091
+ReddaΓαρίδεςVannameiΑποφλοιωμένεςΠροβρασμένες500g,8.95,2023-06-26 21:13:08.613547,Frozen Seafood,SupermarketCy,6.640000000000001
+7SeasΚοκκινόψαροΑκέφαλο900g,6.3,2023-06-26 21:13:18.133215,Frozen Fish,SupermarketCy,9.542222222222223
+ΣολωμόςΦρέσκος2ΤεμMax600g,14.97,2023-06-26 21:13:19.019790,Frozen Fish,SupermarketCy,9.542222222222223
+7SeasΨάριΦιλέτοΜεΚαπήρα400g,4.25,2023-06-26 21:13:28.266165,Frozen Seafood,SupermarketCy,6.640000000000001
+NordseaFishSticks10Τεμ300g,3.65,2023-06-26 21:13:29.192218,Frozen Seafood,SupermarketCy,6.640000000000001
+EdesmaΜπουκιέςΚοτόπουλου24Τεμ500g,6.15,2023-06-26 21:13:30.128660,Other meat preparations,SupermarketCy,4.335999999999999
+BgwΣνίτσελΚοτόπουλου400g,4.99,2023-06-26 21:13:32.017466,Other meat preparations,SupermarketCy,4.335999999999999
+ΚιτρομηλίδηΣπιτοΓεύματαΚεφτέδες500g,3.99,2023-06-26 21:13:32.941946,Other meat preparations,SupermarketCy,4.335999999999999
+7SeasΚοτομπουκιέςΠανέ900g,4.99,2023-06-26 21:13:33.850924,Other meat preparations,SupermarketCy,4.335999999999999
+NescafeClassicDecaf100g,4.58,2023-06-26 21:13:36.692285,Coffee,SupermarketCy,5.111428571428571
+7UpDiet8X330ml,4.25,2023-06-26 21:13:47.536354,Soft drinks,SupermarketCy,4.353846153846154
+CocaColaZero8X330ml,5.45,2023-06-26 21:13:48.430725,Soft drinks,SupermarketCy,4.353846153846154
+"ΆγιοςΝικόλαος6X1,5L",2.69,2023-06-26 21:13:49.359463,Mineral or spring waters,SupermarketCy,2.7870000000000004
+KeanΧυμόςΜάνγκοΡόδι1L,1.6,2023-06-26 21:13:52.085465,Fruit and vegetable juices,SupermarketCy,2.1068421052631585
+ΣίφουναςΨωμίΦέτεςΤόστΆσπροΜεγάλο925g,2.33,2023-06-26 21:13:52.998509,bread,SupermarketCy,2.039
+ΣίφουναςΨωμίΦέτεςΤόστΆσπροΜικρό700g,2.1,2023-06-26 21:13:53.881738,bread,SupermarketCy,2.039
+ΣίφουναςΨωμίΦέτεςΤόστΜαύροΠιτυρούχοΜεγάλο700g,2.29,2023-06-26 21:13:54.758829,bread,SupermarketCy,2.039
+ΣίφουναςΨωμίΦέτεςΤόστΠολύσποροΜικρό1Τεμ,2.67,2023-06-26 21:13:55.621804,bread,SupermarketCy,2.039
+EtoshaΚάρβουνα5kg,6.95,2023-06-26 21:13:56.568152,Other Products,SupermarketCy,6.52
+ΠυρσόςΚάρβουνα5kg,5.99,2023-06-26 21:13:57.491051,Other Products,SupermarketCy,6.52
+"ΕύρηκαΜασσαλίαςYlangYlang&ΛεβάνταΥγρό48Πλύσεις2,4L-4€",6.99,2023-06-26 21:13:58.429185,Cleaning and maintenance products,SupermarketCy,5.687826086956521
+ComfortGoldLilies&WildBerriesΜαλακτικόΡούχων4L,6.39,2023-06-26 21:14:00.330006,Cleaning and maintenance products,SupermarketCy,5.687826086956521
+ComfortGoldWildOrchid&SandalwoodΜαλακτικόΡούχων4L,6.39,2023-06-26 21:14:01.276216,Cleaning and maintenance products,SupermarketCy,5.687826086956521
+ComfortPureΜαλακτικόΡούχων4L,5.24,2023-06-26 21:14:02.752847,Cleaning and maintenance products,SupermarketCy,5.687826086956521
+AlwaysUltraLongΜεΦτερά16Τεμ,2.28,2023-06-26 21:14:03.756504,"Articles for personal hygiene and wellness, esoteric products and beauty products",SupermarketCy,5.302272727272728
+AlwaysDailiesNormalToGo20Τεμ,1.61,2023-06-26 21:14:08.417029,"Articles for personal hygiene and wellness, esoteric products and beauty products",SupermarketCy,5.302272727272728
+EveryDayHyperdryNormalUltraPlus18Τεμ1+1,3.99,2023-06-26 21:14:10.220821,"Articles for personal hygiene and wellness, esoteric products and beauty products",SupermarketCy,5.302272727272728
+KleenexScottonellePureCleanDoubleRollΧαρτίΤουαλέτας16Τεμ-2€,13.32,2023-06-26 21:14:19.636557,"Articles for personal hygiene and wellness, esoteric products and beauty products",SupermarketCy,5.302272727272728
+EldaΧαρτίΤουαλέτας24Τεμ,8.5,2023-06-26 21:14:20.558670,"Articles for personal hygiene and wellness, esoteric products and beauty products",SupermarketCy,5.302272727272728
+NannysSensitive6JuniorPlus40Τεμ,10.92,2023-06-26 21:14:48.309101,Baby Care,SupermarketCy,11.427500000000002
+NannysSensitive3Midi56Τεμ,13.68,2023-06-26 21:14:51.020006,Baby Care,SupermarketCy,11.427500000000002
+PampersActiveBaby740Τεμ,11.75,2023-06-26 21:14:51.925110,Baby Care,SupermarketCy,11.427500000000002
+PampersPremiumCare152Τεμ,12.56,2023-06-26 21:14:52.838752,Baby Care,SupermarketCy,11.427500000000002
+HippOrganicBabyCereal100%Ρυζάλευρο200g,3.4,2023-06-26 21:14:53.768527,Baby food,SupermarketCy,10.073125000000001
+NestleΦαρίνΛακτέΜεΓάλα300g,3.57,2023-06-26 21:14:54.677779,Baby food,SupermarketCy,10.073125000000001
+"ΓιώτηςΦαρίνΛακτέ300g-0,50€",3.32,2023-06-26 21:15:13.053611,Baby food,SupermarketCy,10.073125000000001
+ΝουνούFrisogrow3800g,19.43,2023-06-26 21:15:13.985435,Baby food,SupermarketCy,10.073125000000001
+ΝουνούFrisogrowPlus+4800g,19.99,2023-06-26 21:15:15.829436,Baby food,SupermarketCy,10.073125000000001
+NanOptiproHM-04400g,7.9,2023-06-26 21:15:16.746193,Baby food,SupermarketCy,10.073125000000001
+S26ProgressGold3400g,10.62,2023-06-26 21:15:17.637091,Baby food,SupermarketCy,10.073125000000001
+EdesmaΜπιφτέκιαΛαχανικών4Τεμ,5.75,2023-06-26 21:15:18.569858,Ready-made meals,SupermarketCy,4.8420000000000005
+ΓρηγορίουΜπιφτέκια6Τεμ480g,4.65,2023-06-26 21:15:20.388633,Other meat preparations,SupermarketCy,4.335999999999999
+KyprianouΜπιφτέκιαΚοτόπουλου6Τεμ700g,5.99,2023-06-26 21:15:22.197345,Other meat preparations,SupermarketCy,4.335999999999999
+Κλήσειςπροςσταθερό,0.032,2023-06-26 21:15:23.799036,Wired telephone services,CYTA,0.031
+Κλήσειςπροςκινητό,0.032,2023-06-26 21:15:25.213800,Wireless telephone services,CYTA,0.041
+MobileInternetHome1,35.0,2023-06-26 21:15:26.618015,Internet access provision services,CYTA,26.74625
+FREEDOM,28.0,2023-06-26 21:15:28.191862,Bundled telecommunication services,CYTA,20.495
+HomeFiber60MBPS,14.99,2023-06-26 21:15:29.783491,Internet access provision services,Primetel,26.74625
+HomeFiber150MBPS,19.99,2023-06-26 21:15:29.783495,Internet access provision services,Primetel,26.74625
+Fiber200MBPS,25.99,2023-06-26 21:15:29.783495,Internet access provision services,Primetel,26.74625
+GIGAUnlimited,14.99,2023-06-26 21:15:31.267327,Bundled telecommunication services,Primetel,20.495
+GIGAUnlimitedPlus,18.99,2023-06-26 21:15:31.267333,Bundled telecommunication services,Primetel,20.495
+GIGAUnlimitedMax,,2023-06-26 21:15:31.267333,Bundled telecommunication services,Primetel,20.495
+Κλήσειςπροςσταθερό,0.03,2023-06-26 21:15:32.251733,Wired telephone services,Cablenet,0.031
+Κλήσειςπροςκινητό,0.05,2023-06-26 21:15:33.315597,Wireless telephone services,Cablenet,0.041
+PurpleInternet,30.0,2023-06-26 21:15:34.288134,Internet access provision services,Cablenet,26.74625
+PurpleMaxMobile,20.0,2023-06-26 21:15:35.016976,Bundled telecommunication services,Cablenet,20.495
+Internet and Telephony 10,24.0,2023-06-26 21:15:36.650568,Internet access provision services,epic,26.74625
+Internet and Telephony 20,29.0,2023-06-26 21:15:38.766984,Internet access provision services,epic,26.74625
+Internet and Telephony 50,35.0,2023-06-26 21:15:40.714792,Internet access provision services,epic,26.74625
+Pure Cotton Crew Neck T-Shirt,12.0,2023-06-26 21:16:20.062808,Garments for men,Marks&Spencer,28.7
+Regular Fit Trouser with Active Waist,26.0,2023-06-26 21:16:20.062815,Garments for men,Marks&Spencer,28.7
+3pk Cotton Rich Assorted Pattern Trunks,35.0,2023-06-26 21:16:20.062815,Garments for men,Marks&Spencer,28.7
+Suede Slip-On Loafers,75.0,2023-06-26 21:16:20.062817,Footwear for men,Marks&Spencer,69.58333333333333
+Suede Moccasin Slippers,37.5,2023-06-26 21:16:20.062817,Footwear for men,Marks&Spencer,69.58333333333333
+Ribbed V-Neck Scallop Edge Knitted Top,22.5,2023-06-26 21:16:20.062818,Garments for women,Marks&Spencer,28.408823529411766
+Straight Leg Trousers with Stretch,14.0,2023-06-26 21:16:20.062819,Garments for women,Marks&Spencer,28.408823529411766
+3pk Wired Full Cup T-Shirt Bras A-E,39.5,2023-06-26 21:16:20.062820,Garments for women,Marks&Spencer,28.408823529411766
+Suede Wedge Pumps,49.0,2023-06-26 21:16:20.062821,Footwear for women,Marks&Spencer,64.0
+3pk Unisex Pure Cotton School Polo Shirts (2-16 Yrs),6.0,2023-06-26 21:16:20.062822,Garments for infants (0 to 2 years) and children (3 to 13 years),Marks&Spencer,30.916666666666668
+Kids' Leather Riptape School Shoes (13 Small- 9 Large),45.0,2023-06-26 21:16:20.062823,Footwear for infants and children,Marks&Spencer,47.324999999999996
+5pk Pure Cotton Sleepsuits (5lbs-3 Yrs),30.0,2023-06-26 21:16:20.062824,Garments for infants (0 to 2 years) and children (3 to 13 years),Marks&Spencer,30.916666666666668
+4pk Pure Cotton Booties (0-1 Yrs),13.0,2023-06-26 21:16:20.062825,Footwear for infants and children,Marks&Spencer,47.324999999999996
+Brushed Pencil Pleat Blackout Thermal Curtains,46.0,2023-06-26 21:16:20.062826,Furnishing fabrics and curtains,Marks&Spencer,46.0
+Pure Cotton Floral Embroidered Bedding Set,129.0,2023-06-26 21:16:20.062827,Bed linen,Marks&Spencer,129.0
+Super Plush Pure Cotton Towel,9.0,2023-06-26 21:16:20.062828,Table linen and bathroom linen,Marks&Spencer,27.0
+Cotton with Linen Tablecloth,45.0,2023-06-26 21:16:20.062829,Table linen and bathroom linen,Marks&Spencer,27.0
+adidas men essentials single jersey big logo t-shirt (IC9349,22.4,2023-06-26 21:17:02.446815,Garments for men,FamousSports,28.7
+adidas men train essentials training t-shirt (IC7428),16.0,2023-06-26 21:17:02.446820,Garments for men,FamousSports,28.7
+adidas men essentials big logo french terry shorts (IC9403),26.4,2023-06-26 21:17:02.446821,Garments for men,FamousSports,28.7
+Bdtk Men Walkshort Knee Height- Medium Crotch (1231-952404),39.9,2023-06-26 21:17:02.446822,Garments for men,FamousSports,28.7
+adidas men breaknet 2.0 shoes (IF5049),48.0,2023-06-26 21:17:02.446822,Footwear for men,FamousSports,69.58333333333333
+Reebok Men Flexagon Force 4 Training Shoes (HR0404),42.0,2023-06-26 21:17:02.446823,Footwear for men,FamousSports,69.58333333333333
+Bdtk Women Co Slim Tshirt (1231-900028),15.9,2023-06-26 21:17:02.446824,Garments for women,FamousSports,28.408823529411766
+Bdtk Women Co Slim Tshirt (1231-900028),28.0,2023-06-26 21:17:02.446824,Garments for women,FamousSports,28.408823529411766
+Bdtk Women Shorts With Button Down Sides (1231-903805),31.1,2023-06-26 21:17:02.446825,Garments for women,FamousSports,28.408823529411766
+adidas women train essentials brand love high-waisted full-l,44.0,2023-06-26 21:17:02.446826,Garments for women,FamousSports,28.408823529411766
+adidas women court platform shoes (GW9786),48.0,2023-06-26 21:17:02.446827,Footwear for women,FamousSports,64.0
+Reebok Women Nano X2 Shoes (FZ5696),91.0,2023-06-26 21:17:02.446828,Footwear for women,FamousSports,64.0
+Quiksilver Boy T-Shirts Radical Flag Ss Youth (EQBZT04616-WB,19.1,2023-06-26 21:17:02.446829,Garments for infants (0 to 2 years) and children (3 to 13 years),FamousSports,30.916666666666668
+Boboli Knit jacket fantasy for kids boy (525192),24.0,2023-06-26 21:17:02.446830,Garments for infants (0 to 2 years) and children (3 to 13 years),FamousSports,30.916666666666668
+New Balance Kids Boy 574 - Classics Gradeschool (GC574CU1),60.0,2023-06-26 21:17:02.446831,Footwear for infants and children,FamousSports,47.324999999999996
+New Balance Kids Girl 515 - Classics Gradeschool (GC515RH),56.0,2023-06-26 21:17:02.446832,Footwear for infants and children,FamousSports,47.324999999999996
+adidas unisex performance cushioned low socks 3 pairs (IC951,13.0,2023-06-26 21:17:02.446832,Clothing accessories,FamousSports,17.0
+adidas unisex bold 3-stripes cushioned crew socks 3 pairs (I,20.0,2023-06-26 21:17:02.446833,Clothing accessories,FamousSports,17.0
+adidas unisex aeroready training running baseball cap (HT203,20.0,2023-06-26 21:17:02.446834,Clothing accessories,FamousSports,17.0
+BASICSHORTSLEEVET-SHIRT,12.99,2023-06-26 21:17:03.132237,Garments for women,Stradivarius,28.408823529411766
+V-NECKPOLYAMIDEBODYSUIT,12.99,2023-06-26 21:17:03.567397,Garments for women,Stradivarius,28.408823529411766
+BUTTONEDBLAZER,39.99,2023-06-26 21:17:04.064714,Garments for women,Stradivarius,28.408823529411766
+PLUSHJERSEYJOGGINGTROUSERS,15.99,2023-06-26 21:17:04.632151,Garments for women,Stradivarius,28.408823529411766
+SINGLEDRESS,15.99,2023-06-26 21:17:05.196487,Garments for women,Stradivarius,28.408823529411766
+"Women's Services, HAIRCUT Stylist",27.5,2023-06-26 21:17:08.758645,Hairdressing for women,Novella Hair Salon,27.5
+"Men's Services, HAIRCUT Stylist",25.5,2023-06-26 21:17:08.763188,Hairdressing for men,Novella Hair Salon,25.5
+ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Μικρά (P) 50 γρ.,0.41,2023-06-26 21:17:17.705739,Letter handling services,Cyprus Post,1.05
+ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Μεγάλα (G) 500 γρ.,0.64,2023-06-26 21:17:17.705782,Letter handling services,Cyprus Post,1.05
+ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Ακανόνιστα (E) 2000 γρ.,2.1,2023-06-26 21:17:17.705797,Letter handling services,Cyprus Post,1.05
+ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 0.5 κιλό,4.0,2023-06-26 21:17:17.705846,Other postal services,Cyprus Post,12.516666666666666
+ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 15 κιλά,11.9,2023-06-26 21:17:17.705856,Other postal services,Cyprus Post,12.516666666666666
+ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 15 κιλά,21.65,2023-06-26 21:17:17.705864,Other postal services,Cyprus Post,12.516666666666666
+"THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΝΗΠΙΑΓΩΓΕΙΩΝ 2022-2023",4750.0,2023-06-26 21:17:28.184821,Pre-primary education (ISCED-97 level 0),"Cyprus Ministry of Education, Sport and Youth",4750.0
+"THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΔΗΜΟΤΙΚΩΝ ΣΧΟΛΕΙΩΝ 2022-2023",6000.0,2023-06-26 21:17:28.184867,Primary education (ISCED-97 level 1),"Cyprus Ministry of Education, Sport and Youth",6000.0
+"THE GRAMMAR SCHOOL (Nicosia), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2022-2023, Α-ΣΤ ΤΑΞΗ",8112.857142857143,2023-06-26 21:17:28.184869,Secondary education,"Cyprus Ministry of Education, Sport and Youth",8841.428571428572
+"THE GRAMMAR SCHOOL (Limassol), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2022-2023, Α-ΣΤ ΤΑΞΗ",9570.0,2023-06-26 21:17:28.184872,Secondary education,"Cyprus Ministry of Education, Sport and Youth",8841.428571428572
+"THE GRAMMAR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2022-2023, Ζ ΤΑΞΗ",8305.0,2023-06-26 21:17:28.184882,Post-secondary non-tertiary education (ISCED 4),"Cyprus Ministry of Education, Sport and Youth",9365.0
+"THE GRAMMAR SCHOOL (Limassol), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2022-2023, Ζ ΤΑΞΗ",10425.0,2023-06-26 21:17:28.184889,Post-secondary non-tertiary education (ISCED 4),"Cyprus Ministry of Education, Sport and Youth",9365.0
+Αμόλυβδη Μέση Τιμή Παγκύπρια,1.379,2023-06-26 21:17:29.539819,Petrol,Global Petrol Prices,1.379
+Πετρέλαιο Κίνησης Μέση Τιμή Παγκύπρια,1.382,2023-06-26 21:17:29.544654,Diesel,Global Petrol Prices,1.263
+Πετρέλαιο Μέση Τιμή Παγκύπρια,1.144,2023-06-26 21:17:29.548358,Diesel,Global Petrol Prices,1.263
+Πετρέλαιο Θέρμανσης Μέση Τιμή Παγκύπρια,0.98,2023-06-26 21:17:29.551818,Liquid Fuels,Global Petrol Prices,0.98
+Machetero Panatela,2.7,2023-06-26 21:17:32.422807,Cigars,The CYgar Shop,2.7
+Marlboro 20 Pack,5.0,2023-06-26 21:17:32.422813,Cigarettes,NUMBEO,5.0
+Smok S-priv Kit E-Τσιγάρα + 2 μπαταρίες  + 200 ml Υγρά  άτμισης,59.0,2023-06-26 21:17:32.422813,Other Tobaco Products,E-WHOLESALE,59.0
+Refrigerator TESLA RD2101H1 white,279.0,2023-06-26 21:18:15.391067,"Refrigerators, freezers and fridge-freezers",Stephanis,422.3333333333333
+Freezer BOSCH GSV24VWEV white,699.0,2023-06-26 21:18:15.395801,"Refrigerators, freezers and fridge-freezers",Stephanis,422.3333333333333
+Ψυγειοκαταψύκτης TESLA RS2300H1 άσπρο,289.0,2023-06-26 21:18:15.399564,"Refrigerators, freezers and fridge-freezers",Stephanis,422.3333333333333
+Washing machine TESLA WF61062M white,279.0,2023-06-26 21:18:15.403271,"Clothes washing machines, clothes drying machines and dish washing machines",Stephanis,309.0
+Πλυντήριο πιάτων TESLA WD631M άσπρο,339.0,2023-06-26 21:18:15.406924,"Clothes washing machines, clothes drying machines and dish washing machines",Stephanis,309.0
+Slow Cooker MORPHY RICHARDS 460017,59.0,2023-06-26 21:18:15.410607,Cookers,Stephanis,68.475
+Φούρνος μικροκυμάτων MATESTAR MM-720CW άσπρο,77.95,2023-06-26 21:18:15.414192,Cookers,Stephanis,68.475
+Air Conditioner with Inverter TESLA TA36FFML-1232IA,399.0,2023-06-26 21:18:15.417733,"Heaters, air conditioners",Stephanis,399.0
+Vacuum Cleaner MATESTAR MAT-3813R red,64.95,2023-06-26 21:18:15.421315,Cleaning equipment,Stephanis,8.172
+Kitchen machine BOSCH MCM3100W white,89.0,2023-06-26 21:18:15.424946,Food processing appliances,Stephanis,89.0
+Mixer for frappe OSIO OMM-2211 BL black,12.95,2023-06-26 21:18:15.428541,"Coffee machines, tea makers and similar appliances",Stephanis,23.962500000000002
+Ηλεκτρικό μπρίκι για Κυπριακό καφέ OSIO OCP-2502BR μαύρο/κόκκινο,19.95,2023-06-26 21:18:15.432168,"Coffee machines, tea makers and similar appliances",Stephanis,23.962500000000002
+Καφετιέρα φίλτρου SENCOR SCE 3700BK μαύρο/chrome,39.0,2023-06-26 21:18:15.435719,"Coffee machines, tea makers and similar appliances",Stephanis,23.962500000000002
+Βραστήρας SENCOR SWK 1748WH άσπρο,23.95,2023-06-26 21:18:15.439248,"Coffee machines, tea makers and similar appliances",Stephanis,23.962500000000002
+Iron BLAUPUNKT HSI201BL white/blue,24.95,2023-06-26 21:18:15.442792,Irons,Stephanis,24.95
+Toaster MATESTAR MAT-103DW cream,34.95,2023-06-26 21:18:15.446346,Toasters and grills,Stephanis,37.45
+Ψησταριά Barbecue LIFE BBQ King 221-0137 μαύρο,39.95,2023-06-26 21:18:15.449891,Toasters and grills,Stephanis,37.45
+Smartphone XIAOMI Redmi 9A LTE Dual SIM γκρι,119.0,2023-06-26 21:18:15.453388,Mobile telephone equipment,Stephanis,46.29999999999999
+Θήκη Back Cover για Samsung Galaxy A13 4G CELLY GELSKIN1022 διαφανές,12.95,2023-06-26 21:18:15.456921,Mobile telephone equipment,Stephanis,46.29999999999999
+Cable USB-A male/USB-C male 2.0 1.2m OSIO OTU-5912B black,6.95,2023-06-26 21:18:15.460466,Mobile telephone equipment,Stephanis,46.29999999999999
+Action camera 4K Outdoor Sports Ultra HD 606481 μαύρο,39.95,2023-06-26 21:18:15.464032,"Equipment for the reception, recording and reproduction of sound and vision",Stephanis,39.95
+Φορητό Ηχείο SHARP GX-BT60BK μαύρο,29.95,2023-06-26 21:18:15.467566,"Equipment for the reception, recording and reproduction of sound",Stephanis,22.45
+Ακουστικά με μικρόφωνο SAMSUNG EO-IA500BBEGWW μαύρο,14.95,2023-06-26 21:18:15.471100,"Equipment for the reception, recording and reproduction of sound",Stephanis,22.45
+Στιγμιαία φωτογραφική FUJIFILM Instax Mini 11 γκρι,95.0,2023-06-26 21:18:15.474628,Cameras,Stephanis,95.0
+Φορητός υπολογιστής ACER TravelMate Spin B3 NX.VN8ET.00D μαύρο,299.0,2023-06-26 21:18:15.478205,Personal computers,Stephanis,299.0
+"Θήκη για φορητό υπολογιστή 15.6"" HP Value Backpack K0B39AA γκρίζο",23.95,2023-06-26 21:18:15.481726,Accessories for information processing equipment,Stephanis,15.633333333333333
+Σπρέι καθαρισμού FAMOZO Professional ,3.0,2023-06-26 21:18:15.485261,Accessories for information processing equipment,Stephanis,15.633333333333333
+Σετ αξεσουάρ PRO-MOUNTS Bag of Mounts PM2013GP99,19.95,2023-06-26 21:18:15.488798,Accessories for information processing equipment,Stephanis,15.633333333333333
+Ηλεκτρονικό σκοινί γυμναστικής MULTIFUN MF-SR01,15.0,2023-06-26 21:18:15.492375,Equipment for sport,Stephanis,15.0
+Επιτραπέζιο Παιχνίδι με Κάρτες MATTEL Uno W2087,6.95,2023-06-26 21:18:15.495935,Games and hobbies,Stephanis,6.95
+Παιχνίδι LEGO Minecraft: The Creeper Ambush 21177,3.99,2023-06-26 21:18:15.499517,Toys and celebration articles,Stephanis,3.99
+Εκπαιδευτικό παιδικό βιβλίο Μαθαίνω Να Γράφω - Τους Αριθμούς,3.99,2023-06-26 21:18:15.503043,Educational text books,Stephanis,3.99
+Μελάνι μπουκάλι EPSON 103 EcoTank C13T00S14A μαύρο,9.95,2023-06-26 21:18:15.506585,Miscellaneous printer matter,Stephanis,9.95
+Χαρτί A4 500 φύλλα 80 g,6.95,2023-06-26 21:18:15.510155,Paper products,Stephanis,6.95
+Ξυριστική μηχανή XIAOMI Εnchen Blackstone 3D γκρι,49.95,2023-06-26 21:18:15.513671,Electric appliances for personal care,Stephanis,46.975
+Κουρευτική μηχανή REMINGTON ColourCut Manchester United Edition HC5038 κόκκινο,49.95,2023-06-26 21:18:15.517207,Electric appliances for personal care,Stephanis,46.975
+Σεσουάρ μαλλιών LIFE Character 221-0238 μωβ,39.0,2023-06-26 21:18:15.520759,Electric appliances for personal care,Stephanis,46.975
+Ψηφιακό θερμόμετρο JOYROOM Body Non Contact XS-IFT002B,49.0,2023-06-26 21:18:15.524357,Electric appliances for personal care,Stephanis,46.975
+Ζυγαριά αποσκευών NEDIS SCLU110GY ,15.95,2023-06-26 21:18:15.527898,Travel goods,Stephanis,15.95
+Smartwatch FOREVER Call Me 2 KW60 GSM107165 μπλε,29.95,2023-06-26 21:18:15.531454,Clocks and watches,Stephanis,29.95
+WORX 30091701000 Ηλεκτρικό Aλυσοπρίονο,109.9,2023-06-26 21:18:19.984963,Motorized major tools and equipment,Electroline,109.9
+"TACTIX MER-205604 Σετ Kατσαβίδια, 12 Tεμάχια",17.9,2023-06-26 21:18:19.984968,Non-motorized small tools,Electroline,17.9
+TOTAL TOT-THKTHP21176 Σετ Εργαλεία Χειρός 117 Τεμάχια,69.9,2023-06-26 21:18:19.984968,Miscellaneous small tool accessories,Electroline,69.9
+GLOSTAD διθέσιος καναπές,139.0,2023-06-26 21:18:38.814716,Household furniture,IKEA,124.97999999999999
+MELLTORP/ADDE τραπέζι και 4 καρέκλες,110.96,2023-06-26 21:18:38.819423,Household furniture,IKEA,124.97999999999999
+"FEJAN πτυσσόμενη καρέκλα, εξωτερικού χώρου",14.5,2023-06-26 21:18:38.823113,Garden furniture,IKEA,19.244999999999997
+"TARNO τραπέζι, εξωτερικού χώρου",23.99,2023-06-26 21:18:38.826663,Garden furniture,IKEA,19.244999999999997
+"BAGGEBO βιβλιοθήκη, 50x30x80 cm",24.99,2023-06-26 21:18:38.830175,Other furniture and furnishings,IKEA,44.741666666666674
+"GURSKEN σκελετός κρεβατιού με κεφαλάρι, 140x200 cm",109.0,2023-06-26 21:18:38.833682,Other furniture and furnishings,IKEA,44.741666666666674
+"GURSKEN ντουλάπα, 49x55x186 cm",69.99,2023-06-26 21:18:38.837178,Other furniture and furnishings,IKEA,44.741666666666674
+"GURSKEN συρταριέρα με 3 συρτάρια, 69x67 cm",49.99,2023-06-26 21:18:38.840691,Other furniture and furnishings,IKEA,44.741666666666674
+KNARREVIK κομοδίνο,8.99,2023-06-26 21:18:38.844204,Other furniture and furnishings,IKEA,44.741666666666674
+MARIUS Σκαμπό,5.49,2023-06-26 21:18:38.847714,Other furniture and furnishings,IKEA,44.741666666666674
+"TIPHEDE χαλί, χαμηλή πλέξη",9.99,2023-06-26 21:18:38.851233,Carpets and rugs,IKEA,4.823333333333333
+"KLEJS χαλί, χαμηλή πλέξη",1.99,2023-06-26 21:18:38.854750,Carpets and rugs,IKEA,4.823333333333333
+"KLAMPENBORG χαλάκι πόρτας/ εσωτερικού χώρου, 35x55 cm",2.49,2023-06-26 21:18:38.858279,Carpets and rugs,IKEA,4.823333333333333
+POKAL Ποτήρι,0.79,2023-06-26 21:18:38.861786,"Glassware, crystal-ware, ceramic ware and chinaware",IKEA,0.79
+OFTAST Πιάτο,0.79,2023-06-26 21:18:38.865333,"Glassware, crystal-ware, ceramic ware and chinaware",IKEA,0.79
+OFTAST Μπολ,0.79,2023-06-26 21:18:38.868844,"Glassware, crystal-ware, ceramic ware and chinaware",IKEA,0.79
+"MOPSIG μαχαιροπίρουνα, σετ 16 τεμ.",8.99,2023-06-26 21:18:38.872355,"Cutlery, flatware and silverware",IKEA,9.99
+"ANNONS Σκεύη μαγειρικής, σετ 3 τεμ.",14.99,2023-06-26 21:18:38.875928,"Cutlery, flatware and silverware",IKEA,9.99
+"BARLAST επιτραπέζιο φωτιστικό, 31 cm",4.49,2023-06-26 21:18:38.879467,Lighting equipment,IKEA,12.49
+RESTAD φωτιστικό οροφής,12.99,2023-06-26 21:18:38.882975,Lighting equipment,IKEA,12.49
+TAGARP φωτιστικό δαπέδου/διαβάσματος,19.99,2023-06-26 21:18:38.886668,Lighting equipment,IKEA,12.49
+FORENLIG κασπό εσωτερικού/εξωτερικού χώρου,1.49,2023-06-26 21:18:38.890191,Garden products,IKEA,9.49
+IKEA PS 2002 Ποτιστήρι,1.99,2023-06-26 21:18:38.893666,Garden products,IKEA,9.49
+"STJARNANIS ζαρντινιέρα εξωτερικού χώρου, 43x15 cm",24.99,2023-06-26 21:18:38.897163,Garden products,IKEA,9.49
+"PHALAENOPSIS φυτό, Ορχιδέα με 1 βλαστό",9.99,2023-06-26 21:18:38.900668,Plants and flowers,IKEA,5.99
+"HYACINTHUS φυτό σε γλάστρα/Υάκινθος 1 βολβός, 8 cm",1.99,2023-06-26 21:18:38.904160,Plants and flowers,IKEA,5.99
+"LURVIG μπολ,  0.3 l",3.99,2023-06-26 21:18:38.907655,Products for pets,IKEA,4.156666666666667
+LURVIG ανακλαστικοί ιμάντες,6.99,2023-06-26 21:18:38.911166,Products for pets,IKEA,4.156666666666667
+LURVIG φτυαράκι άμμου γάτας,1.49,2023-06-26 21:18:38.914711,Products for pets,IKEA,4.156666666666667
+SPECIALIZED - ROCKHOPPER 29'',550.0,2023-06-26 21:18:53.761517,Bicycles,AWOL,570.0
+ORBEA - ONNA 29 50 - 2023,590.0,2023-06-26 21:18:53.766294,Bicycles,AWOL,570.0
+CONTINENTAL - RACE KING RACESPORT MTB FOLDING TIRE,35.0,2023-06-26 21:18:53.770352,Tyres,AWOL,55.333333333333336
+CONTINENTAL - CROSS KING PERFORMANCE MTB-WIRE BEAD TIRE,24.0,2023-06-26 21:18:53.774153,Tyres,AWOL,55.333333333333336
+SPECIALIZED - FAST TRAK SPORT,24.0,2023-06-26 21:18:53.777796,Tyres,AWOL,55.333333333333336
+SPECIALIZED - FAST TRACK 2BLISS READY - TAN SIDEWALL,45.0,2023-06-26 21:18:53.781334,Tyres,AWOL,55.333333333333336
+BARBIERI - BICY CLEAN 750ML,9.0,2023-06-26 21:18:53.784886,Lubricants,AWOL,10.425
+BARBIERI - REPAIR KIT FOR TUBELESS,10.0,2023-06-26 21:18:53.788424,Maintenance and repair of personal transport equipment,AWOL,9.07
+KTM 50 SX 2023,4400.0,2023-06-26 21:19:56.623811,Motor cycles,MotoRace,6100.0
+KTM 390 ADVENTURE 2022 - Black,7800.0,2023-06-26 21:19:56.628579,Motor cycles,MotoRace,6100.0
+KENDA K673 KRUZ TL - FRONT,68.0,2023-06-26 21:19:56.632298,Tyres,MotoRace,55.333333333333336
+KENDA K673 KRUZ TL - REAR,136.0,2023-06-26 21:19:56.635929,Tyres,MotoRace,55.333333333333336
+BRENTA - SEMI METALLIC PAD - 621SM1/FA115,5.9,2023-06-26 21:19:56.639505,Spare parts for personal transport equipment,MotoRace,12.483333333333334
+RK Standard Drive Chain  420 x 110 Link,11.5,2023-06-26 21:19:56.643067,Spare parts for personal transport equipment,MotoRace,12.483333333333334
+Black Sport Mirror Set 006-8MM-R/R,15.5,2023-06-26 21:19:56.646621,Spare parts for personal transport equipment,MotoRace,12.483333333333334
+Yuasa Battery 6N4-2A-4,14.0,2023-06-26 21:19:56.650177,Spare parts for personal transport equipment,MotoRace,12.483333333333334
+Progrip PG2500 Fork Boots-Blue,25.0,2023-06-26 21:19:56.653784,Spare parts for personal transport equipment,MotoRace,12.483333333333334
+ARROW STAINLESS STEEL CLAMP PROTECTION,3.0,2023-06-26 21:19:56.657302,Spare parts for personal transport equipment,MotoRace,12.483333333333334
+Motorex Four Stroke 4T 15W/50 - 1L,10.7,2023-06-26 21:19:56.660883,Lubricants,MotoRace,10.425
+Motorex Chain Clean Degreaser Spray  - 500ML,12.0,2023-06-26 21:19:56.664442,Lubricants,MotoRace,10.425
+Motorex Brake Fluid Dot 5.1 - 250ML,10.0,2023-06-26 21:19:56.667988,Lubricants,MotoRace,10.425
+Thumbs up - Tyre Repair Kit ,8.14,2023-06-26 21:19:56.671602,Maintenance and repair of personal transport equipment,MotoRace,9.07
+Physiomer Nasal Spray Hygiene Active Prevention 135ml,10.91,2023-06-26 21:20:06.864143,Pharmaceutical products,Bwell Pharmacy,4.4799999999999995
+Vitabiotics Pregnacare Original 30 tabs,14.91,2023-06-26 21:20:06.864148,Pregnancy tests and mechanical contraceptive devices,Bwell Pharmacy,14.91
+Geatherm Oxy Control – Pulse Oximeter,65.0,2023-06-26 21:20:06.864150,Other medical products n.e.c.,Bwell Pharmacy,65.0
+Flaem RespirAir nebulizer,114.12,2023-06-26 21:20:06.864152,Other therapeutic appliances and equipment,Bwell Pharmacy,114.12
+New Mazda 2,17800.0,2023-06-26 21:20:08.546414,New motor cars,Mazda,20650.0
+Nissan Juke,23500.0,2023-06-26 21:20:09.380829,New motor cars,Nissan,20650.0
+Costa Coffee Cappuccino Medio,3.45,2023-06-26 21:20:09.387639,"Restaurants, cafes and dancing establishments",Wolt,22.60909090909091
+Costa Coffee Espresso Single,2.5,2023-06-26 21:20:09.387639,"Restaurants, cafes and dancing establishments",Wolt,22.60909090909091
+Costa Coffee Freddo Cappuccino Medio,3.3,2023-06-26 21:20:09.387639,"Restaurants, cafes and dancing establishments",Wolt,22.60909090909091
+Costa Coffee Freddo Espresso Medio,3.3,2023-06-26 21:20:09.387639,"Restaurants, cafes and dancing establishments",Wolt,22.60909090909091
+"Piatsa Gourounaki, Meat platter for 2 persons (Nicosia)",20.2,2023-06-26 21:20:09.387639,"Restaurants, cafes and dancing establishments",Wolt,22.60909090909091
+"Pixida, Fish meze for each guest with minimum 2 persons",,2023-06-26 21:20:09.387639,"Restaurants, cafes and dancing establishments",Wolt,22.60909090909091
+Kofini Tavern Mix Grill for 2,24.0,2023-06-26 21:20:09.387639,"Restaurants, cafes and dancing establishments",Wolt,22.60909090909091
+"Kofini Tavern, Seafood Platter",55.0,2023-06-26 21:20:09.387639,"Restaurants, cafes and dancing establishments",Wolt,22.60909090909091
+"Vlachos Taverna, Ποικιλία Σχάρας Για 2 Άτομα",25.5,2023-06-26 21:20:09.387639,"Restaurants, cafes and dancing establishments",Wolt,22.60909090909091
+"Zakos Beach Restaurant, Ψαρομεζέδες Ζάκος (Για 2 Άτομα)",57.5,2023-06-26 21:20:09.387639,"Restaurants, cafes and dancing establishments",Wolt,22.60909090909091
+"Paphos Tavernaki, Ποικιλία Σχάρας Για 2 Άτομα",19.95,2023-06-26 21:20:09.387639,"Restaurants, cafes and dancing establishments",Wolt,22.60909090909091
+"Ocean Basket, Platter for 2",34.0,2023-06-26 21:20:09.387639,"Restaurants, cafes and dancing establishments",Wolt,22.60909090909091
+McDonald's Sharebox,16.95,2023-06-26 21:20:09.387639,Fast food and take away food services,Wolt,12.458333333333334
+McDonald's Big Mac,4.4,2023-06-26 21:20:09.387639,Fast food and take away food services,Wolt,12.458333333333334
+McDonald's McChicken,4.4,2023-06-26 21:20:09.387639,Fast food and take away food services,Wolt,12.458333333333334
+Pizza Hut Margherita Large,14.0,2023-06-26 21:20:26.177846,Fast food and take away food services,Pizza Hut,12.458333333333334
+Pizza Hut Classic Large,15.8,2023-06-26 21:20:26.177846,Fast food and take away food services,Pizza Hut,12.458333333333334
+Pizza Hut Special Large,19.2,2023-06-26 21:20:26.177846,Fast food and take away food services,Pizza Hut,12.458333333333334
+Καταναλωτές συνδεδεμένοι στο δίκτυο Χαμηλής Τάσης,3.67,2023-06-26 21:20:29.050330,Electricity,Cyprus Energy Regulatory Authority,3.0700000000000003
+Καταναλωτές συνδεδεμένοι στο δίκτυο Μέσης Τάσης,2.47,2023-06-26 21:20:29.050330,Electricity,Cyprus Energy Regulatory Authority,3.0700000000000003
+Καταναλωτές συνδεδεμένοι στο δίκτυο Υψηλής Τάσης,,2023-06-26 21:20:29.050330,Electricity,Cyprus Energy Regulatory Authority,3.0700000000000003
+"Water Board of Nicosia, Οικιακό Πάγιο Τέλος Νερού ανά διμηνία (Διατίμηση ""Α"" από 1 Σεπ 2017)",11.0,2023-06-26 21:20:32.116989,Water supply,Water Board of Nicosia,11.0
+"Sewerage Board of Nicosia, Ετήσιο Τέλος Αποχέτευσης 2022 (€ για κάθε €1000 εκτιμημένης αξίας)",0.63,2023-06-26 21:20:33.226858,Sewage Collection,Sewerage Board of Nicosia,0.665
+"Sewerage Board of Nicosia, Τέλος Χρήσης Αποχέτευσης (€ ανά κυβικό μέτρο καταναλισκόμενου νερού)",0.7,2023-06-26 21:20:33.232542,Sewage Collection,Sewerage Board of Nicosia,0.665
+Λεμεσος Phase 1 Sewage Costs ,0.38,2023-06-26 21:20:34.440080,Sewage collection,SBLA,0.3871428571428571
+Λεμεσος Phase 2 Sewage Costs ,0.38,2023-06-26 21:20:34.445276,Sewage collection,SBLA,0.3871428571428571
+Λεμεσος Τέλη Αποχέτευσης Ομβρίων,0.09,2023-06-26 21:20:34.449105,Sewage collection,SBLA,0.3871428571428571
+Λαρνακα Phase 1 Sewage Costs ,0.6,2023-06-26 21:20:35.429250,Sewage collection,LSDB,0.3871428571428571
+Λαρνακα Phase 2 Sewage Costs ,0.6,2023-06-26 21:20:35.434180,Sewage collection,LSDB,0.3871428571428571
+Λαρνακα Τέλη Αποχέτευσης Ομβρίων,0.16,2023-06-26 21:20:35.438073,Sewage collection,LSDB,0.3871428571428571
+Τέλη Χρήσης €/m3,0.5,2023-06-26 21:20:35.441847,Sewage collection,SBLA,0.3871428571428571
+Λεμεσος Οικιακά τέλη ανά τετραμηνία (συντελεστής ΦΠΑ 5%),22.0,2023-06-26 21:20:36.659985,Water Supply,WBL,64.7375
+Λεμεσος Εμποροβιομηχανικά  τέλη ανά τετραμηνία (συντελεστής ΦΠΑ 5%),130.0,2023-06-26 21:20:36.665252,Water Supply,WBL,64.7375
+Λαρνακα Οικιακά τέλη (ανά τριμηνία) (συντελεστής ΦΠΑ 5%),15.75,2023-06-26 21:20:38.044724,Water Supply,LWB,64.7375
+Λαρνακα Εμποροβιομηχανικά τέλη (ανά τριμηνία) (συντελεστής ΦΠΑ 5%),91.2,2023-06-26 21:20:38.050806,Water Supply,LWB,64.7375
+"Rio Cinemas, Adults ticket",9.0,2023-06-26 21:20:38.648675,"Cinemas, theatres, concerts",Rio Cinemas,1773.1666666666667
+"Rio Cinemas, Children (up to 11) ticket",117.0,2023-06-26 21:20:38.653638,"Cinemas, theatres, concerts",Rio Cinemas,1773.1666666666667
+"Rio Cinemas, Senior (64+)/ Student ticket",647.0,2023-06-26 21:20:38.657844,"Cinemas, theatres, concerts",Rio Cinemas,1773.1666666666667
+"Rio Cinemas, Adults 3D ticket",310.0,2023-06-26 21:20:38.661841,"Cinemas, theatres, concerts",Rio Cinemas,1773.1666666666667
+"Rio Cinemas, Children 3D ticket",3118.0,2023-06-26 21:20:38.665787,"Cinemas, theatres, concerts",Rio Cinemas,1773.1666666666667
+"Rio Cinemas, Senior/Students 3D ticket",6438.0,2023-06-26 21:20:38.669650,"Cinemas, theatres, concerts",Rio Cinemas,1773.1666666666667
+"Frangiorgio Hotel, Τιμή για Δίκλινο για 1 βράδυ (Larnaca)",,2023-06-26 21:20:40.990575,"Hotels, motels, inns and similar accommodation services",Booking,
+"Navarria Blue Hotel, Τιμή για Δίκλινο για 1 βράδυ (Λεμεσός)",,2023-06-26 21:20:43.412559,"Hotels, motels, inns and similar accommodation services",Booking,
+"New Famagusta Hotel & Suites, Τιμή για Δίκλινο για 1 βράδυ (Αγία Νάπα)",,2023-06-26 21:20:45.582500,"Hotels, motels, inns and similar accommodation services",Booking,
+"Flokkas Hotel Apartments, Τιμή για Δίκλινο για 1 βράδυ (Πρωταράς)",,2023-06-26 21:20:48.961057,"Hotels, motels, inns and similar accommodation services",Booking,
+"Ξενοδοχείο Άστυ, Τιμή για Δίκλινο για 1 βράδυ (Λευκωσία)",,2023-06-26 21:20:50.864983,"Hotels, motels, inns and similar accommodation services",Booking,
+"Princessa Vera Hotel Apartments, Τιμή για Standard Στούντιο 2 μονά κρεβάτι 1 βράδυ (Paphos)",,2023-06-26 21:20:52.892485,"Hotels, motels, inns and similar accommodation services",Booking,
+ΚΥΛΙΝΔΡΟΣ 10kg ,20.9,2023-06-26 21:20:55.107021,Liquefied hydrocarbons,Consumer Observatory,20.9
+"EUROPEAN UNIVERSITY CYPRUS, Bachelors Programmes Average Yearly Tuition for 2022-2023",9357.6,2023-06-26 21:20:58.091942,Tertiary education,European University Cyprus,9357.6
