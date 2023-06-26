@@ -1958,9 +1958,10 @@ waterSewageOtherCities()
 
 def extract_float_price(price_str):
     # Remove any non-digit characters except for the dot
-    digits = ''.join(c for c in price_str if c.isdigit() or c == '.')
-    # Convert the string to a float
-    return float(digits)
+    prices = re.findall(r'€(\d+(?:\.\d+)?)', price_str)
+    if prices:
+        return float(prices[0])
+    return None
 
 def Rio():
     retailer = "Rio Cinemas"
