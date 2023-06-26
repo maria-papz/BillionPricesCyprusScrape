@@ -2228,7 +2228,7 @@ def Booking():
         date_time_scraped = now 
         df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
 
-Booking()
+#Booking()
 
 
 def GasCylinder():
@@ -2260,7 +2260,7 @@ def GasCylinder():
             # Extracting price
             if len(pdf_reader.pages) >= 6:  # Check if the required page exists
                 page = pdf_reader.pages[5]
-                match = re.search(r"\d+\s+ΚΥΛΙΝΔΡΟΣ.*?(\d+\.\d+)\s+\d+\.\d+", page.extract_text())
+                match = re.search(r"\d+\s+ΚΥΛΙΝΔΡΟΣ.*?\d+\.\d+\s+\d+\.\d+\s+(\d+\.\d+)", page.extract_text())
 
                 if match:
                     middle_price = match.group(1)
@@ -2308,7 +2308,7 @@ def update_average_price():
     df['product_price'] = pd.to_numeric(df['product_price'], errors='coerce')
 
     # Group by 'product_subclass' and 'date_time_scraped', calculate average price, and update 'average.price' column
-    df['subclass_average'] = df.groupby(['product_subclass', df['date_time_scraped'].dt.date])['product_price'].transform('mean')
+    df['subclass_average'] = round(df.groupby(['product_subclass', df['date_time_scraped'].dt.date])['product_price'].transform('mean'),4)
 
 update_average_price()
 
