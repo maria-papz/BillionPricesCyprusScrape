@@ -30,20 +30,20 @@ df = weights.merge(products_today[['product_subclass', 'subclass_average']].drop
 df.drop('product_subclass', axis=1, inplace=True)
 df.drop_duplicates(subset=['subclass'], inplace=True)
 
-df['weighted.mean.price'] = df['subclass_average'] * df['weight.subclass']
-df['weighted.mean.price.division'] = df.groupby(['division'], as_index=False)['weighted.mean.price'].transform('sum')
-df['weighted.mean.price.total'] = df.groupby('division')['weighted.mean.price.division'].first().sum()
-df['weight.matched']=df['weight.subclass']*df['matching']
-df['weight.matched.division'] = df.groupby(['division'], as_index=False)['weight.matched'].transform('sum')
-df['weight.matched.total'] = df['weight.matched'].sum()
+df['weighted.mean.price'] = round(df['subclass_average'] * df['weight.subclass'],4)
+df['weighted.mean.price.division'] = round(df.groupby(['division'], as_index=False)['weighted.mean.price'].transform('sum'),4)
+df['weighted.mean.price.total'] = round(df.groupby('division')['weighted.mean.price.division'].first().sum(),4)
+df['weight.matched']=round(df['weight.subclass']*df['matching'],4)
+df['weight.matched.division'] = round(df.groupby(['division'], as_index=False)['weight.matched'].transform('sum'),4)
+df['weight.matched.total'] = round(df['weight.matched'].sum(),4)
 df['datetime.calculated']= [datetime.now()]*len(df)
 
 
 
-df['CPI_total']=100*(df['weighted.mean.price.total']/df['reference.weighted.mean.price.total'])
-df['CPI_division']=100*(df['weighted.mean.price.division'])/df['reference.weighted.mean.price.division']
-df['weighted_CPI_division']=df['weight.matched.division']*df['CPI_division']
-df['CPI_general'] = df.groupby('division')['weighted_CPI_division'].first().sum()
+df['CPI_total']=round(100*(df['weighted.mean.price.total']/df['reference.weighted.mean.price.total']),4)
+df['CPI_division']=round(100*(df['weighted.mean.price.division'])/df['reference.weighted.mean.price.division'],4)
+df['weighted_CPI_division']=round(df['weight.matched.division']*df['CPI_division'],4)
+df['CPI_general'] = round(df.groupby('division')['weighted_CPI_division'].first().sum(),4)
 
 calculations = pd.concat([calculations,df])
 

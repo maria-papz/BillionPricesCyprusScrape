@@ -85,54 +85,55 @@ def SupermarketCyScrape():
 
 #put all the endings of the urls in lists based on the class they belong along
 # with the descriptions of the products that should be scrapped
-urls_bread = [['/psomi','/psomi?page=2','/psomi?page=3'],['ΣίφουναςΟλικήςΨωμίΚομμένο780g', 'ΣίφουναςΜαύροΜικρόΨωμίΚομμένο500g', 'ΣίφουναςΚοινόΨωμίΚομμένο560g', 
+urls_bread = [['/psomi','/psomi?page=2','/psomi?page=3'],['ΣίφουναςΟλικήςΨωμίΚομμένο780g', 'ΣίφουναςΜαύροΜικρόΨωμίΚομμένο500g', 'ΣίφουναςΚοινόΨωμίΚομμένο560g',
 'ΣίφουναςΚοινόΨωμίΚομμένο970g', 'ΣίφουναςΆσπροΨωμί560g', 'ΣίφουναςΚοινόΨωμί970g']]
 
 urls_bakery=[["/pites","/tost","/psomakia","/almyra","/keik","/glyka-1","/glyka-1?page=2","/krakers","/krakers?page=2","/kritsinia","/kritsinia?page=2",
-"/kroutons","/fryganies","/paximadia","/paximadia?page=2","/paximadia?page=3","/paximadia?page=4","/koulourakia"],
-['ΣίφουναςΠίττεςΆσπρεςΜεγάλες5Τεμ550g', 'ΣίφουναςΨωμίΦέτεςΤόστΆσπροΜικρό700g', 'ΣίφουναςΦραντζολάκιαΣτρογγυλά4Τεμ', 'ΣίφουναςΦραντζολάκιαΜακρόστεναΜεγάλα4Τεμ', 
+"/kritsinia?page=3","/kroutons","/fryganies","/paximadia","/paximadia?page=2","/paximadia?page=3","/paximadia?page=4","/koulourakia"],
+['ΣίφουναςΠίττεςΆσπρεςΜεγάλες5Τεμ550g', 'ΣίφουναςΨωμίΦέτεςΤόστΆσπροΜικρό700g', 'ΣίφουναςΦραντζολάκιαΣτρογγυλά4Τεμ', 'ΣίφουναςΦραντζολάκιαΜακρόστεναΜεγάλα4Τεμ',
 'ΣίφουναςΚρουασάνΒουτύρου1Τεμ', 'ΣίφουναςΛουκανικόπιτα1Τεμ', 'ΣίφουναςΠίταΣάτζιηςΜεΜέλι1Τεμ', 'ΣίφουναςΕλιόπιταΣφολιάτα1Τεμ', 'ΣίφουναςΚέικΓεωγραφίας750g', 'ΣίφουναςMixΣιροπιαστά410g',
-"7DaysMiniBakeRollsΠίτσα80g","BakandysΧωριάτικαΚριτσίνιαΣιταρένια275g","ΜαρίαςΠαξιμάδιαΓλυκανίσου300g","JohnsofΚρουτόνιαΟλικήςΆλεσης320g",
+"7DaysMiniBakeRollsΠίτσα80g","BakandysΧωριάτικαΚριτσίνιαΣιταρένια275g","ΜαρίαςΠαξιμάδιαΓλυκανίσου300g","JohnsofΚρουτόνια320g",
 "EliteΦρυγανιέςΜεΣίκαλη360g3+1Δώρο","EliteΦρυγανιέςΟλικήςΆλεσης360g3+1Δώρο","BakandysΠαξιμάδιαΣικάλεως250g","JohnsofNapolitanoΣταφίδαςΑμυγδάλου240g"]]
 
 urls_cereals=[["/dimitriaka?page=1","/dimitriaka?page=2","/dimitriaka?page=3","/dimitriaka?page=4","/dimitriaka?page=5","/dimitriaka?page=6","/dimitriaka?page=7","/dimitriaka?page=8","/dimitriaka?page=9"],
 ['QuakerΝιφάδεςΒρώμης500g', 'QuakerΤραγανέςΜπουκιέςΒρώμηΣοκολάτα450g','OreoO&#039;sCereal350g','KelloggsCornFlakes375g', 'KelloggsCocoPopsChocos375g',
- 'KelloggsCocoPops500g', 'KelloggsSpecialK500g','KelloggsMielPopsLoops330g']]
+ 'KelloggsCocoPops500g', 'KelloggsSpecialK750g','KelloggsMielPopsLoops330g']]
 
 urls_pastas=[["/makaronia","/makaronia?page=2","/makaronia?page=3","/makaronia?page=4","/penes","/penes?page=2",
 "/kritharaki"],['BarillaΣπαγγέτιNo5500g', 'ΜέλισσαPrimoGustoΣπαγγέτιNo6500g', 'ΜέλισσαPrimoGustoΚριθαράκι500g',
 'ΜιτσίδηΣπαγέττι500g','ΜιτσίδηΚριθαράκι500g','ΜιτσίδηΜακαρόνιαΑ500g','ΜιτσίδηΧωριάτικαΜακαρόνια500g','ΘίιαμβοςΣπαγέττο500g']]
 
-urls_rice = [["/parmpoil", "/parmpoil?page=2","/mpasmati","/karolina","/glase","/pourgouri","/diafora-ryzia"],
+urls_rice = [["/parmpoil", "/parmpoil?page=2","/mpasmati","/karolina","/glase","/pourgouri","/pourgouri?page=2","/diafora-ryzia"],
 ['3ΑΡύζιΠάρποιλτ1kg', 'BensOriginalΡύζιΜακρύκοκκο10Λεπτά1kg', 'TildaΡυζιΜπασματι1kg', '3ΑΡύζιΜπασμάτι1kg',
- '3ΑΡύζιJasmine1kg', 'ΑφοίΑ.ΚεπόλαΠουργούρι1kg','ΑφοίΑ.ΚεπόλαΠουργούρι500g', 'ΜιτσίδηΠουργούρι500g', 'ΜιτσίδηΠουργούρι1kg',
+ '3ΑΡύζιJasmine1kg', 'ΑφοίΑ.ΚεπόλαΠουργούρι1kg','ΑφοίΑ.ΚεπόλαΠουργούριΓιαΚούπες500g', 'ΜιτσίδηΠουργούρι500g', 'ΜιτσίδηΠουργούρι1kg',
 '3ΑΠουργούρι500g','NaturalLifeΑποφλειωμένοΠουργούριΠιλάφι500g']]
 
-urls_saltspices = [["/alati","/piperi","/mpacharika","/meigmata","/aromatika"],['SailorΑλάτι250g', 'CarnationSpicesΠιπέριΜαύροΑλεσμένο34g', 
-'CarnationSpicesΚανέλαΑλεσμένη34g', 'CarnationSpicesΠάπρικαΓλυκιά30g', 'CarnationSpicesΚουρκουμάςΚιτρινόριζα30g', 'KnorrAromatΜείγμαΛαχανικών&amp;Μυρωδικών90g', 
-'CarnationSpicesΔιάφοραΒότανα12g', 'CarnationSpicesΣκόρδοΣκόνη40g', 'CarnationSpicesΡίγανη30g', 'CarnationSpicesΘυμάρι10g', 'CarnationSpicesΚόλιανδροςΣκόνη20g', 
+urls_saltspices = [["/alati","/piperi","/mpacharika","/meigmata","/aromatika","/aromatika?page=2"],['SailorΑλάτι250g', 'CarnationSpicesΠιπέριΜαύροΑλεσμένο34g',
+'CarnationSpicesΚανέλαΑλεσμένη34g', 'CarnationSpicesΠάπρικαΓλυκιά30g', 'CarnationSpicesΚουρκουμάςΚιτρινόριζα30g', 'KnorrAromatΜείγμαΛαχανικών&amp;Μυρωδικών90g',
+'CarnationSpicesΔιάφοραΒότανα12g', 'CarnationSpicesΣκόρδοΣκόνη40g', 'CarnationSpicesΡίγανη30g', 'CarnationSpicesΘυμάρι10g', 'CarnationSpicesΚόλιανδροςΣκόνη20g',
 'CarnationSpicesΜαϊδανός10g', 'CarnationSpicesΒασιλικός10g', 'CarnationSpicesΆνηθος10g', 'CarnationSpicesΔεντρολίβανοΛάσμαρι10g']]
 
 urls_nuts = [["/xiroi-karpoi","/xiroi-karpoi?page=2","/xiroi-karpoi?page=3","/xiroi-karpoi?page=4","/xiroi-karpoi?page=5","/apoxiramena-frouta",
-"/apoxiramena-frouta?page=2","/apoxiramena-frouta?page=3","/apoxiramena-frouta?page=4"],['ΛειβαδιώτηΠράσινηΣφραγίδαΑμύγδαλα120g', 'SeranoΚάσιους140g', 
-'ΛειβαδιώτηΚαρυδόψιχα140g', 'SeranoEconomyPackΦουντούκιαΩμά350g', 'SeranoΦυστικόψιχαΚαβουρδισμένηΑλατισμένη175g','ΕποχέςΑποξηραμέναΣύκα350g', 
-'ΑμαλίαΧρυσόμηλαΑποξηραμένα250g', 'SeranoSnackin&#039;GoodΑποξηραμέναΔαμάσκηναΧωρίςΠρόσθετηΖάχαρη275g', 'ΚαρπόςΑπόΤηΓηΜαςΑποξηραμέναΒερίκοκα400g', 'ΑμαλίαΦοινίκιαΤυνησίας250g', 'SeranoΣταφίδες350g']]
+"/apoxiramena-frouta?page=2","/apoxiramena-frouta?page=3","/apoxiramena-frouta?page=4"],['ΛειβαδιώτηΠράσινηΣφραγίδαΑμύγδαλα120g', 'SeranoΚάσιους140g',
+'ΛειβαδιώτηΚαρυδόψιχα140g', 'SeranoΦουντούκιαΩμά150g', 'SeranoΦυστικόψιχαΚαβουρδισμένηΑλατισμένη175g','ΕποχέςΑποξηραμέναΣύκα350g',
+'ΑμαλίαΧρυσόμηλαΑποξηραμένα250g', 'SeranoSnackin&#039;GoodΑποξηραμέναΔαμάσκηναΧωρίςΚουκούτσιΧωρίςΠρόσθετηΖάχαρη250g', 'ΚαρπόςΑπόΤηΓηΜαςΑποξηραμέναΔαμάσκηναΜεΚουκούτσι400g',
+'ΑμαλίαΦοινίκιαΤυνησίας250g', 'SeranoΣταφίδες350g']]
 
 urls_jams = [["/meli","/meli?page=2","/meli?page=3","/marmelades","/pralines","/fystikovoutyro","/diafora-aleimmata"],['RoyalBeeΜέλι475g', 'MavroudesΜέλι380g',
  'ΤοΤζιβέρτιΜέλιΑνθέωνSqueeze485g', 'BonapiΜέλιΑνθέων450g','BlossomΜαρμελάδαΜερίδες6x30g', 'Nutella200g', 'ΌλυμποςSuperSpreadΦυστικοβούτυροΤραγανό350g', 'DfΤαχίνι250g']]
 
 urls_crisps = [["/patatakia"],['ΧαραλάμπουςΓαριδάκιαΜεΤυρί10X22g']]
 
-urls_sauces=[["/ntomatas","/ntomatas?page=2","/ntomatas?page=3","/zomoi","/zomoi?page=2","/zomoi?page=3"],['PelargosΚλασικό3X250g', 
-'ΜιτσίδηΠάσταΝτομάτας4X70g', 'BlossomΠάσταΝτομάτας4X70g', 'KeanPomiloriΠεραστήΝτομάτα690g', 'SwsΠάσταΝτομάτας425g','ΜιτσίδηΠεραστήΝτομάτα3x500g', 
+urls_sauces=[["/ntomatas","/ntomatas?page=2","/ntomatas?page=3","/zomoi","/zomoi?page=2","/zomoi?page=3"],['PelargosΚλασικό3X250g',
+'ΜιτσίδηΠάσταΝτομάτας4X70g', 'BlossomΠάσταΝτομάτας4X70g', 'KeanPomiloriΠεραστήΝτομάτα690g', 'SwsΠάσταΝτομάτας425g','ΜιτσίδηΠεραστήΝτομάτα3x500g',
 'MaggiΖωμόςΚότας12Τεμ','MaggiΖωμόςΛαχανικών16Τεμ','MaggiΖωμόςΓιαΖυμαρικά12Τεμ','KnorrΖωμόςΚότας12Τεμ','KnorrΖωμόςΛαχανικών12Τεμ']]
 
-urls_oil=[["/elaiolado","/elaiolado?page=2"],['ΆγιοςΓεώργιοςΚυπριακόΠαρθένοΕλαιόλαδο1L','ΕλιοχώριΠαρθένοΕλαιόλαδο2L', 'ΣεκέπΠαρθένοΕλαιόλαδο1L']]
+urls_oil=[["/elaiolado","/elaiolado?page=2"],['ΆγιοςΓεώργιοςΠαρθένοΕλαιόλαδο2L','ΕλιοχώριΠαρθένοΕλαιόλαδο2L', 'ΣεκέπΠαρθένοΕλαιόλαδο1L']]
 
-urls_otheroil=[["/ilianthelaio"],['LesieurΗλιανθέλαιο3L', 'AmbrosiaΗλιανθέλαιο3L','FloraΗλιανθέλαιο3L', 'AmbrosiaΗλιανθέλαιο4L']]
+urls_otheroil=[["/ilianthelaio"],['AlokozayΗλιανθέλαιο1L', 'AmbrosiaΗλιανθέλαιο3L','ΕμμέλειαΡαφιναρισμένοΗλιανθέλαιο3L', 'AmbrosiaΗλιανθέλαιο4L']]
 
-urls_preservedfish=[["/tonou","/tonou?page=2","/tonou?page=3"],['SevycoΆσπροςΤόνοςΣεΕλαιόλαδο4X95g', 'SevycoΤόνοςΣεΝερό4X200g',
- 'RioMareΤόνοςΣεΕλαιόλαδο160g2+1Δωρεάν', 'RioMareΤόνοςΣεΕλαιόλαδο80g3+1Δωρεάν','RioMareΤόνοςΣεΕλαιόλαδο80g3+1Δωρεάν']]
+urls_preservedfish=[["/tonou","/tonou?page=2","/tonou?page=3"],['SevycoΆσπροςΤόνοςΣεΕλαιόλαδο4X95g', 'SevycoΡοζέΤόνοςΣεΣογιέλαιο4X200g',
+ 'RioMareΤόνοςΣεΕλαιόλαδο160g2+1Δωρεάν','RioMareΤόνοςΣεΝερό80g3+1Δωρεάν']]
 
 urls_driedfish = [["/psariou-1"],['ΚαμήλαΣαρδελάκιαΣεΝερό120g', 'TrataΡέγγαΚαπνιστή160g', 'FlokosΦιλέτοΣκουμπρίΚαπνιστόΣεΦυτικόΛάδι160g',
  'ΚαμήλαΑντζιούγες50g']]
@@ -140,7 +141,7 @@ urls_driedfish = [["/psariou-1"],['ΚαμήλαΣαρδελάκιαΣεΝερό1
 urls_preservedmeat = [["/kreatos","/kreatos?page=2"],['KarlaCornedBeef340g','TulipPorkLuncheonMeat200g',
  'TulipChoppedHam200g','ZwanLuncheonMeat200g', 'ZwanChoppedHamAndPork200g','ZwanChickenLuncheonMeat200g']]
 
-urls_preservedvegetable = [["/lachanikon"],['ΜεσόγειοςΡεβύθια400g', 'ΜεσόγειοςΦασόλιαΚόκκινα400g', 
+urls_preservedvegetable = [["/lachanikon"],['ΜεσόγειοςΡεβύθια400g', 'ΜεσόγειοςΦασόλιαΚόκκινα400g',
 'ΜεσόγειοςΦασόλιαΆσπρα400g', 'ΜεσόγειοςΣιταροπούλα340g', 'ΜεσόγειοςΜανιτάριαΦέτες400g', 'ΜεσόγειοςΦασόλιαΣεΣάλτσαΝτομάτας400g']]
 
 urls_othermilk = [["/kremes-galaktos","/galaktos","/galaktos?page=2"],
@@ -149,29 +150,33 @@ urls_othermilk = [["/kremes-galaktos","/galaktos","/galaktos?page=2"],
 
 urls_otherfood = [["/soupes","/diafores-sokolates","/diafores-sokolates?page=2","/mpiskota","/mpiskota?page=2","/mpiskota?page=3","/mpiskota?page=4",
 "/mpiskota?page=5","/mpiskota?page=6","/mpiskota?page=7","/mpiskota?page=8","/mpiskota?page=9","/mpiskota?page=10","/mpiskota?page=11","/mpiskota?page=12"],
-['HeinzΣούπαΜανιταριών400g', 'HeinzΣούπαΝτομάτας400g',"ΦρουΦρουJoker9Τεμ9+3Δωρεάν","ΦρουΦρουMorningCoffee150g","KinderCards5Τεμ128g",
+['HeinzΣούπαΜινεστρόνι400g', 'HeinzΣούπαΝτομάτας400g',"ΦρουΦρουJoker9Τεμ9+3Δωρεάν","ΦρουΦρουMorningCoffee150g","KinderCards5Τεμ128g",
 "Oreo154g","ΠαπαδοπούλουΓεμιστάΣοκολάτα200g"]]
 
 urls_sugar = [["/aspri"],['SweetFamilyΛευκήΚρυσταλλικήΖάχαρη1kg']]
 
-urls_flour= [["/alevri","/alevri?page=2"],['ΜιτσίδηΑλεύριΓιαΌλεςΤιςΧρήσεις1kg','ΜιτσίδηΑλεύριΦαρίνα&#039;&#039;00&#039;&#039;1kg',
+urls_flour= [["/alevri","/alevri?page=2"],['ΜιτσίδηΑλεύριΓιαΌλεςΤιςΧρήσεις1kg','ΜιτσίδηΑλεύριΦαρίνα001kg',
  'ΜιτσίδηΑλεύριΧωριάτικο1kg','ΜιτσίδηΑλεύριΦαρίναΖαχαροπλαστικής1kg','ΑδελφοίΚαζάζηΑλεύριΦαρίνα001kg','ΑδελφοίΚαζάζηΑλεύριΧωριάτικο1kg']]
 
-urls_chocolate = [["/mavri-sokolata","/lefki-sokolata"],['BakandysΣοκολάταΓάλακτοςΚουβερτούρα4X37.5g', 
+
+urls_chocolate = [["/sokolata-galaktos","/lefki-sokolata"],['BakandysΣοκολάταΓάλακτοςΚουβερτούρα4x37.5g',
 'BakandysΆσπρηΣοκολάταΚουβερτούρα4x37.5g']]
 
-urls_confectionary= [["/diafora-alla-eidi", "/diafora-alla-eidi?page=2","/diafora-alla-eidi?page=3"],['ΜοναμίΜαγειρικήΣόδα10X7g', 
-'RoyalBakingPowder226g', 'ΣτέλλαΑνθόνεροΚιτρόμηλο500ml', 'ΑμαλίαΝησιαστέ400g', 'CarltonaΆμυλοΑραβοσίτου450g', 'BakandysΣαβουαγιάρ200g', 
-'ΓιώτηςΜαγιάΣτιγμής3x8g', 'SeranoΙνδοκάρυδοΑλεσμένο140g1+1Δωρεάν', 'SpryΦυτικόΜαγειρικόΠροιόν350g', 'ΑγρούΡοδόσταγμα500ml']]
+urls_confectionary= [["/diafora-alla-eidi", "/diafora-alla-eidi?page=2","/diafora-alla-eidi?page=3","/apoxiramena-frouta?page=5","/mageiriki-soda"],['HristalΜαγειρικήΣόδα125g',
+'RoyalBakingPowder226g', 'ΣτέλλαΑνθόνεροΚιτρόμηλο500ml', 'ΑμαλίαΝησιαστέ400g', 'CarltonaΆμυλοΑραβοσίτου450g', 'BakandysΣαβουαγιάρ200g',
+'ΓιώτηςΜαγιάΣτιγμής3x8g', 'ΑμαλίαΙνδοκάρυδοΑλεσμένο250g', 'SpryΦυτικόΜαγειρικόΠροιόν350g', 'ΑγρούΡοδόσταγμα500ml']]
 
-urls_freshvegetables= [[ "/freska-lachanika","/freska-lachanika?page=2","/freska-lachanika?page=3","/freska-lachanika?page=4","/freska-lachanika?page=5","/freska-lachanika?page=6"],
+
+urls_freshvegetables= [[ "/freska-lachanika","/freska-lachanika?page=2","/freska-lachanika?page=3","/freska-lachanika?page=4",
+"/freska-lachanika?page=5","/freska-lachanika?page=6","/freska-lachanika?page=7","/freska-lachanika?page=8","/freska-lachanika?page=9"],
 ['Ντομάτες1kg', 'ΑγγουράκιαΧωραφιού1kg', 'Λεμόνια1kg', 'ΚρεμμύδιαΑκαθάριστα1kg', 'Αγγουράκια1kg', 'ΝτοματίνιαΜίνιΦοινικωτά500g',
- 'ΚαρόταΑκαθάριστα1kg', 'Αβοκάντο1kg', 'ΜαρούλιΡομάναΔέσμη1Τεμ', 'ΠιπεριέςΧρωματιστές4Τεμ', 'Σκόρδος1Τεμ', 'ΜπανάνεςΕισαγωγής1kg']]
+ 'ΚαρόταΑκαθάριστα1kg', 'Αβοκάντο1kg', 'ΜαρούλιΡομάναΔέσμη1Τεμ', 'ΠιπεριέςΧρωματιστές4Τεμ', 'Σκόρδος1Τεμ']]
+
 
 urls_potatoes =[["/freska-lachanika"],['ΦρέσκεςΠατάτεςΚυπριακέςΝέαςΣoδειάς2kg']]
 
-urls_fruit = [["/freska-frouta","/freska-frouta?page=2","/freska-frouta?page=3"],['ΜπανάνεςΕισαγωγής1kg','ΜήλαPinkLady1kg', 'ΠράσινοΣταφύλι750g', 'ΜήλαGrannySmith1kg', 'ΑχλάδιαConference1kg', 
-'ΜήλαΚόκκιναDelicious1kg', 'Μύρτιλα125g', 'ΜήλαΚίτριναDelicious1kg', 'Ακτινίδια500g', 'ΠορτοκάλιαMerlinAAA1kg', 'ΜήλαRoyalGala1kg', 'ΠορτοκάλιαΓιαΧυμό2kg']]
+urls_fruit = [["/freska-frouta","/freska-frouta?page=2","/freska-frouta?page=3"],['ΜπανάνεςΕισαγωγής1kg','ΜήλαPinkLady1kg', 'ΠράσινοΣταφύλι750g', 'ΜήλαGrannySmith1kg', 'ΑχλάδιαConference1kg',
+'ΜήλαΚόκκιναDelicious1kg', 'Μύρτιλα125g', 'ΜήλαΚίτριναDelicious1kg', 'Ακτινίδια500g', 'ΜήλαRoyalGala1kg', 'ΠορτοκάλιαΓιαΧυμό1kg']]
 
 urls_pork= [["/klasikes-kopes-choirinou","/klasikes-kopes-choirinou?page=2"],['ΧοιρινόΚιμάςΜερί500g', 'ΧοιρινόΜπριζόλαΛαιμός4Τεμ1,200kg', 'ΧοιρινόΣούβλαΛαιμόςΛαπάςΜεΚόκκαλο1,1kg']]
 
@@ -183,9 +188,9 @@ urls_lamb = [["/arni"],['ΑρνίΓιαΣούβλα1kg']]
 
 urls_beaf= [["/vodino"],['ΒοδινόΚιμάς500g']]
 
-urls_fish= [["/psaria"],['ΤσιπούραΦρέσκιαΚαθαρισμένη3ΤεμMax1,500kg']]
+urls_fish= [["/psaria"],['ΤσιπούραΦρέσκιαΚαθαρισμένη3ΤεμMax1,700kg']]
 
-urls_preservedmilk= [["/makras-diarkeias"],['MlekovitaΠλήρες3.5%ΓάλαΜακράςΔιαρκείας1L', 'LauraΕλαφρύΓάλαΜακράςΔιαρκείας1,5%1L']]
+urls_preservedmilk= [["/makras-diarkeias"],['BertiΠλήρες3.5%ΓάλαΜακράςΔιαρκείας1L', 'BertiΕλαφρύ1.5%ΓάλαΜακράςΔιαρκείας1L']]
 
 urls_lowfatmilk= [["/ageladino","/ageladino?page=2"],['ΛανίτηςΕλαφρύΓάλα2L',  'ΛανίτηςΕλαφρύΓάλα1,5L','ΧαραλαμπίδηςΚρίστηςDelactΓάλα1L', 'ΧαραλαμπίδηςΚρίστηςΕλαφρύΓάλα2L',
  'ΧαραλαμπίδηςΚρίστηςΕλαφρύΓάλα1L','ΧαραλαμπίδηςΚρίστηςΕλαφρύΓάλα1,5L']]
@@ -197,7 +202,7 @@ urls_yogurt= [["/ageladino-giaourti", "/ageladino-giaourti?page=2","/proveio-gia
 
 urls_butter= [["/voutyro"],['LurpakΑνάλατοΒούτυρο250g', 'KerrygoldΑλατισμένοΒούτυρο250g', 'LurpakΑλατισμένοΒούτυρο250g']]
 
-urls_margarine= [["/margarines","/margarines?page=2"],['VitaliteLightΜαργαρίνη500g', 'ΧαραλαμπίδηςΚρίστηςOriginalΜαργαρίνη500g', 'ΧαραλαμπίδηςΚρίστηςLightΜαργαρίνη500g','FloraOriginal100%Φυτικό450g', 
+urls_margarine= [["/margarines","/margarines?page=2"],['VitaliteLightΜαργαρίνη500g', 'ΧαραλαμπίδηςΚρίστηςOriginalΜαργαρίνη500g', 'ΧαραλαμπίδηςΚρίστηςLightΜαργαρίνη500g','FloraOriginal100%Φυτικό450g',
 'FloraLight100%Φυτικό450g', 'ΜινέρβαΦαστSoft250g']]
 
 urls_eggs= [["/avga"],['VasilicoEggsΑυγάΜεσσαία15Τεμ']]
@@ -214,7 +219,8 @@ class_labels = ['Bread','Other bakery products','Breakfast Cereals','Pasta produ
 'Dried, smoked or salted fish and seafood','Other meat preparations','Dried vegetables, other preserved or processed vegetables','Other milk products',
 'Other food products n.e.c.','Sugar','Flours and other cereals','Chocolate','Confectionery products','Fresh or chilled vegetables other than potatoes and other tubers',
 'Potatoes','Fresh or chilled fruit','Pork','Other meat','Poultry','Lamb and goat','Beef and veal','Fresh or chilled fish','Preserved milk','Low fat Milk',
-'Whole Milk','Yogurt','Butter','Margarine and other vegetable fats','Eggs']
+'Whole Milk','Yoghurt','Butter','Margarine and other vegetable fats','Eggs']
+
 
 #the scrapper function
 def scrapper_supermarketcy(urls:list,products:list):
@@ -584,7 +590,7 @@ products_urls = pd.read_excel('products_bpp.xlsx')
 
 
 #MARKS&SPENCER
-marksspencerdf = products_urls.iloc[209:227,]
+marksspencerdf = products_urls.iloc[206:223,]
 
 #the scrapper function
 prices_final_marksspencer = []
@@ -640,8 +646,62 @@ for i in range(len(all_items_marksspencer)):
 
 
 
+
+#ATHLOKINISI
+athlokinisidf = products_urls.iloc[259:277,]
+ 
+#the scrapper function
+prices_final_athlokinisi = []
+
+def scrapper_athlokinisi(urls:list):
+    #for the different urls, putting the prices in a list
+    url_athlokinisi = 'https://athlokinisi.com.cy'
+    for url in urls:
+        try:
+            url_new = url_athlokinisi+url
+            page = urlopen(url_new)
+            html = page.read().decode("utf-8")
+            bs = BeautifulSoup(html, "html.parser")
+
+            scripts = bs.find_all('span',{'class':'ammount'},string=True)
+            #get only the first element
+            price_final = round(float(str(scripts[0]).strip('<span class="ammount">€ </span>')),2)
+            #add the price in the list    
+            prices_final_athlokinisi.append(price_final)
+
+        except urllib.error.HTTPError as err:
+            prices_final_athlokinisi.append('NaN')
+
+
+        except IndexError:
+            prices_final_athlokinisi.append('NaN')
+
+
+
+#columns urls,products,labels into lists
+urls = athlokinisidf['item.url'].values.tolist()
+products = athlokinisidf['item.name'].values.tolist()
+labels = athlokinisidf['item.subclass'].values.tolist()
+division = athlokinisidf['item.division'].values.tolist()
+
+
+#scrap the prices
+scrapper_athlokinisi(urls)
+
+#put the rows in a list
+all_items_athlokinisi = []
+for product,price,label in zip(products,prices_final_athlokinisi,labels):
+     all_items_athlokinisi.append([product,price,datetime.now(),label,'Athlokinisi'])
+
+#assign the values to each column
+for i in range(len(all_items_athlokinisi)):
+    df.loc[i] = (all_items_athlokinisi[i][0],all_items_athlokinisi[i][1],all_items_athlokinisi[i][2],all_items_athlokinisi[i][3],all_items_athlokinisi[i][4],0)
+
+
+
+
 #INTERNSPORT
-# internsportsdf = products_urls.iloc[226:243,]
+# internsportsdf = products_urls.iloc[223:240,]
 
 
 # #the scrapper function
@@ -692,7 +752,7 @@ for i in range(len(all_items_marksspencer)):
 
 
 #FAMOUSSPORT
-famoussportsdf = products_urls.iloc[243:262,]
+famoussportsdf = products_urls.iloc[240:259,]
 
 
 #the scrapper function
@@ -971,7 +1031,7 @@ def Stephanis():
 
     #for the different urls, putting the prices in a list
     prices_final_stephanis = []
-    stephanisdf = products_urls.iloc[302:342,]
+    stephanisdf = products_urls.iloc[299:339,]
     
     #columns urls,products,labels into lists
     urls = stephanisdf['item.url'].values.tolist()
@@ -1007,7 +1067,7 @@ Stephanis()
 def Electroline():
     urls = ["https://electroline.com.cy/products/garden/garden-power-tools/%ce%b1%ce%bb%cf%85%cf%83%ce%bf%cf%80%cf%81%ce%af%ce%bf%ce%bd%ce%b1/oregon-cs1200-electric-chainsaw-1800w/",
         "https://electroline.com.cy/products/tools/hand-tools-2/screwdrivers/kapriol-kap33533-set-screwdrivers-6pcs/",
-        "https://electroline.com.cy/products/garden-tools/hand-tools/hand-tools17002/tactix-900163-tool-set-14-pieces/"]
+        "https://electroline.com.cy/products/tools/hand-tools-2/hand-tools-set/total-tot-thkthp21176-hand-tools-set-117-pieces/"]
 
     prices_final_electroline = []
 
@@ -1037,7 +1097,7 @@ def Electroline():
                 prices_final_electroline.append('NaN')
 
             #columns urls,products,labels into lists
-    products = ['WORX 30091701000 Ηλεκτρικό Aλυσοπρίονο','TACTIX MER-205604 Σετ Kατσαβίδια, 12 Tεμάχια','TACTIX 900163 Σετ Εργαλείων 14 Τεμάχια',]
+    products = ['WORX 30091701000 Ηλεκτρικό Aλυσοπρίονο','TACTIX MER-205604 Σετ Kατσαβίδια, 12 Tεμάχια','TOTAL TOT-THKTHP21176 Σετ Εργαλεία Χειρός 117 Τεμάχια']
     labels = ['Motorized major tools and equipment','Non-motorized small tools','Miscellaneous small tool accessories']
 
     #put the rows in a list
@@ -1052,7 +1112,7 @@ Electroline()
 
 #IKEA
 def ikea():
-    ikeadf = products_urls.iloc[342:371,]
+    ikeadf = products_urls.iloc[339:368,]
     prices_final_ikea = []
     url_ikea = "https://www.ikea.com.cy"
     #columns urls,products,labels into lists
@@ -1094,7 +1154,7 @@ ikea()
 
 #AWOL
 def awol():
-    awoldf = products_urls.iloc[280:288,]
+    awoldf = products_urls.iloc[277:285,]
     urls = awoldf['item.url'].values.tolist()
     products = awoldf['item.name'].values.tolist()
     labels = awoldf['item.subclass'].values.tolist()
@@ -1134,7 +1194,7 @@ awol()
 
 #MOTORACE
 def moto_race():
-    motoracedf = products_urls.iloc[288:302,]
+    motoracedf = products_urls.iloc[285:299,]
     #the scrapper function
     prices_final_motorace = []
     #columns urls,products,labels into lists
@@ -1898,9 +1958,10 @@ waterSewageOtherCities()
 
 def extract_float_price(price_str):
     # Remove any non-digit characters except for the dot
-    digits = ''.join(c for c in price_str if c.isdigit() or c == '.')
-    # Convert the string to a float
-    return float(digits)
+    prices = re.findall(r'€(\d+(?:\.\d+)?)', price_str)
+    if prices:
+        return float(prices[0])
+    return None
 
 def Rio():
     retailer = "Rio Cinemas"
@@ -2168,7 +2229,7 @@ def Booking():
         date_time_scraped = now 
         df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
 
-Booking()
+#Booking()
 
 
 def GasCylinder():
@@ -2200,7 +2261,7 @@ def GasCylinder():
             # Extracting price
             if len(pdf_reader.pages) >= 6:  # Check if the required page exists
                 page = pdf_reader.pages[5]
-                match = re.search(r"\d+\s+ΚΥΛΙΝΔΡΟΣ.*?(\d+\.\d+)\s+\d+\.\d+", page.extract_text())
+                match = re.search(r"\d+\s+ΚΥΛΙΝΔΡΟΣ.*?\d+\.\d+\s+\d+\.\d+\s+(\d+\.\d+)", page.extract_text())
 
                 if match:
                     middle_price = match.group(1)
@@ -2248,7 +2309,7 @@ def update_average_price():
     df['product_price'] = pd.to_numeric(df['product_price'], errors='coerce')
 
     # Group by 'product_subclass' and 'date_time_scraped', calculate average price, and update 'average.price' column
-    df['subclass_average'] = df.groupby(['product_subclass', df['date_time_scraped'].dt.date])['product_price'].transform('mean')
+    df['subclass_average'] = round(df.groupby(['product_subclass', df['date_time_scraped'].dt.date])['product_price'].transform('mean'),4)
 
 update_average_price()
 
