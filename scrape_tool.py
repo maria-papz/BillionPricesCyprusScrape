@@ -954,7 +954,7 @@ def Fuel():
     if len(price_ini)>6:
         df.loc[len(df)] = ("Πετρέλαιο Κίνησης Μέση Τιμή Παγκύπρια",price_ini[6],datetime.now(),'Diesel','Global Petrol Prices',0)
     if len(price_ini)>9:
-        df.loc[len(df)] =  ("Πετρέλαιο Μέση Τιμή Παγκύπρια",price_ini[9],datetime.now(),'Diesel','Global Petrol Prices',0)
+        df.loc[len(df)] =  ("Πετρέλαιο Μέση Τιμή Παγκύπρια",price_ini[9],datetime.now(),'Liquid Fuels','Global Petrol Prices',0)
     if len(price_ini)>12:
         df.loc[len(df)] = ("Πετρέλαιο Θέρμανσης Μέση Τιμή Παγκύπρια",price_ini[12],datetime.now(),'Liquid Fuels','Global Petrol Prices',0)
 
