@@ -964,11 +964,11 @@ Fuel()
 #THE CYGAR SHOP/NOMBEO/E-WHOLE SALE
 def Tobacco():
     prices_final_cigars=[]
-
+    user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
+    headers={'User-Agent':user_agent} 
     url = "https://www.thecygarshop.com/product-page/machetero-panatela"
-    page = urlopen(url)
-    html = page.read().decode("utf-8")
-    bs = BeautifulSoup(html, "html.parser")
+    response = requests.get(url, headers=headers)
+    bs = BeautifulSoup(response.content, "html.parser")
         
     scripts = bs.find_all('span',{'data-hook':'formatted-primary-price'},string=True)
     scripts
@@ -982,9 +982,8 @@ def Tobacco():
         prices_final_cigars.append(None)
 
     url = "https://www.numbeo.com/cost-of-living/country_price_rankings?itemId=17&displayCurrency=EUR"
-    page = urlopen(url)
-    html = page.read().decode("utf-8")
-    bs = BeautifulSoup(html, "html.parser")
+    response = requests.get(url, headers=headers)
+    bs = BeautifulSoup(response.content, "html.parser")
         
     scripts = bs.find_all('script',string=True)
     price_ini = re.findall(r"\['Cyprus', \d.+\]",str(scripts))
@@ -998,9 +997,8 @@ def Tobacco():
         prices_final_cigars.append(None)
 
     url = "https://www.ewsale.com/product-page/aspire-puxos-kit-%CE%B7%CE%BB%CE%B5%CE%BA%CF%84%CF%81%CE%BF%CE%BD%CE%B9%CE%BA%CE%AC-%CF%84%CF%83%CE%B9%CE%B3%CE%AC%CF%81%CE%B1-%CE%BC%CF%80%CE%B1%CF%84%CE%B1%CF%81%CE%AF%CE%B1-21700-200-ml-%CF%85%CE%B3%CF%81%CE%AC-%CE%AC%CF%84%CE%BC%CE%B9"
-    page = urlopen(url)
-    html = page.read().decode("utf-8")
-    bs = BeautifulSoup(html, "html.parser")
+    response = requests.get(url, headers=headers)
+    bs = BeautifulSoup(response.content, "html.parser")
         
     scripts = bs.find_all('span',{'data-hook':'formatted-primary-price'},string=True)
     #get only the first element
