@@ -472,7 +472,7 @@ def scrapper_phoneservices_primetel(urls:list):
                 prices_final_phone.append(float(prices_phoneservices[3].strip('\€')))
             else:
                 prices_final_phone.append(None)
-            if len(prices_final_phone)>5:
+            if len(prices_phoneservices)>5:
                 prices_final_phone.append(float(prices_phoneservices[5].strip('\€')))
             else:
                 prices_final_phone.append(None)
@@ -899,25 +899,26 @@ def CyMinistryEducation():
 
     pdf_1 = tb.read_pdf('http://archeia.moec.gov.cy/mc/698/didaktra_idiotikon_mesi_ekpaidefsi.pdf', pages = '1',pandas_options={'header': None}, stream=True)
     pdf_2 = tb.read_pdf('http://archeia.moec.gov.cy/mc/698/didaktra_idiotikon_dimotikon_scholeion.pdf', pages = '1',pandas_options={'header': None}, stream=True)
-    pdf_3 = tb.read_pdf('http://archeia.moec.gov.cy/mc/698/didaktra_idiotikon_nipiagogeion.pdf', pages = '3',pandas_options={'header': None}, stream=True)
+    pdf_3 = tb.read_pdf('http://archeia.moec.gov.cy/mc/698/didaktra_idiotikon_nipiagogeion.pdf', pages = '4',pandas_options={'header': None}, stream=True)
 
+  
     df_secondary = pdf_1[0]
     df_primary = pdf_2[0]
     df_nursery =pdf_3[0]
+    # print(df_nursery[2].astype('string'))
 
     #change the type of columns that contain the prices
-    df_nursery[7] = df_nursery[7].astype('string')
+    df_nursery[2] = df_nursery[2].astype('string')
     df_primary[3] = df_primary[3].astype('string')
 
     for i in range(2,8):
         df_secondary[i]= df_secondary[i].astype('string')
 
-
     avg_grammar_nic = (float(df_secondary[2][6])+float(df_secondary[3][6].split()[0])+float(df_secondary[3][6].split()[1])+float(df_secondary[4][6])+float(df_secondary[5][6])+float(df_secondary[6][6])+float(df_secondary[7][6]))/7
-    avg_grammar_lim = (float(df_secondary[2][23])+float(df_secondary[3][23].split()[0])+float(df_secondary[3][23].split()[1])+float(df_secondary[4][23])+float(df_secondary[5][23])+float(df_secondary[6][23])+float(df_secondary[7][23]))/7
-
-    all_items_school = [("THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΝΗΠΙΑΓΩΓΕΙΩΝ 2022-2023",float(df_nursery[7][30].strip('€*').replace(".", "")),datetime.now(),'Pre-primary education (ISCED-97 level 0)','Cyprus Ministry of Education, Sport and Youth',0),
-                    ("THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΔΗΜΟΤΙΚΩΝ ΣΧΟΛΕΙΩΝ 2022-2023",float(df_primary[3][15].strip('€').replace(",", "")),datetime.now(),'Primary education (ISCED-97 level 1)','Cyprus Ministry of Education, Sport and Youth',0),
+    avg_grammar_lim = (float(df_secondary[2][22])+float(df_secondary[3][22].split()[0])+float(df_secondary[3][22].split()[1])+float(df_secondary[4][22])+float(df_secondary[5][22])+float(df_secondary[6][22])+float(df_secondary[7][22]))/7
+    nursery=df_nursery[2][1]
+    all_items_school = [("THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΝΗΠΙΑΓΩΓΕΙΩΝ 2022-2023",float(nursery.strip('€*').replace(".", "")),datetime.now(),'Pre-primary education (ISCED-97 level 0)','Cyprus Ministry of Education, Sport and Youth',0),
+                    ("THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΔΗΜΟΤΙΚΩΝ ΣΧΟΛΕΙΩΝ 2022-2023",float(df_primary[3][26].strip('€').replace(",", "")),datetime.now(),'Primary education (ISCED-97 level 1)','Cyprus Ministry of Education, Sport and Youth',0),
                     ("THE GRAMMAR SCHOOL (Nicosia), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2022-2023, Α-ΣΤ ΤΑΞΗ",avg_grammar_nic,datetime.now(),'Secondary education','Cyprus Ministry of Education, Sport and Youth',0),
                     ("THE GRAMMAR SCHOOL (Limassol), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2022-2023, Α-ΣΤ ΤΑΞΗ",avg_grammar_lim,datetime.now(),'Secondary education','Cyprus Ministry of Education, Sport and Youth',0),
                     ("THE GRAMMAR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2022-2023, Ζ ΤΑΞΗ",float(df_secondary[7][6]),datetime.now(),'Post-secondary non-tertiary education (ISCED 4)','Cyprus Ministry of Education, Sport and Youth',0),
@@ -954,7 +955,7 @@ def Fuel():
     if len(price_ini)>6:
         df.loc[len(df)] = ("Πετρέλαιο Κίνησης Μέση Τιμή Παγκύπρια",price_ini[6],datetime.now(),'Diesel','Global Petrol Prices',0)
     if len(price_ini)>9:
-        df.loc[len(df)] =  ("Πετρέλαιο Μέση Τιμή Παγκύπρια",price_ini[9],datetime.now(),'Diesel','Global Petrol Prices',0)
+        df.loc[len(df)] =  ("Πετρέλαιο Μέση Τιμή Παγκύπρια",price_ini[9],datetime.now(),'Liquid Fuels','Global Petrol Prices',0)
     if len(price_ini)>12:
         df.loc[len(df)] = ("Πετρέλαιο Θέρμανσης Μέση Τιμή Παγκύπρια",price_ini[12],datetime.now(),'Liquid Fuels','Global Petrol Prices',0)
 
@@ -1053,7 +1054,12 @@ def Stephanis():
                 #add the price in the list    
                 prices_final_stephanis.append(price_final)
             else:
-                prices_final_stephanis.append(None)
+                scripts = bs.find_all('div',{'class':'listing-details-heading large-now-price with-sale'})
+                if scripts:
+                    price_final = float(str(scripts[0]).strip('<div class="listing-details-heading large-now-price with-sale">€ </div>'))
+                    prices_final_stephanis.append(price_final)
+                else: 
+                    prices_final_stephanis.append(None)
             
         except urllib.error.HTTPError as err:
             prices_final_stephanis.append('NaN')
