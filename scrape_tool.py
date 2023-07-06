@@ -1678,9 +1678,9 @@ def Wolt():
                  date_time_scraped)
 
     # Pixida
-    scrape_price('https://wolt.com/en/cyp/nicosia/restaurant/pixida',
-                 "Pixida, Fish meze for each guest with minimum 2 persons",
-                 '//button[descendant::h3[text()="Fish meze for each guest with minimum 2 persons"]]',
+    scrape_price('https://wolt.com/en/cyp/nicosia/restaurant/pyxida',
+                 "Pixida, Meze Platter for 2",
+                 '//button[descendant::h3[text()="Meze Platter for 2"]]',
                  date_time_scraped)
     # Kofini Tavern
     scrape_price('https://wolt.com/en/cyp/limassol/restaurant/kofini-tavern#mix-grills-platters-6',
@@ -1789,7 +1789,7 @@ def cera():
     product_price=cdf.loc[9][2]
     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
     product_name="Καταναλωτές συνδεδεμένοι στο δίκτυο Υψηλής Τάσης"
-    product_price=cdf.loc[9][3]
+    product_price=float((cdf.loc[9][3]).replace(' ',''))
     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
 
 cera()
