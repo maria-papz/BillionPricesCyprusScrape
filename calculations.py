@@ -44,8 +44,12 @@ df['CPI_total']=round(100*(df['weighted.mean.price.total']/df['reference.weighte
 df['CPI_division']=round(100*(df['weighted.mean.price.division'])/df['reference.weighted.mean.price.division'],4)
 df['weighted_CPI_division']=round(df['weight.matched.division']*df['CPI_division'],4)
 df['CPI_general'] = round(df.groupby('division')['weighted_CPI_division'].first().sum(),4)
+CPI_ref_total=[100]*len(df)
+CPI_ref_general=df['weight.matched.total']*100
+df['CPI_total_inflation']=round(100*((df['CPI_total']-CPI_ref_total)/CPI_ref_total),4)
+df['CPI_general_inflation']=round(100*((df['CPI_general']-CPI_ref_general)/CPI_ref_general),4)
 
 calculations = pd.concat([calculations,df])
 
-df.to_csv("Calculations.csv")
+calculations.to_csv("Calculations.csv")
 
