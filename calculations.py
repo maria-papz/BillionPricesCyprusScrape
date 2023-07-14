@@ -1,5 +1,5 @@
 import pandas as pd 
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 
 #read from csv 
 weights = pd.read_csv("Ref_weights.csv")
@@ -20,6 +20,9 @@ products['date_time_scraped'] = pd.to_datetime(products['date_time_scraped'])
 # Filter products for today's date
 today = date.today()
 products_today = products[products['date_time_scraped'].dt.date == today]
+
+yestarday= today - timedelta(days = 1)
+calculations_yesterday=calculations[products['date_time_scraped'].dt.date == yestarday]
 
 
 # Merge the weights dataframe with the 'Subclass Average' column from products_today
@@ -46,10 +49,14 @@ df['weighted_CPI_division']=round(df['weight.matched.division']*df['CPI_division
 df['CPI_general'] = round(df.groupby('division')['weighted_CPI_division'].first().sum(),4)
 CPI_ref_total=[100]*len(df)
 CPI_ref_general=df['weight.matched.total']*100
-df['CPI_total_inflation']=round(100*((df['CPI_total']-CPI_ref_total)/CPI_ref_total),4)
-df['CPI_general_inflation']=round(100*((df['CPI_general']-CPI_ref_general)/CPI_ref_general),4)
+if calculations_yesterday['CPI_total']:
+    df['CPI_total_inflation']=round(100*((df['CPI_total']-calculations_yesterday['CPI_total'])/calculations_yesterday['CPI_total']),4)
+    df['CPI_general_inflation']=round(100*((df['CPI_general']-calculations_yesterday['CPI_general'])/calculations_yesterday['CPI_general']),4)
+else:
+    df['CPI_total_inflation']=round(100*((df['CPI_total']-CPI_ref_total)/CPI_ref_total),4)
+    df['CPI_general_inflation']=round(100*((df['CPI_general']-CPI_ref_general)/CPI_ref_general),4)
 
-calculations = pd.concat([calculations,df])
+calculations = pd.concat([calculations,df],ignore_index=True)
 
 calculations.to_csv("Calculations.csv")
 
