@@ -892,7 +892,6 @@ def CyPost():
 
 CyPost()
 
-#CYPRUS MINISTRY OF EDUCATION
 def CyMinistryEducation():
     #Caution the fees are for the year 2022-2023 based on the link:
     #http://www.moec.gov.cy/idiotiki_ekpaidefsi/didaktra.html 
@@ -914,18 +913,19 @@ def CyMinistryEducation():
     for i in range(2,8):
         df_secondary[i]= df_secondary[i].astype('string')
 
-    avg_grammar_nic = (float(df_secondary[2][6])+float(df_secondary[3][6].split()[0])+float(df_secondary[3][6].split()[1])+float(df_secondary[4][6])+float(df_secondary[5][6])+float(df_secondary[6][6])+float(df_secondary[7][6]))/7
-    avg_grammar_lim = (float(df_secondary[2][22])+float(df_secondary[3][22].split()[0])+float(df_secondary[3][22].split()[1])+float(df_secondary[4][22])+float(df_secondary[5][22])+float(df_secondary[6][22])+float(df_secondary[7][22]))/7
+    avg_grammar_nic = (float(df_secondary[2][6])+float(df_secondary[3][6].split()[0])+float(df_secondary[3][6].split()[1])+float(df_secondary[4][6])+float(df_secondary[5][6])+float(df_secondary[6][6]))/6
+    avg_grammar_lim = (float(df_secondary[2][22])+float(df_secondary[3][22].split()[0])+float(df_secondary[3][22].split()[1])+float(df_secondary[4][22])+float(df_secondary[5][22])+float(df_secondary[6][22]))/6
     nursery=df_nursery[2][1]
     all_items_school = [("THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΝΗΠΙΑΓΩΓΕΙΩΝ 2022-2023",float(nursery.strip('€*').replace(".", "")),datetime.now(),'Pre-primary education (ISCED-97 level 0)','Cyprus Ministry of Education, Sport and Youth',0),
-                    ("THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΔΗΜΟΤΙΚΩΝ ΣΧΟΛΕΙΩΝ 2022-2023",float(df_primary[3][26].strip('€').replace(",", "")),datetime.now(),'Primary education (ISCED-97 level 1)','Cyprus Ministry of Education, Sport and Youth',0),
+                    ("THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΔΗΜΟΤΙΚΩΝ ΣΧΟΛΕΙΩΝ 2022-2023",float(df_primary[3][26].strip('€').replace(".", "")),datetime.now(),'Primary education (ISCED-97 level 1)','Cyprus Ministry of Education, Sport and Youth',0),
                     ("THE GRAMMAR SCHOOL (Nicosia), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2022-2023, Α-ΣΤ ΤΑΞΗ",avg_grammar_nic,datetime.now(),'Secondary education','Cyprus Ministry of Education, Sport and Youth',0),
                     ("THE GRAMMAR SCHOOL (Limassol), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2022-2023, Α-ΣΤ ΤΑΞΗ",avg_grammar_lim,datetime.now(),'Secondary education','Cyprus Ministry of Education, Sport and Youth',0),
                     ("THE GRAMMAR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2022-2023, Ζ ΤΑΞΗ",float(df_secondary[7][6]),datetime.now(),'Post-secondary non-tertiary education (ISCED 4)','Cyprus Ministry of Education, Sport and Youth',0),
-                    ("THE GRAMMAR SCHOOL (Limassol), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2022-2023, Ζ ΤΑΞΗ",float(df_secondary[7][23]),datetime.now(),'Post-secondary non-tertiary education (ISCED 4)','Cyprus Ministry of Education, Sport and Youth',0) ]
+                    ("THE GRAMMAR SCHOOL (Limassol), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2022-2023, Ζ ΤΑΞΗ",float(df_secondary[7][22]),datetime.now(),'Post-secondary non-tertiary education (ISCED 4)','Cyprus Ministry of Education, Sport and Youth',0) ]
 
     for i in range(6):
         df.loc[len(df)] =  all_items_school[i]
+        print( all_items_school[i])
 
 CyMinistryEducation()
 
@@ -961,15 +961,71 @@ def Fuel():
 
 Fuel()
 
-#THE CYGAR SHOP/NOMBEO/E-WHOLE SALE
 def Tobacco():
+    
     prices_final_cigars=[]
+
+    url = "https://www.thecygarshop.com/product-page/machetero-panatela"
+    page = urlopen(url)
+    html = page.read().decode("utf-8")
+    bs = BeautifulSoup(html, "html.parser")
+        
+    scripts = bs.find_all('span',{'data-hook':'formatted-primary-price'},string=True)
+
+    if scripts:
+        #get only the first element
+        price_string = str(scripts[0]).strip('<span data-hook="formatted-primary-price">€ </span>')
+        price_final = float(''.join(filter(str.isdigit, price_string)))
+
+
+        #add the price in the list    
+        prices_final_cigars.append(price_final)
+    else:
+        prices_final_cigars.append(None)
+
+    url = "https://www.numbeo.com/cost-of-living/country_price_rankings?itemId=17&displayCurrency=EUR"
+    page = urlopen(url)
+    html = page.read().decode("utf-8")
+    bs = BeautifulSoup(html, "html.parser")
+        
+    scripts = bs.find_all('script',string=True)
+    price_ini = re.findall(r"\['Cyprus', \d.+\]",str(scripts))
+    #get only the first element
+    if price_ini:
+        price_string = str(price_ini[0]).strip("['Cyprus', ]")
+        price_final = float(''.join(filter(str.isdigit, price_string)))
+
+        #add the price in the list    
+        prices_final_cigars.append(price_final)
+    else:
+        prices_final_cigars.append(None)
+        
+    url = "https://www.ewsale.com/product-page/aspire-puxos-kit-%CE%B7%CE%BB%CE%B5%CE%BA%CF%84%CF%81%CE%BF%CE%BD%CE%B9%CE%BA%CE%AC-%CF%84%CF%83%CE%B9%CE%B3%CE%AC%CF%81%CE%B1-%CE%BC%CF%80%CE%B1%CF%84%CE%B1%CF%81%CE%AF%CE%B1-21700-200-ml-%CF%85%CE%B3%CF%81%CE%AC-%CE%AC%CF%84%CE%BC%CE%B9"
+    page = urlopen(url)
+    html = page.read().decode("utf-8")
+    bs = BeautifulSoup(html, "html.parser")
+        
+    scripts = bs.find_all('span',{'data-hook':'formatted-primary-price'},string=True)
+    if scripts:
+        #get only the first element
+        price_string = str(scripts[0]).strip('<span data-hook="formatted-primary-price">   €</span>').replace(',','.')
+        price_final = float(''.join(filter(str.isdigit, price_string)))
+
+
+        #add the price in the list    
+        prices_final_cigars.append(price_final)
+    else:
+        #add the price in the list    
+        prices_final_cigars.append(None)
+
     user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
     headers={'User-Agent':user_agent} 
     urls = ['https://fetch.com.cy/shop/stores/Nicosia/store/222/The%20Royal%20Cigars%20%7C%20Strovolos/item/496756/Rocky%20Patel%20Sixty%20Toro',
         'https://fetch.com.cy/shop/stores/Nicosia/store/222/The%20Royal%20Cigars%20%7C%20Strovolos/item/496759/Rocky%20Patel%20TUBO%20SAMPLER%206%20cig.',
         'https://fetch.com.cy/shop/stores/Nicosia/store/222/The%20Royal%20Cigars%20%7C%20Strovolos/item/511874/Perdomo%2010th%20Anniversary%20MADURO%20Super%20Toro',
         'https://fetch.com.cy/shop/stores/Nicosia/store/222/The%20Royal%20Cigars%20%7C%20Strovolos/item/280001/CARRILLO%20INTERLUDE%20ROTHCHILD%20JR%20MADURO%20NATURAL']
+
+
 
     for url in urls:
         try:
@@ -1027,7 +1083,7 @@ def Tobacco():
         products = ['Machetero Panatela','Marlboro 20 Pack','Smok S-priv Kit E-Τσιγάρα + 2 μπαταρίες  + 200 ml Υγρά  άτμισης','Rocky Patel Sixty Toro',
                     'Rocky Patel Tubo Sampler 6 Cig.','Perdomo 10Th Anniversary Maduro Super Toro','Carrillo Interlude Rothchild Jr. Maduro Natural',
                     'E-liquid Manhattan','E-liquid Cabochard - Vanille Caramel 0mg 50ml','E-liquid Manhattan Shake']
-        labels = ['Cigars','Cigarettes','Other Tobaco Products','Cigars','Cigars','Cigars','Other Tobaco Products','Other Tobaco Products','Other Tobaco Products']
+        labels = ['Cigars','Cigarettes','Other Tobaco Products','Cigars','Cigars','Cigars','Cigars','Other Tobaco Products','Other Tobaco Products','Other Tobaco Products']
         retailers = ['The CYgar Shop','NUMBEO','E-WHOLESALE','The Royal Cigars Strovolos','The Royal Cigars Strovolos','The Royal Cigars Strovolos',
                     'The Royal Cigars Strovolos','Alter Vape','Alter Vape','Alter Vape']
     #put the rows in a list
@@ -1038,7 +1094,6 @@ def Tobacco():
     #assign the values to each column
     for i in range(len(all_items_cigars)):
         df.loc[len(df)] =(all_items_cigars[i][0],all_items_cigars[i][1],all_items_cigars[i][2],all_items_cigars[i][3],all_items_cigars[i][4],all_items_cigars[i][5])
-        # print(all_items_cigars[i][0],all_items_cigars[i][1],all_items_cigars[i][2],all_items_cigars[i][3],all_items_cigars[i][4],all_items_cigars[i][5])
 Tobacco()
 
 #STEPHANI
