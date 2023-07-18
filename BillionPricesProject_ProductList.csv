@@ -766,8 +766,8 @@ SINGLEDRESS,9.99,2023-07-18 17:00:38.056494,Garments for women,Stradivarius,24.8
 ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 15 κιλά,21.65,2023-07-18 17:00:50.959205,Other postal services,Cyprus Post,12.5167
 "THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΝΗΠΙΑΓΩΓΕΙΩΝ 2022-2023",4950.0,2023-07-18 17:01:01.416688,Pre-primary education (ISCED-97 level 0),"Cyprus Ministry of Education, Sport and Youth",4950.0
 "THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΔΗΜΟΤΙΚΩΝ ΣΧΟΛΕΙΩΝ 2022-2023",6295.0,2023-07-18 17:01:01.416731,Primary education (ISCED-97 level 1),"Cyprus Ministry of Education, Sport and Youth",6295.0
-"THE GRAMMAR SCHOOL (Nicosia), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2022-2023, Α-ΣΤ ΤΑΞΗ",8080.833333333333,2023-07-18 17:01:01.416733,Secondary education,"Cyprus Ministry of Education, Sport and Youth",7819.5833
-"THE GRAMMAR SCHOOL (Limassol), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2022-2023, Α-ΣΤ ΤΑΞΗ",7558.333333333333,2023-07-18 17:01:01.416735,Secondary education,"Cyprus Ministry of Education, Sport and Youth",7819.5833
+"THE GRAMMAR SCHOOL (Nicosia), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2022-2023, Α-ΣΤ ΤΑΞΗ",8080.833333333330,2023-07-18 17:01:01.416733,Secondary education,"Cyprus Ministry of Education, Sport and Youth",7819.5833
+"THE GRAMMAR SCHOOL (Limassol), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2022-2023, Α-ΣΤ ΤΑΞΗ",7558.333333333330,2023-07-18 17:01:01.416735,Secondary education,"Cyprus Ministry of Education, Sport and Youth",7819.5833
 "THE GRAMMAR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2022-2023, Ζ ΤΑΞΗ",8305.0,2023-07-18 17:01:01.416773,Post-secondary non-tertiary education (ISCED 4),"Cyprus Ministry of Education, Sport and Youth",8577.5
 "THE GRAMMAR SCHOOL (Limassol), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2022-2023, Ζ ΤΑΞΗ",8850.0,2023-07-18 17:01:01.416780,Post-secondary non-tertiary education (ISCED 4),"Cyprus Ministry of Education, Sport and Youth",8577.5
 Αμόλυβδη Μέση Τιμή Παγκύπρια,1.463,2023-07-18 17:01:03.696779,Petrol,Global Petrol Prices,1.463
@@ -822,7 +822,7 @@ Action camera 4K Outdoor Sports Ultra HD 606481 μαύρο,39.95,2023-07-18 17:0
 Κουρευτική μηχανή REMINGTON ColourCut Manchester United Edition HC5038 κόκκινο,49.95,2023-07-18 17:01:53.344900,Electric appliances for personal care,Stephanis,46.975
 Σεσουάρ μαλλιών LIFE Character 221-0238 μωβ,39.0,2023-07-18 17:01:53.348218,Electric appliances for personal care,Stephanis,46.975
 Ψηφιακό θερμόμετρο JOYROOM Body Non Contact XS-IFT002B,49.0,2023-07-18 17:01:53.351579,Electric appliances for personal care,Stephanis,46.975
-Ζυγαριά αποσκευών NEDIS SCLU110GY ,15.95,2023-07-18 17:01:53.354906,Travel goods,Stephanis,15.95
+Ζυγαριά αποσκευών NEDIS SCLU110GY,15.95,2023-07-18 17:01:53.354906,Travel goods,Stephanis,15.95
 Smartwatch FOREVER Call Me 2 KW60 GSM107165 μπλε,29.95,2023-07-18 17:01:53.358279,Clocks and watches,Stephanis,29.95
 WORX 30091701000 Ηλεκτρικό Aλυσοπρίονο,109.9,2023-07-18 17:01:58.782732,Motorized major tools and equipment,Electroline,109.9
 "TACTIX MER-205604 Σετ Kατσαβίδια, 12 Tεμάχια",17.9,2023-07-18 17:01:58.782737,Non-motorized small tools,Electroline,17.9
@@ -908,11 +908,11 @@ Pizza Hut Special Large,19.2,2023-07-18 17:03:13.705650,Fast food and take away 
 "Water Board of Nicosia, Οικιακό Πάγιο Τέλος Νερού ανά διμηνία (Διατίμηση ""Α"" από 1 Σεπ 2017)",11.0,2023-07-18 17:03:18.250804,Water supply,Water Board of Nicosia,11.0
 "Sewerage Board of Nicosia, Ετήσιο Τέλος Αποχέτευσης 2022 (€ για κάθε €1000 εκτιμημένης αξίας)",0.63,2023-07-18 17:03:19.227815,Sewage Collection,Sewerage Board of Nicosia,0.665
 "Sewerage Board of Nicosia, Τέλος Χρήσης Αποχέτευσης (€ ανά κυβικό μέτρο καταναλισκόμενου νερού)",0.7,2023-07-18 17:03:19.232112,Sewage Collection,Sewerage Board of Nicosia,0.665
-Λεμεσος Phase 1 Sewage Costs ,0.38,2023-07-18 17:03:20.425895,Sewage collection,SBLA,0.3871
-Λεμεσος Phase 2 Sewage Costs ,0.38,2023-07-18 17:03:20.430043,Sewage collection,SBLA,0.3871
+Λεμεσος Phase 1 Sewage Costs,0.38,2023-07-18 17:03:20.425895,Sewage collection,SBLA,0.3871
+Λεμεσος Phase 2 Sewage Costs,0.38,2023-07-18 17:03:20.430043,Sewage collection,SBLA,0.3871
 Λεμεσος Τέλη Αποχέτευσης Ομβρίων,0.09,2023-07-18 17:03:20.433621,Sewage collection,SBLA,0.3871
-Λαρνακα Phase 1 Sewage Costs ,0.6,2023-07-18 17:03:21.388386,Sewage collection,LSDB,0.3871
-Λαρνακα Phase 2 Sewage Costs ,0.6,2023-07-18 17:03:21.392532,Sewage collection,LSDB,0.3871
+Λαρνακα Phase 1 Sewage Costs,0.6,2023-07-18 17:03:21.388386,Sewage collection,LSDB,0.3871
+Λαρνακα Phase 2 Sewage Costs,0.6,2023-07-18 17:03:21.392532,Sewage collection,LSDB,0.3871
 Λαρνακα Τέλη Αποχέτευσης Ομβρίων,0.16,2023-07-18 17:03:21.396089,Sewage collection,LSDB,0.3871
 Τέλη Χρήσης €/m3,0.5,2023-07-18 17:03:21.399579,Sewage collection,SBLA,0.3871
 Λεμεσος Οικιακά τέλη ανά τετραμηνία (συντελεστής ΦΠΑ 5%),22.0,2023-07-18 17:03:22.460521,Water Supply,WBL,64.7375
@@ -925,5 +925,5 @@ Pizza Hut Special Large,19.2,2023-07-18 17:03:13.705650,Fast food and take away 
 "Rio Cinemas, Adults 3D ticket",10.0,2023-07-18 17:03:24.437164,"Cinemas, theatres, concerts",Rio Cinemas,8.1667
 "Rio Cinemas, Children 3D ticket",8.0,2023-07-18 17:03:24.440784,"Cinemas, theatres, concerts",Rio Cinemas,8.1667
 "Rio Cinemas, Senior/Students 3D ticket",8.0,2023-07-18 17:03:24.444409,"Cinemas, theatres, concerts",Rio Cinemas,8.1667
-ΚΥΛΙΝΔΡΟΣ 10kg ,15.78,2023-07-18 17:03:27.062045,Liquified hydrocarbons,Consumer Observatory,15.78
+ΚΥΛΙΝΔΡΟΣ 10kg,15.78,2023-07-18 17:03:27.062045,Liquefied hydrocarbons,Consumer Observatory,15.78
 "EUROPEAN UNIVERSITY CYPRUS, Bachelors Programmes Average Yearly Tuition for 2022-2023",9357.6,2023-07-18 17:03:29.953214,Tertiary education,European University Cyprus,9357.6
