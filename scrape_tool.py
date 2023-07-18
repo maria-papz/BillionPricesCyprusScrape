@@ -2334,18 +2334,15 @@ def GasCylinder():
             pdf_reader = PyPDF2.PdfReader(pdf_file)
 
             # Extracting price
-            if len(pdf_reader.pages) >= 6:  # Check if the required page exists
-                page = pdf_reader.pages[5]
+            for i in range(len(pdf_reader.pages)):  # Check if the required page exists
+                page = pdf_reader.pages[i]
                 match = re.search(r"\d+\s+ΚΥΛΙΝΔΡΟΣ.*?\d+\.\d+\s+\d+\.\d+\s+(\d+\.\d+)", page.extract_text())
 
                 if match:
                     middle_price = match.group(1)
-                    print(middle_price)
-                    df.loc[len(df)] = ["ΚΥΛΙΝΔΡΟΣ 10kg ", middle_price, datetime.now(), 'Liquefied hydrocarbons', 'Consumer Observatory', 0]
+                    df.loc[len(df)] = ["ΚΥΛΙΝΔΡΟΣ 10kg ", middle_price, datetime.now(), 'Liquified hydrocarbons', 'Consumer Observatory', 0]
                 else:
                     print("Price extraction failed.")
-            else:
-                print("Required page does not exist.")
         else:
             print("Month name not found.")
     except requests.exceptions.RequestException as e:
