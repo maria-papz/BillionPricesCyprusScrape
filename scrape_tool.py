@@ -974,7 +974,9 @@ def Tobacco():
 
     if scripts:
         #get only the first element
-        price_final = float(str(scripts[0]).strip('<span data-hook="formatted-primary-price">€ </span>'))
+        price_string = str(scripts[0]).strip('<span data-hook="formatted-primary-price">€ </span>')
+        price_final = float(''.join(filter(str.isdigit, price_string)))
+
 
         #add the price in the list    
         prices_final_cigars.append(price_final)
@@ -990,7 +992,9 @@ def Tobacco():
     price_ini = re.findall(r"\['Cyprus', \d.+\]",str(scripts))
     #get only the first element
     if price_ini:
-        price_final = float(str(price_ini[0]).strip("['Cyprus', ]"))
+        price_string = str(price_ini[0]).strip("['Cyprus', ]")
+        price_final = float(''.join(filter(str.isdigit, price_string)))
+
         #add the price in the list    
         prices_final_cigars.append(price_final)
     else:
@@ -1004,7 +1008,9 @@ def Tobacco():
     scripts = bs.find_all('span',{'data-hook':'formatted-primary-price'},string=True)
     if scripts:
         #get only the first element
-        price_final = float(str(scripts[0]).strip('<span data-hook="formatted-primary-price">   €</span>').replace(',','.'))
+        price_string = str(scripts[0]).strip('<span data-hook="formatted-primary-price">   €</span>').replace(',','.')
+        price_final = float(''.join(filter(str.isdigit, price_string)))
+
 
         #add the price in the list    
         prices_final_cigars.append(price_final)
