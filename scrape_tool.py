@@ -2340,7 +2340,7 @@ def GasCylinder():
 
                 if match:
                     middle_price = match.group(1)
-                    df.loc[len(df)] = ["ΚΥΛΙΝΔΡΟΣ 10kg ", middle_price, datetime.now(), 'Liquified hydrocarbons', 'Consumer Observatory', 0]
+                    df.loc[len(df)] = ["ΚΥΛΙΝΔΡΟΣ 10kg ", middle_price, datetime.now(), 'Liquefied hydrocarbons', 'Consumer Observatory', 0]
                 else:
                     print("Price extraction failed.")
         else:
