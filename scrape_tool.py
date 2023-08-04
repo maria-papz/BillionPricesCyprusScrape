@@ -26,61 +26,53 @@ df = pd.read_csv("BillionPricesProject_ProductList.csv")
 # Returns scraped data
 
 
-#SUPERMARKETCY
-def supermarketCy(item):
-    p=[]
-
-    for pages in range(1,11):
-        flag=0
-        ## retailer 
-        retailer='SupermarketCy'
-
-        ## product class
-        # product_class=item['product_class']
-
-        ## product type
-        product_subclass=item['product_subclass']
-        # Request the page
-        page = requests.get('https://www.supermarketcy.com.cy/'+item['webpage']+'?page='+str(pages))
-
-        # Parsing the page
-        # (We need to use page.content rather than
-        # page.text because html.fromstring implicitly
-        # expects bytes as input.)
-        tree = html.fromstring(page.content) 
-
-        ## product name
-        product_name=tree.xpath('//div[@data-title=\''+item['names']+'\']/a/h5/text()')
-
-        # convert to string and remove whitespace
-        product_name = (''.join(product_name)).replace(' ','').strip()
- 
-        if(product_name==''):
-            flag=1
-        else:
-            ## product price
-            #print(product_name)
-            product_price = tree.xpath('//div[contains(@data-title,\''+item['names']+'\')]/div[@class="flex-col sm:flex-row"]/div[@class=\'sm:mr-10 flex justify-between\']//div/div[@class=\'text-primary text-h4 font-medium mb-8\']/text()')
-            product_price=float((''.join(product_price)).replace(' ','').replace('€','').replace(',','.').strip())
-
-            ## scraping time
-            now = datetime.now()
-            date_time_scraped = now 
-
-            # returning list resembling row of dataframe
-            new_row=[product_name, product_price,date_time_scraped,product_subclass,retailer,0]
-            flag=0
-            return new_row
-    return
-
 def SupermarketCyScrape():
-    scy_data = pd.read_csv("SupermarketCy.csv")
-    for index, row in scy_data.iterrows():
-        scrape=supermarketCy(row)
-        if(scrape==None):
-            next
-        else:
-            df.loc[len(df)] = scrape
+    try:
+        scy_data = pd.read_csv("SupermarketCy.csv")
+
+        for webpage, group in scy_data.groupby('webpage'):
+            found_product = set()
+            pages = 1
+            while pages <= 11:
+                page = requests.get('https://www.supermarketcy.com.cy/'+webpage+'?page='+str(pages))
+                # Parsing the page
+                # (We need to use page.content rather than
+                # page.text because html.fromstring implicitly
+                # expects bytes as input.)
+                tree = html.fromstring(page.content)
+
+                for index, row in enumerate(group.itertuples()):
+                    if index not in found_product:
+                        retailer = 'SupermarketCy'
+                        now = datetime.now()
+                        date_time_scraped = now
+
+                        ## product name
+                        product_name = tree.xpath('//div[@data-title=\''+row.names+'\']/a/h5/text()')
+                        product_subclass = row.product_subclass
+
+                        # convert to string and remove whitespace
+                        product_name = (''.join(product_name)).replace(' ', '').strip()
+
+                        if product_name != '':
+                            ## product price
+                            product_price = tree.xpath('//div[contains(@data-title,\''+row.names+'\')]/div[@class="flex-col sm:flex-row"]/div[@class=\'sm:mr-10 flex justify-between\']//div/div[@class=\'text-primary text-h4 font-medium mb-8\']/text()')
+                            product_price = float((''.join(product_price)).replace(' ', '').replace('€', '').replace(',', '.').strip())
+                            df.loc[len(df)] = [product_name, product_price, date_time_scraped, product_subclass, retailer, 0]
+                            found_product.add(index)
+                        else:
+                            if pages == 11:
+                                product_name = row.names
+                                df.loc[len(df)] = [product_name, None, date_time_scraped, product_subclass, retailer, 0]
+
+                # Check if all products have been found
+                if len(found_product) == len(group):
+                    break
+
+                pages += 1
+
+    except Exception as e:
+        print(f"Error occurred in SupermarketCyScrape(): {e}")
 
 
 #put all the endings of the urls in lists based on the class they belong along
@@ -324,30 +316,34 @@ for i in range(len(all_items_supermarketcy)):
 
 #ALPHAMEGA
 def AlphaMega():
-    data_alphaMega = pd.read_csv("AlphaMega.csv")
-    for index, am in data_alphaMega.iterrows():
-        page = requests.get(am['website'].strip())
-        tree = html.fromstring(page.content)
-        product_name = (''.join(am['product_name'])).replace(' ', '').strip()
-        t = tree.xpath("//div[@class='grid grid--align-content-start']/script[@type='application/ld+json']/text()")
-        if len(t)>0:
-            product_price=t[0]
-            # Preprocess the product_price string
-            product_price = product_price.replace('\n', '').replace('\r', '')
-
-            # Use regex to extract the price
-            price_match = re.search(r'"price":\s*"([\d.]+)"', product_price)
-            if price_match:
-                product_price = price_match.group(1)
-            else:
-                print(f"No price found for product: {product_name}")
-                continue
-
+    try:
+        data_alphaMega = pd.read_csv("AlphaMega.csv")
+        for index, am in data_alphaMega.iterrows():
+            page = requests.get(am['website'].strip())
+            tree = html.fromstring(page.content)
+            product_name = (''.join(am['product_name'])).replace(' ', '').strip()
             now = datetime.now()
             date_time_scraped = now
             product_subclass = am['product_subclass']
             retailer = am['retailer']
-            df.loc[len(df)] = [product_name, product_price, date_time_scraped, product_subclass, retailer, 0]
+            t = tree.xpath("//div[@class='grid grid--align-content-start']/script[@type='application/ld+json']/text()")
+            if len(t) > 0:
+                product_price = t[0]
+                # Preprocess the product_price string
+                product_price = product_price.replace('\n', '').replace('\r', '')
+
+                # Use regex to extract the price
+                price_match = re.search(r'"price":\s*"([\d.]+)"', product_price)
+                if price_match:
+                    product_price = price_match.group(1)
+                else:
+                    print(f"No price found for product: {product_name}")
+                    continue
+                df.loc[len(df)] = [product_name, product_price, date_time_scraped, product_subclass, retailer, 0]
+            else:
+                df.loc[len(df)]=[product_name, None, date_time_scraped, product_subclass, retailer, 0]
+    except Exception as e:
+        print(f"Error occurred in AlphaMega(): {e}")
 
 
 AlphaMega()
@@ -500,7 +496,8 @@ def cablenet():
     if price_element:
         price = price_element[0].text
         df.loc[len(df)]=['Κλήσειςπροςσταθερό',price,datetime.now(),'Wired telephone services','Cablenet',0]
-
+    else:
+         df.loc[len(df)]=['Κλήσειςπροςσταθερό',None,datetime.now(),'Wired telephone services','Cablenet',0]
 
     url = "https://cablenet.com.cy/χρεώσεις/"
     response = requests.get(url)
@@ -511,7 +508,8 @@ def cablenet():
         price = price_element[0].text
         price= price.split('/')[0]
         df.loc[len(df)]=['Κλήσειςπροςκινητό',price,datetime.now(),'Wireless telephone services','Cablenet',0]
-
+    else:
+        df.loc[len(df)]=['Κλήσειςπροςκινητό',None,datetime.now(),'Wireless telephone services','Cablenet',0]
 
     # Make a GET request to the webpage
     url = "https://cablenet.com.cy/purpleinternet/"
@@ -528,6 +526,8 @@ def cablenet():
         price_with_euro_sign = price_with_euro_sign_l[0]
         price = price_with_euro_sign.replace("€", "")
         df.loc[len(df)]=['PurpleInternet',price,datetime.now(),'Internet access provision services','Cablenet',0]
+    else:
+        df.loc[len(df)]=['PurpleInternet',None,datetime.now(),'Internet access provision services','Cablenet',0]
 
     # Make a GET request to the webpage
     url = "https://cablenet.com.cy/en/packages-mobile/"
@@ -542,6 +542,8 @@ def cablenet():
         price_with_euro_sign = price_with_euro_sign_l[0]
         price = price_with_euro_sign.replace("€", "")
         df.loc[len(df)]=['PurpleMaxMobile',price,datetime.now(),'Bundled telecommunication services','Cablenet',0] 
+    else:
+        df.loc[len(df)]=['PurpleMaxMobile',None,datetime.now(),'Bundled telecommunication services','Cablenet',0] 
 
 cablenet()
 
@@ -556,6 +558,8 @@ def epic():
         price=price[0].replace("€","")
         price=price.replace(".","")
         df.loc[len(df)]=[name,price,datetime.now(),'Internet access provision services','epic',0]
+    else:
+        df.loc[len(df)]=[name,None,datetime.now(),'Internet access provision services','epic',0]
 
     name='Internet and Telephony 20'
     url = "https://www.epic.com.cy/en/page/H1r10tnT/internet-telephony"
@@ -566,7 +570,8 @@ def epic():
         price=price[0].replace("€","")
         price=price.replace(".","")
         df.loc[len(df)]=[name,price,datetime.now(),'Internet access provision services','epic',0]  
-
+    else:
+        df.loc[len(df)]=[name,None,datetime.now(),'Internet access provision services','epic',0]  
 
     name='Internet and Telephony 50'
     url = "https://www.epic.com.cy/en/page/H1r10tnT/internet-telephony"
@@ -577,6 +582,8 @@ def epic():
         price=price[0].replace("€","")
         price=price.replace(".","")
         df.loc[len(df)]=[name,price,datetime.now(),'Internet access provision services','epic',0]
+    else:
+        df.loc[len(df)]=[name,None,datetime.now(),'Internet access provision services','epic',0]
 
 epic()
 
@@ -660,10 +667,13 @@ def scrapper_athlokinisi(urls:list):
             bs = BeautifulSoup(html, "html.parser")
 
             scripts = bs.find_all('span',{'class':'ammount'},string=True)
-            #get only the first element
-            price_final = round(float(str(scripts[0]).strip('<span class="ammount">€ </span>')),2)
-            #add the price in the list    
-            prices_final_athlokinisi.append(price_final)
+            if scripts:
+                #get only the first element
+                price_final = round(float(str(scripts[0]).strip('<span class="ammount">€ </span>')),2)
+                #add the price in the list    
+                prices_final_athlokinisi.append(price_final)
+            else:
+                prices_final_athlokinisi.append(None)
 
         except urllib.error.HTTPError as err:
             prices_final_athlokinisi.append('NaN')
@@ -820,10 +830,12 @@ def garments():
                 if product_price:
                     product_price = json.loads(product_price)['offers'][0]['price']
                 else:
-                    print('product price not found')
+                    product_price=None
             else:
                 if product_price:
                     product_price = json.loads(product_price)['offers']['price']
+                else:
+                    product_price = None
             print(product_price)
             now = datetime.now()
             date_time_scraped = now
@@ -1041,7 +1053,7 @@ def Tobacco():
                 #add the price in the list    
                 prices_final_cigars.append(price_final)
             else:
-                prices_final_cigars.append(price_final)
+                prices_final_cigars.append(None)
             
         except urllib.error.HTTPError as err:
                 prices_final_cigars.append('NaN')
@@ -1733,15 +1745,11 @@ def Wolt():
                  "Pixida, Meze Platter for 2",
                  '//button[descendant::h3[text()="Meze Platter for 2"]]',
                  date_time_scraped)
-    # Kofini Tavern
-    scrape_price('https://wolt.com/en/cyp/limassol/restaurant/kofini-tavern#mix-grills-platters-6',
-                 "Kofini Tavern Mix Grill for 2",
-                 '//button[descendant::h3[text()="Mix Grill For 2"]]',
-                 date_time_scraped)
-
-    scrape_price('https://wolt.com/en/cyp/limassol/restaurant/kofini-tavern#mix-grills-platters-6',
-                 "Kofini Tavern, Seafood Platter",
-                 '//button[descendant::h3[text()="Seafood Platter"]]',
+    
+    # To ladolemono
+    scrape_price('https://wolt.com/en/cyp/limassol/restaurant/to-ladolemono',
+                 "Ποικιλία Για 2",
+                 '//button[descendant::h3[text()="Ποικιλία Για 2"]]',
                  date_time_scraped)
 
     # Vlachos Taverna
@@ -2366,21 +2374,30 @@ def euc():
 
 euc()
 
+
+
 def update_average_price():
     now = datetime.now()
     today = now.date()
 
     # Convert 'date_time_scraped' column to datetime
     df['date_time_scraped'] = pd.to_datetime(df['date_time_scraped'])
-
     # Convert 'product_price' column to numeric, ignoring non-numeric values
     df['product_price'] = pd.to_numeric(df['product_price'], errors='coerce')
 
-    # Group by 'product_subclass' and 'date_time_scraped', calculate average price, and update 'average.price' column
-    df['subclass_average'] = round(df.groupby(['product_subclass', df['date_time_scraped'].dt.date])['product_price'].transform('mean'),4)
+    # Filter for today's products and update 'subclass_average' column
+    today_products = df[df['date_time_scraped'].dt.date == today]
+    df.loc[df['date_time_scraped'].dt.date == today, 'subclass_average'] = round(today_products.groupby('product_subclass')['product_price'].transform('mean'), 4)
+
 
 update_average_price()
 
+def fillNone(df):
+    df = df.sort_values(by=['product_name', 'date_time_scraped'])
+    df['product_price'] = df.groupby('product_name')['product_price'].fillna(method='ffill')
+    return df
+
+df = fillNone(df)
 
 df.to_csv("BillionPricesProject_ProductList.csv", index=False)
 
