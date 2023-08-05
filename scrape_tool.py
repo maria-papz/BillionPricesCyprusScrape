@@ -85,7 +85,7 @@ urls_bakery=[["/pites","/tost","/psomakia","/almyra","/keik","/glyka-1","/glyka-
 ['ΣίφουναςΠίττεςΆσπρεςΜεγάλες5Τεμ550g', 'ΣίφουναςΨωμίΦέτεςΤόστΆσπροΜικρό700g', 'ΣίφουναςΦραντζολάκιαΣτρογγυλά4Τεμ', 'ΣίφουναςΦραντζολάκιαΜακρόστεναΜεγάλα4Τεμ', 
 'ΣίφουναςΚρουασάνΒουτύρου1Τεμ', 'ΣίφουναςΛουκανικόπιτα1Τεμ', 'ΣίφουναςΠίταΣάτζιηςΜεΜέλι1Τεμ', 'ΣίφουναςΕλιόπιταΣφολιάτα1Τεμ', 'ΣίφουναςΚέικΓεωγραφίας750g', 'ΣίφουναςMixΣιροπιαστά410g',
 "7DaysMiniBakeRollsΠίτσα80g","BakandysΧωριάτικαΚριτσίνιαΣιταρένια275g","ΜαρίαςΠαξιμάδιαΓλυκανίσου300g","JohnsofΚρουτόνια320g",
-"EliteΦρυγανιέςΜεΣίκαλη360g3+1Δώρο","EliteΦρυγανιέςΟλικήςΆλεσης360g3+1Δώρο","BakandysΠαξιμάδιαΣικάλεως250g","JohnsofNapolitanoCrunchyCakeOrange&Almonds240g"]]
+"EliteΦρυγανιέςΜεΣίκαλη360g3+1Δώρο","EliteΦρυγανιέςΟλικήςΆλεσης360g3+1Δώρο","BakandysΠαξιμάδιαΣικάλεως250g","JohnsofΝαπολιτάνοΤραγανόΚέικΠορτοκαλιού&Αμυγδάλου240g"]]
 
 urls_cereals=[["/dimitriaka?page=1","/dimitriaka?page=2","/dimitriaka?page=3","/dimitriaka?page=4","/dimitriaka?page=5","/dimitriaka?page=6","/dimitriaka?page=7","/dimitriaka?page=8","/dimitriaka?page=9"],
 ['QuakerΝιφάδεςΒρώμης500g', 'QuakerΤραγανέςΜπουκιέςΒρώμηΣοκολάτα450g','OreoO&#039;sCereal350g','KelloggsCornFlakes375g', 'KelloggsCocoPopsChocos375g',
@@ -145,7 +145,7 @@ urls_otherfood = [["/soupes","/diafores-sokolates","/diafores-sokolates?page=2",
 ['HeinzΣούπαΜινεστρόνι400g', 'HeinzΣούπαΝτομάτας400g',"ΦρουΦρουJoker9Τεμ9+3Δωρεάν","ΦρουΦρουMorningCoffee150g","KinderCards5Τεμ128g",
 "Oreo154g","ΠαπαδοπούλουΓεμιστάΣοκολάτα200g"]]
 
-urls_sugar = [["/aspri"],['Tate&LyleΖάχαρη1kg']]
+urls_sugar = [["/aspri"],["ΠερμανθούληςΛευκήΚρυσταλλικήΖάχαρη1kg"]]
 
 urls_flour= [["/alevri","/alevri?page=2"],['ΜιτσίδηΑλεύριΓιαΌλεςΤιςΧρήσεις1kg','ΜιτσίδηΑλεύριΦαρίνα001kg',
  'ΜιτσίδηΑλεύριΧωριάτικο1kg','ΜιτσίδηΑλεύριΦαρίναΖαχαροπλαστικής1kg','ΑδελφοίΚαζάζηΑλεύριΦαρίνα001kg','ΑδελφοίΚαζάζηΑλεύριΧωριάτικο1kg']]
@@ -209,6 +209,7 @@ class_labels = ['Bread','Other bakery products','Breakfast Cereals','Pasta produ
 'Other food products n.e.c.','Sugar','Flours and other cereals','Chocolate','Confectionery products','Fresh or chilled vegetables other than potatoes and other tubers',
 'Potatoes','Fresh or chilled fruit','Pork','Other meat','Poultry','Lamb and goat','Beef and veal','Fresh or chilled fish','Preserved milk','Low fat Milk',
 'Whole Milk','Yoghurt','Butter','Margarine and other vegetable fats','Eggs']
+
 
 #the scrapper function
 def scrapper_supermarketcy(urls:list,products:list):
