@@ -982,9 +982,9 @@ def Tobacco():
     scripts = bs.find_all('span',{'data-hook':'formatted-primary-price'},string=True)
 
     if scripts:
+        price_ini = re.findall(r"\d.\d\d",str(scripts))
         #get only the first element
-        price_string = str(scripts[0]).strip('<span data-hook="formatted-primary-price">€ </span>')
-        price_final = float(''.join(filter(str.isdigit, price_string)))
+        price_final = float(str(price_ini[0]))
 
 
         #add the price in the list    
@@ -1016,9 +1016,9 @@ def Tobacco():
         
     scripts = bs.find_all('span',{'data-hook':'formatted-primary-price'},string=True)
     if scripts:
+        price_ini = re.findall(r"\d\d.\d\d",str(scripts))
         #get only the first element
-        price_string = str(scripts[0]).strip('<span data-hook="formatted-primary-price">   €</span>').replace(',','.')
-        price_final = float(''.join(filter(str.isdigit, price_string)))
+        price_final = float(str(price_ini[0]).replace(',','.'))
 
 
         #add the price in the list    
