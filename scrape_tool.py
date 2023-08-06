@@ -85,11 +85,11 @@ urls_bakery=[["/pites","/tost","/psomakia","/almyra","/keik","/glyka-1","/glyka-
 ['ΣίφουναςΠίττεςΆσπρεςΜεγάλες5Τεμ550g', 'ΣίφουναςΨωμίΦέτεςΤόστΆσπροΜικρό700g', 'ΣίφουναςΦραντζολάκιαΣτρογγυλά4Τεμ', 'ΣίφουναςΦραντζολάκιαΜακρόστεναΜεγάλα4Τεμ', 
 'ΣίφουναςΚρουασάνΒουτύρου1Τεμ', 'ΣίφουναςΛουκανικόπιτα1Τεμ', 'ΣίφουναςΠίταΣάτζιηςΜεΜέλι1Τεμ', 'ΣίφουναςΕλιόπιταΣφολιάτα1Τεμ', 'ΣίφουναςΚέικΓεωγραφίας750g', 'ΣίφουναςMixΣιροπιαστά410g',
 "7DaysMiniBakeRollsΠίτσα80g","BakandysΧωριάτικαΚριτσίνιαΣιταρένια275g","ΜαρίαςΠαξιμάδιαΓλυκανίσου300g","JohnsofΚρουτόνια320g",
-"EliteΦρυγανιέςΜεΣίκαλη360g3+1Δώρο","EliteΦρυγανιέςΟλικήςΆλεσης360g3+1Δώρο","BakandysΠαξιμάδιαΣικάλεως250g","ΈλεναςΤραγανόΚέικΑμύγδαλο&Σταφίδα200g"]]
+"EliteΦρυγανιέςΜεΣίκαλη360g3+1Δώρο","EliteΦρυγανιέςΟλικήςΆλεσης360g3+1Δώρο","BakandysΠαξιμάδιαΣικάλεως250g"]]
 
-urls_cereals=[["/dimitriaka?page=1","/dimitriaka?page=2","/dimitriaka?page=3","/dimitriaka?page=4","/dimitriaka?page=5","/dimitriaka?page=6","/dimitriaka?page=7","/dimitriaka?page=8","/dimitriaka?page=9"],
+urls_cereals=[["/dimitriaka?page=1","/dimitriaka?page=2","/dimitriaka?page=3","/dimitriaka?page=4","/dimitriaka?page=5","/dimitriaka?page=6","/dimitriaka?page=7","/dimitriaka?page=8","/dimitriaka?page=9","/dimitriaka?page=10","/dimitriaka?page=11"],
 ['QuakerΝιφάδεςΒρώμης500g', 'QuakerΤραγανέςΜπουκιέςΒρώμηΣοκολάτα450g','OreoO&#039;sCereal350g','KelloggsCornFlakes375g', 'KelloggsCocoPopsChocos375g',
- 'KelloggsCocoPops500g', 'KelloggsSpecialK750g','KelloggsMielPopsLoops330g']]
+ 'KelloggsCocoPops500g', 'KelloggsSpecialK700g','KelloggsMielPopsLoops330g']]
 
 urls_pastas=[["/makaronia","/makaronia?page=2","/makaronia?page=3","/makaronia?page=4","/penes","/penes?page=2",
 "/kritharaki"],['BarillaΣπαγγέτιNo5500g', 'ΜέλισσαPrimoGustoΣπαγγέτιNo6500g', 'ΜέλισσαPrimoGustoΚριθαράκι500g',
@@ -105,9 +105,9 @@ urls_saltspices = [["/alati","/piperi","/mpacharika","/meigmata","/aromatika","/
 'CarnationSpicesΔιάφοραΒότανα12g', 'CarnationSpicesΣκόρδοΣκόνη40g', 'CarnationSpicesΡίγανη30g', 'CarnationSpicesΘυμάρι10g', 'CarnationSpicesΚόλιανδροςΣκόνη20g', 
 'CarnationSpicesΜαϊδανός10g', 'CarnationSpicesΒασιλικός10g', 'CarnationSpicesΆνηθος10g', 'CarnationSpicesΔεντρολίβανοΛάσμαρι10g']]
 
-urls_nuts = [["/xiroi-karpoi","/xiroi-karpoi?page=2","/xiroi-karpoi?page=3","/xiroi-karpoi?page=4","/xiroi-karpoi?page=5","/apoxiramena-frouta",
+urls_nuts = [["/xiroi-karpoi","/xiroi-karpoi?page=2","/xiroi-karpoi?page=3","/xiroi-karpoi?page=4","/xiroi-karpoi?page=5","/xiroi-karpoi?page=5","/xiroi-karpoi?page=6","/xiroi-karpoi?page=7","/apoxiramena-frouta",
 "/apoxiramena-frouta?page=2","/apoxiramena-frouta?page=3","/apoxiramena-frouta?page=4"],['ΛειβαδιώτηΠράσινηΣφραγίδαΑμύγδαλα120g', 'SeranoΚάσιους140g', 
-'ΛειβαδιώτηΚαρυδόψιχα140g', 'SeranoΦουντούκιαΩμά150g', 'SeranoΦυστικόψιχαΚαβουρδισμένηΑλατισμένη175g','ΕποχέςΑποξηραμέναΣύκα350g', 
+'ΑμαλίαΚαρυδόψιχα140g', 'ΑμαλίαΦουντούκιαΩμή140g', 'SeranoΦυστικόψιχαΚαβουρδισμένηΑλατισμένη175g','ΕποχέςΑποξηραμέναΣύκα350g', 
 'ΑμαλίαΧρυσόμηλαΑποξηραμένα250g', 'SeranoSnackin&#039;GoodΑποξηραμέναΔαμάσκηναΧωρίςΚουκούτσιΧωρίςΠρόσθετηΖάχαρη250g', 'ΚαρπόςΑπόΤηΓηΜαςΑποξηραμέναΔαμάσκηναΜεΚουκούτσι400g', 
 'ΑμαλίαΦοινίκιαΤυνησίας250g', 'SeranoΣταφίδες350g']]
 
@@ -192,7 +192,7 @@ urls_yogurt= [["/ageladino-giaourti", "/ageladino-giaourti?page=2","/proveio-gia
 urls_butter= [["/voutyro"],['LurpakΑνάλατοΒούτυρο250g', 'KerrygoldΑλατισμένοΒούτυρο250g', 'LurpakΑλατισμένοΒούτυρο250g']]
 
 urls_margarine= [["/margarines","/margarines?page=2"],['VitaliteLightΜαργαρίνη500g', 'ΧαραλαμπίδηςΚρίστηςOriginalΜαργαρίνη500g', 'ΧαραλαμπίδηςΚρίστηςLightΜαργαρίνη500g','FloraOriginal100%Φυτικό450g', 
-'FloraLight100%Φυτικό450g', 'ΜινέρβαΦαστSoft250g']]
+'FloraLight100%Φυτικό450g', 'ΜινέρβαΦαστSoftLight220g']]
 
 urls_eggs= [["/avga"],['VasilicoEggsΑυγάΜεσσαία15Τεμ']]
 
@@ -298,7 +298,7 @@ def scrapper_supermarketcy(urls:list,products:list):
     for product in products:
         if product not in product_excelfinal:
             product_excelfinal.append(product)
-            price_excelfinal.append("NaN")  
+            price_excelfinal.append(None)  
     
 #scrap all the websites and assign for each product the price,date, label class and retailer
 all_items_supermarketcy = []
@@ -311,7 +311,6 @@ for url,i,label in zip(urls_all,range(len(urls_all)),class_labels):
 #assign the values to each column
 for i in range(len(all_items_supermarketcy)):
     df.loc[len(df)] = (all_items_supermarketcy[i][0],all_items_supermarketcy[i][1],all_items_supermarketcy[i][2],all_items_supermarketcy[i][3],all_items_supermarketcy[i][4],0)
-
 
 
 
