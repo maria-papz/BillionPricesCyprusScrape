@@ -2394,10 +2394,11 @@ update_average_price()
 
 def fillNone(df):
     df = df.sort_values(by=['product_name', 'date_time_scraped'])
-    df['product_price'] = df.groupby('product_name')['product_price'].fillna(method='ffill')
+    df['product_price'] = df.groupby('product_name','retailer')['product_price'].fillna(method='ffill')
     return df
 
 df = fillNone(df)
+df=df.sort_values(by='date_time_scraped')
 
 df.to_csv("BillionPricesProject_ProductList.csv", index=False)
 
