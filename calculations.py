@@ -57,8 +57,8 @@ if len(calculations_yesterday['CPI_total']) == 0:
 else:
     print('yass')
     calculations_yesterday = calculations_yesterday.set_index(df.index)
-    df['CPI_total_inflation']=round(100*((df['CPI_total']-calculations_yesterday['CPI_total']+ 1e-8)/calculations_yesterday['CPI_total']),4)
-    df['CPI_general_inflation']=round(100*((df['CPI_general']-calculations_yesterday['CPI_general']+ 1e-8)/calculations_yesterday['CPI_general']),4)
+    df['CPI_total_inflation']=round(100*((df['CPI_total']-calculations_yesterday['CPI_total'])/calculations_yesterday['CPI_total']+ 1e-8),4)
+    df['CPI_general_inflation']=round(100*((df['CPI_general']-calculations_yesterday['CPI_general'])/calculations_yesterday['CPI_general']+ 1e-8),4)
 
 calculations = pd.concat([calculations,df],ignore_index=True)
 calculations = calculations.reset_index(drop=True)
