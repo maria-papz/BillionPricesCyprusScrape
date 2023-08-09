@@ -56,12 +56,13 @@ if len(calculations_yesterday['CPI_total']) == 0:
     df['CPI_general_inflation']=round(100*((df['CPI_general']-CPI_ref_general)/CPI_ref_general),4)
 else:
     print('yass')
+    print(len(df))
+    print(calculations_yesterday['datetime.calculated'])
     df['CPI_total_inflation']=round(100*((df['CPI_total']-calculations_yesterday['CPI_total'])/calculations_yesterday['CPI_total']),4)
     df['CPI_general_inflation']=round(100*((df['CPI_general']-calculations_yesterday['CPI_general'])/calculations_yesterday['CPI_general']),4)
     
 
 calculations = pd.concat([calculations,df],ignore_index=True)
-calculations = pd.concat([calculations, df], ignore_index=True)
 calculations = calculations.reset_index(drop=True)
 
 calculations.to_csv("Calculations.csv")
