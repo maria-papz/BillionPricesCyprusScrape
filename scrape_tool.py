@@ -62,7 +62,7 @@ def SupermarketCyScrape():
                             found_product.add(index)
                         else:
                             if pages == 11:
-                                product_name = row.names
+                                product_name = (''.join(row.names)).replace(' ', '').strip()
                                 df.loc[len(df)] = [product_name, None, date_time_scraped, product_subclass, retailer, 0]
 
                 # Check if all products have been found
@@ -1800,7 +1800,7 @@ Wolt()
 
 #PIZZA HUT
 def PizzaHut():
-    url = "https://www.pizzahut.com.cy/delivery-menu.pdf?v=1"  # Replace with the URL of the PDF file
+    url = "https://www.pizzahut.com.cy/delivery-menu-mar.pdf?v=1"  # Replace with the URL of the PDF file
     response = requests.get(url)
     retailer="Pizza Hut"
     with open("file.pdf", "wb") as f:
@@ -2375,6 +2375,14 @@ def euc():
 euc()
 
 
+def fillNone(df):
+    df = df.sort_values(by=['product_name', 'date_time_scraped'])
+    df['product_price'] = df.groupby(['product_name','retailer'])['product_price'].fillna(method='ffill')
+    return df
+
+df = fillNone(df)
+df=df.sort_values(by='date_time_scraped')
+
 
 def update_average_price():
     now = datetime.now()
@@ -2392,14 +2400,7 @@ def update_average_price():
 
 update_average_price()
 
-def fillNone(df):
-    df = df.sort_values(by=['product_name', 'date_time_scraped'])
-    df['product_price'] = df.groupby(['product_name','retailer'])['product_price'].fillna(method='ffill')
-    return df
-
-df = fillNone(df)
-df=df.sort_values(by='date_time_scraped')
-
 df.to_csv("BillionPricesProject_ProductList.csv", index=False)
+
 
 
