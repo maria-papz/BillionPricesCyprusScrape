@@ -1800,7 +1800,7 @@ Wolt()
 
 #PIZZA HUT
 def PizzaHut():
-    url = "https://www.pizzahut.com.cy/delivery-menu-mar.pdf?v=1"  # Replace with the URL of the PDF file
+    url = "https://www.pizzahut.com.cy/delivery-menu.pdf?v=1"  # Replace with the URL of the PDF file
     response = requests.get(url)
     retailer="Pizza Hut"
     with open("file.pdf", "wb") as f:
