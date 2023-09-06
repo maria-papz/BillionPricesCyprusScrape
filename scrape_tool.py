@@ -2374,13 +2374,17 @@ def euc():
 
 euc()
 
-
+#fill the missing values with forward fill
 def fillNone(df):
     df = df.sort_values(by=['product_name', 'date_time_scraped'])
     df['product_price'] = df.groupby(['product_name','retailer'])['product_price'].fillna(method='ffill')
     return df
 
 df = fillNone(df)
+
+#transform the date_time_scrapped to datetime column
+df['date_time_scraped'] = pd.to_datetime(df['date_time_scraped'])
+#sort the values based on the date
 df=df.sort_values(by='date_time_scraped')
 
 
