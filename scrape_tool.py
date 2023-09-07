@@ -1000,8 +1000,7 @@ def Tobacco():
     price_ini = re.findall(r"\['Cyprus', \d.+\]",str(scripts))
     #get only the first element
     if price_ini:
-        price_string = str(price_ini[0]).strip("['Cyprus', ]")
-        price_final = float(''.join(filter(str.isdigit, price_string)))
+        price_final = float(str(price_ini[0]).strip("['Cyprus', ]"))
 
         #add the price in the list    
         prices_final_cigars.append(price_final)
