@@ -1194,7 +1194,7 @@ Electroline()
 
 #IKEA
 def ikea():
-    ikeadf = products_urls.iloc[339:368,]
+    ikeadf = products_urls.iloc[339:367,]
     prices_final_ikea = []
     url_ikea = "https://www.ikea.com.cy"
     #columns urls,products,labels into lists
