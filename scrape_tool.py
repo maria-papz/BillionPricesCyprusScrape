@@ -893,7 +893,7 @@ def CyPost():
                     ("ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Ακανόνιστα (E) 2000 γρ.",round(float(df_package_1[2][44].split(' ')[0].replace(',','.')),2),datetime.now(),'Letter handling services','Cyprus Post',0),
                     ("ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 0.5 κιλό",round(float(df_package_2[1][2].replace(',','.')),2),datetime.now(),'Other postal services','Cyprus Post',0),
                     ("ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 15 κιλά",round(float(df_package_2[1][17].replace(',','.')),2),datetime.now(),'Other postal services','Cyprus Post',0),
-                    ("ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 15 κιλά",round(float(df_package_2[1][32].replace(',','.')),2),datetime.now(),'Other postal services','Cyprus Post',0) ]
+                    ("ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 30 κιλά",round(float(df_package_2[1][32].replace(',','.')),2),datetime.now(),'Other postal services','Cyprus Post',0) ]
 
     for i in range(6):
         df.loc[len(df)] = all_items_post[i]
