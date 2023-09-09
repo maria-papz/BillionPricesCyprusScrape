@@ -2375,6 +2375,7 @@ euc()
 
 #fill the missing values with forward fill
 def fillNone(df):
+    df['product_price'] = pd.to_numeric(df['product_price'], errors='coerce')
     df = df.sort_values(by=['product_name', 'date_time_scraped'])
     df['product_price'] = df.groupby(['product_name','retailer'])['product_price'].fillna(method='ffill')
     return df
@@ -2394,7 +2395,7 @@ def update_average_price():
     # Convert 'date_time_scraped' column to datetime
     df['date_time_scraped'] = pd.to_datetime(df['date_time_scraped'])
     # Convert 'product_price' column to numeric, ignoring non-numeric values
-    df['product_price'] = pd.to_numeric(df['product_price'], errors='coerce')
+
 
     # Filter for today's products and update 'subclass_average' column
     today_products = df[df['date_time_scraped'].dt.date == today]
