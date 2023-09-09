@@ -1871,54 +1871,65 @@ def water_board():
 
 water_board()
 
-#SEWAGE
+
 def sewage():
     url = "https://www.sbn.org.cy/el/apoxeteftika-teli"
 
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
 
     # Send the HTTP request and get the HTML content of the page
-    response = requests.get(url, headers=headers)
-    tree = html.fromstring(response.content)
+
     retailer="Sewerage Board of Nicosia"
     product_subclass="Sewage Collection"
-
-    text_list=tree.xpath("/html/body/main/div[2]/div/div/ol/li[1]/text()")
-    text1 = "".join(text_list)
-    text_list2=tree.xpath("/html/body/main/div[2]/div/div/ol/li[2]/b[2]/text()")
-    text2 = "".join(text_list2)
+    
 
     product_name="Sewerage Board of Nicosia, Ετήσιο Τέλος Αποχέτευσης 2022 (€ για κάθε €1000 εκτιμημένης αξίας)"
-    price_match = re.search(r"€([\d,\.]+) για κάθε €1000 εκτιμημένης αξίας", text1)
-    if price_match:
-        product_price = float(price_match.group(1).replace(",", "."))
-        now = datetime.now()
-        date_time_scraped = now 
-        df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+    now = datetime.now()
+    date_time_scraped = now 
+    try:
+        response = requests.get(url, headers=headers)
+        tree = html.fromstring(response.content)
+        text_list=tree.xpath('(//li[@style="padding-left: 30px;"])[1]/strong/text()')
+        text1 = "".join(text_list)
+        text_list2=tree.xpath("//p[@style='padding-left: 30px;']/text()")
+        text2 = "".join(text_list2)
+        price_match = re.search(r'(\d+(?:,\d+)?)', text1)
+        if price_match:
+            product_price = float(price_match.group(1).replace(",", "."))
+            # print(product_price)
+            df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
 
-    else:
-        print("Price not found in text.")
-
-    # Extract the price from the text using a regular expression
-    product_name="Sewerage Board of Nicosia, Τέλος Χρήσης Αποχέτευσης (€ ανά κυβικό μέτρο καταναλισκόμενου νερού)"
-    price_match = re.search(r'(\d+(?:\.\d+)?)(?: σεντ)? ανά κυβικό μέτρο καταναλισκόμενου νερού', text2)
-
-    # Check if the match was successful
-    if price_match:
-        # Get the matched string (including the optional " σεντ")
-        price_str = price_match.group(1)
-
-        # Convert the price to a float, accounting for cents if necessary
-        if 'σεντ' in text2:
-            product_price = float(price_str) / 100
         else:
-            product_price = float(price_str)
-        now = datetime.now()
-        date_time_scraped = now 
-        df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
-        
-    else:
-        print('No price found in text')
+            print("Price not found in text.")
+            df.loc[len(df)] =[product_name,None,date_time_scraped,product_subclass,retailer,0]
+
+        # Extract the price from the text using a regular expression
+        product_name="Sewerage Board of Nicosia, Τέλος Χρήσης Αποχέτευσης (€ ανά κυβικό μέτρο καταναλισκόμενου νερού)"
+        price_match = re.search(r'(\d+(?:,\d+)?)\s*(?:\w+\s*)?(ανά\s*κυβικό\s*μέτρο\s*καταναλισκόμενου\s*νερού)'
+    , text2)
+
+        # Check if the match was successful
+        if price_match:
+            # Get the matched string (including the optional " σεντ")
+            price_str = price_match.group(1)
+
+            # Convert the price to a float, accounting for cents if necessary
+            if 'σεντ' in text2:
+                product_price = float(price_str) / 100
+            else:
+                product_price = float(price_str)
+            now = datetime.now()
+            date_time_scraped = now 
+            # print(product_price)
+            df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+            
+        else:
+            print('No price found in text')
+            df.loc[len(df)] =[product_name,None,date_time_scraped,product_subclass,retailer,0]
+    except Exception as e:
+        print()
+        df.loc[len(df)] =['Sewerage Board of Nicosia, Ετήσιο Τέλος Αποχέτευσης 2022 (€ για κάθε €1000 εκτιμημένης αξίας)',product_price,date_time_scraped,product_subclass,retailer,0]
+        df.loc[len(df)] =['Sewerage Board of Nicosia, Τέλος Χρήσης Αποχέτευσης (€ ανά κυβικό μέτρο καταναλισκόμενου νερού)',product_price,date_time_scraped,product_subclass,retailer,0]
 
 sewage()
 
@@ -1935,12 +1946,16 @@ def waterSewageOtherCities():
         price=price[0].replace(".","") 
         price=price.replace(",",".") 
         df.loc[len(df)] =[name,price,datetime.now(),'Sewage collection','SBLA',0]
+    else:
+        df.loc[len(df)] =[name,None,datetime.now(),'Sewage collection','SBLA',0]
     name='Λεμεσος Phase 2 Sewage Costs '
     price=tree.xpath("//tbody/tr[last()]/td[7]/text()")
     if price:
         price=price[0].replace(".","") 
         price=price.replace(",",".")
         df.loc[len(df)] =[name,price,datetime.now(),'Sewage collection','SBLA',0]
+    else:
+        df.loc[len(df)] =[name,None,datetime.now(),'Sewage collection','SBLA',0]
 
     name='Λεμεσος Τέλη Αποχέτευσης Ομβρίων'
     price=tree.xpath("//tbody/tr[last()]/td[8]/text()")
@@ -1948,6 +1963,8 @@ def waterSewageOtherCities():
         price=price[0].replace(".","") 
         price=price.replace(",",".") 
         df.loc[len(df)] =[name,price,datetime.now(),'Sewage collection','SBLA',0]
+    else:
+        df.loc[len(df)] =[name,None,datetime.now(),'Sewage collection','SBLA',0]
 
     url = "https://www.lsdb.org.cy/ypiresies/oikonomika/apocheteftika-teli/"
     response = requests.get(url)
@@ -1959,26 +1976,32 @@ def waterSewageOtherCities():
         price=price[0].replace(".","") 
         price=price.replace(",",".") 
         df.loc[len(df)] =[name,price,datetime.now(),'Sewage collection','LSDB',0]
+    else:
+        df.loc[len(df)] =[name,None,datetime.now(),'Sewage collection','LSDB',0]
     name='Λαρνακα Phase 2 Sewage Costs '
     price=tree.xpath("//tbody/tr[last()-1]/td[5]/text()")
     if price:
         price=price[0].replace(".","") 
         price=price.replace(",",".")
         df.loc[len(df)] =[name,price,datetime.now(),'Sewage collection','LSDB',0]
-
+    else:
+        df.loc[len(df)] =[name,None,datetime.now(),'Sewage collection','LSDB',0]
     name='Λαρνακα Τέλη Αποχέτευσης Ομβρίων'
     price=tree.xpath("//tbody/tr[last()-1]/td[8]/text()")
     if price:
         price=price[0].replace(".","") 
         price=price.replace(",",".") 
         df.loc[len(df)] =[name,price,datetime.now(),'Sewage collection','LSDB',0]
-
+    else:
+        df.loc[len(df)] =[name,None,datetime.now(),'Sewage collection','LSDB',0]
     name='Τέλη Χρήσης €/m3'
     price=tree.xpath("//tbody/tr[last()-1]/td[9]/text()")
     if price:
         price=price[0].replace(".","") 
         price=price.replace(",",".") 
         df.loc[len(df)] =[name,price,datetime.now(),'Sewage collection','SBLA',0]
+    else:
+        df.loc[len(df)] =[name,None,datetime.now(),'Sewage collection','SBLA',0]
 
     url = "https://www.wbl.com.cy/el/page/water-rates"
     response = requests.get(url)
@@ -1993,6 +2016,8 @@ def waterSewageOtherCities():
         price2=price2.replace(",",".") 
         price=float(price1)+float(price2)
         df.loc[len(df)] =[name,price,datetime.now(),'Water Supply','WBL',0]
+    else:
+      df.loc[len(df)] =[name,None,datetime.now(),'Water Supply','WBL',0]  
 
     name= 'Λεμεσος Εμποροβιομηχανικά  τέλη ανά τετραμηνία (συντελεστής ΦΠΑ 5%)'
     price1=tree.xpath('//table[5]/tbody/tr[2]/td[2]/text()')
@@ -2004,6 +2029,8 @@ def waterSewageOtherCities():
         price2=price2.replace(",",".") 
         price=float(price1)+float(price2)
         df.loc[len(df)] =[name,price,datetime.now(),'Water Supply','WBL',0]
+    else:
+        df.loc[len(df)] =[name,None,datetime.now(),'Water Supply','WBL',0]
 
     url = "https://www.lwb.org.cy/gr/fees-and-rights.html"
     response = requests.get(url)
@@ -2019,6 +2046,8 @@ def waterSewageOtherCities():
         price2=price2.replace(",",".") 
         price=float(price1)+float(price2)
         df.loc[len(df)] =[name,price,datetime.now(),'Water Supply','LWB',0]
+    else:
+        df.loc[len(df)] =[name,None,datetime.now(),'Water Supply','LWB',0]
 
     name= 'Λαρνακα Εμποροβιομηχανικά τέλη (ανά τριμηνία) (συντελεστής ΦΠΑ 5%)'
     price1=tree.xpath('//*[@id="a_w_67"]/div/div/table/tbody/tr[2]/td[2]/text()')
@@ -2030,6 +2059,8 @@ def waterSewageOtherCities():
         price2=price2.replace(",",".") 
         price=float(price1)+float(price2)
         df.loc[len(df)] =[name,price,datetime.now(),'Water Supply','LWB',0]
+    else:
+        df.loc[len(df)] =[name,None,datetime.now(),'Water Supply','LWB',0]
 
 waterSewageOtherCities()
 
@@ -2345,15 +2376,12 @@ def GasCylinder():
                     middle_price = match.group(1)
                     df.loc[len(df)] = ["ΚΥΛΙΝΔΡΟΣ 10kg ", middle_price, datetime.now(), 'Liquefied hydrocarbons', 'Consumer Observatory', 0]
                 else:
-                    print("Price extraction failed.")
+                    print("Price ΚΥΛΙΝΔΡΟΣ 10kg failed.")
         else:
-            print("Month name not found.")
-    except requests.exceptions.RequestException as e:
-        print("Connection error:", e)
-    except IndexError:
-        print("Index error occurred.")
+            df.loc[len(df)] = ["ΚΥΛΙΝΔΡΟΣ 10kg ", None, datetime.now(), 'Liquefied hydrocarbons', 'Consumer Observatory', 0]
     except Exception as e:
         print("An error occurred:", e)
+        df.loc[len(df)] = ["ΚΥΛΙΝΔΡΟΣ 10kg ", None, datetime.now(), 'Liquefied hydrocarbons', 'Consumer Observatory', 0]
 
 GasCylinder()
 
