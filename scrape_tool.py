@@ -701,7 +701,7 @@ for product,price,label in zip(products,prices_final_athlokinisi,labels):
 
 #assign the values to each column
 for i in range(len(all_items_athlokinisi)):
-    df.loc[i] = (all_items_athlokinisi[i][0],all_items_athlokinisi[i][1],all_items_athlokinisi[i][2],all_items_athlokinisi[i][3],all_items_athlokinisi[i][4],0)
+    df.loc[len(df)] = (all_items_athlokinisi[i][0],all_items_athlokinisi[i][1],all_items_athlokinisi[i][2],all_items_athlokinisi[i][3],all_items_athlokinisi[i][4],0)
 
 
 
