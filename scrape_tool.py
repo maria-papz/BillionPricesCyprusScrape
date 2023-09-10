@@ -651,7 +651,7 @@ for i in range(len(all_items_marksspencer)):
 
 
 #ATHLOKINISI
-athlokinisidf = products_urls.iloc[259:277,]
+athlokinisidf = products_urls.iloc[259:276,]
  
 #the scrapper function
 prices_final_athlokinisi = []
@@ -1103,12 +1103,12 @@ def Tobacco():
         df.loc[len(df)] =(all_items_cigars[i][0],all_items_cigars[i][1],all_items_cigars[i][2],all_items_cigars[i][3],all_items_cigars[i][4],all_items_cigars[i][5])
 Tobacco()
 
-#STEPHANI
+#STEPHANIS
 def Stephanis():
 
     #for the different urls, putting the prices in a list
     prices_final_stephanis = []
-    stephanisdf = products_urls.iloc[299:339,]
+    stephanisdf = products_urls.iloc[298:338,]
     
     #columns urls,products,labels into lists
     urls = stephanisdf['item.url'].values.tolist()
@@ -1194,7 +1194,7 @@ Electroline()
 
 #IKEA
 def ikea():
-    ikeadf = products_urls.iloc[339:367,]
+    ikeadf = products_urls.iloc[338:367,]
     prices_final_ikea = []
     url_ikea = "https://www.ikea.com.cy"
     #columns urls,products,labels into lists
@@ -1236,7 +1236,7 @@ ikea()
 
 #AWOL
 def awol():
-    awoldf = products_urls.iloc[277:285,]
+    awoldf = products_urls.iloc[276:284,]
     urls = awoldf['item.url'].values.tolist()
     products = awoldf['item.name'].values.tolist()
     labels = awoldf['item.subclass'].values.tolist()
@@ -1276,7 +1276,7 @@ awol()
 
 #MOTORACE
 def moto_race():
-    motoracedf = products_urls.iloc[285:299,]
+    motoracedf = products_urls.iloc[284:298,]
     #the scrapper function
     prices_final_motorace = []
     #columns urls,products,labels into lists
