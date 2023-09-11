@@ -2418,6 +2418,13 @@ df=df.sort_values(by='date_time_scraped')
 
 
 def update_average_price():
+    df['product_subclass'] = df['product_subclass'].str.lower()
+    df['product_subclass'] = df['product_subclass'].replace('yogurt', 'yoghurt')
+    df['product_subclass'] = df['product_subclass'].replace('miscellaneous printer matter', 'miscellaneous printed matter')
+    df['product_subclass'] = df['product_subclass'].replace('other tobaco products', 'other tobacco products')
+    df['product_subclass'] = df['product_subclass'].replace('hairdressing for men', 'hairdressing for men and children')
+
+
     now = datetime.now()
     today = now.date()
 
