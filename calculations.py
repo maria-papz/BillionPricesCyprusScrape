@@ -24,8 +24,8 @@ products_today = products[products['date_time_scraped'].dt.date == today]
 # Assuming 'datetime.calculated' column is a string in the format 'YYYY-MM-DD HH:MM:SS'
 calculations['datetime.calculated'] = pd.to_datetime(calculations['datetime.calculated'])
 
-yesterday = datetime.today() - timedelta(days=1)
-calculations_yesterday = calculations[calculations['datetime.calculated'].dt.date == yesterday.date()]
+last_recorded_date = calculations['datetime.calculated'].dt.date.max()
+calculations_yesterday = calculations[calculations['datetime.calculated'].dt.date == last_recorded_date]
 # Merge the weights dataframe with the 'Subclass Average' column from products_today
 df = weights.merge(products_today[['product_subclass', 'subclass_average']].drop_duplicates(), 
                    left_on='subclass', right_on='product_subclass', how='left')
