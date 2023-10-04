@@ -924,12 +924,12 @@ def CyMinistryEducation():
     avg_grammar_nic = (float(df_secondary[2][6])+float(df_secondary[3][6].split()[0])+float(df_secondary[3][6].split()[1])+float(df_secondary[4][6])+float(df_secondary[5][6])+float(df_secondary[6][6]))/6
     avg_grammar_lim = (float(df_secondary[2][22])+float(df_secondary[3][22].split()[0])+float(df_secondary[3][22].split()[1])+float(df_secondary[4][22])+float(df_secondary[5][22])+float(df_secondary[6][22]))/6
     nursery=df_nursery[2][1]
-    all_items_school = [("THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΝΗΠΙΑΓΩΓΕΙΩΝ 2022-2023",float(nursery.strip('€*').replace(".", "")),datetime.now(),'Pre-primary education (ISCED-97 level 0)','Cyprus Ministry of Education, Sport and Youth',0),
-                    ("THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΔΗΜΟΤΙΚΩΝ ΣΧΟΛΕΙΩΝ 2022-2023",float(df_primary[3][26].strip('€').replace(".", "")),datetime.now(),'Primary education (ISCED-97 level 1)','Cyprus Ministry of Education, Sport and Youth',0),
-                    ("THE GRAMMAR SCHOOL (Nicosia), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2022-2023, Α-ΣΤ ΤΑΞΗ",avg_grammar_nic,datetime.now(),'Secondary education','Cyprus Ministry of Education, Sport and Youth',0),
-                    ("THE GRAMMAR SCHOOL (Limassol), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2022-2023, Α-ΣΤ ΤΑΞΗ",avg_grammar_lim,datetime.now(),'Secondary education','Cyprus Ministry of Education, Sport and Youth',0),
-                    ("THE GRAMMAR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2022-2023, Ζ ΤΑΞΗ",float(df_secondary[7][6]),datetime.now(),'Post-secondary non-tertiary education (ISCED 4)','Cyprus Ministry of Education, Sport and Youth',0),
-                    ("THE GRAMMAR SCHOOL (Limassol), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2022-2023, Ζ ΤΑΞΗ",float(df_secondary[7][22]),datetime.now(),'Post-secondary non-tertiary education (ISCED 4)','Cyprus Ministry of Education, Sport and Youth',0) ]
+    all_items_school = [("THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΝΗΠΙΑΓΩΓΕΙΩΝ 2023-2024",float(nursery.strip('€*').replace(".", "")),datetime.now(),'Pre-primary education (ISCED-97 level 0)','Cyprus Ministry of Education, Sport and Youth',0),
+                    ("THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΔΗΜΟΤΙΚΩΝ ΣΧΟΛΕΙΩΝ 2023-2024",float(df_primary[3][26].strip('€').replace(".", "")),datetime.now(),'Primary education (ISCED-97 level 1)','Cyprus Ministry of Education, Sport and Youth',0),
+                    ("THE GRAMMAR SCHOOL (Nicosia), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2023-2024, Α-ΣΤ ΤΑΞΗ",avg_grammar_nic,datetime.now(),'Secondary education','Cyprus Ministry of Education, Sport and Youth',0),
+                    ("THE GRAMMAR SCHOOL (Limassol), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2023-2024, Α-ΣΤ ΤΑΞΗ",avg_grammar_lim,datetime.now(),'Secondary education','Cyprus Ministry of Education, Sport and Youth',0),
+                    ("THE GRAMMAR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2023-2024, Ζ ΤΑΞΗ",float(df_secondary[7][6]),datetime.now(),'Post-secondary non-tertiary education (ISCED 4)','Cyprus Ministry of Education, Sport and Youth',0),
+                    ("THE GRAMMAR SCHOOL (Limassol), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2023-2024, Ζ ΤΑΞΗ",float(df_secondary[7][22]),datetime.now(),'Post-secondary non-tertiary education (ISCED 4)','Cyprus Ministry of Education, Sport and Youth',0) ]
 
     for i in range(6):
         df.loc[len(df)] =  all_items_school[i]
@@ -2397,7 +2397,7 @@ def euc():
             word = word.replace(',','')
             word = int(word)
             list_euc.append(word)
-    df.loc[len(df)]=["EUROPEAN UNIVERSITY CYPRUS, Bachelors Programmes Average Yearly Tuition for 2022-2023",(sum(list_euc))/(len(list_euc)),datetime.now(),'Tertiary education','European University Cyprus',0]
+    df.loc[len(df)]=["EUROPEAN UNIVERSITY CYPRUS, Bachelors Programmes Average Yearly Tuition for 2023-2024",(sum(list_euc))/(len(list_euc)),datetime.now(),'Tertiary education','European University Cyprus',0]
 
 euc()
 
