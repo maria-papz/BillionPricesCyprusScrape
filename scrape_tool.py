@@ -486,8 +486,13 @@ for i in range(len(all_items_primetel)):
 
 #CABLENET
 def cablenet():
+    proxies = {
+    'http': 'http://your_proxy_server:your_proxy_port',
+    'https': 'https://your_proxy_server:your_proxy_port',}
+
+
     url = "https://cablenet.com.cy/τηλεφωνία/τέλη-τοπικών-κλήσεων/"
-    response = requests.get(url)
+    response = requests.get(url,proxies )
 
 
     tree = html.fromstring(response.content)
