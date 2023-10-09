@@ -2355,49 +2355,49 @@ def Booking():
 #Booking()
 
 
-def GasCylinder():
-    try:
-        # Extract last month reported name
-        url = "https://consumer.gov.cy/en/price-observatories/learn-your-rights/66/?ctype=ar"
-        response = requests.get(url)
-        response.raise_for_status()  # Check for connection errors
+#def GasCylinder():
+#    try:
+#        # Extract last month reported name
+#        url = "https://consumer.gov.cy/en/price-observatories/learn-your-rights/66/?ctype=ar"
+#        response = requests.get(url)
+#        response.raise_for_status()  # Check for connection errors
 
-        tree = html.fromstring(response.content)
-        month_name = tree.xpath('//div[@class="mar-top-a"]/ul[@id="docs-list"]/li[last()]/a[@class="grp-head expand"]/text()')
+#        tree = html.fromstring(response.content)
+#        month_name = tree.xpath('//div[@class="mar-top-a"]/ul[@id="docs-list"]/li[last()]/a[@class="grp-head expand"]/text()')
 
-        if month_name:
-            clean_month_name = re.sub(r'^\d+\s*-\s*', '', month_name[0])
-            clean_month_name = clean_month_name.replace(" ", "_")
-            print(clean_month_name)
+#        if month_name:
+#            clean_month_name = re.sub(r'^\d+\s*-\s*', '', month_name[0])
+#            clean_month_name = clean_month_name.replace(" ", "_")
+#            print(clean_month_name)
 
             # Remove unwanted characters
-            url = "https://consumer.gov.cy/assets/modules/wnp/articles/202302/66/docs/paratiritirio_" + clean_month_name.lower() + ".pdf"
-            response = requests.get(url)
-            response.raise_for_status()  # Check for connection errors
+#            url = "https://consumer.gov.cy/assets/modules/wnp/articles/202302/66/docs/paratiritirio_" + clean_month_name.lower() + ".pdf"
+#            response = requests.get(url)
+#            response.raise_for_status()  # Check for connection errors
 
-            with open("file.pdf", "wb") as f:
-                f.write(response.content)
+#            with open("file.pdf", "wb") as f:
+#                f.write(response.content)
 
-            pdf_file = open("file.pdf", "rb")
-            pdf_reader = PyPDF2.PdfReader(pdf_file)
+#            pdf_file = open("file.pdf", "rb")
+#            pdf_reader = PyPDF2.PdfReader(pdf_file)
 
-            # Extracting price
-            for i in range(len(pdf_reader.pages)):  # Check if the required page exists
-                page = pdf_reader.pages[i]
-                match = re.search(r"\d+\s+ΚΥΛΙΝΔΡΟΣ.*?\d+\.\d+\s+\d+\.\d+\s+(\d+\.\d+)", page.extract_text())
+#            # Extracting price
+#            for i in range(len(pdf_reader.pages)):  # Check if the required page exists
+#                page = pdf_reader.pages[i]
+#                match = re.search(r"\d+\s+ΚΥΛΙΝΔΡΟΣ.*?\d+\.\d+\s+\d+\.\d+\s+(\d+\.\d+)", page.extract_text())
 
-                if match:
-                    middle_price = match.group(1)
-                    df.loc[len(df)] = ["ΚΥΛΙΝΔΡΟΣ 10kg ", middle_price, datetime.now(), 'Liquefied hydrocarbons', 'Consumer Observatory', 0]
-                else:
-                    print("Price ΚΥΛΙΝΔΡΟΣ 10kg failed.")
-        else:
-            df.loc[len(df)] = ["ΚΥΛΙΝΔΡΟΣ 10kg ", None, datetime.now(), 'Liquefied hydrocarbons', 'Consumer Observatory', 0]
-    except Exception as e:
-        print("An error occurred:", e)
-        df.loc[len(df)] = ["ΚΥΛΙΝΔΡΟΣ 10kg ", None, datetime.now(), 'Liquefied hydrocarbons', 'Consumer Observatory', 0]
+#                if match:
+#                    middle_price = match.group(1)
+#                    df.loc[len(df)] = ["ΚΥΛΙΝΔΡΟΣ 10kg ", middle_price, datetime.now(), 'Liquefied hydrocarbons', 'Consumer Observatory', 0]
+#                else:
+#                    print("Price ΚΥΛΙΝΔΡΟΣ 10kg failed.")
+#        else:
+#            df.loc[len(df)] = ["ΚΥΛΙΝΔΡΟΣ 10kg ", None, datetime.now(), 'Liquefied hydrocarbons', 'Consumer Observatory', 0]
+#    except Exception as e:
+#        print("An error occurred:", e)
+#        df.loc[len(df)] = ["ΚΥΛΙΝΔΡΟΣ 10kg ", None, datetime.now(), 'Liquefied hydrocarbons', 'Consumer Observatory', 0]
 
-GasCylinder()
+#GasCylinder()
 
 #EUROPEAN UNIVERSITY
 def euc():
@@ -2411,7 +2411,9 @@ def euc():
             word = word.replace(',','')
             word = int(word)
             list_euc.append(word)
-    df.loc[len(df)]=["EUROPEAN UNIVERSITY CYPRUS, Bachelors Programmes Average Yearly Tuition for 2023-2024",(sum(list_euc))/(len(list_euc)),datetime.now(),'Tertiary education','European University Cyprus',0]
+    #the medicine and dental medicine the prices cannot be scrapped and are put here manually, same for online programs
+    #the prices change only once a year
+    df.loc[len(df)]=["EUROPEAN UNIVERSITY CYPRUS, Bachelors Programmes Average Yearly Tuition for 2023-2024",(sum(list_euc)+21000+21900+(8940*5))/(len(list_euc)+7),datetime.now(),'Tertiary education','European University Cyprus',0]
 
 euc()
 
@@ -2437,6 +2439,8 @@ def update_average_price():
     df['product_subclass'] = df['product_subclass'].replace('miscellaneous printer matter', 'miscellaneous printed matter')
     df['product_subclass'] = df['product_subclass'].replace('other tobaco products', 'other tobacco products')
     df['product_subclass'] = df['product_subclass'].replace('hairdressing for men', 'hairdressing for men and children')
+    df['product_subclass'] = df['product_subclass'].replace('other meats', 'hairdressing for men and children')
+    
 
 
     now = datetime.now()
