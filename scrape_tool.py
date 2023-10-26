@@ -17,6 +17,7 @@ import PyPDF2
 from datetime import date, timedelta
 from urllib.error import URLError
 
+
 #read from csv not to lose past records
 df = pd.read_csv("BillionPricesProject_ProductList.csv")
 
@@ -951,37 +952,110 @@ def CyMinistryEducation():
 
 CyMinistryEducation()
 
+# Read the csv file with the products
+fueldaddydf = pd.read_excel('03.Based_list.xlsx')
+
+# Transform the column of the urls into list
+urls_fueldaddy = fueldaddydf['WebLine'].values.tolist()
+
+
+# Function for fuels from Fuel Daddy
+def results_fuelDaddy(urls:list):
+    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+
+    for url in urls:
+        # Build the complete URL for the current route
+        url_fueldaddy = "https://www.fueldaddy.com.cy/en/" + str(url)
+        bs = BeautifulSoup(url_fueldaddy, "html.parser")
+        
+        # Send a GET request to the URL
+        response = requests.get(bs, {'headers':header})
+        
+        # Create a BeautifulSoup object to parse the HTML content
+        soup = BeautifulSoup(response.content, "html.parser")
+        
+        # Read the price of the company
+        element_price = soup.find_all("div", {"class":"price-item"})
+        
+        # Read the name of the company
+        element_name = soup.find_all("span", {"class":"brand-title"})
+        element_name_str = str(element_name)
+
+        # Extract the company name using regular expressions
+        company_name_w = re.search(r'>([^<]+)<', element_name_str)
+        if company_name_w:
+            company_name = company_name_w.group(1).strip()
+        else:
+            company_name = None
+        
+        # Read the name of retailer
+        brand_names = soup.find_all("div", {"class":"col-md-7 pump-info-right"})
+        for brand_name in brand_names:
+            brand = brand_name.find_all(class_ = "col-sm-9")[1]
+            for brand_name in brand:
+                brand_word = brand_name.get_text(strip = True)
+            
+        # Scrapping the price
+        global fuels
+        fuels = []
+        for i in range(len(element_price)):
+            new_row = []
+            name = element_price[i].find(class_ = "brandtag cut-text fueltype-heading").get_text(strip = True)
+            new_row.append(name + " - " + company_name)
+            price = element_price[i].find(class_ = "pricetag").get_text(strip = True).replace(" €","")
+            new_row.append(float(price))
+            new_row.append(datetime.now())
+            if (name[0] == "H") or (name[0] == "K"):
+                item_subclass = ("liquid fuels")
+                #general_index = ("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
+            elif(name[0] == "U"):
+                item_subclass = ("petrol")
+                #general_index = ("TRANSPORT")
+            elif(name[0] == "D"):
+                item_subclass = ("diesel")
+                #general_index = ("TRANSPORT")
+            new_row.append(item_subclass)
+            new_row.append(brand_word)
+            new_row.append(0)
+            fuels.append(new_row)
+
+results_fuelDaddy(urls_fueldaddy)  
+
+#assign the values to each column
+for i in range(len(fuels)):
+    df.loc[len(df)] = (fuels[i][0],fuels[i][1],fuels[i][2],fuels[i][3],fuels[i][4],fuels[i][5])
+
 #GLOBAL PETROL PRICES
-def Fuel():
-    #https://eforms.eservices.cyprus.gov.cy/MCIT/MCIT/PetroleumPrices
-    #alternative: https://gr.globalpetrolprices.com/Cyprus/
+#def Fuel():
+#    #https://eforms.eservices.cyprus.gov.cy/MCIT/MCIT/PetroleumPrices
+#    #alternative: https://gr.globalpetrolprices.com/Cyprus/
 
-    user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
-    headers={'User-Agent':user_agent} 
+#    user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
+#    headers={'User-Agent':user_agent} 
 
-    prices_final_petrol = []
-    url = 'https://gr.globalpetrolprices.com/Cyprus/'        
+#    prices_final_petrol = []
+#    url = 'https://gr.globalpetrolprices.com/Cyprus/'        
 
-    #open and read the different urls
-    url_new = url
-    request=urllib.request.Request(url,headers=headers) 
-    response = urllib.request.urlopen(request)
-    data = response.read().decode("utf-8")
-    data
+#    #open and read the different urls
+#    url_new = url
+#    request=urllib.request.Request(url,headers=headers) 
+#    response = urllib.request.urlopen(request)
+#    data = response.read().decode("utf-8")
+#    data
 
-    pattern = '\d\.\d+\s'
-    price_ini = re.findall(pattern,data)
+#    pattern = '\d\.\d+\s'
+#    price_ini = re.findall(pattern,data)
 
-    if len(price_ini)>3:
-         df.loc[len(df)] = ("Αμόλυβδη Μέση Τιμή Παγκύπρια",price_ini[3],datetime.now(),'Petrol','Global Petrol Prices',0)
-    if len(price_ini)>6:
-        df.loc[len(df)] = ("Πετρέλαιο Κίνησης Μέση Τιμή Παγκύπρια",price_ini[6],datetime.now(),'Diesel','Global Petrol Prices',0)
-    if len(price_ini)>9:
-        df.loc[len(df)] =  ("Πετρέλαιο Μέση Τιμή Παγκύπρια",price_ini[9],datetime.now(),'Liquid Fuels','Global Petrol Prices',0)
-    if len(price_ini)>12:
-        df.loc[len(df)] = ("Πετρέλαιο Θέρμανσης Μέση Τιμή Παγκύπρια",price_ini[12],datetime.now(),'Liquid Fuels','Global Petrol Prices',0)
+#    if len(price_ini)>3:
+#         df.loc[len(df)] = ("Αμόλυβδη Μέση Τιμή Παγκύπρια",price_ini[3],datetime.now(),'Petrol','Global Petrol Prices',0)
+#    if len(price_ini)>6:
+#        df.loc[len(df)] = ("Πετρέλαιο Κίνησης Μέση Τιμή Παγκύπρια",price_ini[6],datetime.now(),'Diesel','Global Petrol Prices',0)
+#    if len(price_ini)>9:
+#        df.loc[len(df)] =  ("Πετρέλαιο Μέση Τιμή Παγκύπρια",price_ini[9],datetime.now(),'Liquid Fuels','Global Petrol Prices',0)
+#    if len(price_ini)>12:
+#        df.loc[len(df)] = ("Πετρέλαιο Θέρμανσης Μέση Τιμή Παγκύπρια",price_ini[12],datetime.now(),'Liquid Fuels','Global Petrol Prices',0)
 
-Fuel()
+#Fuel()
 
 def Tobacco():
     
