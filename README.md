@@ -31,9 +31,13 @@ The calculation of mean prices and CPI measures is performed by the calculations
 
 - The CYgar Shop -> https://www.thecygarshop.com/ 
 
-- NUMBEO -> https://www.numbeo.com/cost-of-living/country_price_rankings?itemId=17&displayCurrency=EUR) 
+- NUMBEO -> https://www.numbeo.com/cost-of-living/country_price_rankings?itemId=17&displayCurrency=EUR
 
 - E-WHOLESALE -> https://www.ewsale.com/tsigaro   
+
+- Altervape -> https://altervape.eu
+
+- The Royal Cigars Strovolos -> https://fetch.com.cy/shop/stores/Nicosia/store/222/The%20Royal%20Cigars%20%7C%20Strovolos
 
 - Primetel -> [PrimeTel for Home: Internet, Telephony, Mobile, Television](https://primetel.com.cy/en) 
 
@@ -81,7 +85,7 @@ https://www.lwb.org.cy/en/charges-and-fees.html
 
 - Sewerage Board of Larnaca -> https://www.lsdb.org.cy/en/services/financial-information/sewage-charges/ 
 
-- Global Petrol Services -> [Κύπρος τιμές της ενέργειας | GlobalPetrolPrices.com ](https://gr.globalpetrolprices.com/Cyprus/)
+- Petrol Prices -> https://www.fueldaddy.com.cy/en
 
 - Booking -> https://www.booking.com/  
 
