@@ -2111,17 +2111,21 @@ def waterSewageOtherCities():
     except IndexError:
         df.loc[len(df)] =[name,None,datetime.now(),'Water Supply','WBL',0] 
 
-    name= 'Λεμεσος Εμποροβιομηχανικά  τέλη ανά τετραμηνία (συντελεστής ΦΠΑ 5%)'
-    price1=tree.xpath('//table[5]/tbody/tr[2]/td[2]/text()')
-    price2=tree.xpath('//table[5]/tbody/tr[3]/td[2]/text()')
-    if price:
-        price1=price1[0].replace(".","") 
-        price1=price1.replace(",",".") 
-        price2=price2[0].replace(".","")
-        price2=price2.replace(",",".") 
-        price=float(price1)+float(price2)
-        df.loc[len(df)] =[name,price,datetime.now(),'Water Supply','WBL',0]
-    else:
+    try:
+        name= 'Λεμεσος Εμποροβιομηχανικά  τέλη ανά τετραμηνία (συντελεστής ΦΠΑ 5%)'
+        price1=tree.xpath('//table[5]/tbody/tr[2]/td[2]/text()')
+        price2=tree.xpath('//table[5]/tbody/tr[3]/td[2]/text()')
+        if price:
+            price1=price1[0].replace(".","") 
+            price1=price1.replace(",",".") 
+            price2=price2[0].replace(".","")
+            price2=price2.replace(",",".") 
+            price=float(price1)+float(price2)
+            df.loc[len(df)] =[name,price,datetime.now(),'Water Supply','WBL',0]
+        else:
+            df.loc[len(df)] =[name,None,datetime.now(),'Water Supply','WBL',0]
+            
+    except IndexError:
         df.loc[len(df)] =[name,None,datetime.now(),'Water Supply','WBL',0]
 
     url = "https://www.lwb.org.cy/gr/fees-and-rights.html"
