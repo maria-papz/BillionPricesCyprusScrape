@@ -996,8 +996,7 @@ def results_fuelDaddy(urls:list):
                 brand_word = brand_name.get_text(strip = True)
             
         # Scrapping the price
-        global fuels
-        fuels = []
+        new_row = []
         for i in range(len(element_price)):
             new_row = []
             name = element_price[i].find(class_ = "brandtag cut-text fueltype-heading").get_text(strip = True)
@@ -1007,23 +1006,19 @@ def results_fuelDaddy(urls:list):
             new_row.append(datetime.now())
             if (name[0] == "H") or (name[0] == "K"):
                 item_subclass = ("liquid fuels")
-                #general_index = ("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
             elif(name[0] == "U"):
                 item_subclass = ("petrol")
-                #general_index = ("TRANSPORT")
             elif(name[0] == "D"):
                 item_subclass = ("diesel")
-                #general_index = ("TRANSPORT")
             new_row.append(item_subclass)
             new_row.append(brand_word)
             new_row.append(0)
-            fuels.append(new_row)
+            df.loc[len(df)] = new_row
 
-results_fuelDaddy(urls_fueldaddy)  
+    #df['product_name'] = df['product_name'].apply(lambda x:x)
+    
 
-#assign the values to each column
-for i in range(len(fuels)):
-    df.loc[len(df)] = (fuels[i][0],fuels[i][1],fuels[i][2],fuels[i][3],fuels[i][4],fuels[i][5])
+results_fuelDaddy(urls_fueldaddy)
 
 #GLOBAL PETROL PRICES
 #def Fuel():
