@@ -1066,7 +1066,7 @@ def Tobacco():
     if scripts:
         price_ini = re.findall(r"\d.\d\d",str(scripts))
         #get only the first element
-        price_final = float(str(price_ini[0]))
+        price_final = float(str(price_ini[0]).replace(',','.'))
 
 
         #add the price in the list    
