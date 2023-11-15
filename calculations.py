@@ -1,5 +1,6 @@
 import pandas as pd 
 from datetime import date, datetime, timedelta
+from dateutil.relativedelta import relativedelta, TH
 
 #read from csv 
 weights = pd.read_csv("Ref_weights.csv")
@@ -64,47 +65,42 @@ calculations = pd.concat([calculations,df],ignore_index=True)
 calculations = calculations.reset_index(drop=True)
 
 
-calculations['datetime.calculated'] = pd.to_datetime(calculations['datetime.calculated'])
+#for the mothly inflation (get the last thursday values of CPI general)
 calculations['date'] = calculations['datetime.calculated'].dt.date
 
-#calculations = calculations.sort_values(by='datetime.calculated')
-
-from datetime import date, timedelta
-from dateutil.relativedelta import relativedelta, TH
-
+#get last thursday of months
 def get_thurs(dt):
     return dt + relativedelta(day=31, weekday=TH(-1))
 
 thursdays = list(set(get_thurs(calculations['date'])))
 thursdays = sorted(thursdays)
 
-
-monthly_inflation_rate = []
-calculations['inflation_rate_lastthursday'] = None
-calculations['monthly_inflation_rate'] = None
+#create the new columns
+calculations['CPI_general_lastthursday'] = None
+calculations['monthly_inflation_lastthursday'] = None
 
 for i in range(len(thursdays)):
     if calculations[calculations['date']==thursdays[i]].empty:
             try:
                 rate = calculations[(calculations['subclass']=='rice')&(calculations['date']==thursdays[i]-timedelta(days=1))].iloc[0]['CPI_general']
-                calculations.loc[(calculations['date']==thursdays[i]-timedelta(days=1)),'inflation_rate_lastthursday'] = rate
-                if thursdays[i-1]-timedelta(days=1)<thursdays[i]-timedelta(days=1) and not calculations.loc[calculations['date']==thursdays[i],'inflation_rate_lastthursday'].empty:
+                calculations.loc[(calculations['date']==thursdays[i]-timedelta(days=1)),'CPI_general_lastthursday'] = rate
+                if thursdays[i-1]-timedelta(days=1)<thursdays[i]-timedelta(days=1) and not calculations.loc[calculations['date']==thursdays[i],'CPI_general_lastthursday'].empty:
                     prev_rate = calculations[(calculations['subclass']=='rice')&(calculations['date']==thursdays[i-1])].iloc[0]['CPI_general']
-                    calculations.loc[(calculations['date']==thursdays[i]-timedelta(days=1)),'monthly_inflation_rate'] = round(100*(rate - prev_rate)/rate,4)
+                    calculations.loc[(calculations['date']==thursdays[i]-timedelta(days=1)),'monthly_inflation_lastthursday'] = round(100*(rate - prev_rate)/rate,4)
                 else:
-                    calculations.loc[(calculations['date']==thursdays[i]),'monthly_inflation_rate'] = None
+                    calculations.loc[(calculations['date']==thursdays[i]),'monthly_inflation_lastthursday'] = None
              
             except IndexError:
-                calculations.loc[(calculations['date']==thursdays[i]),'inflation_rate_lastthursday'] = None
+                calculations.loc[(calculations['date']==thursdays[i]),'CPI_general_lastthursday'] = None
             
     else:
         rate = calculations[(calculations['subclass']=='rice')&(calculations['date']==thursdays[i])].iloc[0]['CPI_general']
-        calculations.loc[(calculations['date']==thursdays[i]),'inflation_rate_lastthursday'] = rate
-        if thursdays[i-1]<thursdays[i] and not calculations.loc[calculations['date']==thursdays[i],'inflation_rate_lastthursday'].empty:
+        calculations.loc[(calculations['date']==thursdays[i]),'CPI_general_lastthursday'] = rate
+        if thursdays[i-1]<thursdays[i] and not calculations.loc[calculations['date']==thursdays[i],'CPI_general_lastthursday'].empty:
             prev_rate = calculations[(calculations['subclass']=='rice')&(calculations['date']==thursdays[i-1])].iloc[0]['CPI_general']
-            calculations.loc[(calculations['date']==thursdays[i]),'monthly_inflation_rate'] = round(100*(rate - prev_rate)/rate,4)
+            calculations.loc[(calculations['date']==thursdays[i]),'monthly_inflation_lastthursday'] = round(100*(rate - prev_rate)/rate,4)
         else:
-            calculations.loc[(calculations['date']==thursdays[i]),'monthly_inflation_rate'] = None
+            calculations.loc[(calculations['date']==thursdays[i]),'monthly_inflation_lastthursday'] = None
 
 
 calculations.drop(columns=['date'], inplace=True)
