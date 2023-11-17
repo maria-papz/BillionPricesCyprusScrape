@@ -75,9 +75,9 @@ def get_thurs(dt):
 thursdays = list(set(get_thurs(calculations['date'])))
 thursdays = sorted(thursdays)
 
-#create the new columns
-calculations['CPI_general_lastthursday'] = None
-calculations['monthly_inflation_lastthursday'] = None
+#create the new columns/only needed when do calculations over again for all dates
+#calculations['CPI_general_lastthursday'] = None
+#calculations['monthly_inflation_lastthursday'] = None
 
 for i in range(len(thursdays)):
     if calculations[calculations['date']==thursdays[i]].empty:
