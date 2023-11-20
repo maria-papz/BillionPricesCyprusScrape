@@ -1,6 +1,10 @@
 import pandas as pd 
 from datetime import date, datetime, timedelta
 from dateutil.relativedelta import relativedelta, TH
+from bs4 import BeautifulSoup
+import re
+import tabula as tb
+import requests
 
 #read from csv 
 weights = pd.read_csv("Ref_weights.csv")
@@ -104,6 +108,52 @@ for i in range(len(thursdays)):
 
 
 calculations.drop(columns=['date'], inplace=True)
+
+url = 'https://www.cystat.gov.cy/en/SubthemeStatistics?id=47'
+response = requests.get(url)
+links_list = []
+soup = BeautifulSoup(response.content, 'html.parser')
+target_links = soup.find_all('a', href=lambda href: href and '/PressRelease?id=' in href)
+
+#remove numbers from string
+def strip_numbers(input_string):
+    return re.sub(r'\d+', '', input_string)
+
+
+#create the new columns/only needed when do calculations over again for all dates
+#calculations['CPI_general_cystat']= None
+#calculations['CPI_monthly_inflation_cystat'] = None
+
+
+calculations['month'] = calculations['datetime.calculated'].dt.strftime('%B')
+calculations['month'] = calculations['month'].astype(str)
+
+for link in target_links:
+    links_list.append(link['href'])
+
+
+for link in links_list:
+    url_pdf = 'https://www.cystat.gov.cy/en' + link
+
+    response = requests.get(url_pdf)
+
+    if response.status_code == 200:
+        soup = BeautifulSoup(response.text, 'html.parser')
+        iframes = soup.find_all('iframe')
+    if iframes:
+        pdf = re.findall("https.+pdf",str(iframes[0]))
+        pdf = pdf[0]
+
+    if 'Consumer_Price_Index' in pdf:
+        cpi = tb.read_pdf(pdf, pages = '2',pandas_options={'header': None}, stream=True)
+        cpi_general_cystat = cpi[2].iloc[12][3]
+        cpi_monthly_cystat = cpi[2].iloc[12][5]
+        month = strip_numbers(re.findall('-.+\d\d-',pdf)[0]).strip('-')
+        calculations.loc[calculations['month'].str.contains(month),'CPI_general_cystat'] = float(cpi_general_cystat.replace(',','.'))
+        calculations.loc[calculations['month'].str.contains(month),'CPI_monthly_inflation_cystat'] = float(cpi_monthly_cystat.replace(',','.'))
+
+
+calculations.drop(columns=['month'], inplace=True)
 
 calculations.to_csv("Calculations.csv")
 
