@@ -149,7 +149,7 @@ for link in links_list:
         cpi_general_cystat = cpi[2].iloc[12][3]
         cpi_monthly_cystat = cpi[2].iloc[12][5]
         month = strip_numbers(re.findall('-.+\d\d-',pdf)[0]).strip('-')
-        if calculations.loc[calculations['month'].str.contains(month),'CPI_general_cystat'] == None: 
+        if calculations.loc[calculations['month'].str.contains('Nov'),'CPI_general_cystat'].isna().any(): 
             calculations.loc[calculations['month'].str.contains(month),'CPI_general_cystat'] = float(cpi_general_cystat.replace(',','.'))
             calculations.loc[calculations['month'].str.contains(month),'CPI_monthly_inflation_cystat'] = float(cpi_monthly_cystat.replace(',','.'))
 
