@@ -78,7 +78,7 @@ def get_thurs(dt):
 thursdays = list(set(get_thurs(calculations['date'])))
 thursdays = sorted(thursdays)
 
-#create the new columns/only needed when do calculations over again for all dates
+#create the new columns/this step is needed only needed when one does calculations over again for all dates
 #calculations['CPI_general_lastthursday'] = None
 #calculations['monthly_inflation_lastthursday'] = None
 
@@ -120,7 +120,7 @@ def strip_numbers(input_string):
     return re.sub(r'\d+', '', input_string)
 
 
-#create the new columns/only needed when do calculations over again for all dates
+#create the new columns/this step is only needed when one does calculations over again for all dates
 #calculations['CPI_general_cystat']= None
 #calculations['CPI_monthly_inflation_cystat'] = None
 
@@ -146,8 +146,8 @@ for link in links_list:
 
     if 'Consumer_Price_Index' in pdf:
         cpi = tb.read_pdf(pdf, pages = '2',pandas_options={'header': None}, stream=True)
-        cpi_general_cystat = cpi[2].iloc[12][3]
-        cpi_monthly_cystat = cpi[2].iloc[12][5]
+        cpi_general_cystat = cpi[2].iloc[12][2]
+        cpi_monthly_cystat = cpi[2].iloc[12][4]
         month = strip_numbers(re.findall('-.+\d\d-',pdf)[0]).strip('-')
         if calculations.loc[calculations['month'].str.contains('Nov'),'CPI_general_cystat'].isna().any(): 
             calculations.loc[calculations['month'].str.contains(month),'CPI_general_cystat'] = float(cpi_general_cystat.replace(',','.'))
