@@ -48,7 +48,6 @@ df['weight.matched.total'] = round(df['weight.matched'].sum(),4)
 df['datetime.calculated']= [datetime.now()]*len(df)
 
 
-
 df['CPI_total']=round(100*(df['weighted.mean.price.total']/df['reference.weighted.mean.price.total']),4)
 df['CPI_division']=round(100*(df['weighted.mean.price.division'])/df['reference.weighted.mean.price.division'],4)
 df['weighted_CPI_division']=round(df['weight.matched.division']*df['CPI_division'],4)
@@ -109,6 +108,7 @@ for i in range(len(thursdays)):
 
 calculations.drop(columns=['date'], inplace=True)
 
+#add the cpi of cystat
 url = 'https://www.cystat.gov.cy/en/SubthemeStatistics?id=47'
 response = requests.get(url)
 links_list = []
@@ -149,8 +149,9 @@ for link in links_list:
         cpi_general_cystat = cpi[2].iloc[12][3]
         cpi_monthly_cystat = cpi[2].iloc[12][5]
         month = strip_numbers(re.findall('-.+\d\d-',pdf)[0]).strip('-')
-        calculations.loc[calculations['month'].str.contains(month),'CPI_general_cystat'] = float(cpi_general_cystat.replace(',','.'))
-        calculations.loc[calculations['month'].str.contains(month),'CPI_monthly_inflation_cystat'] = float(cpi_monthly_cystat.replace(',','.'))
+        if calculations.loc[calculations['month'].str.contains(month),'CPI_general_cystat'] == None: 
+            calculations.loc[calculations['month'].str.contains(month),'CPI_general_cystat'] = float(cpi_general_cystat.replace(',','.'))
+            calculations.loc[calculations['month'].str.contains(month),'CPI_monthly_inflation_cystat'] = float(cpi_monthly_cystat.replace(',','.'))
 
 
 calculations.drop(columns=['month'], inplace=True)
