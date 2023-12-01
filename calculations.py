@@ -87,8 +87,8 @@ for i in range(len(thursdays)):
             try:
                 rate = calculations[(calculations['subclass']=='rice')&(calculations['date']==thursdays[i]-timedelta(days=1))].iloc[0]['CPI_general']
                 calculations.loc[(calculations['date']==thursdays[i]-timedelta(days=1)),'CPI_general_lastthursday'] = rate
-                if thursdays[i-1]-timedelta(days=1)<thursdays[i]-timedelta(days=1) and not calculations.loc[calculations['date']==thursdays[i],'CPI_general_lastthursday'].empty:
-                    prev_rate = calculations[(calculations['subclass']=='rice')&(calculations['date']==thursdays[i-1])].iloc[0]['CPI_general']
+                if thursdays[i-1]-timedelta(days=1)<thursdays[i]-timedelta(days=1) and not calculations.loc[calculations['date']==thursdays[i]-timedelta(days=1),'CPI_general_lastthursday'].empty:
+                    prev_rate = calculations[(calculations['subclass']=='rice')&(calculations['date']==thursdays[i-1]-timedelta(days=1))].iloc[0]['CPI_general']
                     calculations.loc[(calculations['date']==thursdays[i]-timedelta(days=1)),'monthly_inflation_lastthursday'] = round(100*(rate - prev_rate)/rate,4)
                 else:
                     calculations.loc[(calculations['date']==thursdays[i]),'monthly_inflation_lastthursday'] = None
