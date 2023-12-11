@@ -2478,19 +2478,22 @@ def Booking():
 
 #EUROPEAN UNIVERSITY
 def euc():
-    euc = tb.read_pdf('https://syllabus.euc.ac.cy/tuitions/euc-tuition-fees-c.pdf', pages = '2',pandas_options={'header': None}, stream=True)
+    try:
+        euc = tb.read_pdf('https://syllabus.euc.ac.cy/tuitions/euc-tuition-fees-c.pdf', pages = '2',pandas_options={'header': None}, stream=True)
 
-    list_euc = []
+        list_euc = []
 
-    for i in range(0,4):
-        euc[i][1] = euc[i][1].astype('string')
-        for word in euc[i][1].to_list():
-            word = word.replace(',','')
-            word = int(word)
-            list_euc.append(word)
-    #the medicine and dental medicine the prices cannot be scrapped and are put here manually, same for online programs
-    #the prices change only once a year
-    df.loc[len(df)]=["EUROPEAN UNIVERSITY CYPRUS, Bachelors Programmes Average Yearly Tuition for 2023-2024",(sum(list_euc)+21000+21900+(8940*5))/(len(list_euc)+7),datetime.now(),'Tertiary education','European University Cyprus',0]
+        for i in range(0,4):
+            euc[i][1] = euc[i][1].astype('string')
+            for word in euc[i][1].to_list():
+                word = word.replace(',','')
+                word = int(word)
+                list_euc.append(word)
+        #the medicine and dental medicine the prices cannot be scrapped and are put here manually, same for online programs
+        #the prices change only once a year
+        df.loc[len(df)]=["EUROPEAN UNIVERSITY CYPRUS, Bachelors Programmes Average Yearly Tuition for 2023-2024",(sum(list_euc)+21000+21900+(8940*5))/(len(list_euc)+7),datetime.now(),'Tertiary education','European University Cyprus',0]
+    except urllib.error.URLError:
+        df.loc[len(df)]=["EUROPEAN UNIVERSITY CYPRUS, Bachelors Programmes Average Yearly Tuition for 2023-2024",None,'Tertiary education','European University Cyprus',0]
 
 euc()
 
