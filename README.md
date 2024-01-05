@@ -3,7 +3,7 @@
 
 ## Overview
 
-The Billion Prices Cyprus Scrape project involves scraping prices of around 1000 products from 40 retailers on a daily basis. The scraped data is then used to calculate the Consumer Price Index (CPI) against a reference basket.
+The Billion Prices Cyprus Scrape project involves scraping prices of around 2500 products from 40 retailers on a daily basis. The scraped data is then used to calculate the Consumer Price Index (CPI) against a reference basket.
 
 ## Scraping Process
 
@@ -15,89 +15,84 @@ The calculation of mean prices and CPI measures is performed by the calculations
 
 ## Scraped Websites
 
-- SupermarketCy -> https://www.supermarketcy.com.cy/  
+- Adventure Without Limits (AWOL)	https://www.awol.com.cy/ 
 
-- Alphamega -> https://www.alphamega.com.cy 
+- Alphamega	https://www.alphamega.com.cy/ 
 
-- Marks & Spencer -> https://www.marksandspencer.com/cy  
+- Alter Vape	https://altervape.eu/ 
 
-- Athlokinisi -> https://athlokinisi.com.cy/  
+- Athlokinisi	https://athlokinisi.com.cy/ 
 
-- FamousSport -> [Famous Sports - Sportswear, Footwear, Swimwear, Sports Apparel (famousports.com) ](https://www.famousports.com/en)
+- Bwell Pharmacy	https://bwell.com.cy/ 
 
-- Berska -> [Select gender | Bershka ](https://www.bershka.com/cy/h-man.html)
+- Cablenet	https://cablenet.com.cy/ 
 
-- Stradivarious -> [Stradivarius Cyprus - New Collection Summer 2023 | Cyprus ](https://www.stradivarius.com/cy/)
+- Consumer Protection Service	https://consumer.gov.cy/gr/ 
 
-- The CYgar Shop -> https://www.thecygarshop.com/ 
+- Cyprus Energy Regulation Authority (CERA)	https://www.cera.org.cy/Templates/00001/data/hlektrismos/kostos_xrisis.pdf 
 
-- NUMBEO -> https://www.numbeo.com/cost-of-living/country_price_rankings?itemId=17&displayCurrency=EUR
+- Cyprus Ministry of Education, Sport and Youth	https://www.moec.gov.cy/idiotiki_ekpaidefsi/didaktra.html 
 
-- E-WHOLESALE -> https://www.ewsale.com/tsigaro   
+- Cyprus Post	https://www.cypruspost.post/uploads/2cf9ec4f5a.pdf 
 
-- Altervape -> https://altervape.eu
+- Cyprus Telecommunications Authority (CYTA)	https://www.cyta.com.cy/personal 
 
-- The Royal Cigars Strovolos -> https://fetch.com.cy/shop/stores/Nicosia/store/222/The%20Royal%20Cigars%20%7C%20Strovolos
+- Epic	https://www.epic.com.cy/en/page/start/home 
 
-- Primetel -> [PrimeTel for Home: Internet, Telephony, Mobile, Television](https://primetel.com.cy/en) 
+- E-WHOLESALE	https://www.ewsale.com/tsigaro 
 
-- CYTA -> [Ιδιώτες | Cyta ](https://www.cyta.com.cy/personal)
+- Electroline	https://electroline.com.cy/ 
 
-- Epic -> [Epic | Mobile, Internet, Fixed, TV | www.epic.com.cy ](https://www.epic.com.cy/en/page/start/home)
+- European University Cyprus	https://syllabus.euc.ac.cy/tuitions/euc-tuition-fees-c.pdf 
 
-- Stephanis -> https://www.stephanis.com.cy/en  
+- Famous Sports	https://www.famousports.com/en 
 
-- Electroline -> https://www.electroline.com.cy  
+- FuelDaddy (Agip, EKO, Eni, Esso, Fill n GO, Petrolina, Shell, Staroil, Total Plus)	https://www.fueldaddy.com.cy/en 
 
-- Cablenet -> Cablenet: TV, Mobile & the Fastest Internet in Cyprus 
+- IKEA	https://www.ikea.com.cy/
 
-- IKEA -> https://www.ikea.com.cy  
+- Marks & Spencer	https://www.marksandspencer.com/cy/ 
 
-- AWOL -> [ADVENTURE WITHOUT LIMITS (awol.com.cy) ](https://www.awol.com.cy)
+- Mazda	https://www.mazda.com.cy/home 
 
-- Moto Race -> https://www.motorace.com.cy/  
+- Moto Race	https://www.motorace.com.cy/ 
 
-- Mazda -> https://www.mazda.com.cy/home  
+- Nissan	https://www.nissan.com.cy/ 
 
-- Nissan -> https://www.nissan.com.cy/   
+- Novella Hair Salon	https://novella.com.cy/ 
 
-- Bwell Pharmacy -> https://bwell.com.cy/  
+- NUMBEO	https://www.numbeo.com/cost-of-living/country_price_rankings?itemId=17&displayCurrency=EUR 
 
-- Novella Hair Salon -> [Novella Hair Mode | Hair and Beauty Salon in Nicosia Cyprus](https://cablenet.com.cy/en/) 
+- Pizza Hut	https://www.pizzahut.com.cy/ 
 
-- Tripadvisor -> https://www.tripadvisor.com.gr/Restaurants-g190372-Cyprus.html  
+- Primetel	https://primetel.com.cy/en 
 
-- Wolt (PizzaHut, Costa Coffee, Piazza Gourounaki Nicosia, Pixida Nicosia, Kofini Tavern Limassol, Vlachos Taverna Larnaca, Zakos Beach Restaurant Larnaca, Pafos Tavernaki Pafos, Ocean Basket Pafos, Mcdonalds )à 
+- Rio Cinemas	http://www.riocinemas.com.cy/ 
 
-- PizzaHut -> [Order Your Favorite Pizza for Delivery from Pizza Hut Cyprus ](https://www.pizzahut.com.cy)
+- Sewerage Board of Limassol-Amathus (SBLA)	https://www.sbla.com.cy/Sewage-Charges 
 
-- Cera -> https://www.cera.org.cy/Templates/00001/data/hlektrismos/kostos_xrisis.pdf 
+- Sewerage Board of Nicosia (SBN)	https://www.sbn.org.cy/el/apoxeteftika-teli 
 
-- Cyprus Post -> https://www.cypruspost.post/uploads/2cf9ec4f5a.pdf                    
+- Sewerage and Drainage Board of Larnaca (LSDB)	https://www.lsdb.org.cy/en/services/financial-information/sewage-charges/ 
 
-- Water Board of Nicosia (Nicosia +Larnaca) -> https://www.wbn.org.cy/%CE%BA%CE%B1%CF%84%CE%B1%CE%BD%CE%B1%CE%BB%CF%89%CF%84%CE%AE%CF%82/%CE%B4%CE%B9%CE%B1%CF%84%CE%B9%CE%BC%CE%AE%CF%83%CE%B5%CE%B9%CF%82/   
+- Stephanis	https://www.stephanis.com.cy/en 
 
-https://www.lwb.org.cy/en/charges-and-fees.html 
+- Stradivarius	https://www.stradivarius.com/cy/ 
 
-- Sewerage Board of Nicosia -> https://www.sbn.org.cy/el/apoxeteftika-teli  
+- SupermarketCy	https://www.supermarketcy.com.cy/ 
 
-- Sewerage Board of Limassol -> https://www.sbla.com.cy/en/ 
+- The CYgar Shop	https://www.thecygarshop.com/ 
 
-- Sewerage Board of Larnaca -> https://www.lsdb.org.cy/en/services/financial-information/sewage-charges/ 
+- The Royal Cigars 	https://fetch.com.cy/shop/stores/Nicosia/store/222/The%20Royal%20Cigars%20%7C%20Strovolos 
 
-- Petrol Prices -> https://www.fueldaddy.com.cy/en
+- Water Board of Nicosia (WBN)	https://www.wbn.org.cy/%CE%BA%CE%B1%CF%84%CE%B1%CE%BD%CE%B1%CE%BB%CF%89%CF%84%CE%AE%CF%82/%CE%B4%CE%B9%CE%B1%CF%84%CE%B9%CE%BC%CE%AE%CF%83%CE%B5%CE%B9%CF%82/ 
 
-- Booking -> https://www.booking.com/  
+- Water Board of Larnaca (LWB)	https://www.lwb.org.cy/en/charges-and-fees.html 
 
-- Rio Cinemas -> [Rio Cinemas – Movie Theaters in Cyprus](http://www.riocinemas.com.cy) 
+- Water Board of Limassol (WBL)	https://www.wbl.com.cy/el/water-rates 
 
-- University of Nicosia -> https://www.unic.ac.cy/sites/tuition_fees/UNIC-CY-EU-Tuition%20Fees%202022-2023.pdf   
+- Wolt (Costa Coffee, Piatsa Gourounaki Nicosia, Pixida Nicosia, Kofini Tavern Limassol, Vlachos Taverna Larnaca, Zakos Beach Restaurant Larnaca, Paphos Tavernaki, Ocean Basket Paphos, McDonald’s)	https://wolt.com/en/cyp 
 
-- European University Cyprus -> https://syllabus.euc.ac.cy/tuitions/euc-tuition-fees-c.pdf  
-
-- Cyprus Ministry of Education, Sport & Youth -> http://www.moec.gov.cy/idiotiki_ekpaidefsi/didaktra.html  
-
- 
  
 
 ## GitHub Actions
