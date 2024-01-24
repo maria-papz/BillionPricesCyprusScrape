@@ -819,39 +819,88 @@ for i in range(len(all_items_famoussports)):
     df.loc[len(df)] = (all_items_famoussports[i][0],all_items_famoussports[i][1],all_items_famoussports[i][2],all_items_famoussports[i][3],all_items_famoussports[i][4],0)
 
 
+#STRADIVARIOUS NEW CODE
+urls = ["https://www.stradivarius.com/cy/buttoned-blazer-l01918531?colorId=004",
+        "https://www.stradivarius.com/cy/vneck-polyamide-bodysuit-l07003151?colorId=001",
+        "https://www.stradivarius.com/cy/striped-cotton-tshirt-l06501502?colorId=001&categoryId=1020047036",
+        "https://www.stradivarius.com/cy/smart-straightleg-trousers-l04562485?colorId=001&categoryId=1020047051",
+        "https://www.stradivarius.com/cy/minimalist-trousers-with-pockets-l01477778?colorId=430&categoryId=1020047051"]
+
+prices_stradivarious= []
+
+def scrapper_stradivarious(urls:list):
+    for url in urls:
+        try:
+            #used for the request, urlopen functions
+            user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
+            headers={'User-Agent':user_agent} 
+
+            #initial price list and the value of the final price scrapped
+            price_ini=[]
+                
+            #open and read the different urls
+            request=urllib.request.Request(url,headers=headers) 
+            response = urllib.request.urlopen(request)
+            data = response.read().decode("utf-8")
+
+            #get the strings for the prices of the products using regular expressions
+            pattern = '\<meta content=.*€'
+            price_ini = re.findall(pattern,data)
+            price_ini = re.sub(r'[^0-9.]', '', price_ini[0])
+
+            prices_stradivarious.append(float(price_ini))
+
+        except urllib.error.HTTPError as err:
+            prices_stradivarious.append('NaN')
+
+#columns urls,products,labels into lists
+products = ['BUTTONED BLAZER','VNECK POLYAMIDE BODYSUIT','STRIPPED COTTON TSHIRT','SMART STRAIGHT LEG TROUSERS','MINIMALIST TROUSERS WITH POCKETS']
+
+#scrap the prices
+scrapper_stradivarious(urls)
+
+#put the rows in a list
+all_items_stradivarious = []
+for product,price in zip(products,prices_stradivarious):
+    all_items_stradivarious.append([product,price,datetime.now(),'Garments for women','Stradivarious'])
+
+
+#assign the values to each column
+for i in range(len(all_items_stradivarious)):
+    df.loc[len(df)] = (all_items_stradivarious[i][0],all_items_stradivarious[i][1],all_items_stradivarious[i][2],all_items_stradivarious[i][3],all_items_stradivarious[i][4],0)
 
 #BERSHKA/STRADIVARIOUS
-def garments():
-    headers = {'User-agent': 'Mozilla/5.0'}  
-    data_garmets = pd.read_csv("Garmets.csv")
-    for index, am in data_garmets.iterrows():
-        page = requests.get(am['website'].strip(),headers=headers)
-        st=page.content.decode('utf-8')
-        tree = html.fromstring(st)
-        product_name = (''.join(am['product_name'])).replace(' ','').strip()
-        try:
-            pp=tree.xpath("//script[@type='application/ld+json']/text()")
-            product_price=pp[0]
-            if am['retailer'] == 'Bershka':
-                if product_price:
-                    product_price = json.loads(product_price)['offers'][0]['price']
-                else:
-                    product_price=None
-            else:
-                if product_price:
-                    product_price = json.loads(product_price)['offers']['price']
-                else:
-                    product_price = None
-            print(product_price)
-            now = datetime.now()
-            date_time_scraped = now
-            product_subclass=am['product_subclass']
-            retailer= am['retailer']
-            df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
-        except IndexError:
-            print("Index Error")
+# def garments():
+#     headers = {'User-agent': 'Mozilla/5.0'}  
+#     data_garmets = pd.read_csv("Garmets.csv")
+#     for index, am in data_garmets.iterrows():
+#         page = requests.get(am['website'].strip(),headers=headers)
+#         st=page.content.decode('utf-8')
+#         tree = html.fromstring(st)
+#         product_name = (''.join(am['product_name'])).replace(' ','').strip()
+#         try:
+#             pp=tree.xpath("//script[@type='application/ld+json']/text()")
+#             product_price=pp[0]
+#             if am['retailer'] == 'Bershka':
+#                 if product_price:
+#                     product_price = json.loads(product_price)['offers'][0]['price']
+#                 else:
+#                     product_price=None
+#             else:
+#                 if product_price:
+#                     product_price = json.loads(product_price)['offers']['price']
+#                 else:
+#                     product_price = None
+#             print(product_price)
+#             now = datetime.now()
+#             date_time_scraped = now
+#             product_subclass=am['product_subclass']
+#             retailer= am['retailer']
+#             df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+#         except IndexError:
+#             print("Index Error")
 
-garments()
+# garments()
 
 
 #NOVELLA HAIR SALON
