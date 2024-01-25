@@ -819,55 +819,57 @@ for i in range(len(all_items_famoussports)):
     df.loc[len(df)] = (all_items_famoussports[i][0],all_items_famoussports[i][1],all_items_famoussports[i][2],all_items_famoussports[i][3],all_items_famoussports[i][4],0)
 
 
-#STRADIVARIOUS NEW CODE
-urls = ["https://www.stradivarius.com/cy/buttoned-blazer-l01918531?colorId=004",
-        "https://www.stradivarius.com/cy/vneck-polyamide-bodysuit-l07003151?colorId=001",
-        "https://www.stradivarius.com/cy/striped-cotton-tshirt-l06501502?colorId=001&categoryId=1020047036",
-        "https://www.stradivarius.com/cy/smart-straightleg-trousers-l04562485?colorId=001&categoryId=1020047051",
-        "https://www.stradivarius.com/cy/minimalist-trousers-with-pockets-l01477778?colorId=430&categoryId=1020047051"]
+# #STRADIVARIOUS NEW CODE
+# urls = ["https://www.stradivarius.com/cy/buttoned-blazer-l01918531?colorId=004",
+#         "https://www.stradivarius.com/cy/vneck-polyamide-bodysuit-l07003151?colorId=001",
+#         "https://www.stradivarius.com/cy/striped-cotton-tshirt-l06501502?colorId=001&categoryId=1020047036",
+#         "https://www.stradivarius.com/cy/smart-straightleg-trousers-l04562485?colorId=001&categoryId=1020047051",
+#         "https://www.stradivarius.com/cy/minimalist-trousers-with-pockets-l01477778?colorId=430&categoryId=1020047051"]
 
-prices_stradivarious= []
+# prices_stradivarious= []
 
-def scrapper_stradivarious(urls:list):
-    for url in urls:
-        try:
-            #used for the request, urlopen functions
-            user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
-            headers={'User-Agent':user_agent} 
+# def scrapper_stradivarious(urls:list):
+#     for url in urls:
+#         try:
+#             #used for the request, urlopen functions
+#             user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
+#             headers={'User-Agent':user_agent} 
 
-            #initial price list and the value of the final price scrapped
-            price_ini=[]
+#             #initial price list and the value of the final price scrapped
+#             price_ini=[]
                 
-            #open and read the different urls
-            request=urllib.request.Request(url,headers=headers) 
-            response = urllib.request.urlopen(request)
-            data = response.read().decode("utf-8")
+#             #open and read the different urls
+#             request=urllib.request.Request(url,headers=headers) 
+#             response = urllib.request.urlopen(request)
+#             data = response.read().decode("utf-8")
 
-            #get the strings for the prices of the products using regular expressions
-            pattern = '\<meta content=.*€'
-            price_ini = re.findall(pattern,data)
-            price_ini = re.sub(r'[^0-9.]', '', price_ini[0])
+#             #get the strings for the prices of the products using regular expressions
+#             pattern = '\<meta content=.*€'
+#             price_ini = re.findall(pattern,data)
+#             price_ini = re.sub(r'[^0-9.]', '', price_ini[0])
 
-            prices_stradivarious.append(float(price_ini))
+#             prices_stradivarious.append(float(price_ini))
 
-        except urllib.error.HTTPError as err:
-            prices_stradivarious.append('NaN')
+#         except urllib.error.HTTPError as err:
+#             prices_stradivarious.append('NaN')
 
-#columns urls,products,labels into lists
-products = ['BUTTONED BLAZER','VNECK POLYAMIDE BODYSUIT','STRIPPED COTTON TSHIRT','SMART STRAIGHT LEG TROUSERS','MINIMALIST TROUSERS WITH POCKETS']
+# #columns urls,products,labels into lists
+# products = ['BUTTONED BLAZER','VNECK POLYAMIDE BODYSUIT','STRIPPED COTTON TSHIRT','SMART STRAIGHT LEG TROUSERS','MINIMALIST TROUSERS WITH POCKETS']
 
-#scrap the prices
-scrapper_stradivarious(urls)
+# #scrap the prices
+# scrapper_stradivarious(urls)
 
-#put the rows in a list
-all_items_stradivarious = []
-for product,price in zip(products,prices_stradivarious):
-    all_items_stradivarious.append([product,price,datetime.now(),'Garments for women','Stradivarious'])
+# #put the rows in a list
+# all_items_stradivarious = []
+# for product,price in zip(products,prices_stradivarious):
+#     all_items_stradivarious.append([product,price,datetime.now(),'Garments for women','Stradivarious'])
 
 
-#assign the values to each column
-for i in range(len(all_items_stradivarious)):
-    df.loc[len(df)] = (all_items_stradivarious[i][0],all_items_stradivarious[i][1],all_items_stradivarious[i][2],all_items_stradivarious[i][3],all_items_stradivarious[i][4],0)
+# #assign the values to each column
+# for i in range(len(all_items_stradivarious)):
+#     df.loc[len(df)] = (all_items_stradivarious[i][0],all_items_stradivarious[i][1],all_items_stradivarious[i][2],all_items_stradivarious[i][3],all_items_stradivarious[i][4],0)
+
+
 
 #BERSHKA/STRADIVARIOUS
 # def garments():
