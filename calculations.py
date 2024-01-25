@@ -78,7 +78,7 @@ def get_thurs(dt):
 thursdays = list(set(get_thurs(calculations['date'])))
 thursdays = sorted(thursdays)
 
-#create the new columns/this step is needed only needed when one does calculations over again for all dates
+#create the new columns/this step is only needed when one does calculations over again for all dates
 #calculations['CPI_general_lastthursday'] = None
 #calculations['monthly_inflation_lastthursday'] = None
 
