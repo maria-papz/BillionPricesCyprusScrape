@@ -1,34 +1,34 @@
-# # Whenever pull request is made targeting branch initialise and initialize, csv is reset
-# name: initialise-clear-csv
-# run-name: Creating blank CSV, clearing current data
-# on:
-#   pull_request:
-#     # Sequence of patterns matched against refs/heads
-#     branches:
-#       - initialise
-#       - initialize
-# jobs:
-#   getdataandrefreshmap:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: checkout repo content
-#         uses: actions/checkout@v3 # checkout the repository content to github runner.
-#         with:
-#           fetch-depth: 0
-#       - name: setup python
-#         uses: actions/setup-python@v4
-#         with:
-#           python-version: 3.8 #install the python needed
-#       - name: Install dependencies
-#         run: |
-#           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-#       - name: execute py script
-#         run: |
-#           python initial.py
-#           git status
-#           git config user.name github-actions
-#           git config user.email github-actions@github.com
-#           git add .
-#           git commit -m "crongenerated"
-#           git push origin HEAD:main
+# Whenever pull request is made targeting branch initialise and initialize, csv is reset
+name: initialise-clear-csv
+run-name: Creating blank CSV, clearing current data
+on:
+  pull_request:
+    # Sequence of patterns matched against refs/heads
+    branches:
+      - initialise
+      - initialize
+jobs:
+  getdataandrefreshmap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo content
+        uses: actions/checkout@v3 # checkout the repository content to github runner.
+        with:
+          fetch-depth: 0
+      - name: setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.8 #install the python needed
+      - name: Install dependencies
+        run: |
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: execute py script
+        run: |
+          python initial.py
+          git status
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "crongenerated"
+          git push origin HEAD:main
 
