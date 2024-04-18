@@ -1103,11 +1103,12 @@ results_fuelDaddy(urls_fueldaddy)
 
 #Fuel()
 
-"""
+
 def Tobacco():
     
     prices_final_cigars=[]
 
+    """
     url = "https://www.thecygarshop.com/product-page/machetero-panatela"
     page = urlopen(url)
     html = page.read().decode("utf-8")
@@ -1125,7 +1126,8 @@ def Tobacco():
         prices_final_cigars.append(price_final)
     else:
         prices_final_cigars.append(None)
-
+    """
+    
     url = "https://www.numbeo.com/cost-of-living/country_price_rankings?itemId=17&displayCurrency=EUR"
     page = urlopen(url)
     html = page.read().decode("utf-8")
@@ -1237,7 +1239,7 @@ def Tobacco():
     for i in range(len(all_items_cigars)):
         df.loc[len(df)] =(all_items_cigars[i][0],all_items_cigars[i][1],all_items_cigars[i][2],all_items_cigars[i][3],all_items_cigars[i][4],all_items_cigars[i][5])
 Tobacco()
-"""
+
 #STEPHANIS
 def Stephanis():
 
