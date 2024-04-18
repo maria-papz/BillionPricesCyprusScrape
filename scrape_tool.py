@@ -1103,6 +1103,7 @@ results_fuelDaddy(urls_fueldaddy)
 
 #Fuel()
 
+"""
 def Tobacco():
     
     prices_final_cigars=[]
@@ -1236,7 +1237,7 @@ def Tobacco():
     for i in range(len(all_items_cigars)):
         df.loc[len(df)] =(all_items_cigars[i][0],all_items_cigars[i][1],all_items_cigars[i][2],all_items_cigars[i][3],all_items_cigars[i][4],all_items_cigars[i][5])
 Tobacco()
-
+"""
 #STEPHANIS
 def Stephanis():
 
