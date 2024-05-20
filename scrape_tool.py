@@ -1108,8 +1108,7 @@ def Tobacco():
     
     prices_final_cigars=[]
 
-    """
-    url = "https://www.thecygarshop.com/product-page/machetero-panatela"
+    url = "https://www.thecygarshop.com/product-page/machetero-petit-corona" #"https://www.thecygarshop.com/product-page/machetero-panatela"
     page = urlopen(url)
     html = page.read().decode("utf-8")
     bs = BeautifulSoup(html, "html.parser")
@@ -1121,12 +1120,10 @@ def Tobacco():
         #get only the first element
         price_final = float(str(price_ini[0]).replace(',','.'))
 
-
         #add the price in the list    
         prices_final_cigars.append(price_final)
     else:
         prices_final_cigars.append(None)
-    """
     
     url = "https://www.numbeo.com/cost-of-living/country_price_rankings?itemId=17&displayCurrency=EUR"
     page = urlopen(url)
@@ -1154,7 +1151,6 @@ def Tobacco():
         price_ini = re.findall(r"\d\d.\d\d",str(scripts))
         #get only the first element
         price_final = float(str(price_ini[0]).replace(',','.'))
-
 
         #add the price in the list    
         prices_final_cigars.append(price_final)
