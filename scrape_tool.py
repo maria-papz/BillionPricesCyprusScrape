@@ -929,7 +929,7 @@ def CyMinistryEducation():
         df_nursery[2] = df_nursery[2].astype('string')
         df_primary[3] = df_primary[3].astype('string')
 
-        for i in range(2,8):
+        for i in range(3,9):
             df_secondary[i]= df_secondary[i].astype('string')
             
             avg_grammar_nic = ( float(df_secondary[3][4]) + float(df_secondary[4][4]) + float(df_secondary[5][4]) + float(df_secondary[6][4]) + float(df_secondary[7][4]) + float(df_secondary[8][4]) ) / 6
@@ -938,8 +938,8 @@ def CyMinistryEducation():
         
             nursery=df_nursery[2][1]
         
-        all_items_school = [("THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΝΗΠΙΑΓΩΓΕΙΩΝ 2024-2025",float(nursery.strip('€*').replace(".", "")),datetime.now(),'Pre-primary education (ISCED-97 level 0)','Cyprus Ministry of Education, Sport and Youth',0),
-                        ("THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΔΗΜΟΤΙΚΩΝ ΣΧΟΛΕΙΩΝ 2024-2025",float(df_primary[3][26].strip('€').replace(".", "")),datetime.now(),'Primary education (ISCED-97 level 1)','Cyprus Ministry of Education, Sport and Youth',0),
+        all_items_school = [("THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΝΗΠΙΑΓΩΓΕΙΩΝ 2023-2024",float(nursery.strip('€*').replace(".", "")),datetime.now(),'Pre-primary education (ISCED-97 level 0)','Cyprus Ministry of Education, Sport and Youth',0),
+                        ("THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΔΗΜΟΤΙΚΩΝ ΣΧΟΛΕΙΩΝ 2023-2024",float(df_primary[3][26].strip('€').replace(".", "")),datetime.now(),'Primary education (ISCED-97 level 1)','Cyprus Ministry of Education, Sport and Youth',0),
                         ("THE GRAMMAR SCHOOL (Nicosia), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025, Α-ΣΤ ΤΑΞΗ",avg_grammar_nic,datetime.now(),'Secondary education','Cyprus Ministry of Education, Sport and Youth',0),
                         ("THE GRAMMAR SCHOOL (Limassol), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025, Α-ΣΤ ΤΑΞΗ",avg_grammar_lim,datetime.now(),'Secondary education','Cyprus Ministry of Education, Sport and Youth',0),
                         ("THE GRAMMAR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025, Ζ ΤΑΞΗ",float(df_secondary[9][4]),datetime.now(),'Post-secondary non-tertiary education (ISCED 4)','Cyprus Ministry of Education, Sport and Youth',0),
@@ -947,8 +947,8 @@ def CyMinistryEducation():
     
     except urllib.error.URLError:
         
-        all_items_school = [("THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΝΗΠΙΑΓΩΓΕΙΩΝ 2024-2025",None,datetime.now(),'Pre-primary education (ISCED-97 level 0)','Cyprus Ministry of Education, Sport and Youth',0),
-                        ("THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΔΗΜΟΤΙΚΩΝ ΣΧΟΛΕΙΩΝ 2024-2025",None,datetime.now(),'Primary education (ISCED-97 level 1)','Cyprus Ministry of Education, Sport and Youth',0),
+        all_items_school = [("THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΝΗΠΙΑΓΩΓΕΙΩΝ 2023-2024",None,datetime.now(),'Pre-primary education (ISCED-97 level 0)','Cyprus Ministry of Education, Sport and Youth',0),
+                        ("THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΔΗΜΟΤΙΚΩΝ ΣΧΟΛΕΙΩΝ 2023-2024",None,datetime.now(),'Primary education (ISCED-97 level 1)','Cyprus Ministry of Education, Sport and Youth',0),
                         ("THE GRAMMAR SCHOOL (Nicosia), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025, Α-ΣΤ ΤΑΞΗ",None,datetime.now(),'Secondary education','Cyprus Ministry of Education, Sport and Youth',0),
                         ("THE GRAMMAR SCHOOL (Limassol), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025, Α-ΣΤ ΤΑΞΗ",None,datetime.now(),'Secondary education','Cyprus Ministry of Education, Sport and Youth',0),
                         ("THE GRAMMAR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025, Ζ ΤΑΞΗ",None,datetime.now(),'Post-secondary non-tertiary education (ISCED 4)','Cyprus Ministry of Education, Sport and Youth',0),
@@ -964,7 +964,6 @@ fueldaddydf = pd.read_excel('03.Based_list.xlsx')
 
 # Transform the column of the urls into list
 urls_fueldaddy = fueldaddydf['WebLine'].values.tolist()
-
 
 # Function for fuels from Fuel Daddy
 def results_fuelDaddy(urls:list):
@@ -1024,7 +1023,6 @@ def results_fuelDaddy(urls:list):
 
     #df['product_name'] = df['product_name'].apply(lambda x:x)
     
-
 results_fuelDaddy(urls_fueldaddy)
 
 #GLOBAL PETROL PRICES
@@ -1058,7 +1056,6 @@ results_fuelDaddy(urls_fueldaddy)
 #        df.loc[len(df)] = ("Πετρέλαιο Θέρμανσης Μέση Τιμή Παγκύπρια",price_ini[12],datetime.now(),'Liquid Fuels','Global Petrol Prices',0)
 
 #Fuel()
-
 
 def Tobacco():
     
@@ -1121,8 +1118,6 @@ def Tobacco():
         'https://fetch.com.cy/shop/stores/Nicosia/store/222/The%20Royal%20Cigars%20%7C%20Strovolos/item/511874/Perdomo%2010th%20Anniversary%20MADURO%20Super%20Toro',
         'https://fetch.com.cy/shop/stores/Nicosia/store/222/The%20Royal%20Cigars%20%7C%20Strovolos/item/280001/CARRILLO%20INTERLUDE%20ROTHCHILD%20JR%20MADURO%20NATURAL']
 
-
-
     for url in urls:
         try:
             page = urlopen(url)
@@ -1149,7 +1144,6 @@ def Tobacco():
     urls = ['https://altervape.eu/collections/eliquids/products/manhattan','https://altervape.eu/collections/eliquids/products/cabochard-vanille-caramel-0mg-50ml',
         'https://altervape.eu/collections/eliquids/products/manhattan-shake']
     
-
     for url in urls:
         try:
             #used for the request, urlopen functions
@@ -1880,8 +1874,7 @@ def Wolt():
     scrape_price('https://wolt.com/en/cyp/limassol/restaurant/mcdonalds-oldport',
                  "McDonald's McChicken",
                  '//button[descendant::h3[text()="McChicken"]]',
-                 date_time_scraped)
-
+                 date_time_scraped) 
 
 Wolt()
 
