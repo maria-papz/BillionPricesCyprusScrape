@@ -916,9 +916,9 @@ def CyMinistryEducation():
     #http://www.moec.gov.cy/idiotiki_ekpaidefsi/didaktra.html 
     
     try:
-        pdf_1 = tb.read_pdf('http://archeia.moec.gov.cy/mc/698/didaktra_idiotikon_mesi_ekpaidefsi.pdf', pages = '1',pandas_options={'header': None}, stream=True)
-        pdf_2 = tb.read_pdf('http://archeia.moec.gov.cy/mc/698/didaktra_idiotikon_dimotikon_scholeion.pdf', pages = '1',pandas_options={'header': None}, stream=True)
-        pdf_3 = tb.read_pdf('http://archeia.moec.gov.cy/mc/698/didaktra_idiotikon_nipiagogeion.pdf', pages = '4',pandas_options={'header': None}, stream=True)
+        pdf_1 = tb.read_pdf('http://archeia.moec.gov.cy/mc/698/didaktra_idiotikon_mesi_ekpaidefsi.pdf', pages = '1', pandas_options={'header': None}, stream=True)
+        pdf_2 = tb.read_pdf('http://archeia.moec.gov.cy/mc/698/didaktra_idiotikon_dimotikon_scholeion.pdf', pages = '1', pandas_options={'header': None}, stream=True)
+        pdf_3 = tb.read_pdf('http://archeia.moec.gov.cy/mc/698/didaktra_idiotikon_nipiagogeion.pdf', pages = '4', pandas_options={'header': None}, stream=True)
 
         df_secondary = pdf_1[0]
         df_primary = pdf_2[0]
@@ -932,9 +932,25 @@ def CyMinistryEducation():
         for i in range(2,7):
             df_secondary[i]= df_secondary[i].astype('string')
             
-            avg_grammar_nic = ( float(df_secondary[2][4]) + float(df_secondary[3][4]) + float(df_secondary[4][4]) + float(df_secondary[5][4]) + float(df_secondary[6][4]) + float(df_secondary[7][4]) ) / 6
+            #Nicosia
+            value_1=(float(df_secondary[2][4].replace("€",'').replace(".","")))
+            value_2=(float(df_secondary[3][4].replace("€",'').replace(".","")))
+            value_3=(float(df_secondary[4][4].replace("€",'').replace(".","")))
+            value_4=(float(df_secondary[5][4].replace("€",'').replace(".","")))
+            value_5=(float(df_secondary[6][4].replace("€",'').replace(".","")))
+            value_6=(float(df_secondary[7][4].replace("€",'').replace(".","")))
+
+            #Limassol
+            value_7=(float(df_secondary[2][15].replace("€",'').replace(".","")))
+            value_8=(float(df_secondary[3][15].replace("€",'').replace(".","")))
+            value_9=(float(df_secondary[4][15].replace("€",'').replace(".","")))
+            value_10=(float(df_secondary[5][15].replace("€",'').replace(".","")))
+            value_11=(float(df_secondary[6][15].replace("€",'').replace(".","")))
+            value_12=(float(df_secondary[7][15].replace("€",'').replace(".","")))
             
-            avg_grammar_lim = ( float(df_secondary[2][15]) + float(df_secondary[3][15]) + float(df_secondary[4][15]) + float(df_secondary[5][15]) + float(df_secondary[6][15]) + float(df_secondary[7][15]) ) / 6
+            avg_grammar_nic = ( value_1 + value_2 + value_3 + value_4 + value_5 + value_6 ) / 6
+            
+            avg_grammar_lim = ( value_7 + value_8 + value_9 + value_10 + value_11 + value_12 ) / 6
         
             nursery=df_nursery[2][1]
         
