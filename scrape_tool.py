@@ -929,12 +929,12 @@ def CyMinistryEducation():
         df_nursery[2] = df_nursery[2].astype('string')
         df_primary[3] = df_primary[3].astype('string')
 
-        for i in range(3,9):
+        for i in range(2,7):
             df_secondary[i]= df_secondary[i].astype('string')
             
-            avg_grammar_nic = ( float(df_secondary[3][4]) + float(df_secondary[4][4]) + float(df_secondary[5][4]) + float(df_secondary[6][4]) + float(df_secondary[7][4]) + float(df_secondary[8][4]) ) / 6
+            avg_grammar_nic = ( float(df_secondary[2][4]) + float(df_secondary[3][4]) + float(df_secondary[4][4]) + float(df_secondary[5][4]) + float(df_secondary[6][4]) + float(df_secondary[7][4]) ) / 6
             
-            avg_grammar_lim = ( float(df_secondary[3][20]) + float(df_secondary[4][20]) + float(df_secondary[5][20]) + float(df_secondary[6][20]) + float(df_secondary[7][20]) + float(df_secondary[8][20]) ) / 6
+            avg_grammar_lim = ( float(df_secondary[2][15]) + float(df_secondary[3][15]) + float(df_secondary[4][15]) + float(df_secondary[5][15]) + float(df_secondary[6][15]) + float(df_secondary[7][15]) ) / 6
         
             nursery=df_nursery[2][1]
         
@@ -942,8 +942,8 @@ def CyMinistryEducation():
                         ("THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΔΗΜΟΤΙΚΩΝ ΣΧΟΛΕΙΩΝ 2023-2024",float(df_primary[3][26].strip('€').replace(".", "")),datetime.now(),'Primary education (ISCED-97 level 1)','Cyprus Ministry of Education, Sport and Youth',0),
                         ("THE GRAMMAR SCHOOL (Nicosia), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025, Α-ΣΤ ΤΑΞΗ",avg_grammar_nic,datetime.now(),'Secondary education','Cyprus Ministry of Education, Sport and Youth',0),
                         ("THE GRAMMAR SCHOOL (Limassol), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025, Α-ΣΤ ΤΑΞΗ",avg_grammar_lim,datetime.now(),'Secondary education','Cyprus Ministry of Education, Sport and Youth',0),
-                        ("THE GRAMMAR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025, Ζ ΤΑΞΗ",float(df_secondary[9][4]),datetime.now(),'Post-secondary non-tertiary education (ISCED 4)','Cyprus Ministry of Education, Sport and Youth',0),
-                        ("THE GRAMMAR SCHOOL (Limassol), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025, Ζ ΤΑΞΗ",float(df_secondary[9][20]),datetime.now(),'Post-secondary non-tertiary education (ISCED 4)','Cyprus Ministry of Education, Sport and Youth',0) ]
+                        ("THE GRAMMAR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025, Ζ ΤΑΞΗ",float(df_secondary[8][4]),datetime.now(),'Post-secondary non-tertiary education (ISCED 4)','Cyprus Ministry of Education, Sport and Youth',0),
+                        ("THE GRAMMAR SCHOOL (Limassol), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025, Ζ ΤΑΞΗ",float(df_secondary[8][15]),datetime.now(),'Post-secondary non-tertiary education (ISCED 4)','Cyprus Ministry of Education, Sport and Youth',0) ]
     
     except urllib.error.URLError:
         
@@ -2242,8 +2242,6 @@ def Booking():
     year = now.year
     month = now.month
 
-
-    
     # Find the last weekend (last Saturday and Sunday) of the current month
     last_day_of_month = date(year, month+1, 1) - timedelta(days=1)
     last_weekend = None
@@ -2278,8 +2276,6 @@ def Booking():
     params = {'checkin': check_in_date, 'checkout': check_out_date, 'room_id': room_type_id,'group_adult': 2}
     response = requests.get(url, headers=headers, params=params)
     tree = html.fromstring(response.content)
-
-
 
     # Check if the room type is available for the specified date range
     not_available = tree.xpath(f"//div[@id='{room_type_id}' and @class='room js-soldout-room-rate']")
@@ -2348,7 +2344,6 @@ def Booking():
         date_time_scraped = now 
         df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
 
-
     room_type_id = "43130601" 
     url="https://www.booking.com/hotel/cy/flokkas-apartments.el.html"
     product_name="Flokkas Hotel Apartments, Τιμή για Δίκλινο για 1 βράδυ (Πρωταράς)"
@@ -2374,7 +2369,6 @@ def Booking():
         now = datetime.now()
         date_time_scraped = now 
         df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
-
 
     room_type_id = "28716002" 
     url="https://www.booking.com/hotel/cy/asty-nicosia.el.html"
@@ -2429,7 +2423,6 @@ def Booking():
         df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
 
 #Booking()
-
 
 #def GasCylinder():
 #    try:
@@ -2507,10 +2500,8 @@ def fillNone(df):
 
 df = fillNone(df)
 
-
 #sort the values based on the date
 df=df.sort_values(by='date_time_scraped')
-
 
 def update_average_price():
     df['product_subclass'] = df['product_subclass'].str.lower()
@@ -2520,8 +2511,6 @@ def update_average_price():
     df['product_subclass'] = df['product_subclass'].replace('hairdressing for men', 'hairdressing for men and children')
     df['product_subclass'] = df['product_subclass'].replace('other meats', 'hairdressing for men and children')
     
-
-
     now = datetime.now()
     today = now.date()
 
@@ -2529,15 +2518,10 @@ def update_average_price():
     df['date_time_scraped'] = pd.to_datetime(df['date_time_scraped'])
     # Convert 'product_price' column to numeric, ignoring non-numeric values
 
-
     # Filter for today's products and update 'subclass_average' column
     today_products = df[df['date_time_scraped'].dt.date == today]
     df.loc[df['date_time_scraped'].dt.date == today, 'subclass_average'] = round(today_products.groupby('product_subclass')['product_price'].transform('mean'), 4)
 
-
 update_average_price()
 
 df.to_csv("BillionPricesProject_ProductList.csv", index=False)
-
-
-
