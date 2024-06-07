@@ -916,13 +916,15 @@ def CyMinistryEducation():
     #http://www.moec.gov.cy/idiotiki_ekpaidefsi/didaktra.html 
     
     try:
-        pdf_1 = tb.read_pdf('http://archeia.moec.gov.cy/mc/698/didaktra_idiotikon_mesi_ekpaidefsi.pdf', pages = '1', pandas_options={'header': None}, stream=True)
+        pdf_1_1 = tb.read_pdf('http://archeia.moec.gov.cy/mc/698/didaktra_idiotikon_mesi_ekpaidefsi.pdf', pages = '1', pandas_options={'header': None}, stream=True)
+        pdf_1_2 = tb.read_pdf('http://archeia.moec.gov.cy/mc/698/didaktra_idiotikon_mesi_ekpaidefsi.pdf', pages = '2', pandas_options={'header': None}, stream=True)
         pdf_2 = tb.read_pdf('http://archeia.moec.gov.cy/mc/698/didaktra_idiotikon_dimotikon_scholeion.pdf', pages = '1', pandas_options={'header': None}, stream=True)
         pdf_3 = tb.read_pdf('http://archeia.moec.gov.cy/mc/698/didaktra_idiotikon_nipiagogeion.pdf', pages = '4', pandas_options={'header': None}, stream=True)
 
-        df_secondary = pdf_1[0]
+        df_secondary_1 = pdf_1_1[0]
+        df_secondary_2 = pdf_1_2[0]
         df_primary = pdf_2[0]
-        df_nursery =pdf_3[0]
+        df_nursery = pdf_3[0]
         # print(df_nursery[2].astype('string'))
 
         #change the type of columns that contain the prices
@@ -930,23 +932,24 @@ def CyMinistryEducation():
         df_primary[3] = df_primary[3].astype('string')
 
         for i in range(2,7):
-            df_secondary[i]= df_secondary[i].astype('string')
+            df_secondary_1[i]= df_secondary_1[i].astype('string')
+            df_secondary_2[i]= df_secondary_2[i].astype('string')
             
             #Nicosia
-            value_1=(float(df_secondary[2][4].replace("€",'').replace(".","")))
-            value_2=(float(df_secondary[3][4].replace("€",'').replace(".","")))
-            value_3=(float(df_secondary[4][4].replace("€",'').replace(".","")))
-            value_4=(float(df_secondary[5][4].replace("€",'').replace(".","")))
-            value_5=(float(df_secondary[6][4].replace("€",'').replace(".","")))
-            value_6=(float(df_secondary[7][4].replace("€",'').replace(".","")))
+            value_1=(float(df_secondary_1[2][4].replace("€",'').replace(".","")))
+            value_2=(float(df_secondary_1[3][4].replace("€",'').replace(".","")))
+            value_3=(float(df_secondary_1[4][4].replace("€",'').replace(".","")))
+            value_4=(float(df_secondary_1[5][4].replace("€",'').replace(".","")))
+            value_5=(float(df_secondary_1[6][4].replace("€",'').replace(".","")))
+            value_6=(float(df_secondary_1[7][4].replace("€",'').replace(".","")))
 
             #Limassol
-            value_7=(float(df_secondary[2][15].replace("€",'').replace(".","")))
-            value_8=(float(df_secondary[3][15].replace("€",'').replace(".","")))
-            value_9=(float(df_secondary[4][15].replace("€",'').replace(".","")))
-            value_10=(float(df_secondary[5][15].replace("€",'').replace(".","")))
-            value_11=(float(df_secondary[6][15].replace("€",'').replace(".","")))
-            value_12=(float(df_secondary[7][15].replace("€",'').replace(".","")))
+            value_7=(float(df_secondary_2[2][15].replace("€",'').replace(".","")))
+            value_8=(float(df_secondary_2[3][15].replace("€",'').replace(".","")))
+            value_9=(float(df_secondary_2[4][15].replace("€",'').replace(".","")))
+            value_10=(float(df_secondary_2[5][15].replace("€",'').replace(".","")))
+            value_11=(float(df_secondary_2[6][15].replace("€",'').replace(".","")))
+            value_12=(float(df_secondary_2[7][15].replace("€",'').replace(".","")))
             
             avg_grammar_nic = ( value_1 + value_2 + value_3 + value_4 + value_5 + value_6 ) / 6
             
@@ -958,8 +961,8 @@ def CyMinistryEducation():
                         ("THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΔΗΜΟΤΙΚΩΝ ΣΧΟΛΕΙΩΝ 2023-2024",float(df_primary[3][26].strip('€').replace(".", "")),datetime.now(),'Primary education (ISCED-97 level 1)','Cyprus Ministry of Education, Sport and Youth',0),
                         ("THE GRAMMAR SCHOOL (Nicosia), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025, Α-ΣΤ ΤΑΞΗ",avg_grammar_nic,datetime.now(),'Secondary education','Cyprus Ministry of Education, Sport and Youth',0),
                         ("THE GRAMMAR SCHOOL (Limassol), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025, Α-ΣΤ ΤΑΞΗ",avg_grammar_lim,datetime.now(),'Secondary education','Cyprus Ministry of Education, Sport and Youth',0),
-                        ("THE GRAMMAR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025, Ζ ΤΑΞΗ",float(df_secondary[8][4]),datetime.now(),'Post-secondary non-tertiary education (ISCED 4)','Cyprus Ministry of Education, Sport and Youth',0),
-                        ("THE GRAMMAR SCHOOL (Limassol), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025, Ζ ΤΑΞΗ",float(df_secondary[8][15]),datetime.now(),'Post-secondary non-tertiary education (ISCED 4)','Cyprus Ministry of Education, Sport and Youth',0) ]
+                        ("THE GRAMMAR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025, Ζ ΤΑΞΗ",float(df_secondary_1[8][4]),datetime.now(),'Post-secondary non-tertiary education (ISCED 4)','Cyprus Ministry of Education, Sport and Youth',0),
+                        ("THE GRAMMAR SCHOOL (Limassol), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025, Ζ ΤΑΞΗ",float(df_secondary_2[8][15]),datetime.now(),'Post-secondary non-tertiary education (ISCED 4)','Cyprus Ministry of Education, Sport and Youth',0) ]
     
     except urllib.error.URLError:
         
