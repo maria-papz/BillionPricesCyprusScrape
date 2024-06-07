@@ -961,8 +961,8 @@ def CyMinistryEducation():
                         ("THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΔΗΜΟΤΙΚΩΝ ΣΧΟΛΕΙΩΝ 2023-2024",float(df_primary[3][26].strip('€').replace(".", "")),datetime.now(),'Primary education (ISCED-97 level 1)','Cyprus Ministry of Education, Sport and Youth',0),
                         ("THE GRAMMAR SCHOOL (Nicosia), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025, Α-ΣΤ ΤΑΞΗ",avg_grammar_nic,datetime.now(),'Secondary education','Cyprus Ministry of Education, Sport and Youth',0),
                         ("THE GRAMMAR SCHOOL (Limassol), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025, Α-ΣΤ ΤΑΞΗ",avg_grammar_lim,datetime.now(),'Secondary education','Cyprus Ministry of Education, Sport and Youth',0),
-                        ("THE GRAMMAR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025, Ζ ΤΑΞΗ",float(df_secondary_1[8][4]),datetime.now(),'Post-secondary non-tertiary education (ISCED 4)','Cyprus Ministry of Education, Sport and Youth',0),
-                        ("THE GRAMMAR SCHOOL (Limassol), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025, Ζ ΤΑΞΗ",float(df_secondary_2[8][15]),datetime.now(),'Post-secondary non-tertiary education (ISCED 4)','Cyprus Ministry of Education, Sport and Youth',0) ]
+                        ("THE GRAMMAR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025, Ζ ΤΑΞΗ",float(df_secondary_1[8][4].replace("€",'').replace(".","")),datetime.now(),'Post-secondary non-tertiary education (ISCED 4)','Cyprus Ministry of Education, Sport and Youth',0),
+                        ("THE GRAMMAR SCHOOL (Limassol), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2024-2025, Ζ ΤΑΞΗ",float(df_secondary_2[8][15].replace("€",'').replace(".","")),datetime.now(),'Post-secondary non-tertiary education (ISCED 4)','Cyprus Ministry of Education, Sport and Youth',0) ]
     
     except urllib.error.URLError:
         
