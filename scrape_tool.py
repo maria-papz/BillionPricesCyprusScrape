@@ -2502,9 +2502,9 @@ def euc():
                 list_euc.append(word)
         #the medicine and dental medicine the prices cannot be scrapped and are put here manually, same for online programs
         #the prices change only once a year
-        df.loc[len(df)]=["EUROPEAN UNIVERSITY CYPRUS, Bachelors Programmes Average Yearly Tuition for 2023-2024",(sum(list_euc)+21000+21900+(8940*5))/(len(list_euc)+7),datetime.now(),'Tertiary education','European University Cyprus',0]
+        df.loc[len(df)]=["EUROPEAN UNIVERSITY CYPRUS, Bachelors Programmes Average Yearly Tuition for 2024-2025",(sum(list_euc)+21000+21900+(9240*4))/(len(list_euc)+6),datetime.now(),'Tertiary education','European University Cyprus',0]
     except urllib.error.URLError:
-        df.loc[len(df)]=["EUROPEAN UNIVERSITY CYPRUS, Bachelors Programmes Average Yearly Tuition for 2023-2024",None,'Tertiary education','European University Cyprus',0]
+        df.loc[len(df)]=["EUROPEAN UNIVERSITY CYPRUS, Bachelors Programmes Average Yearly Tuition for 2024-2025",None,'Tertiary education','European University Cyprus',0]
 
 euc()
 
