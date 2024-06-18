@@ -932,7 +932,8 @@ def CyMinistryEducation():
         #df_primary[3] = df_primary[3].astype('string')
 
         grammar_school_primary_row = df_primary[df_primary[0].str.contains('THE GRAMMAR JUNIOR SCHOOL', na=False)]
-
+        print(grammar_school_primary_row.iloc[0, df_primary.columns.get_loc('Β΄ τάξη - Year 2')])
+        
         for i in range(2,7):
             df_secondary_1[i]= df_secondary_1[i].astype('string')
             df_secondary_2[i]= df_secondary_2[i].astype('string')
