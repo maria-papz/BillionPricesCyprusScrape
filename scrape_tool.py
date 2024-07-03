@@ -1953,6 +1953,8 @@ cera()
 
 #WATER BOARD
 def water_board():
+
+    """
     url = "https://www.wbn.org.cy/καταναλωτής/διατιμήσεις/#content-d7d0c04646186e03a770"
     retailer="Water Board of Nicosia"
     product_subclass="Water supply"
@@ -1964,6 +1966,9 @@ def water_board():
     tree = html.fromstring(response.content)
     price=tree.xpath("(//table[@id='ekit-table-container-9f0855a']/tbody/tr/td)[2]/div/text()")
     product_price=float((''.join(price)).replace(' ','').replace('€','').replace(',','.').strip())
+    """
+    
+    product_price = 53.99
     now = datetime.now()
     date_time_scraped = now 
     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
