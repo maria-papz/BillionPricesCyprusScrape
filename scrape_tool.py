@@ -1951,8 +1951,10 @@ def cera():
 
 cera()
 
-#WATER BOARD
-def water_board():
+#WATER BOARD OF NICOSIA
+
+def water_board_nicosia():
+    
     retailer="Water Board of Nicosia"
     product_subclass="Water supply"
     product_name='Water Board of Nicosia, Οικιακό Πάγιο Τέλος Νερού ανά διμηνία (Διατίμηση "Α" από 1 Σεπ 2017)'
@@ -1968,15 +1970,14 @@ def water_board():
     product_price=float((''.join(price)).replace(' ','').replace('€','').replace(',','.').strip())
     """
     
-    product_price = 53.99
-    now = datetime.now()
-    date_time_scraped = now 
-    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+    product_price = 11 
+    df.loc[len(df)] =[product_name,product_price,datetime.now(),product_subclass,retailer,0]
 
-water_board()
+water_board_nicosia()
 
 
-def sewage():
+def sewerage_board_nicosia():
+    
     url = "https://www.sbn.org.cy/el/apoxeteftika-teli"
 
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
@@ -2035,9 +2036,9 @@ def sewage():
         df.loc[len(df)] =['Sewerage Board of Nicosia, Ετήσιο Τέλος Αποχέτευσης 2022 (€ για κάθε €1000 εκτιμημένης αξίας)',product_price,date_time_scraped,product_subclass,retailer,0]
         df.loc[len(df)] =['Sewerage Board of Nicosia, Τέλος Χρήσης Αποχέτευσης (€ ανά κυβικό μέτρο καταναλισκόμενου νερού)',product_price,date_time_scraped,product_subclass,retailer,0]
 
-sewage()
+sewerage_board_nicosia()
 
-#WATER, SEWERAGE LARNACA AND LIMASSOL
+#WATER & SEWERAGE BOARDS OF LARNACA AND LIMASSOL
 def waterSewerageOtherCities():
 
     """
@@ -2176,7 +2177,12 @@ def waterSewerageOtherCities():
         df.loc[len(df)] =[name,None,datetime.now(),'Water Supply','LWB',0]
 """
 
+#---------------------------------------------------------------------------------------------------------------
 #Sewerage Board
+#---------------------------------------------------------------------------------------------------------------
+
+# new website for Limassol: https://eoalemesos.org.cy/
+
 name='Λεμεσος Phase 1 Sewage Costs '
 price = 0.35
 df.loc[len(df)] = [name,price,datetime.now(),'Sewage collection','SBLA',0]
@@ -2193,6 +2199,8 @@ name='Τέλη Χρήσης €/m3'
 price = 0.64
 df.loc[len(df)] = [name,price,datetime.now(),'Sewage collection','SBLA',0]
 
+# new website for Larnaca: https://eoal.org.cy/
+
 name='Λαρνακα Phase 1 Sewage Costs '
 price = 0.6
 df.loc[len(df)] =[name,price,datetime.now(),'Sewage collection','LSDB',0]
@@ -2205,7 +2213,10 @@ name='Λαρνακα Τέλη Αποχέτευσης Ομβρίων'
 price = 0.16
 df.loc[len(df)] =[name,price,datetime.now(),'Sewage collection','LSDB',0]
 
+#---------------------------------------------------------------------------------------------------------------
 #Water Board
+#---------------------------------------------------------------------------------------------------------------
+
 name = 'Λεμεσος Οικιακά τέλη ανά τετραμηνία (συντελεστής ΦΠΑ 5%)'
 price = 22
 df.loc[len(df)] = [name, price, datetime.now(), 'Water Supply', 'WBL', 0]
