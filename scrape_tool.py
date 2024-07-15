@@ -2037,10 +2037,11 @@ def sewage():
 
 sewage()
 
-#WATERSEWAGE LARNACA AND LIMASSOL
-def waterSewageOtherCities():
+#WATER, SEWERAGE LARNACA AND LIMASSOL
+def waterSewerageOtherCities():
 
-    url = "https://www.sbla.com.cy/Sewage-Charges"
+    """
+    url = "https://www.sbla.com.cy/Sewage-Charges"  
     response = requests.get(url)
 
     tree = html.fromstring(response.content)
@@ -2173,9 +2174,55 @@ def waterSewageOtherCities():
         df.loc[len(df)] =[name,price,datetime.now(),'Water Supply','LWB',0]
     else:
         df.loc[len(df)] =[name,None,datetime.now(),'Water Supply','LWB',0]
+"""
 
-waterSewageOtherCities()
+#Sewerage Board
+name='Λεμεσος Phase 1 Sewage Costs '
+price = 0.35
+df.loc[len(df)] = [name,price,datetime.now(),'Sewage collection','SBLA',0]
 
+name='Λεμεσος Phase 2 Sewage Costs '
+price = 0.35
+df.loc[len(df)] = [name,price,datetime.now(),'Sewage collection','SBLA',0]
+
+name='Λεμεσος Τέλη Αποχέτευσης Ομβρίων'
+price = 0.0086
+df.loc[len(df)] = [name,price,datetime.now(),'Sewage collection','SBLA',0]
+
+name='Τέλη Χρήσης €/m3'
+price = 0.64
+df.loc[len(df)] = [name,price,datetime.now(),'Sewage collection','SBLA',0]
+
+name='Λαρνακα Phase 1 Sewage Costs '
+price = 0.6
+df.loc[len(df)] =[name,price,datetime.now(),'Sewage collection','LSDB',0]
+
+name='Λαρνακα Phase 2 Sewage Costs '
+price = 0.6
+df.loc[len(df)] =[name,price,datetime.now(),'Sewage collection','LSDB',0]
+
+name='Λαρνακα Τέλη Αποχέτευσης Ομβρίων'
+price = 0.16
+df.loc[len(df)] =[name,price,datetime.now(),'Sewage collection','LSDB',0]
+
+#Water Board
+name = 'Λεμεσος Οικιακά τέλη ανά τετραμηνία (συντελεστής ΦΠΑ 5%)'
+price = 22
+df.loc[len(df)] = [name, price, datetime.now(), 'Water Supply', 'WBL', 0]
+
+name = 'Λεμεσος Εμποροβιομηχανικά  τέλη ανά τετραμηνία (συντελεστής ΦΠΑ 5%)'
+price = 130
+df.loc[len(df)] = [name, price, datetime.now(), 'Water Supply', 'WBL', 0]
+
+name = 'Λαρνακα Οικιακά τέλη (ανά τριμηνία) (συντελεστής ΦΠΑ 5%)'
+price = 15.75
+df.loc[len(df)] = [name, price, datetime.now(), 'Water Supply', 'LWB', 0]
+
+name = 'Λαρνακα Εμποροβιομηχανικά τέλη (ανά τριμηνία) (συντελεστής ΦΠΑ 5%)'
+price = 91.2
+df.loc[len(df)] = [name, price, datetime.now(), 'Water Supply', 'LWB', 0]
+
+waterSewerageOtherCities()
 
 def extract_float_price(price_str):
     # Remove any non-digit characters except for the dot
