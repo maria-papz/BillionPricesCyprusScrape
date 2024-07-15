@@ -2181,7 +2181,7 @@ def waterSewerageOtherCities():
 #Sewerage Board
 #---------------------------------------------------------------------------------------------------------------
 
-# new website for Limassol: https://eoalemesos.org.cy/
+# new website for Limassol: https://eoalemesos.org.cy/el/fees
 
 name='Λεμεσος Phase 1 Sewage Costs '
 price = 0.35
