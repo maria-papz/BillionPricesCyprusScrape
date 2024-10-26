@@ -534,7 +534,10 @@ cablenet()
 
 #EPIC
 def epic():
-    name='Internet and Telephony 10'
+    
+    name = 'Internet and Telephony 10'
+    price = float(24.99)
+    """
     url = "https://www.epic.com.cy/en/page/H1r10tnT/internet-telephony"
     response = requests.get(url)
     tree = html.fromstring(response.content)
@@ -545,7 +548,8 @@ def epic():
         df.loc[len(df)]=[name,price,datetime.now(),'Internet access provision services','epic',0]
     else:
         df.loc[len(df)]=[name,None,datetime.now(),'Internet access provision services','epic',0]
-
+    """
+    
     name='Internet and Telephony 20'
     url = "https://www.epic.com.cy/en/page/H1r10tnT/internet-telephony"
     response = requests.get(url)
