@@ -1170,8 +1170,9 @@ def Tobacco():
         except urllib.error.HTTPError as err:
                 prices_final_cigars.append('NaN')
     
-    urls = ['https://altervape.eu/collections/eliquids/products/manhattan','https://altervape.eu/collections/eliquids/products/cabochard-vanille-caramel-0mg-50ml',
-        'https://altervape.eu/collections/eliquids/products/manhattan-shake']
+    urls = ['https://altervape.eu/collections/eliquids/products/manhattan',
+            'https://altervape.eu/collections/eliquids/products/unflavored-50-50',
+            'https://altervape.eu/collections/eliquids/products/manhattan-shake']
     
     for url in urls:
         try:
