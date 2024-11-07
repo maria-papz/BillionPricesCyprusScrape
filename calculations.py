@@ -111,9 +111,9 @@ for i in range(len(thursdays)):
 calculations.drop(columns=['date'], inplace=True)
 
 #===============================================================================================================================================================
-# Add the CPI Inflation report results of CyStat
+# Add the CPI Inflation official report results of CyStat
 #===============================================================================================================================================================
-'''
+
 url = 'https://www.cystat.gov.cy/en/SubthemeStatistics?id=47'
 response = requests.get(url)
 links_list = []
@@ -133,7 +133,6 @@ calculations['month'] = calculations['month'].astype(str)
 
 for link in target_links:
     links_list.append(link['href'])
-
 
 for link in links_list:
     url_pdf = 'https://www.cystat.gov.cy/en' + link
@@ -159,4 +158,3 @@ for link in links_list:
 calculations.drop(columns=['month'], inplace=True)
 
 calculations.to_csv("Calculations.csv")
-'''
