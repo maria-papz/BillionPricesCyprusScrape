@@ -108,11 +108,12 @@ for i in range(len(thursdays)):
         else:
             calculations.loc[(calculations['date']==thursdays[i]),'monthly_inflation_lastthursday'] = None
         
-
-
 calculations.drop(columns=['date'], inplace=True)
 
-#add the cpi of cystat
+#===============================================================================================================================================================
+# Add the CPI Inflation report results of CyStat
+#===============================================================================================================================================================
+'''
 url = 'https://www.cystat.gov.cy/en/SubthemeStatistics?id=47'
 response = requests.get(url)
 links_list = []
@@ -123,11 +124,9 @@ target_links = soup.find_all('a', href=lambda href: href and '/PressRelease?id='
 def strip_numbers(input_string):
     return re.sub(r'\d+', '', input_string)
 
-
 #create the new columns/this step is only needed when one does calculations over again for all dates
 #calculations['CPI_general_cystat']= None
 #calculations['CPI_monthly_inflation_cystat'] = None
-
 
 calculations['month'] = calculations['datetime.calculated'].dt.strftime('%B')
 calculations['month'] = calculations['month'].astype(str)
@@ -157,8 +156,7 @@ for link in links_list:
             calculations.loc[calculations['month'].str.contains(month),'CPI_general_cystat'] = float(cpi_general_cystat.replace(',','.'))
             calculations.loc[calculations['month'].str.contains(month),'CPI_monthly_inflation_cystat'] = float(cpi_monthly_cystat.replace(',','.'))
 
-
 calculations.drop(columns=['month'], inplace=True)
 
 calculations.to_csv("Calculations.csv")
-
+'''
