@@ -21,14 +21,14 @@ jobs:
         uses: actions/checkout@v3 # checkout the repository content to github runner.
         with:
           fetch-depth: 0
-      - name: setup python
+      - name: Setup python
         uses: actions/setup-python@v4
         with:
           python-version: 3.9 #install the python needed
       - name: Upgrade pip
         run: pip install --upgrade pip    
+    # Install the required Python dependencies
       - name: Install dependencies
-      # Install the required Python dependencies
         run: |
            if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi #if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: execute py script 'scrape_tool'
