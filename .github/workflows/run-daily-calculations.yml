@@ -10,7 +10,7 @@ run-name: Add daily results to Calculations.csv
 # Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
   schedule:
-    - cron: "01 14 * * *"  #UTC time
+    - cron: "35 08 * * *"  #UTC time
 
 jobs:
   getdataandrefreshmap:
