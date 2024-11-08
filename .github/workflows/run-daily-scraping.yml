@@ -1,6 +1,6 @@
 # Whenever pull request is made targeting branch initialise and initialize, csv is reset
 name: run-daily-scraping
-run-name: Add daily scraping to current CSV
+run-name: Add daily scraping to current CSV ('BillionPricesProject_ProductList.csv')
 on:
   schedule:
     - cron: "01 14 * * *"    #UTC time
