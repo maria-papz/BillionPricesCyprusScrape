@@ -93,14 +93,12 @@ The calculation of mean prices and CPI measures is performed by the calculations
 
 - Wolt (Costa Coffee, Piatsa Gourounaki Nicosia, Pixida Nicosia, Kofini Tavern Limassol, Vlachos Taverna Larnaca, Zakos Beach Restaurant Larnaca, Paphos Tavernaki, Ocean Basket Paphos, McDonald’s)	https://wolt.com/en/cyp 
 
- 
-
 ## GitHub Actions
 
 The project utilizes GitHub Actions to automate the scraping process. The repository contains the following YAML files within the ./github/workflows directory:
 
-### run-daily-scrape.yml: 
-This file schedules the execution of scrape_tool.py and calculations.py scripts on a daily basis.
+### run-daily-scraping-and-calculations.yml: 
+This file schedules the execution of the scrape_tool.py and calculations.py scripts on a daily basis.
 ### initialise-clear-csv.yml: 
 Whenever a pull request is made targeting the initialise or initialize branch, this file runs initial.py to reset the BillionPricesProject_ProductList.csv file.
 ### initialise_clear_calculations.yml: 
