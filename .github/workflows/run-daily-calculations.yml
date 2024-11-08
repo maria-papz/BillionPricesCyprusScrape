@@ -1,26 +1,37 @@
-# Whenever pull request is made targeting branch initialise and initialize, csv is reset
+# Workflow for the calculations 
+
+# Note: Whenever pull request is made targeting branch initialise and initialize, csv is reset
+
+# Workflow's description
 name: run-daily-calculations
-run-name: Adding daily scrape to current CSV
+
+run-name: Add daily results to Calculations.csv
+
+# Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
   schedule:
-    - cron: "01 14 * * *"    #UTC time
+    - cron: "01 14 * * *"  #UTC time
 
 jobs:
   getdataandrefreshmap:
     runs-on: ubuntu-latest
     steps:
+    # It checks out the latest content of your repository
       - name: checkout repo content
         uses: actions/checkout@v3 # checkout the repository content to github runner.
         with:
           fetch-depth: 0
-      - name: setup python
+      - name: Setup python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.8 #install the python needed
+          python-version: 3.9 #install the python needed
+      - name: Upgrade pip
+        run: pip install --upgrade pip    
+    # Install the required Python dependencies
       - name: Install dependencies
         run: |
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-        - name: execute py script calculations
+           if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi #if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: execute py script 'calculations'
         run: |
           python calculations.py
           git status
