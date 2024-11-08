@@ -3,19 +3,20 @@
 # Note: Whenever pull request is made targeting branch initialise and initialize, csv is reset
 
 # Workflow's description
-name: run-daily-scraping
+name: run-daily-scraping-and-calculations
 
-run-name: Add daily scraped data to BillionPricesProject_ProductList.csv
+run-name: Add daily scraped data and calculations to current CSV files
 
 # Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
   schedule:
-    - cron: "04 09 * * *"  #UTC time
+    - cron: "06 09 * * *"  #UTC time
 
 jobs:
   getdataandrefreshmap:
     runs-on: ubuntu-latest
     steps:
+    
     # It checks out the latest content of your repository
       - name: checkout repo content
         uses: actions/checkout@v3 # checkout the repository content to github runner.
@@ -25,10 +26,12 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: 3.8 #install the python needed
+    
     # Install the required Python dependencies
       - name: Install dependencies
         run: |
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      
       - name: execute py script 'scrape_tool'
         run: |
           python scrape_tool.py
@@ -38,6 +41,7 @@ jobs:
           git add .
           git commit -m "crongenerated"
           git push origin HEAD:main
+      
       - name: execute py script 'calculations'
         run: |
           python calculations.py
