@@ -23,7 +23,8 @@ products['product_subclass'] = products['product_subclass'].replace('hairdressin
 products['date_time_scraped'] = pd.to_datetime(products['date_time_scraped'])
 
 # Filter products for today's date
-today = date.today()
+#today = date.today()
+today = '2024-11-07'
 products_today = products[products['date_time_scraped'].dt.date == today]
 
 # Assuming 'datetime.calculated' column is a string in the format 'YYYY-MM-DD HH:MM:SS'
