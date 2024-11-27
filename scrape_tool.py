@@ -1990,7 +1990,8 @@ water_board_nicosia()
 
 
 def sewerage_board_nicosia():
-    
+
+    '''
     url = "https://www.sbn.org.cy/el/apoxeteftika-teli"
 
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
@@ -2000,7 +2001,6 @@ def sewerage_board_nicosia():
     retailer="Sewerage Board of Nicosia"
     product_subclass="Sewage Collection"
     
-
     product_name="Sewerage Board of Nicosia, Ετήσιο Τέλος Αποχέτευσης 2022 (€ για κάθε €1000 εκτιμημένης αξίας)"
     now = datetime.now()
     date_time_scraped = now 
@@ -2048,6 +2048,17 @@ def sewerage_board_nicosia():
         print()
         df.loc[len(df)] =['Sewerage Board of Nicosia, Ετήσιο Τέλος Αποχέτευσης 2022 (€ για κάθε €1000 εκτιμημένης αξίας)',product_price,date_time_scraped,product_subclass,retailer,0]
         df.loc[len(df)] =['Sewerage Board of Nicosia, Τέλος Χρήσης Αποχέτευσης (€ ανά κυβικό μέτρο καταναλισκόμενου νερού)',product_price,date_time_scraped,product_subclass,retailer,0]
+    '''
+
+# new website for Nicosia: https://ndlgo.org.cy/sewage/sewer-fees/
+
+name='Sewerage Board of Nicosia, Ετήσιο Τέλος Αποχέτευσης 2022 (€ για κάθε €1000 εκτιμημένης αξίας)'
+price = 0.63
+df.loc[len(df)] = [name,price,datetime.now(),'Sewage collection','Sewerage Board of Nicosia',0]
+
+name='Sewerage Board of Nicosia, Τέλος Χρήσης Αποχέτευσης (€ ανά κυβικό μέτρο καταναλισκόμενου νερού)'
+price = 0.55
+df.loc[len(df)] = [name,price,datetime.now(),'Sewage collection','Sewerage Board of Nicosia',0]
 
 sewerage_board_nicosia()
 
