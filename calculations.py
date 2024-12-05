@@ -114,7 +114,7 @@ calculations.drop(columns=['date'], inplace=True)
 #===============================================================================================================================================================
 # Add the CPI Inflation official report results of CyStat
 #===============================================================================================================================================================
-'''
+
 url = 'https://www.cystat.gov.cy/en/SubthemeStatistics?id=47'
 response = requests.get(url)
 links_list = []
@@ -157,6 +157,6 @@ for link in links_list:
             calculations.loc[calculations['month'].str.contains(month),'CPI_monthly_inflation_cystat'] = float(cpi_monthly_cystat.replace(',','.'))
 
 calculations.drop(columns=['month'], inplace=True)
-'''
+
 
 calculations.to_csv("Calculations.csv")
