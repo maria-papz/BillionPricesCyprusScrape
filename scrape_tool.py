@@ -38,6 +38,13 @@ def mazda():
     prices = re.findall(r"€ (\d+\,\d{3}).*?", page.extract_text())
     prices[0] = prices[0].replace(',', '')
     product_price=int(prices[0])
+    now = datetime.now()
+    date_time_scraped = now
+    product_name = "New Mazda 2"
+    product_subclass = "New motor cars"
+    retailer = "Mazda"
+    df.loc[len(df)] = [product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+    pdf_file.close()
     '''
     product_price = 22900
     now = datetime.now()
@@ -46,7 +53,6 @@ def mazda():
     product_subclass = "New motor cars"
     retailer = "Mazda"
     df.loc[len(df)] = [product_name,product_price,date_time_scraped,product_subclass,retailer,0]
-    pdf_file.close()
 
 mazda()
 
