@@ -25,6 +25,63 @@ df = pd.read_csv("BillionPricesProject_ProductList.csv")
 # Accepts name of bread and page the bread is found
 # Returns scraped data
 
+#MAZDA
+def mazda():
+    '''
+    url = "https://www.mazda.com.cy/Portals/7/adam/Contents/dDx4iz_W80eqne0jNZvsdA/Link/Mazda2_DEC22.pdf"  # Replace with the URL of the PDF file
+    response = requests.get(url)
+    with open("file.pdf", "wb") as f:
+        f.write(response.content)
+    pdf_file = open("file.pdf", "rb")
+    pdf_reader = PyPDF2.PdfReader(pdf_file)
+    page=pdf_reader.pages[0]
+    prices = re.findall(r"€ (\d+\,\d{3}).*?", page.extract_text())
+    prices[0] = prices[0].replace(',', '')
+    product_price=int(prices[0])
+    '''
+    product_price = 22900
+    now = datetime.now()
+    date_time_scraped = now
+    product_name = "New Mazda 2"
+    product_subclass = "New motor cars"
+    retailer = "Mazda"
+    df.loc[len(df)] = [product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+    pdf_file.close()
+
+mazda()
+
+#NISSAN
+def nissan():
+    
+    # Define the URL
+    url = "https://www.nissan.com.cy/vehicles/new-vehicles/juke-2022/prices-specifications.html#-"
+
+    # Define the headers for the HTTP request
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+
+    response = requests.get(url, headers=headers)
+    tree = html.fromstring(response.content)
+    # Use XPath to extract the price value
+    price_tree = tree.xpath('//iframe[@id="individualVehiclePriceJSON"]/text()')
+    if price_tree:
+        price_json = price_tree[0]
+
+        # Extract the price of 23500 from the JSON string
+        import json
+        price_data = json.loads(price_json)
+        product_price = price_data['juke_2019']['default']['grades']['LVL001']['gradePrice']
+    else:
+        product_price=None
+    now = datetime.now()
+    date_time_scraped = now
+    product_name="Nissan Juke"
+    product_subclass="New motor cars"
+    retailer="Nissan"
+    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+
+nissan()
+
 def SupermarketCyScrape():
     try:
         scy_data = pd.read_csv("SupermarketCy.csv")
@@ -1423,6 +1480,7 @@ moto_race()
 
 #BWELL PHARMACY
 def bwell():
+    
     # Bwell Pharmacy (https://bwell.com.cy/)
     urls = ["https://bwell.com.cy/shop/health/cough-sore-throat/physiomer-hypertonic-eucalyptus-135-ml/",
             "https://bwell.com.cy/shop/mother-child/pregnancy-supplements/vitabiotics-pregnacare-original-30-tabs/",
@@ -1467,57 +1525,6 @@ def bwell():
         df.loc[len(df)] = (all_items_bwell[i][0],all_items_bwell[i][1],all_items_bwell[i][2],all_items_bwell[i][3],all_items_bwell[i][4],all_items_bwell[i][5])
 
 bwell()
-
-#MAZDA
-def mazda():
-    url = "https://www.mazda.com.cy/Portals/7/adam/Contents/dDx4iz_W80eqne0jNZvsdA/Link/Mazda2_DEC22.pdf"  # Replace with the URL of the PDF file
-    response = requests.get(url)
-    with open("file.pdf", "wb") as f:
-        f.write(response.content)
-    pdf_file = open("file.pdf", "rb")
-    pdf_reader = PyPDF2.PdfReader(pdf_file)
-    page=pdf_reader.pages[0]
-    prices = re.findall(r"€ (\d+\,\d{3}).*?", page.extract_text())
-    prices[0] = prices[0].replace(',', '')
-    product_price=int(prices[0])
-    now = datetime.now()
-    date_time_scraped = now
-    product_name="New Mazda 2"
-    product_subclass="New motor cars"
-    retailer="Mazda"
-    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
-    pdf_file.close()
-mazda()
-
-#NISSAN
-def nissan():
-        # Define the URL for the Booking.com page for hotel X
-    url = "https://www.nissan.com.cy/vehicles/new-vehicles/juke-2022/prices-specifications.html#-"
-
-    # Define the headers for the HTTP request
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
-
-    response = requests.get(url, headers=headers)
-    tree = html.fromstring(response.content)
-    # Use XPath to extract the price value
-    price_tree = tree.xpath('//iframe[@id="individualVehiclePriceJSON"]/text()')
-    if price_tree:
-        price_json = price_tree[0]
-
-        # Extract the price of 23500 from the JSON string
-        import json
-        price_data = json.loads(price_json)
-        product_price = price_data['juke_2019']['default']['grades']['LVL001']['gradePrice']
-    else:
-        product_price=None
-    now = datetime.now()
-    date_time_scraped = now
-    product_name="Nissan Juke"
-    product_subclass="New motor cars"
-    retailer="Nissan"
-    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
-nissan()
 
 # #WOLT
 # def Wolt():
