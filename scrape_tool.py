@@ -2587,6 +2587,9 @@ def Booking():
 
 #EUROPEAN UNIVERSITY
 def euc():
+    # *Note*: If the website doesn't work, then activate/uncomment the code line below and disactivate/comment all the remaining lines:
+    #df.loc[len(df)]=["EUROPEAN UNIVERSITY CYPRUS, Bachelors Programmes Average Yearly Tuition for 2024-2025",12703.75,datetime.now(),'Tertiary education','European University Cyprus',0]
+    
     try:
         euc = tb.read_pdf('https://syllabus.euc.ac.cy/tuitions/euc-tuition-fees-c.pdf', pages = '2',pandas_options={'header': None}, stream=True)
 
