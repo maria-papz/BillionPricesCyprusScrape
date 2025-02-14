@@ -1946,9 +1946,9 @@ def PizzaHut():
     product_name="Pizza Hut Classic Large"
     product_price=prices[8]
     df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
-    product_name="Pizza Hut Special Large"
-    product_price=prices[16]
-    df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
+    #product_name="Pizza Hut Special Large"
+    #product_price=prices[16]
+    #df.loc[len(df)] =[product_name,product_price,date_time_scraped,product_subclass,retailer,0]
     pdf_file.close()
 
 PizzaHut()
