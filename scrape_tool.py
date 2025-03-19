@@ -2591,21 +2591,21 @@ def euc():
     #df.loc[len(df)]=["EUROPEAN UNIVERSITY CYPRUS, Bachelors Programmes Average Yearly Tuition for 2024-2025",12703.75,datetime.now(),'Tertiary education','European University Cyprus',0]
     
     try:
-        euc = tb.read_pdf('https://syllabus.euc.ac.cy/tuitions/euc-tuition-fees-c.pdf', pages = '2',pandas_options={'header': None}, stream=True)
+        euc = tb.read_pdf('https://syllabus.euc.ac.cy/tuitions/euc-tuition-fees-c.pdf', pages = '2', pandas_options = {'header': None}, stream = True)
 
         list_euc = []
-
-        for i in range(0,4):
+        imax = 4 #be careful to set this value correctly when the new year tuition fees are published 
+        for i in range(0,imax):
             euc[i][1] = euc[i][1].astype('string')
             for word in euc[i][1].to_list():
                 word = word.replace(',','')
                 word = int(word)
                 list_euc.append(word)
-        #the medicine and dental medicine the prices cannot be scrapped and are put here manually, same for online programs
-        #the prices change only once a year
-        df.loc[len(df)]=["EUROPEAN UNIVERSITY CYPRUS, Bachelors Programmes Average Yearly Tuition for 2024-2025",(sum(list_euc)+21000+21900+(9240*4))/(len(list_euc)+6),datetime.now(),'Tertiary education','European University Cyprus',0]
+        #the fees for medicine, dental, and veterinary medicine cannot be scrapped and are put here manually, same for online programs
+        #the fees change only once a year
+        df.loc[len(df)]=["EUROPEAN UNIVERSITY CYPRUS, Bachelors Programmes Average Yearly Tuition for 2025-2026",(sum(list_euc)+(21000*3)+(9240*4))/(len(list_euc)+7),datetime.now(),'Tertiary education','European University Cyprus',0]
     except urllib.error.URLError:
-        df.loc[len(df)]=["EUROPEAN UNIVERSITY CYPRUS, Bachelors Programmes Average Yearly Tuition for 2024-2025",None,'Tertiary education','European University Cyprus',0]
+        df.loc[len(df)]=["EUROPEAN UNIVERSITY CYPRUS, Bachelors Programmes Average Yearly Tuition for 2025-2026",None,'Tertiary education','European University Cyprus',0]
 
 euc()
 
