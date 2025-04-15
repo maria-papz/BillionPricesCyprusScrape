@@ -104,33 +104,33 @@ def Tobacco():
                 prices_final_cigars.append(price_final)
             else:
                 prices_final_cigars.append(None)
-    '''
-    urls = ['https://altervape.eu/collections/eliquids/products/manhattan',
-            'https://altervape.eu/collections/eliquids/products/unflavored-50-50',
-            'https://altervape.eu/collections/eliquids/products/manhattan-shake']
     
-    for url in urls:
-        try:
-            #used for the request, urlopen functions
-            user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
-            headers = {'User-Agent':user_agent} 
-
-            #initial price list and the value of the final price scrapped
-            price_ini=[]
-                    
-            #open and read the different urls
-            request = urllib.request.Request(url,headers=headers) 
-            response = urllib.request.urlopen(request)
-            data = response.read().decode("utf-8")
-
-            #get the strings for the prices of the products using regular expressions
-            pattern = '<meta property="product:price:amount" content="\d+.\d+">'
-            price_ini = re.findall(pattern,data)
-            if price_ini:
-                prices_final_cigars.append(float(str(price_ini[0]).strip('<meta property="product:price:amount" content=" " />').replace(',', '.')))
-            else:
-                prices_final_cigars.append(None)
-        '''
+    #urls = ['https://altervape.eu/collections/eliquids/products/manhattan',
+    #        'https://altervape.eu/collections/eliquids/products/unflavored-50-50',
+    #        'https://altervape.eu/collections/eliquids/products/manhattan-shake']
+    #
+    #for url in urls:
+    #    try:
+    #        #used for the request, urlopen functions
+    #        user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
+    #        headers = {'User-Agent':user_agent} 
+    #
+    #        #initial price list and the value of the final price scrapped
+    #        price_ini=[]
+    #                
+    #        #open and read the different urls
+    #        request = urllib.request.Request(url,headers=headers) 
+    #        response = urllib.request.urlopen(request)
+    #        data = response.read().decode("utf-8")
+    #
+    #        #get the strings for the prices of the products using regular expressions
+    #        pattern = '<meta property="product:price:amount" content="\d+.\d+">'
+    #        price_ini = re.findall(pattern,data)
+    #        if price_ini:
+    #            prices_final_cigars.append(float(str(price_ini[0]).strip('<meta property="product:price:amount" content=" " />').replace(',', '.')))
+    #        else:
+    #            prices_final_cigars.append(None)
+        
         except urllib.error.HTTPError as err:
                 prices_final_cigars.append('NaN')
        
