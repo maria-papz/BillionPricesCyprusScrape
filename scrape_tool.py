@@ -25,6 +25,137 @@ df = pd.read_csv("BillionPricesProject_ProductList.csv")
 # Accepts name of bread and page the bread is found
 # Returns scraped data
 
+def Tobacco():
+    prices_final_cigars=[]
+
+    url = "https://www.thecygarshop.com/product-page/machetero-petit-corona" #"https://www.thecygarshop.com/product-page/machetero-panatela"
+    page = urlopen(url)
+    html = page.read().decode("utf-8")
+    bs = BeautifulSoup(html, "html.parser")
+        
+    scripts = bs.find_all('span',{'data-hook':'formatted-primary-price'},string=True)
+
+    if scripts:
+        price_ini = re.findall(r"\d.\d\d",str(scripts))
+        #get only the first element
+        price_final = float(str(price_ini[0]).replace(',','.'))
+
+        #add the price in the list    
+        prices_final_cigars.append(price_final)
+    else:
+        prices_final_cigars.append(None)
+    
+    url = "https://www.numbeo.com/cost-of-living/country_price_rankings?itemId=17&displayCurrency=EUR"
+    page = urlopen(url)
+    html = page.read().decode("utf-8")
+    bs = BeautifulSoup(html, "html.parser")
+        
+    scripts = bs.find_all('script',string=True)
+    price_ini = re.findall(r"\['Cyprus', \d.+\]",str(scripts))
+    #get only the first element
+    if price_ini:
+        price_final = float(str(price_ini[0]).strip("['Cyprus', ]"))
+
+        #add the price in the list    
+        prices_final_cigars.append(price_final)
+    else:
+        prices_final_cigars.append(None)
+        
+    url = "https://www.ewsale.com/product-page/aspire-puxos-kit-%CE%B7%CE%BB%CE%B5%CE%BA%CF%84%CF%81%CE%BF%CE%BD%CE%B9%CE%BA%CE%AC-%CF%84%CF%83%CE%B9%CE%B3%CE%AC%CF%81%CE%B1-%CE%BC%CF%80%CE%B1%CF%84%CE%B1%CF%81%CE%AF%CE%B1-21700-200-ml-%CF%85%CE%B3%CF%81%CE%AC-%CE%AC%CF%84%CE%BC%CE%B9"
+    page = urlopen(url)
+    html = page.read().decode("utf-8")
+    bs = BeautifulSoup(html, "html.parser")
+        
+    scripts = bs.find_all('span',{'data-hook':'formatted-primary-price'},string=True)
+    if scripts:
+        price_ini = re.findall(r"\d\d.\d\d",str(scripts))
+        #get only the first element
+        price_final = float(str(price_ini[0]).replace(',','.'))
+
+        #add the price in the list    
+        prices_final_cigars.append(price_final)
+    else:
+        #add the price in the list    
+        prices_final_cigars.append(None)
+
+    user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
+    headers = {'User-Agent':user_agent} 
+    urls = ['https://fetch.com.cy/shop/stores/Nicosia/store/222/The%20Royal%20Cigars%20%7C%20Strovolos/item/496756/Rocky%20Patel%20Sixty%20Toro',
+            'https://fetch.com.cy/shop/stores/Nicosia/store/222/The%20Royal%20Cigars%20%7C%20Strovolos/item/496759/Rocky%20Patel%20TUBO%20SAMPLER%206%20cig.',
+            'https://fetch.com.cy/shop/stores/Nicosia/store/222/The%20Royal%20Cigars%20%7C%20Strovolos/item/511874/Perdomo%2010th%20Anniversary%20MADURO%20Super%20Toro',
+            'https://fetch.com.cy/shop/stores/Nicosia/store/222/The%20Royal%20Cigars%20%7C%20Strovolos/item/280001/CARRILLO%20INTERLUDE%20ROTHCHILD%20JR%20MADURO%20NATURAL']
+
+    for url in urls:
+        try:
+            page = urlopen(url)
+            html = page.read().decode("utf-8")
+            bs = BeautifulSoup(html, "html.parser")
+                    
+            scripts = bs.find_all('div',{'class':"itemDetailsPrice"},string=True)
+            if scripts: 
+                #get the strings for the prices of the products using regular expressions
+                pattern = '\d+.\d+'
+                price_ini = re.findall(pattern,str(scripts[0]))
+                
+                #get only the first element
+                price_final = float(price_ini[1])
+
+                #add the price in the list    
+                prices_final_cigars.append(price_final)
+            else:
+                prices_final_cigars.append(None)
+    '''
+    urls = ['https://altervape.eu/collections/eliquids/products/manhattan',
+            'https://altervape.eu/collections/eliquids/products/unflavored-50-50',
+            'https://altervape.eu/collections/eliquids/products/manhattan-shake']
+    
+    for url in urls:
+        try:
+            #used for the request, urlopen functions
+            user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
+            headers = {'User-Agent':user_agent} 
+
+            #initial price list and the value of the final price scrapped
+            price_ini=[]
+                    
+            #open and read the different urls
+            request = urllib.request.Request(url,headers=headers) 
+            response = urllib.request.urlopen(request)
+            data = response.read().decode("utf-8")
+
+            #get the strings for the prices of the products using regular expressions
+            pattern = '<meta property="product:price:amount" content="\d+.\d+">'
+            price_ini = re.findall(pattern,data)
+            if price_ini:
+                prices_final_cigars.append(float(str(price_ini[0]).strip('<meta property="product:price:amount" content=" " />').replace(',', '.')))
+            else:
+                prices_final_cigars.append(None)
+        '''
+        except urllib.error.HTTPError as err:
+                prices_final_cigars.append('NaN')
+       
+        #columns urls,products,labels into lists
+        products = ['Machetero Panatela','Marlboro 20 Pack','Smok S-priv Kit E-Τσιγάρα + 2 μπαταρίες  + 200 ml Υγρά  άτμισης','Rocky Patel Sixty Toro',
+                    'Rocky Patel Tubo Sampler 6 Cig.','Perdomo 10Th Anniversary Maduro Super Toro','Carrillo Interlude Rothchild Jr. Maduro Natural'
+                    #,'E-liquid Manhattan','E-liquid Cabochard - Vanille Caramel 0mg 50ml','E-liquid Manhattan Shake'
+                   ]
+        labels = ['Cigars','Cigarettes','Other Tobaco Products','Cigars','Cigars','Cigars','Cigars'
+                  #,'Other Tobaco Products','Other Tobaco Products','Other Tobaco Products'
+                 ]
+        retailers = ['The CYgar Shop','NUMBEO','E-WHOLESALE','The Royal Cigars Strovolos','The Royal Cigars Strovolos','The Royal Cigars Strovolos',
+                    'The Royal Cigars Strovolos'
+                     #,'Alter Vape','Alter Vape','Alter Vape'
+                    ]
+    #put the rows in a list
+    all_items_cigars = []
+    for product,price,label,retailer in zip(products,prices_final_cigars,labels,retailers):
+        all_items_cigars.append([product,price,datetime.now(),label,retailer,0])
+
+    #assign the values to each column
+    for i in range(len(all_items_cigars)):
+        df.loc[len(df)] = (all_items_cigars[i][0],all_items_cigars[i][1],all_items_cigars[i][2],all_items_cigars[i][3],all_items_cigars[i][4],all_items_cigars[i][5])
+Tobacco()
+
 #MAZDA
 def mazda():
     '''
@@ -1148,136 +1279,6 @@ results_fuelDaddy(urls_fueldaddy)
 #        df.loc[len(df)] = ("Πετρέλαιο Θέρμανσης Μέση Τιμή Παγκύπρια",price_ini[12],datetime.now(),'Liquid Fuels','Global Petrol Prices',0)
 
 #Fuel()
-
-def Tobacco():
-    
-    prices_final_cigars=[]
-
-    url = "https://www.thecygarshop.com/product-page/machetero-petit-corona" #"https://www.thecygarshop.com/product-page/machetero-panatela"
-    page = urlopen(url)
-    html = page.read().decode("utf-8")
-    bs = BeautifulSoup(html, "html.parser")
-        
-    scripts = bs.find_all('span',{'data-hook':'formatted-primary-price'},string=True)
-
-    if scripts:
-        price_ini = re.findall(r"\d.\d\d",str(scripts))
-        #get only the first element
-        price_final = float(str(price_ini[0]).replace(',','.'))
-
-        #add the price in the list    
-        prices_final_cigars.append(price_final)
-    else:
-        prices_final_cigars.append(None)
-    
-    url = "https://www.numbeo.com/cost-of-living/country_price_rankings?itemId=17&displayCurrency=EUR"
-    page = urlopen(url)
-    html = page.read().decode("utf-8")
-    bs = BeautifulSoup(html, "html.parser")
-        
-    scripts = bs.find_all('script',string=True)
-    price_ini = re.findall(r"\['Cyprus', \d.+\]",str(scripts))
-    #get only the first element
-    if price_ini:
-        price_final = float(str(price_ini[0]).strip("['Cyprus', ]"))
-
-        #add the price in the list    
-        prices_final_cigars.append(price_final)
-    else:
-        prices_final_cigars.append(None)
-        
-    url = "https://www.ewsale.com/product-page/aspire-puxos-kit-%CE%B7%CE%BB%CE%B5%CE%BA%CF%84%CF%81%CE%BF%CE%BD%CE%B9%CE%BA%CE%AC-%CF%84%CF%83%CE%B9%CE%B3%CE%AC%CF%81%CE%B1-%CE%BC%CF%80%CE%B1%CF%84%CE%B1%CF%81%CE%AF%CE%B1-21700-200-ml-%CF%85%CE%B3%CF%81%CE%AC-%CE%AC%CF%84%CE%BC%CE%B9"
-    page = urlopen(url)
-    html = page.read().decode("utf-8")
-    bs = BeautifulSoup(html, "html.parser")
-        
-    scripts = bs.find_all('span',{'data-hook':'formatted-primary-price'},string=True)
-    if scripts:
-        price_ini = re.findall(r"\d\d.\d\d",str(scripts))
-        #get only the first element
-        price_final = float(str(price_ini[0]).replace(',','.'))
-
-        #add the price in the list    
-        prices_final_cigars.append(price_final)
-    else:
-        #add the price in the list    
-        prices_final_cigars.append(None)
-
-    user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
-    headers={'User-Agent':user_agent} 
-    urls = ['https://fetch.com.cy/shop/stores/Nicosia/store/222/The%20Royal%20Cigars%20%7C%20Strovolos/item/496756/Rocky%20Patel%20Sixty%20Toro',
-        'https://fetch.com.cy/shop/stores/Nicosia/store/222/The%20Royal%20Cigars%20%7C%20Strovolos/item/496759/Rocky%20Patel%20TUBO%20SAMPLER%206%20cig.',
-        'https://fetch.com.cy/shop/stores/Nicosia/store/222/The%20Royal%20Cigars%20%7C%20Strovolos/item/511874/Perdomo%2010th%20Anniversary%20MADURO%20Super%20Toro',
-        'https://fetch.com.cy/shop/stores/Nicosia/store/222/The%20Royal%20Cigars%20%7C%20Strovolos/item/280001/CARRILLO%20INTERLUDE%20ROTHCHILD%20JR%20MADURO%20NATURAL']
-
-    for url in urls:
-        try:
-            page = urlopen(url)
-            html = page.read().decode("utf-8")
-            bs = BeautifulSoup(html, "html.parser")
-                    
-            scripts = bs.find_all('div',{'class':"itemDetailsPrice"},string=True)
-            if scripts: 
-                #get the strings for the prices of the products using regular expressions
-                pattern = '\d+.\d+'
-                price_ini = re.findall(pattern,str(scripts[0]))
-                
-                #get only the first element
-                price_final = float(price_ini[1])
-
-                #add the price in the list    
-                prices_final_cigars.append(price_final)
-            else:
-                prices_final_cigars.append(None)
-            
-        except urllib.error.HTTPError as err:
-                prices_final_cigars.append('NaN')
-    
-    urls = ['https://altervape.eu/collections/eliquids/products/manhattan',
-            'https://altervape.eu/collections/eliquids/products/unflavored-50-50',
-            'https://altervape.eu/collections/eliquids/products/manhattan-shake']
-    
-    for url in urls:
-        try:
-            #used for the request, urlopen functions
-            user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
-            headers={'User-Agent':user_agent} 
-
-            #initial price list and the value of the final price scrapped
-            price_ini=[]
-                    
-            #open and read the different urls
-            request=urllib.request.Request(url,headers=headers) 
-            response = urllib.request.urlopen(request)
-            data = response.read().decode("utf-8")
-
-            #get the strings for the prices of the products using regular expressions
-            pattern = '<meta property="product:price:amount" content="\d+.\d+">'
-            price_ini = re.findall(pattern,data)
-            if price_ini:
-                prices_final_cigars.append(float(str(price_ini[0]).strip('<meta property="product:price:amount" content=" " />').replace(',', '.')))
-            else:
-                prices_final_cigars.append(None)
-
-        except urllib.error.HTTPError as err:
-                prices_final_cigars.append('NaN')
-
-            #columns urls,products,labels into lists
-        products = ['Machetero Panatela','Marlboro 20 Pack','Smok S-priv Kit E-Τσιγάρα + 2 μπαταρίες  + 200 ml Υγρά  άτμισης','Rocky Patel Sixty Toro',
-                    'Rocky Patel Tubo Sampler 6 Cig.','Perdomo 10Th Anniversary Maduro Super Toro','Carrillo Interlude Rothchild Jr. Maduro Natural',
-                    'E-liquid Manhattan','E-liquid Cabochard - Vanille Caramel 0mg 50ml','E-liquid Manhattan Shake']
-        labels = ['Cigars','Cigarettes','Other Tobaco Products','Cigars','Cigars','Cigars','Cigars','Other Tobaco Products','Other Tobaco Products','Other Tobaco Products']
-        retailers = ['The CYgar Shop','NUMBEO','E-WHOLESALE','The Royal Cigars Strovolos','The Royal Cigars Strovolos','The Royal Cigars Strovolos',
-                    'The Royal Cigars Strovolos','Alter Vape','Alter Vape','Alter Vape']
-    #put the rows in a list
-    all_items_cigars = []
-    for product,price,label,retailer in zip(products,prices_final_cigars,labels,retailers):
-        all_items_cigars.append([product,price,datetime.now(),label,retailer,0])
-
-    #assign the values to each column
-    for i in range(len(all_items_cigars)):
-        df.loc[len(df)] =(all_items_cigars[i][0],all_items_cigars[i][1],all_items_cigars[i][2],all_items_cigars[i][3],all_items_cigars[i][4],all_items_cigars[i][5])
-Tobacco()
 
 #STEPHANIS
 def Stephanis():
