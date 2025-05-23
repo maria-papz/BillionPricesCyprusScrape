@@ -10,7 +10,7 @@ run-name: Add scraped data and calculations to current CSV files
 # Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
   schedule:
-    - cron: "13 19 * * *"  #UTC time
+    - cron: "53 19 * * *"  #UTC time
 
 jobs:
   getdataandrefreshmap:
