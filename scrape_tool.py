@@ -28,7 +28,7 @@ df = pd.read_csv("BillionPricesProject_ProductList.csv")
 def Tobacco():
     prices_final_cigars=[]
 
-    url = "https://www.thecygarshop.com/product-page/machetero-petit-corona" #"https://www.thecygarshop.com/product-page/machetero-panatela"
+    url = "https://www.thecygarshop.com/product-page/villa-zamorano-intenso" #previous url: "https://www.thecygarshop.com/product-page/machetero-petit-corona"
     page = urlopen(url)
     html = page.read().decode("utf-8")
     bs = BeautifulSoup(html, "html.parser")
