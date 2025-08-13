@@ -1,0 +1,41 @@
+# Workflow for the Cyprus e-kalathi scraping process
+
+# Whenever pull request is made targeting branch initialisation, csv is reset
+name: e-kalathi-cy-scraping
+
+# Workflow's description
+run-name: e-kalathi-cy scraping 
+
+# Function to schedule the time (UTC), day, month, and year of the workflow process
+#on:
+#  schedule:
+#    - cron: "51 08 * * *" #UTC time
+
+jobs:
+  getdataandrefreshmap:
+    runs-on: ubuntu-latest
+    steps:
+      # It checks out the latest content of your repository
+      - name: Checkout repo content
+        uses: actions/checkout@v3 # checkout the repository content to github runner.
+        with:
+          fetch-depth: 0
+      - name: Setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.9 #install the python needed
+      - name: Upgrade pip
+        run: pip install --upgrade pip
+      # Installs the required Python dependencies
+      - name: Install dependencies
+        run: |
+          if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi
+      - name: Run e-kalathi-cy/Supermarkets_Scraping.py
+        run: |
+          python e-kalathi-cy/Supermarkets_Scraping.py
+          git status
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "e-kalathi-cy scraping completed"
+          git push origin HEAD:main
