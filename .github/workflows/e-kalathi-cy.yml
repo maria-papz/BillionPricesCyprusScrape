@@ -9,7 +9,7 @@ run-name: e-kalathi-cy scraping
 # Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
   schedule:
-    - cron: "49 08 * * *" #UTC time
+    - cron: "54 08 * * *" #UTC time
 
 jobs:
   getdataandrefreshmap:
@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: |
           if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi
-      - name: Run e-kalathi-cy/Supermarkets_Scraping.py
+      - name: Run Supermarkets_Scraping.py
         run: |
           python e-kalathi-cy/Supermarkets_Scraping.py
           git status
