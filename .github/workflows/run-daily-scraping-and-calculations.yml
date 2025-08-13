@@ -12,6 +12,13 @@ run-name: Add scraped data and calculations to current CSV files
 #  schedule:
 #    - cron: "19 16 * * *"  #UTC time
 
+on:
+  pull_request:
+    # Sequence of patterns matched against refs/heads
+    branches:
+      - scraping-and-calculations
+      - scraping-and-calculations
+
 jobs:
   getdataandrefreshmap:
     runs-on: ubuntu-latest
