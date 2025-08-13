@@ -27,8 +27,8 @@ from tabula import read_pdf
 warnings.simplefilter("ignore")
 
 # Read necessary data
-df = pd.read_csv("e-kalathi/Supermarkets_ScrapedData.csv")
-urls = pd.read_csv("e-kalathi/Supermarkets_ProductsList.csv")
+df = pd.read_csv("e-kalathi-cy/Supermarkets_ScrapedData.csv")
+urls = pd.read_csv("e-kalathi-cy/Supermarkets_ProductsList.csv")
 
 # Create a null dataframe
 daily_errors = pd.DataFrame(columns = ["Name","Subclass","Url","Division","Retailer"])
@@ -273,9 +273,9 @@ elapsed_time = end_time - start_time
 print("Elapsed time:", elapsed_time/60, "minute")
 
 # Export/Save the scraped data 
-df.to_csv("e-kalathi/Supermarkets_ScrapedData.csv", index=False) 
+df.to_csv("e-kalathi-cy/Supermarkets_ScrapedData.csv", index=False) 
 
 combined_df = pd.concat([df, list_], axis = 0)
 combined_df.reset_index(drop = True, inplace = True)
-combined_df.to_csv("e-kalathi/Supermarkets_ScrapedData.csv", index=False, header=True)
-daily_errors.to_csv("e-kalathi/Supermarkets_DailyScrapingErrors.csv", index=False)
+combined_df.to_csv("e-kalathi-cy/Supermarkets_ScrapedData.csv", index=False, header=True)
+daily_errors.to_csv("e-kalathi-cy/Supermarkets_DailyScrapingErrors.csv", index=False)
