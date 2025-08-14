@@ -76,7 +76,7 @@ def results_alphamega(u):
         new_row.append("Alphamega")
         list_.loc[len(list_)] = new_row
         list_["Name"] = list_["Name"].apply(lambda x:x)  
-'''        
+      
 def results_supermarketcy(u):
 
     url_new = "https://www.supermarketcy.com.cy/" + Item_url_
@@ -113,7 +113,7 @@ def results_supermarketcy(u):
         new_row.append("SupermarketCy")
         list_.loc[len(list_)] = new_row
         list_["Name"] = list_["Name"].apply(lambda x:x)  
-'''
+
 def results_cheapbasket(u):
     
     url = "https://cheapbasket.com.cy/product/" + Item_url_
