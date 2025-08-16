@@ -1,41 +1,11 @@
 Name,Subclass,Url,Division,Retailer
-Wholemeal Bread Sliced,Bread,sliced-wholemeal-bread,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
-Village Bread Sliced,Bread,sliced-village-bread,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
-Bananas,Fresh or chilled fruit,bananas,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
-Apple Pink,Fresh or chilled fruit,apples-pink-lady,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
-Grapes White,Fresh or chilled fruit,grapes-white,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
-Apples Green,Fresh or chilled fruit,apples-green,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
-Pears,Fresh or chilled fruit,pears,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
-Apples Red Chief,Fresh or chilled fruit,apples-red-chief,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
-Blueberries,Fresh or chilled fruit,blueberries,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
-Apples Golden,Fresh or chilled fruit,apples-golden,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
-Pomegranates,Fresh or chilled fruit,pomegranates,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
-Apples Royal Gala,Fresh or chilled fruit,apples-royal-gala,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
-Oranges Merlin,Fresh or chilled fruit,oranges-merlin,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
-Oranges for Juice,Fresh or chilled fruit,oranges-for-juice,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
-Pineapple,Fresh or chilled fruit,pineapple,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
-Mango,Fresh or chilled fruit,mango,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
-Tomatoes Ripe for Salsa,Fresh or chilled vegetables other than potatoes and other tubers,tomatoes-ripe-for-salsa,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
-Cucumbers fleid,Fresh or chilled vegetables other than potatoes and other tubers,cucumbers-field,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
-Red Onions,Fresh or chilled vegetables other than potatoes and other tubers,red-onions,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
-Cucumbers Greenhouse,Fresh or chilled vegetables other than potatoes and other tubers,cucumbers-greenhouse,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
-Cherry Tomatos,Fresh or chilled vegetables other than potatoes and other tubers,cherry-tomatos,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
-Mixed Peppers,Fresh or chilled vegetables other than potatoes and other tubers,mixed-peppers,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
-Potatoes Washed,Potatoes,potatoes-washed,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
-St. Nicholas Water,Mineral or spring waters,st-nicholas-water,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
-Dried Prunes with Pit,Dried fruit and nuts,dried-prunes-with-pit,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
-Smoked Turkey,"Dried, salted or smoked meat",smoked-turkey,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
-Ham,"Dried, salted or smoked meat",ham,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
-Lettuce Cos,Fresh or chilled vegetables other than potatoes and other tubers,lettuce-cos,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
-TZIVERTI Cyprus Wildflowers Honey squeeze 485g,"Jams, marmalades and honey",tziverti-cyprus-wildflowers-honey-squeeze-485g,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
-Philadelphia Original,Cheese and curd,philadelphia-original,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
-Kellogg's Special K Classic 375g,Breakfast cereals,kelloggs-special-k-classic-375g,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
-Kellogg's Crunchy Nut 375 g,Breakfast cereals,kelloggs-crunchy-nut-375-g,FOOD AND NON-ALCOHOLIC BEVERAGES,Opa
+Fresh Local Sea Bream 550 g,Fresh or chilled fish,https://www.alphamega.com.cy/en/groceries/fresh-food/fresh-fish/fresh-local-sea-bream-550-g-3,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
 Schwartz Turmeric 37g,"Salt, spices and culinary herbs",https://wolt.com/el/cyp/larnaca/venue/metro-larnaca/schwartz-turmeric-37g-itemid-bd84fdd1742e1589c3a34f81,FOOD AND NON-ALCOHOLIC BEVERAGES,METRO
 Lay's Salt And Vinegar 160g,Crisps,https://wolt.com/el/cyp/larnaca/venue/metro-larnaca/lay-s-salt-and-vinegar-160g-itemid-be1a5e55ac2616976e0ff9fe?search=Lay%27s+Salt+And+Vinegar+160g,FOOD AND NON-ALCOHOLIC BEVERAGES,METRO
 Lay's Salted 160g,Crisps,https://wolt.com/el/cyp/larnaca/venue/metro-larnaca/lay-s-salted-160g-itemid-606b93f3fe43401691cbdf9f?search=Lay%27s+Salted+160g,FOOD AND NON-ALCOHOLIC BEVERAGES,METRO
 Nounou Sweetened Condensed Milk 397g,Other milk products,https://wolt.com/el/cyp/larnaca/venue/metro-larnaca/nounou-sweetened-condensed-milk-397g-itemid-a46d3cce2cf30f2d381b60ab?search=Nounou+Sweetened+Condensed+Milk+397g,FOOD AND NON-ALCOHOLIC BEVERAGES,METRO
 My Kouzina Farina Flour 500g,Flours and other cereals,https://wolt.com/el/cyp/larnaca/venue/metro-larnaca/my-kouzina-farina-flour-500g-itemid-b9bdf9b3dbb9a1f40969d708?search=My+Kouzina+Farina+Flour+500g,FOOD AND NON-ALCOHOLIC BEVERAGES,METRO
+Meggle Uht Milk Lactose Free 1.5% Fat 1L,Preserved milk,https://wolt.com/el/cyp/larnaca/venue/metro-larnaca/meggle-uht-milk-lactose-free-1-5-fat-1l-itemid-4a0e5ae6ebc5f2b20877ad4d?search=milk,FOOD AND NON-ALCOHOLIC BEVERAGES,METRO
 Lamb Cyprus,Lamb and goat,https://wolt.com/el/cyp/larnaca/venue/metro-larnaca/lamb-cyprus-itemid-3be1e600ca5a0a00e25d67b1,FOOD AND NON-ALCOHOLIC BEVERAGES,METRO
 Qualifood Salmon Fillet Portion Skin On 4x125g 500g,Frozen fish,https://wolt.com/el/cyp/larnaca/venue/metro-larnaca/qualifood-salmon-fillet-portion-skin-on-4x125g-500g-itemid-706239ee495baa68bd119c64,FOOD AND NON-ALCOHOLIC BEVERAGES,METRO
 Nava Nature Frypan Stone Coating 28cm,Non-electric kitchen utensils and articles,https://wolt.com/el/cyp/larnaca/venue/metro-larnaca/nava-nature-frypan-stone-coating-28cm-itemid-6c968a674950655af5eecb17?search=Nava+Nature+Frypan+Stone+Coating,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",METRO
