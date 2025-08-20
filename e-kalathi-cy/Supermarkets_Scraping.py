@@ -81,15 +81,22 @@ def results_supermarketcy(u):
 
     url_new = "https://www.supermarketcy.com.cy/" + Item_url_
     
-    ## with headers
-    #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    #bs = BeautifulSoup(url_new, "html.parser")
-    #response = requests.get(bs, {'headers': header})
+    ### with headers
+    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
+    ## 1
+    bs = BeautifulSoup(url_new, "html.parser")
+    response = requests.get(bs, {'headers': header})
+    ## 2
+    #response = requests.get(url_new, headers = header)
 
-    # without headers
-    response = requests.get(url_new)
+    ### without headers
+    ## 1
+    #bs = BeautifulSoup(url_new, "html.parser")
+    #response = requests.get(bs)
+    ## 2
+    #response = requests.get(url_new)
            
-    if (response.status_code != 200) or ("Η σελίδα δεν βρέθηκε" in response.text) or ("Η σελίδα αφαιρέθηκε" in response.text):
+    if (response.status_code != 200): #or ("Η σελίδα δεν βρέθηκε" in response.text) or ("Η σελίδα αφαιρέθηκε" in response.text):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
@@ -102,12 +109,12 @@ def results_supermarketcy(u):
         #soup = BeautifulSoup(response.text, "html.parser")
         name_wrappers = soup.find('h1', {'class':"text-h6 md:text-h4 text-gray-dark font-bold mb-8 lg:mb-40 lg:max-w-520 leading-snug italic"}).text
         price_wrappers = soup.find('div', {'class':"text-primary text-24 lg:text-h3 font-bold italic my-4 lg:my-8"}).text
-        value = price_wrappers.split('\xa0')[0].replace('.', '').replace(',', '.')
-        print(value)
+        price_ = price_wrappers.split('\xa0')[0].replace('.', '').replace(',', '.')
+        print(price_)
         
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_wrappers)
-        new_row.append(float(value))
+        new_row.append(float(price_))
         new_row.append(subclass_)
         new_row.append(division_)  
         new_row.append("SupermarketCy")
