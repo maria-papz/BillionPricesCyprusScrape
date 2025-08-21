@@ -84,10 +84,10 @@ def results_supermarketcy(u):
     ### with headers
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     ## 1
-    bs = BeautifulSoup(url_new, "html.parser")
-    response = requests.get(bs, {'headers': header})
+    #bs = BeautifulSoup(url_new, "html.parser")
+    #response = requests.get(bs, {'headers': header})
     ## 2
-    #response = requests.get(url_new, headers = header)
+    response = requests.get(url_new, headers = header)
 
     ### without headers
     ## 1
