@@ -87,12 +87,12 @@ def results_supermarketcy(u):
     #bs = BeautifulSoup(url_new, "html.parser")
     #response = requests.get(bs, {'headers': header})
     ## 2
-    response = requests.get(url_new, headers = header)
+    #response = requests.get(url_new, headers = header)
 
     ### without headers
     ## 1
-    #bs = BeautifulSoup(url_new, "html.parser")
-    #response = requests.get(bs)
+    bs = BeautifulSoup(url_new, "html.parser")
+    response = requests.get(bs)
     ## 2
     #response = requests.get(url_new)
            
