@@ -9,7 +9,7 @@ run-name: e-kalathi-cy scraping
 # Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
   schedule:
-    - cron: "43 07 * * *" #UTC time
+    - cron: "18 08 * * *" #UTC time
 
 jobs:
   getdataandrefreshmap:
