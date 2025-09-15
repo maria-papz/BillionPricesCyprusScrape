@@ -3128,7 +3128,16 @@ for u in range(0, len(urls)):
     subclass_ = urls["Subclass"].iloc[u]
     division_ = urls["Division"].iloc[u]
     retailer_ = urls["Retailer"].iloc[u]
-    
+
+    if retailer_=="SupermarketCy":
+        results_supermarketcy(u) 
+    elif retailer_=="Intercity Buses":
+        results_intercity_buses(u)
+    elif retailer_=="Stephanis":
+        results_stephanis(u)
+    elif retailer_=="Public":
+        results_public(u)
+'''
     #if retailer_=="SupermarketCy":
     #    results_supermarketcy(u) 
     #elif retailer_=="METRO":
@@ -3243,7 +3252,7 @@ for u in range(0, len(urls)):
         results_cyprus_transport(u)
     elif retailer_=="Max 7 Taxi":
         results_max_7_tax(u)
-   
+'''   
 # Change the type as float
 list_["Price"].astype(float)
 
