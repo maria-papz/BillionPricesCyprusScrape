@@ -36,7 +36,7 @@ jobs:
       # Installs the required Python dependencies
       - name: Install dependencies
         run: |
-          if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi
+          if [ -f requirements_new.txt ]; then pip install --no-cache-dir -r requirements_new.txt; fi
       - name: Run WebScraping.py
         run: |
           python TESTINGS/WebScraping.py
