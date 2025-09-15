@@ -39,7 +39,7 @@ jobs:
           if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi
       - name: Run WebScraping.py
         run: |
-          python PythonCodes/WebScraping.py
+          python TESTINGS/WebScraping.py
           git status
           git config user.name github-actions
           git config user.email github-actions@github.com
