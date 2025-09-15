@@ -29,12 +29,11 @@ from docx import Document
 warnings.simplefilter("ignore")
 
 # Read necessary data
-df = pd.read_csv("Datasets/Raw-Data-2025Q3.csv")
+df = pd.read_csv("TESTINGS/Raw-Data.csv")
 #df["Date"] = pd.to_datetime(df["Date"], format="%d/%m/%Y").dt.strftime("%Y-%m-%d")
 df = df.sort_values("Date")
 
-#df = pd.read_csv("Datasets/Raw-Data.csv")
-urls = pd.read_csv("Datasets/Products-Urls.csv")
+urls = pd.read_csv("TESTINGS/Products-Urls.csv")
 
 # Create a null dataframe
 daily_errors = pd.DataFrame(columns=["Name","Subclass","Url","Division","Retailer"])
@@ -3254,11 +3253,9 @@ elapsed_time = end_time - start_time
 print("Elapsed time:", elapsed_time/60, "minute")
 
 # Export/Save the scraped data 
-df.to_csv("Datasets/Raw-Data-2025Q3.csv", index=False) 
-#df.to_csv("Datasets/Raw-Data.csv", index=False) 
+df.to_csv("TESTINGS/Raw-Data.csv", index=False) 
 
 combined_df = pd.concat([df, list_], axis=0)
 combined_df.reset_index(drop=True, inplace=True)
-combined_df.to_csv("Datasets/Raw-Data-2025Q3.csv", index=False, header=True)
-#combined_df.to_csv("Datasets/Raw-Data.csv", index=False, header=True)
-daily_errors.to_csv("Datasets/Daily-Scraping-Errors.csv",index=False)
+combined_df.to_csv("TESTINGS/Raw-Data.csv", index=False, header=True)
+daily_errors.to_csv("TESTINGS/Daily-Scraping-Errors.csv", index=False)
