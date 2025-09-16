@@ -41,7 +41,7 @@ else:
             if i%2 == 0:
                 ticket_name_ = element_[i].text.replace(" ","").replace("\n","").replace("\t","")
                 price_ = element_[i+1].text.replace(" ","").replace("\n","").replace("\t","").replace("€","")
-                if (price_=="NOTAVAILABLE") or (price_=='ΔΕΝΔΙΑΤΙΘΕΤΑΙ')
+                if (price_=="NOTAVAILABLE") or (price_=='ΔΕΝΔΙΑΤΙΘΕΤΑΙ'):
                     print(pirce_)
                 else:
                     print(price_)
