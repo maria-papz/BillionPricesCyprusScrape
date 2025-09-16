@@ -1107,7 +1107,7 @@ def results_electroline(u):
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_EUC(u):
-    """
+#    """
     euc = tb.read_pdf(Item_url_, pages = '2', pandas_options = {'header': None}, stream = True)
     
     list_euc = []
@@ -2249,7 +2249,7 @@ def results_toyota(u):
     #if subclass_=="Second-hand motor cars":
         
         #1st way
-        """ 
+        #""" 
         query = {"component":"used-stock-cars-v2","fetches":[
         {"fetchType":"fetchUscVehiclePrice","vehicleForSaleId":"4077c595-5c2c-42bd-8133-203d770ad125","context":"used","uscEnv":"production"}
         ]}
@@ -2258,7 +2258,7 @@ def results_toyota(u):
         response = requests.get(Item_url_,{'headers':headers})
         r = requests.post("https://usc-webcomponents.toyota-europe.com/v1/api/data/cy/en?brand=toyota&uscEnv=production", json=query, headers=headers)
         price_ = r.json()['fetches'][0]['result']['fetchResult'] ['sellingPriceInclVAT']
-        """
+       # """
         
         #2nd way
         """
@@ -3151,7 +3151,6 @@ for u in range(0, len(urls)):
         results_public(u)
     elif retailer_=="Intercity Buses":
         results_intercity_buses(u) 
-    '''
     #if retailer_=="SupermarketCy":
     #    results_supermarketcy(u) 
     #elif retailer_=="METRO":
@@ -3266,7 +3265,7 @@ for u in range(0, len(urls)):
         results_cyprus_transport(u)
     elif retailer_=="Max 7 Taxi":
         results_max_7_tax(u)
-'''   
+   
 # Change the type as float
 list_["Price"].astype(float)
 
