@@ -354,16 +354,16 @@ def results_stephanis(u):
     ## 1 
     #response = requests.get(Item_url_, headers = header)
     ## 2 
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs, {'headers':header})
+    #bs = BeautifulSoup(Item_url_, "html.parser")
+    #response = requests.get(bs, {'headers':header})
     ## 3 
     #with httpx.Client(headers = header) as client:
     #    response = client.get(Item_url_)
     
     ### without headers
     ## 1 
-    #bs = BeautifulSoup(Item_url_, "html.parser")
-    #response = requests.get(bs) 
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs) 
     ## 2 
     #response = requests.get(Item_url_)
 
@@ -2473,8 +2473,8 @@ def results_intercity_buses(u):
     ## 1
     #response = requests.get(url_new)
     ## 2
-    #bs = BeautifulSoup(url_new, "html.parser")
-    #response = requests.get(bs)
+    bs = BeautifulSoup(url_new, "html.parser")
+    response = requests.get(bs)
     
     ## with headers
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
@@ -2482,8 +2482,8 @@ def results_intercity_buses(u):
     ## 1
     #response = requests.get(url_new, {'headers':header})
     ## 2
-    bs = BeautifulSoup(url_new, "html.parser")
-    response = requests.get(bs, {'headers':header})
+    #bs = BeautifulSoup(url_new, "html.parser")
+    #response = requests.get(bs, {'headers':header})
         
     if response.status_code != 200:
         website_false.append(name_)
