@@ -25,6 +25,28 @@ from urllib.error import URLError
 from tabula import read_pdf
 from docx import Document
 
+url_new = "https://intercity-buses.com/en/routes/" + "nicosia-limassol-limassol-nicosia/"
+header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response = requests.get(url_new, {'headers':header})
+        
+if response.status_code != 200:
+    print(response)
+else:
+    soup = BeautifulSoup(response.content, "html.parser")
+    table_ = soup.find_all("table", {"class":"tablesorter eael-data-table center"})[0]
+    if table_:
+        element_ = table_.find_all("div", {"class":"td-content-wrapper"}) 
+        for i in range(0,2):
+            new_row = []
+            if i%2 == 0:
+                ticket_name_ = element_[i].text.replace(" ","").replace("\n","").replace("\t","")
+                price_ = element_[i+1].text.replace(" ","").replace("\n","").replace("\t","").replace("€","")
+                if (price_=="NOTAVAILABLE") or (price_=='ΔΕΝΔΙΑΤΙΘΕΤΑΙ')
+                    print(pirce_)
+                else:
+                    print(price_)
+                    
+"""
 # Ignore specific warning
 warnings.simplefilter("ignore")
 
@@ -3260,3 +3282,4 @@ combined_df = pd.concat([df, list_], axis=0)
 combined_df.reset_index(drop=True, inplace=True)
 combined_df.to_csv("TESTINGS/Raw-Data.csv", index=False, header=True)
 daily_errors.to_csv("TESTINGS/Daily-Scraping-Errors.csv", index=False)
+"""
