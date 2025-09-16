@@ -29,11 +29,10 @@ from docx import Document
 warnings.simplefilter("ignore")
 
 # Read necessary data
-df = pd.read_csv("Datasets/Raw-Data-2025Q3.csv")
+df = pd.read_csv("TESTINGS/Raw-Data.csv")
 #df["Date"] = pd.to_datetime(df["Date"], format="%d/%m/%Y").dt.strftime("%Y-%m-%d")
 df = df.sort_values("Date")
 
-#df = pd.read_csv("Datasets/Raw-Data.csv")
 urls = pd.read_csv("Datasets/Products-Urls.csv")
 
 # Create a null dataframe
@@ -47,16 +46,13 @@ def results_supermarketcy(u):
     url_new = "https://www.supermarketcy.com.cy/" + Item_url_
     
     ###  without headers 
-    
-    ## 1 (*NOT working*)
+    ## 1 
     #bs = BeautifulSoup(url_new, "html.parser")
     #response = requests.get(bs)
-
-    ## 2 (*NOT working*)
+    ## 2 
     #response = requests.get(url_new)
     
     ### with headers 
-    
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
     #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     '''
@@ -81,13 +77,11 @@ def results_supermarketcy(u):
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
     }
     '''
-    ## 1 (*NOT working*)
+    ## 1 
     #bs = BeautifulSoup(url_new, "html.parser")
     #response = requests.get(bs, {'headers':header})
-    
-    ## 2 (*NOT working*)
+    ## 2
     #response = requests.get(url_new, headers = header) 
-
     ## 3 
     with httpx.Client(headers = header) as client:
         response = client.get(url_new)
@@ -355,22 +349,22 @@ def results_ikea(u):
                      
 def results_stephanis(u):
 
-    ## with headers 
+    ### with headers 
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-    # 1 (*NOT working*)
+    ## 1 
     response = requests.get(Item_url_, headers = header)
-    # 2 (*NOT working*)
+    ## 2 
     #bs = BeautifulSoup(Item_url_, "html.parser")
     #response = requests.get(bs, {'headers':header})
-    # 3 (*NOT working*)
+    ## 3 
     #with httpx.Client(headers = header) as client:
     #    response = client.get(Item_url_)
     
-    ## without headers
-    # 1 (*NOT working*)
+    ### without headers
+    ## 1 
     #bs = BeautifulSoup(Item_url_, "html.parser")
     #response = requests.get(bs) 
-    # 2 (*NOT working*)
+    ## 2 
     #response = requests.get(Item_url_)
 
     print(response)
@@ -2475,18 +2469,19 @@ def results_intercity_buses(u):
     
     url_new = "https://intercity-buses.com/en/routes/" + Item_url_
 
-    ## without headers
+    ### without headers
     #response = requests.get(url_new)
     
-    ## with headers
+    ### with headers
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
     #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    
-    # way 1
+    ## 1
     response = requests.get(url_new, {'headers':header})
-    # way 2
+    ## 2
     #bs = BeautifulSoup(url_new, "html.parser")
     #response = requests.get(bs, {'headers':header})
+
+    print(response)
         
     if response.status_code != 200:
         website_false.append(name_)
@@ -3068,26 +3063,23 @@ def results_christos_grill_seafood(u):
 def results_public(u):
         
     ###  without headers 
-    
     ## 1 
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
-
     ## 2 
     #response = requests.get(Item_url_)
     
     ### with headers 
-    
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
     #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     #header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
-
     ## 1 
     #bs = BeautifulSoup(Item_url_, "html.parser")
     #response = requests.get(bs, {'headers':header})
-
     ## 2 
     #response = requests.get(Item_url_, headers = header) 
+
+    print(response)
     
     if (response.status_code != 200) : 
         website_false.append(name_)
@@ -3101,7 +3093,6 @@ def results_public(u):
         data = response.json()
         price_ = data["prices"][0]["salePrice"] #OR "listPrice"
         print(price_)
-        
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(price_)
@@ -3130,6 +3121,15 @@ for u in range(0, len(urls)):
     division_ = urls["Division"].iloc[u]
     retailer_ = urls["Retailer"].iloc[u]
     
+    if retailer_=="SupermarketCy":
+        results_supermarketcy(u) 
+    elif retailer_=="Stephanis":
+        results_stephanis(u)
+    elif retailer_=="Public":
+        results_public(u)
+    elif retailer_=="Intercity Buses":
+        results_intercity_buses(u) 
+    '''
     #if retailer_=="SupermarketCy":
     #    results_supermarketcy(u) 
     #elif retailer_=="METRO":
@@ -3244,7 +3244,7 @@ for u in range(0, len(urls)):
         results_cyprus_transport(u)
     elif retailer_=="Max 7 Taxi":
         results_max_7_tax(u)
-   
+'''   
 # Change the type as float
 list_["Price"].astype(float)
 
@@ -3254,11 +3254,9 @@ elapsed_time = end_time - start_time
 print("Elapsed time:", elapsed_time/60, "minute")
 
 # Export/Save the scraped data 
-df.to_csv("Datasets/Raw-Data-2025Q3.csv", index=False) 
-#df.to_csv("Datasets/Raw-Data.csv", index=False) 
+df.to_csv("TESTINGS/Raw-Data.csv", index=False) 
 
 combined_df = pd.concat([df, list_], axis=0)
 combined_df.reset_index(drop=True, inplace=True)
-combined_df.to_csv("Datasets/Raw-Data-2025Q3.csv", index=False, header=True)
-#combined_df.to_csv("Datasets/Raw-Data.csv", index=False, header=True)
-daily_errors.to_csv("Datasets/Daily-Scraping-Errors.csv",index=False)
+combined_df.to_csv("TESTINGS/Raw-Data.csv", index=False, header=True)
+daily_errors.to_csv("TESTINGS/Daily-Scraping-Errors.csv", index=False)
