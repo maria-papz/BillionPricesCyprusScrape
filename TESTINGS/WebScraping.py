@@ -48,8 +48,8 @@ def results_supermarketcy(u):
     ###  without headers 
     
     ## 1 (*NOT working*)
-    #bs = BeautifulSoup(url_new, "html.parser")
-    #response = requests.get(bs)
+    bs = BeautifulSoup(url_new, "html.parser")
+    response = requests.get(bs)
 
     ## 2 (*NOT working*)
     #response = requests.get(url_new)
@@ -88,8 +88,8 @@ def results_supermarketcy(u):
     #response = requests.get(url_new, headers = header) 
 
     ## 3 
-    with httpx.Client(headers = header) as client:
-        response = client.get(url_new)
+    #with httpx.Client(headers = header) as client:
+    #    response = client.get(url_new)
     
     print(response)
 
@@ -357,7 +357,7 @@ def results_stephanis(u):
     ## with headers 
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
     # 1 (*NOT working*)
-    response = requests.get(Item_url_, headers = header)
+    #response = requests.get(Item_url_, headers = header)
     # 2 (*NOT working*)
     #bs = BeautifulSoup(Item_url_, "html.parser")
     #response = requests.get(bs, {'headers':header})
@@ -367,8 +367,8 @@ def results_stephanis(u):
     
     ## without headers
     # 1 (*NOT working*)
-    #bs = BeautifulSoup(Item_url_, "html.parser")
-    #response = requests.get(bs) 
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs) 
     # 2 (*NOT working*)
     #response = requests.get(Item_url_)
 
@@ -2474,16 +2474,20 @@ def results_intercity_buses(u):
     
     url_new = "https://intercity-buses.com/en/routes/" + Item_url_
 
-    ## without headers
+    ### without headers
+    ## 1
+    bs = BeautifulSoup(url_new, "html.parser")
+    response = requests.get(bs)
+    ## 2
     #response = requests.get(url_new)
     
-    ## with headers
+    ### with headers
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
     #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     
-    # way 1
-    response = requests.get(url_new, {'headers':header})
-    # way 2
+    ## 1
+    #response = requests.get(url_new, {'headers':header})
+    ## 2
     #bs = BeautifulSoup(url_new, "html.parser")
     #response = requests.get(bs, {'headers':header})
         
@@ -3069,8 +3073,8 @@ def results_public(u):
     ###  without headers 
     
     ## 1 
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)
+    #bs = BeautifulSoup(Item_url_, "html.parser")
+    #response = requests.get(bs)
 
     ## 2 
     #response = requests.get(Item_url_)
@@ -3082,8 +3086,8 @@ def results_public(u):
     #header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
 
     ## 1 
-    #bs = BeautifulSoup(Item_url_, "html.parser")
-    #response = requests.get(bs, {'headers':header})
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs, {'headers':header})
 
     ## 2 
     #response = requests.get(Item_url_, headers = header) 
