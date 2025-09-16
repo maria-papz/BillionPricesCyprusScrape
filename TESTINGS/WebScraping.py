@@ -47,11 +47,11 @@ def results_supermarketcy(u):
     
     ###  without headers 
     
-    ## 1 (*NOT working*)
+    ## 1 
     bs = BeautifulSoup(url_new, "html.parser")
     response = requests.get(bs)
 
-    ## 2 (*NOT working*)
+    ## 2 
     #response = requests.get(url_new)
     
     ### with headers 
@@ -80,11 +80,11 @@ def results_supermarketcy(u):
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
     }
     '''
-    ## 1 (*NOT working*)
+    ## 1 
     #bs = BeautifulSoup(url_new, "html.parser")
     #response = requests.get(bs, {'headers':header})
     
-    ## 2 (*NOT working*)
+    ## 2 
     #response = requests.get(url_new, headers = header) 
 
     ## 3 
@@ -354,22 +354,23 @@ def results_ikea(u):
                      
 def results_stephanis(u):
 
-    ## with headers 
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-    # 1 (*NOT working*)
+    
+    ### with headers 
+    ## 1 
     #response = requests.get(Item_url_, headers = header)
-    # 2 (*NOT working*)
+    ## 2 
     #bs = BeautifulSoup(Item_url_, "html.parser")
     #response = requests.get(bs, {'headers':header})
-    # 3 (*NOT working*)
-    #with httpx.Client(headers = header) as client:
-    #    response = client.get(Item_url_)
+    ## 3 
+    with httpx.Client(headers = header) as client:
+        response = client.get(Item_url_)
     
-    ## without headers
-    # 1 (*NOT working*)
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs) 
-    # 2 (*NOT working*)
+    ### without headers
+    ## 1 
+    #bs = BeautifulSoup(Item_url_, "html.parser")
+    #response = requests.get(bs) 
+    ## 2 
     #response = requests.get(Item_url_)
 
     print(response)
@@ -2484,12 +2485,13 @@ def results_intercity_buses(u):
     ### with headers
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
     #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    
     ## 1
     #response = requests.get(url_new, {'headers':header})
     ## 2
     #bs = BeautifulSoup(url_new, "html.parser")
     #response = requests.get(bs, {'headers':header})
+
+    print(response)
         
     if response.status_code != 200:
         website_false.append(name_)
@@ -3071,26 +3073,23 @@ def results_christos_grill_seafood(u):
 def results_public(u):
         
     ###  without headers 
-    
     ## 1 
     #bs = BeautifulSoup(Item_url_, "html.parser")
     #response = requests.get(bs)
-
     ## 2 
     #response = requests.get(Item_url_)
     
     ### with headers 
-    
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
     #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     #header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
-
     ## 1 
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs, {'headers':header})
-
     ## 2 
     #response = requests.get(Item_url_, headers = header) 
+
+    print(response)
     
     if (response.status_code != 200) : 
         website_false.append(name_)
@@ -3104,7 +3103,6 @@ def results_public(u):
         data = response.json()
         price_ = data["prices"][0]["salePrice"] #OR "listPrice"
         print(price_)
-        
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(price_)
