@@ -33,7 +33,7 @@ df = pd.read_csv("TESTINGS/Raw-Data.csv")
 #df["Date"] = pd.to_datetime(df["Date"], format="%d/%m/%Y").dt.strftime("%Y-%m-%d")
 df = df.sort_values("Date")
 
-urls = pd.read_csv("Datasets/Products-Urls.csv")
+urls = pd.read_csv("TESTINGS/Products-Urls.csv")
 
 # Create a null dataframe
 daily_errors = pd.DataFrame(columns=["Name","Subclass","Url","Division","Retailer"])
