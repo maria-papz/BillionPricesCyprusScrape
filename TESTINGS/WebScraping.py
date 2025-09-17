@@ -3142,13 +3142,13 @@ for u in range(0, len(urls)):
     division_ = urls["Division"].iloc[u]
     retailer_ = urls["Retailer"].iloc[u]
     ########################################################################
-    ### Retailers with problem
+    ### Retailers with problem (run only locally but not on GitHub)
     if retailer_=="SupermarketCy":
         results_supermarketcy(u) 
     elif retailer_=="Stephanis":
         results_stephanis(u)
-    #elif retailer_=="Public":
-    #    results_public(u)
+    elif retailer_=="Public":
+        results_public(u)
     #elif retailer_=="Intercity Buses":
     #    results_intercity_buses(u)
     ########################################################################        
