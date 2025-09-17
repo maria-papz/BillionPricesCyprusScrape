@@ -3141,15 +3141,17 @@ for u in range(0, len(urls)):
     subclass_ = urls["Subclass"].iloc[u]
     division_ = urls["Division"].iloc[u]
     retailer_ = urls["Retailer"].iloc[u]
-    
+    ########################################################################
+    ### Retailers with problem
     if retailer_=="SupermarketCy":
         results_supermarketcy(u) 
-    elif retailer_=="Stephanis":
-        results_stephanis(u)
-    elif retailer_=="Public":
-        results_public(u)
-    elif retailer_=="Intercity Buses":
-        results_intercity_buses(u)
+    #elif retailer_=="Stephanis":
+    #    results_stephanis(u)
+    #elif retailer_=="Public":
+    #    results_public(u)
+    #elif retailer_=="Intercity Buses":
+    #    results_intercity_buses(u)
+    ########################################################################        
     '''        
     #if retailer_=="SupermarketCy":
     #    results_supermarketcy(u) 
