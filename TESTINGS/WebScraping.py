@@ -25,6 +25,9 @@ from urllib.error import URLError
 from tabula import read_pdf
 from docx import Document
 
+'''
+### Kendea's testings
+
 url_new = "https://intercity-buses.com/en/routes/" + "nicosia-limassol-limassol-nicosia/"
 header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
 response = requests.get(url_new, {'headers':header})
@@ -45,8 +48,8 @@ else:
                     print(pirce_)
                 else:
                     print(price_)
-                    
-"""
+'''                    
+
 # Ignore specific warning
 warnings.simplefilter("ignore")
 
@@ -1107,7 +1110,7 @@ def results_electroline(u):
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_EUC(u):
-#    """
+    """
     euc = tb.read_pdf(Item_url_, pages = '2', pandas_options = {'header': None}, stream = True)
     
     list_euc = []
@@ -1140,7 +1143,6 @@ def results_EUC(u):
                         count_ += 1
     price_ = price_1/count_
     print(price_)
-    
     new_row.append(datetime.now().strftime('%Y-%m-%d'))
     new_row.append(name_)
     new_row.append(float(price_))
@@ -1153,7 +1155,6 @@ def results_EUC(u):
 def results_famousports(u):
     
     url = "https://www.famousports.com/en" + Item_url_
-    #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
     bs = BeautifulSoup(url, "html.parser")
     response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
@@ -1170,7 +1171,7 @@ def results_famousports(u):
         element_soup = soup.find_all("h2",{"class":"product-price product-price--single"}) 
         element_soup = soup.find_all("strong",{"class":"text-xl lg:text-2xl font-bold tracking-tight"})
         price_ = element_soup[0].text.replace("\n","").replace(" ","").replace("€","").replace(",",".")
-        
+        print(price_)
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
@@ -1182,12 +1183,11 @@ def results_famousports(u):
 
 def results_Marks_Spencer(u):
     
-    url="https://www.marksandspencer.com/cy"+Item_url_
-    #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+    url = "https://www.marksandspencer.com/cy" + Item_url_
     bs = BeautifulSoup(url, "html.parser")
     response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
-    
+
     if ("Sorry, we can't" in soup.text) or (response.status_code !=200):
         website_false.append(name_)
         website_false.append(subclass_)
@@ -1199,7 +1199,7 @@ def results_Marks_Spencer(u):
     else:
         element_soup = soup.find_all("span",{"class":"list-pricecolour"})
         price_=element_soup[0].text.replace("\n","").replace(" ","").replace("€","").replace(",",".")
-        
+        print(price_)
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
@@ -1212,11 +1212,10 @@ def results_Marks_Spencer(u):
 def results_moto_race(u):
     
     url = "https://www.motorace.com.cy/" + Item_url_
-    #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
     bs = BeautifulSoup(url, "html.parser")
     response = requests.get(bs)
     soup = BeautifulSoup(response.content, "html.parser")
-    
+
     if ("404 Not Found" in soup.text) or (response.status_code !=200):
         website_false.append(name_)
         website_false.append(subclass_)
@@ -1227,8 +1226,8 @@ def results_moto_race(u):
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)  
     else:
         element_soup = soup.find_all("span",{"class":"price"})
-        price_=element_soup[0].text.replace(",","").replace("€","")
-        
+        price_ = element_soup[0].text.replace(",","").replace("€","")
+        print(price_)
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
@@ -1242,7 +1241,6 @@ def results_nissan(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
     response = requests.get(Item_url_, headers=header)
-    soup = BeautifulSoup(response.content, "html.parser")
     
     if ("THIS IS A DEAD END..." in response.text) or (response.status_code != 200):
         website_false.append(name_)
@@ -1253,6 +1251,7 @@ def results_nissan(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)  
     else:
+        soup = BeautifulSoup(response.content, "html.parser")
         tree = html.fromstring(response.content)
         price_tree = tree.xpath('//iframe[@id="individualVehiclePriceJSON"]/text()')
         
@@ -3150,7 +3149,8 @@ for u in range(0, len(urls)):
     elif retailer_=="Public":
         results_public(u)
     elif retailer_=="Intercity Buses":
-        results_intercity_buses(u) 
+        results_intercity_buses(u)
+    '''        
     #if retailer_=="SupermarketCy":
     #    results_supermarketcy(u) 
     #elif retailer_=="METRO":
@@ -3265,7 +3265,8 @@ for u in range(0, len(urls)):
         results_cyprus_transport(u)
     elif retailer_=="Max 7 Taxi":
         results_max_7_tax(u)
-   
+   '''
+        
 # Change the type as float
 list_["Price"].astype(float)
 
@@ -3281,4 +3282,3 @@ combined_df = pd.concat([df, list_], axis=0)
 combined_df.reset_index(drop=True, inplace=True)
 combined_df.to_csv("TESTINGS/Raw-Data.csv", index=False, header=True)
 daily_errors.to_csv("TESTINGS/Daily-Scraping-Errors.csv", index=False)
-"""
