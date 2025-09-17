@@ -3145,8 +3145,8 @@ for u in range(0, len(urls)):
     ### Retailers with problem
     if retailer_=="SupermarketCy":
         results_supermarketcy(u) 
-    #elif retailer_=="Stephanis":
-    #    results_stephanis(u)
+    elif retailer_=="Stephanis":
+        results_stephanis(u)
     #elif retailer_=="Public":
     #    results_public(u)
     #elif retailer_=="Intercity Buses":
