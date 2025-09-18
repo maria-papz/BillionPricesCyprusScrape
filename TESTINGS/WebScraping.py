@@ -2491,16 +2491,20 @@ def results_intercity_buses(u):
     url_new = "https://intercity-buses.com/en/routes/" + Item_url_
 
     ### without headers
+    ## 1
     #response = requests.get(url_new)
+    ## 2
+    bs = BeautifulSoup(url_new, "html.parser")
+    response = requests.get(bs, {'headers':header})
     
-    ### with headers
+    ### with headers (*ERROR*)
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
     #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     ## 1
     #response = requests.get(url_new, headers=header)
     ## 2
-    bs = BeautifulSoup(url_new, "html.parser")
-    response = requests.get(bs, {'headers':header})
+    #bs = BeautifulSoup(url_new, "html.parser")
+    #response = requests.get(bs, {'headers':header})
 
     print(response)
         
