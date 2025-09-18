@@ -3151,8 +3151,8 @@ for u in range(0, len(urls)):
         results_supermarketcy(u) 
     elif retailer_=="Stephanis":
         results_stephanis(u)
-    elif retailer_=="Public":
-        results_public(u)
+    #elif retailer_=="Public":
+    #    results_public(u)
     elif retailer_=="Intercity Buses":
         results_intercity_buses(u)
     ########################################################################        
