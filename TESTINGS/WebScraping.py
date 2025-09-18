@@ -3087,10 +3087,10 @@ def results_christos_grill_seafood(u):
 
 def results_public(u):
         
-    ###  without headers (*ERROR*) 
+    ###  without headers 
     ## 1 
-    #bs = BeautifulSoup(Item_url_, "html.parser")
-    #response = requests.get(bs)
+    bs = BeautifulSoup(Item_url_, "html.parser")
+    response = requests.get(bs)
     ## 2 
     #response = requests.get(Item_url_)
     
@@ -3102,7 +3102,7 @@ def results_public(u):
     #bs = BeautifulSoup(Item_url_, "html.parser")
     #response = requests.get(bs, {'headers':header})
     ## 2 
-    response = requests.get(Item_url_, headers = header) 
+    #response = requests.get(Item_url_, headers = header) 
 
     print(response)
     
@@ -3151,8 +3151,8 @@ for u in range(0, len(urls)):
         results_supermarketcy(u) 
     elif retailer_=="Stephanis":
         results_stephanis(u)
-    #elif retailer_=="Public":
-    #    results_public(u)
+    elif retailer_=="Public":
+        results_public(u)
     elif retailer_=="Intercity Buses":
         results_intercity_buses(u)
     ########################################################################        
