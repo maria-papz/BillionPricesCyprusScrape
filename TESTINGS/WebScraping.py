@@ -3087,7 +3087,7 @@ def results_christos_grill_seafood(u):
 
 def results_public(u):
         
-    ###  without headers 
+    ###  without headers (*ERROR*) 
     ## 1 
     #bs = BeautifulSoup(Item_url_, "html.parser")
     #response = requests.get(bs)
