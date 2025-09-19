@@ -9,7 +9,7 @@ run-name: TESTINGS web scraping
 # Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
   schedule:
-    - cron: "06 16 * * *" #UTC time
+    - cron: "48 18 * * *" #UTC time
 
   #on:
   #pull_request:
