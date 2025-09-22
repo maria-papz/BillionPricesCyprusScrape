@@ -34,8 +34,12 @@ url_new = "https://intercity-buses.com/en/routes/" + "nicosia-limassol-limassol-
 #header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
 #response = requests.get(url_new, {'headers':header})
 
-# without headers
-response = requests.get(url_new)
+### without headers
+## 1 
+bs = BeautifulSoup(url_new, "html.parser")
+response = requests.get(bs)
+## 2 
+#response = requests.get(url_new)
 
 if response.status_code != 200:
     print(response)
@@ -50,7 +54,7 @@ else:
                 ticket_name_ = element_[i].text.replace(" ","").replace("\n","").replace("\t","")
                 price_ = element_[i+1].text.replace(" ","").replace("\n","").replace("\t","").replace("€","")
                 if (price_=="NOTAVAILABLE") or (price_=='ΔΕΝΔΙΑΤΙΘΕΤΑΙ'):
-                    print(pirce_)
+                    print(price_)
                 else:
                     print(price_)
                     
