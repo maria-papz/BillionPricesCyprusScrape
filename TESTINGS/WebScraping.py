@@ -29,9 +29,14 @@ from docx import Document
 ### Kendea's testings
 
 url_new = "https://intercity-buses.com/en/routes/" + "nicosia-limassol-limassol-nicosia/"
-header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-response = requests.get(url_new, {'headers':header})
-        
+
+# with headers
+#header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+#response = requests.get(url_new, {'headers':header})
+
+# without headers
+response = requests.get(url_new)
+
 if response.status_code != 200:
     print(response)
 else:
