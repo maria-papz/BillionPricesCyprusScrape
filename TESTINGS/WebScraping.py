@@ -25,7 +25,7 @@ from urllib.error import URLError
 from tabula import read_pdf
 from docx import Document
 
-
+"""
 ### Kendea's testings
 
 url_new = "https://intercity-buses.com/en/routes/" + "nicosia-limassol-limassol-nicosia/"
@@ -56,9 +56,9 @@ else:
                 if (price_=="NOTAVAILABLE") or (price_=='ΔΕΝΔΙΑΤΙΘΕΤΑΙ'):
                     print(price_)
                 else:
-                    print(price_)
-                    
+                    print(price_)                  
 """
+
 # Ignore specific warning
 warnings.simplefilter("ignore")
 
@@ -3154,6 +3154,7 @@ for u in range(0, len(urls)):
     subclass_ = urls["Subclass"].iloc[u]
     division_ = urls["Division"].iloc[u]
     retailer_ = urls["Retailer"].iloc[u]
+    
     ########################################################################
     ### Retailers with problem (run only locally but not on GitHub)
     if retailer_=="SupermarketCy":
@@ -3166,7 +3167,6 @@ for u in range(0, len(urls)):
         results_intercity_buses(u)
     ########################################################################        
     '\'\'
-
     #if retailer_=="SupermarketCy":
     #    results_supermarketcy(u) 
     #elif retailer_=="METRO":
@@ -3298,5 +3298,3 @@ combined_df = pd.concat([df, list_], axis=0)
 combined_df.reset_index(drop=True, inplace=True)
 combined_df.to_csv("TESTINGS/Raw-Data.csv", index=False, header=True)
 daily_errors.to_csv("TESTINGS/Daily-Scraping-Errors.csv", index=False)
-
-"""
