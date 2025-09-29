@@ -264,8 +264,8 @@ for u in range(0, len(urls)):
         results_alphamega(u)   
     elif retailer_ == "Cheap Basket":
         results_cheapbasket(u)  
-    elif retailer_ == "METRO":
-        results_metro(u) 
+    #elif retailer_ == "METRO":
+    #    results_metro(u) 
     elif retailer_ == "Opa":
         results_opacy(u)    
     elif retailer_ == "SupermarketCy":
