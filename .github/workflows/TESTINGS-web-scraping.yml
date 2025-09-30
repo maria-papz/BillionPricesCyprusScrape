@@ -7,17 +7,17 @@ name: web-scraping
 run-name: TESTINGS web scraping
 
 # Function to schedule the time (UTC), day, month, and year of the workflow process
-#on:
-#  schedule:
-#    - cron: "09 08 * * *" #UTC time
-
 on:
-  pull_request:
-    # Sequence of patterns matched against refs/heads
-    branches:
-      - web-scraping
-      - web-scraping
-    
+  schedule:
+    - cron: "07 09 * * *" #UTC time
+
+#on:
+#  pull_request:
+#    # Sequence of patterns matched against refs/heads
+#    branches:
+#      - web-scraping
+#      - web-scraping
+   
 jobs:
   getdataandrefreshmap:
     runs-on: ubuntu-latest
