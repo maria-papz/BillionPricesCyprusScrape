@@ -26,7 +26,9 @@ from tabula import read_pdf
 from docx import Document
 
 #############################################################################################################################
-### Kyriaco's testings
+#### Kyriaco's testings
+
+### *Wolt*
 
 ## What this does:
 ## 1. Pretends to be a Chrome browser by using a browser-like User-Agent header (so it doesn’t look like a bot).
@@ -70,7 +72,9 @@ if html_content:
 
 """
 #####################################################################################################################################################
-### Kendea's testings
+#### Kendea's testings
+
+## *Intercity Buses*
 
 url_new = "https://intercity-buses.com/en/routes/" + "nicosia-limassol-limassol-nicosia/"
 
