@@ -25,7 +25,54 @@ from urllib.error import URLError
 from tabula import read_pdf
 from docx import Document
 
+#############################################################################################################################
+### Kyriaco's testings
+
+## What this does:
+## 1. Pretends to be a Chrome browser by using a browser-like User-Agent header (so it doesn’t look like a bot).
+## 2. If the site says 429 Too Many Requests, it waits 5 seconds, then retries (up to 5 times).
+## 3. If it succeeds (status code 200), it returns the page HTML.
+
+url = "https://wolt.com/en/cyp/nicosia/restaurant/kfc-aglantzia/original-duo-with-2-regular-drinks-itemid-41d0698b89d9656832916593"
+
+# Custom headers to mimic a real browser
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+    "Accept-Language": "en-US,en;q=0.9",
+}
+
+def fetch_url(url, headers, retries=5, delay=5):
+    
+    # Tries to fetch a URL with retries in case of 429 Too Many Requests 
+    for attempt in range(1, retries + 1):
+        response = requests.get(url, headers=headers)
+        
+        if response.status_code == 200:
+            print("✅ Success on attempt", attempt)
+            return response.text
+        
+        elif response.status_code == 429:
+            print(f"⚠️ 429 Too Many Requests. Waiting {delay} seconds before retry {attempt}/{retries}...")
+            time.sleep(delay)
+        else:
+            print(f"❌ Failed with status {response.status_code}")
+            return None
+    
+    print("❌ Max retries reached. Could not fetch the page.")
+    return None
+
+# Run it
+html_content = fetch_url(url, headers)
+
+# Preview the first 500 characters if successful
+if html_content:
+    print(html_content[:500])
+
+
+
+
 """
+#####################################################################################################################################################
 ### Kendea's testings
 
 url_new = "https://intercity-buses.com/en/routes/" + "nicosia-limassol-limassol-nicosia/"
@@ -56,8 +103,10 @@ else:
                 if (price_=="NOTAVAILABLE") or (price_=='ΔΕΝΔΙΑΤΙΘΕΤΑΙ'):
                     print(price_)
                 else:
-                    print(price_)                  
-"""
+                    print(price_)  
+#####################################################################################################################################################                    
+
+### The web-scraping code
 
 # Ignore specific warning
 warnings.simplefilter("ignore")
@@ -3298,3 +3347,4 @@ combined_df = pd.concat([df, list_], axis=0)
 combined_df.reset_index(drop=True, inplace=True)
 combined_df.to_csv("TESTINGS/Raw-Data.csv", index=False, header=True)
 daily_errors.to_csv("TESTINGS/Daily-Scraping-Errors.csv", index=False)
+"""
