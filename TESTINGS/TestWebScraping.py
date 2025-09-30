@@ -41,7 +41,7 @@ headers = {
     "Accept-Language": "en-US,en;q=0.9",
 }
 
-def fetch_url(url, headers, retries=5, delay=5):
+def fetch_url(url, headers, retries=10, delay=10):
     
     # Tries to fetch a URL with retries in case of 429 Too Many Requests 
     for attempt in range(1, retries + 1):
