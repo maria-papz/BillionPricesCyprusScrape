@@ -4,7 +4,7 @@
 name: test-web-scraping
 
 # Workflow's description
-run-name: TESTINGS web scraping
+run-name: Test web scraping
 
 # Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
@@ -44,5 +44,5 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
-          git commit -m "scraping completed"
+          git commit -m "test scraping completed"
           git push origin HEAD:main
