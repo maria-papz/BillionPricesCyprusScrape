@@ -68,9 +68,6 @@ html_content = fetch_url(url, headers)
 if html_content:
     print(html_content[:500])
 
-
-
-
 """
 #####################################################################################################################################################
 ### Kendea's testings
@@ -104,8 +101,8 @@ else:
                     print(price_)
                 else:
                     print(price_)  
-#####################################################################################################################################################                    
 
+#####################################################################################################################################################                    
 ### The web-scraping code
 
 # Ignore specific warning
@@ -138,7 +135,7 @@ def results_supermarketcy(u):
     ### with headers 
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
     #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    '\'\'
+    '''
     header = {
         "authority": "www.supermarketcy.com.cy",
         "method": "GET",
@@ -159,7 +156,7 @@ def results_supermarketcy(u):
         "upgrade-insecure-requests": "1",
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
     }
-    '\'\'
+    '''
     ## 1 
     #bs = BeautifulSoup(url_new, "html.parser")
     #response = requests.get(bs, {'headers':header})
@@ -246,7 +243,7 @@ def results_alphamega(u):
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
         soup = BeautifulSoup(response.content, "html.parser")
-        '\'\'
+        '''
         element_soup = soup.find_all("div",{"class":"content-row__item__body padding-size-none padding-position-around margin-sm margin-position- dw-mod"})
         # Extract the script tag content
         script_tag = element_soup[0].find('script')
@@ -257,11 +254,10 @@ def results_alphamega(u):
             if match:
                 price_= float(match.group(1))
                 print(price_)
-        '\'\'
+        '''
         element_soup = soup.find("span",{"class":"text-price fs-5"}).text.strip()
         price_ = element_soup.replace('€', '').replace(',', '.').strip()
         print(price_)
-        
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(price_)
@@ -354,7 +350,7 @@ def results_fueldaddy(u):
             list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_ikea(u):
-    '\'\'
+    '''
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)  
 
@@ -398,7 +394,7 @@ def results_ikea(u):
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    '\'\'
+    '''
     ## 1st way (without header)
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)  
@@ -479,7 +475,7 @@ def results_stephanis(u):
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_cyta(u):
-    '\'\'
+    '''
     q=0
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
@@ -522,7 +518,7 @@ def results_cyta(u):
 
             if matches:
                 price_ = matches[0].replace(",",".")
-    '\'\'
+    '''
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
     
@@ -896,7 +892,7 @@ def results_cablenet(u):
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_CyMinistryEducation(u):
-    '\'\'
+    '''
     ## PREVIOUS VERSION (2024-25)
     url = "http://archeia.moec.gov.cy/mc/698/" + Item_url_
     
@@ -987,7 +983,7 @@ def results_CyMinistryEducation(u):
                 pdf_[8] = pdf_[8].astype('string')
                 value_7 = (float(pdf_[8][15].replace("€",'').replace(".",""))) 
                 price_ = float(value_7)
-    '\'\'
+    '''
     ## 2025-26: NEW VERSION from 17/06/2025
     
     #url = "https://sch.cy/mc/698/" + Item_url_
@@ -1168,7 +1164,7 @@ def results_electroline(u):
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_EUC(u):
-    \"\"\"
+    '''
     euc = tb.read_pdf(Item_url_, pages = '2', pandas_options = {'header': None}, stream = True)
     
     list_euc = []
@@ -1182,7 +1178,7 @@ def results_EUC(u):
             list_euc.append(word)
     
     price_ = (sum(list_euc) + 23000 + 25000 + 23000 + 21000) / (len(list_euc) + 4) #add manually the tuition fees of the medical, dental and veterinary studies
-    \"\"\"
+    '''
     pdf_path = r"PDFs/EUC-tuition-fees-2025-26.pdf"
     amounts = []
     price_1 = 0
@@ -1608,7 +1604,7 @@ def results_rio(u):
                         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
                         
 def results_AHK(u):
-    '\'\'
+    '''
     response = requests.get(Item_url_)
     pdf_AHK = "PDFs/AHK_Mar2024.pdf"
     
@@ -1628,7 +1624,7 @@ def results_AHK(u):
             pdf_reader = pypdf.PdfReader(f)
             page = pdf_reader.pages[2]
             text = page.extract_text()
-    '\'\'
+    '''
     pdf_AHK = "PDFs/AHK_Jul2025.pdf"
     
     with open(pdf_AHK, "rb") as f:
@@ -1853,7 +1849,7 @@ def results_vasos(u):
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 
 def results_meze(u):
-    \"\"\"
+    '''
     header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs,{'headers':header},verify=False)
@@ -1897,7 +1893,7 @@ def results_meze(u):
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    \"\"\"
+    '''
     file_path = "PDFs/Meze_Taverna_Jan2025.docx" #the prices of meat and fish meze are displayed in page 4
     doc = Document(file_path)
     for para in doc.paragraphs:
@@ -1992,7 +1988,7 @@ def results_royal_cigars(u):
 def results_pydixa(u):
     
     pdf_pixida = "PDFs/Pixida-Nic-En-2024-Sept-2.pdf"
-    '\'\'
+    '''
     response = requests.get(Item_url_)
     if response.status_code!=200:
         website_false.append(name_)
@@ -2005,7 +2001,7 @@ def results_pydixa(u):
     else:
     with open(pdf_pixida, "wb") as f:
         f.write(response.content)
-    '\'\'
+    '''
     with pdfplumber.open(pdf_pixida) as pdf:
         page = pdf.pages[4]  
         text = page.extract_text()
@@ -2214,7 +2210,7 @@ def results_sewerage(u):
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
                 daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-'\'\'
+'''
 def results_toyota(u):
     
     if name_ == "The New Toyota Yaris Cross":
@@ -2306,7 +2302,7 @@ def results_toyota(u):
     #if subclass_=="Second-hand motor cars":
         
         #1st way
-        #\"\"\" 
+        ''' 
         query = {"component":"used-stock-cars-v2","fetches":[
         {"fetchType":"fetchUscVehiclePrice","vehicleForSaleId":"4077c595-5c2c-42bd-8133-203d770ad125","context":"used","uscEnv":"production"}
         ]}
@@ -2315,10 +2311,10 @@ def results_toyota(u):
         response = requests.get(Item_url_,{'headers':headers})
         r = requests.post("https://usc-webcomponents.toyota-europe.com/v1/api/data/cy/en?brand=toyota&uscEnv=production", json=query, headers=headers)
         price_ = r.json()['fetches'][0]['result']['fetchResult'] ['sellingPriceInclVAT']
-       # \"\"\"
+       '''
         
         #2nd way
-        \"\"\"
+        '''
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
         soup = BeautifulSoup(response.content, "html.parser")
@@ -2352,8 +2348,8 @@ def results_toyota(u):
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
                 daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-                \"\"\"
-'\'\'
+                '''
+'''
 
 def results_toyota(u):
     
@@ -3072,12 +3068,12 @@ def results_piatsa_gourounaki(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    '\'\'
+    '''
     if os.path.exists(output_path):  # os should be defined !!!
         os.remove(output_path)
     else:
         print("File not found.")
-    '\'\'
+    '''
     
 def results_pagkratios(u):
 
@@ -3215,7 +3211,7 @@ for u in range(0, len(urls)):
     elif retailer_=="Intercity Buses":
         results_intercity_buses(u)
     ########################################################################        
-    '\'\'
+    '''
     #if retailer_=="SupermarketCy":
     #    results_supermarketcy(u) 
     #elif retailer_=="METRO":
@@ -3330,7 +3326,7 @@ for u in range(0, len(urls)):
         results_cyprus_transport(u)
     elif retailer_=="Max 7 Taxi":
         results_max_7_tax(u)
-   '\'\'
+   '''
         
 # Change the type as float
 list_["Price"].astype(float)
