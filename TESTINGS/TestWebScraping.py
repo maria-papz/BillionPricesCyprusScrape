@@ -28,6 +28,26 @@ from docx import Document
 #############################################################################################################################
 #### Kyriaco's testings
 
+### *Cablenet*
+
+## Bundled telecommunication services
+url = "https://cablenet.com.cy/mobile/purple-max-mobile/"
+
+## without headers 
+# 1
+#bs = BeautifulSoup(url, "html.parser")
+#response = requests.get(bs)
+# 2
+response = requests.get(url)
+
+print(response)
+
+soup = BeautifulSoup(response.content, "html.parser")
+element = soup.find_all("div", {"class":"elementor-heading-title elementor-size-default"})
+price = element[1].text.replace("μετά €","").replace("/μήνα ","")
+print(price)
+
+'''
 ### *Wolt*
 
 ## What this does:
@@ -50,17 +70,17 @@ def fetch_url(url, headers, retries=10, delay=10):
         response = requests.get(url, headers=headers)
         
         if response.status_code == 200:
-            print("✅ Success on attempt", attempt)
+            print("Success on attempt", attempt)
             return response.text
         
         elif response.status_code == 429:
-            print(f"⚠️ 429 Too Many Requests. Waiting {delay} seconds before retry {attempt}/{retries}...")
+            print(f"429 Too Many Requests. Waiting {delay} seconds before retry {attempt}/{retries}...")
             time.sleep(delay)
         else:
-            print(f"❌ Failed with status {response.status_code}")
+            print(f"Failed with status {response.status_code}")
             return None
     
-    print("❌ Max retries reached. Could not fetch the page.")
+    print("Max retries reached. Could not fetch the page.")
     return None
 
 # Run it
@@ -69,7 +89,7 @@ html_content = fetch_url(url, headers)
 # Preview the first 500 characters if successful
 if html_content:
     print(html_content[:500])
-
+'''
 """
 #####################################################################################################################################################
 #### Kendea's testings
