@@ -27,7 +27,7 @@ from docx import Document
 
 #############################################################################################################################
 ##### Kyriaco's testings
-
+'''
 #### *Cablenet*
 
 ### Bundled telecommunication services
@@ -101,7 +101,7 @@ html_content = fetch_url(url, headers)
 # Preview the first 500 characters if successful
 if html_content:
     print(html_content[:500])
-'''
+
 """
 #####################################################################################################################################################
 #### Kendea's testings
