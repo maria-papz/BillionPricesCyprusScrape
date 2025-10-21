@@ -27,11 +27,11 @@ from docx import Document
 
 #############################################################################################################################
 ##### Kyriaco's testings
-'''
+
 #### *Cablenet*
 
 ### Bundled telecommunication services
-url = "https://cablenet.com.cy/mobile/purple-max-mobile/"
+url = "https://cablenet.com.cy/hbo-max/"
 
 ### without headers 
 ## 1
@@ -49,14 +49,14 @@ header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/5
 ## 2
 #response = requests.get(url, headers = header) 
 ## 3 
-with httpx.Client(headers = header) as client:
-    response = client.get(url)
+#with httpx.Client(headers = header) as client:
+#    response = client.get(url)
 
 print(response)
 
 soup = BeautifulSoup(response.content, "html.parser")
-element = soup.find_all("div", {"class":"elementor-heading-title elementor-size-default"})
-price = element[1].text.replace("μετά €","").replace("/μήνα ","")
+element = soup.find_all("span", {"style":"font-size: 50px"})
+price = float(element[0].text) #Purple Max Mobile HBO Max Edition	
 print(price)
 
 '''
@@ -101,8 +101,9 @@ html_content = fetch_url(url, headers)
 # Preview the first 500 characters if successful
 if html_content:
     print(html_content[:500])
+'''
 
-"""
+'''
 #####################################################################################################################################################
 #### Kendea's testings
 
@@ -137,7 +138,9 @@ else:
                     print(price_)
                 else:
                     print(price_)  
+'''
 
+"""
 #####################################################################################################################################################                    
 ### The web-scraping code
 
