@@ -38,7 +38,7 @@ url = "https://cablenet.com.cy/hbo-max/"
 #bs = BeautifulSoup(url, "html.parser")
 #response = requests.get(bs)
 ## 2
-#response = requests.get(url)
+response = requests.get(url)
 
 ### with headers 
 header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
