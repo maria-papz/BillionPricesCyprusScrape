@@ -28,12 +28,33 @@ from docx import Document
 #############################################################################################################################
 ##### Kyriaco's testings
 
-#### *Stephanis*
+#================================================================================================================================
+# SupermarketCy
+#================================================================================================================================
+print("SupermarketCy")
+url = "https://www.supermarketcy.com.cy/sifounas-frantzolakia-stroggyla-4tem"
 
-url = "https://www.stephanis.com.cy/en/products/396845"
+response_1 = requests.get(url)
+print(response_2)
+
 header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-response = requests.get(url, headers=header)
-print(response)
+#header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url, headers=header)
+print(response_2)
+
+#================================================================================================================================
+# Stephanis
+#================================================================================================================================
+print("Stephanis")
+url = "https://www.stephanis.com.cy/en/products/396845"
+
+response_1 = requests.get(url)
+print(response_2)
+
+header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+#header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url, headers=header)
+print(response_2)
 
 #soup = BeautifulSoup(response.content, "html.parser")    
 #element_soup = soup.find_all("div", {"class":"listing-details-heading"})
@@ -44,36 +65,94 @@ print(response)
 #price_ = element_soup.text.replace("€","").replace("\n","")
 #print(price_)
 
-#### *Cablenet*
+#================================================================================================================================
+# Public
+#================================================================================================================================
+print("Public")
+url = "https://www.public.cy/public/v1/mm/productPage?sku=1867127&locale=el"
 
+response_1 = requests.get(url)
+print(response_2)
+
+header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+#header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url, headers=header)
+print(response_2)
+
+#================================================================================================================================
+# Cablenet
+#================================================================================================================================
+print("Cablenet")
 ### Bundled telecommunication services
 url = "https://cablenet.com.cy/hbo-max/"
 
 ### without headers 
 ## 1
 #bs = BeautifulSoup(url, "html.parser")
-#response = requests.get(bs)
+#response_1 = requests.get(bs)
 ## 2
-response = requests.get(url)
+response_1 = requests.get(url)
+print(response_1)
 
 ### with headers 
 header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
 #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
 ## 1 
 #bs = BeautifulSoup(url, "html.parser")
-#response = requests.get(bs, {'headers':header})
+#response_2 = requests.get(bs, {'headers':header})
 ## 2
-#response = requests.get(url, headers = header) 
+#response_2 = requests.get(url, headers = header) 
 ## 3 
 #with httpx.Client(headers = header) as client:
-#    response = client.get(url)
-
-print(response)
+#    response_2 = client.get(url)
+print(response_2)
 
 #soup = BeautifulSoup(response.content, "html.parser")
 #element = soup.find_all("span", {"style":"font-size: 50px"})
 #price = float(element[0].text) #Purple Max Mobile HBO Max Edition	
 #print(price)
+
+#================================================================================================================================
+# Intercity Buses
+#================================================================================================================================
+print("Intercity Buses")
+url = "https://intercity-buses.com/en/routes/nicosia-limassol-limassol-nicosia/"
+
+response_1 = requests.get(url)
+print(response_2)
+
+header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+#header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url, headers=header)
+print(response_2)
+
+#================================================================================================================================
+# Moto Race
+#================================================================================================================================
+print("Moto Race")
+url = "https://www.motorace.com.cy/ktm-sx-e-1-20-factory-edition.html"
+
+response_1 = requests.get(url)
+print(response_2)
+
+header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+#header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url, headers=header)
+print(response_2)
+
+#================================================================================================================================
+# Wolt
+#================================================================================================================================
+print("Wolt")
+url = "https://wolt.com/en/cyp/nicosia/restaurant/kfc-aglantzia/twister-itemid-68f9dd086496eabe82f09052"
+
+response_1 = requests.get(url)
+print(response_2)
+
+header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+#header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url, headers=header)
+print(response_2)
 
 '''
 ### *Wolt*
@@ -83,7 +162,7 @@ print(response)
 ## 2. If the site says 429 Too Many Requests, it waits 5 seconds, then retries (up to 5 times).
 ## 3. If it succeeds (status code 200), it returns the page HTML.
 
-url = "https://wolt.com/en/cyp/nicosia/restaurant/kfc-aglantzia/original-duo-with-2-regular-drinks-itemid-41d0698b89d9656832916593"
+url = "https://wolt.com/en/cyp/nicosia/restaurant/kfc-aglantzia/twister-itemid-68f9dd086496eabe82f09052"
 
 # Custom headers to mimic a real browser
 headers = {
