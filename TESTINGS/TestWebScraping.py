@@ -28,6 +28,22 @@ from docx import Document
 #############################################################################################################################
 ##### Kyriaco's testings
 
+#### *Stephanis*
+
+url = "https://www.stephanis.com.cy/en/products/396845"
+header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+response = requests.get(url, headers=header)
+print(response)
+
+#soup = BeautifulSoup(response.content, "html.parser")    
+#element_soup = soup.find_all("div", {"class":"listing-details-heading"})
+#if (len(element_soup) < 2):
+#    element_soup = element_soup[0]
+#else:
+#    element_soup = element_soup[1]
+#price_ = element_soup.text.replace("€","").replace("\n","")
+#print(price_)
+
 #### *Cablenet*
 
 ### Bundled telecommunication services
@@ -38,7 +54,7 @@ url = "https://cablenet.com.cy/hbo-max/"
 #bs = BeautifulSoup(url, "html.parser")
 #response = requests.get(bs)
 ## 2
-#response = requests.get(url)
+response = requests.get(url)
 
 ### with headers 
 header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
@@ -49,15 +65,15 @@ header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/5
 ## 2
 #response = requests.get(url, headers = header) 
 ## 3 
-with httpx.Client(headers = header) as client:
-    response = client.get(url)
+#with httpx.Client(headers = header) as client:
+#    response = client.get(url)
 
 print(response)
 
-soup = BeautifulSoup(response.content, "html.parser")
-element = soup.find_all("span", {"style":"font-size: 50px"})
-price = float(element[0].text) #Purple Max Mobile HBO Max Edition	
-print(price)
+#soup = BeautifulSoup(response.content, "html.parser")
+#element = soup.find_all("span", {"style":"font-size: 50px"})
+#price = float(element[0].text) #Purple Max Mobile HBO Max Edition	
+#print(price)
 
 '''
 ### *Wolt*
