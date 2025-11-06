@@ -35,7 +35,7 @@ print("SupermarketCy")
 url = "https://www.supermarketcy.com.cy/sifounas-frantzolakia-stroggyla-4tem"
 
 response_1 = requests.get(url)
-print(response_2)
+print(response_1)
 
 header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
 #header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
@@ -49,7 +49,7 @@ print("Stephanis")
 url = "https://www.stephanis.com.cy/en/products/396845"
 
 response_1 = requests.get(url)
-print(response_2)
+print(response_1)
 
 header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
 #header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
@@ -72,7 +72,7 @@ print("Public")
 url = "https://www.public.cy/public/v1/mm/productPage?sku=1867127&locale=el"
 
 response_1 = requests.get(url)
-print(response_2)
+print(response_1)
 
 header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
 #header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
@@ -101,7 +101,7 @@ header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/5
 #bs = BeautifulSoup(url, "html.parser")
 #response_2 = requests.get(bs, {'headers':header})
 ## 2
-#response_2 = requests.get(url, headers = header) 
+response_2 = requests.get(url, headers = header) 
 ## 3 
 #with httpx.Client(headers = header) as client:
 #    response_2 = client.get(url)
@@ -119,7 +119,7 @@ print("Intercity Buses")
 url = "https://intercity-buses.com/en/routes/nicosia-limassol-limassol-nicosia/"
 
 response_1 = requests.get(url)
-print(response_2)
+print(response_1)
 
 header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
 #header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
@@ -133,7 +133,7 @@ print("Moto Race")
 url = "https://www.motorace.com.cy/ktm-sx-e-1-20-factory-edition.html"
 
 response_1 = requests.get(url)
-print(response_2)
+print(response_1)
 
 header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
 #header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
@@ -147,7 +147,7 @@ print("Wolt")
 url = "https://wolt.com/en/cyp/nicosia/restaurant/kfc-aglantzia/twister-itemid-68f9dd086496eabe82f09052"
 
 response_1 = requests.get(url)
-print(response_2)
+print(response_1)
 
 header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
 #header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
