@@ -141,6 +141,31 @@ response_2 = requests.get(url, headers=header)
 print(response_2)
 
 #================================================================================================================================
+# EOA Nicosia (https://ndlgo.org.cy/)
+#================================================================================================================================
+print("Water Board of Nicosia")
+url = "https://ndlgo.org.cy/water-supply/water-fees-wbn/"
+
+response_1 = requests.get(url)
+print(response_1)
+
+header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+#header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url, headers=header)
+print(response_2)
+
+print("Sewerage Board of Nicosia")
+url = "https://ndlgo.org.cy/sewage/sewer-fees/"
+
+response_1 = requests.get(url)
+print(response_1)
+
+header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+#header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url, headers=header)
+print(response_2)
+
+#================================================================================================================================
 # Wolt
 #================================================================================================================================
 print("Wolt")
