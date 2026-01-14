@@ -5,6 +5,8 @@
 
 The Billion Prices Cyprus Scrape project involves scraping prices of around 2500 products from 40 retailers on a daily basis. The scraped data is then used to calculate the Consumer Price Index (CPI) against a reference basket.
 
+An improved and updated version of this repository is found here: https://github.com/kvitalis/CyBPP/tree/main 
+
 ## Scraping Process
 
 The scraping process is handled by the scrape_tool.py script. It collects information such as product name, price, subclass, retailers, and subclass average. This data is written to the BillionPricesProject_ProductList.csv file. To add supermarket products for scraping without coding, one can directly modify the AlphaMega.csv file.
