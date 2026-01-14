@@ -5,7 +5,7 @@
 
 The Billion Prices Cyprus Scrape project involves scraping prices of around 2500 products from 40 retailers on a daily basis. The scraped data is then used to calculate the Consumer Price Index (CPI) against a reference basket.
 
-An improved and updated version of this repository is found here: https://github.com/kvitalis/CyBPP/tree/main 
+*An improved and updated version of this repository is found here:* https://github.com/kvitalis/CyBPP/tree/main 
 
 ## Scraping Process
 
