@@ -5,7 +5,7 @@ beautifulsoup4==4.12.3
 xlrd==2.0.1
 openpyxl==3.1.2
 xlsxWriter==3.2.0
-pypdf==3.9.0
+pypdf==6.6.2
 tabula-py==2.9.0
 matplotlib==3.8.3
 pdfplumber==0.11.0
