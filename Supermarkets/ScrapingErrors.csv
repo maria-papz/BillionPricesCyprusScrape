@@ -1,12 +1,442 @@
 Name,Subclass,Url,Division,Retailer
-Dettol Soft on Skin Hard on Dirt Antibacterial Liquid Hand Wash Soothe 250 ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",https://www.alphamega.com.cy/en/groceries/personal-care/shower-bath-soap/liquid-hand-wash/dettol-soft-on-skin-hard-on-dirt-antibacterial-liquid-hand-wash-soothe-250-ml,MISCELLANEOUS GOODS AND SERVICES,Alphamega
-Garnier SkinActive Moisture Bomb Tissue Mask 1 Piece,"Articles for personal hygiene and wellness, esoteric products and beauty products",https://www.alphamega.com.cy/en/groceries/personal-care/facial-body-care/facial-care/face-masks/garnier-skinactive-moisture-bomb-tissue-mask-1-piece,MISCELLANEOUS GOODS AND SERVICES,Alphamega
-Always Daily Fresh Normal Pantyliners 30 Pieces,"Articles for personal hygiene and wellness, esoteric products and beauty products",https://www.alphamega.com.cy/en/groceries/personal-care/sanitary-protection/pantyliner/always-daily-fresh-normal-pantyliners-30-pieces,MISCELLANEOUS GOODS AND SERVICES,Alphamega
-Agrou Rodostagma 250 ml,Confectionery products,https://www.alphamega.com.cy/en/groceries/food-cupboard/home-baking/syrups/agrou-rodostagma-250-ml,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
-Corona Extra Beer 6x330 ml,Lager beer,https://www.alphamega.com.cy/en/groceries/drinks/beer-cider/beer/corona-extra-beer-6x330-ml,ALCOHOLIC BEVERAGES AND TOBACCO,Alphamega
-Keo Beer Cans 8X330 ml,Lager beer,https://www.alphamega.com.cy/en/groceries/drinks/beer-cider/beer/keo-beer-cans-8x330-ml,ALCOHOLIC BEVERAGES AND TOBACCO,Alphamega
-Alphamega Greek Extra Virgin Olive Oil 1 L,Olive oil,https://www.alphamega.com.cy/en/groceries/food-cupboard/oils-vinegars-sauces-dressings/olive-oil/alphamega-greek-extra-virgin-olive-oil-1-l,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
-Alphamega Cypriot Extra Virgin Olive Oil 1 L,Olive oil,https://www.alphamega.com.cy/en/groceries/food-cupboard/oils-vinegars-sauces-dressings/olive-oil/alphamega-cypriot-extra-virgin-olive-oil-1-l,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
-Eliohori Extra Virgin Olive Oil 1 L,Olive oil,https://www.alphamega.com.cy/en/groceries/food-cupboard/oils-vinegars-sauces-dressings/olive-oil/alphamega-greek-extra-virgin-olive-oil-1-l,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
-"Natural Life Tea Chamomile Tea, Caffeine Free 20x1.0 g",Tea,https://www.alphamega.com.cy/en/groceries/food-cupboard/coffee-tea-cocoa/tea/natural-life-tea-chamomile-tea-caffeine-free-20x1-0-g,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
-Ahmad Tea English Breakfast 20 Tea Bags,Tea,https://www.alphamega.com.cy/en/groceries/food-cupboard/coffee-tea-cocoa/tea/ahmad-tea-english-breakfast-20-tea-bags,FOOD AND NON-ALCOHOLIC BEVERAGES,Alphamega
+Gillette Blue Ii Razors 5Pcs,"Articles for personal hygiene and wellness, esoteric products and beauty products",https://www.supermarketcy.com.cy/en/gillette-blue-ii-razors-5pcs-1,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Garnier Skin Active Aloe Refreshing Gel Wash For Normal/Combination Skin 150ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",https://www.supermarketcy.com.cy/en/garnier-skin-active-aloe-refreshing-gel-wash-for-normalcombination-skin-150ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Dettol Soft On Skin Soothe Lavender & Violet Blossom Hand Wash 250ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",https://www.supermarketcy.com.cy/en/dettol-soft-on-skin-soothe-lavender-violet-blossom-hand-wash-250ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Every Day Hyperdry Super Ultra Plus 18Pcs,"Articles for personal hygiene and wellness, esoteric products and beauty products",https://www.supermarketcy.com.cy/en/every-day-hyperdry-super-ultra-plus-18pcs,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Listerine Fresh Burst 250ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",https://www.supermarketcy.com.cy/en/listerine-fresh-burst-250ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Garnier Skin Active Moisture Bomb Tissue Mask 1Pc 28g,"Articles for personal hygiene and wellness, esoteric products and beauty products",https://www.supermarketcy.com.cy/en/garnier-skin-active-moisture-bomb-tissue-mask-1pc-28g,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Str8 Ahead After Shave Lotion 100ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",https://www.supermarketcy.com.cy/en/str8-ahead-after-shave-lotion-100ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Sensodyne Repair & Protect Cool Mint 75ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",https://www.supermarketcy.com.cy/en/sensodyne-repair-protect-cool-mint-75ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Septona Bio Cotton Buds Biodegradable 100Pcs,"Articles for personal hygiene and wellness, esoteric products and beauty products",https://www.supermarketcy.com.cy/en/septona-bio-cotton-buds-biodegradable-100pcs,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Dermomed Sensualita Argan Shower Gel 650ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",https://www.supermarketcy.com.cy/en/dermomed-sensualita-argan-shower-gel-650ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Always Ultra Secure Night With Wings 12Pcs,"Articles for personal hygiene and wellness, esoteric products and beauty products",https://www.supermarketcy.com.cy/en/always-ultra-secure-night-with-wings-12pcs,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Gillette Shave Foam Original 200ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",https://www.supermarketcy.com.cy/en/gillette-shave-foam-original-200ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Tippys Pads Make Up Remover 80Pcs,"Articles for personal hygiene and wellness, esoteric products and beauty products",https://www.supermarketcy.com.cy/en/tippys-pads-make-up-remover-80pcs,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Sensi Soft Zig Zag Pre Cut Cotton 150g,"Articles for personal hygiene and wellness, esoteric products and beauty products",https://www.supermarketcy.com.cy/en/sensi-soft-zig-zag-pre-cut-cotton-150g,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Lux Secret Poppy Hand Wash 380ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",https://www.supermarketcy.com.cy/en/lux-secret-poppy-hand-wash-380ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Nivea Men Deodorant Dry Impact Spray 150ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",https://www.supermarketcy.com.cy/en/nivea-men-deodorant-dry-impact-spray-150ml-2,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Neutro Roberts Deodorant Powder Fresh Roll On 50ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",https://www.supermarketcy.com.cy/en/neutro-roberts-deodorant-powder-fresh-roll-on-50ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Aquafresh Fresh & Minty 2x75ml,"Articles for personal hygiene and wellness, esoteric products and beauty products",https://www.supermarketcy.com.cy/en/aquafresh-fresh-minty-2x75ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Elda Toilet Paper 24Pcs,"Articles for personal hygiene and wellness, esoteric products and beauty products",https://www.supermarketcy.com.cy/en/elda-toilet-paper-24pcs,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Always Dailies Fresh & Protect Normal Fresh Scent 30Pcs,"Articles for personal hygiene and wellness, esoteric products and beauty products",https://www.supermarketcy.com.cy/en/always-dailies-fresh-protect-normal-fresh-scent-30pcs,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Rex Toilet Paper 48Pcs,"Articles for personal hygiene and wellness, esoteric products and beauty products",https://www.supermarketcy.com.cy/en/rex-toilet-paper-48pcs,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Jotis Sweet & Balance Sweetener With Stevia 80g,Artificial sugar substitutes,https://www.supermarketcy.com.cy/en/jotis-sweet-balance-sweetener-with-stevia-80g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Canderel Stevia Sweetener Granular 75g,Artificial sugar substitutes,https://www.supermarketcy.com.cy/en/canderel-stevia-sweetener-granular-75g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Sweet N Low Sugar Substitute Granular 80g,Artificial sugar substitutes,https://www.supermarketcy.com.cy/en/sweet-n-low-sugar-substitute-granular-80g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Nounou Farine Lactee 300g,Baby food,https://www.supermarketcy.com.cy/en/nounou-farine-lactee-300g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Nounou Frisogrow 3 400g,Baby food,https://www.supermarketcy.com.cy/en/nounou-frisogrow-3-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+S 26 Progress Gold 3 400g,Baby food,https://www.supermarketcy.com.cy/en/s-26-progress-gold-3-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Hipp Organic Milk & Cereal Banana Peach 250g,Baby food,https://www.supermarketcy.com.cy/en/hipp-organic-milk-cereal-banana-peach-250g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Hipp Organic Baby Cereal 100% Rice 200g,Baby food,https://www.supermarketcy.com.cy/en/hipp-organic-baby-cereal-100-rice-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Hipp Organic Baby Cereal 100% Multi Grain Without Milk 200g,Baby food,https://www.supermarketcy.com.cy/en/hipp-organic-baby-cereal-100-multi-grain-without-milk-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Humana Goodnight Farin Lacte Whole Grain & Banana No Added Sugar 200g,Baby food,https://www.supermarketcy.com.cy/en/humana-goodnight-farin-lacte-whole-grain-banana-no-added-sugar-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Nestle Fruit Ceral Cream With Milk 400g,Baby food,https://www.supermarketcy.com.cy/en/nestle-fruit-ceral-cream-with-milk-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Nestle Farine Lactee With Milk 300g,Baby food,https://www.supermarketcy.com.cy/en/nestle-farine-lactee-with-milk-300g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Nounou Frisogrow Plus+ 4 800g,Baby food,https://www.supermarketcy.com.cy/en/nounou-frisogrow-plus-4-800g-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Nan Optipro HM- 0 4 400g,Baby food,https://www.supermarketcy.com.cy/en/nan-optipro-hm-0-4-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Beef Cubes 1kg,Beef and veal,https://www.supermarketcy.com.cy/en/beef-cubes-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Beef Minced 1kg,Beef and veal,https://www.supermarketcy.com.cy/en/beef-minced-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Beef Liver 1kg,Beef and veal,https://www.supermarketcy.com.cy/en/beef-liver-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Sifounas Common White Sliced Bread 970g,Bread,https://www.supermarketcy.com.cy/en/sifounas-common-white-sliced-bread-970g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Sifounas White Bread 560g,Bread,https://www.supermarketcy.com.cy/en/sifounas-white-bread-560g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Sifounas Whole Wheat Small Sliced Bread 500g,Bread,https://www.supermarketcy.com.cy/en/sifounas-whole-wheat-small-sliced-bread-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Sifounas Whole Grain Sliced Bread 780g,Bread,https://www.supermarketcy.com.cy/en/sifounas-whole-grain-sliced-bread-780g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Sifounas White Bread 970g,Bread,https://www.supermarketcy.com.cy/en/sifounas-white-bread-970g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Sifounas Common White Sliced Bread 560g,Bread,https://www.supermarketcy.com.cy/en/sifounas-common-white-sliced-bread-560g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Oreo O's Cereal 350g,Breakfast cereals,https://www.supermarketcy.com.cy/en/oreo-os-cereal-350g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Kelloggs Coco Pops Jumbos 375g,Breakfast cereals,https://www.supermarketcy.com.cy/en/kelloggs-coco-pops-jumbos-375g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Kelloggs Crunchy Nut 375g,Breakfast cereals,https://www.supermarketcy.com.cy/en/kelloggs-crunchy-nut-375g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Quaker Crunchy Clusters With Oats And Fruits 450g,Breakfast cereals,https://www.supermarketcy.com.cy/en/quaker-crunchy-clusters-with-oats-and-fruits-450g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Kelloggs Corn Flakes 375g,Breakfast cereals,https://www.supermarketcy.com.cy/en/kelloggs-corn-flakes-375g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Quaker Oats 500g,Breakfast cereals,https://www.supermarketcy.com.cy/en/quaker-oats-500g-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Kelloggs Special K 335g,Breakfast cereals,https://www.supermarketcy.com.cy/en/kelloggs-special-k-335g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Kelloggs Coco Pops Chocos 550g,Breakfast cereals,https://www.supermarketcy.com.cy/en/kelloggs-coco-pops-chocos-550g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Kerrygold Salted Butter 250g,Butter,https://www.supermarketcy.com.cy/en/kerrygold-salted-butter-250g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Lurpak Salted Butter 250g,Butter,https://www.supermarketcy.com.cy/en/lurpak-salted-butter-250g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Lurpak Soft Unsalted Butter 225g,Butter,https://www.supermarketcy.com.cy/en/lurpak-soft-unsalted-butter-225g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Lurpak Soft Salted Butter 225g,Butter,https://www.supermarketcy.com.cy/en/lurpak-soft-salted-butter-225g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Halloumas Traditional Halloumi P.d.o. 600g,Cheese and curd,https://www.supermarketcy.com.cy/en/halloumas-traditional-halloumi-pdo-600g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Vepo Cheddar 10Slices 200g,Cheese and curd,https://www.supermarketcy.com.cy/en/vepo-cheddar-10slices-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Arla Natural Cream Cheese 200g,Cheese and curd,https://www.supermarketcy.com.cy/en/arla-natural-cream-cheese-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Philadelphia 200g,Cheese and curd,https://www.supermarketcy.com.cy/en/philadelphia-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Vepo Gouda 20Slices 400g,Cheese and curd,https://www.supermarketcy.com.cy/en/vepo-gouda-20slices-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+La Vache Qui Rit Original 8Pcs,Cheese and curd,https://www.supermarketcy.com.cy/en/la-vache-qui-rit-original-8pcs-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Dodoni Light In Brine 400g,Cheese and curd,https://www.supermarketcy.com.cy/en/dodoni-light-in-brine-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Charalambides Christis Feta 200g,Cheese and curd,https://www.supermarketcy.com.cy/en/charalambides-christis-feta-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Bakandys Milk Chocolate Couverture 4x37.5g,Chocolate,https://www.supermarketcy.com.cy/en/bakandys-milk-chocolate-couverture-4x375g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Bakandys White Chocolate Couverture 4x37.5g,Chocolate,https://www.supermarketcy.com.cy/en/bakandys-white-chocolate-couverture-4x375g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+"Omo Lavender & Jasmine Powder 45 Washes 2,520kg",Cleaning and maintenance products,https://www.supermarketcy.com.cy/en/omo-lavender-jasmine-powder-45-washes-2520kg-1,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+Comfort Gold Blueberries & Purple Orchid Fabric Softener 2L,Cleaning and maintenance products,https://www.supermarketcy.com.cy/en/comfort-gold-blueberries-purple-orchid-fabric-softener-2l,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES",SupermarketCy
+Eureka Dish Liquid With Vinegar 750ml,Cleaning and maintenance products,https://www.supermarketcy.com.cy/en/eureka-dish-liquid-with-vinegar-750ml,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+Eureka Dish Liquid Lemon 750ml,Cleaning and maintenance products,https://www.supermarketcy.com.cy/en/eureka-dish-liquid-lemon-750ml,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES",SupermarketCy
+Roklin Antibacterial Spray For Bathroom 750ml,Cleaning and maintenance products,https://www.supermarketcy.com.cy/en/roklin-antibacterial-spray-for-bathroom-750ml,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES",SupermarketCy
+Fairy Ultra Lemon Dish Liquid 900ml,Cleaning and maintenance products,https://www.supermarketcy.com.cy/en/fairy-ultra-lemon-dish-liquid-900ml,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+Comfort Pure Fabric Softener 2L,Cleaning and maintenance products,https://www.supermarketcy.com.cy/en/comfort-pure-fabric-softener-2l,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES",SupermarketCy
+Comfort Gold Lilies & Wild Berries Fabric Softener 4L,Cleaning and maintenance products,https://www.supermarketcy.com.cy/en/comfort-gold-lilies-wild-berries-fabric-softener-4l,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES",SupermarketCy
+Comfort Fresh Fabric Softener 4L,Cleaning and maintenance products,https://www.supermarketcy.com.cy/en/comfort-fresh-fabric-softener-4l,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES",SupermarketCy
+Soupline Active Fresh Sea Breeze Fabric Softener 1.2L,Cleaning and maintenance products,https://www.supermarketcy.com.cy/en/soupline-active-fresh-sea-breeze-fabric-softener-12l,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES",SupermarketCy
+Cif Classic General Cleaning Cream 500ml,Cleaning and maintenance products,https://www.supermarketcy.com.cy/en/cif-classic-general-cleaning-cream-500ml,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+Lenor La Collection Bliss Concentrate Fabric Softener 55 Washes 1.155L,Cleaning and maintenance products,https://www.supermarketcy.com.cy/en/lenor-la-collection-bliss-concentrate-fabric-softener-55-washes-1155l,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES",SupermarketCy
+Klinex Chlorine General Cleaning Spray 750ml,Cleaning and maintenance products,https://www.supermarketcy.com.cy/en/klinex-chlorine-general-cleaning-spray-750ml,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+Ajax Multi Cleaning Spray 4 In 1 500ml,Cleaning and maintenance products,https://www.supermarketcy.com.cy/en/ajax-multi-cleaning-spray-4-in-1-500ml-1,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+Palmolive Ultra Fresh Lemon Dish Liquid 500ml,Cleaning and maintenance products,https://www.supermarketcy.com.cy/en/palmolive-ultra-fresh-lemon-dish-liquid-500ml-1,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES",SupermarketCy
+Dixan Ocean Fresh Powder 44 Washes 2.2kg,Cleaning and maintenance products,https://www.supermarketcy.com.cy/en/dixan-ocean-fresh-powder-44-washes-22kg,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+Ariel Color Touch Of Lenor Freshness Liquid 70 Washes 3.850L,Cleaning and maintenance products,https://www.supermarketcy.com.cy/en/ariel-color-touch-of-lenor-freshness-liquid-70-washes-3850l,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+Dettol Power & Fresh Spray Citrus 500ml,Cleaning and maintenance products,https://www.supermarketcy.com.cy/en/dettol-power-fresh-spray-citrus-500ml,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+Dixan Power Caps Color 40Pcs,Cleaning and maintenance products,https://www.supermarketcy.com.cy/en/dixan-power-caps-color-40pcs,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES",SupermarketCy
+Eureka Massalias Brilliant White Liquid 57 Washes 2.592L,Cleaning and maintenance products,https://www.supermarketcy.com.cy/en/eureka-massalias-brilliant-white-liquid-57-washes-2592l,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES",SupermarketCy
+Pyrsos Charcoal 5 kg,Coal,https://www.supermarketcy.com.cy/en/pyrsos-charcoal-5kg,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SupermarketCy
+Etosha Charcoal 5 Kg,Coal,https://www.supermarketcy.com.cy/en/etosha-charcoal-5kg,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SupermarketCy
+Cadbury Cocoa 125g,Cocoa and powdered chocolate,https://www.supermarketcy.com.cy/en/cadbury-cocoa-125g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Cadbury Drinking Chocolate 500g,Cocoa and powdered chocolate,https://www.supermarketcy.com.cy/en/cadbury-drinking-chocolate-500g-2,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Laikou Jolly Cocoa 100g,Cocoa and powdered chocolate,https://www.supermarketcy.com.cy/en/jolly-cocoa-100g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Blossom Cocoa 100g,Cocoa and powdered chocolate,https://www.supermarketcy.com.cy/en/blossom-cocoa-100g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Douwe Egberts Coffee Espresso 185g,Coffee,https://www.supermarketcy.com.cy/en/douwe-egberts-coffee-espresso-185g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Nescafe Classic Decaf 100g,Coffee,https://www.supermarketcy.com.cy/en/nescafe-classic-decaf-100g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Charalambous Cyprus Coffee Silver 200g,Coffee,https://www.supermarketcy.com.cy/en/charalambous-cyprus-coffee-silver-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Nescafe Classic 100g,Coffee,https://www.supermarketcy.com.cy/en/nescafe-classic-100g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Nescafe Classic 200g,Coffee,https://www.supermarketcy.com.cy/en/nescafe-classic-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Charalambous Cyprus Coffee 200g,Coffee,https://www.supermarketcy.com.cy/en/charalambous-cyprus-coffee-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Laikou Cyprus Coffee Gold 500g,Coffee,https://www.supermarketcy.com.cy/en/laikou-cyprus-coffee-gold-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Laikou Cyprus Coffee Gold 200g,Coffee,https://www.supermarketcy.com.cy/en/laikou-cyprus-coffee-gold-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Nescafe Azera Freddo Espresso Intenso 90g,Coffee,https://www.supermarketcy.com.cy/en/nescafe-azera-freddo-espresso-intenso-90g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Celest Caf? Classic 200g,Coffee,https://www.supermarketcy.com.cy/en/celest-cafe-classic-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Nescafe Gold 95g,Coffee,https://www.supermarketcy.com.cy/en/nescafe-gold-95g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Jacobs Instant Coffee 100g,Coffee,https://www.supermarketcy.com.cy/en/jacobs-instant-coffee-100g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Amalia Maize Starch 400g,Confectionery products,https://www.supermarketcy.com.cy/en/amalia-maize-starch-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Royal Baking Powder 113g,Confectionery products,https://www.supermarketcy.com.cy/en/royal-baking-powder-113g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Natural Life Baking Soda 120g,Confectionery products,https://www.supermarketcy.com.cy/en/natural-life-baking-soda-120g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Carltona Corn Flour 450g,Confectionery products,https://www.supermarketcy.com.cy/en/carltona-corn-flour-450g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Spry Vegetable Shortening 350g,Confectionery products,https://www.supermarketcy.com.cy/en/spry-vegetable-shortening-350g-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Stella Citron Water 500ml,Confectionery products,https://www.supermarketcy.com.cy/en/stella-citron-water-500ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Jotis Instant Yeast 3x8g,Confectionery products,https://www.supermarketcy.com.cy/en/jotis-instant-yeast-3x8g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Amalia Fine Desiccated Coconut 250g,Confectionery products,https://www.supermarketcy.com.cy/en/amalia-fine-desiccated-coconut-250g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Bakandys Lady Fingers 200g,Confectionery products,https://www.supermarketcy.com.cy/en/bakandys-lady-fingers-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Agrou Rosewater 500ml,Confectionery products,https://www.supermarketcy.com.cy/en/agrou-rosewater-500ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Charalambous Cheese Puffs 10X22g,Crisps,https://www.supermarketcy.com.cy/en/charalambous-cheese-puffs-10x22g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Lays Salt Vinegar 160g,Crisps,https://www.supermarketcy.com.cy/en/lays-salt-vinegar-160g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Lays Salted 160g,Crisps,https://www.supermarketcy.com.cy/en/lays-salted-160g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+El Sabor Nacho Chips Texas Bbq Flavor 225g,Crisps,https://www.supermarketcy.com.cy/en/el-sabor-nacho-chips-texas-bbq-flavor-225g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Jumbo Country Chips Balsamic Vinegar & Caramelised Onion Gluten Free 150g,Crisps,https://www.supermarketcy.com.cy/en/jumbo-country-chips-balsamic-vinegar-caramelised-onion-gluten-free-150g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Amalia Dried Apricots 250g,Dried fruit and nuts,https://www.supermarketcy.com.cy/en/amalia-dried-apricots-250g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Serano Roasted Salted Peanuts 175g,Dried fruit and nuts,https://www.supermarketcy.com.cy/en/serano-roasted-salted-peanuts-175g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Serano Snackin' Good Dried Prunes With Pit No Added Sugar 275g,Dried fruit and nuts,https://www.supermarketcy.com.cy/en/serano-snackin-good-dried-prunes-with-pit-no-added-sugar-275g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Amalia Pistachios 160g,Dried fruit and nuts,https://www.supermarketcy.com.cy/en/amalia-pistachios-160g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Serano Roasted Salted Peanuts 200g,Dried fruit and nuts,https://www.supermarketcy.com.cy/en/serano-roasted-salted-peanuts-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Livadioti Green Label Roasted Almonds 120g,Dried fruit and nuts,https://www.supermarketcy.com.cy/en/livadioti-green-label-roasted-almonds-120g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Serano Raisins 300g,Dried fruit and nuts,https://www.supermarketcy.com.cy/en/serano-raisins-300g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Serano Raw Cashew Nuts 140g,Dried fruit and nuts,https://www.supermarketcy.com.cy/en/serano-raw-cashew-nuts-140g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Livadioti Walnuts 140g,Dried fruit and nuts,https://www.supermarketcy.com.cy/en/livadioti-walnuts-140g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Livadioti Dried Figs 300g,Dried fruit and nuts,https://www.supermarketcy.com.cy/en/livadioti-dried-figs-300g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Karpos Apo Ti Gi Mas Dried Prunes With Pit 400g,Dried fruit and nuts,https://www.supermarketcy.com.cy/en/karpos-apo-ti-gi-mas-dried-prunes-with-pit-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Mesogeios Baked Beans In Tomato Sauce 400g,"Dried vegetables, other preserved or processed vegetables",https://www.supermarketcy.com.cy/en/mesogeios-baked-beans-in-tomato-sauce-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Mesogeios Sweet Corn 340g,"Dried vegetables, other preserved or processed vegetables",https://www.supermarketcy.com.cy/en/mesogeios-sweet-corn-340g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Mesogeios White Beans 400g,"Dried vegetables, other preserved or processed vegetables",https://www.supermarketcy.com.cy/en/mesogeios-white-beans-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Mesogeios Red Kidney Beans 400g,"Dried vegetables, other preserved or processed vegetables",https://www.supermarketcy.com.cy/en/mesogeios-red-kidney-beans-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Mesogeios Chick Peas 400g,"Dried vegetables, other preserved or processed vegetables",https://www.supermarketcy.com.cy/en/mesogeios-chick-peas-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Mesogeios Whole Mushrooms 400g,"Dried vegetables, other preserved or processed vegetables",https://www.supermarketcy.com.cy/en/mesogeios-whole-mushrooms-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Snack Ham Slices 500g,"Dried, salted or smoked meat",https://www.supermarketcy.com.cy/en/snack-ham-slices-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Grigoriou Smoked Turkey Slices 200g,"Dried, salted or smoked meat",https://www.supermarketcy.com.cy/en/grigoriou-smoked-turkey-slices-200g-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Grigoriou Ham Slices 300g,"Dried, salted or smoked meat",https://www.supermarketcy.com.cy/en/grigoriou-ham-slices-300g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Grigoriou Salami Extra 300g,"Dried, salted or smoked meat",https://www.supermarketcy.com.cy/en/grigoriou-salami-extra-300g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Snack Smoked Pork Loin Slices 150g,"Dried, salted or smoked meat",https://www.supermarketcy.com.cy/en/snack-smoked-pork-loin-slices-150g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Chrysodalia Smoked Pork Loin Slices 300g,"Dried, salted or smoked meat",https://www.supermarketcy.com.cy/en/chrysodalia-smoked-pork-loin-slices-300g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Snack Smoked Salami 500g,"Dried, salted or smoked meat",https://www.supermarketcy.com.cy/en/snack-smoked-salami-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Chrysodalia Smoked Turkey Breast Slices 200g,"Dried, salted or smoked meat",https://www.supermarketcy.com.cy/en/chrysodalia-smoked-turkey-breast-slices-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Snack Streaky Bacon Slices 300g,"Dried, salted or smoked meat",https://www.supermarketcy.com.cy/en/snack-streaky-bacon-slices-300g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Snack Smoked Turkey Slices 500g,"Dried, salted or smoked meat",https://www.supermarketcy.com.cy/en/snack-smoked-turkey-slices-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Chameau Anchovies 50g,"Dried, smoked or salted fish and seafood",https://www.supermarketcy.com.cy/en/chameau-anchovies-50g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Chameau Sardines In Sunflower Oil 120g,"Dried, smoked or salted fish and seafood",https://www.supermarketcy.com.cy/en/chameau-sardines-in-sunflower-oil-120g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Wiko Herring Filets In Tomato Sauce 200g,"Dried, smoked or salted fish and seafood",https://www.supermarketcy.com.cy/en/wiko-herring-filets-in-tomato-sauce-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Flokos Mackerel Fillet Smoked In Vegetable Oil 160g,"Dried, smoked or salted fish and seafood",https://www.supermarketcy.com.cy/en/flokos-mackerel-fillet-smoked-in-vegetable-oil-160g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Regis Ice Cream Milk Bar With Chocolate Coating 6X75ml,Edible ices and ice cream,https://www.supermarketcy.com.cy/en/regis-ice-cream-milk-bar-with-chocolate-coating-6x75ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Regis Agrino Mini Ice Cream Cone 8Χ35ml,Edible ices and ice cream,https://www.supermarketcy.com.cy/en/regis-agrino-mini-ice-cream-cone-8ch35ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Papafilipou N-ice Ice Cubes 2.7kg,Edible ices and ice cream,https://www.supermarketcy.com.cy/en/papafilipou-n-ice-ice-cubes-27kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Papafilipou N-ice Ice Cubes 1.5kg,Edible ices and ice cream,https://www.supermarketcy.com.cy/en/papafilipou-n-ice-ice-cubes-15kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Vasilico Eggs Small Eggs 30Pcs,Eggs,https://www.supermarketcy.com.cy/en/vasilico-eggs-small-eggs-30pcs,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Vasilico Eggs Medium 6Pcs,Eggs,https://www.supermarketcy.com.cy/en/vasilico-eggs-medium-6pcs,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Tzioni Farm Medium Eggs 12Pcs,Eggs,https://www.supermarketcy.com.cy/en/tzioni-farm-medium-eggs-12pcs,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Vasilico Eggs Medium Eggs 15Pcs,Eggs,https://www.supermarketcy.com.cy/en/vasilico-eggs-medium-eggs-15pcs,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Kazazis Bros Plain Flour 00 1kg,Flours and other cereals,https://www.supermarketcy.com.cy/en/kazazis-bros-plain-flour-00-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Mitsides All Purpose Flour 1kg,Flours and other cereals,https://www.supermarketcy.com.cy/en/mitsides-all-purpose-flour-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Mitsides Plain Flour 00 1kg,Flours and other cereals,https://www.supermarketcy.com.cy/en/mitsides-plain-flour-00-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Mitsides Self Raising Flour 1kg,Flours and other cereals,https://www.supermarketcy.com.cy/en/mitsides-self-raising-flour-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Kazazis Bros All Purpose Flour 1kg,Flours and other cereals,https://www.supermarketcy.com.cy/en/kazazis-bros-all-purpose-flour-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Mitsides Village Flour 1kg,Flours and other cereals,https://www.supermarketcy.com.cy/en/mitsides-village-flour-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Octopus Fresh 1.5kg,Fresh or chilled fish,https://www.supermarketcy.com.cy/en/octopus-fresh-15kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Squid Cleaned 1kg,Fresh or chilled fish,https://www.supermarketcy.com.cy/en/squid-cleaned-1kg-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Bream Fresh Cleaned 1.5kg,Fresh or chilled fish,https://www.supermarketcy.com.cy/en/bream-fresh-cleaned-15kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Cuttlefish Cleaned 1kg,Fresh or chilled fish,https://www.supermarketcy.com.cy/en/cuttlefish-cleaned-1kg-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Oranges Merlin 1kg,Fresh or chilled fruit,https://www.supermarketcy.com.cy/en/oranges-merlin-1kg-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Bananas Imported 1kg,Fresh or chilled fruit,https://www.supermarketcy.com.cy/en/bananas-imported-1kg-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Pears Krystalia 1kg,Fresh or chilled fruit,https://www.supermarketcy.com.cy/en/pears-krystalia-1kg-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Kiwi 1kg,Fresh or chilled fruit,https://www.supermarketcy.com.cy/en/kiwi-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Pear Conference 1kg,Fresh or chilled fruit,https://www.supermarketcy.com.cy/en/pear-conference-1kg-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Bgw Frozen Strawberries 500g,Fresh or chilled fruit,https://www.supermarketcy.com.cy/en/bgw-frozen-strawberries-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Bananas Cyprus 1kg,Fresh or chilled fruit,https://www.supermarketcy.com.cy/en/bananas-cyprus-1kg-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Oranges For Juice 1kg,Fresh or chilled fruit,https://www.supermarketcy.com.cy/en/oranges-for-juice-1kg-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Apples Granny Smith 1kg,Fresh or chilled fruit,https://www.supermarketcy.com.cy/en/apples-granny-smith-1kg-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Apples Red Delicious 1kg,Fresh or chilled fruit,https://www.supermarketcy.com.cy/en/apples-red-delicious-1kg-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Apples Golden Delicious 1kg,Fresh or chilled fruit,https://www.supermarketcy.com.cy/en/apples-golden-delicious-1kg-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Bgw Frozen Blackberry 500g,Fresh or chilled fruit,https://www.supermarketcy.com.cy/en/bgw-frozen-blackberry-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Grape Red Globe 1kg,Fresh or chilled fruit,https://www.supermarketcy.com.cy/en/grape-red-globe-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Apples Pink Lady 1kg,Fresh or chilled fruit,https://www.supermarketcy.com.cy/en/apples-pink-lady-1kg-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Grape Green Thomson 1kg,Fresh or chilled fruit,https://www.supermarketcy.com.cy/en/grape-green-thomson-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Taro Rout 1kg,Fresh or chilled vegetables other than potatoes and other tubers,https://www.supermarketcy.com.cy/en/taro-rout-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Zucchini White 1kg,Fresh or chilled vegetables other than potatoes and other tubers,https://www.supermarketcy.com.cy/en/zucchini-white-1kg-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Tomatoes 1kg,Fresh or chilled vegetables other than potatoes and other tubers,https://www.supermarketcy.com.cy/en/tomatoes-1kg-2,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Lemons Green 1kg,Fresh or chilled vegetables other than potatoes and other tubers,https://www.supermarketcy.com.cy/en/lemons-green-1kg-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Carrots Uncleaned 1kg,Fresh or chilled vegetables other than potatoes and other tubers,https://www.supermarketcy.com.cy/en/carrots-uncleaned-1kg-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Sweet Potatoes 1kg,Fresh or chilled vegetables other than potatoes and other tubers,https://www.supermarketcy.com.cy/en/sweet-potatoes-1kg-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Cucumbers Field 1kg,Fresh or chilled vegetables other than potatoes and other tubers,https://www.supermarketcy.com.cy/en/cucumbers-field-1kg-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Cucumber Greenhouse 1kg,Fresh or chilled vegetables other than potatoes and other tubers,https://www.supermarketcy.com.cy/en/cucumber-greenhouse-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Barba Stathis Green Beans 420g,Fresh or chilled vegetables other than potatoes and other tubers,https://www.supermarketcy.com.cy/en/barba-stathis-green-beans-420g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Avocado 1kg,Fresh or chilled vegetables other than potatoes and other tubers,https://www.supermarketcy.com.cy/en/avocado-1kg-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Onions Red Uncleaned 1kg,Fresh or chilled vegetables other than potatoes and other tubers,https://www.supermarketcy.com.cy/en/onions-red-uncleaned-1kg-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Broccoli 1kg,Fresh or chilled vegetables other than potatoes and other tubers,https://www.supermarketcy.com.cy/en/broccoli-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Mix Colour Bell Peppers 1kg,Fresh or chilled vegetables other than potatoes and other tubers,https://www.supermarketcy.com.cy/en/mix-colour-bell-peppers-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Iceberg Lettuce 1Pc,Fresh or chilled vegetables other than potatoes and other tubers,https://www.supermarketcy.com.cy/en/iceberg-lettuce-1pc-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Cauliflower 1kg,Fresh or chilled vegetables other than potatoes and other tubers,https://www.supermarketcy.com.cy/en/cauliflower-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+7Seas Boque 900g,Frozen fish,https://www.supermarketcy.com.cy/en/7seas-boque-900g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+7Seas Red Fish Headless 900g,Frozen fish,https://www.supermarketcy.com.cy/en/7seas-red-fish-headless-900g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Blue Green Wave Fillet Pangasius 1kg,Frozen fish,https://www.supermarketcy.com.cy/en/blue-green-wave-fillet-pangasius-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Salmon Fresh 1kg,Frozen fish,https://www.supermarketcy.com.cy/en/salmon-fresh-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Blue Green Wave Squid Rings 1kg,Frozen seafood,https://www.supermarketcy.com.cy/en/blue-green-wave-squid-rings-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Castle Black Tiger Shrimps 16/20 1kg,Frozen seafood,https://www.supermarketcy.com.cy/en/castle-black-tiger-shrimps-1620-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Edesma Crab Sticks 250g,Frozen seafood,https://www.supermarketcy.com.cy/en/edesma-crab-sticks-250g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Royal Blue Squid Rings 1kg,Frozen seafood,https://www.supermarketcy.com.cy/en/royal-blue-squid-rings-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Birds Eye Breaded Cod Large Fillets 4Pcs,Frozen seafood,https://www.supermarketcy.com.cy/en/birds-eye-breaded-cod-large-fillets-4pcs,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Barba Stathis Brussels Sprouts 450g,Frozen vegetables other than potatoes and other tubers,https://www.supermarketcy.com.cy/en/barba-stathis-brussels-sprouts-450g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Blue Green Wave Mixed Vegetables 900g,Frozen vegetables other than potatoes and other tubers,https://www.supermarketcy.com.cy/en/blue-green-wave-mixed-vegetables-900g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Barba Stathis Mixed Vegetables Salad 450g,Frozen vegetables other than potatoes and other tubers,https://www.supermarketcy.com.cy/en/barba-stathis-mixed-vegetables-salad-450g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Barba Stathis Organic Peas 450g,Frozen vegetables other than potatoes and other tubers,https://www.supermarketcy.com.cy/en/barba-stathis-organic-peas-450g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Kean Mango Pomegranate Juice 1L,Fruit and vegetable juices,https://www.supermarketcy.com.cy/en/kean-mango-pomegranate-juice-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Kean Orange Apple & Carrot Juice 1L,Fruit and vegetable juices,https://www.supermarketcy.com.cy/en/kean-apple-juice-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Kean Apple Juice 1L,Fruit and vegetable juices,https://www.supermarketcy.com.cy/en/kean-apple-juice-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Kean 5 Fruit Juice 1L,Fruit and vegetable juices,https://www.supermarketcy.com.cy/en/kean-5-fruit-juice-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Keo Orange Juice 1L,Fruit and vegetable juices,https://www.supermarketcy.com.cy/en/keo-orange-juice-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Kean Cranberry Fruit Drink 1L,Fruit and vegetable juices,https://www.supermarketcy.com.cy/en/kean-cranberry-fruit-drink-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Kean Orange Juice 1L,Fruit and vegetable juices,https://www.supermarketcy.com.cy/en/kean-orange-juice-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Loel Fruit Mania Juice 1L,Fruit and vegetable juices,https://www.supermarketcy.com.cy/en/loel-fruit-mania-juice-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Keo Apple Juice 1L,Fruit and vegetable juices,https://www.supermarketcy.com.cy/en/keo-apple-juice-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Lanitis Orange Apricot Apple Fruit Drink 1L,Fruit and vegetable juices,https://www.supermarketcy.com.cy/en/lanitis-orange-apricot-apple-fruit-drink-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Keo Tomato Juice 1L,Fruit and vegetable juices,https://www.supermarketcy.com.cy/en/keo-tomato-juice-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Lanitis Orange Juice Without Bits 1L,Fruit and vegetable juices,https://www.supermarketcy.com.cy/en/lanitis-orange-juice-without-bits-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Kean Tomato Juice 1L,Fruit and vegetable juices,https://www.supermarketcy.com.cy/en/kean-tomato-juice-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Keanita Orange Juice 9X250ml,Fruit and vegetable juices,https://www.supermarketcy.com.cy/en/keanita-orange-juice-9x250ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Lanitis Orange Juice With Bits 1L,Fruit and vegetable juices,https://www.supermarketcy.com.cy/en/lanitis-orange-juice-with-bits-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Kean Apple Juice 9X250ml,Fruit and vegetable juices,https://www.supermarketcy.com.cy/en/kean-apple-juice-9x250ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Mavroudes Honey 380g,"Jams, marmalades and honey",https://www.supermarketcy.com.cy/en/mavroudes-honey-380g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Df Tahini 250g,"Jams, marmalades and honey",https://www.supermarketcy.com.cy/en/df-tahini-250g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Blossom Jam Portions 6x30g,"Jams, marmalades and honey",https://www.supermarketcy.com.cy/en/blossom-jam-portions-6x30g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Nutella 200g,"Jams, marmalades and honey",https://www.supermarketcy.com.cy/en/nutella-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Oros Maxaira Raw Blossom Honey 500g,"Jams, marmalades and honey",https://www.supermarketcy.com.cy/en/oros-maxaira-raw-blossom-honey-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Royal Bee Honey 475g,"Jams, marmalades and honey",https://www.supermarketcy.com.cy/en/royal-bee-honey-475g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+To Tziverti Flower Honey Squeeze 485g,"Jams, marmalades and honey",https://www.supermarketcy.com.cy/en/to-tziverti-flower-honey-squeeze-485g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Olympos Super Spread Peanut Butter Crunchy 350g,"Jams, marmalades and honey",https://www.supermarketcy.com.cy/en/olympos-super-spread-peanut-butter-crunchy-350g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Heineken Cans 6X330ml,Lager beer,https://www.supermarketcy.com.cy/en/heineken-cans-6x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+Keo 6X330ml,Lager beer,https://www.supermarketcy.com.cy/en/keo-6x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+Corona Extra 6X330ml,Lager beer,https://www.supermarketcy.com.cy/en/corona-extra-6x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+Keo 8X330ml,Lager beer,https://www.supermarketcy.com.cy/en/keo-8x330ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+Stella Artois 6X330ml,Lager beer,https://www.supermarketcy.com.cy/en/stella-artois-6x330ml-1,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+Carlsberg 500ml,Lager beer,https://www.supermarketcy.com.cy/en/carlsberg-500ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+Lamb For Souvla 1kg,Lamb and goat,https://www.supermarketcy.com.cy/en/lamb-for-souvla-1kg-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Charalambides Christis Semi Skimmed Milk 1L,Low fat milk,https://www.supermarketcy.com.cy/en/charalambides-christis-semi-skimmed-milk-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Lanitis Semi Skimmed Milk 2L,Low fat milk,https://www.supermarketcy.com.cy/en/lanitis-semi-skimmed-milk-2l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Lanitis Semi Skimmed Milk 1.5L,Low fat milk,https://www.supermarketcy.com.cy/en/lanitis-semi-skimmed-milk-15l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Charalambides Christis Semi Skimmed Milk 1.5L,Low fat milk,https://www.supermarketcy.com.cy/en/charalambides-christis-semi-skimmed-milk-15l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Charalambides Christis Delact Milk 1L,Low fat milk,https://www.supermarketcy.com.cy/en/charalambides-christis-delact-milk-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Charalambides Christis Semi Skimmed Milk 2L,Low fat milk,https://www.supermarketcy.com.cy/en/charalambides-christis-semi-skimmed-milk-2l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Minerva Fast Soft Light 220g,Margarine and other vegetable fats,https://www.supermarketcy.com.cy/en/minerva-fast-soft-light-220g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Charalambides Christis Light Margarine 500g,Margarine and other vegetable fats,https://www.supermarketcy.com.cy/en/charalambides-christis-light-margarine-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Charalambides Christis Original Margarine 500g,Margarine and other vegetable fats,https://www.supermarketcy.com.cy/en/charalambides-christis-original-margarine-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Vitalite Light Margarine 500g,Margarine and other vegetable fats,https://www.supermarketcy.com.cy/en/vitalite-light-margarine-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Flora Original 100% Plant Based 450g,Margarine and other vegetable fats,https://www.supermarketcy.com.cy/en/flora-original-100-plant-based-450g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Flora Light 100% Plant Based 450g,Margarine and other vegetable fats,https://www.supermarketcy.com.cy/en/flora-light-100-plant-based-450g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Farmakas Water 12x500ml,Mineral or spring waters,https://www.supermarketcy.com.cy/en/farmakas-water-12x500ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Farmakas Water 6x1.5L,Mineral or spring waters,https://www.supermarketcy.com.cy/en/farmakas-water-6x15l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Saint Nicholas 6X1.5L,Mineral or spring waters,https://www.supermarketcy.com.cy/en/saint-nicholas-6x15l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Saint Nicholas 12X500ml,Mineral or spring waters,https://www.supermarketcy.com.cy/en/saint-nicholas-12x500ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Agros 6X1.5L,Mineral or spring waters,https://www.supermarketcy.com.cy/en/agros-6x15l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Agros 12X500ml,Mineral or spring waters,https://www.supermarketcy.com.cy/en/agros-12x500ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Crown Non Stick Frying Pan 30cm,Non-electric kitchen utensils and articles,https://www.supermarketcy.com.cy/en/crown-non-stick-frying-pan-30cm,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+Theoglass Aluminum Round Pan 28x9.5cm 1Pc,Non-electric kitchen utensils and articles,https://www.supermarketcy.com.cy/en/theoglass-aluminum-round-pan-28x95cm-1pc,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+Spoons Precius 12Pcs,Non-electric kitchen utensils and articles,https://www.supermarketcy.com.cy/en/spoons-precius-12pcs,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+Resto Frying Pan Stainless Steel 18/1020cm,Non-electric kitchen utensils and articles,https://www.supermarketcy.com.cy/en/resto-frying-pan-stainless-steel-1810-20cm,"FURNISHING, HOUSEHOLD EQUIPMENT AND SUPPLIES ",SupermarketCy
+Jordan Expert Clean Toothbrush Medium 1Pc,Non-electrical appliances,https://www.supermarketcy.com.cy/en/jordan-expert-clean-toothbrush-medium-1pc,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Sensodyne Multicare Toothbrush Medium 1Pc,Non-electrical appliances,https://www.supermarketcy.com.cy/en/sensodyne-multicare-toothbrush-medium-1pc,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Colgate Pro Gum Health Dental Floss 50m,Non-electrical appliances,https://www.supermarketcy.com.cy/en/colgate-pro-gum-health-dental-floss-50m,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Jordan Dental Sticks Clean Between Regular 40Pcs,Non-electrical appliances,https://www.supermarketcy.com.cy/en/jordan-dental-sticks-clean-between-regular-40pcs,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Sekep Virgin Olive Oil 1L,Olive oil,https://www.supermarketcy.com.cy/en/sekep-virgin-olive-oil-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Agios Georgios Koroneiko Extra Virgin Olive Oil 1L,Olive oil,https://www.supermarketcy.com.cy/en/agios-georgios-koroneiko-extra-virgin-olive-oil-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Agios Georgios Greek Extra Virgin Olive Oil 1L,Olive oil,https://www.supermarketcy.com.cy/en/agios-georgios-greek-extra-virgin-olive-oil-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Eliochori Extra Virgin Olive Oil 1L,Olive oil,https://www.supermarketcy.com.cy/en/eliochori-extra-virgin-olive-oil-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Sifounas Olive Pie 1Pc,Other bakery products,https://www.supermarketcy.com.cy/en/sifounas-olive-pie-1pc,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Marias Aniseed Cracker Rolls 300g,Other bakery products,https://www.supermarketcy.com.cy/en/marias-aniseed-cracker-rolls-300g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Elite Wheat Rusks 250g,Other bakery products,https://www.supermarketcy.com.cy/en/elite-wheat-rusks-250g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Sifounas Pitta Satzis With Honey 1Pc,Other bakery products,https://www.supermarketcy.com.cy/en/sifounas-pitta-satzis-with-honey-1pc,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Sifounas White Sliced Bread Toast 700g,Other bakery products,https://www.supermarketcy.com.cy/en/sifounas-white-sliced-bread-toast-700g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Sifounas Pitta White Bread Big 5Pcs 550g,Other bakery products,https://www.supermarketcy.com.cy/en/sifounas-pitta-white-bread-big-5pcs-550g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Bakandys Wheat Crisp Rolls 300g,Other bakery products,https://www.supermarketcy.com.cy/en/bakandys-wheat-crisp-rolls-300g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Sifounas Sub Rolls Big 4Pcs,Other bakery products,https://www.supermarketcy.com.cy/en/sifounas-sub-rolls-big-4pcs,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Sifounas Croissant 1Pc,Other bakery products,https://www.supermarketcy.com.cy/en/sifounas-croissant-1pc,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Sifounas Sausage Pie 1Pc,Other bakery products,https://www.supermarketcy.com.cy/en/sifounas-sausage-pie-1pc,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Sifounas Bun Rolls 4Pcs,Other bakery products,https://www.supermarketcy.com.cy/en/sifounas-bun-rolls-4pcs,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Johnsof Croutons 320g,Other bakery products,https://www.supermarketcy.com.cy/en/johnsof-croutons-320g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Bakandys Croutons 250g,Other bakery products,https://www.supermarketcy.com.cy/en/bakandys-croutons-250g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Sifounas Cake Geography 750g,Other bakery products,https://www.supermarketcy.com.cy/en/sifounas-cake-geography-750g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Sifounas Mix Syrup Sweets 580g,Other bakery products,https://www.supermarketcy.com.cy/en/sifounas-mix-syrup-sweets-580g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Natural Life Flax Seeds 300g,Other cereal products,https://www.supermarketcy.com.cy/en/natural-life-flax-seeds-300g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Natural Life Chia Seeds 340g,Other cereal products,https://www.supermarketcy.com.cy/en/natural-life-chia-seeds-340g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Agia Skepi Bio Organic Buckwheat Seeds 500g,Other cereal products,https://www.supermarketcy.com.cy/en/agia-skepi-bio-organic-buckwheat-seeds-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Agia Skepi Bio Organic Quinoa Seeds 500g,Other cereal products,https://www.supermarketcy.com.cy/en/agia-skepi-bio-organic-quinoa-seeds-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Ambrosia Corn Oil 1L,Other edible oils,https://www.supermarketcy.com.cy/en/ambrosia-corn-oil-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Ambrosia Sunflower Oil 1L,Other edible oils,https://www.supermarketcy.com.cy/en/ambrosia-sunflower-oil-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Huilor Rapseed Oil 3L,Other edible oils,https://www.supermarketcy.com.cy/en/huilor-rapseed-oil-3l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Ambrosia Sunflower Oil 3L,Other edible oils,https://www.supermarketcy.com.cy/en/ambrosia-sunflower-oil-3l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Agios Georgios Livio Olive Pomace Oil 1L,Other edible oils,https://www.supermarketcy.com.cy/en/agios-georgios-livio-olive-pomace-oil-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Despoina Vegetal Oils Mixture 60% Olive Oil 1L,Other edible oils,https://www.supermarketcy.com.cy/en/despoina-vegetal-oils-mixture-60-olive-oil-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Ambrosia Soybean Oil 4L,Other edible oils,https://www.supermarketcy.com.cy/en/ambrosia-soybean-oil-4l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Ambrosia Corn Oil 3L,Other edible oils,https://www.supermarketcy.com.cy/en/ambrosia-corn-oil-3l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Papadopoulos Sandwich Biscuits Vanilla Cream 200g,Other food products n.e.c.,https://www.supermarketcy.com.cy/en/papadopoulos-sandwich-biscuits-vanilla-cream-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Heinz Minestrone Soup 400g,Other food products n.e.c.,https://www.supermarketcy.com.cy/en/heinz-minestrone-soup-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Heinz Vegetable Soup 400g,Other food products n.e.c.,https://www.supermarketcy.com.cy/en/heinz-vegetable-soup-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Kinder Chocolate 4Pcs 50g,Other food products n.e.c.,https://www.supermarketcy.com.cy/en/kinder-chocolate-4pcs-50g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Frou Frou Morning Coffee 150g,Other food products n.e.c.,https://www.supermarketcy.com.cy/en/frou-frou-morning-coffee-150g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Oreo 154g,Other food products n.e.c.,https://www.supermarketcy.com.cy/en/oreo-154g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Lotus Caramelised 2X250g Special Offer,Other food products n.e.c.,https://www.supermarketcy.com.cy/en/lotus-caramelised-2x250g-special-offer,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Karla Halal Corned Beef 340g,Other meat preparations,https://www.supermarketcy.com.cy/en/karla-halal-corned-beef-340g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Zwan Turkey Luncheon Meat With Herbs 200g,Other meat preparations,https://www.supermarketcy.com.cy/en/zwan-turkey-luncheon-meat-with-herbs-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Zwan Chopped Ham And Pork 200g,Other meat preparations,https://www.supermarketcy.com.cy/en/zwan-chopped-ham-and-pork-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Tulip Pork Luncheon Meat 200g,Other meat preparations,https://www.supermarketcy.com.cy/en/tulip-pork-luncheon-meat-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Tulip Chopped Ham 200g,Other meat preparations,https://www.supermarketcy.com.cy/en/tulip-chopped-ham-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Zwan Beef Luncheon Meat Hot & Spicy 200g,Other meat preparations,https://www.supermarketcy.com.cy/en/zwan-beef-luncheon-meat-hot-spicy-200g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Chrysodalia Village Sausages With Wine 300g,Other meats,https://www.supermarketcy.com.cy/en/chrysodalia-village-sausages-with-wine-300g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Pork Sheftalies 1kg,Other meats,https://www.supermarketcy.com.cy/en/pork-sheftalies-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Kitromilide Pastourmas 500g,Other meats,https://www.supermarketcy.com.cy/en/kitromilide-pastourmas-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Nounou 10X15g,Other milk products,https://www.supermarketcy.com.cy/en/nounou-10x15g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Nounou Light 10X15g,Other milk products,https://www.supermarketcy.com.cy/en/nounou-light-10x15g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Nounou Sweetened Condensed Milk 397g,Other milk products,https://www.supermarketcy.com.cy/en/nounou-sweetened-condensed-milk-397g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Nounou Light 400g,Other milk products,https://www.supermarketcy.com.cy/en/nounou-light-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Mana Sweetened Condensed Milk 397g,Other milk products,https://www.supermarketcy.com.cy/en/mana-sweetened-condensed-milk-397g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Charalambides Christis Whipping Cream 250ml,Other milk products,https://www.supermarketcy.com.cy/en/charalambides-christis-whipping-cream-250ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Sevyco Roze Tuna Meat In Water 4X185g,Other preserved or processed fish and seafood-based preparations,https://www.supermarketcy.com.cy/en/sevyco-roze-tuna-meat-in-water-4x185g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Rio Mare Tuna Meat In Olive Oil 2x160g,Other preserved or processed fish and seafood-based preparations,https://www.supermarketcy.com.cy/en/rio-mare-tuna-meat-in-olive-oil-2x160g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Rio Mare Tuna Meat In Water 2x160g,Other preserved or processed fish and seafood-based preparations,https://www.supermarketcy.com.cy/en/rio-mare-tuna-meat-in-water-2x160g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Trata Tuna In Olive Oil 2X160g,Other preserved or processed fish and seafood-based preparations,https://www.supermarketcy.com.cy/en/trata-tuna-in-olive-oil-2x160g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Trata Tuna In Water 2X160g,Other preserved or processed fish and seafood-based preparations,https://www.supermarketcy.com.cy/en/trata-tuna-in-water-2x160g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Sevyco Roze Tuna Meat In Soya Oil 4X185g,Other preserved or processed fish and seafood-based preparations,https://www.supermarketcy.com.cy/en/sevyco-roze-tuna-meat-in-soya-oil-4x185g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Melissa Spaghetti No 6 500g,Pasta products and couscous,https://www.supermarketcy.com.cy/en/melissa-spaghetti-no-6-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Triumph Village Type Pasta 500g,Pasta products and couscous,https://www.supermarketcy.com.cy/en/triumph-village-type-pasta-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Mitsides Spaghetti 500g,Pasta products and couscous,https://www.supermarketcy.com.cy/en/mitsides-spaghetti-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Mitsides Orzo 500g,Pasta products and couscous,https://www.supermarketcy.com.cy/en/mitsides-orzo-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Melissa Orzo 500g,Pasta products and couscous,https://www.supermarketcy.com.cy/en/melissa-orzo-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Mitsides Mezzani A 500g,Pasta products and couscous,https://www.supermarketcy.com.cy/en/mitsides-mezzani-a-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Barilla Spaghetti No 5 500g,Pasta products and couscous,https://www.supermarketcy.com.cy/en/barilla-spaghetti-no-5-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Triumph Spaghetti 500g,Pasta products and couscous,https://www.supermarketcy.com.cy/en/triumph-spaghetti-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Loreal Elvive Hydra Hyaluronic Hair Mask For Dehydrated Hair 300ml,Personal grooming treatments,https://www.supermarketcy.com.cy/en/loreal-elvive-hydra-hyaluronic-hair-mask-for-dehydrated-hair-300ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Syoss Oleo Intense No Ammonia Permanent Coloration Intense Black 1.10 115ml,Personal grooming treatments,https://www.supermarketcy.com.cy/en/syoss-oleo-intense-no-ammonia-permanent-coloration-intense-black-110-115ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Syoss Oleo Intense No Ammonia Permanent Coloration Bright Blonde 9.10 115ml,Personal grooming treatments,https://www.supermarketcy.com.cy/en/syoss-oleo-intense-no-ammonia-permanent-coloration-bright-blonde-910-115ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Syoss Oleo Intense No Ammonia Permanent Coloration Maroon Brown 4.18 115ml,Personal grooming treatments,https://www.supermarketcy.com.cy/en/syoss-oleo-intense-no-ammonia-permanent-coloration-maroon-brown-418-115ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Wella Blondor Powder Based Bleaching Gel 10g,Personal grooming treatments,https://www.supermarketcy.com.cy/en/wella-blondor-powder-based-bleaching-gel-10g,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Syoss Volume Lift Mousse Extra Strong Hold 250ml,Personal grooming treatments,https://www.supermarketcy.com.cy/en/syoss-volume-lift-mousse-extra-strong-hold-250ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Taft Super Glue Styling Gel 14 150ml,Personal grooming treatments,https://www.supermarketcy.com.cy/en/taft-super-glue-styling-gel-14-150ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Loreal Invisi Fix Gel 6 Ultra Strong Hold 150ml,Personal grooming treatments,https://www.supermarketcy.com.cy/en/loreal-invisi-fix-gel-6-ultra-strong-hold-150ml,MISCELLANEOUS GOODS AND SERVICES,SupermarketCy
+Regina Veggie Pizza 1Pc 350g,Pizza and quiche,https://www.supermarketcy.com.cy/en/regina-veggie-pizza-1pc-350g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Regina Peperoni Pizza 1Pc 300g,Pizza and quiche,https://www.supermarketcy.com.cy/en/regina-peperoni-pizza-1pc-300g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Regina Margherita Pizza 1Pc 300g,Pizza and quiche,https://www.supermarketcy.com.cy/en/regina-margherita-pizza-1pc-300g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Regina Special Pizza 1Pc 330g,Pizza and quiche,https://www.supermarketcy.com.cy/en/regina-special-pizza-1pc-330g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Grigoriou Pizza Margarita 1Pc 430g,Pizza and quiche,https://www.supermarketcy.com.cy/en/grigoriou-pizza-margarita-1pc-430g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Grigoriou Pizza Jambon Bacon 1Pc 460g,Pizza and quiche,https://www.supermarketcy.com.cy/en/grigoriou-pizza-jambon-bacon-1pc-460g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Pork Souvla Shoulder 1kg,Pork,https://www.supermarketcy.com.cy/en/pork-souvla-shoulder-1kg-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Pork Shoulder Minced 1kg,Pork,https://www.supermarketcy.com.cy/en/pork-shoulder-minced-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Pork Shoulder And Thigh Kebab 1kg,Pork,https://www.supermarketcy.com.cy/en/pork-shoulder-and-thigh-kebab-1kg-2,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Pork Chops 1.2kg,Pork,https://www.supermarketcy.com.cy/en/pork-chops-12kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Potatoes New Season 1kg,Potatoes,https://www.supermarketcy.com.cy/en/potatoes-new-season-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Freezeland French Fries 1kg,Potatoes,https://www.supermarketcy.com.cy/en/freezeland-french-fries-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Mccain Tradition Potatoes 1kg,Potatoes,https://www.supermarketcy.com.cy/en/mccain-tradition-potatoes-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Nefeli Chicken Wings 1kg,Poultry,https://www.supermarketcy.com.cy/en/nefeli-chicken-wings-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Nefeli Chicken Fillet 1kg,Poultry,https://www.supermarketcy.com.cy/en/nefeli-chicken-fillet-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Nefeli Chicken Thighs 1kg,Poultry,https://www.supermarketcy.com.cy/en/nefeli-chicken-thighs-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Nefeli Chicken Minced 1kg,Poultry,https://www.supermarketcy.com.cy/en/nefeli-chicken-minced-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Oatly Barista Oat Drink 500ml,Preserved milk,https://www.supermarketcy.com.cy/en/oatly-barista-oat-drink-500ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Koko Original Coconut Milk 1L,Preserved milk,https://www.supermarketcy.com.cy/en/koko-original-coconut-milk-1l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Mulik Full Cream Milk Chocolate 500ml,Preserved milk,https://www.supermarketcy.com.cy/en/mulik-full-cream-milk-chocolate-500ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Evexia Goat's Milk Kefir 500ml,Preserved milk,https://www.supermarketcy.com.cy/en/evexia-goats-milk-kefir-500ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Whiskas Fish Favourites Salmon Tuna In Jelly 4x85g,Products for pets,https://www.supermarketcy.com.cy/en/whiskas-fish-favourites-salmon-tuna-in-jelly-4x85g,RECREATION AND CULTURE,SupermarketCy
+Simba Special Pack Chunkies 4x100g,Products for pets,https://www.supermarketcy.com.cy/en/simba-special-pack-chunkies-4x100g,RECREATION AND CULTURE,SupermarketCy
+Tatrapet Fantasia Cuttlefish Bone For Singing Birds 1Pc,Products for pets,https://www.supermarketcy.com.cy/en/tatrapet-fantasia-cuttlefish-bone-for-singing-birds-1pc,RECREATION AND CULTURE,SupermarketCy
+Pedigree Biscrok Multi Mix 500g,Products for pets,https://www.supermarketcy.com.cy/en/pedigree-biscrok-multi-mix-500g,RECREATION AND CULTURE,SupermarketCy
+Cesar Clasicos Chicken Loaf 150g,Products for pets,https://www.supermarketcy.com.cy/en/cesar-clasicos-chicken-loaf-150g,RECREATION AND CULTURE,SupermarketCy
+Regina Moussaka 550g,Ready-made meals,https://www.supermarketcy.com.cy/en/regina-moussaka-550g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Edesma Veggie Burgers 4Pcs,Ready-made meals,https://www.supermarketcy.com.cy/en/edesma-veggie-burgers-4-pcs,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Regina Canelloni 400g,Ready-made meals,https://www.supermarketcy.com.cy/en/regina-canelloni-400g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Regina Veggie Maccaroni Pastichio 425g,Ready-made meals,https://www.supermarketcy.com.cy/en/regina-veggie-maccaroni-pastichio-425g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Natural Life Hulled Bulgur Wheat 500g,Rice,https://www.supermarketcy.com.cy/en/natural-life-hulled-bulgur-wheat-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Mitsides Basmati Rice 1kg,Rice,https://www.supermarketcy.com.cy/en/mitsides-basmati-rice-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+3A Parboiled Rice 1kg,Rice,https://www.supermarketcy.com.cy/en/3a-parboiled-rice-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+A. Kepola Bros Bulgar Wheat 500g,Rice,https://www.supermarketcy.com.cy/en/a-kepola-bros-bulgar-wheat-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Mitsides Fine Bulgar Wheat For Koupes & Salads 500g,Rice,https://www.supermarketcy.com.cy/en/mitsides-fine-bulgar-wheat-for-koupes-salads-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Mitsides Bulgar Wheat 500g,Rice,https://www.supermarketcy.com.cy/en/mitsides-bulgar-wheat-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Mitsides Bulgar Wheat 1kg,Rice,https://www.supermarketcy.com.cy/en/mitsides-bulgar-wheat-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+A. Kepola Bros Bulgur Whole Wheat 500g,Rice,https://www.supermarketcy.com.cy/en/a-kepola-bros-bulgur-whole-wheat-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Tilda Fragrant Jasmine Rice 1kg,Rice,https://www.supermarketcy.com.cy/en/tilda-fragrant-jasmine-rice-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Tilda Basmati Rice 1kg,Rice,https://www.supermarketcy.com.cy/en/tilda-basmati-rice-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Bens Original Long Grain Rice 10 Minutes 1kg,Rice,https://www.supermarketcy.com.cy/en/bens-original-long-grain-rice-10-minutes-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Carnation Spices Cinnamon Ground 34g,"Salt, spices and culinary herbs",https://www.supermarketcy.com.cy/en/carnation-spices-cinnamon-ground-34g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Carnation Spices Onion Powder 33g,"Salt, spices and culinary herbs",https://www.supermarketcy.com.cy/en/carnation-spices-onion-powder-33g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Carnation Spices Turmeric 30g,"Salt, spices and culinary herbs",https://www.supermarketcy.com.cy/en/carnation-spices-turmeric-30g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Carnation Spices Linseed 20g,"Salt, spices and culinary herbs",https://www.supermarketcy.com.cy/en/carnation-spices-linseed-20g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Carnation Spices Dill Tips 10g,"Salt, spices and culinary herbs",https://www.supermarketcy.com.cy/en/carnation-spices-dill-tips-10g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Carnation Spices Garlic Granulated 40g,"Salt, spices and culinary herbs",https://www.supermarketcy.com.cy/en/carnation-spices-garlic-granulated-40g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Carnation Spices Black Pepper Crushed 34g,"Salt, spices and culinary herbs",https://www.supermarketcy.com.cy/en/carnation-spices-black-pepper-crushed-34g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Carnation Spices Mixed Herbs 12g,"Salt, spices and culinary herbs",https://www.supermarketcy.com.cy/en/carnation-spices-mixed-herbs-12g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Carnation Spices Thyme 10g,"Salt, spices and culinary herbs",https://www.supermarketcy.com.cy/en/carnation-spices-thyme-10g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Carnation Spices Coriander Powder 20g,"Salt, spices and culinary herbs",https://www.supermarketcy.com.cy/en/carnation-spices-coriander-powder-20g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Carnation Spices Basil 10g,"Salt, spices and culinary herbs",https://www.supermarketcy.com.cy/en/carnation-spices-basil-10g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Carnation Spices Rosemary 10g,"Salt, spices and culinary herbs",https://www.supermarketcy.com.cy/en/carnation-spices-rosemary-10g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Carnation Spices Smoked Paprika 30g,"Salt, spices and culinary herbs",https://www.supermarketcy.com.cy/en/carnation-spices-smoked-paprika-30g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Carnation Spices Oregano 30g,"Salt, spices and culinary herbs",https://www.supermarketcy.com.cy/en/carnation-spices-oregano-30g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Sailor Salt 250g,"Salt, spices and culinary herbs",https://www.supermarketcy.com.cy/en/sailor-salt-250g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Sws Tomato Paste 425g,"Sauces, condiments",https://www.supermarketcy.com.cy/en/sws-tomato-paste-425g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Blossom Tomato Paste 4X70g,"Sauces, condiments",https://www.supermarketcy.com.cy/en/blossom-tomato-paste-4x70g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Kean Pomilori Sieved Tomatoes 690g,"Sauces, condiments",https://www.supermarketcy.com.cy/en/kean-pomilori-sieved-tomatoes-690g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Knorr Chicken Bouillons 12Pcs,"Sauces, condiments",https://www.supermarketcy.com.cy/en/knorr-chicken-bouillons-12pcs,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Pelargos Classic 500g,"Sauces, condiments",https://www.supermarketcy.com.cy/en/pelargos-classic-500g-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Mitsides Tomato Paste 4X70g,"Sauces, condiments",https://www.supermarketcy.com.cy/en/mitsides-tomato-paste-4x70g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Maggi Chicken Bouillons 12Pcs,"Sauces, condiments",https://www.supermarketcy.com.cy/en/maggi-chicken-bouillons-12pcs,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Knorr Vegetables Bouillons 12Pcs,"Sauces, condiments",https://www.supermarketcy.com.cy/en/knorr-vegetables-bouillons-12pcs,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Maggi Bouillons For Pasta 12Pcs,"Sauces, condiments",https://www.supermarketcy.com.cy/en/maggi-bouillons-for-pasta-12pcs,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Maggi Vegetables Bouillons 16Pcs,"Sauces, condiments",https://www.supermarketcy.com.cy/en/maggi-vegetables-bouillons-16pcs,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Mitsides Passata 3x500g,"Sauces, condiments",https://www.supermarketcy.com.cy/en/mitsides-passata-3x500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Coca Cola 8X330ml,Soft drinks,https://www.supermarketcy.com.cy/en/coca-cola-8x330ml-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Coca Cola Zero 8X330ml,Soft drinks,https://www.supermarketcy.com.cy/en/coca-cola-zero-8x330ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Schweppes Soda Water 6X330ml,Soft drinks,https://www.supermarketcy.com.cy/en/schweppes-soda-water-6x330ml-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Fanta 6X330ml,Soft drinks,https://www.supermarketcy.com.cy/en/fanta-6x330ml-2,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Schweppes Pink Grapefruit 6X330ml,Soft drinks,https://www.supermarketcy.com.cy/en/schweppes-pink-grapefruit-6x330ml-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Sprite 6X330ml,Soft drinks,https://www.supermarketcy.com.cy/en/sprite-6x330ml-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+7Up Lemon & Lime 8X330ml,Soft drinks,https://www.supermarketcy.com.cy/en/7up-lemon-lime-8x330ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+7Up Zero Sugar 8X330ml,Soft drinks,https://www.supermarketcy.com.cy/en/7up-zero-sugar-8x330ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Pepsi 8X330ml,Soft drinks,https://www.supermarketcy.com.cy/en/pepsi-8x330ml,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Gordons Dry Gin 700ml,Spirits and liqueurs,https://www.supermarketcy.com.cy/en/gordons-dry-gin-700ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+Keo Vsop Brandy 1L,Spirits and liqueurs,https://www.supermarketcy.com.cy/en/keo-vsop-brandy-1l,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+Malibu Caribbean Rum With Coconut 1L,Spirits and liqueurs,https://www.supermarketcy.com.cy/en/malibu-caribbean-rum-with-coconut-1l-1,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+Jose Cuervo Tequila 700ml,Spirits and liqueurs,https://www.supermarketcy.com.cy/en/jose-cuervo-tequila-700ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+Baileys Original Liqueur 700ml,Spirits and liqueurs,https://www.supermarketcy.com.cy/en/baileys-original-liqueur-700ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+Emmeleia White Crystal Sugar 1kg,Sugar,https://www.supermarketcy.com.cy/en/emmeleia-white-crystal-sugar-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Carnation Spices Icing Sugar 500G,Sugar,https://www.supermarketcy.com.cy/en/carnation-spices-icing-sugar-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Natural Life Icing Sugar 500g,Sugar,https://www.supermarketcy.com.cy/en/natural-life-icing-sugar-500g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Natural Life Chamomile Tea 20Pcs,Tea,https://www.supermarketcy.com.cy/en/natural-life-chamomile-tea-20pcs,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Ahmad Tea Green Tea 25Pcs,Tea,https://www.supermarketcy.com.cy/en/ahmad-tea-green-tea-25pcs,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Ahmad Tea English Breakfast 20Pcs,Tea,https://www.supermarketcy.com.cy/en/ahmad-tea-english-breakfast-20pcs,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Lipton Yellow Label Tea 20Pcs,Tea,https://www.supermarketcy.com.cy/en/lipton-yellow-label-tea-20pcs-1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Lanitis Full Fat Milk 2L,Whole milk,https://www.supermarketcy.com.cy/en/lanitis-full-fat-milk-2l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Charalambides Christis Full Fat Milk 2L,Whole milk,https://www.supermarketcy.com.cy/en/charalambides-christis-full-fat-milk-2l,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Mateus Rose Wine 750ml,Wine from grapes,https://www.supermarketcy.com.cy/en/mateus-rose-wine-750ml,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+Keo White Dry Wine 1L,Wine from grapes,https://www.supermarketcy.com.cy/en/keo-white-dry-wine-1l,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+Keo Red Dry Wine 1L,Wine from grapes,https://www.supermarketcy.com.cy/en/keo-red-dry-wine-1l,ALCOHOLIC BEVERAGES AND TOBACCO,SupermarketCy
+Charalambides Christis Strained 1kg,Yoghurt,https://www.supermarketcy.com.cy/en/charalambides-christis-strained-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Charalambides Christis Strained Fat Free 0% 1kg,Yoghurt,https://www.supermarketcy.com.cy/en/charalambides-christis-strained-fat-free-0-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Antroniki Homemade Sheep Yogurt 700g,Yoghurt,https://www.supermarketcy.com.cy/en/antroniki-homemade-sheep-yogurt-700g,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Zita Strained 1kg,Yoghurt,https://www.supermarketcy.com.cy/en/zita-strained-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+Zita Strained Fat Free 0% 1kg,Yoghurt,https://www.supermarketcy.com.cy/en/zita-strained-fat-free-0-1kg,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
