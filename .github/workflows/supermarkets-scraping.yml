@@ -1,22 +1,22 @@
-# Workflow for the Cyprus e-kalathi scraping process
+# Workflow for the Cyprus supermarkets scraping process
 
 # Whenever pull request is made targeting branch initialisation, csv is reset
-name: e-kalathi-cy-scraping
+name: supermarkets-scraping
 
 # Workflow's description
-run-name: e-kalathi-cy scraping 
+run-name: supermarkets scraping 
 
 # Function to schedule the time (UTC), day, month, and year of the workflow process
-#on:
-#  schedule:
-#    - cron: "01 11 * * *" #UTC time
-
 on:
-  pull_request:
-    # Sequence of patterns matched against refs/heads
-    branches:
-      - e-kalathi-scraping
-      - e-kalathi-scraping
+  schedule:
+    - cron: "01 13 * * *" #UTC time
+
+#on:
+#  pull_request:
+#    # Sequence of patterns matched against refs/heads
+#    branches:
+#      - supermarkets-scraping
+#      - supermarkets-scraping
 
 jobs:
   getdataandrefreshmap:
@@ -37,12 +37,12 @@ jobs:
       - name: Install dependencies
         run: |
           if [ -f requirements_new.txt ]; then pip install --no-cache-dir -r requirements_new.txt; fi
-      - name: Run Supermarkets_Scraping.py
+      - name: Run ScrapingCode.py
         run: |
-          python e-kalathi-cy/Supermarkets_Scraping.py
+          python Supermarkets/ScrapingCode.py
           git status
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
-          git commit -m "e-kalathi-cy scraping completed"
+          git commit -m "supermarkets scraping completed"
           git push origin HEAD:main
