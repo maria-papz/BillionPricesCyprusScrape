@@ -7,16 +7,16 @@ name: supermarkets-scraping
 run-name: supermarkets scraping 
 
 # Function to schedule the time (UTC), day, month, and year of the workflow process
-on:
-  schedule:
-    - cron: "02 10 * * *" #UTC time
-
 #on:
-#  pull_request:
-#    # Sequence of patterns matched against refs/heads
-#    branches:
-#      - supermarkets-scraping
-#      - supermarkets-scraping
+#  schedule:
+#    - cron: "02 10 * * *" #UTC time
+
+on:
+  pull_request:
+    # Sequence of patterns matched against refs/heads
+    branches:
+      - supermarkets-scraping
+      - supermarkets-scraping
 
 jobs:
   getdataandrefreshmap:
