@@ -9,7 +9,7 @@ run-name: supermarkets scraping
 # Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
   schedule:
-    - cron: "51 13 * * *" #UTC time
+    - cron: "08 08 * * *" #UTC time
 
 #on:
 #  pull_request:
