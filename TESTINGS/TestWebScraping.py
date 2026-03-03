@@ -169,7 +169,7 @@ print(response_2)
 # Wolt
 #================================================================================================================================
 print("Wolt")
-url = "https://wolt.com/en/cyp/nicosia/restaurant/kfc-aglantzia/twister-itemid-68f9dd086496eabe82f09052"
+url = "https://wolt.com/en/cyp/nicosia/restaurant/kfc-aglantzia/twister-itemid-692eae75bc0a1e597836f510"
 
 response_1 = requests.get(url)
 print(response_1)
