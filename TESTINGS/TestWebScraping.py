@@ -186,7 +186,7 @@ print(response_2)
 # Famous Sports
 #================================================================================================================================
 print("Famous Sports")
-url = "https://www.famousports.com/en/products/bdtk-men-t-shirt-ss-1241-951928-1241-951928-00452?option_variant_id=16734"
+url = "https://www.famousports.com/en/products/core-team-kit-sml-logo-t-sh-au-blue?option_variant_id=140"
 
 response_1 = requests.get(url)
 print(response_1)
