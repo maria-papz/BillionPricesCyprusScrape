@@ -1,22 +1,22 @@
-# Workflow for the 2nd scraping iteration process
+# Workflow for the scraping iteration B process
 
 # Whenever pull request is made targeting branch initialisation, csv is reset
-name: iteration-2
+name: iteration-B
 
 # Workflow's description
-run-name: Scrape the products in daily errors (iteration 1) and store raw data 
+run-name: Scrape the products in daily errors (iteration A) and store raw data 
 
 # Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
   schedule:
-    - cron: '09 09 * * *' #UTC time
+    - cron: '01 15 * * *' #UTC time
   #workflow_dispatch: # Allows manual testing
   
 #on:
 #  pull_request:
 #    # Sequence of patterns matched against refs/heads
 #    branches:
-#     - iteration-2  
+#     - iteration-B  
 
 jobs:
   getdataandrefreshmap:
@@ -39,14 +39,14 @@ jobs:
       # Installs the required Python dependencies
       - name: Install dependencies
         run: |
-          if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi
+          if [ -f requirements-2.txt ]; then pip install --no-cache-dir -r requirements-2.txt; fi
       
-      - name: Run Iteration2.py
+      - name: Run IterationB.py
         run: |
-          python PythonCodes/Iteration2.py
+          python ECOICOPv2/IterationB.py
           git status
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
-          git commit -m "scraping iteration 2 completed"
+          git commit -m "scraping iteration B completed"
           git push origin HEAD:main
