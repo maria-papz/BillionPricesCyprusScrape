@@ -1,0 +1,225 @@
+ECOICOP2 CODE,SUBCLASS,DIVISION,2026 WEIGHT (%)
+CP01111,Cereals ,FOOD AND NON-ALCOHOLIC BEVERAGES,0.2
+CP01112,Flour of cereals ,FOOD AND NON-ALCOHOLIC BEVERAGES,0.08
+CP011131,Bread,FOOD AND NON-ALCOHOLIC BEVERAGES,0.6
+CP011139,Other bakery products,FOOD AND NON-ALCOHOLIC BEVERAGES,1.61
+CP01114,Breakfast cereals ,FOOD AND NON-ALCOHOLIC BEVERAGES,0.3
+CP01115,"Macaroni, noodles, couscous and similar pasta products ",FOOD AND NON-ALCOHOLIC BEVERAGES,0.24
+CP01119,Other milled cereal and grain products ,FOOD AND NON-ALCOHOLIC BEVERAGES,0.07
+CP011221,"Meat of bovine animals, fresh, chilled or frozen",FOOD AND NON-ALCOHOLIC BEVERAGES,0.15
+CP011222,"Meat of pigs, fresh, chilled or frozen",FOOD AND NON-ALCOHOLIC BEVERAGES,0.95
+CP011223,"Meat of goats, lambs and sheep, fresh, chilled or frozen",FOOD AND NON-ALCOHOLIC BEVERAGES,0.35
+CP011224,"Meat of poultry, fresh, chilled or frozen",FOOD AND NON-ALCOHOLIC BEVERAGES,0.85
+CP011225,"Meat of hares and rabbits, fresh, chilled or frozen",FOOD AND NON-ALCOHOLIC BEVERAGES,0.02
+CP01123,"Meat, dried, salted, in brine or smoked ",FOOD AND NON-ALCOHOLIC BEVERAGES,0.46
+CP01124,"Offal, blood and other parts of slaughtered animals, fresh, chilled or frozen, dried, salted, in brine or smoked ",FOOD AND NON-ALCOHOLIC BEVERAGES,0.02
+CP01125,"Preparations of meat, offal, blood and other parts of slaughtered animals ",FOOD AND NON-ALCOHOLIC BEVERAGES,0.36
+CP01131,"Fish, live, fresh, chilled or frozen ",FOOD AND NON-ALCOHOLIC BEVERAGES,0.4
+CP01132,"Fish, dried, salted, in brine or smoked ",FOOD AND NON-ALCOHOLIC BEVERAGES,0.19
+CP01133,Fish preparations ,FOOD AND NON-ALCOHOLIC BEVERAGES,0.06
+CP01134,"Other seafood, live, fresh, chilled or frozen ",FOOD AND NON-ALCOHOLIC BEVERAGES,0.15
+CP01141,Raw and whole milk ,FOOD AND NON-ALCOHOLIC BEVERAGES,0.24
+CP01142,Skimmed milk ,FOOD AND NON-ALCOHOLIC BEVERAGES,0.36
+CP01143,Other milk and cream ,FOOD AND NON-ALCOHOLIC BEVERAGES,0.12
+CP01144,Non-animal milk ,FOOD AND NON-ALCOHOLIC BEVERAGES,0.07
+CP01145,Cheese ,FOOD AND NON-ALCOHOLIC BEVERAGES,1.15
+CP01146,Yoghurt and similar products ,FOOD AND NON-ALCOHOLIC BEVERAGES,0.47
+CP01147,Milk-based dessert and beverages ,FOOD AND NON-ALCOHOLIC BEVERAGES,0.08
+CP01148,Eggs ,FOOD AND NON-ALCOHOLIC BEVERAGES,0.26
+CP011513,Olive oil,FOOD AND NON-ALCOHOLIC BEVERAGES,0.29
+CP01152,Butter and other oils and fats derived from milk ,FOOD AND NON-ALCOHOLIC BEVERAGES,0.09
+CP01153,Margarine and similar preparations ,FOOD AND NON-ALCOHOLIC BEVERAGES,0.06
+CP01161,"Dates, figs and tropical fruits, fresh ",FOOD AND NON-ALCOHOLIC BEVERAGES,0.28
+CP01162,"Citrus fruits, fresh ",FOOD AND NON-ALCOHOLIC BEVERAGES,0.15
+CP01163,"Stone fruits and pome fruits, fresh ",FOOD AND NON-ALCOHOLIC BEVERAGES,0.41
+CP01164,"Berries, fresh ",FOOD AND NON-ALCOHOLIC BEVERAGES,0.07
+CP01165,"Other fruits, fresh ",FOOD AND NON-ALCOHOLIC BEVERAGES,0.32
+CP01166,"Fruits, frozen ",FOOD AND NON-ALCOHOLIC BEVERAGES,0.03
+CP01167,"Fruits, dried and dehydrated ",FOOD AND NON-ALCOHOLIC BEVERAGES,0.05
+CP01168,"Nuts, in shell or shelled ",FOOD AND NON-ALCOHOLIC BEVERAGES,0.29
+CP01169,"Fruits and nuts, ground, and in other preparations ",FOOD AND NON-ALCOHOLIC BEVERAGES,0.02
+CP01171,"Leafy or stem vegetables, fresh or chilled ",FOOD AND NON-ALCOHOLIC BEVERAGES,0.32
+CP01172,"Fruit-bearing vegetables, fresh or chilled ",FOOD AND NON-ALCOHOLIC BEVERAGES,0.65
+CP01173,"Green leguminous vegetables, fresh or chilled ",FOOD AND NON-ALCOHOLIC BEVERAGES,0.09
+CP01174,"Other vegetables, fresh or chilled ",FOOD AND NON-ALCOHOLIC BEVERAGES,0.21
+CP011751,Potatoes,FOOD AND NON-ALCOHOLIC BEVERAGES,0.23
+CP01176,Pulses ,FOOD AND NON-ALCOHOLIC BEVERAGES,0.12
+CP01178,"Vegetables, tubers, plantains and cooking bananas, frozen ",FOOD AND NON-ALCOHOLIC BEVERAGES,0.11
+CP01179,"Vegetables, tubers, plantains, cooking bananas and pulses, ground, and in other preparations ",FOOD AND NON-ALCOHOLIC BEVERAGES,0.38
+CP01181,Cane sugar and beet sugar ,FOOD AND NON-ALCOHOLIC BEVERAGES,0.06
+CP01182,Other sugars and sugar substitutes ,FOOD AND NON-ALCOHOLIC BEVERAGES,0.03
+CP01183,"Jams, marmalades, fruit jellies, pures and pastes, and honey ",FOOD AND NON-ALCOHOLIC BEVERAGES,0.09
+CP01184,"Nut pures, nut butters and nut pastes ",FOOD AND NON-ALCOHOLIC BEVERAGES,0.06
+CP01185,"Chocolate, cocoa and cocoa-based food products ",FOOD AND NON-ALCOHOLIC BEVERAGES,0.5
+CP01186,"Ice, ice cream and sorbets ",FOOD AND NON-ALCOHOLIC BEVERAGES,0.19
+CP01189,Other sugar confectionery and desserts n.e.c. ,FOOD AND NON-ALCOHOLIC BEVERAGES,0.17
+CP01191,Ready-made food ,FOOD AND NON-ALCOHOLIC BEVERAGES,0.27
+CP01192,Baby food ,FOOD AND NON-ALCOHOLIC BEVERAGES,0.17
+CP01193,"Salt, condiments and sauces ",FOOD AND NON-ALCOHOLIC BEVERAGES,0.27
+CP01194,"Spices, culinary herbs and seeds ",FOOD AND NON-ALCOHOLIC BEVERAGES,0.06
+CP01199,Other food products n.e.c. ,FOOD AND NON-ALCOHOLIC BEVERAGES,0.09
+CP01210,Fruit and vegetable juices ,FOOD AND NON-ALCOHOLIC BEVERAGES,0.23
+CP01220,Coffee and coffee substitutes ,FOOD AND NON-ALCOHOLIC BEVERAGES,0.46
+CP01230,"Tea, mate and other plant-derived products for infusion ",FOOD AND NON-ALCOHOLIC BEVERAGES,0.05
+CP01250,Water ,FOOD AND NON-ALCOHOLIC BEVERAGES,0.34
+CP01260,Soft drinks ,FOOD AND NON-ALCOHOLIC BEVERAGES,0.49
+CP01290,Other non-alcoholic beverages ,FOOD AND NON-ALCOHOLIC BEVERAGES,0.11
+CP02110,Spirits and liquors ,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",0.53
+CP02121,Wine from grapes ,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",0.48
+CP02130,Beer ,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",0.8
+CP02301,Cigarettes ,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",3.01
+CP02302,Cigars ,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",0.05
+CP02309,Other tobacco products ,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",0.41
+CP03121,Garments for men or boys ,CLOTHING AND FOOTWEAR,2.23
+CP03122,Garments for women or girls ,CLOTHING AND FOOTWEAR,2.48
+CP03123,Garments for infants (under 2 years of age) ,CLOTHING AND FOOTWEAR,0.21
+CP03124,School uniforms ,CLOTHING AND FOOTWEAR,0.09
+CP03131,Other articles of clothing ,CLOTHING AND FOOTWEAR,0.09
+CP03141,Cleaning of clothing ,CLOTHING AND FOOTWEAR,0.05
+CP03142,"Repair, tailoring and hire of clothing ",CLOTHING AND FOOTWEAR,0.02
+CP03211,Footwear for men ,CLOTHING AND FOOTWEAR,0.53
+CP03212,Footwear for women ,CLOTHING AND FOOTWEAR,0.56
+CP03213,Footwear for infants and children ,CLOTHING AND FOOTWEAR,0.2
+CP04110,Actual rental payments made by tenants for main residence ,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",4.2
+CP04121,Actual rental payments made by tenants for secondary residences ,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",0.06
+CP04311,Materials for the maintenance and repair of the dwelling ,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",0.2
+CP04312,Security equipment ,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",0.05
+CP04320,"Services for the maintenance, repair and security of the dwelling ","HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",1.68
+CP04411,Water supply delivered through network systems ,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",0.56
+CP04420,Refuse collection ,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",0.35
+CP04431,Sewage collection through sewer systems ,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",0.12
+CP04441,Charges for maintenance of multi-occupied buildings ,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",0.18
+CP04510,Electricity ,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",3.37
+CP04522,Liquefied hydrocarbons ,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",0.38
+CP04530,Liquid fuels ,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",0.47
+CP04542,"Wood fuel, including pellets and briquettes ","HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",0.12
+CP04543,Charcoal ,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",0.13
+CP05111,Household furniture ,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",0.83
+CP05112,Garden and camping furniture ,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",0.12
+CP05113,Lighting equipment ,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",0.05
+CP05114,"Furnishings, loose carpets and rugs ","FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",0.11
+CP05211,Furnishing fabrics and curtains ,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",0.11
+CP05212,Bed linen and bedding ,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",0.09
+CP05213,Table linen and bathroom linen ,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",0.03
+CP05311,Major kitchen appliances ,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",0.4
+CP05312,Major laundry appliances ,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",0.19
+CP05313,Heaters and air conditioners ,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",0.31
+CP05314,Cleaning equipment ,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",0.02
+CP05321,Small appliances for the cooking and processing of food ,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",0.05
+CP05322,Small appliances for the preparation of beverages ,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",0.04
+CP05329,Other small household appliances ,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",0.04
+CP05330,"Repair, installation and hire of household appliances ","FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",0.02
+CP05401,"Glassware, crystal ware, ceramic ware and china ware ","FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",0.11
+CP05402,"Cutlery, flatware and silverware ","FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",0.02
+CP05403,Kitchen utensils and articles ,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",0.21
+CP05510,Motorized tools and equipment ,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",0.17
+CP05521,Non-motorized tools ,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",0.05
+CP05522,Miscellaneous accessories ,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",0.13
+CP05611,Household cleaning and maintenance products ,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",1.15
+CP05619,Other non-durable household goods ,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",0.56
+CP05621,Domestic services provided by paid staff ,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",1.35
+CP05629,Other household services ,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",0.03
+CP06111,"Medicines, vaccines and other pharmaceutical preparations ",HEALTH,1.05
+CP06112,Herbal medicines and homeopathic products ,HEALTH,0.04
+CP06121,Medical diagnostic products ,HEALTH,0.02
+CP06122,Preventive and protective devices ,HEALTH,0.02
+CP06123,Treatment devices for personal use ,HEALTH,0.02
+CP06131,Assistive products for vision ,HEALTH,0.1
+CP06132,Assistive products for hearing and communication ,HEALTH,0.02
+CP06133,Assistive products for mobility and daily living ,HEALTH,0.02
+CP06211,Immunization services ,HEALTH,0.03
+CP06219,Other preventive care services ,HEALTH,0.05
+CP06221,Dental preventive services ,HEALTH,0.02
+CP06229,Other outpatient dental services ,HEALTH,0.73
+CP06231,Outpatient curative and rehabilitative services ,HEALTH,0.99
+CP06310,Inpatient curative and rehabilitative services ,HEALTH,0.27
+CP06320,Inpatient long-term care services ,HEALTH,0.12
+CP06410,Diagnostic imaging services and medical laboratory services ,HEALTH,0.21
+CP07111,New motor cars ,TRANSPORT,2.43
+CP07112,Second-hand motor cars ,TRANSPORT,1.75
+CP07120,Motorcycles ,TRANSPORT,0.11
+CP07130,Bicycles ,TRANSPORT,0.02
+CP07211,Tyres ,TRANSPORT,0.38
+CP07212,Parts for personal transport equipment ,TRANSPORT,0.22
+CP07213,Accessories for personal transport equipment ,TRANSPORT,0.04
+CP07221,Diesel ,TRANSPORT,1.72
+CP07222,Petrol ,TRANSPORT,4.24
+CP07224,Lubricants ,TRANSPORT,0.27
+CP07230,Maintenance and repair of personal transport equipment ,TRANSPORT,1.19
+CP07241,Parking services ,TRANSPORT,0.04
+CP07243,"Driving lessons, tests, licences and roadworthiness tests ",TRANSPORT,0.14
+CP07244,Hire of personal transport equipment without driver ,TRANSPORT,0.02
+CP07321,Passenger transport by bus and coach ,TRANSPORT,0.05
+CP07322,Passenger transport by taxi and hired vehicle with driver ,TRANSPORT,0.06
+CP07323,Passenger transport for students to and from school ,TRANSPORT,0.04
+CP07332,"Passenger transport by air, international ",TRANSPORT,1.9
+CP07411,Letter handling services ,TRANSPORT,0.02
+CP07412,Courier and parcel delivery services ,TRANSPORT,0.07
+CP07491,Removal and storage services ,TRANSPORT,0.02
+CP07492,Delivery of goods ,TRANSPORT,0.08
+CP08120,Mobile telephone equipment ,INFORMATION AND COMMUNICATION,0.6
+CP08131,"Computers, laptops and tablets ",INFORMATION AND COMMUNICATION,0.26
+CP08132,Peripheral equipment and its consumable components ,INFORMATION AND COMMUNICATION,0.02
+CP08140,"Equipment for the reception, recording and reproduction of sound and vision ",INFORMATION AND COMMUNICATION,0.28
+CP08150,Unrecorded recording media ,INFORMATION AND COMMUNICATION,0.02
+CP08191,Other information and communication equipment ,INFORMATION AND COMMUNICATION,0.04
+CP08192,Other information and communication accessories ,INFORMATION AND COMMUNICATION,0.04
+CP08310,Fixed communication services ,INFORMATION AND COMMUNICATION,0.06
+CP08320,Mobile communication services ,INFORMATION AND COMMUNICATION,1.24
+CP08330,Internet access provision services and online storage services ,INFORMATION AND COMMUNICATION,0.34
+CP08340,Bundled telecommunication services ,INFORMATION AND COMMUNICATION,1.1
+CP08392,Subscriptions to audiovisual streaming services and rental of audiovisual content ,INFORMATION AND COMMUNICATION,0.15
+CP09111,Cameras ,"RECREATION, SPORT AND CULTURE",0.02
+CP09123,"Boats, yachts, outboard motors and other water-sport equipment ","RECREATION, SPORT AND CULTURE",0.02
+CP09211,"Video game computers, consoles, game applications and software ","RECREATION, SPORT AND CULTURE",0.09
+CP09212,"Other games, toys and hobby-related articles ","RECREATION, SPORT AND CULTURE",0.44
+CP09213,Celebration articles ,"RECREATION, SPORT AND CULTURE",0.05
+CP09221,Sporting equipment ,"RECREATION, SPORT AND CULTURE",0.16
+CP09311,Garden products ,"RECREATION, SPORT AND CULTURE",0.09
+CP09312,"Plants, seeds and flowers ","RECREATION, SPORT AND CULTURE",0.21
+CP09321,Pets ,"RECREATION, SPORT AND CULTURE",0.02
+CP09322,Products for pets and other household animals ,"RECREATION, SPORT AND CULTURE",0.49
+CP09450,Veterinary and other services for pets ,"RECREATION, SPORT AND CULTURE",0.16
+CP09461,Recreational and leisure services ,"RECREATION, SPORT AND CULTURE",0.26
+CP09462,Services associated with the practice of sports ,"RECREATION, SPORT AND CULTURE",0.7
+CP09463,Services associated with attendance at sporting events ,"RECREATION, SPORT AND CULTURE",0.21
+CP09470,Games of chance ,"RECREATION, SPORT AND CULTURE",2.29
+CP09510,Musical instruments ,"RECREATION, SPORT AND CULTURE",0.03
+CP09610,"Services provided by cinemas, theatres and concert venues ","RECREATION, SPORT AND CULTURE",0.24
+CP09620,"Services provided by museums, libraries and cultural sites ","RECREATION, SPORT AND CULTURE",0.02
+CP09630,Photographic services ,"RECREATION, SPORT AND CULTURE",0.13
+CP09690,Other cultural services ,"RECREATION, SPORT AND CULTURE",0.3
+CP09711,Educational books and textbooks ,"RECREATION, SPORT AND CULTURE",0.1
+CP09719,Other books ,"RECREATION, SPORT AND CULTURE",0.18
+CP09721,Newspapers ,"RECREATION, SPORT AND CULTURE",0.04
+CP09730,Miscellaneous printed matter ,"RECREATION, SPORT AND CULTURE",0.04
+CP09740,Stationery and drawing materials ,"RECREATION, SPORT AND CULTURE",0.17
+CP09800,Package holidays ,"RECREATION, SPORT AND CULTURE",0.48
+CP10101,Early childhood education ,EDUCATION SERVICES,0.5
+CP10102,Primary education ,EDUCATION SERVICES,0.22
+CP10200,Secondary education ,EDUCATION SERVICES,0.66
+CP10300,Post-secondary non-tertiary education ,EDUCATION SERVICES,0.03
+CP10400,Tertiary education ,EDUCATION SERVICES,1.12
+CP10501,Tutoring ,EDUCATION SERVICES,1.1
+CP10509,Other education not defined by level ,EDUCATION SERVICES,0.13
+CP11111,"Restaurants, cafes and the like - with full service ",RESTAURANTS AND ACCOMODATION SERVICES,6.74
+CP11112,"Restaurants, cafes and the like - with limited service ",RESTAURANTS AND ACCOMODATION SERVICES,3.77
+CP11129,"Other canteens, cafeterias and refectories ",RESTAURANTS AND ACCOMODATION SERVICES,0.1
+CP11201,"Hotels, motels, inns and similar accommodation services ",RESTAURANTS AND ACCOMODATION SERVICES,0.47
+CP11203,"Accommodation services of boarding schools, universities and other educational establishments ",RESTAURANTS AND ACCOMODATION SERVICES,0.05
+CP12110,Life and accident insurance ,INSURANCE AND FINANCIAL SERVICES,0.13
+CP12120,Insurance connected with health ,INSURANCE AND FINANCIAL SERVICES,0.42
+CP12130,Insurance connected with dwellings ,INSURANCE AND FINANCIAL SERVICES,0.03
+CP12141,Personal transport insurance ,INSURANCE AND FINANCIAL SERVICES,0.88
+CP12220,Explicit charges by deposit-taking corporations ,INSURANCE AND FINANCIAL SERVICES,0.9
+CP13111,Purchase of electric appliances for personal care ,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",0.02
+CP13120,"Other appliances, articles and products for personal care ","PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",2.35
+CP13131,Hairdressing ,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",1.36
+CP13132,Personal grooming treatments ,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",0.68
+CP13211,Purchase of jewellery and watches ,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",0.17
+CP13291,"Travel goods, baby articles and other personal effects n.e.c. ","PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",0.36
+CP13301,Childcare services ,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",0.08
+CP13303,Home care services for elderly and disabled ,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",0.32
+CP13309,Other social protection services ,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",0.02
+CP13902,Religious services ,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",0.03
+CP13909,Other services n.e.c. ,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",0.33
