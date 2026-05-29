@@ -31,8 +31,8 @@ from docx import Document
 warnings.simplefilter("ignore")
 
 # Read necessary data
-df = pd.read_csv("Datasets/Raw-Data/Raw-Data-2026Q2.csv")
-urls = pd.read_csv("Datasets/Daily-Scraping-Errors-Iteration-1.csv")
+df = pd.read_csv("ECOICOPv2/Raw-Data-2.csv")
+urls = pd.read_csv("ECOICOPv2/Daily-Scraping-Errors-IterationA.csv")
 
 # Create a null data frame
 daily_errors = pd.DataFrame(columns = ["Name","Subclass","Url","Division","Retailer"])
@@ -3533,7 +3533,7 @@ list_["Price"].astype(float)
 # Export/Save the scraped data
 combined_df = pd.concat([df, list_], axis=0)
 combined_df.reset_index(drop=True, inplace=True)
-combined_df.to_csv("Datasets/Raw-Data/Raw-Data-2026Q2.csv", index=False, header=True)
+combined_df.to_csv("ECOICOPv2/Raw-Data-2.csv", index=False, header=True)
 
-# Export/Save the unscraped data (daily errors of iteration 2) 
-daily_errors.to_csv("Datasets/Daily-Scraping-Errors-Iteration-2.csv", index=False)
+# Export/Save the unscraped data (daily errors of iteration B) 
+daily_errors.to_csv("ECOICOPv2/Daily-Scraping-Errors-IterationB.csv", index=False)
