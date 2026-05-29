@@ -9,7 +9,7 @@ run-name: Scrape the websites of retailers and store raw data
 # Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
   schedule:
-    - cron: "13 13 * * *" #UTC time
+    - cron: "31 17 * * *" #UTC time
 
 #on:
 #  pull_request:
