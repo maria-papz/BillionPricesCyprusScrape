@@ -2008,7 +2008,7 @@ def results_EUC(u):
     price_ = (sum(list_euc) + 23000 + 25000 + 23000 + 21000) / (len(list_euc) + 4) #add manually the tuition fees of the medical, dental and veterinary studies
     '''
     #Scrape the tuition fees from the PDF
-    pdf_path = r"PDFs/EUC-tuition-fees-2025-26.pdf"
+    pdf_path = r"ECOICOPv2/PDFs/EUC-tuition-fees-2025-26.pdf"
     amounts = []
     price_1 = 0
     count_ = 0
@@ -2136,7 +2136,7 @@ def results_CyMinistryEducation(u):
     if "ΝΗΠΙΑΓΩΓΕΙΩΝ" in name_:
         
         # Read the pdf file using pdfplumber
-        with pdfplumber.open("PDFs/didaktra_idiotikon_nipiagogeion_2025_26.pdf") as pdf:
+        with pdfplumber.open("ECOICOPv2/PDFs/didaktra_idiotikon_nipiagogeion_2025_26.pdf") as pdf:
             page = pdf.pages[3]
             table = page.extract_table()
         
@@ -2149,7 +2149,7 @@ def results_CyMinistryEducation(u):
 
     if "ΔΗΜΟΤΙΚΩΝ" in name_:        
             
-        with pdfplumber.open("PDFs/didaktra_idiotikon_dimotikon_scholeion_2025_26.pdf") as pdf:
+        with pdfplumber.open("ECOICOPv2/PDFs/didaktra_idiotikon_dimotikon_scholeion_2025_26.pdf") as pdf:
             page = pdf.pages[0]  # 4th page (index starts from 0)
             table = page.extract_table()
             
@@ -2167,7 +2167,7 @@ def results_CyMinistryEducation(u):
     #THE GRAMMAR SCHOOL (NICOSIA)
     if ("Nicosia" in name_) and ("ΜΕΣΗΣ" in name_):
                 
-        with pdfplumber.open("PDFs/didaktra_idiotikon_mesi_ekpaidefsi_2025_26.pdf") as pdf:
+        with pdfplumber.open("ECOICOPv2/PDFs/didaktra_idiotikon_mesi_ekpaidefsi_2025_26.pdf") as pdf:
             page = pdf.pages[0] 
             table = page.extract_table()
             
@@ -2185,7 +2185,7 @@ def results_CyMinistryEducation(u):
     #THE GRAMMAR SCHOOL (LIMASSOL)
     if ("Limassol" in name_) and ("ΜΕΣΗΣ" in name_):
     
-        with pdfplumber.open("PDFs/didaktra_idiotikon_mesi_ekpaidefsi_2025_26.pdf") as pdf:
+        with pdfplumber.open("ECOICOPv2/PDFs/didaktra_idiotikon_mesi_ekpaidefsi_2025_26.pdf") as pdf:
             page = pdf.pages[1] 
             table = page.extract_table()
 
@@ -2241,7 +2241,7 @@ def results_CyPost(u):
     '''
     
     #code using the PDF file and the pdfplumber function to read the PDF file: 
-    pdf_path = r"PDFs/CyprusPost_Jun2018.pdf"
+    pdf_path = r"ECOICOPv2/PDFs/CyprusPost_Jun2018.pdf"
 
     if ("ΜΕΜΟΝΩΜΕΝΩΝ" in name_):
         with pdfplumber.open(pdf_path) as pdf:
@@ -2307,7 +2307,7 @@ def results_AHK(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)  
     else:
-        pdf_AHK = "PDFs/AHK_Mar2024.pdf"
+        pdf_AHK = "ECOICOPv2/PDFs/AHK_Mar2024.pdf"
         with open(pdf_AHK, "wb") as f:
             f.write(response.content)
         with open(pdf_AHK, "rb") as f:
@@ -2316,7 +2316,7 @@ def results_AHK(u):
             page = pdf_reader.pages[2]
             text = page.extract_text()
     '''
-    pdf_AHK = "PDFs/AHK_Mar2026.pdf"
+    pdf_AHK = "ECOICOPv2/PDFs/AHK_Mar2026.pdf"
     
     with open(pdf_AHK, "rb") as f:
         pdf_reader = pypdf.PdfReader(f)
@@ -2380,7 +2380,7 @@ def results_CERA(u):
     print(response)
     
     ## Use other functions to read a pdf file instead of tabular.read_pdf()
-    CERA_pdf_path = "PDFs/CERA_Aug2024.pdf"
+    CERA_pdf_path = "ECOICOPv2/PDFs/CERA_Aug2024.pdf"
     
     with pdfplumber.open(CERA_pdf_path) as pdf:
         page = pdf.pages[7]
@@ -3075,7 +3075,7 @@ def results_meze(u):
             daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     '''
     
-    file_path = "PDFs/Meze_Taverna_Jan2025.docx" #the prices of meat and fish meze are displayed in page 4
+    file_path = "ECOICOPv2/PDFs/Meze_Taverna_Jan2025.docx" #the prices of meat and fish meze are displayed in page 4
     
     doc = Document(file_path)
     
@@ -3107,7 +3107,7 @@ def results_meze(u):
     
 def results_pydixa(u):
     
-    pdf_pixida = "PDFs/Pixida-Nic-En-2025-May.pdf"
+    pdf_pixida = "ECOICOPv2/PDFs/Pixida-Nic-En-2025-May.pdf"
     
     '''
     response = requests.get(Item_url_)
@@ -3152,7 +3152,7 @@ def results_pydixa(u):
 
 def results_ithaki(u):
     
-    pdf_ithaki = "PDFs/ithaki-2025.pdf"
+    pdf_ithaki = "ECOICOPv2/PDFs/ithaki-2025.pdf"
 
     with pdfplumber.open(pdf_ithaki) as pdf:
         first_page = pdf.pages[5]
@@ -3211,7 +3211,7 @@ def results_flames(u):
 
     #Mixed Grill 
     if name_ == "Mixed Grill for 2 persons - Famagusta":
-        pdf_flames1 = "PDFs/flames-grill-specialities-Mar2024.pdf"
+        pdf_flames1 = "ECOICOPv2/PDFs/flames-grill-specialities-Mar2024.pdf"
     
         with pdfplumber.open(pdf_flames1) as pdf:
             first_page = pdf.pages[0]
@@ -3231,7 +3231,7 @@ def results_flames(u):
 
     #Flames Special Cyprus (Meze)
     if name_ == "Meat Meze for 2 persons - Famagusta":
-        pdf_flames2 = "PDFs/flames-cyprus-dishes-Mar2024.pdf"
+        pdf_flames2 = "ECOICOPv2/PDFs/flames-cyprus-dishes-Mar2024.pdf"
     
         with pdfplumber.open(pdf_flames2) as pdf:
             first_page = pdf.pages[0]
@@ -3273,7 +3273,7 @@ def results_flames(u):
 def results_mageirisses(u):
     
     #pdf_url = "https://oimageirisses.com/wp-content/uploads/assets/menu-gr.pdf"
-    pdf_mageirisses = "PDFs/Mageirisses-Menu-Dec2025.pdf"
+    pdf_mageirisses = "ECOICOPv2/PDFs/Mageirisses-Menu-Dec2025.pdf"
         
     reader = PdfReader(pdf_mageirisses)
     all_text = ""
@@ -3308,8 +3308,8 @@ def results_mageirisses(u):
 
 def results_piatsa_gourounaki(u):
     
-    pdf_path = "PDFs/Piatsa_JUN2025.pdf"
-    output_path = "PDFs/piatsa_gourounaki_output.txt"
+    pdf_path = "ECOICOPv2/PDFs/Piatsa_JUN2025.pdf"
+    output_path = "ECOICOPv2/PDFs/piatsa_gourounaki_output.txt"
     
     with pdfplumber.open(pdf_path) as pdf, open(output_path, 'w', encoding='utf-8') as outfile:
         
@@ -3413,7 +3413,7 @@ def results_pagkratios(u):
 
 def results_christos_grill_seafood(u):
     
-    pdf_path = "PDFs/Christos_JUN2025.pdf"
+    pdf_path = "ECOICOPv2/PDFs/Christos_JUN2025.pdf"
 
     with pdfplumber.open(pdf_path) as pdf:
         
