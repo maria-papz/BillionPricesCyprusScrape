@@ -2178,7 +2178,7 @@ def results_CyMinistryEducation(u):
                 print(price_)
             
             #Ζ' τάξη
-            if subclass_ == "Post-secondary non-tertiary education (ISCED 4)":
+            if subclass_ == "Post-secondary non-tertiary education":
                 price_ = float(table[4][8].replace("€",'').replace(".",""))
                 print(price_)
     
@@ -2196,7 +2196,7 @@ def results_CyMinistryEducation(u):
                 print(price_)
             
             #Z΄ τάξη
-            if subclass_ == "Post-secondary non-tertiary education (ISCED 4)":
+            if subclass_ == "Post-secondary non-tertiary education":
                 price_ = float(table[8][8].replace("€",'').replace(".",""))
                 print(price_)
 
