@@ -9,7 +9,7 @@ run-name: Scrape the products in daily errors and store raw data
 # Function to schedule the time (UTC), day, month, and year of the workflow process
 on:
   schedule:
-    - cron: '03 10 * * *' #UTC time
+    - cron: '03 13 * * *' #UTC time
   #workflow_dispatch: # Allows manual testing
   
 #on:
