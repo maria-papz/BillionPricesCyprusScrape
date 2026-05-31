@@ -996,6 +996,7 @@ def results_cyta(u):
     '''
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
+    print(response)
     soup = BeautifulSoup(response.content, "html.parser")
 
     if (response.status_code == 200):
