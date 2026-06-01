@@ -950,50 +950,7 @@ def results_parga(u):
         list_.loc[len(list_)] = new_row
 
 def results_cyta(u):
-    '''
-    q=0
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)
     
-    if (response.status_code==200):
-        soup = BeautifulSoup(response.content, "html.parser")
-        
-        # Wired/Wireless telephone services	
-        element_soup = soup.find_all("div",{"class":"table-responsive"})
-        for o in range(0,len(element_soup)):
-            if "Κλήσεις προς" in element_soup[o].text:
-                element_ = element_soup[o]
-                element_soup_1 = element_.find_all("td")
-                for p in range(0, len(element_soup_1)):
-                    ken=element_soup_1[p].text
-                    if (ken==name_):
-                        price_=element_soup_1[p+1].text.replace("€","").replace(",",".").replace(" /λεπτό","")
-                        q=1
-        
-        # Internet access provision services	
-        if (q==0):
-            element_soup = soup.find_all("div",{"class":"card-body px-1"})
-            qq=0
-            for o in range(0,len(element_soup)):
-                text = element_soup[o].get_text()
-                price_pattern = r'€(\d+(?:,\d+)?)' 
-                matches = re.findall(price_pattern, text)
-            
-                if (matches) and (qq==0):
-                    price_ = matches[0].replace(",",".")
-                    qq=1
-                    q=1
-        
-        # Bundled telecommunication services
-        if (q==0):
-            element_soup = soup.find_all("h4",{"class":"text-24 text-center mb-0 pb-0"})
-            text = element_soup[0].get_text()
-            price_pattern = r'€(\d+(?:,\d+)?)'  
-            matches = re.findall(price_pattern, text) 
-
-            if matches:
-                price_ = matches[0].replace(",",".")
-    '''
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
     print(response)
@@ -1001,7 +958,7 @@ def results_cyta(u):
 
     if (response.status_code == 200):
         
-        # Wired/Wireless telephone services
+        # Fixed/Mobile communication services
         if (name_=="Τέλη κλήσεων προς Σταθερό") | (name_=="Τέλη κλήσεων προς Κινητή Τηλεφωνία") :
             element_soup = soup.find_all("td", {"class":"xl176"})
             if name_=="Τέλη κλήσεων προς Σταθερό":
@@ -1009,7 +966,7 @@ def results_cyta(u):
             if name_=="Τέλη κλήσεων προς Κινητή Τηλεφωνία":
                 price_ = element_soup[3].text.replace(",",".")
                 
-        # Internet access provision services
+        # Internet access provision services and online storage services
         elif (name_=="Internet Home 200Mbps") | (name_=="Internet Home 500Mbps"):
             element_soup = soup.find_all("div", {"class":"price-block py-2 text-center"})
             if name_=="Internet Home 200Mbps":
