@@ -1530,6 +1530,7 @@ def results_numbeo(u):
     
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
+    print(response)
     soup = BeautifulSoup(response.content, "html.parser")
 
     if ("Status code: 404" in soup.text) or (response.status_code !=200):
@@ -1542,11 +1543,11 @@ def results_numbeo(u):
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
         element_soup = soup.find_all('tr', {"class":"tr_standard"})
-        for o in range(0, len(element_soup)):
-            ken = element_soup[o].text.replace("\n","").replace(" ","")
-            if "Cyprus" in ken:
-                result = re.sub(r'^.*?(Cyprus)', r'\1', ken).replace("Cyprus","").replace("$","").replace(" ","")
-                price_ = round((float(result) / 1.08), 2)
+        for i in range(0, len(element_soup)):
+            countries = element_soup[i].text.replace("\n","").replace(" ","")
+            if "Cyprus" in countries:
+                result = re.sub(r'^.*?(Cyprus)',r'\1',countries).replace("Cyprus","").replace("$","").replace(" ","")
+                price_ = round(float(result) / 1.08, 2) #convert US Dollars to Euros
                 print(price_)
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
                 new_row.append(name_)
