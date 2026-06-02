@@ -145,61 +145,6 @@ def results_supermarketcy(u):
         list_["Name"] = list_["Name"].apply(lambda x:x)
 """
 
-def results_alphamega(u):
-    
-    response = requests.get(Item_url_)
-    print(response)
-           
-    if (response.status_code != 200) or ("Η σελίδα δεν βρέθηκε" in response.text) or ("Η σελίδα αφαιρέθηκε" in response.text):
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        soup = BeautifulSoup(response.text, "html.parser")
-        element_soup = soup.find("span", {"class":"text-price fs-5"}).text.strip()
-        price_ = element_soup.replace('€','').replace(',','.').strip()
-        print(price_)
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_)
-        new_row.append(price_)
-        new_row.append(subclass_)
-        new_row.append(division_)  
-        new_row.append("Alphamega")
-        list_.loc[len(list_)] = new_row
-        list_["Name"] = list_["Name"].apply(lambda x:x)
-        
-def results_metro(u):
-    
-    #website: "https://wolt.com/en/cyp/larnaca/venue/metro-larnaca/" 
-    response = requests.get(Item_url_)
-    print(response)
-    soup = BeautifulSoup(response.text, 'html.parser')
-    element_ = soup.find_all("span", {"data-test-id":"product-modal.price"})
-    
-    if (response.status_code != 200) or (element_ == []) :
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        price_ = element_[0].text.replace('€','').replace(',','.').replace('/kg','')
-        print(price_)
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_)
-        new_row.append(float(price_))
-        new_row.append(subclass_)
-        new_row.append(division_)
-        new_row.append("METRO")
-        list_.loc[len(list_)] = new_row
-        list_['Name'] = list_['Name'].apply(lambda x:x)
-
 def results_fueldaddy(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
@@ -283,51 +228,7 @@ def results_fueldaddy(u):
             list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_ikea(u):
-    '''
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)  
-
-    if (response.status_code != 200) or ("ERROR 404" in response.text) or ("μήπως κάτι λείπει;" in response.text):
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x) 
-    else:
-        if ("Προσθήκη στο καλάθι" in response.text) or ("Ενημέρωση διαθεσιμότητας" in response.text):
-            soup = BeautifulSoup(response.content, "html.parser")
-            element_soup = soup.find_all("span",{"class":"price__sr-text"})
-        
-            if (element_soup):
-                element_soup_1=element_soup[0]
-                element_soup_2=element_soup_1.text
-                element_soup_3 = element_soup_2.replace('€', '').replace(",",".").strip()
-                
-                if "Τρέχουσα τιμή" in element_soup_3:
-                    element_soup_3=element_soup_3.replace("Τρέχουσα τιμή  ","").replace(",",".")
-            
-                if "Αρχική τιμή" in element_soup_3:
-                    element_soup_3=element_soup_3.replace("Αρχική τιμή  ","").replace(",",".")
-                
-                new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                new_row.append(name_)
-                new_row.append(float(element_soup_3))
-                new_row.append(subclass_)
-                new_row.append(division_)
-                new_row.append("IKEA")
-                list_.loc[len(list_)] = new_row
-                list_['Name'] = list_['Name'].apply(lambda x:x)
-        else:
-            website_false.append(name_)
-            website_false.append(subclass_)
-            website_false.append(Item_url_)
-            website_false.append(division_)
-            website_false.append(retailer_)
-            daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    '''
+    
     ## 1st way (without header)
     response = requests.get(Item_url_)
     #bs = BeautifulSoup(Item_url_, "html.parser")
@@ -336,6 +237,8 @@ def results_ikea(u):
     ## 2nd (with header) 
     #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     #response = requests.get(Item_url_, headers=header)
+
+    print(response)
 
     if response.status_code != 200 :
         website_false.append(name_)
@@ -348,7 +251,7 @@ def results_ikea(u):
     else:
         soup = BeautifulSoup(response.content, "html.parser")
         #soup = BeautifulSoup(response.text, "html.parser")
-        element_soup = soup.find_all("span",{"class":"price__sr-text"})
+        element_soup = soup.find_all("span", {"class":"price__sr-text"})
         price_ = element_soup[0].text.strip("Τρέχουσα τιμή € ").replace("Αρχική τιμή € ","").replace(",",".")
         print(price_)
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
@@ -412,11 +315,12 @@ def results_cyta(u):
     
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
+    print(response)
     soup = BeautifulSoup(response.content, "html.parser")
 
     if (response.status_code == 200):
         
-        # Wired/Wireless telephone services
+        # Fixed/Mobile communication services
         if (name_=="Τέλη κλήσεων προς Σταθερό") | (name_=="Τέλη κλήσεων προς Κινητή Τηλεφωνία") :
             element_soup = soup.find_all("td", {"class":"xl176"})
             if name_=="Τέλη κλήσεων προς Σταθερό":
@@ -424,7 +328,7 @@ def results_cyta(u):
             if name_=="Τέλη κλήσεων προς Κινητή Τηλεφωνία":
                 price_ = element_soup[3].text.replace(",",".")
                 
-        # Internet access provision services
+        # Internet access provision services and online storage services
         elif (name_=="Internet Home 200Mbps") | (name_=="Internet Home 500Mbps"):
             element_soup = soup.find_all("div", {"class":"price-block py-2 text-center"})
             if name_=="Internet Home 200Mbps":
@@ -505,7 +409,7 @@ def results_epic(u):
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)  
         
-        #Wireless/Wired telephone services
+        #Fixed/Mobile communication services
         if name_ == "To fixed telephony lines of other providers":
             element_ = soup.find_all("table", {"class":"yellow-top-zebra"})
             data = element_[0].text.replace("€","")
@@ -542,7 +446,7 @@ def results_epic(u):
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x) 
         
-        #Internet access provision services    
+        #Internet access provision services and online storage services    
         if name_ == "Broadband Homebox 1":
             element_ = soup.find_all("table",{"class":"yellow-top"})
             data = element_[0].text.replace("€","")
@@ -758,7 +662,7 @@ def results_cablenet(u):
     else:
         soup = BeautifulSoup(response.content, "html.parser")
         
-        # Internet access provision services
+        # Internet access provision services and online storage services
         if (name_=="GigaMax 1000M") | (name_=="Super 300M") : 
             element_soup = soup.find_all("span", {"class":"service-price"})
             if name_=="GigaMax 1000M":
@@ -775,7 +679,7 @@ def results_cablenet(u):
                 price_ = float(element_soup[0].text.replace("€",""))
             
         else:
-        # Wired/Wireless telephone services
+        # Fixed/Mobile communication services
             element_name = soup.find_all("td")
             for i in element_name:
                 if i.text == name_:
@@ -794,98 +698,7 @@ def results_cablenet(u):
         list_['Name'] = list_['Name'].apply(lambda x:x)
         
 def results_CyMinistryEducation(u):
-    '''
-    ## PREVIOUS VERSION (2024-25)
-    url = "http://archeia.moec.gov.cy/mc/698/" + Item_url_
     
-    if "ΝΗΠΙΑΓΩΓΕΙΩΝ" in name_:
-        #THE GRAMMAR JUNIOR SCHOOL (Nicosia)
-        pdf_ = tb.read_pdf(url, pages = '4', pandas_options = {'header': None}, stream = True)
-        pdf_ = pdf_[0]
-        
-        #Annual cost
-        pdf_[3] = pdf_[3].astype('string')
-        pdf = pdf_[3][1]
-        price_1 = float(pdf.strip('€*').replace(".", ""))
-
-        #Other costs
-        pdf_[5] = pdf_[5].astype('string')
-        pdf = pdf_[5][0]
-        price_2 = float(pdf.replace("τέλος εγγραφής ","").strip('€*').replace(".", ""))
-
-        pdf_[5] = pdf_[5].astype('string')
-        pdf = pdf_[5][2]
-        price_3 = float(pdf.replace("βιβλία και στολές ","").strip('€*').replace(".", ""))
-        
-        #Total cost
-        price_ = price_1 + price_2 + price_3
-    
-    if "ΔΗΜΟΤΙΚΩΝ" in name_:
-        #THE GRAMMAR JUNIOR SCHOOL (Nicosia)
-        pdf_ = tb.read_pdf(url, pages = '1', pandas_options = {'header': None}, stream = True)
-        pdf_ = pdf_[0]
-
-        #Annual cost
-        for i in range(0,7):
-            pdf_[i] = pdf_[i].astype('string')
-
-        price_1 = float(pdf_[1][25].strip('€*').replace(".", "")) + float(pdf_[2][25].strip('€*').replace(".", "")) + float(pdf_[3][25].strip('€*').replace(".", "").split(" €")[0]) + float(pdf_[3][25].strip('€*').replace(".", "").split(" €")[1]) + float(pdf_[4][25].strip('€*').replace(".", "")) + float(pdf_[5][25].strip('€*').replace(".", ""))
-        price_1 = price_1 / 6
-
-        #Other costs
-        pdf = pdf_[6][24]
-        price_2 = float(pdf.replace("τέλος εγγραφής ","").strip('€*').replace(".", ""))
-
-        pdf = pdf_[6][26]
-        price_3 = float(pdf.replace("βιβλία και στολές ","").strip('€*').replace(".", ""))
-        
-        #Total cost
-        price_ = price_1 + price_2 + price_3
-                     
-    if ("Nicosia" in name_) and ("ΜΕΣΗΣ" in name_):
-        pdf_ = tb.read_pdf(url, pages = '1', pandas_options = {'header': None}, stream = True)
-        pdf_ = pdf_[0]
-
-        for i in range(2,7):
-            pdf_[i] = pdf_[i].astype('string')
-            if subclass_ == "Secondary education":
-                #THE GRAMMAR SCHOOL (NICOSIA): Α΄ τάξη - ΣΤ΄ τάξη
-                value_1 = (float(pdf_[2][4].replace("€",'').replace(".","")))
-                value_2 = (float(pdf_[3][4].replace("€",'').replace(".","")))
-                value_3 = (float(pdf_[4][4].replace("€",'').replace(".","")))
-                value_4 = (float(pdf_[5][4].replace("€",'').replace(".","")))
-                value_5 = (float(pdf_[6][4].replace("€",'').replace(".","")))
-                value_6 = (float(pdf_[7][4].replace("€",'').replace(".","")))
-                price_ = float(value_1 + value_2 + value_3 + value_4 + value_5 + value_6) / 6
-
-            if subclass_ == "Post-secondary non-tertiary education (ISCED 4)":
-                #THE GRAMMAR SCHOOL (NICOSIA): Ζ΄ τάξη
-                pdf_[8] = pdf_[8].astype('string')
-                value_7 = (float(pdf_[8][4].replace("€",'').replace(".",""))) 
-                price_ = float(value_7)
-    
-    if ("Limassol" in name_) and ("ΜΕΣΗΣ" in name_):
-        pdf_ = tb.read_pdf(url, pages = '2', pandas_options = {'header': None}, stream = True)
-        pdf_ = pdf_[0]
-        
-        for i in range(2,7):
-            pdf_[i] = pdf_[i].astype('string')
-            if subclass_ == "Secondary education":
-                #THE GRAMMAR SCHOOL (LIMASSOL): Α΄ τάξη - ΣΤ΄ τάξη
-                value_1 = (float(pdf_[2][15].replace("€",'').replace(".","")))
-                value_2 = (float(pdf_[3][15].replace("€",'').replace(".","")))
-                value_3 = (float(pdf_[4][15].replace("€",'').replace(".","")))
-                value_4 = (float(pdf_[5][15].replace("€",'').replace(".","")))
-                value_5 = (float(pdf_[6][15].replace("€",'').replace(".","")))
-                value_6 = (float(pdf_[7][15].replace("€",'').replace(".","")))
-                price_ = float(value_1 + value_2 + value_3 + value_4 + value_5 + value_6) / 6
-
-            if subclass_ == "Post-secondary non-tertiary education (ISCED 4)":
-                #THE GRAMMAR SCHOOL (LIMASSOL): Ζ΄ τάξη
-                pdf_[8] = pdf_[8].astype('string')
-                value_7 = (float(pdf_[8][15].replace("€",'').replace(".",""))) 
-                price_ = float(value_7)
-    '''
     ## 2025-26: NEW VERSION from 17/06/2025
     
     #url = "https://sch.cy/mc/698/" + Item_url_
@@ -894,7 +707,7 @@ def results_CyMinistryEducation(u):
     if "ΝΗΠΙΑΓΩΓΕΙΩΝ" in name_:
         
         # Read the pdf file using pdfplumber
-        with pdfplumber.open("PDFs/didaktra_idiotikon_nipiagogeion_2025_26.pdf") as pdf:
+        with pdfplumber.open("ECOICOPv2/PDFs/didaktra_idiotikon_nipiagogeion_2025_26.pdf") as pdf:
             page = pdf.pages[3]
             table = page.extract_table()
         
@@ -907,7 +720,7 @@ def results_CyMinistryEducation(u):
 
     if "ΔΗΜΟΤΙΚΩΝ" in name_:        
             
-        with pdfplumber.open("PDFs/didaktra_idiotikon_dimotikon_scholeion_2025_26.pdf") as pdf:
+        with pdfplumber.open("ECOICOPv2/PDFs/didaktra_idiotikon_dimotikon_scholeion_2025_26.pdf") as pdf:
             page = pdf.pages[0]  # 4th page (index starts from 0)
             table = page.extract_table()
             
@@ -925,7 +738,7 @@ def results_CyMinistryEducation(u):
     #THE GRAMMAR SCHOOL (NICOSIA)
     if ("Nicosia" in name_) and ("ΜΕΣΗΣ" in name_):
                 
-        with pdfplumber.open("PDFs/didaktra_idiotikon_mesi_ekpaidefsi_2025_26.pdf") as pdf:
+        with pdfplumber.open("ECOICOPv2/PDFs/didaktra_idiotikon_mesi_ekpaidefsi_2025_26.pdf") as pdf:
             page = pdf.pages[0] 
             table = page.extract_table()
             
@@ -936,14 +749,14 @@ def results_CyMinistryEducation(u):
                 print(price_)
             
             #Ζ' τάξη
-            if subclass_ == "Post-secondary non-tertiary education (ISCED 4)":
+            if subclass_ == "Post-secondary non-tertiary education":
                 price_ = float(table[4][8].replace("€",'').replace(".",""))
                 print(price_)
     
     #THE GRAMMAR SCHOOL (LIMASSOL)
     if ("Limassol" in name_) and ("ΜΕΣΗΣ" in name_):
     
-        with pdfplumber.open("PDFs/didaktra_idiotikon_mesi_ekpaidefsi_2025_26.pdf") as pdf:
+        with pdfplumber.open("ECOICOPv2/PDFs/didaktra_idiotikon_mesi_ekpaidefsi_2025_26.pdf") as pdf:
             page = pdf.pages[1] 
             table = page.extract_table()
 
@@ -954,7 +767,7 @@ def results_CyMinistryEducation(u):
                 print(price_)
             
             #Z΄ τάξη
-            if subclass_ == "Post-secondary non-tertiary education (ISCED 4)":
+            if subclass_ == "Post-secondary non-tertiary education":
                 price_ = float(table[8][8].replace("€",'').replace(".",""))
                 print(price_)
 
@@ -1908,7 +1721,7 @@ def results_water(u):
         new_row.append(price_)
         new_row.append(subclass_)
         new_row.append(division_)
-        new_row.append("Water Board of " + city_)
+        new_row.append("Water EOA " + city_)
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
     else:
@@ -2244,7 +2057,7 @@ def results_sewerage(u):
                 new_row.append(float(values))
                 new_row.append(subclass_)
                 new_row.append(division_)
-                new_row.append("Sewerage Board of " + city_)
+                new_row.append("Sewerage EOA " + city_)
                 list_.loc[len(list_)] = new_row
                       
     if retailer_ == "Sewerage EOA Limassol":
@@ -2286,7 +2099,7 @@ def results_sewerage(u):
                 new_row.append(float(values))
                 new_row.append(subclass_)
                 new_row.append(division_)
-                new_row.append("Sewerage Board of " + city_)
+                new_row.append("Sewerage EOA " + city_)
                 list_.loc[len(list_)] = new_row
             
         if "Τέλος Χρήσης" in name_:
@@ -2302,7 +2115,7 @@ def results_sewerage(u):
             new_row.append(float(values))
             new_row.append(subclass_)
             new_row.append(division_)
-            new_row.append("Sewerage Board of " + city_)
+            new_row.append("Sewerage EOA " + city_)
             list_.loc[len(list_)] = new_row
                 
     if retailer_ == "Sewerage EOA Larnaca":
@@ -2342,7 +2155,7 @@ def results_sewerage(u):
             new_row.append(float(sum_/count_12))
             new_row.append(subclass_)
             new_row.append(division_)
-            new_row.append("Sewerage Board of " + city_)
+            new_row.append("Sewerage EOA " + city_)
             list_.loc[len(list_)] = new_row
  
         if "Τέλος Χρήσης" in name_:
@@ -2376,7 +2189,7 @@ def results_sewerage(u):
                 new_row.append(float(numbers[3]))
                 new_row.append(subclass_)
                 new_row.append(division_)
-                new_row.append("Sewerage Board of " + city_)
+                new_row.append("Sewerage EOA " + city_)
                 list_.loc[len(list_)] = new_row
             else:
                 website_false.append(name_)
@@ -3494,9 +3307,9 @@ for u in range(0, len(urls)):
         results_AHK(u)
     elif retailer_=="Cyprus Energy Regulatory Authority":
         results_CERA(u)
-    elif (retailer_=="Water Board of Larnaca") or (retailer_=="Water Board of Limassol") or (retailer_=="Water Board of Nicosia"):
+    elif (retailer_=="Water EOA Larnaca") or (retailer_=="Water EOA Limassol") or (retailer_=="Water EOA Nicosia"):
         results_water(u)
-    elif (retailer_=="Sewerage Board of Larnaca") or (retailer_=="Sewerage Board of Limassol") or (retailer_=="Sewerage Board of Nicosia"):
+    elif (retailer_=="Sewerage EOA Larnaca") or (retailer_=="Sewerage EOA Limassol") or (retailer_=="Sewerage EOA Nicosia"):
         results_sewerage(u)    
     elif retailer_=="MotoRace":
         results_moto_race(u)
@@ -3548,7 +3361,7 @@ for u in range(0, len(urls)):
 #=========================================================================================================
 ## Manually added data            
 
-#Water Board of Nicosia (https://ndlgo.org.cy/water-supply/water-fees-wbn/) --> Banned access in 17-10-2025
+#Water EOA Nicosia (https://ndlgo.org.cy/water-supply/water-fees-wbn/) --> Banned access in 17-10-2025
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Πάγιο ανά μήνα - Nicosia")
@@ -3569,7 +3382,7 @@ new_row.append("Water EOA Nicosia")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 """
-#Sewerage Board of Nicosia (https://ndlgo.org.cy/sewage/sewer-fees/) --> Banned access in 17-10-2025
+#Sewerage EOA Nicosia (https://ndlgo.org.cy/sewage/sewer-fees/) --> Banned access in 17-10-2025
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Ετήσιο Τέλος - Nicosia")
@@ -3590,7 +3403,7 @@ new_row.append("Sewerage EOA Nicosia")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-#Water Board of Limassol (https://eoalemesos.org.cy/el/fees) --> Connection error since 13-03-2026
+#Water EOA Limassol (https://eoalemesos.org.cy/el/fees) --> Connection error since 13-03-2026
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Πάγιο ανά μήνα - Limassol")
@@ -3621,7 +3434,7 @@ new_row.append("Water EOA Limassol")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-#Sewerage Board of Limassol (https://eoalemesos.org.cy/el/fees) --> Connection error since 13-03-2026
+#Sewerage EOA Limassol (https://eoalemesos.org.cy/el/fees) --> Connection error since 13-03-2026
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Ετήσιο Τέλος - Limassol")
