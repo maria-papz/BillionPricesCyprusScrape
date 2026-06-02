@@ -16,20 +16,20 @@
 Κόστος Δικτύου για κάθε παρεχόμενη μονάδα,Electricity,https://www.eac.com.cy/EL/RegulatedActivities/Supply/tariffs/Documents/%CE%94%CE%B9%CE%B1%CF%84%CE%AF%CE%BC%CE%B7%CF%83%CE%B7%20%CE%9F%CE%B9%CE%BA%CE%B9%CE%B1%CE%BA%CE%AE_20-03-2026.pdf,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
 Κόστος Διαχείρισης Μετρητικών Δεδομένων,Electricity,https://www.eac.com.cy/EL/RegulatedActivities/Supply/tariffs/Documents/%CE%94%CE%B9%CE%B1%CF%84%CE%AF%CE%BC%CE%B7%CF%83%CE%B7%20%CE%9F%CE%B9%CE%BA%CE%B9%CE%B1%CE%BA%CE%AE_20-03-2026.pdf,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
 Κόστος Προμήθειας,Electricity,https://www.eac.com.cy/EL/RegulatedActivities/Supply/tariffs/Documents/%CE%94%CE%B9%CE%B1%CF%84%CE%AF%CE%BC%CE%B7%CF%83%CE%B7%20%CE%9F%CE%B9%CE%BA%CE%B9%CE%B1%CE%BA%CE%AE_20-03-2026.pdf,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
-Πάγιο ανά μήνα,Water supply delivered through network systems,https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water - EOA Larnaca
-Δικαίωμα Συντήρησης ανά μήνα,Water supply delivered through network systems,https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water - EOA Larnaca
-Κυβικά ανά μήνα,Water supply delivered through network systems,https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water - EOA Larnaca
-Πάγιο ανά μήνα,Water supply delivered through network systems,https://eoalemesos.org.cy/el/fees,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water - EOA Limassol
-Δικαίωμα Συντήρησης ανά μήνα,Water supply delivered through network systems,https://eoalemesos.org.cy/el/fees,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water - EOA Limassol
-Κυβικά ανά μήνα,Water supply delivered through network systems,https://eoalemesos.org.cy/el/fees,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water - EOA Limassol
-Πάγιο ανά μήνα,Water supply delivered through network systems,https://ndlgo.org.cy/water-supply/water-fees-wbn/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water - EOA Nicosia
-Κυβικά ανά μήνα,Water supply delivered through network systems,https://ndlgo.org.cy/water-supply/water-fees-wbn/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water - EOA Nicosia
-Ετήσιο Τέλος,Sewage collection through sewer systems,https://eoal.org.cy/exypiretisi/teli/apocheteftika-teli/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage - EOA Larnaca
-Τέλος Χρήσης,Sewage collection through sewer systems,https://eoal.org.cy/exypiretisi/teli/apocheteftika-teli/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage - EOA Larnaca
-Ετήσιο Τέλος,Sewage collection through sewer systems,https://eoalemesos.org.cy/el/fees,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage - EOA Limassol
-Τέλος Χρήσης,Sewage collection through sewer systems,https://eoalemesos.org.cy/el/fees,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage - EOA Limassol
-Ετήσιο Τέλος,Sewage collection through sewer systems,https://ndlgo.org.cy/sewage/sewer-fees/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage - EOA Nicosia
-Τέλος Χρήσης,Sewage collection through sewer systems,https://ndlgo.org.cy/sewage/sewer-fees/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage - EOA Nicosia
+Πάγιο ανά μήνα,Water supply delivered through network systems,https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Larnaca
+Δικαίωμα Συντήρησης ανά μήνα,Water supply delivered through network systems,https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Larnaca
+Κυβικά ανά μήνα,Water supply delivered through network systems,https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Larnaca
+Πάγιο ανά μήνα,Water supply delivered through network systems,https://eoalemesos.org.cy/el/fees,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Limassol
+Δικαίωμα Συντήρησης ανά μήνα,Water supply delivered through network systems,https://eoalemesos.org.cy/el/fees,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Limassol
+Κυβικά ανά μήνα,Water supply delivered through network systems,https://eoalemesos.org.cy/el/fees,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Limassol
+Πάγιο ανά μήνα,Water supply delivered through network systems,https://ndlgo.org.cy/water-supply/water-fees-wbn/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Nicosia
+Κυβικά ανά μήνα,Water supply delivered through network systems,https://ndlgo.org.cy/water-supply/water-fees-wbn/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Nicosia
+Ετήσιο Τέλος,Sewage collection through sewer systems,https://eoal.org.cy/exypiretisi/teli/apocheteftika-teli/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Larnaca
+Τέλος Χρήσης,Sewage collection through sewer systems,https://eoal.org.cy/exypiretisi/teli/apocheteftika-teli/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Larnaca
+Ετήσιο Τέλος,Sewage collection through sewer systems,https://eoalemesos.org.cy/el/fees,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Limassol
+Τέλος Χρήσης,Sewage collection through sewer systems,https://eoalemesos.org.cy/el/fees,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Limassol
+Ετήσιο Τέλος,Sewage collection through sewer systems,https://ndlgo.org.cy/sewage/sewer-fees/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Nicosia
+Τέλος Χρήσης,Sewage collection through sewer systems,https://ndlgo.org.cy/sewage/sewer-fees/,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Nicosia
 Vision Optics 55 Hydrogel  Φακοί Μυωπίας Μηνιαίοι 6τμχ,Assistive products for vision,https://www.akentia.com/vision-optics-55-hydrogel-fakoi-myopias-miniaioi-6tmx,HEALTH,LensesCY
 Bausch & Lomb Soflens 59 Φακοί Μυωπίας Μηνιαίοι 6τμχ,Assistive products for vision,https://www.akentia.com/bausch-lomb-soflens-59-fakoi-myopias-miniaioi-6tmx-3,HEALTH,LensesCY
 Vision Optics DayVue BioMoist Φακοί Μυωπίας Ημερήσιοι 30τμχ,Assistive products for vision,https://www.akentia.com/vision-optics-dayvue-biomoist-fakoi-myopias-imerisioi-30tmx,HEALTH,LensesCY
