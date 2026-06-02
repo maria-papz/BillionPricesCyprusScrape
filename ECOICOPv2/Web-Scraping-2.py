@@ -3057,8 +3057,8 @@ for u in range(0, len(urls)):
         results_AHK(u)
     elif retailer_=="Water EOA Larnaca":
         results_water(u)
-    #elif retailer_=="Water EOA Nicosia": #*EOA Nicosia was deactivated from 17/10/25 to 04/03/26 since it banned access (https://ndlgo.org.cy/water-supply/consumer/water-fees-wbn/)
-    #    results_water(u)
+    elif retailer_=="Water EOA Nicosia": #*EOA Nicosia was deactivated from 17/10/25 to 04/03/26 since it banned access (https://ndlgo.org.cy/water-supply/consumer/water-fees-wbn/)
+        results_water(u)
     elif retailer_=="Water EOA Limassol":  #*EOA Limassol was diactivated in 13/03/26 because of connection error (https://eoalemesos.org.cy/el/fees) 
        results_water(u)    
     elif retailer_=="Sewerage EOA Larnaca": 
