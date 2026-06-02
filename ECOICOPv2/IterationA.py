@@ -3570,7 +3570,7 @@ new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Ετήσιο Τέλος - Nicosia")
 new_row.append(float(0.31))
-new_row.append("Sewage collection")
+new_row.append("Sewage collection through sewer systems")
 new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
 new_row.append("Sewerage EOA Nicosia") 
 list_.loc[len(list_)] = new_row
@@ -3580,7 +3580,7 @@ new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Τέλος Χρήσης - Nicosia")
 new_row.append(float(0.55))
-new_row.append("Sewage collection")
+new_row.append("Sewage collection through sewer systems")
 new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
 new_row.append("Sewerage EOA Nicosia") 
 list_.loc[len(list_)] = new_row
@@ -3622,7 +3622,7 @@ new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Ετήσιο Τέλος - Limassol")
 new_row.append(float(0.475142857))
-new_row.append("Sewage collection")
+new_row.append("Sewage collection through sewer systems")
 new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
 new_row.append("Sewerage EOA Limassol") 
 list_.loc[len(list_)] = new_row
@@ -3632,7 +3632,7 @@ new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Τέλος Χρήσης - Limassol")
 new_row.append(float(0.64))
-new_row.append("Sewage collection")
+new_row.append("Sewage collection through sewer systems")
 new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
 new_row.append("Sewerage EOA Limassol") 
 list_.loc[len(list_)] = new_row
