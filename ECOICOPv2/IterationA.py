@@ -3541,496 +3541,17 @@ for u in range(0, len(urls)):
     elif retailer_=="Max 7 Taxi":
         results_max_7_tax(u)
         
-#================================================================================
-# Manually added data            
-
-'''
-#Toyota (https://www.toyota.com.cy/new-cars)
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Toyota Aygo X")
-new_row.append(float(17700))
-new_row.append("New motor cars")
-new_row.append("TRANSPORT")
-new_row.append("Toyota") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("The New Toyota Yaris")
-new_row.append(float(24900))
-new_row.append("New motor cars")
-new_row.append("TRANSPORT")
-new_row.append("Toyota") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("The New Toyota Yaris Cross")
-new_row.append(float(27900))
-new_row.append("New motor cars")
-new_row.append("TRANSPORT")
-new_row.append("Toyota") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-#Max 7 Taxi (https://www.max7taxi.com/?mod=info&show=excursions)
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Initial chargeFixed")
-new_row.append(float(3.42))
-new_row.append("Passenger transport by taxi and hired car with driver")
-new_row.append("TRANSPORT")
-new_row.append("Max 7 Taxi") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Initial chargeVariable")
-new_row.append(float(4.36))
-new_row.append("Passenger transport by taxi and hired car with driver")
-new_row.append("TRANSPORT")
-new_row.append("Max 7 Taxi") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Fare per KmFixed")
-new_row.append(float(0.73))
-new_row.append("Passenger transport by taxi and hired car with driver")
-new_row.append("TRANSPORT")
-new_row.append("Max 7 Taxi") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Fare per KmVariable")
-new_row.append(float(0.85))
-new_row.append("Passenger transport by taxi and hired car with driver")
-new_row.append("TRANSPORT")
-new_row.append("Max 7 Taxi") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-#Intercity Buses (https://intercity-buses.com/en/routes/)
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-limassol-limassol-nicosia/")
-new_row.append(float(5.0))
-new_row.append("Passenger transport by bus and coach")
-new_row.append("TRANSPORT")
-new_row.append("Intercity Buses") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-nicosia-nicosia-larnaca/")
-new_row.append(float(4.0))
-new_row.append("Passenger transport by bus and coach")
-new_row.append("TRANSPORT")
-new_row.append("Intercity Buses") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-ayia-napa-paralimni-ayia-napa-paralimni-nicosia/")
-new_row.append(float(5.0))
-new_row.append("Passenger transport by bus and coach")
-new_row.append("TRANSPORT")
-new_row.append("Intercity Buses") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-paphos-paphos-nicosia/")
-new_row.append(float(7.0))
-new_row.append("Passenger transport by bus and coach")
-new_row.append("TRANSPORT")
-new_row.append("Intercity Buses") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-limassol-limassol-larnaca/")
-new_row.append(float(4.0))
-new_row.append("Passenger transport by bus and coach")
-new_row.append("TRANSPORT")
-new_row.append("Intercity Buses") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-ayia-napa-paralimni-paralimni-ayia-napa-larnaca/")
-new_row.append(float(4.0))
-new_row.append("Passenger transport by bus and coach")
-new_row.append("TRANSPORT")
-new_row.append("Intercity Buses") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)limassol-paphos-paphos-limassol/")
-new_row.append(float(4.0))
-new_row.append("Passenger transport by bus and coach")
-new_row.append("TRANSPORT")
-new_row.append("Intercity Buses") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)paralimni-ayia-napa-larnaca-paphos-paphos-larnaca-ayia-napa-paralimni/")
-new_row.append(float(9.0))
-new_row.append("Passenger transport by bus and coach")
-new_row.append("TRANSPORT")
-new_row.append("Intercity Buses") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-limassol-paphos-paphos-limassol-larnaca/")
-new_row.append(float(8.0))
-new_row.append("Passenger transport by bus and coach")
-new_row.append("TRANSPORT")
-new_row.append("Intercity Buses") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-#AHK (https://www.eac.com.cy/EL/RegulatedActivities/Supply/tariffs/Pages/supply-tariffs.aspx)
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Κόστος Ενέργειας για κάθε παρεχόμενη μονάδα")
-new_row.append(float(0.1035))
-new_row.append("Electricity")
-new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("AHK") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Κόστος Δικτύου για κάθε παρεχόμενη μονάδα")
-new_row.append(float(0.0305))
-new_row.append("Electricity")
-new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("AHK") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Κόστος Επικουρικών Υπηρεσιών  για κάθε παρεχόμενη μονάδα")
-new_row.append(float(0.0065))
-new_row.append("Electricity")
-new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("AHK") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Κόστος Προμήθειας")
-new_row.append(float(6.08))
-new_row.append("Electricity")
-new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("AHK") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-#Epic (https://www.epic.com.cy/en/page/sWdv2OOV0/broadband-homebox)
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Broadband Homebox 1")
-new_row.append(float(29.99))
-new_row.append("Internet access provision services")
-new_row.append("COMMUNICATION")
-new_row.append("Epic") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Broadband Homebox 2")
-new_row.append(float(29.99))
-new_row.append("Internet access provision services")
-new_row.append("COMMUNICATION")
-new_row.append("Epic") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Broadband Homebox 3")
-new_row.append(float(29.99))
-new_row.append("Internet access provision services")
-new_row.append("COMMUNICATION")
-new_row.append("Epic") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-#Epic (https://www.epic.com.cy/en/page/EfoTinQQu/epic-fiber)
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("To fixed telephony lines of other providers")
-new_row.append(float(0.03))
-new_row.append("Wired telephone services")
-new_row.append("COMMUNICATION")
-new_row.append("Epic") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("To mobile telephony lines of other providers")
-new_row.append(float(0.05))
-new_row.append("Wireless telephone services")
-new_row.append("COMMUNICATION")
-new_row.append("Epic") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-#Epic (https://www.epic.com.cy/en/page/H1Q5Ad3p/mobile-plans)
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("5G Unlimited Max Plus")
-new_row.append(float(24.99))
-new_row.append("Bundled telecommunication services")
-new_row.append("COMMUNICATION")
-new_row.append("Epic") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("5G Unlimited Max")
-new_row.append(float(19.99))
-new_row.append("Bundled telecommunication services")
-new_row.append("COMMUNICATION")
-new_row.append("Epic") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-#European University Cyprus (https://euc.ac.cy/en/admissions/tuition-fees/)
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("EUROPEAN UNIVERSITY CYPRUS, Bachelors Programmes Average Yearly Tuition for 2024-2025")
-new_row.append(float(11735.2))
-new_row.append("Tertiary education")
-new_row.append("EDUCATION")
-new_row.append("European University Cyprus") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-#Water Board of Larnaca (https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/)
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Πάγιο ανά μήνα - Larnaca")
-new_row.append(float(3.35))
-new_row.append("Water supply")
-new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("Water Board") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Δικαίωμα Συντήρησης ανά μήνα - Larnaca")
-new_row.append(float(1.9))
-new_row.append("Water supply")
-new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("Water Board") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Κυβικά ανά μήνα - Larnaca")
-new_row.append(float(1.0))
-new_row.append("Water supply")
-new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("Water Board") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-#Meze Taverna (https://mezetaverna.com/wp-content/uploads/2025/01/MEZE-TAVERNA-ENGLISH-MENU-JAN-2025.pdf)
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Meat Meze for 2 persons - Limassol")
-new_row.append(float(23))
-new_row.append("Restaurants, cafes and dancing establishments")
-new_row.append("RESTAURANTS AND HOTELS")
-new_row.append("Meze Tavern") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Fish Meze for 2 persons - Limassol")
-new_row.append(float(26))
-new_row.append("Restaurants, cafes and dancing establishments")
-new_row.append("RESTAURANTS AND HOTELS")
-new_row.append("Meze Tavern") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-#Stock Center - The Used Car Experts (https://www.stock-center.com.cy/el/searchresults/?cg=&mk=&md=&yf=2000&yt=2024&km=0&cf=0&ct=1600&et=&pf=0&pt=15000&mp=0&ar=#page_1)
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("NISSAN MICRA 1.0 PETROL AUTOMATIC 1000cc")
-new_row.append(float(13000))
-new_row.append("Second-hand motor cars")
-new_row.append("TRANSPORT")
-new_row.append("Stock Center") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("KIA RIO 1.2cc MANUAL PETROL 1200cc")
-new_row.append(float(12700))
-new_row.append("Second-hand motor cars")
-new_row.append("TRANSPORT")
-new_row.append("Stock Center") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("KIA PICANTO PETROL MANUAL 1000cc")
-new_row.append(float(10500))
-new_row.append("Second-hand motor cars")
-new_row.append("TRANSPORT")
-new_row.append("Stock Center") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-#Primetel (https://primetel.com.cy/telephony-services)
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Calls to other providers landline")
-new_row.append(float(0.03))
-new_row.append("Wired telephone services")
-new_row.append("COMMUNICATION")
-new_row.append("Primetel") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-#Primetel (https://primetel.com.cy/telephony-services) 
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Calls to other providers landline")
-new_row.append(float(0.095))
-new_row.append("Wireless telephone services")
-new_row.append("COMMUNICATION")
-new_row.append("Primetel") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-#Primetel (https://primetel.com.cy/giga-unlimited --> https://primetel.com.cy/giga-unlimited-summer-offer) 
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("GIGA Unlimited")
-new_row.append(float(12.99))
-new_row.append("Bundled telecommunication services")
-new_row.append("COMMUNICATION")
-new_row.append("Primetel") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("GIGA Unlimited 5G")
-new_row.append(float(14.99))
-new_row.append("Bundled telecommunication services")
-new_row.append("COMMUNICATION")
-new_row.append("Primetel") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("GIGA Unlimited 5G MAX")
-new_row.append(float(17.99))
-new_row.append("Bundled telecommunication services")
-new_row.append("COMMUNICATION")
-new_row.append("Primetel") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-#Sewerage Board of Larnaca (https://eoal.org.cy/exypiretisi/teli/apocheteftika-teli/)
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Ετήσιο Τέλος Larnaca")
-new_row.append(float(0.4433333333333333))
-new_row.append("Sewage collection")
-new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("Sewerage Board of Larnaca") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-            
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Τέλος Χρήσης Larnaca")
-new_row.append(float(0.5))
-new_row.append("Sewage collection")
-new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("Sewerage Board of Larnaca") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-#Pagkratios Tavern Paphos (https://www.pagkratios.com/menu/	--> https://pagkratios.com)
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Meat Meze for 2 persons - Paphos")
-new_row.append(float(25))
-new_row.append("Restaurants, cafes and dancing establishments")
-new_row.append("RESTAURANTS AND HOTELS")
-new_row.append("Pagkratios") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-#Cyta --> Wired & Wireless Telephone Services (https://www.cyta.com.cy/mp/informational/CallCharges/TF_el.htm)
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Κλήσεις προς σταθερό")
-new_row.append(float(0.03273))
-new_row.append("Wired telephone services")
-new_row.append("COMMUNICATION")
-new_row.append("CYTA") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-            
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Κλήσεις προς κινητό")
-new_row.append(float(0.05772))
-new_row.append("Wireless telephone services")
-new_row.append("COMMUNICATION")
-new_row.append("CYTA") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-'''
+#=========================================================================================================
+## Manually added data            
 
 #Water Board of Nicosia (https://ndlgo.org.cy/water-supply/water-fees-wbn/) --> Banned access in 17-10-2025
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Πάγιο ανά μήνα - Nicosia")
 new_row.append(float(5.5))
-new_row.append("Water supply")
+new_row.append("Water supply delivered through network systems")
 new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("Water Board of Nicosia") 
+new_row.append("Water EOA Nicosia") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
             
@@ -4038,9 +3559,9 @@ new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Κυβικά ανά μήνα - Nicosia")
 new_row.append(float(0.5))
-new_row.append("Water supply")
+new_row.append("Water supply delivered through network systems")
 new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("Water Board of Nicosia") 
+new_row.append("Water EOA Nicosia") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 """
@@ -4051,7 +3572,7 @@ new_row.append("Ετήσιο Τέλος - Nicosia")
 new_row.append(float(0.31))
 new_row.append("Sewage collection")
 new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("Sewerage Board of Nicosia") 
+new_row.append("Sewerage EOA Nicosia") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
             
@@ -4061,7 +3582,7 @@ new_row.append("Τέλος Χρήσης - Nicosia")
 new_row.append(float(0.55))
 new_row.append("Sewage collection")
 new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("Sewerage Board of Nicosia") 
+new_row.append("Sewerage EOA Nicosia") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
@@ -4070,9 +3591,9 @@ new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Πάγιο ανά μήνα - Limassol")
 new_row.append(float(4))
-new_row.append("Water supply")
+new_row.append("Water supply delivered through network systems")
 new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("Water Board of Limassol") 
+new_row.append("Water EOA Limassol") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
@@ -4080,9 +3601,9 @@ new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Δικαίωμα Συντήρησης ανά μήνα - Limassol")
 new_row.append(float(1.5))
-new_row.append("Water supply")
+new_row.append("Water supply delivered through network systems")
 new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("Water Board of Limassol") 
+new_row.append("Water EOA Limassol") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
@@ -4090,9 +3611,9 @@ new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Κυβικά ανά μήνα - Limassol")
 new_row.append(float(0.225))
-new_row.append("Water supply")
+new_row.append("Water supply delivered through network systems")
 new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("Water Board of Limassol") 
+new_row.append("Water EOA Limassol") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
@@ -4103,7 +3624,7 @@ new_row.append("Ετήσιο Τέλος - Limassol")
 new_row.append(float(0.475142857))
 new_row.append("Sewage collection")
 new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("Sewerage Board of Limassol") 
+new_row.append("Sewerage EOA Limassol") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
             
@@ -4113,7 +3634,7 @@ new_row.append("Τέλος Χρήσης - Limassol")
 new_row.append(float(0.64))
 new_row.append("Sewage collection")
 new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("Sewerage Board of Limassol") 
+new_row.append("Sewerage EOA Limassol") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 """
