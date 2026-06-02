@@ -2990,17 +2990,9 @@ for u in range(0, len(urls)):
     subclass_ = urls["Subclass"].iloc[u]
     division_ = urls["Division"].iloc[u]
     retailer_ = urls["Retailer"].iloc[u]
-    
-    #if retailer_=="Alphamega": #*Deactivated in 05/03/26 since it banned access.
-    #    results_alphamega(u)  
-    #elif retailer_=="SupermarketCy": #*Run only locally
+     
+    #if retailer_=="SupermarketCy": #*Run only locally
     #    results_supermarketcy(u) 
-    #elif retailer_=="METRO":
-    #    results_metro(u)  
-    #elif retailer_=="Cheap Basket":
-    #    results_cheapbasket(u)
-    #elif retailer_=="Opa":
-    #    results_opacy(u)    
     if retailer_=="Fuel Daddy":
         results_fueldaddy(u)
     elif retailer_=="Costas Theodorou":
@@ -3063,8 +3055,6 @@ for u in range(0, len(urls)):
         results_CyPost(u)
     elif retailer_=="AHK":
         results_AHK(u)
-    #elif retailer_=="Cyprus Energy Regulatory Authority": #*deactivated in 23/01/2026 because of no updates 
-    #    results_CERA(u)
     elif retailer_=="Water EOA Larnaca":
         results_water(u)
     #elif retailer_=="Water EOA Nicosia": #*EOA Nicosia was deactivated from 17/10/25 to 04/03/26 since it banned access (https://ndlgo.org.cy/water-supply/consumer/water-fees-wbn/)
@@ -3111,8 +3101,6 @@ for u in range(0, len(urls)):
         results_flames(u)
     elif retailer_=="Mageirisses":
         results_mageirisses(u)    
-    #elif retailer_=="Piatsa Gourounaki": #*replaced with Mageirisses in 19/12/25 because the scraping of its new menu is not feasible
-    #    results_piatsa_gourounaki(u)
     elif retailer_=="Pagkratios": # *deactivated in 16/11/25 due to maintenance reasons and activated in 01/12/2025
         results_pagkratios(u)
     elif retailer_=="Christos Grill&Seafood":
