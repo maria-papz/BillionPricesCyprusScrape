@@ -1515,6 +1515,7 @@ def results_numbeo(u):
     
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
+    print(response)
     soup = BeautifulSoup(response.content, "html.parser")
 
     if ("Status code: 404" in soup.text) or (response.status_code !=200):
@@ -1527,11 +1528,11 @@ def results_numbeo(u):
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
         element_soup = soup.find_all('tr', {"class":"tr_standard"})
-        for o in range(0, len(element_soup)):
-            ken = element_soup[o].text.replace("\n","").replace(" ","")
-            if "Cyprus" in ken:
-                result = re.sub(r'^.*?(Cyprus)', r'\1', ken).replace("Cyprus","").replace("$","").replace(" ","")
-                price_ = round((float(result) / 1.08), 2)
+        for i in range(0, len(element_soup)):
+            countries = element_soup[i].text.replace("\n","").replace(" ","")
+            if "Cyprus" in countries:
+                result = re.sub(r'^.*?(Cyprus)', r'\1', countries).replace("Cyprus","").replace("$","").replace(" ","")
+                price_ = round(float(result) / 1.08, 2) #convert US Dollars to Euros
                 print(price_)
                 new_row.append(datetime.now().strftime('%Y-%m-%d'))
                 new_row.append(name_)
@@ -1837,10 +1838,11 @@ def results_CERA(u):
 
 def results_water(u):
     
-    if "Nicosia" in retailer_:
+    if retailer_ == "Water EOA Nicosia":
         city_ = "Nicosia"
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
+        print(response)
         soup = BeautifulSoup(response.content, "html.parser")
         element = soup.find_all("table", {"width":"992"})
         text = element[0].get_text()
@@ -1853,10 +1855,11 @@ def results_water(u):
             price_2 = prices[4].replace(",",".")
             price_ = float(price_2) / 2 #per month
     
-    if "Larnaca" in retailer_:
+    if retailer_ == "Water EOA Larnaca":
         city_ = "Larnaca"
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
+        print(response)
         soup = BeautifulSoup(response.content, "html.parser")
         element = soup.find_all("table", {"class":"table-format-left"})
         text_ = element[0].text
@@ -1877,10 +1880,11 @@ def results_water(u):
                 price_3 = element_3.group(1).replace(",",".")
                 price_ = float(price_3) / 3 #per month
 
-    if "Limassol" in retailer_:
+    if retailer_ == "Water EOA Limassol":
         city_ = "Limassol"
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
+        print(response)
         soup = BeautifulSoup(response.content, "html.parser")
         element = soup.find_all("div", {"class":"acd-des"})
 
@@ -2199,7 +2203,7 @@ def results_sewerage(u):
     
     values = 0
 
-    if "Nicosia" in retailer_:
+    if retailer_ == "Sewerage EOA Nicosia":
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
         print(response)
@@ -2243,7 +2247,7 @@ def results_sewerage(u):
                 new_row.append("Sewerage Board of " + city_)
                 list_.loc[len(list_)] = new_row
                       
-    if "Limassol" in retailer_:
+    if retailer_ == "Sewerage EOA Limassol":
         city_ = "Limassol"
         new_row = []
         bs = BeautifulSoup(Item_url_, "html.parser")
@@ -2301,7 +2305,7 @@ def results_sewerage(u):
             new_row.append("Sewerage Board of " + city_)
             list_.loc[len(list_)] = new_row
                 
-    if "Larnaca" in retailer_:
+    if retailer_ == "Sewerage EOA Larnaca":
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
         print(response)
