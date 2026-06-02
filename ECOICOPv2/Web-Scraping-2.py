@@ -148,135 +148,6 @@ def results_supermarketcy(u):
         list_["Name"] = list_["Name"].apply(lambda x:x)
 """
 
-def results_alphamega(u):
-    
-    response = requests.get(Item_url_)
-    print(response)
-           
-    if (response.status_code != 200) or ("Η σελίδα δεν βρέθηκε" in response.text) or ("Η σελίδα αφαιρέθηκε" in response.text):
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        soup = BeautifulSoup(response.text, "html.parser")
-        element_soup = soup.find("span", {"class":"text-price fs-5"}).text.strip()
-        price_ = element_soup.replace('€','').replace(',','.').strip()
-        print(price_)
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_)
-        new_row.append(price_)
-        new_row.append(subclass_)
-        new_row.append(division_)  
-        new_row.append("Alphamega")
-        list_.loc[len(list_)] = new_row
-        list_["Name"] = list_["Name"].apply(lambda x:x)
-        
-def results_metro(u):
-    
-    #website: "https://wolt.com/en/cyp/larnaca/venue/metro-larnaca/" 
-    response = requests.get(Item_url_)
-    print(response)
-    soup = BeautifulSoup(response.text, 'html.parser')
-    element_ = soup.find_all("span", {"data-test-id":"product-modal.price"})
-    
-    if (response.status_code != 200) or (element_ == []) :
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        price_ = element_[0].text.replace('€','').replace(',','.').replace('/kg','')
-        print(price_)
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_)
-        new_row.append(float(price_))
-        new_row.append(subclass_)
-        new_row.append(division_)
-        new_row.append("METRO")
-        list_.loc[len(list_)] = new_row
-        list_['Name'] = list_['Name'].apply(lambda x:x)  
-
-def results_cheapbasket(u):
-    
-    url = "https://cheapbasket.com.cy/product/" + Item_url_
-    response = requests.get(url)
-    
-    if (response.status_code != 200):
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        soup = BeautifulSoup(response.text, 'html.parser')
-        if ("New Products" in soup.get_text()):
-            website_false.append(name_)
-            website_false.append(subclass_)
-            website_false.append(Item_url_)
-            website_false.append(division_)
-            website_false.append(retailer_)
-            daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-        else:
-            element_ = soup.find_all("div",{"class":"shop-detail-right klb-product-right"})
-            element_price = element_[0].find_all("span", {"class":"woocommerce-Price-amount amount"})
-            price_ = element_price[0].text.replace("€","").replace(" ","").replace(",",".")
-            print(price_)
-            new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(name_)
-            new_row.append(float(price_))
-            new_row.append(subclass_)
-            new_row.append(division_)
-            new_row.append("Cheap Basket")
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)
-
-def results_opacy(u):
-    
-    url_ = "https://opa.cy/product/" + Item_url_
-    response = requests.get(url_)
-    
-    if (response.status_code != 200) or ("Oops! It seems we are missing something." in response.text):
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        soup = BeautifulSoup(response.text, 'html.parser')
-        element_ = soup.find_all("span",{"class":"product-span price"})
-        price_ = element_[0].text.replace("Price: €","")
-        print(price_)
-        if (name_=="Tomatoes Ripe for Salsa")|(name_=="Cucumbers fleid")|(name_=="Red Onions")|(name_=="Cucumbers Greenhouse")|(name_=="Cherry Tomatos"):
-            new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(name_)
-            new_row.append(float(price_)*2) #since the price of the above 5 products is per 500g, we multiply *2 to have Eur/Kg 
-            new_row.append(subclass_)
-            new_row.append(division_)
-            new_row.append("Opa")
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)
-        else:
-            new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(name_)
-            new_row.append(float(price_))
-            new_row.append(subclass_)
-            new_row.append(division_)
-            new_row.append("Opa")
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)
-
 def results_fueldaddy(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
@@ -633,51 +504,7 @@ def results_leroymerlin(u):
         list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_ikea(u):
-    '''
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)  
-
-    if (response.status_code != 200) or ("ERROR 404" in response.text) or ("μήπως κάτι λείπει;" in response.text):
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x) 
-    else:
-        if ("Προσθήκη στο καλάθι" in response.text) or ("Ενημέρωση διαθεσιμότητας" in response.text):
-            soup = BeautifulSoup(response.content, "html.parser")
-            element_soup = soup.find_all("span",{"class":"price__sr-text"})
-        
-            if (element_soup):
-                element_soup_1=element_soup[0]
-                element_soup_2=element_soup_1.text
-                element_soup_3 = element_soup_2.replace('€', '').replace(",",".").strip()
-                
-                if "Τρέχουσα τιμή" in element_soup_3:
-                    element_soup_3=element_soup_3.replace("Τρέχουσα τιμή  ","").replace(",",".")
-            
-                if "Αρχική τιμή" in element_soup_3:
-                    element_soup_3=element_soup_3.replace("Αρχική τιμή  ","").replace(",",".")
-                
-                new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                new_row.append(name_)
-                new_row.append(float(element_soup_3))
-                new_row.append(subclass_)
-                new_row.append(division_)
-                new_row.append("IKEA")
-                list_.loc[len(list_)] = new_row
-                list_['Name'] = list_['Name'].apply(lambda x:x)
-        else:
-            website_false.append(name_)
-            website_false.append(subclass_)
-            website_false.append(Item_url_)
-            website_false.append(division_)
-            website_false.append(retailer_)
-            daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    '''
+    
     ## 1st way (without header)
     response = requests.get(Item_url_)
     #bs = BeautifulSoup(Item_url_, "html.parser")
@@ -687,6 +514,8 @@ def results_ikea(u):
     #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     #response = requests.get(Item_url_, headers=header)
 
+    print(response)
+    
     if response.status_code != 200 :
         website_false.append(name_)
         website_false.append(subclass_)
@@ -698,7 +527,7 @@ def results_ikea(u):
     else:
         soup = BeautifulSoup(response.content, "html.parser")
         #soup = BeautifulSoup(response.text, "html.parser")
-        element_soup = soup.find_all("span",{"class":"price__sr-text"})
+        element_soup = soup.find_all("span", {"class":"price__sr-text"})
         price_ = element_soup[0].text.strip("Τρέχουσα τιμή € ").replace("Αρχική τιμή € ","").replace(",",".")
         print(price_)
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
@@ -779,6 +608,7 @@ def results_musicavenue(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     response = requests.get(Item_url_, {'headers':header})
+    print(response)
     
     if response.status_code != 200:
         website_false.append(name_)
@@ -927,6 +757,7 @@ def results_parga(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     response = requests.get(Item_url_, {'headers':header})
+    print(response)
     
     if response.status_code != 200:
         website_false.append(name_)
@@ -1046,7 +877,7 @@ def results_epic(u):
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)  
         
-        #Wireless/Wired telephone services
+        #Fixed/Mobile communication services
         if name_ == "To fixed telephony lines of other providers":
             element_ = soup.find_all("table", {"class":"yellow-top-zebra"})
             data = element_[0].text.replace("€","")
@@ -1083,7 +914,7 @@ def results_epic(u):
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x) 
         
-        #Internet access provision services    
+        #Internet access provision services and online storage services    
         if name_ == "Broadband Homebox 1":
             element_ = soup.find_all("table", {"class":"yellow-top"})
             data = element_[0].text.replace("€","")
@@ -1170,7 +1001,7 @@ def results_primetel(u):
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-        # Wired/Wireless telephone services           
+        # Fixed/Mobile communication services           
         elif (name_=="Calls to other providers landline") | (name_=="Calls to other providers mobile") :
             
             element_ = soup.find_all("table", {"id":"call_rates"}, {"class":"table-striped table-bordered dt-responsive table-hover nowrap dataTable dtr-inline data_table_resp"})
@@ -1200,7 +1031,7 @@ def results_primetel(u):
                     list_.loc[len(list_)] = new_row
                     list_['Name'] = list_['Name'].apply(lambda x:x)
                 
-        # Internet access provision services 
+        # Internet access provision services and online storage services 
         elif  (name_=="Fiber Family & 200Mbps") | (name_=="Fiber Entertainment & 200Mbps") :
 
             element_ = soup.find_all("div", {"class":"price_tv_pack"})
@@ -1269,7 +1100,7 @@ def results_cablenet(u):
     else:
         soup = BeautifulSoup(response.content, "html.parser")
         
-        # Internet access provision services
+        # Internet access provision services and online storage services
         if (name_=="GigaMax 1000M") | (name_=="Super 300M") : 
             element_soup = soup.find_all("span", {"class":"service-price"})
             if name_=="GigaMax 1000M":
@@ -1286,7 +1117,7 @@ def results_cablenet(u):
                 price_ = float(element_soup[0].text.replace("€",""))
             
         else:
-        # Wired/Wireless telephone services
+        # Fixed/Mobile communication services
             element_name = soup.find_all("td")
             for i in element_name:
                 if i.text == name_:
@@ -2303,69 +2134,6 @@ def results_AHK(u):
                 new_row.append("AHK")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
-                
-def results_CERA(u):
-    '''
-    response = requests.get(Item_url_)
-    print(response)
-    CERA = tb.read_pdf(Item_url_, pages='8', pandas_options={'header': None}, stream=True)
-    amount_ = CERA[0][1].to_list()
-    names_ = CERA[0][0].to_list()
-    
-    if response.status_code != 200:
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:   
-        for i in range(0, len(names_) - 1):
-            n1 = names_[i] + " " + names_[i + 1]
-            if name_ == n1:
-                price_ = float(amount_[i]) / 100
-                print(price_)
-                new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                new_row.append(name_)
-                new_row.append(price_)
-                new_row.append(subclass_)
-                new_row.append(division_)
-                new_row.append("Cyprus Energy Regulatory Authority")
-                list_.loc[len(list_)] = new_row
-                list_['Name'] = list_['Name'].apply(lambda x:x)
-    '''
-    response = requests.get(Item_url_)
-    print(response)
-    
-    ## Use other functions to read a pdf file instead of tabular.read_pdf()
-    CERA_pdf_path = "ECOICOPv2/PDFs/CERA_Aug2024.pdf"
-    
-    with pdfplumber.open(CERA_pdf_path) as pdf:
-        page = pdf.pages[7]
-        text = page.extract_text()
-        
-    match_ = re.findall(r'(\d+\.\d+)\nΣυμβατική Παραγωγή - Χ.Τ.', text)
-    price_ = float(match_[0])/100
-    
-    if match_:
-        print(price_)
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))        
-        new_row.append(name_)
-        new_row.append(price_)
-        new_row.append(subclass_)
-        new_row.append(division_)
-        new_row.append("Cyprus Energy Regulatory Authority")
-        list_.loc[len(list_)] = new_row
-        list_['Name'] = list_['Name'].apply(lambda x:x)
-    else:
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
 
 def results_water(u):
     
@@ -2439,7 +2207,7 @@ def results_water(u):
         new_row.append(price_)
         new_row.append(subclass_)
         new_row.append(division_)
-        new_row.append("Water Board of " + city_)
+        new_row.append("Water EOA " + city_)
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
     else:
@@ -2496,7 +2264,7 @@ def results_sewerage(u):
                 new_row.append(float(values))
                 new_row.append(subclass_)
                 new_row.append(division_)
-                new_row.append("Sewerage Board of " + city_)
+                new_row.append("Sewerage EOA " + city_)
                 list_.loc[len(list_)] = new_row
                       
     if "Limassol" in retailer_:
@@ -2504,6 +2272,7 @@ def results_sewerage(u):
         new_row = []
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs)
+        print(response)
         soup = BeautifulSoup(response.content, "html.parser")
             
         if "Ετήσιο Τέλος" in name_:
@@ -2538,7 +2307,7 @@ def results_sewerage(u):
                 new_row.append(float(values))
                 new_row.append(subclass_)
                 new_row.append(division_)
-                new_row.append("Sewerage Board of " + city_)
+                new_row.append("Sewerage EOA " + city_)
                 list_.loc[len(list_)] = new_row
             
         if "Τέλος Χρήσης" in name_:
@@ -2554,7 +2323,7 @@ def results_sewerage(u):
             new_row.append(float(values))
             new_row.append(subclass_)
             new_row.append(division_)
-            new_row.append("Sewerage Board of " + city_)
+            new_row.append("Sewerage EOA " + city_)
             list_.loc[len(list_)] = new_row
                 
     if "Larnaca" in retailer_:
@@ -2594,7 +2363,7 @@ def results_sewerage(u):
             new_row.append(float(sum_/count_12))
             new_row.append(subclass_)
             new_row.append(division_)
-            new_row.append("Sewerage Board of " + city_)
+            new_row.append("Sewerage EOA " + city_)
             list_.loc[len(list_)] = new_row
  
         if "Τέλος Χρήσης" in name_:
@@ -2628,7 +2397,7 @@ def results_sewerage(u):
                 new_row.append(float(numbers[3]))
                 new_row.append(subclass_)
                 new_row.append(division_)
-                new_row.append("Sewerage Board of " + city_)
+                new_row.append("Sewerage EOA " + city_)
                 list_.loc[len(list_)] = new_row
             else:
                 website_false.append(name_)
@@ -2638,147 +2407,6 @@ def results_sewerage(u):
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
                 daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-
-'''
-def results_toyota(u):
-    
-    if name_ == "The New Toyota Yaris Cross":
-        
-        header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-        bs = BeautifulSoup(Item_url_, "html.parser")
-        response = requests.get(bs,{'headers':header})
-        
-        if response.status_code != 200:
-            website_false.append(name_)
-            website_false.append(subclass_)
-            website_false.append(Item_url_)
-            website_false.append(division_)
-            website_false.append(retailer_)
-            daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-        else:
-            soup = BeautifulSoup(response.content, "html.parser")
-            element_soup = soup.find_all("a", {"class":"cmp-mega-menu__card","data-model-name":"Yaris Cross"})
-            #element_soup2 = element_soup[0].find_all("span",{"class":"cmp-mega-menu__price"})
-            price_ = element_soup[0]['data-price']
-            new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(name_)
-            new_row.append(price_)
-            new_row.append(subclass_)
-            new_row.append(division_)
-            new_row.append("Toyota")
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)
-            
-    if name_ == "The New Toyota Yaris":
-        
-        header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-        bs = BeautifulSoup(Item_url_, "html.parser")
-        response = requests.get(bs,{'headers':header})
-        
-        if response.status_code != 200:
-            website_false.append(name_)
-            website_false.append(subclass_)
-            website_false.append(Item_url_)
-            website_false.append(division_)
-            website_false.append(retailer_)
-            daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-        else:
-            soup = BeautifulSoup(response.content, "html.parser")
-            element_soup = soup.find_all("a", {"class":"cmp-mega-menu__card","data-model-name":"Yaris"})
-            #element_soup2 = element_soup[0].find_all("span",{"class":"cmp-mega-menu__price"})
-            price_ = element_soup[0]['data-price']
-            new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(name_)
-            new_row.append(price_)
-            new_row.append(subclass_)
-            new_row.append(division_)
-            new_row.append("Toyota")
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)
-        
-    if name_ == "Toyota Aygo X":
-            
-        header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-        bs = BeautifulSoup(Item_url_, "html.parser")
-        response = requests.get(bs,{'headers':header})
-        
-        if response.status_code != 200:
-            website_false.append(name_)
-            website_false.append(subclass_)
-            website_false.append(Item_url_)
-            website_false.append(division_)
-            website_false.append(retailer_)
-            daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-        else:
-            soup = BeautifulSoup(response.content, "html.parser")
-            #element_soup = soup.find_all('p',{"class":"t-milli-headline mb-0 text-normal cmp-mega-menu__price-wrapper d-flex"})
-            #element_soup2 = element_soup[0].find_all("span",{"class":"cmp-mega-menu__price"})
-            #price_ = float(element_soup2[0]['data-price'])
-            element_soup = soup.find_all("a", {"class":"cmp-mega-menu__card","data-model-name":"Aygo x"})
-            price_ = element_soup[0]['data-price']
-            new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(name_)
-            new_row.append(price_)
-            new_row.append(subclass_)
-            new_row.append(division_)
-            new_row.append("Toyota")
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)
-                  
-    #if subclass_=="Second-hand motor cars":
-        
-        #1st way
-        """ 
-        query = {"component":"used-stock-cars-v2","fetches":[
-        {"fetchType":"fetchUscVehiclePrice","vehicleForSaleId":"4077c595-5c2c-42bd-8133-203d770ad125","context":"used","uscEnv":"production"}
-        ]}
-        headers = {"Host": "usc-webcomponents.toyota-europe.com","User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0","Accept": "*/*","Accept-Language": "en-US,en;q=0.5","Accept-Encoding": "gzip, deflate, br, zstd","Content-Type": "application/json","Content-Length": "180","Origin": "https://www.toyota.com.cy","Connection": "keep-alive","Referer": "https://www.toyota.com.cy/","Sec-Fetch-Dest": "empty","Sec-Fetch-Mode": "cors","Sec-Fetch-Site": "cross-site","Priority": "u=6","TE": "trailers"
-        }
-        response = requests.get(Item_url_,{'headers':headers})
-        r = requests.post("https://usc-webcomponents.toyota-europe.com/v1/api/data/cy/en?brand=toyota&uscEnv=production", json=query, headers=headers)
-        price_ = r.json()['fetches'][0]['result']['fetchResult'] ['sellingPriceInclVAT']
-        """
-        
-        #2nd way
-        """
-        bs = BeautifulSoup(Item_url_, "html.parser")
-        response = requests.get(bs)
-        soup = BeautifulSoup(response.content, "html.parser")
-        isnone = soup.find("div", {"role": "cpdqm_ignore"}).text
-
-        if isnone == None:
-            website_false.append(name_)
-            website_false.append(subclass_)
-            website_false.append(Item_url_)
-            website_false.append(division_)
-            website_false.append(retailer_)
-            daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-        else:
-            data = json.loads(isnone)
-            price_ = data['vehicle']['result']['price']['sellingPriceInclVAT']
-            if price_:
-                new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                new_row.append(name_)
-                new_row.append(float(price_))
-                new_row.append(subclass_)
-                new_row.append(division_)
-                new_row.append("Toyota")
-                list_.loc[len(list_)] = new_row
-                list_['Name'] = list_['Name'].apply(lambda x:x)
-            else:
-                website_false.append(name_)
-                website_false.append(subclass_)
-                website_false.append(Item_url_)
-                website_false.append(division_)
-                website_false.append(retailer_)
-                daily_errors.loc[len(daily_errors)] = website_false
-                daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-                """
-'''
 
 def results_toyota(u):
     
@@ -3264,66 +2892,6 @@ def results_mageirisses(u):
         website_false.append(retailer_)
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-
-def results_piatsa_gourounaki(u):
-    
-    pdf_path = "ECOICOPv2/PDFs/Piatsa_JUN2025.pdf"
-    output_path = "ECOICOPv2/PDFs/piatsa_gourounaki_output.txt"
-    
-    with pdfplumber.open(pdf_path) as pdf, open(output_path, 'w', encoding='utf-8') as outfile:
-        
-        results = []
-        for page_number, page in enumerate(pdf.pages, start=1):
-            text = page.extract_text()
-            
-            if text:
-                lines = text.split('\n')
-                keep_next = False
-                
-                for line in lines:
-                    
-                    if keep_next:
-                        #outfile.write(line.strip() + '\n')
-                        keep_next = False
-                        results.append(line.strip())
-                        break  # Αν θες μόνο την πρώτη επόμενη γραμμή μετά τη 1122
-                    
-                    if line.strip().startswith("1122"):
-                        #outfile.write(line.strip() + "\n")
-                        results.append(line.strip())
-                        keep_next = True
-    
-    pattern = r'\d+(?:,\d{2})?'
-    price_ = []
-    
-    for line in results:
-        found = re.findall(pattern, line)
-        price_ = float(found[0].replace(",","."))
-        
-    if price_:
-        print(price_)
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_)
-        new_row.append(float(price_))
-        new_row.append(subclass_)
-        new_row.append(division_)
-        new_row.append("Piatsa Gourounaki")
-        list_.loc[len(list_)] = new_row
-        list_['Name'] = list_['Name'].apply(lambda x:x)
-    else:
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    '''
-    if os.path.exists(output_path):  # os should be defined !!!
-        os.remove(output_path)
-    else:
-        print("File not found.")
-    '''
     
 def results_pagkratios(u):
     '''
@@ -3497,17 +3065,17 @@ for u in range(0, len(urls)):
         results_AHK(u)
     #elif retailer_=="Cyprus Energy Regulatory Authority": #*deactivated in 23/01/2026 because of no updates 
     #    results_CERA(u)
-    elif retailer_=="Water Board of Larnaca":
+    elif retailer_=="Water EOA Larnaca":
         results_water(u)
-    #elif retailer_=="Water Board of Nicosia": #*EOA Nicosia was deactivated from 17/10/25 to 04/03/26 since it banned access (https://ndlgo.org.cy/water-supply/consumer/water-fees-wbn/)
+    #elif retailer_=="Water EOA Nicosia": #*EOA Nicosia was deactivated from 17/10/25 to 04/03/26 since it banned access (https://ndlgo.org.cy/water-supply/consumer/water-fees-wbn/)
     #    results_water(u)
-    elif retailer_=="Water Board of Limassol":  #*EOA Limassol was diactivated in 13/03/26 because of connection error (https://eoalemesos.org.cy/el/fees) 
+    elif retailer_=="Water EOA Limassol":  #*EOA Limassol was diactivated in 13/03/26 because of connection error (https://eoalemesos.org.cy/el/fees) 
        results_water(u)    
-    elif retailer_=="Sewerage Board of Larnaca": 
+    elif retailer_=="Sewerage EOA Larnaca": 
         results_sewerage(u)   
-    elif retailer_=="Sewerage Board of Nicosia": #*EOA Nicosia was diactivated from 17/10/25 to 04/03/26 since it banned access (https://ndlgo.org.cy/sewage/sewer-fees/) 
+    elif retailer_=="Sewerage EOA Nicosia": #*EOA Nicosia was diactivated from 17/10/25 to 04/03/26 since it banned access (https://ndlgo.org.cy/sewage/sewer-fees/) 
         results_sewerage(u)  
-    elif retailer_=="Sewerage Board of Limassol":  #*EOA Limassol was diactivated in 13/03/26 because of connection error (https://eoalemesos.org.cy/el/fees) 
+    elif retailer_=="Sewerage EOA Limassol":  #*EOA Limassol was diactivated in 13/03/26 because of connection error (https://eoalemesos.org.cy/el/fees) 
         results_sewerage(u)     
     #elif retailer_=="MotoRace": #*Deactivated in 21/10/25 (run only locally) and banned access in 07/11/25 (don't run neither locally) through a 'verifying you are human' check. Then, allows access locally since 28/11/25.
     #    results_moto_race(u)
