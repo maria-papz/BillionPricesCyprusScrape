@@ -1102,5 +1102,5 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-02,PAULOS DIAKOS & YIOI (PETRELAIOEIDI) LIMITED - Πετρέλαιο Κίνησης,Diesel,1.808,TRANSPORT,SHELL
 2026-06-02,PAULOS DIAKOS & YIOI (PETRELAIOEIDI) LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.378,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
 2026-06-02,PAULOS DIAKOS & YIOI (PETRELAIOEIDI) LIMITED - Κηροζίνη,Liquid fuels,1.349,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
-2026-06-02,Πάγιο ανά μήνα - Nicosia,Water supply,5.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board of Nicosia
-2026-06-02,Κυβικά ανά μήνα - Nicosia,Water supply,0.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water Board of Nicosia
+2026-06-02,Πάγιο ανά μήνα - Nicosia,Water supply delivered through network systems,5.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Nicosia
+2026-06-02,Κυβικά ανά μήνα - Nicosia,Water supply delivered through network systems,0.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Nicosia
