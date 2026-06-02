@@ -3103,7 +3103,7 @@ for u in range(0, len(urls)):
         
 #=========================================================================================================
 ## Manually added data            
-
+"""
 #Water EOA Nicosia (https://ndlgo.org.cy/water-supply/water-fees-wbn/) --> Banned access in 17-10-2025
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
@@ -3124,7 +3124,7 @@ new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
 new_row.append("Water EOA Nicosia") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
-"""
+
 #Sewerage EOA Nicosia (https://ndlgo.org.cy/sewage/sewer-fees/) --> Banned access in 17-10-2025
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
