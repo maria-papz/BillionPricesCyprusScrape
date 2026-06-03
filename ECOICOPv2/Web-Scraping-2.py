@@ -3043,8 +3043,8 @@ for u in range(0, len(urls)):
     #    results_centroptical(u)
     elif retailer_=="Premier Laundry":
         results_premier(u)
-    #elif retailer_=="Music Avenue": #Deactivate in 17/05/2026 due to scraping errors. Then, run only locally.
-    #    results_musicavenue(u)    
+    elif retailer_=="Music Avenue": #Deactivate in 17/05/2026 due to scraping errors. Then, run only locally.
+        results_musicavenue(u)    
     elif retailer_=="Rio Cinema":
         results_rio(u)    
     elif retailer_=="Cyprus Ministry of Education, Sport and Youth":
@@ -3079,12 +3079,12 @@ for u in range(0, len(urls)):
         results_stock_center(u)    
     elif retailer_=="Alter Vape": 
         results_AlterVape(u)    
-    #elif retailer_=="The CYgar shop":
-    #    results_CYgar_shop(u)
+    elif retailer_=="The CYgar shop":
+        results_CYgar_shop(u)
     elif retailer_=="The Royal Cigars":
         results_royal_cigars(u)  
-    #elif retailer_=="E-wholesale":
-    #    results_ewholesale(u)    
+    elif retailer_=="E-wholesale":
+        results_ewholesale(u)    
     elif retailer_=="NUMBEO":
         results_numbeo(u)
     elif retailer_=="Wolt":
