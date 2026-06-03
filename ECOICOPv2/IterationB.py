@@ -2244,7 +2244,7 @@ def results_sewerage(u):
             new_row.append(float(values))
             new_row.append(subclass_)
             new_row.append(division_)
-            new_row.append("Sewerage Board of " + city_)
+            new_row.append("Sewerage EOA " + city_)
             list_.loc[len(list_)] = new_row
         
         if "Τέλος Χρήσης" in name_:
