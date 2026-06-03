@@ -10,6 +10,7 @@ run-name: Scrape the websites of retailers and store raw data
 #on:
 #  schedule:
 #    - cron: "08 08 * * 1-5" #UTC time and weekday (0=Sunday, 1=Monday,..., 6=Saturday)
+#  #workflow_dispatch: # Allows manual testing
 
 on:
   pull_request:
