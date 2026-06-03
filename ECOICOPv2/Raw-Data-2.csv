@@ -1515,13 +1515,30 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-02,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.389,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
 2026-06-02,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,1.299,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
 2026-06-02,Πάγιο ανά μήνα - Larnaca,Water supply delivered through network systems,3.35,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Larnaca
-2026-06-02,Δικαίωμα Συντήρησης ανά μήνα - Larnaca,Water supply delivered through network systems,1.9000000000000001,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Larnaca
+2026-06-02,Δικαίωμα Συντήρησης ανά μήνα - Larnaca,Water supply delivered through network systems,1.9,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Larnaca
 2026-06-02,Κυβικά ανά μήνα - Larnaca,Water supply delivered through network systems,0.3338666666666667,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Larnaca
 2026-06-02,Πάγιο ανά μήνα - Limassol,Water supply delivered through network systems,4.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Limassol
 2026-06-02,Δικαίωμα Συντήρησης ανά μήνα - Limassol,Water supply delivered through network systems,1.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Limassol
 2026-06-02,Κυβικά ανά μήνα - Limassol,Water supply delivered through network systems,0.225,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Limassol
 2026-06-02,Ετήσιο Τέλος - Larnaca,Sewage collection through sewer systems,0.5675,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Larnaca
 2026-06-02,Τέλος Χρήσης - Larnaca,Sewage collection through sewer systems,0.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Larnaca
-2026-06-02,Ετήσιο Τέλος - Limassol,Sewage collection through sewer systems,0.47514285714285714,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Limassol
+2026-06-02,Ετήσιο Τέλος - Limassol,Sewage collection through sewer systems,0.4751428571428571,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Limassol
 2026-06-02,Τέλος Χρήσης - Limassol,Sewage collection through sewer systems,0.64,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Limassol
 2026-06-02,Ετήσιο Τέλος - Nicosia,Sewage collection through sewer systems,0.31,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage Board of Nicosia
+2026-06-03,SKE Crystal 4in1 Ηλεκτρονικά Τσιγάρα μίας χρήσης + 8 προγεμισμένες κάψουλες,Other tobacco products,19.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",E-wholesale
+2026-06-03,Aspire Puxos Kit Ηλεκτρονικά Τσιγάρα + μπαταρία 21700 + 200 ml Υγρά άτμισης,Other tobacco products,59.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",E-wholesale
+2026-06-03,Geek bar Elite + 5 J1 pods 5000 puffs Ηλεκτρονικά Τσιγάρα Κύπρο,Other tobacco products,12.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",E-wholesale
+2026-06-03,E-Cig Power XTAR Charger φορτιστής μπαταριών για Ηλεκτρονικά Τσιγάρα,Other tobacco products,14.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",E-wholesale
+2026-06-03,200 ml Ατμιστική Βάση νικοτίνης / E-liquid Base,Other tobacco products,9.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",E-wholesale
+2026-06-03,Villa Zamorano INTENSO,Cigars,4.20,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",The CYgar shop
+2026-06-03,Arturo Fuente Chateau King B,Cigars,22.00,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",The CYgar shop
+2026-06-03,Rocky Patel - CONVICTION,Cigars,100.00,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",The CYgar shop
+2026-06-03,Rocky Patel Grand Reserve,Cigars,14.80,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",The CYgar shop
+2026-06-03,Gold Seal Mini Cigarillos 10s,Cigars,4.50,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",The CYgar shop
+2026-06-03,La Aurora Preferidos Hors d'Age 2020,Cigars,27.00,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",The CYgar shop
+2026-06-03,STAGG C405MNAT 1/4 CLASSIC GUITAR,Musical instruments,89.0,"RECREATION, SPORT AND CULTURE",Musicavenue
+2026-06-03,KORG B2 STAGE PIANO,Musical instruments,695.0,"RECREATION, SPORT AND CULTURE",Musicavenue
+2026-06-03,YAMAHA KEYBOARD PSRF52,Musical instruments,135.0,"RECREATION, SPORT AND CULTURE",Musicavenue
+2026-06-03,FENDER MONTEREY ELECTRIC ACOUSTIC GUITAR WITH BAG -STANDARD BLK,Musical instruments,325.0,"RECREATION, SPORT AND CULTURE",Musicavenue
+2026-06-03,FENDER AFFINITY TELECASTER BUTTERSCOTCH BLONDE FEGT3550,Musical instruments,339.0,"RECREATION, SPORT AND CULTURE",Musicavenue
+2026-06-03,OVATION DJ ASHBA DJA34CHB ELECTRIC-ACOUSTIC GUITAR WITH SOFT CASE,Musical instruments,485.0,"RECREATION, SPORT AND CULTURE",Musicavenue
