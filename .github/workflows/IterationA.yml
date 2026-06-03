@@ -6,7 +6,7 @@ name: iteration-A
 # Workflow's description
 run-name: Scrape the products in daily errors and store raw data 
 
-# Function to schedule the time (UTC), day, month, and year of the workflow process
+# Function to schedule the minutes, hour (UTC time), day of month (*), month (*), and day of week (*) of the workflow process
 on:
   schedule:
     - cron: '19 09 * * *' #UTC time
