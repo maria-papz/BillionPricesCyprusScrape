@@ -3124,7 +3124,7 @@ new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
 new_row.append("Water EOA Nicosia") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
-"""
+
 #Sewerage EOA Nicosia (https://ndlgo.org.cy/sewage/sewer-fees/) --> Banned access in 17-10-2025
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
@@ -3145,7 +3145,7 @@ new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
 new_row.append("Sewerage EOA Nicosia") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
-
+"""
 #Water EOA Limassol (https://eoalemesos.org.cy/el/fees) --> Connection error since 13-03-2026
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
