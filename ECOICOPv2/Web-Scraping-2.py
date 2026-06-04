@@ -3063,8 +3063,8 @@ for u in range(0, len(urls)):
        results_water(u)    
     elif retailer_=="Sewerage EOA Larnaca": 
         results_sewerage(u)   
-    elif retailer_=="Sewerage EOA Nicosia": #*EOA Nicosia was diactivated from 17/10/25 to 04/03/26 since it banned access (https://ndlgo.org.cy/sewage/sewer-fees/) 
-        results_sewerage(u)  
+    #elif retailer_=="Sewerage EOA Nicosia": #*EOA Nicosia was diactivated from 17/10/25 to 04/03/26 since it banned access (https://ndlgo.org.cy/sewage/sewer-fees/) 
+    #    results_sewerage(u)  
     elif retailer_=="Sewerage EOA Limassol":  #*EOA Limassol was diactivated in 13/03/26 because of connection error (https://eoalemesos.org.cy/el/fees) 
         results_sewerage(u)     
     #elif retailer_=="MotoRace": #*Deactivated in 21/10/25 (run only locally) and banned access in 07/11/25 (don't run neither locally) through a 'verifying you are human' check. Then, allows access locally since 28/11/25.
