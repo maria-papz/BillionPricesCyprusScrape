@@ -7359,7 +7359,7 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-05,Marlboro 20 Pack,Cigarettes,5.35,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Numbeo
 2026-06-08,Marlboro 20 Pack,Cigarettes,5.35,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Numbeo
 2026-06-09,To fixed telephony lines of other providers,Fixed communication services,0.06,INFORMATION AND COMMUNICATION,Epic
-2026-06-09,Arturo Fuente Don Carlos Robusto,Cigars,21.60,ALCOHOLIC BEVERAGES AND TOBACCO,The CYgar shop
+2026-06-09,Arturo Fuente Don Carlos Robusto,Cigars,21.6,ALCOHOLIC BEVERAGES AND TOBACCO,The CYgar shop
 2026-06-09,Meat Meze for 2 persons - Paphos,"Restaurants, cafes and the like - with full service",25.0,RESTAURANTS AND ACCOMODATION SERVICES,Pagkratios
 2026-06-09,NIKOS CH. PIERIDIS PETRELAIOEIDI LIMITED - Αμόλυβδη 95,Petrol,1.588,TRANSPORT,ESSO
 2026-06-09,NIKOS CH. PIERIDIS PETRELAIOEIDI LIMITED - Αμόλυβδη 98,Petrol,1.639,TRANSPORT,ESSO
@@ -7582,3 +7582,16 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-09,Κυβικά ανά μήνα - Nicosia,Water supply delivered through network systems,0.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Nicosia
 2026-06-09,Ετήσιο Τέλος - Nicosia,Sewage collection through sewer systems,0.31,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Nicosia
 2026-06-09,Τέλος Χρήσης - Nicosia,Sewage collection through sewer systems,0.55,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Nicosia
+2026-06-09,"Services, LADIES CUT",Hairdressing,35.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Novella
+2026-06-09,"Student Offers, LADIES CUT",Hairdressing,30.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Novella
+2026-06-09,"Services, MEN'S CUT",Hairdressing,28.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Novella
+2026-06-09,"Services, CHILDREN'S CUT",Hairdressing,25.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Novella
+2026-06-09,"Student Offers, MEN'S CUT",Hairdressing,25.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Novella
+2026-06-09,Adults,"Services provided by cinemas, theatres and concert venues",9.0,"RECREATION, SPORT AND CULTURE",Rio Cinema
+2026-06-09,Adults 3D,"Services provided by cinemas, theatres and concert venues",10.0,"RECREATION, SPORT AND CULTURE",Rio Cinema
+2026-06-09,Children,"Services provided by cinemas, theatres and concert venues",7.0,"RECREATION, SPORT AND CULTURE",Rio Cinema
+2026-06-09,Children 3D,"Services provided by cinemas, theatres and concert venues",8.0,"RECREATION, SPORT AND CULTURE",Rio Cinema
+2026-06-09,Senior 64,"Services provided by cinemas, theatres and concert venues",7.0,"RECREATION, SPORT AND CULTURE",Rio Cinema
+2026-06-09,Senior 64 3D,"Services provided by cinemas, theatres and concert venues",8.0,"RECREATION, SPORT AND CULTURE",Rio Cinema
+2026-06-09,Students,"Services provided by cinemas, theatres and concert venues",7.0,"RECREATION, SPORT AND CULTURE",Rio Cinema
+2026-06-09,Students 3D,"Services provided by cinemas, theatres and concert venues",8.0,"RECREATION, SPORT AND CULTURE",Rio Cinema
