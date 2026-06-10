@@ -291,6 +291,7 @@ def results_lensescy(u):
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs, {'headers':header})
+    print(response)
     
     if response.status_code != 200:
         website_false.append(name_)
@@ -367,6 +368,7 @@ def results_cyprus_transport(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     response = requests.get(Item_url_, headers = header)
+    print(response)
     
     if response.status_code != 200:
         website_false.append(name_)
@@ -414,6 +416,7 @@ def results_max_7_taxi(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     response = requests.get(Item_url_, {'headers':header})
+    print(response)
     
     if response.status_code != 200:
         website_false.append(name_)
@@ -453,6 +456,7 @@ def results_max_7_taxi(u):
 def results_costastheodorou(u):
     
     response = requests.get(Item_url_)
+    print(response)
 
     if (response.status_code != 200):
         website_false.append(name_)
@@ -480,6 +484,7 @@ def results_leroymerlin(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     response = requests.get(Item_url_, {'headers':header})
+    print(response)
     soup = BeautifulSoup(response.content, "html.parser")
     
     if response.status_code != 200 or ("Η σελίδα που αναζητάτε δεν βρέθηκε." in soup.text):
@@ -557,6 +562,7 @@ def results_premier(u):
     params = { }
     json_data = {'email': 'kendeas123@gmail.com', 'password': 'Kendeas',}
     response = requests.post('https://cleancloudapp.com/webapp/public/api/auth/login/16130', params=params, headers=headers, json=json_data,)
+    print(response)
     data = response.json()
     user_id = data['id']
     token = data['token']
@@ -579,6 +585,7 @@ def results_premier(u):
     params = {'ccascv': '0.20327901592645015',}
     json_data = {'priceListId': 0,}
     response = requests.post('https://cleancloudapp.com/webapp/public/api/store/products', params=params, headers=headers, json=json_data,)
+    print(response)
     all_data_products = response.json()
     
     if response.status_code != 200:
@@ -636,6 +643,7 @@ def results_electroline(u):
     
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
+    print(response)
     
     if response.status_code != 200:
         website_false.append(name_)
@@ -839,6 +847,7 @@ def results_epic(u):
     
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs, verify=False)  # bypasses SSL verification
+    print(response)
     soup = BeautifulSoup(response.content, "html.parser")
 
     if (response.status_code != 200):
@@ -955,6 +964,7 @@ def results_primetel(u):
     
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
+    print(response)
     soup = BeautifulSoup(response.content, "html.parser")
 
     if ("Pay my bill" in soup.text) or (response.status_code != 200):
@@ -1168,6 +1178,7 @@ def results_Marks_Spencer(u):
     
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
+    print(response)
     soup = BeautifulSoup(response.content, "html.parser")
     
     if ("Sorry, we can't" in soup.text) or (response.status_code !=200):
@@ -1195,6 +1206,7 @@ def results_Athlokinisi(u):
         
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
+    print(response)
     
     if (response.status_code != 200):
         website_false.append(name_)
@@ -1271,6 +1283,7 @@ def results_ewholesale(u):
     
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
+    print(response)
     
     if response.status_code != 200:
         website_false.append(name_)
@@ -1298,6 +1311,7 @@ def results_CYgar_shop(u):
     
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
+    print(response)
     
     if response.status_code != 200:
         website_false.append(name_)
@@ -1325,6 +1339,7 @@ def results_royal_cigars(u):
     
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
+    print(response)
     
     if response.status_code != 200:
         website_false.append(name_)
@@ -1393,6 +1408,7 @@ def results_bwell_pharmacy(u):
     
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
+    print(response)
         
     if ("404. The page you are looking for does not exist" in response.text)or (response.status_code !=200):
         website_false.append(name_)
@@ -1469,6 +1485,7 @@ def results_awol(u):
         
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
+    print(response)
     soup = BeautifulSoup(response.content, "html.parser")
     element_soup = soup.find_all("span", {"class":"price price--sale"})
     
@@ -1722,6 +1739,7 @@ def results_rio(u):
     
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
+    print(response)
     soup = BeautifulSoup(response.content, "html.parser")
     
     if ("404 Not Found!" in soup.text) or (response.status_code != 200):
@@ -2415,6 +2433,7 @@ def results_toyota(u):
         header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
         bs = BeautifulSoup(Item_url_, "html.parser")
         response = requests.get(bs, {'headers':header})
+        print(response)
         
         if response.status_code != 200:
             website_false.append(name_)
@@ -2452,6 +2471,7 @@ def results_nissan(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
     response = requests.get(Item_url_, headers=header)
+    print(response)
     soup = BeautifulSoup(response.content, "html.parser")
     
     if ("THIS IS A DEAD END..." in response.text) or (response.status_code != 200):
@@ -2493,6 +2513,7 @@ def results_stock_center(u):
     
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs)
+    print(response)
 
     if (response.status_code != 200) or ("Το όχημα αυτό δεν είναι πλέον διαθέσιμο" in response.text):
         website_false.append(name_)
@@ -2580,6 +2601,7 @@ def results_vasos(u):
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     bs = BeautifulSoup(Item_url_, "html.parser")
     response = requests.get(bs, {'headers':header}, verify=False)
+    print(response)
     
     if response.status_code != 200:
         website_false.append(name_)
@@ -2915,6 +2937,7 @@ def results_pagkratios(u):
     '''
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     response = requests.get(Item_url_, headers=header)
+    print(response)
     
     if response.status_code == 200:
         soup = BeautifulSoup(response.content, "html.parser")
