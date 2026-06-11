@@ -283,7 +283,7 @@ def results_centroptical(u):
         new_row.append("Centroptical")
         list_.loc[len(list_)] = new_row
 
-def results_lensescy(u):
+def results_akentia(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     bs = BeautifulSoup(Item_url_, "html.parser")
@@ -308,7 +308,7 @@ def results_lensescy(u):
         new_row.append(float(price_))
         new_row.append("Corrective eye-glasses and contact lenses")
         new_row.append("HEALTH")
-        new_row.append("LensesCY")
+        new_row.append("Akentia")
         list_.loc[len(list_)] = new_row
 
 def results_intercity_buses(u):
@@ -3057,8 +3057,8 @@ for u in range(0, len(urls)):
         results_douce_et_belle(u)    
     elif retailer_=="Evdokia Jewellery":
         results_evdokia_jewellery(u)
-    elif retailer_=="LensesCY":
-        results_lensescy(u)    
+    elif retailer_=="Akentia":
+        results_akentia(u)    
     elif retailer_=="Centroptical":
         results_centroptical(u)
     elif retailer_=="Premier Laundry":
