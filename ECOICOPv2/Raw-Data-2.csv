@@ -11,18 +11,18 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-02,ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Μεγάλα (G) 500 γρ.,Letter handling services,0.64,INFORMATION AND COMMUNICATION,Cyprus Post
 2026-06-02,Children 3D,"Services provided by cinemas, theatres and concert venues",8.0,"RECREATION, SPORT AND CULTURE",Rio Cinema
 2026-06-02,ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Ακανόνιστα (E) 2000 γρ.,Letter handling services,2.1,INFORMATION AND COMMUNICATION,Cyprus Post
-2026-06-02,YAL Fresh Yaluronico Υγρό Φακών Επαφής 380ml,Corrective eye-glasses and contact lenses,5.9,HEALTH,LensesCY
+2026-06-02,YAL Fresh Yaluronico Υγρό Φακών Επαφής 380ml,Corrective eye-glasses and contact lenses,5.9,HEALTH,Akentia
 2026-06-02,ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 30 κιλά,Courier and parcel delivery services,21.65,INFORMATION AND COMMUNICATION,Cyprus Post
 2026-06-02,Κόστος Ενέργειας για κάθε παρεχόμενη μονάδα,Electricity,0.1789,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
 2026-06-02,Κόστος Δικτύου για κάθε παρεχόμενη μονάδα,Electricity,0.0393,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
 2026-06-02,Κόστος Διαχείρισης Μετρητικών Δεδομένων,Electricity,0.0093999999999999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
 2026-06-02,Κόστος Προμήθειας,Electricity,8.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
-2026-06-02,Vision Optics 55 Hydrogel  Φακοί Μυωπίας Μηνιαίοι 6τμχ,Corrective eye-glasses and contact lenses,11.9,HEALTH,LensesCY
-2026-06-02,Bausch & Lomb Soflens 59 Φακοί Μυωπίας Μηνιαίοι 6τμχ,Corrective eye-glasses and contact lenses,11.9,HEALTH,LensesCY
-2026-06-02,Vision Optics DayVue BioMoist Φακοί Μυωπίας Ημερήσιοι 30τμχ,Corrective eye-glasses and contact lenses,14.9,HEALTH,LensesCY
+2026-06-02,Vision Optics 55 Hydrogel  Φακοί Μυωπίας Μηνιαίοι 6τμχ,Corrective eye-glasses and contact lenses,11.9,HEALTH,Akentia
+2026-06-02,Bausch & Lomb Soflens 59 Φακοί Μυωπίας Μηνιαίοι 6τμχ,Corrective eye-glasses and contact lenses,11.9,HEALTH,Akentia
+2026-06-02,Vision Optics DayVue BioMoist Φακοί Μυωπίας Ημερήσιοι 30τμχ,Corrective eye-glasses and contact lenses,14.9,HEALTH,Akentia
 2026-06-02,ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 15 κιλά,Courier and parcel delivery services,11.9,INFORMATION AND COMMUNICATION,Cyprus Post
 2026-06-02,Χάρτινοι φάκελοι αλληλογραφιάς Α4 - 25 τεμάχια,Stationery and drawing materials,4.4,"RECREATION, SPORT AND CULTURE",Parga
-2026-06-02,Bausch & Lomb ReNu Multiplus Υγρό Φακών Επαφής 360ml,Corrective eye-glasses and contact lenses,7.9,HEALTH,LensesCY
+2026-06-02,Bausch & Lomb ReNu Multiplus Υγρό Φακών Επαφής 360ml,Corrective eye-glasses and contact lenses,7.9,HEALTH,Akentia
 2026-06-02,Adults 3D,"Services provided by cinemas, theatres and concert venues",10.0,"RECREATION, SPORT AND CULTURE",Rio Cinema
 2026-06-02,"Services, MEN'S CUT",Hairdressing,28.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Novella
 2026-06-02,"Services, CHILDREN'S CUT",Hairdressing,25.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Novella
@@ -33,7 +33,7 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-02,Kids Girl Haircut 6-10 year,Hairdressing,20.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Hairspray
 2026-06-02,Women's wet cut,Hairdressing,35.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Magdas Hair Boutique
 2026-06-02,"Student Offers, LADIES CUT",Hairdressing,30.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Novella
-2026-06-02,Bausch & Lomb Biotrue One Day Φακοί Μυωπίας Ημερήσιοι 30τμχ,Corrective eye-glasses and contact lenses,18.9,HEALTH,LensesCY
+2026-06-02,Bausch & Lomb Biotrue One Day Φακοί Μυωπίας Ημερήσιοι 30τμχ,Corrective eye-glasses and contact lenses,18.9,HEALTH,Akentia
 2026-06-02,Men's cut,Hairdressing,18.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Magdas Hair Boutique
 2026-06-02,Women haircut only,Hairdressing,30.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Douce et Belle
 2026-06-02,Men haircut,Hairdressing,20.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Douce et Belle
@@ -2482,7 +2482,7 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-04,Fiber Entertainment & 200Mbps,Internet access provision services and online storage services,24.99,INFORMATION AND COMMUNICATION,Primetel
 2026-06-04,Initial chargeVariable,Passenger transport by taxi and hired vehicle with driver,4.36,TRANSPORT,Max 7 Taxi
 2026-06-04,Κόστος Προμήθειας,Electricity,8.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
-2026-06-04,Vision Optics DayVue BioMoist Φακοί Μυωπίας Ημερήσιοι 30τμχ,Corrective eye-glasses and contact lenses,14.9,HEALTH,LensesCY
+2026-06-04,Vision Optics DayVue BioMoist Φακοί Μυωπίας Ημερήσιοι 30τμχ,Corrective eye-glasses and contact lenses,14.9,HEALTH,Akentia
 2026-06-04,Κόστος Διαχείρισης Μετρητικών Δεδομένων,Electricity,0.0093999999999999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
 2026-06-04,ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 30 κιλά,Courier and parcel delivery services,21.65,INFORMATION AND COMMUNICATION,Cyprus Post
 2026-06-04,ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 15 κιλά,Courier and parcel delivery services,11.9,INFORMATION AND COMMUNICATION,Cyprus Post
@@ -2504,18 +2504,18 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-04,"THE GRAMMAR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2025-2026, Ζ ΤΑΞΗ",Post-secondary non-tertiary education,8950.0,EDUCATION SERVICES,"Cyprus Ministry of Education, Sport and Youth"
 2026-06-04,Κόστος Ενέργειας για κάθε παρεχόμενη μονάδα,Electricity,0.1789,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
 2026-06-04,Πάγιο ανά μήνα - Larnaca,Water supply delivered through network systems,3.35,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Larnaca
-2026-06-04,YAL Fresh Yaluronico Υγρό Φακών Επαφής 380ml,Corrective eye-glasses and contact lenses,5.9,HEALTH,LensesCY
+2026-06-04,YAL Fresh Yaluronico Υγρό Φακών Επαφής 380ml,Corrective eye-glasses and contact lenses,5.9,HEALTH,Akentia
 2026-06-04,Womens Cut,Hairdressing,30.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Hairspray
 2026-06-04,"Student Offers, MEN'S CUT",Hairdressing,25.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Novella
 2026-06-04,"Services, CHILDREN'S CUT",Hairdressing,25.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Novella
 2026-06-04,"Services, MEN'S CUT",Hairdressing,28.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Novella
 2026-06-04,"Student Offers, LADIES CUT",Hairdressing,30.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Novella
 2026-06-04,"Services, LADIES CUT",Hairdressing,35.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Novella
-2026-06-04,Bausch & Lomb Biotrue One Day Φακοί Μυωπίας Ημερήσιοι 30τμχ,Corrective eye-glasses and contact lenses,18.9,HEALTH,LensesCY
-2026-06-04,Bausch & Lomb ReNu Multiplus Υγρό Φακών Επαφής 360ml,Corrective eye-glasses and contact lenses,7.9,HEALTH,LensesCY
-2026-06-04,Bausch & Lomb Soflens 59 Φακοί Μυωπίας Μηνιαίοι 6τμχ,Corrective eye-glasses and contact lenses,13.9,HEALTH,LensesCY
+2026-06-04,Bausch & Lomb Biotrue One Day Φακοί Μυωπίας Ημερήσιοι 30τμχ,Corrective eye-glasses and contact lenses,18.9,HEALTH,Akentia
+2026-06-04,Bausch & Lomb ReNu Multiplus Υγρό Φακών Επαφής 360ml,Corrective eye-glasses and contact lenses,7.9,HEALTH,Akentia
+2026-06-04,Bausch & Lomb Soflens 59 Φακοί Μυωπίας Μηνιαίοι 6τμχ,Corrective eye-glasses and contact lenses,13.9,HEALTH,Akentia
 2026-06-04,Πάγιο ανά μήνα - Limassol,Water supply delivered through network systems,4.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Limassol
-2026-06-04,Vision Optics 55 Hydrogel  Φακοί Μυωπίας Μηνιαίοι 6τμχ,Corrective eye-glasses and contact lenses,11.9,HEALTH,LensesCY
+2026-06-04,Vision Optics 55 Hydrogel  Φακοί Μυωπίας Μηνιαίοι 6τμχ,Corrective eye-glasses and contact lenses,11.9,HEALTH,Akentia
 2026-06-04,Τέλος Χρήσης - Limassol,Sewage collection through sewer systems,0.64,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Limassol
 2026-06-04,Ετήσιο Τέλος - Limassol,Sewage collection through sewer systems,0.4751428571428571,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Limassol
 2026-06-04,Τέλος Χρήσης - Larnaca,Sewage collection through sewer systems,0.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Larnaca
@@ -2982,7 +2982,7 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-05,"THE GRAMMAR SCHOOL (Nicosia), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2025-2026",Secondary education,8816.666666666666,EDUCATION SERVICES,"Cyprus Ministry of Education, Sport and Youth"
 2026-06-05,"THE GRAMMAR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2025-2026, Ζ ΤΑΞΗ",Post-secondary non-tertiary education,8950.0,EDUCATION SERVICES,"Cyprus Ministry of Education, Sport and Youth"
 2026-06-05,"THE GRAMMAR SCHOOL (Limassol), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2025-2026, Ζ ΤΑΞΗ",Post-secondary non-tertiary education,9450.0,EDUCATION SERVICES,"Cyprus Ministry of Education, Sport and Youth"
-2026-06-05,Bausch & Lomb Biotrue One Day Φακοί Μυωπίας Ημερήσιοι 30τμχ,Corrective eye-glasses and contact lenses,18.9,HEALTH,LensesCY
+2026-06-05,Bausch & Lomb Biotrue One Day Φακοί Μυωπίας Ημερήσιοι 30τμχ,Corrective eye-glasses and contact lenses,18.9,HEALTH,Akentia
 2026-06-05,ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Ακανόνιστα (E) 2000 γρ.,Letter handling services,2.1,INFORMATION AND COMMUNICATION,Cyprus Post
 2026-06-05,Κυβικά ανά μήνα - Larnaca,Water supply delivered through network systems,0.3338666666666667,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Larnaca
 2026-06-05,ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 0.5 κιλό,Courier and parcel delivery services,4.0,INFORMATION AND COMMUNICATION,Cyprus Post
@@ -3001,13 +3001,13 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-05,Πάγιο ανά μήνα - Larnaca,Water supply delivered through network systems,3.35,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Larnaca
 2026-06-05,Τέλος Χρήσης - Larnaca,Sewage collection through sewer systems,0.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Larnaca
 2026-06-05,Ετήσιο Τέλος - Limassol,Sewage collection through sewer systems,0.4751428571428571,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Limassol
-2026-06-05,Vision Optics 55 Hydrogel  Φακοί Μυωπίας Μηνιαίοι 6τμχ,Corrective eye-glasses and contact lenses,11.9,HEALTH,LensesCY
+2026-06-05,Vision Optics 55 Hydrogel  Φακοί Μυωπίας Μηνιαίοι 6τμχ,Corrective eye-glasses and contact lenses,11.9,HEALTH,Akentia
 2026-06-05,Geek Vape Aegis X kit Ηλεκτρονικά Τσιγάρα + 200ml Υγρά άτμισης,Other tobacco products,79.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",E-wholesale
-2026-06-05,Bausch & Lomb Soflens 59 Φακοί Μυωπίας Μηνιαίοι 6τμχ,Corrective eye-glasses and contact lenses,13.9,HEALTH,LensesCY
-2026-06-05,Vision Optics DayVue BioMoist Φακοί Μυωπίας Ημερήσιοι 30τμχ,Corrective eye-glasses and contact lenses,14.9,HEALTH,LensesCY
-2026-06-05,Bausch & Lomb ReNu Multiplus Υγρό Φακών Επαφής 360ml,Corrective eye-glasses and contact lenses,7.9,HEALTH,LensesCY
+2026-06-05,Bausch & Lomb Soflens 59 Φακοί Μυωπίας Μηνιαίοι 6τμχ,Corrective eye-glasses and contact lenses,13.9,HEALTH,Akentia
+2026-06-05,Vision Optics DayVue BioMoist Φακοί Μυωπίας Ημερήσιοι 30τμχ,Corrective eye-glasses and contact lenses,14.9,HEALTH,Akentia
+2026-06-05,Bausch & Lomb ReNu Multiplus Υγρό Φακών Επαφής 360ml,Corrective eye-glasses and contact lenses,7.9,HEALTH,Akentia
 2026-06-05,Κυβικά ανά μήνα - Limassol,Water supply delivered through network systems,0.225,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Limassol
-2026-06-05,YAL Fresh Yaluronico Υγρό Φακών Επαφής 380ml,Corrective eye-glasses and contact lenses,5.9,HEALTH,LensesCY
+2026-06-05,YAL Fresh Yaluronico Υγρό Φακών Επαφής 380ml,Corrective eye-glasses and contact lenses,5.9,HEALTH,Akentia
 2026-06-05,Δικαίωμα Συντήρησης ανά μήνα - Limassol,Water supply delivered through network systems,1.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Limassol
 2026-06-05,"Student Offers, LADIES CUT",Hairdressing,30.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Novella
 2026-06-05,"Services, MEN'S CUT",Hairdressing,28.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Novella
@@ -5559,16 +5559,16 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-08,"Student Offers, LADIES CUT",Hairdressing,30.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Novella
 2026-06-08,Δικαίωμα Συντήρησης ανά μήνα - Limassol,Water supply delivered through network systems,1.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Limassol
 2026-06-08,"Services, LADIES CUT",Hairdressing,35.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Novella
-2026-06-08,YAL Fresh Yaluronico Υγρό Φακών Επαφής 380ml,Corrective eye-glasses and contact lenses,5.9,HEALTH,LensesCY
-2026-06-08,Bausch & Lomb ReNu Multiplus Υγρό Φακών Επαφής 360ml,Corrective eye-glasses and contact lenses,7.9,HEALTH,LensesCY
-2026-06-08,Vision Optics DayVue BioMoist Φακοί Μυωπίας Ημερήσιοι 30τμχ,Corrective eye-glasses and contact lenses,14.9,HEALTH,LensesCY
-2026-06-08,Bausch & Lomb Soflens 59 Φακοί Μυωπίας Μηνιαίοι 6τμχ,Corrective eye-glasses and contact lenses,13.9,HEALTH,LensesCY
-2026-06-08,Vision Optics 55 Hydrogel  Φακοί Μυωπίας Μηνιαίοι 6τμχ,Corrective eye-glasses and contact lenses,11.9,HEALTH,LensesCY
+2026-06-08,YAL Fresh Yaluronico Υγρό Φακών Επαφής 380ml,Corrective eye-glasses and contact lenses,5.9,HEALTH,Akentia
+2026-06-08,Bausch & Lomb ReNu Multiplus Υγρό Φακών Επαφής 360ml,Corrective eye-glasses and contact lenses,7.9,HEALTH,Akentia
+2026-06-08,Vision Optics DayVue BioMoist Φακοί Μυωπίας Ημερήσιοι 30τμχ,Corrective eye-glasses and contact lenses,14.9,HEALTH,Akentia
+2026-06-08,Bausch & Lomb Soflens 59 Φακοί Μυωπίας Μηνιαίοι 6τμχ,Corrective eye-glasses and contact lenses,13.9,HEALTH,Akentia
+2026-06-08,Vision Optics 55 Hydrogel  Φακοί Μυωπίας Μηνιαίοι 6τμχ,Corrective eye-glasses and contact lenses,11.9,HEALTH,Akentia
 2026-06-08,Τέλος Χρήσης - Limassol,Sewage collection through sewer systems,0.64,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Limassol
 2026-06-08,Ετήσιο Τέλος - Limassol,Sewage collection through sewer systems,0.4751428571428571,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Limassol
 2026-06-08,Τέλος Χρήσης - Larnaca,Sewage collection through sewer systems,0.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Larnaca
 2026-06-08,Ετήσιο Τέλος - Larnaca,Sewage collection through sewer systems,0.5675,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Larnaca
-2026-06-08,Bausch & Lomb Biotrue One Day Φακοί Μυωπίας Ημερήσιοι 30τμχ,Corrective eye-glasses and contact lenses,18.9,HEALTH,LensesCY
+2026-06-08,Bausch & Lomb Biotrue One Day Φακοί Μυωπίας Ημερήσιοι 30τμχ,Corrective eye-glasses and contact lenses,18.9,HEALTH,Akentia
 2026-06-08,Geek Vape Aegis X kit Ηλεκτρονικά Τσιγάρα + 200ml Υγρά άτμισης,Other tobacco products,79.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",E-wholesale
 2026-06-08,SKE Crystal 4in1 Ηλεκτρονικά Τσιγάρα μίας χρήσης + 8 προγεμισμένες κάψουλες,Other tobacco products,19.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",E-wholesale
 2026-06-08,Aspire Puxos Kit Ηλεκτρονικά Τσιγάρα + μπαταρία 21700 + 200 ml Υγρά άτμισης,Other tobacco products,59.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",E-wholesale
@@ -6080,12 +6080,12 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-09,Τέλος Χρήσης - Larnaca,Sewage collection through sewer systems,0.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Larnaca
 2026-06-09,Ετήσιο Τέλος - Limassol,Sewage collection through sewer systems,0.4751428571428571,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Limassol
 2026-06-09,Τέλος Χρήσης - Limassol,Sewage collection through sewer systems,0.64,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Limassol
-2026-06-09,Vision Optics 55 Hydrogel  Φακοί Μυωπίας Μηνιαίοι 6τμχ,Corrective eye-glasses and contact lenses,11.9,HEALTH,LensesCY
-2026-06-09,Bausch & Lomb Soflens 59 Φακοί Μυωπίας Μηνιαίοι 6τμχ,Corrective eye-glasses and contact lenses,13.9,HEALTH,LensesCY
-2026-06-09,Vision Optics DayVue BioMoist Φακοί Μυωπίας Ημερήσιοι 30τμχ,Corrective eye-glasses and contact lenses,14.9,HEALTH,LensesCY
-2026-06-09,Bausch & Lomb ReNu Multiplus Υγρό Φακών Επαφής 360ml,Corrective eye-glasses and contact lenses,7.9,HEALTH,LensesCY
-2026-06-09,YAL Fresh Yaluronico Υγρό Φακών Επαφής 380ml,Corrective eye-glasses and contact lenses,5.9,HEALTH,LensesCY
-2026-06-09,Bausch & Lomb Biotrue One Day Φακοί Μυωπίας Ημερήσιοι 30τμχ,Corrective eye-glasses and contact lenses,18.9,HEALTH,LensesCY
+2026-06-09,Vision Optics 55 Hydrogel  Φακοί Μυωπίας Μηνιαίοι 6τμχ,Corrective eye-glasses and contact lenses,11.9,HEALTH,Akentia
+2026-06-09,Bausch & Lomb Soflens 59 Φακοί Μυωπίας Μηνιαίοι 6τμχ,Corrective eye-glasses and contact lenses,13.9,HEALTH,Akentia
+2026-06-09,Vision Optics DayVue BioMoist Φακοί Μυωπίας Ημερήσιοι 30τμχ,Corrective eye-glasses and contact lenses,14.9,HEALTH,Akentia
+2026-06-09,Bausch & Lomb ReNu Multiplus Υγρό Φακών Επαφής 360ml,Corrective eye-glasses and contact lenses,7.9,HEALTH,Akentia
+2026-06-09,YAL Fresh Yaluronico Υγρό Φακών Επαφής 380ml,Corrective eye-glasses and contact lenses,5.9,HEALTH,Akentia
+2026-06-09,Bausch & Lomb Biotrue One Day Φακοί Μυωπίας Ημερήσιοι 30τμχ,Corrective eye-glasses and contact lenses,18.9,HEALTH,Akentia
 2026-06-09,Womens Cut,Hairdressing,30.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Hairspray
 2026-06-09,Mens Hair Cut,Hairdressing,20.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Hairspray
 2026-06-09,Kids Boy Haircut 6-10 year,Hairdressing,16.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Hairspray
