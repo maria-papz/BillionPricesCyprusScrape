@@ -306,8 +306,8 @@ def results_akentia(u):
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
         new_row.append(float(price_))
-        new_row.append("Corrective eye-glasses and contact lenses")
-        new_row.append("HEALTH")
+        new_row.append(subclass_)
+        new_row.append(division_)
         new_row.append("Akentia")
         list_.loc[len(list_)] = new_row
 
