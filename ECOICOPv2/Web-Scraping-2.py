@@ -3046,8 +3046,8 @@ for u in range(0, len(urls)):
     #    results_famousports(u) 
     elif retailer_=="Marks&Spencer":
         results_Marks_Spencer(u)    
-    elif retailer_=="Bwell Pharmacy":
-        results_bwell_pharmacy(u)
+    #elif retailer_=="Bwell Pharmacy": #*deactivated in 18/06/2026 because starts blocking price scraping
+    #    results_bwell_pharmacy(u)
     elif retailer_=="Novella": #*deactivated in 27/12/2025 and activated again in 03/01/26
         results_novella(u) 
     elif retailer_=="Hairspray":
