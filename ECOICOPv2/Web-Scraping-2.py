@@ -2995,6 +2995,816 @@ def results_christos_grill_seafood(u):
                 website_false.append(retailer_)
                 daily_errors.loc[len(daily_errors)] = website_false
 
+def results_netflix(u):
+    
+    header = { "User-Agent": "Mozilla/5.0"}
+    response = requests.get(Item_url_, headers = header)
+    print(response)
+
+    if (response.status_code != 200):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+
+    else:
+        soup = BeautifulSoup(response.text, "html.parser")
+        text = soup.get_text(separator="\n", strip=True)
+        search_text = "Pricing (Euro)"
+        prices = re.findall(r'(\d+\.\d+)', text)
+
+        #Basic
+        if 'Basic' in name_:
+            price_ = float(prices[0])
+
+        #Standard
+        if 'Standard' in name_:
+            price_ = float(prices[1])
+        print(price_)
+
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)  
+        new_row.append("Netflix")
+        list_.loc[len(list_)] = new_row
+        list_["Name"] = list_["Name"].apply(lambda x:x)
+
+def results_driving_school(u):  
+    
+    header = {"User-Agent": "Mozilla/5.0"}
+    response = requests.get(Item_url_, headers = header)
+    print(response)
+    soup = BeautifulSoup(response.text, "html.parser")
+
+    if (response.status_code != 200):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+
+    else:
+        element_ = soup.find_all('div',{"class":"two-columns-text-subtitle-left-right-area"})
+        text = element_[0].text
+        #truck = text[text.find("Φορτηγό/Λεωφορείο: €") + len("Φορτηγό/Λεωφορείο: €"):].split("\n")[0].strip()
+        #trailer = text[text.find("Νταλίκα: €") + len("Νταλίκα: €"):].split("\n")[0].strip()
+        
+        if 'Αυτοκίνητο' in name_: 
+            car = text[text.find("Αυτοκίνητο: €") + len("Αυτοκίνητο: €"):].split("\n")[0].strip()
+            price_ = float(car)
+            print("Αυτοκίνητο:", car)
+        if 'Μοτοσυκλέτα' in name_:
+            motorcycle = text[text.find("Μοτοσυκλέτα: €") + len("Μοτοσυκλέτα: €"):].split("\n")[0].strip()
+            price_ =float (motorcycle)
+            print("Μοτοσυκλέτα:", motorcycle)
+
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)  
+        new_row.append("Larnaca Driving School")
+        list_.loc[len(list_)] = new_row
+        list_["Name"] = list_["Name"].apply(lambda x:x)        
+ 
+def results_dentist(u):
+    
+    header = {"User-Agent": "Mozilla/5.0"}
+    response = requests.get(Item_url_, headers = header)
+    print(response)
+    soup = BeautifulSoup(response.text, "html.parser")
+    response = requests.get(Item_url_)
+
+    if (response.status_code != 200):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+
+    else:        
+        # Βρίσκει όλα τα rows του πίνακα
+        rows = soup.find_all("tr")
+        
+        for row in rows:
+            ths = row.find_all("th")
+            if len(ths) >= 2:
+                title = ths[0].get_text(strip=True)
+        
+                if ("Φθορίωση (παιδιά 6 – 15 χρ.)" in title) and ('In office fluoride application (children 6 -15 yrs)' in name_):
+                    price = ths[1].get_text(strip=True)
+                    price_ = float(price)
+                    print("Τιμή:", price_)
+                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                    new_row.append(name_)
+                    new_row.append(float(price_))
+                    new_row.append(subclass_)
+                    new_row.append(division_)  
+                    new_row.append("Dr Stephanos Tsitsis Dental Surgeon")
+                    list_.loc[len(list_)] = new_row
+                    list_["Name"] = list_["Name"].apply(lambda x:x)
+
+                if ("Προληπτική Έμφραξη (παιδιά 6 – 13 χρ.)" in title) and ('Sealant (children 6 - 12 yrs)' in name_):
+                    price = ths[1].get_text(strip=True)
+                    price_ = float(price)
+                    print("Τιμή:", price_)
+                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                    new_row.append(name_)
+                    new_row.append(float(price_))
+                    new_row.append(subclass_)
+                    new_row.append(division_)  
+                    new_row.append("Dr Stephanos Tsitsis Dental Surgeon")
+                    list_.loc[len(list_)] = new_row
+                    list_["Name"] = list_["Name"].apply(lambda x:x)
+
+                if ("Καθαρισμός Δοντιών (Αποτρύγωση)" in title) and ('Teeth cleaning' in name_):
+                    price = ths[1].get_text(strip=True)
+                    price_ = float(price)
+                    print("Τιμή:", price_)
+                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                    new_row.append(name_)
+                    new_row.append(float(price_))
+                    new_row.append(subclass_)
+                    new_row.append(division_)  
+                    new_row.append("Dr Stephanos Tsitsis Dental Surgeon")
+                    list_.loc[len(list_)] = new_row
+                    list_["Name"] = list_["Name"].apply(lambda x:x)
+                
+                if ("Εξέταση ασθενούς - Διάγνωση" in title) and ('Examination - Diagnosis' in name_):
+                    price = ths[1].get_text(strip=True)
+                    price_ = float(price)
+                    print("Τιμή:", price_)
+                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                    new_row.append(name_)
+                    new_row.append(float(price_))
+                    new_row.append(subclass_)
+                    new_row.append(division_)  
+                    new_row.append("Dr Stephanos Tsitsis Dental Surgeon")
+                    list_.loc[len(list_)] = new_row
+                    list_["Name"] = list_["Name"].apply(lambda x:x)
+
+                if ("Ψηφιακή Ενδοστοματική Ακτινογραφία" in title) and ('Digital intraoral X-ray' in name_):
+                    price = ths[1].get_text(strip=True)
+                    price_ = float(price)
+                    print("Τιμή:", price_)
+                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                    new_row.append(name_)
+                    new_row.append(float(price_))
+                    new_row.append(subclass_)
+                    new_row.append(division_)  
+                    new_row.append("Dr Stephanos Tsitsis Dental Surgeon")
+                    list_.loc[len(list_)] = new_row
+                    list_["Name"] = list_["Name"].apply(lambda x:x)
+
+                if ("Έμφραξη μιας επιφάνειας" in title) and ('One surface filling' in name_):
+                    price = ths[1].get_text(strip=True)
+                    price_ = float(price)
+                    print("Τιμή:", price_)
+                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                    new_row.append(name_)
+                    new_row.append(float(price_))
+                    new_row.append(subclass_)
+                    new_row.append(division_)  
+                    new_row.append("Dr Stephanos Tsitsis Dental Surgeon")
+                    list_.loc[len(list_)] = new_row
+                    list_["Name"] = list_["Name"].apply(lambda x:x)
+
+                if ("Εξαγωγή δοντιού ή απλής ρίζας" in title) and ('Tooth extraction' in name_):
+                    price = ths[1].get_text(strip=True)
+                    price_ = float(price)
+                    print("Τιμή:", price_)
+                    new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                    new_row.append(name_)
+                    new_row.append(float(price_))
+                    new_row.append(subclass_)
+                    new_row.append(division_)  
+                    new_row.append("Dr Stephanos Tsitsis Dental Surgeon")
+                    list_.loc[len(list_)] = new_row
+                    list_["Name"] = list_["Name"].apply(lambda x:x)
+
+def results_ugraerio(u):
+    
+    pdf_path = "ECOICOPv2/paratiritirio_april_2026.pdf"
+    all_rows = []
+    
+    with pdfplumber.open(pdf_path) as pdf:
+        for page_num, page in enumerate(pdf.pages, start=1):
+            text = page.extract_text()
+            
+            if not text:
+                continue
+            lines = text.split("\n")
+    
+    pattern = re.compile(r"ΚΥΛΙΝΔΡΟΣ\s*10kg", re.IGNORECASE)
+    
+    for item in lines:
+        
+        if isinstance(item, str) and pattern.search(item):
+            parts = item.split()
+    
+            try:
+                price_ = float(parts[-1])
+                print("Μέση τιμή:", price_)
+            
+                new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                new_row.append(name_)
+                new_row.append(float(price_))
+                new_row.append(subclass_)
+                new_row.append(division_)  
+                new_row.append("Price Observatory - Consumer Protection Service")
+                list_.loc[len(list_)] = new_row
+                list_["Name"] = list_["Name"].apply(lambda x:x)
+    
+            except:
+                print("FOUND BUT PARSING ERROR:", item)
+                website_false.append(name_)
+                website_false.append(subclass_)
+                website_false.append(Item_url_)
+                website_false.append(division_)
+                website_false.append(retailer_)
+                daily_errors.loc[len(daily_errors)] = website_false
+                daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+                    
+def results_teacher_finder(u):
+    
+    response = requests.get(Item_url_)
+    print(response)
+
+    if (response.status_code != 200):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+
+    else:
+        soup = BeautifulSoup(response.text, "html.parser") 
+        element_ = soup.find_all('div', {'class':'no-s col-12 col-sm-12 col-md-12 col-lg-12'})
+        
+        values_ = 0
+        count_ = 0
+        for i in range(len(element_)):
+            if i % 2 == 0:
+                pass
+            else:
+                text = element_[i].text
+                result_ = re.findall(r'\d+', text)[0]
+                values_ = values_+ float(result_)
+                count_ += 1
+        
+        price_ = values_ / count_
+        print("Μέση Τιμή:", price_)
+
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)  
+        new_row.append("Teacher Finder")
+        list_.loc[len(list_)] = new_row
+        list_["Name"] = list_["Name"].apply(lambda x:x)
+
+def results_digicare(u):
+    
+    header = {"User-Agent": "Mozilla/5.0"}
+    response = requests.get(Item_url_, headers = header)
+
+    if (response.status_code != 200):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+
+    else:
+        soup = BeautifulSoup(response.text, "html.parser")
+        tables = soup.find_all('table', {'class': 'w-full border-collapse text-sm'})
+        
+        if ('Εμβόλιο - Ενήλικη Ετήσια - Βασικός Συνδυασμός' in name_):
+            table = tables[0]
+        elif ("Τακτικός έλεγχος" in name_) or ("Αποπαρασίτωση" in name_):
+            table = tables[3]    
+
+        for row in table.find_all('tr'):
+            cols = row.find_all(['td', 'th'])
+            cells = [c.get_text(strip=True) for c in cols]
+    
+            #dog regular check-up
+            if (cells and "Τακτικός έλεγχος" in cells[0]) and ('Σκύλος' in name_) and ("Τακτικός έλεγχος" in name_):
+                values_after = cells[2] 
+                first_value = int(values_after.replace('€','').split("–")[0])
+                second_value = int(values_after.replace('€','').split("–")[1])
+                price_ = (first_value + second_value) / 2
+                print(price_)
+                new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                new_row.append(name_)
+                new_row.append(float(price_))
+                new_row.append(subclass_)
+                new_row.append(division_)  
+                new_row.append("DigiCare")
+                list_.loc[len(list_)] = new_row
+                list_["Name"] = list_["Name"].apply(lambda x:x) 
+        
+            #cat regular check-up
+            elif (cells and "Τακτικός έλεγχος" in cells[0]) and ('Γάτα' in name_) and ("Τακτικός έλεγχος" in name_):
+                values_after = cells[4]
+                first_value = int(values_after.replace('€','').split("–")[0])
+                second_value = int(values_after.replace('€','').split("–")[1])
+                price_ = (first_value + second_value) / 2
+                print(price_)
+                new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                new_row.append(name_)
+                new_row.append(float(price_))
+                new_row.append(subclass_)
+                new_row.append(division_)  
+                new_row.append("DigiCare")
+                list_.loc[len(list_)] = new_row
+                list_["Name"] = list_["Name"].apply(lambda x:x) 
+        
+            #dog deworming
+            elif (cells and "Αποπαρασίτωση (2 φορές/χρόνο)" in cells[0]) and ('Σκύλος' in name_) and ("Αποπαρασίτωση" in name_):
+                values_after = cells[2]
+                first_value = int(values_after.replace('€','').split("–")[0])
+                price_ = float(first_value)
+                print(price_)
+                new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                new_row.append(name_)
+                new_row.append(float(price_))
+                new_row.append(subclass_)
+                new_row.append(division_)  
+                new_row.append("DigiCare")
+                list_.loc[len(list_)] = new_row
+                list_["Name"] = list_["Name"].apply(lambda x:x) 
+        
+            #cat deworming
+            elif (cells and "Αποπαρασίτωση (2 φορές/χρόνο)" in cells[0]) and ('Γάτα' in name_) and ("Αποπαρασίτωση" in name_):
+                values_after = cells[4]
+                first_value = int(values_after.replace('€','').split("–")[0])
+                price_ = float(first_value)
+                print(price_)
+                new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                new_row.append(name_)
+                new_row.append(float(price_))
+                new_row.append(subclass_)
+                new_row.append(division_)  
+                new_row.append("DigiCare")
+                list_.loc[len(list_)] = new_row
+                list_["Name"] = list_["Name"].apply(lambda x:x) 
+
+            #dog/cat vaccination
+            elif (cells and 'Βασικός συνδυασμός' in cells[0]) and ('Εμβόλιο - Ενήλικη Ετήσια - Βασικός Συνδυασμός' in name_):
+                values_after = cells[2] 
+                first_value = int(values_after.replace('€','').split("–")[0])
+                second_value = int(values_after.replace('€','').split("–")[1].replace(' τον χρόνο',''))
+                price_ = (first_value + second_value) / 2
+                print(price_)
+                new_row.append(datetime.now().strftime('%Y-%m-%d'))
+                new_row.append(name_)
+                new_row.append(float(price_))
+                new_row.append(subclass_)
+                new_row.append(division_)  
+                new_row.append("DigiCare")
+                list_.loc[len(list_)] = new_row
+                list_["Name"] = list_["Name"].apply(lambda x:x) 
+
+def results_pluton_travel(u):
+    
+    header = {"User-Agent": "Mozilla/5.0"}
+    response = requests.get(Item_url_, headers = header)
+    
+    if (response.status_code != 200):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+
+    else:
+        soup = BeautifulSoup(response.text, "html.parser")
+        element_ = soup.find_all('div', {'class':'price-wrap eq-height3'})
+        
+        values_ = 0
+        count_ = 0
+        for i in range(0, len(element_)):
+            text_ = element_[i].text
+            match = re.search(r'€\s*(\d+)', text_)
+            result_ = int(match.group(1))
+            count_ += 1
+            values_ = values_ + result_  
+        
+        price_ = values_ / count_
+        print("Μέση Τιμή:", price_)  
+
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)  
+        new_row.append("Pluton Travel")
+        list_.loc[len(list_)] = new_row
+        list_["Name"] = list_["Name"].apply(lambda x:x)
+
+def results_xeyes(u):
+
+    response = requests.get(Item_url_)
+    print(response)
+    
+    if response.status_code != 200:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        element_ = soup.find_all('span', {'class':'money'})
+        price_ = element_[0].text.replace("€","")
+        print("Τιμή:", price_)
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("X-Eyes")
+        list_.loc[len(list_)] = new_row
+
+def results_alex(u):
+
+    response = requests.get(Item_url_)
+    print(response)
+    
+    if response.status_code != 200:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        element_ = soup.find('span', {'class':'price-item price-item--regular'}).get_text(strip=True)
+        price_ = element_.replace("€","").replace(",",".")
+        print("Τιμή:", price_)
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Alex Optical")
+        list_.loc[len(list_)] = new_row
+
+def results_mesmer(u):
+
+    header = {"User-Agent": "Mozilla/5.0"}
+    response = requests.get(Item_url_, headers = header)
+    print(response)
+    
+    if response.status_code != 200:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        element_ = soup.find_all('span', {'class':'woocommerce-Price-amount amount'})
+        price_ = element_[0].text.replace("\xa0","").replace("€","").replace(",",".")
+        print("Τιμή:", price_)
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Mesmer Eyes")
+        list_.loc[len(list_)] = new_row
+
+def results_zouvanis(u):
+
+    response = requests.get(Item_url_)
+    print(response)
+    
+    if response.status_code != 200:
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        element_ = soup.find_all('span', {'class':'money'})
+        price_ = element_[0].text.replace("€","").replace(",",".")
+        print("Τιμή:", price_)
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Zouvanis Optics")
+        list_.loc[len(list_)] = new_row        
+        
+def results_tsiropoulos(u):
+    
+    response = requests.get(Item_url_)
+    print(response)
+    
+    if (response.status_code != 200):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.text, "html.parser")
+        element_ = soup.find_all('span', {'class':'woocommerce-Price-amount amount'})
+        price_ = element_[0].text.replace("\xa0","").replace("€","").replace(",",".")
+        print("Τιμή:", price_)  
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)  
+        new_row.append("Tsiropoulos Jewelry")
+        list_.loc[len(list_)] = new_row
+        list_["Name"] = list_["Name"].apply(lambda x:x)
+
+def results_constantinou(u):
+    
+    header = {"User-Agent": "Mozilla/5.0"}
+    response = requests.get(Item_url_, headers = header)
+    print(response)
+    
+    if (response.status_code != 200):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.text, "html.parser")
+        element_ = soup.find_all('span', {'class':'woocommerce-Price-amount amount'})
+        price_ = element_[4].text.replace("\xa0","").replace("€","").replace(",",".")
+        print("Τιμή:", price_)  
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)  
+        new_row.append("Constantinou Jewels")
+        list_.loc[len(list_)] = new_row
+        list_["Name"] = list_["Name"].apply(lambda x:x)        
+        
+def results_melekkis(u):
+    
+    response = requests.get(Item_url_)
+    print(response)
+    
+    if (response.status_code != 200):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        element_ = soup.find_all('span', {'class':'woocommerce-Price-amount amount'})
+        price_ = element_[0].text.replace(".","").replace("€","").replace(",",".")
+        print("Τιμή:", price_)  
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)  
+        new_row.append("Panos Melekkis Jewellery")
+        list_.loc[len(list_)] = new_row
+        list_["Name"] = list_["Name"].apply(lambda x:x)
+       
+def results_brilliance(u):
+    
+    response = requests.get(Item_url_)
+    print(response)
+    
+    if (response.status_code != 200):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        element_ = soup.find_all('span', {'class':'woocommerce-Price-amount amount'})
+        price_ = element_[0].text.replace("\xa0","").replace("€","").replace(",",".")
+        print("Τιμή:", price_)  
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)  
+        new_row.append("Brilliance Jewellery")
+        list_.loc[len(list_)] = new_row
+        list_["Name"] = list_["Name"].apply(lambda x:x)       
+        
+def results_aphrodite(u):
+    
+    header = {"User-Agent": "Mozilla/5.0"}
+    response = requests.get(Item_url_, headers = header)
+    print(response)
+    
+    if (response.status_code != 200):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        element_ = soup.find_all('span', {'class':'woocommerce-Price-amount amount'})
+        price_ = element_[1].text.replace("€","")
+        print("Τιμή:", price_)  
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)  
+        new_row.append("Aphrodite Jewellery")
+        list_.loc[len(list_)] = new_row
+        list_["Name"] = list_["Name"].apply(lambda x:x)       
+        
+def results_pharmfetch(u):
+    
+    response = requests.get(Item_url_)
+    print(response)
+    
+    if (response.status_code != 200):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        element_ = soup.find_all('span', {'class':'woocommerce-Price-amount amount'})
+        price_ = element_[4].text.replace("€","")
+        print("Τιμή:", price_)  
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)  
+        new_row.append("PHARMFETCH")
+        list_.loc[len(list_)] = new_row
+        list_["Name"] = list_["Name"].apply(lambda x:x)
+        
+def results_remedy(u):
+    
+    response = requests.get(Item_url_)
+    print(response)
+    
+    if (response.status_code != 200):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        element_ = soup.find_all('span', {'class':'woocommerce-Price-amount amount'})
+        price_ = element_[0].text.replace("€","").replace(",",".")
+        print("Τιμή:", price_)  
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)  
+        new_row.append("Remedy")
+        list_.loc[len(list_)] = new_row
+        list_["Name"] = list_["Name"].apply(lambda x:x) 
+        
+def results_24evexia(u):
+    
+    header = {"User-Agent": "Mozilla/5.0"}
+    response = requests.get(Item_url_, headers = header)
+    print(response)
+    
+    if (response.status_code != 200):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        element_ = soup.find_all('h2', {'class':'final-price'})
+        price_ = element_[0].text.replace("€","")
+        print("Τιμή:", price_)  
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)  
+        new_row.append("24evexia")
+        list_.loc[len(list_)] = new_row
+        list_["Name"] = list_["Name"].apply(lambda x:x)         
+
+def results_agathokleous(u):
+    
+    header = {"User-Agent": "Mozilla/5.0"}
+    response = requests.get(Item_url_, headers = header)
+    print(response)
+    
+    if (response.status_code != 200):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        element_ = soup.find_all('span', {'class':'woocommerce-Price-amount amount'})
+        price_ = element_[0].text.replace("\xa0","").replace("€","").replace(",",".")
+        print("Τιμή:", price_)  
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)  
+        new_row.append("Agathokleous Pharmacies")
+        list_.loc[len(list_)] = new_row
+        list_["Name"] = list_["Name"].apply(lambda x:x) 
+        
+def results_procopiou(u):
+    
+    header = {"User-Agent": "Mozilla/5.0"}
+    response = requests.get(Item_url_, headers = header)
+    print(response)
+    
+    if (response.status_code != 200):
+        website_false.append(name_)
+        website_false.append(subclass_)
+        website_false.append(Item_url_)
+        website_false.append(division_)
+        website_false.append(retailer_)
+        daily_errors.loc[len(daily_errors)] = website_false
+        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
+    else:
+        soup = BeautifulSoup(response.content, "html.parser")
+        
+        if ("Nebuliser Gem" in soup.text) or ("EASYCHECK" in soup.text) or ("Fingertip" in soup.text) :
+            element_ = soup.find_all('span', {'class':'RobotoBold size20 ma5 col_df1800'})
+        else:
+            element_ = soup.find_all('span', {'class':'RobotoBold size20 ma3 col_18984f'})
+        
+        price_ = element_[0].text.replace("€","")
+        print("Τιμή:", price_)  
+        
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)  
+        new_row.append("Procopiou Medishop")
+        list_.loc[len(list_)] = new_row
+        list_["Name"] = list_["Name"].apply(lambda x:x)  
+
 #Initialization of the scraping/processing time
 start_time = time.time()
 
@@ -3018,122 +3828,168 @@ for u in range(0, len(urls)):
     #    results_supermarketcy(u) 
     if retailer_=="Fuel Daddy":
         results_fueldaddy(u)
-    elif retailer_=="Costas Theodorou":
+    if retailer_=="Costas Theodorou":
         results_costastheodorou(u)
-    elif retailer_=="Parga":
+    if retailer_=="Parga":
         results_parga(u)    
-    elif retailer_=="Leroy Merlin":
+    if retailer_=="Leroy Merlin":
         results_leroymerlin(u)   
-    elif retailer_=="IKEA":
+    if retailer_=="IKEA":
         results_ikea(u)
-    #elif retailer_=="Stephanis": #*Run only locally
+    #if retailer_=="Stephanis": #*Run only locally
     #    results_stephanis(u)
-    elif retailer_=="Public": #*Run only locally by 05/03/2026. Activated again and run globally (GitHub) in 06/03/26.
+    if retailer_=="Public": #*Run only locally by 05/03/2026. Activated again and run globally (GitHub) in 06/03/26.
         results_public(u)
-    elif retailer_=="Electroline":
+    if retailer_=="Electroline":
         results_electroline(u)
-    elif retailer_=="CYTA":
+    if retailer_=="CYTA":
         results_cyta(u)
-    #elif retailer_=="Cablenet": #*Run only locally
+    #if retailer_=="Cablenet": #*Run only locally
     #    results_cablenet(u)  
-    elif retailer_=="Primetel": 
+    if retailer_=="Primetel": 
         results_primetel(u)    
-    elif retailer_=="Epic":
+    if retailer_=="Epic":
         results_epic(u)
-    elif retailer_=="Athlokinisi":
+    if retailer_=="Athlokinisi":
         results_Athlokinisi(u)
-    #elif retailer_=="Famous Sports": #*Run only locally since 09/04/26
+    #if retailer_=="Famous Sports": #*Run only locally since 09/04/26
     #    results_famousports(u) 
-    elif retailer_=="Marks&Spencer":
+    if retailer_=="Marks&Spencer":
         results_Marks_Spencer(u)    
-    #elif retailer_=="Bwell Pharmacy": #*deactivated in 18/06/2026 because starts blocking price scraping
+    #if retailer_=="Bwell Pharmacy": #*deactivated in 18/06/2026 because starts blocking price scraping
     #    results_bwell_pharmacy(u)
-    elif retailer_=="Novella": #*deactivated in 27/12/2025 and activated again in 03/01/26
+    if retailer_=="Novella": #*deactivated in 27/12/2025 and activated again in 03/01/26
         results_novella(u) 
-    elif retailer_=="Hairspray":
+    if retailer_=="Hairspray":
         results_hairspray(u)
-    elif retailer_=="Studio 37 For Hair":
+    if retailer_=="Studio 37 For Hair":
         results_studio37(u) 
-    elif retailer_=="Magdas Hair Boutique":
+    if retailer_=="Magdas Hair Boutique":
         results_magdas(u)
-    elif retailer_=="Douce et Belle":
+    if retailer_=="Douce et Belle":
         results_douce_et_belle(u)       
-    #elif retailer_=="Evdokia Jewellery": #*deactivated from 14/11/25 through 27/11/25 due to maintenance reasons
+    #if retailer_=="Evdokia Jewellery": #*deactivated from 14/11/25 through 27/11/25 due to maintenance reasons
     #    results_evdokia_jewellery(u)
-    elif retailer_=="Akentia":
+    if retailer_=="Akentia":
         results_akentia(u)    
-    #elif retailer_=="Centroptical": #*banned access through a 'verifying you are human' check in 13/03/26
+    #if retailer_=="Centroptical": #*banned access through a 'verifying you are human' check in 13/03/26
     #    results_centroptical(u)
-    elif retailer_=="Premier Laundry":
+    if retailer_=="Premier Laundry":
         results_premier(u)
-    elif retailer_=="Music Avenue": #Deactivate in 17/05/2026 due to scraping errors. Then, run only locally.
+    if retailer_=="Music Avenue": #Deactivate in 17/05/2026 due to scraping errors. Then, run only locally.
         results_musicavenue(u)    
-    elif retailer_=="Rio Cinema":
+    if retailer_=="Rio Cinema":
         results_rio(u)    
-    elif retailer_=="Cyprus Ministry of Education, Sport and Youth":
+    if retailer_=="Cyprus Ministry of Education, Sport and Youth":
         results_CyMinistryEducation(u)
-    elif retailer_=="European University Cyprus":
+    if retailer_=="European University Cyprus":
         results_EUC(u)    
-    elif retailer_=="Cyprus Post":
+    if retailer_=="Cyprus Post":
         results_CyPost(u)
-    elif retailer_=="AHK":
+    if retailer_=="AHK":
         results_AHK(u)
-    elif retailer_=="Water EOA Larnaca":
+    if retailer_=="Water EOA Larnaca":
         results_water(u)
-    #elif retailer_=="Water EOA Nicosia": #*EOA Nicosia was deactivated from 17/10/25 to 04/03/26 since it banned access (https://ndlgo.org.cy/water-supply/consumer/water-fees-wbn/)
+    #if retailer_=="Water EOA Nicosia": #*EOA Nicosia was deactivated from 17/10/25 to 04/03/26 since it banned access (https://ndlgo.org.cy/water-supply/consumer/water-fees-wbn/)
     #   results_water(u)
-    elif retailer_=="Water EOA Limassol":  #*EOA Limassol was diactivated in 13/03/26 because of connection error (https://eoalemesos.org.cy/el/fees) 
+    if retailer_=="Water EOA Limassol":  #*EOA Limassol was diactivated in 13/03/26 because of connection error (https://eoalemesos.org.cy/el/fees) 
        results_water(u)    
-    elif retailer_=="Sewerage EOA Larnaca": 
+    if retailer_=="Sewerage EOA Larnaca": 
         results_sewerage(u)   
-    #elif retailer_=="Sewerage EOA Nicosia": #*EOA Nicosia was diactivated from 17/10/25 to 04/03/26 since it banned access (https://ndlgo.org.cy/sewage/sewer-fees/) 
+    #if retailer_=="Sewerage EOA Nicosia": #*EOA Nicosia was diactivated from 17/10/25 to 04/03/26 since it banned access (https://ndlgo.org.cy/sewage/sewer-fees/) 
     #    results_sewerage(u)  
-    elif retailer_=="Sewerage EOA Limassol":  #*EOA Limassol was diactivated in 13/03/26 because of connection error (https://eoalemesos.org.cy/el/fees) 
+    if retailer_=="Sewerage EOA Limassol":  #*EOA Limassol was diactivated in 13/03/26 because of connection error (https://eoalemesos.org.cy/el/fees) 
         results_sewerage(u)     
-    #elif retailer_=="MotoRace": #*Deactivated in 21/10/25 (run only locally) and banned access in 07/11/25 (don't run neither locally) through a 'verifying you are human' check. Then, allows access locally since 28/11/25.
+    #if retailer_=="MotoRace": #*Deactivated in 21/10/25 (run only locally) and banned access in 07/11/25 (don't run neither locally) through a 'verifying you are human' check. Then, allows access locally since 28/11/25.
     #    results_moto_race(u)
-    elif retailer_=="AWOL":
+    if retailer_=="AWOL":
         results_awol(u)    
-    elif retailer_=="Toyota": #*Deactivated in 10/12/25 due to scraping error
+    if retailer_=="Toyota": #*Deactivated in 10/12/25 due to scraping error
         results_toyota(u)    
-    elif retailer_=="Nissan":
+    if retailer_=="Nissan":
         results_nissan(u)
-    elif retailer_=="Stock Center":
+    if retailer_=="Stock Center":
         results_stock_center(u)    
-    elif retailer_=="Alter Vape": 
+    if retailer_=="Alter Vape": 
         results_AlterVape(u)    
-    elif retailer_=="The CYgar shop":
+    if retailer_=="The CYgar shop":
         results_CYgar_shop(u)
-    elif retailer_=="The Royal Cigars":
+    if retailer_=="The Royal Cigars":
         results_royal_cigars(u)  
-    elif retailer_=="E-wholesale":
+    if retailer_=="E-wholesale":
         results_ewholesale(u)    
-    elif retailer_=="NUMBEO":
+    if retailer_=="NUMBEO":
         results_numbeo(u)
-    elif retailer_=="Wolt":
+    if retailer_=="Wolt":
         results_wolt(u)
-    elif retailer_=="Vasos Psarolimano":
+    if retailer_=="Vasos Psarolimano":
         results_vasos(u)
-    elif retailer_=="Meze Tavern":
+    if retailer_=="Meze Tavern":
         results_meze(u)    
-    elif retailer_=="Pyxida":
+    if retailer_=="Pyxida":
         results_pydixa(u)
-    elif retailer_=="Ithaki":
+    if retailer_=="Ithaki":
         results_ithaki(u)
-    elif retailer_=="Flames":
+    if retailer_=="Flames":
         results_flames(u)
-    elif retailer_=="Mageirisses":
+    if retailer_=="Mageirisses":
         results_mageirisses(u)    
-    elif retailer_=="Pagkratios": # *deactivated in 16/11/25 due to maintenance reasons and activated in 01/12/2025
+    if retailer_=="Pagkratios": # *deactivated in 16/11/25 due to maintenance reasons and activated in 01/12/2025
         results_pagkratios(u)
-    elif retailer_=="Christos Grill&Seafood":
+    if retailer_=="Christos Grill&Seafood":
         results_christos_grill_seafood(u)    
-    #elif retailer_=="Intercity Buses": #*Run only locally
+    #if retailer_=="Intercity Buses": #*Run only locally
     #    results_intercity_buses(u)  
-    elif retailer_=="Cyprus Transport":
+    if retailer_=="Cyprus Transport":
         results_cyprus_transport(u)
-    elif retailer_=="Max 7 Taxi":
+    if retailer_=="Max 7 Taxi":
         results_max_7_taxi(u)
+     # New Retailers
+    if retailer_=="Netflix":
+        results_netflix(u)
+    if retailer_=="Larnaca Driving School":
+        results_driving_school(u)    
+    if retailer_=="Dr Stephanos Tsitsis Dental Surgeon":
+        results_dentist(u)
+    if retailer_=="Price Observatory - Consumer Protection Service":
+        results_ugraerio(u)  
+    if retailer_=="Teacher Finder":
+        results_teacher_finder(u)
+    if retailer_=="DigiCare":
+        results_digicare(u)    
+    if retailer_=="Pluton Travel":
+        results_pluton_travel(u)
+    # New Optical Houses
+    if retailer_=="X-Eyes":
+        results_xeyes(u)
+    if retailer_=="Alex Optical":
+        results_alex(u)
+    if retailer_=="Mesmer Eyes":
+        results_mesmer(u)   
+    if retailer_=="Zouvanis Optics":
+        results_zouvanis(u)    
+    # New Jewelleries
+    if retailer_=="Tsiropoulos Jewelry":
+        results_tsiropoulos(u)
+    if retailer_=="Constantinou Jewels":
+        results_constantinou(u)
+    if retailer_=="Panos Melekkis Jewellery":
+        results_melekkis(u)  
+    if retailer_=="Brilliance Jewellery":
+        results_brilliance(u) 
+    if retailer_=="Aphrodite Jewellery":
+        results_aphrodite(u)
+    # New Pharmacies
+    if retailer_=="PHARMFETCH":
+        results_pharmfetch(u) 
+    if retailer_=="Remedy":
+        results_remedy(u) 
+    if retailer_=="Procopiou Medishop":
+        results_procopiou(u) 
+    if retailer_=="Agathokleous Pharmacies":
+        results_agathokleous(u)
+    if retailer_=="24evexia":
+        results_24evexia(u)         
    
 # Change the type as float
 list_["Price"].astype(float)
