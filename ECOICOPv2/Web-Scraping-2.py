@@ -3944,7 +3944,7 @@ for u in range(0, len(urls)):
         results_cyprus_transport(u)
     if retailer_=="Max 7 Taxi":
         results_max_7_taxi(u)
-     # New Retailers
+    # New Retailers
     if retailer_=="Netflix":
         results_netflix(u)
     if retailer_=="Larnaca Driving School":
