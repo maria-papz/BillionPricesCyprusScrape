@@ -33,7 +33,7 @@ warnings.simplefilter("ignore")
 # Read necessary data
 df = pd.read_csv("ECOICOPv2/Raw-Data-2.csv")
 #df["Date"] = pd.to_datetime(df["Date"], format="%d/%m/%Y").dt.strftime("%Y-%m-%d")
-df = df.sort_values("Date")
+df = df.sort_values(["Date","Retailer"])
 
 urls = pd.read_csv("ECOICOPv2/Products-Urls-2.csv")
 
@@ -3147,6 +3147,7 @@ print("Elapsed time:", elapsed_time/60, "minute")
 df.to_csv("ECOICOPv2/Raw-Data-2.csv", index=False) 
 combined_df = pd.concat([df, list_], axis=0)
 combined_df.reset_index(drop=True, inplace=True)
+combined_df.sort_values(["Date", "Retailer"])
 combined_df.to_csv("ECOICOPv2/Raw-Data-2.csv", index=False, header=True)
 
 # Export/Save the unscraped data (daily errors) 
