@@ -3347,10 +3347,10 @@ def results_tsiropoulos(u):
 
 def results_constantinou(u):
     
-    #response = requests.get(Item_url_)
+    response = requests.get(Item_url_)
     
-    header = {"User-Agent": "Mozilla/5.0"}
-    response = requests.get(Item_url_, headers = header)
+    #header = {"User-Agent": "Mozilla/5.0"}
+    #response = requests.get(Item_url_, headers = header)
     
     print(response)
     
