@@ -3779,7 +3779,98 @@ for u in range(0, len(urls)):
         results_24evexia(u)   
         
 #=========================================================================================================
-## Manually added data            
+## Manually added data   
+
+#Intercity Buses (https://intercity-buses.com/en/routes/) --> Banned access in 29-05-2026
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-limassol-limassol-nicosia/")
+new_row.append(float(6.0))
+new_row.append("Passenger transport by bus and coach")
+new_row.append("TRANSPORT")
+new_row.append("Intercity Buses") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-nicosia-nicosia-larnaca/")
+new_row.append(float(5.0))
+new_row.append("Passenger transport by bus and coach")
+new_row.append("TRANSPORT")
+new_row.append("Intercity Buses") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-ayia-napa-paralimni-ayia-napa-paralimni-nicosia/")
+new_row.append(float(6.0))
+new_row.append("Passenger transport by bus and coach")
+new_row.append("TRANSPORT")
+new_row.append("Intercity Buses") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-paphos-paphos-nicosia/")
+new_row.append(float(8.0))
+new_row.append("Passenger transport by bus and coach")
+new_row.append("TRANSPORT")
+new_row.append("Intercity Buses") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-limassol-limassol-larnaca/")
+new_row.append(float(5.0))
+new_row.append("Passenger transport by bus and coach")
+new_row.append("TRANSPORT")
+new_row.append("Intercity Buses") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-ayia-napa-paralimni-paralimni-ayia-napa-larnaca/")
+new_row.append(float(5.0))
+new_row.append("Passenger transport by bus and coach")
+new_row.append("TRANSPORT")
+new_row.append("Intercity Buses") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)limassol-paphos-paphos-limassol/")
+new_row.append(float(5.0))
+new_row.append("Passenger transport by bus and coach")
+new_row.append("TRANSPORT")
+new_row.append("Intercity Buses") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)paralimni-ayia-napa-larnaca-paphos-paphos-larnaca-ayia-napa-paralimni/")
+new_row.append(float(10.0))
+new_row.append("Passenger transport by bus and coach")
+new_row.append("TRANSPORT")
+new_row.append("Intercity Buses") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
+
+new_row=[]
+new_row.append(datetime.today().strftime("%Y-%m-%d"))
+new_row.append("OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-limassol-paphos-paphos-limassol-larnaca/")
+new_row.append(float(10.0))
+new_row.append("Passenger transport by bus and coach")
+new_row.append("TRANSPORT")
+new_row.append("Intercity Buses") 
+list_.loc[len(list_)] = new_row
+list_['Name'] = list_['Name'].apply(lambda x:x)
 
 #Water EOA Nicosia (https://ndlgo.org.cy/water-supply/water-fees-wbn/) --> Banned access in 17-10-2025
 new_row=[]
