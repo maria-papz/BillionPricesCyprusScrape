@@ -1784,102 +1784,9 @@ def results_EUC(u):
     list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_CyMinistryEducation(u):
-    '''
-    ## PREVIOUS VERSION (2024-25)
-    url = "http://archeia.moec.gov.cy/mc/698/" + Item_url_
     
-    if "ΝΗΠΙΑΓΩΓΕΙΩΝ" in name_:
-        #THE GRAMMAR JUNIOR SCHOOL (Nicosia)
-        pdf_ = tb.read_pdf(url, pages = '4', pandas_options = {'header': None}, stream = True)
-        pdf_ = pdf_[0]
-        
-        #Annual cost
-        pdf_[3] = pdf_[3].astype('string')
-        pdf = pdf_[3][1]
-        price_1 = float(pdf.strip('€*').replace(".", ""))
-
-        #Other costs
-        pdf_[5] = pdf_[5].astype('string')
-        pdf = pdf_[5][0]
-        price_2 = float(pdf.replace("τέλος εγγραφής ","").strip('€*').replace(".", ""))
-
-        pdf_[5] = pdf_[5].astype('string')
-        pdf = pdf_[5][2]
-        price_3 = float(pdf.replace("βιβλία και στολές ","").strip('€*').replace(".", ""))
-        
-        #Total cost
-        price_ = price_1 + price_2 + price_3
+    ## 2025-26: Fees available online in 17/06/2025
     
-    if "ΔΗΜΟΤΙΚΩΝ" in name_:
-        #THE GRAMMAR JUNIOR SCHOOL (Nicosia)
-        pdf_ = tb.read_pdf(url, pages = '1', pandas_options = {'header': None}, stream = True)
-        pdf_ = pdf_[0]
-
-        #Annual cost
-        for i in range(0,7):
-            pdf_[i] = pdf_[i].astype('string')
-
-        price_1 = float(pdf_[1][25].strip('€*').replace(".", "")) + float(pdf_[2][25].strip('€*').replace(".", "")) + float(pdf_[3][25].strip('€*').replace(".", "").split(" €")[0]) + float(pdf_[3][25].strip('€*').replace(".", "").split(" €")[1]) + float(pdf_[4][25].strip('€*').replace(".", "")) + float(pdf_[5][25].strip('€*').replace(".", ""))
-        price_1 = price_1 / 6
-
-        #Other costs
-        pdf = pdf_[6][24]
-        price_2 = float(pdf.replace("τέλος εγγραφής ","").strip('€*').replace(".", ""))
-
-        pdf = pdf_[6][26]
-        price_3 = float(pdf.replace("βιβλία και στολές ","").strip('€*').replace(".", ""))
-        
-        #Total cost
-        price_ = price_1 + price_2 + price_3
-                     
-    if ("Nicosia" in name_) and ("ΜΕΣΗΣ" in name_):
-        pdf_ = tb.read_pdf(url, pages = '1', pandas_options = {'header': None}, stream = True)
-        pdf_ = pdf_[0]
-
-        for i in range(2,7):
-            pdf_[i] = pdf_[i].astype('string')
-            if subclass_ == "Secondary education":
-                #THE GRAMMAR SCHOOL (NICOSIA): Α΄ τάξη - ΣΤ΄ τάξη
-                value_1 = (float(pdf_[2][4].replace("€",'').replace(".","")))
-                value_2 = (float(pdf_[3][4].replace("€",'').replace(".","")))
-                value_3 = (float(pdf_[4][4].replace("€",'').replace(".","")))
-                value_4 = (float(pdf_[5][4].replace("€",'').replace(".","")))
-                value_5 = (float(pdf_[6][4].replace("€",'').replace(".","")))
-                value_6 = (float(pdf_[7][4].replace("€",'').replace(".","")))
-                price_ = float(value_1 + value_2 + value_3 + value_4 + value_5 + value_6) / 6
-
-            if subclass_ == "Post-secondary non-tertiary education (ISCED 4)":
-                #THE GRAMMAR SCHOOL (NICOSIA): Ζ΄ τάξη
-                pdf_[8] = pdf_[8].astype('string')
-                value_7 = (float(pdf_[8][4].replace("€",'').replace(".",""))) 
-                price_ = float(value_7)
-    
-    if ("Limassol" in name_) and ("ΜΕΣΗΣ" in name_):
-        pdf_ = tb.read_pdf(url, pages = '2', pandas_options = {'header': None}, stream = True)
-        pdf_ = pdf_[0]
-        
-        for i in range(2,7):
-            pdf_[i] = pdf_[i].astype('string')
-            if subclass_ == "Secondary education":
-                #THE GRAMMAR SCHOOL (LIMASSOL): Α΄ τάξη - ΣΤ΄ τάξη
-                value_1 = (float(pdf_[2][15].replace("€",'').replace(".","")))
-                value_2 = (float(pdf_[3][15].replace("€",'').replace(".","")))
-                value_3 = (float(pdf_[4][15].replace("€",'').replace(".","")))
-                value_4 = (float(pdf_[5][15].replace("€",'').replace(".","")))
-                value_5 = (float(pdf_[6][15].replace("€",'').replace(".","")))
-                value_6 = (float(pdf_[7][15].replace("€",'').replace(".","")))
-                price_ = float(value_1 + value_2 + value_3 + value_4 + value_5 + value_6) / 6
-
-            if subclass_ == "Post-secondary non-tertiary education (ISCED 4)":
-                #THE GRAMMAR SCHOOL (LIMASSOL): Ζ΄ τάξη
-                pdf_[8] = pdf_[8].astype('string')
-                value_7 = (float(pdf_[8][15].replace("€",'').replace(".",""))) 
-                price_ = float(value_7)
-    '''
-    ## 2025-26: NEW VERSION from 17/06/2025
-    
-    #url = "https://sch.cy/mc/698/" + Item_url_
-
     #THE GRAMMAR JUNIOR SCHOOL (Nicosia)
     if "ΝΗΠΙΑΓΩΓΕΙΩΝ" in name_:
         
@@ -2536,7 +2443,7 @@ def results_wolt(u):
             website_false.append(retailer_)
             daily_errors.loc[len(daily_errors)] = website_false
 
-def results_vasos(u):
+def results_vassos(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     bs = BeautifulSoup(Item_url_, "html.parser")
@@ -2564,7 +2471,7 @@ def results_vasos(u):
         new_row.append(price_)
         new_row.append(subclass_)
         new_row.append(division_)
-        new_row.append("Vasos Psarolimano")
+        new_row.append("Vassos Psarolimano")
         list_.loc[len(list_)] = new_row
         list_['Name'] = list_['Name'].apply(lambda x:x)
     else:
@@ -2577,74 +2484,36 @@ def results_vasos(u):
         daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)
 
 def results_meze(u):
-    
-    '''
-    header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs,{'headers':header},verify=False)
-    soup = BeautifulSoup(response.content, "html.parser")
-    
-    if response.status_code !=200:
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] =daily_errors["Name"].apply(lambda x:x)    
-    else:
-        element_name = soup.find_all('div',{"class":"mprm-simple-view-column mprm-first"})
-        for i in range(0,len(element_name)):
-            if ("Meat Meze" in element_name[i].text) and ("Meat Meze" in name_):
-                element_name_2 = element_name[i].find_all('li',{"class":"mprm-flex-item mprm-price"})
-                price_=element_name_2[0].text.replace("€","")
 
-        for i in range(0,len(element_name)):
-            
-            if "Fish Meze" in element_name[i].text and ("Fish Meze" in name_):
-                element_name_2 = element_name[i].find_all('li',{"class":"mprm-flex-item mprm-price"})
-                price_=element_name_2[0].text.replace("€","")
+    # Open PDF
+    reader = PdfReader("ECOICOPv2/PDFs/MEZE-TAVERNA-ENGLISH-MENU-Jun2026.pdf")
+                
+    # Extract text from pages 3 and 4 (the prices of meat and fish meze are displayed in page 3 and 4, respectively)
+    text_page3 = reader.pages[3].extract_text()
+    text_page4 = reader.pages[4].extract_text()
 
-        if price_:
-            new_row.append(datetime.now().strftime('%Y-%m-%d'))
-            new_row.append(name_)
-            new_row.append(price_)
-            new_row.append(subclass_)
-            new_row.append(division_)
-            new_row.append("Meze Tavern")
-            list_.loc[len(list_)] = new_row
-            list_['Name'] = list_['Name'].apply(lambda x:x)
-        else:
-            website_false.append(name_)
-            website_false.append(subclass_)
-            website_false.append(Item_url_)
-            website_false.append(division_)
-            website_false.append(retailer_)
-            daily_errors.loc[len(daily_errors)] = website_false
-            daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    '''
-    
-    file_path = "ECOICOPv2/PDFs/Meze_Taverna_Jan2025.docx" #the prices of meat and fish meze are displayed in page 4
-    
-    doc = Document(file_path)
-    
-    for para in doc.paragraphs:
-        text_ = para.text
+    # Product names
+    product1 = "MEAT MEZE"
+    product2 = "FISH MEZE"
 
-        if name_ == "Meat Meze for 2 persons - Limassol":
-            match = re.search(r'KPEATOMEZEΔE>\s*(€\s*\d+(?:[.,]\d{2})?)', text_)
-            if match:
-                value = match.group(1)
-                price_ = value.replace("€","").replace(" ","")
-                print(price_)
+    # Search patterns: product name followed by a price
+    pattern1 = rf"{re.escape(product1)}.*?(\d+[.,]\d{{2}})"
+    pattern2 = rf"{re.escape(product2)}.*?(\d+[.,]\d{{2}})"
 
-        if name_ == "Fish Meze for 2 persons - Limassol":
-            match = re.search(r'TAPOMEZEΔE>\s*(€\s*\d+(?:[.,]\d{2})?)', text_)
-            if match:
-                value = match.group(1)
-                price_ = value.replace("€","").replace(" ","")
-                print(price_)
+    # Extract prices
+    match1 = re.search(pattern1, text_page3, re.DOTALL)
+    match2 = re.search(pattern2, text_page4, re.DOTALL)
+
+    price1 = match1.group(1) if match1 else None
+    price2 = match2.group(1) if match2 else None
     
+    if "Meat Meze" in name_ :
+        price_ = price1
+    
+    if "Fish Meze" in name_ :
+        price_ = price2
+
+    print(price_)
     new_row.append(datetime.now().strftime('%Y-%m-%d'))
     new_row.append(name_)
     new_row.append(price_)
@@ -2856,25 +2725,7 @@ def results_mageirisses(u):
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     
 def results_pagkratios(u):
-    '''
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-    response = requests.get(bs, {'headers':header})
     
-    if response.status_code == 200:
-        soup = BeautifulSoup(response.content, "html.parser")
-        elemenet_2 = soup.find_all("span", {"class":"woocommerce-Price-amount amount"})
-        price_ = elemenet_2[1].text.replace("€","")
-        print(price_)
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_)
-        new_row.append(float(price_))
-        new_row.append(subclass_)
-        new_row.append(division_)
-        new_row.append("Pagkratios")
-        list_.loc[len(list_)] = new_row
-        list_['Name'] = list_['Name'].apply(lambda x:x)
-    '''
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     response = requests.get(Item_url_, headers=header)
     print(response)
@@ -3858,8 +3709,8 @@ for u in range(0, len(urls)):
         results_numbeo(u)
     if retailer_=="Wolt":
         results_wolt(u)
-    if retailer_=="Vasos Psarolimano":
-        results_vasos(u)
+    if retailer_=="Vassos Psarolimano":
+        results_vassos(u)
     if retailer_=="Meze Tavern":
         results_meze(u)    
     if retailer_=="Pyxida":
