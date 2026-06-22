@@ -3968,6 +3968,11 @@ list_['Name'] = list_['Name'].apply(lambda x:x)
 """
 #===============================================================================
 
+# Total computational/processing time
+end_time = time.time()
+elapsed_time = end_time - start_time
+print("Elapsed time:", elapsed_time/60, "minutes")
+
 # Change the type as float
 list_["Price"].astype(float)
 
