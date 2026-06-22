@@ -230,34 +230,6 @@ def results_fueldaddy(u):
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
 
-def results_evdokia_jewellery(u):
-    
-    header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-    response = requests.get(Item_url_, headers = header)
-    print(response)
-    
-    if response.status_code != 200:
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        soup = BeautifulSoup(response.content, "html.parser")
-        price_soup = soup.find('p', class_='price')
-        price_element = price_soup.find('span', {'class':'woocommerce-Price-amount amount'})
-        price_ = price_element.text.replace("€","").replace(",",".")
-        print(price_)
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_)
-        new_row.append(float(price_))
-        new_row.append(subclass_)
-        new_row.append(division_)
-        new_row.append("Evdokia Jewellery")
-        list_.loc[len(list_)] = new_row
-
 def results_centroptical(u):
 
     header = {"User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/114.0"}
@@ -1403,35 +1375,6 @@ def results_numbeo(u):
                 new_row.append("Numbeo")
                 list_.loc[len(list_)] = new_row
                 list_['Name'] = list_['Name'].apply(lambda x:x)
-
-def results_bwell_pharmacy(u):
-    
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)
-    print(response)
-        
-    if ("404. The page you are looking for does not exist" in response.text)or (response.status_code !=200):
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        soup = BeautifulSoup(response.content, "html.parser")
-        element_soup = soup.find_all("span",{"class":"woocommerce-Price-amount amount"})
-        element_soup_1 = element_soup[1].text
-        price_ = element_soup_1.replace("€","")
-        print(price_)
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_)
-        new_row.append(float(price_))
-        new_row.append(subclass_)
-        new_row.append(division_)
-        new_row.append("Bwell Pharmacy")
-        list_.loc[len(list_)] = new_row
-        list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_moto_race(u):
     
@@ -3856,8 +3799,6 @@ for u in range(0, len(urls)):
     #    results_famousports(u) 
     if retailer_=="Marks&Spencer":
         results_Marks_Spencer(u)    
-    #if retailer_=="Bwell Pharmacy": #*deactivated in 18/06/2026 because starts blocking price scraping
-    #    results_bwell_pharmacy(u)
     if retailer_=="Novella": #*deactivated in 27/12/2025 and activated again in 03/01/26
         results_novella(u) 
     if retailer_=="Hairspray":
@@ -3868,8 +3809,6 @@ for u in range(0, len(urls)):
         results_magdas(u)
     if retailer_=="Douce et Belle":
         results_douce_et_belle(u)       
-    #if retailer_=="Evdokia Jewellery": #*deactivated from 14/11/25 through 27/11/25 due to maintenance reasons
-    #    results_evdokia_jewellery(u)
     if retailer_=="Akentia":
         results_akentia(u)    
     #if retailer_=="Centroptical": #*banned access through a 'verifying you are human' check in 13/03/26
