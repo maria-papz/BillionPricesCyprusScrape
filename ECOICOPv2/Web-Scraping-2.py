@@ -3784,13 +3784,13 @@ for u in range(0, len(urls)):
     if retailer_=="24evexia":
         results_24evexia(u)         
    
-# Change the type as float
-list_["Price"].astype(float)
-
 # Total computational/processing time
 end_time = time.time()
 elapsed_time = end_time - start_time
 print("Elapsed time:", elapsed_time/60, "minutes")
+
+# Change the type as float
+list_["Price"].astype(float)
 
 # Export/Save the scraped data 
 df.to_csv("ECOICOPv2/Raw-Data-2.csv", index=False) 
