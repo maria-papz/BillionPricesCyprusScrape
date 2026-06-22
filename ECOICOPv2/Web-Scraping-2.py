@@ -3653,7 +3653,7 @@ for u in range(0, len(urls)):
     #    results_famousports(u) 
     if retailer_=="Marks&Spencer":
         results_Marks_Spencer(u)    
-    if retailer_=="Novella": #*deactivated in 27/12/2025 and activated again in 03/01/26
+    if retailer_=="Novella": #*Deactivated in 27/12/2025 and activated again in 03/01/26
         results_novella(u) 
     if retailer_=="Hairspray":
         results_hairspray(u)
@@ -3665,7 +3665,7 @@ for u in range(0, len(urls)):
         results_douce_et_belle(u)       
     if retailer_=="Akentia":
         results_akentia(u)    
-    #if retailer_=="Centroptical": #*banned access through a 'verifying you are human' check in 13/03/26
+    #if retailer_=="Centroptical": #*Banned access through a 'verifying you are human' check in 13/03/26
     #    results_centroptical(u)
     if retailer_=="Premier Laundry":
         results_premier(u)
@@ -3727,11 +3727,11 @@ for u in range(0, len(urls)):
         results_flames(u)
     if retailer_=="Mageirisses":
         results_mageirisses(u)    
-    if retailer_=="Pagkratios": # *deactivated in 16/11/25 due to maintenance reasons and activated in 01/12/2025
+    if retailer_=="Pagkratios": # *Deactivated in 16/11/25 due to maintenance reasons and activated in 01/12/2025
         results_pagkratios(u)
     if retailer_=="Christos Grill&Seafood":
         results_christos_grill_seafood(u)    
-    #if retailer_=="Intercity Buses": #*Run only locally
+    #if retailer_=="Intercity Buses": #*Run only locally by 29/05/26. Then, banned access (Error 403).
     #    results_intercity_buses(u)  
     if retailer_=="Cyprus Transport":
         results_cyprus_transport(u)
@@ -3790,7 +3790,7 @@ list_["Price"].astype(float)
 # Total computational/processing time
 end_time = time.time()
 elapsed_time = end_time - start_time
-print("Elapsed time:", elapsed_time/60, "minute")
+print("Elapsed time:", elapsed_time/60, "minutes")
 
 # Export/Save the scraped data 
 df.to_csv("ECOICOPv2/Raw-Data-2.csv", index=False) 
