@@ -2825,7 +2825,7 @@ def results_flames(u):
 def results_mageirisses(u):
     
     #pdf_url = "https://oimageirisses.com/wp-content/uploads/assets/menu-gr.pdf"
-    pdf_mageirisses = "ECOICOPv2/PDFs/Mageirisses-Menu-Dec2025.pdf"
+    pdf_mageirisses = "ECOICOPv2/PDFs/Mageirisses-Menu-Jun2026.pdf"
         
     reader = PdfReader(pdf_mageirisses)
     all_text = ""
