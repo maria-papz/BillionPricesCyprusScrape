@@ -9,7 +9,7 @@ run-name: Scrape the websites of retailers and store raw data
 # Function to schedule the minutes, hour (UTC time), day of month (*), month (*), and day of week (*) of the workflow process
 on:
   schedule:
-    - cron: "31 07 * * *" #UTC time and weekday (0=Sunday, 1=Monday,..., 6=Saturday)
+    - cron: "31 01 * * *" #UTC time and weekday (0=Sunday, 1=Monday,..., 6=Saturday)
   #workflow_dispatch: # Allows manual testing
 
 #on:
