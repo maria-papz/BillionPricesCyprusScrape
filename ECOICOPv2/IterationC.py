@@ -673,10 +673,7 @@ def results_stephanis(u):
     else:
         soup = BeautifulSoup(response.content, "html.parser")    
         element_soup = soup.find_all("div", {"class":"listing-details-heading"})
-        if name_ == 'TV 32" SENCOR 32QF860B FHD QLED Smart':
-            price_ = element_soup[1].text.replace("€","").replace("\n","")
-        else:
-            price_ = element_soup[0].text.replace("€","").replace("\n","")
+        price_ = element_soup[0].text.replace("€","").replace("\n","")
         print(price_)
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
