@@ -3863,7 +3863,7 @@ new_row.append("Intercity Buses")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-#Water EOA Nicosia (https://ndlgo.org.cy/water-supply/water-fees-wbn/) --> Banned access in 17-10-2025
+#Water EOA Nicosia (https://ndlgo.org.cy/water-supply/water-fees-wbn/) --> Sometimes has 404 error
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Πάγιο ανά μήνα - Nicosia")
@@ -3884,7 +3884,7 @@ new_row.append("Water EOA Nicosia")
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
 
-#Sewerage EOA Nicosia (https://ndlgo.org.cy/sewage/sewer-fees/) --> Banned access in 17-10-2025
+#Sewerage EOA Nicosia (https://ndlgo.org.cy/sewage/sewer-fees/) --> Sometimes has 404 error
 new_row=[]
 new_row.append(datetime.today().strftime("%Y-%m-%d"))
 new_row.append("Ετήσιο Τέλος - Nicosia")
@@ -3904,59 +3904,6 @@ new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
 new_row.append("Sewerage EOA Nicosia") 
 list_.loc[len(list_)] = new_row
 list_['Name'] = list_['Name'].apply(lambda x:x)
-"""
-#Water EOA Limassol (https://eoalemesos.org.cy/el/fees) --> Connection error since 13-03-2026
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Πάγιο ανά μήνα - Limassol")
-new_row.append(float(4))
-new_row.append("Water supply delivered through network systems")
-new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("Water EOA Limassol") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Δικαίωμα Συντήρησης ανά μήνα - Limassol")
-new_row.append(float(1.5))
-new_row.append("Water supply delivered through network systems")
-new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("Water EOA Limassol") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Κυβικά ανά μήνα - Limassol")
-new_row.append(float(0.225))
-new_row.append("Water supply delivered through network systems")
-new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("Water EOA Limassol") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-
-#Sewerage EOA Limassol (https://eoalemesos.org.cy/el/fees) --> Connection error since 13-03-2026
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Ετήσιο Τέλος - Limassol")
-new_row.append(float(0.475142857))
-new_row.append("Sewage collection through sewer systems")
-new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("Sewerage EOA Limassol") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-            
-new_row=[]
-new_row.append(datetime.today().strftime("%Y-%m-%d"))
-new_row.append("Τέλος Χρήσης - Limassol")
-new_row.append(float(0.64))
-new_row.append("Sewage collection through sewer systems")
-new_row.append("HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS")
-new_row.append("Sewerage EOA Limassol") 
-list_.loc[len(list_)] = new_row
-list_['Name'] = list_['Name'].apply(lambda x:x)
-"""
 #===============================================================================
 
 # Total computational/processing time
