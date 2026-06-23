@@ -1340,14 +1340,12 @@ def results_royal_cigars(u):
             daily_errors.loc[len(daily_errors)] = website_false
             daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
 
-def results_numbeo(u):
+def results_hotboxcy(u):
     
-    bs = BeautifulSoup(Item_url_, "html.parser")
-    response = requests.get(bs)
+    response = requests.get(Item_url_)
     print(response)
-    soup = BeautifulSoup(response.content, "html.parser")
 
-    if ("Status code: 404" in soup.text) or (response.status_code !=200):
+    if response.status_code != 200:
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
@@ -1356,21 +1354,18 @@ def results_numbeo(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
-        element_soup = soup.find_all('tr', {"class":"tr_standard"})
-        for i in range(0, len(element_soup)):
-            countries = element_soup[i].text.replace("\n","").replace(" ","")
-            if "Cyprus" in countries:
-                result = re.sub(r'^.*?(Cyprus)',r'\1',countries).replace("Cyprus","").replace("$","").replace(" ","")
-                price_ = round(float(result) / 1.08, 2) #convert US Dollars to Euros
-                print(price_)
-                new_row.append(datetime.now().strftime('%Y-%m-%d'))
-                new_row.append(name_)
-                new_row.append(float(price_))
-                new_row.append(subclass_)
-                new_row.append(division_)
-                new_row.append("Numbeo")
-                list_.loc[len(list_)] = new_row
-                list_['Name'] = list_['Name'].apply(lambda x:x)
+        soup = BeautifulSoup(response.content, "html.parser")    
+        element_soup = soup.find_all("s", {"class":"price-item price-item--regular"})
+        price_ = element_soup[0].text.replace("€","").replace("EUR","").replace(",",".").replace("\n","").replace(" ","")
+        print(price_)
+        new_row.append(datetime.now().strftime('%Y-%m-%d'))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Hotbox Cy")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
 
 def results_moto_race(u):
     
@@ -3707,8 +3702,8 @@ for u in range(0, len(urls)):
         results_royal_cigars(u)  
     if retailer_=="E-wholesale":
         results_ewholesale(u)    
-    if retailer_=="NUMBEO":
-        results_numbeo(u)
+    if retailer_=="Hotbox Cy":
+        results_hotboxcy(u)
     if retailer_=="Wolt":
         results_wolt(u)
     if retailer_=="Vassos Psarolimano":
