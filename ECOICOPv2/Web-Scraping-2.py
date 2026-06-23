@@ -646,9 +646,9 @@ def results_electroline(u):
 def results_stephanis(u):
 
     ### with headers 
-    header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+    #header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
     ## 1 
-    response = requests.get(Item_url_, headers = header)
+    #response = requests.get(Item_url_, headers = header)
     ## 2 
     #bs = BeautifulSoup(Item_url_, "html.parser")
     #response = requests.get(bs, {'headers':header})
@@ -661,7 +661,7 @@ def results_stephanis(u):
     #bs = BeautifulSoup(Item_url_, "html.parser")
     #response = requests.get(bs) 
     ## 2 
-    #response = requests.get(Item_url_)
+    response = requests.get(Item_url_)
 
     print(response)
     
@@ -676,11 +676,10 @@ def results_stephanis(u):
     else:
         soup = BeautifulSoup(response.content, "html.parser")    
         element_soup = soup.find_all("div", {"class":"listing-details-heading"})
-        if (len(element_soup) < 2):
-            element_soup = element_soup[0]
+        if name_ == 'TV 32" SENCOR 32QF860B FHD QLED Smart':
+            price_ = element_soup[1].text.replace("€","").replace("\n","")
         else:
-            element_soup = element_soup[1]
-        price_ = element_soup.text.replace("€","").replace("\n","")
+            price_ = element_soup[0].text.replace("€","").replace("\n","")
         print(price_)
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
