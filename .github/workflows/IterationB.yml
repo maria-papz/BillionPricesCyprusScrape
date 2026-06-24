@@ -43,7 +43,7 @@ jobs:
       
       - name: Run IterationB.py
         run: |
-          python ECOICOPv2/IterationB.py
+          python ECOICOPv2/PythonCodes/IterationB.py
           git status
           git config user.name github-actions
           git config user.email github-actions@github.com
