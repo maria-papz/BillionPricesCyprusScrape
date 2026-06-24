@@ -626,10 +626,10 @@ def results_electroline(u):
         soup = BeautifulSoup(response.content, "html.parser")
         element_soup = soup.find_all("ins", {"class":"product-price product-price--single product-price--sale-price product-price--single--sale-price"}) 
         if element_soup:
-            price_ = element_soup[0].text.replace("\n",'').replace("€","")
+            price_ = element_soup[0].text.replace("\n",'').replace("€","").replace(" ","")
         else:
             element_soup = soup.find_all("h2", {"class":"product-price product-price--single"}) 
-            price_ = element_soup[0].text.replace("\n","").replace("€","")
+            price_ = element_soup[0].text.replace("\n","").replace("€","").replace(" ","")
         print(price_)
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
@@ -3762,8 +3762,8 @@ for u in range(0, len(urls)):
         results_pharmfetch(u) 
     if retailer_=="Remedy":
         results_remedy(u) 
-    if retailer_=="Procopiou Medishop":
-        results_procopiou(u) 
+    #if retailer_=="Procopiou Medishop": #*Deactivated in 24/06/36 because of 401 error ("unauthenticated": you are either not logged in, your session expired, or you provided the wrong credentials, and the server expects you to retry with the correct details)
+    #    results_procopiou(u) 
     if retailer_=="Agathokleous Pharmacies":
         results_agathokleous(u)
     if retailer_=="24evexia":
