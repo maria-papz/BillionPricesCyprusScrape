@@ -44,7 +44,7 @@ jobs:
       
       - name: Run Web-Scraping-2.py
         run: |
-          python ECOICOPv2/Web-Scraping-2.py
+          python ECOICOPv2/PythonCodes/Web-Scraping-2.py
           git status
           git config user.name github-actions
           git config user.email github-actions@github.com
