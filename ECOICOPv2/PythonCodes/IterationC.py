@@ -31,8 +31,8 @@ from docx import Document
 warnings.simplefilter("ignore")
 
 # Read necessary data
-df = pd.read_csv("ECOICOPv2/Raw-Data-2.csv")
-urls = pd.read_csv("ECOICOPv2/Daily-Scraping-Errors-IterationB.csv")
+df = pd.read_csv("ECOICOPv2/Datasets/Raw-Data-2.csv")
+urls = pd.read_csv("ECOICOPv2/Datasets/Daily-Scraping-Errors-IterationB.csv")
 
 # Create a null data frame
 daily_errors = pd.DataFrame(columns = ["Name","Subclass","Url","Division","Retailer"])
@@ -3780,10 +3780,10 @@ list_["Price"].astype(float)
 # Export/Save the scraped data
 combined_df = pd.concat([df, list_], axis=0)
 combined_df.reset_index(drop=True, inplace=True)
-combined_df.to_csv("ECOICOPv2/Raw-Data-2.csv", index=False, header=True)
+combined_df.to_csv("ECOICOPv2/Datasets/Raw-Data-2.csv", index=False, header=True)
 
 # Export/Save the unscraped data (daily errors of iteration C)
-monthly_errors = pd.read_csv("ECOICOPv2/Monthly-Scraping-Errors.csv")
+monthly_errors = pd.read_csv("ECOICOPv2/Datasets/Monthly-Scraping-Errors.csv")
 daily_errors["Date"] = datetime.now().strftime('%Y-%m-%d')
 combined_monthly = pd.concat([monthly_errors, daily_errors], axis=0)
-combined_monthly.to_csv("ECOICOPv2/Monthly-Scraping-Errors.csv", index=False , header=True)
+combined_monthly.to_csv("ECOICOPv2/Datasets/Monthly-Scraping-Errors.csv", index=False , header=True)
