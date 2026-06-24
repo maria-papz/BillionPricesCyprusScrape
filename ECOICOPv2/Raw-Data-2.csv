@@ -176,12 +176,12 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-24,Geek bar Elite + 5 J1 pods 5000 puffs Ηλεκτρονικά Τσιγάρα Κύπρο,Other tobacco products,12.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",E-wholesale
 2026-06-24,E-Cig Power XTAR Charger φορτιστής μπαταριών για Ηλεκτρονικά Τσιγάρα,Other tobacco products,14.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",E-wholesale
 2026-06-24,200 ml Ατμιστική Βάση νικοτίνης / E-liquid Base,Other tobacco products,9.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",E-wholesale
-2026-06-24,Villa Zamorano INTENSO,Cigars,4.20,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",The CYgar shop
-2026-06-24,Arturo Fuente Don Carlos Robusto,Cigars,21.60,ALCOHOLIC BEVERAGES AND TOBACCO,The CYgar shop
-2026-06-24,Rocky Patel - CONVICTION,Cigars,100.00,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",The CYgar shop
-2026-06-24,Rocky Patel Grand Reserve,Cigars,14.80,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",The CYgar shop
-2026-06-24,Gold Seal Mini Cigarillos 10s,Cigars,4.50,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",The CYgar shop
-2026-06-24,La Aurora Preferidos Hors d'Age 2020,Cigars,27.00,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",The CYgar shop
+2026-06-24,Villa Zamorano INTENSO,Cigars,4.2,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",The CYgar shop
+2026-06-24,Arturo Fuente Don Carlos Robusto,Cigars,21.6,ALCOHOLIC BEVERAGES AND TOBACCO,The CYgar shop
+2026-06-24,Rocky Patel - CONVICTION,Cigars,100.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",The CYgar shop
+2026-06-24,Rocky Patel Grand Reserve,Cigars,14.8,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",The CYgar shop
+2026-06-24,Gold Seal Mini Cigarillos 10s,Cigars,4.5,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",The CYgar shop
+2026-06-24,La Aurora Preferidos Hors d'Age 2020,Cigars,27.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",The CYgar shop
 2026-06-24,Marlboro Gold 10 Packs of 20,Cigarettes,36.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
 2026-06-24,Marlboro Red 10 Packs of 20,Cigarettes,36.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
 2026-06-24,Marlboro Touch Blue 10 Packs of 20,Cigarettes,36.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
@@ -197,7 +197,7 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-24,Winston Blue 10 Packs of 20,Cigarettes,36.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
 2026-06-24,Winston Red 10 Packs of 20,Cigarettes,36.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
 2026-06-24,Rothmans Classic 10 Packs of 20,Cigarettes,36.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
-2026-06-24,"EUROPEAN UNIVERSITY CYPRUS, Bachelors Programmes Average Yearly Tuition for 2025-2026",Tertiary education,11758.461538461539,EDUCATION SERVICES,European University Cyprus
+2026-06-24,"EUROPEAN UNIVERSITY CYPRUS, Bachelors Programmes Average Yearly Tuition for 2025-2026",Tertiary education,11758.46153846154,EDUCATION SERVICES,European University Cyprus
 2026-06-24,"THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΝΗΠΙΑΓΩΓΕΙΩΝ 2025-2026",Early childhood education,6930.0,EDUCATION SERVICES,"Cyprus Ministry of Education, Sport and Youth"
 2026-06-24,"THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΔΗΜΟΤΙΚΩΝ ΣΧΟΛΕΙΩΝ 2025-2026",Primary education,7290.0,EDUCATION SERVICES,"Cyprus Ministry of Education, Sport and Youth"
 2026-06-24,"THE GRAMMAR SCHOOL (Nicosia), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2025-2026",Secondary education,8816.666666666666,EDUCATION SERVICES,"Cyprus Ministry of Education, Sport and Youth"
@@ -212,17 +212,17 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-24,ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 30 κιλά,Courier and parcel delivery services,21.65,INFORMATION AND COMMUNICATION,Cyprus Post
 2026-06-24,Κόστος Ενέργειας για κάθε παρεχόμενη μονάδα,Electricity,0.1789,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
 2026-06-24,Κόστος Δικτύου για κάθε παρεχόμενη μονάδα,Electricity,0.0393,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
-2026-06-24,Κόστος Διαχείρισης Μετρητικών Δεδομένων,Electricity,0.009399999999999999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
+2026-06-24,Κόστος Διαχείρισης Μετρητικών Δεδομένων,Electricity,0.0093999999999999,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
 2026-06-24,Κόστος Προμήθειας,Electricity,8.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
 2026-06-24,Πάγιο ανά μήνα - Larnaca,Water supply delivered through network systems,3.35,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Larnaca
-2026-06-24,Δικαίωμα Συντήρησης ανά μήνα - Larnaca,Water supply delivered through network systems,1.9000000000000001,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Larnaca
+2026-06-24,Δικαίωμα Συντήρησης ανά μήνα - Larnaca,Water supply delivered through network systems,1.9,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Larnaca
 2026-06-24,Κυβικά ανά μήνα - Larnaca,Water supply delivered through network systems,0.3338666666666667,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Larnaca
 2026-06-24,Πάγιο ανά μήνα - Limassol,Water supply delivered through network systems,4.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Limassol
 2026-06-24,Δικαίωμα Συντήρησης ανά μήνα - Limassol,Water supply delivered through network systems,1.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Limassol
 2026-06-24,Κυβικά ανά μήνα - Limassol,Water supply delivered through network systems,0.225,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Limassol
 2026-06-24,Ετήσιο Τέλος - Larnaca,Sewage collection through sewer systems,0.5675,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Larnaca
 2026-06-24,Τέλος Χρήσης - Larnaca,Sewage collection through sewer systems,0.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Larnaca
-2026-06-24,Ετήσιο Τέλος - Limassol,Sewage collection through sewer systems,0.47514285714285714,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Limassol
+2026-06-24,Ετήσιο Τέλος - Limassol,Sewage collection through sewer systems,0.4751428571428571,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Limassol
 2026-06-24,Τέλος Χρήσης - Limassol,Sewage collection through sewer systems,0.64,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Limassol
 2026-06-24,"Services, LADIES CUT",Hairdressing,35.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Novella
 2026-06-24,"Student Offers, LADIES CUT",Hairdressing,30.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Novella
@@ -324,18 +324,18 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-24,Νέα ελληνικά Α΄λυκείου,Educational books and textbooks,21.7,"RECREATION, SPORT AND CULTURE",Parga
 2026-06-24,Νεοελληνική γλώσσα & λογοτεχνία Β’ λυκείου,Educational books and textbooks,16.9,"RECREATION, SPORT AND CULTURE",Parga
 2026-06-24,Νέα ελληνικά Γ΄ λυκείου,Educational books and textbooks,26.7,"RECREATION, SPORT AND CULTURE",Parga
-2026-06-24,GLOSTAD διθέσιος καναπές,Household furniture,139.00,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
+2026-06-24,GLOSTAD διθέσιος καναπές,Household furniture,139.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
 2026-06-24,SANDSBERG τραπέζι και 2 καρέκλες 67x67 cm,Household furniture,67.97,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
-2026-06-24,BESTÅ έπιπλο TV,Household furniture,129.00,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
-2026-06-24,"GOTTSKÄR πάγκος κουζίνας διπλής όψης, 246x1.8 cm",Household furniture,100.00,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
+2026-06-24,BESTÅ έπιπλο TV,Household furniture,129.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
+2026-06-24,"GOTTSKÄR πάγκος κουζίνας διπλής όψης, 246x1.8 cm",Household furniture,100.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
 2026-06-24,"NÄMMARÖ σκαμπό/πτυσσόμενο/εξωτερικού χώρου, 37x45 cm",Garden and camping furniture,19.99,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
-2026-06-24,"FEJAN πτυσσόμενη καρέκλα, εξωτερικού χώρου",Garden and camping furniture,15.00,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
-2026-06-24,TÄRNÖ Πτυσσόμενη καρέκλα,Garden and camping furniture,18.00,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
+2026-06-24,"FEJAN πτυσσόμενη καρέκλα, εξωτερικού χώρου",Garden and camping furniture,15.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
+2026-06-24,TÄRNÖ Πτυσσόμενη καρέκλα,Garden and camping furniture,18.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
 2026-06-24,"TARNO τραπέζι εξωτερικού χώρου, 55x54 cm",Garden and camping furniture,15.99,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
 2026-06-24,"BAGGEBO βιβλιοθήκη, 50x30x80 cm","Furnishings, loose carpets and rugs",24.99,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
-2026-06-24,"NAIDEN σκελετός κρεβατιού, 140x200 cm","Furnishings, loose carpets and rugs",109.00,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
-2026-06-24,KLEPPSTAD ντουλάπα με 2 πόρτες,"Furnishings, loose carpets and rugs",99.00,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
-2026-06-24,"GURSKEN συρταριέρα με 3 συρτάρια, 69x67 cm","Furnishings, loose carpets and rugs",55.00,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
+2026-06-24,"NAIDEN σκελετός κρεβατιού, 140x200 cm","Furnishings, loose carpets and rugs",109.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
+2026-06-24,KLEPPSTAD ντουλάπα με 2 πόρτες,"Furnishings, loose carpets and rugs",99.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
+2026-06-24,"GURSKEN συρταριέρα με 3 συρτάρια, 69x67 cm","Furnishings, loose carpets and rugs",55.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
 2026-06-24,"KNARREVIK κομοδίνο, 37x28 cm","Furnishings, loose carpets and rugs",9.99,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
 2026-06-24,MARIUS Σκαμπό,"Furnishings, loose carpets and rugs",5.99,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
 2026-06-24,"TIPHEDE χαλί, χαμηλή πλέξη","Furnishings, loose carpets and rugs",9.99,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
@@ -592,8 +592,8 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-24,Nero Cappuccino Regular,"Restaurants, cafes and the like - with limited service",4.1,RESTAURANTS AND ACCOMODATION SERVICES,Wolt
 2026-06-24,Nero Freddo Espresso Regular,"Restaurants, cafes and the like - with limited service",4.0,RESTAURANTS AND ACCOMODATION SERVICES,Wolt
 2026-06-24,Nero Freddo Cappuccino Regular,"Restaurants, cafes and the like - with limited service",4.1,RESTAURANTS AND ACCOMODATION SERVICES,Wolt
-2026-06-24,Meat Meze for 2 persons - Limassol,"Restaurants, cafes and the like - with full service",25.00,RESTAURANTS AND ACCOMODATION SERVICES,Meze Tavern
-2026-06-24,Fish Meze for 2 persons - Limassol,"Restaurants, cafes and the like - with full service",27.00,RESTAURANTS AND ACCOMODATION SERVICES,Meze Tavern
+2026-06-24,Meat Meze for 2 persons - Limassol,"Restaurants, cafes and the like - with full service",25.0,RESTAURANTS AND ACCOMODATION SERVICES,Meze Tavern
+2026-06-24,Fish Meze for 2 persons - Limassol,"Restaurants, cafes and the like - with full service",27.0,RESTAURANTS AND ACCOMODATION SERVICES,Meze Tavern
 2026-06-24,Ποικιλία Θαλασσινών για 2 άτομα - Larnaca,"Restaurants, cafes and the like - with full service",28.0,RESTAURANTS AND ACCOMODATION SERVICES,Ithaki
 2026-06-24,Ποικιλία Κρεατικών για 2 άτομα - Larnaca,"Restaurants, cafes and the like - with full service",12.0,RESTAURANTS AND ACCOMODATION SERVICES,Ithaki
 2026-06-24,Mixed Grill for 2 persons - Famagusta,"Restaurants, cafes and the like - with full service",35.9,RESTAURANTS AND ACCOMODATION SERVICES,Flames
@@ -1584,3 +1584,106 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-24,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.679,TRANSPORT,EKO
 2026-06-24,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.389,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
 2026-06-24,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,1.299,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2026-06-24,Meat Meze for 2 persons - Paphos,"Restaurants, cafes and the like - with full service",25.0,RESTAURANTS AND ACCOMODATION SERVICES,Pagkratios
+2026-06-24,JACKOSON ENTERPRISES LIMITED - Αμόλυβδη 95,Petrol,1.539,TRANSPORT,JACKOSON
+2026-06-24,JACKOSON ENTERPRISES LIMITED - Αμόλυβδη 98,Petrol,1.599,TRANSPORT,JACKOSON
+2026-06-24,JACKOSON ENTERPRISES LIMITED - Πετρέλαιο Κίνησης,Diesel,1.689,TRANSPORT,JACKOSON
+2026-06-24,JACKOSON ENTERPRISES LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.389,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",JACKOSON
+2026-06-24,JACKOSON ENTERPRISES LIMITED - Κηροζίνη,Liquid fuels,1.349,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",JACKOSON
+2026-06-24,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.529,TRANSPORT,PETROLINA
+2026-06-24,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.589,TRANSPORT,PETROLINA
+2026-06-24,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.648,TRANSPORT,PETROLINA
+2026-06-24,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.379,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2026-06-24,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.349,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2026-06-24,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.555,TRANSPORT,EKO
+2026-06-24,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.599,TRANSPORT,EKO
+2026-06-24,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.699,TRANSPORT,EKO
+2026-06-24,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.379,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2026-06-24,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,1.299,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2026-06-24,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 95,Petrol,1.555,TRANSPORT,SHELL
+2026-06-24,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 98,Petrol,1.705,TRANSPORT,SHELL
+2026-06-24,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Κίνησης,Diesel,1.699,TRANSPORT,SHELL
+2026-06-24,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,1.388,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2026-06-24,A. K. Konnaris Service Station Ltd - Αμόλυβδη 95,Petrol,1.599,TRANSPORT,PETROLINA
+2026-06-24,A. K. Konnaris Service Station Ltd - Αμόλυβδη 98,Petrol,1.699,TRANSPORT,PETROLINA
+2026-06-24,A. K. Konnaris Service Station Ltd - Πετρέλαιο Κίνησης,Diesel,1.739,TRANSPORT,PETROLINA
+2026-06-24,A. K. Konnaris Service Station Ltd - Πετρέλαιο Θέρμανσης,Liquid fuels,1.425,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2026-06-24,A. K. Konnaris Service Station Ltd - Κηροζίνη,Liquid fuels,1.425,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2026-06-24,PANIKOS S. MAPPAS (PETRELAIOEIDI) LIMITED - Αμόλυβδη 95,Petrol,1.527,TRANSPORT,ESSO
+2026-06-24,PANIKOS S. MAPPAS (PETRELAIOEIDI) LIMITED - Αμόλυβδη 98,Petrol,1.587,TRANSPORT,ESSO
+2026-06-24,PANIKOS S. MAPPAS (PETRELAIOEIDI) LIMITED - Πετρέλαιο Κίνησης,Diesel,1.679,TRANSPORT,ESSO
+2026-06-24,PANIKOS S. MAPPAS (PETRELAIOEIDI) LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.389,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2026-06-24,PANIKOS S. MAPPAS (PETRELAIOEIDI) LIMITED - Κηροζίνη,Liquid fuels,1.349,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2026-06-24,STAROIL (CYPRUS) LTD - Αμόλυβδη 95,Petrol,1.525,TRANSPORT,STAROIL
+2026-06-24,STAROIL (CYPRUS) LTD - Αμόλυβδη 98,Petrol,1.583,TRANSPORT,STAROIL
+2026-06-24,STAROIL (CYPRUS) LTD - Πετρέλαιο Κίνησης,Diesel,1.646,TRANSPORT,STAROIL
+2026-06-24,STAROIL (CYPRUS) LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,1.358,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",STAROIL
+2026-06-24,STAROIL (CYPRUS) LTD - Κηροζίνη,Liquid fuels,1.286,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",STAROIL
+2026-06-24,OLSERVE LIMITED - Αμόλυβδη 95,Petrol,1.545,TRANSPORT,SHELL
+2026-06-24,OLSERVE LIMITED - Αμόλυβδη 98,Petrol,1.695,TRANSPORT,SHELL
+2026-06-24,OLSERVE LIMITED - Πετρέλαιο Κίνησης,Diesel,1.685,TRANSPORT,SHELL
+2026-06-24,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 95,Petrol,1.555,TRANSPORT,EKO
+2026-06-24,R.A.M. OIL CYPRUS LIMITED - Αμόλυβδη 98,Petrol,1.599,TRANSPORT,EKO
+2026-06-24,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.699,TRANSPORT,EKO
+2026-06-24,R.A.M. OIL CYPRUS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.389,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2026-06-24,R.A.M. OIL CYPRUS LIMITED - Κηροζίνη,Liquid fuels,1.299,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2026-06-24,GREENOIL LIMITED - Αμόλυβδη 95,Petrol,1.535,TRANSPORT,EKO
+2026-06-24,GREENOIL LIMITED - Αμόλυβδη 98,Petrol,1.595,TRANSPORT,EKO
+2026-06-24,GREENOIL LIMITED - Πετρέλαιο Κίνησης,Diesel,1.678,TRANSPORT,EKO
+2026-06-24,GREENOIL LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.368,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2026-06-24,GREENOIL LIMITED - Κηροζίνη,Liquid fuels,1.268,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2026-06-24,SOFOCLIS PETROL STATION LTD - Αμόλυβδη 95,Petrol,1.525,TRANSPORT,SHELL
+2026-06-24,SOFOCLIS PETROL STATION LTD - Αμόλυβδη 98,Petrol,1.675,TRANSPORT,SHELL
+2026-06-24,SOFOCLIS PETROL STATION LTD - Πετρέλαιο Κίνησης,Diesel,1.646,TRANSPORT,SHELL
+2026-06-24,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 95,Petrol,1.535,TRANSPORT,SHELL
+2026-06-24,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 98,Petrol,1.685,TRANSPORT,SHELL
+2026-06-24,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Κίνησης,Diesel,1.675,TRANSPORT,SHELL
+2026-06-24,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 95,Petrol,1.529,TRANSPORT,ENI
+2026-06-24,PETROLINA (HOLDINGS) PUBLIC LIMITED - Αμόλυβδη 98,Petrol,1.594,TRANSPORT,ENI
+2026-06-24,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.648,TRANSPORT,ENI
+2026-06-24,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.379,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ENI
+2026-06-24,PETROLINA (HOLDINGS) PUBLIC LIMITED - Κηροζίνη,Liquid fuels,1.358,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ENI
+2026-06-24,S. KALLIKAS LIMITED - Αμόλυβδη 95,Petrol,1.559,TRANSPORT,EKO
+2026-06-24,S. KALLIKAS LIMITED - Αμόλυβδη 98,Petrol,1.609,TRANSPORT,EKO
+2026-06-24,S. KALLIKAS LIMITED - Πετρέλαιο Κίνησης,Diesel,1.699,TRANSPORT,EKO
+2026-06-24,S. KALLIKAS LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.399,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2026-06-24,S. KALLIKAS LIMITED - Κηροζίνη,Liquid fuels,1.309,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",EKO
+2026-06-24,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 95,Petrol,1.57,TRANSPORT,SHELL
+2026-06-24,CORAL ENERGY PRODUCTS CYPRUS LTD - Αμόλυβδη 98,Petrol,1.72,TRANSPORT,SHELL
+2026-06-24,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Κίνησης,Diesel,1.718,TRANSPORT,SHELL
+2026-06-24,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,1.388,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",SHELL
+2026-06-24,IOSIF. P. IOSIF TRADING LIMITED - Αμόλυβδη 95,Petrol,1.575,TRANSPORT,PETROLINA
+2026-06-24,IOSIF. P. IOSIF TRADING LIMITED - Αμόλυβδη 98,Petrol,1.656,TRANSPORT,PETROLINA
+2026-06-24,IOSIF. P. IOSIF TRADING LIMITED - Πετρέλαιο Κίνησης,Diesel,1.724,TRANSPORT,PETROLINA
+2026-06-24,IOSIF. P. IOSIF TRADING LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.419,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2026-06-24,IOSIF. P. IOSIF TRADING LIMITED - Κηροζίνη,Liquid fuels,1.299,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",PETROLINA
+2026-06-24,SONSIRE HOLDINGS LTD - Αμόλυβδη 95,Petrol,1.589,TRANSPORT,ESSO
+2026-06-24,SONSIRE HOLDINGS LTD - Αμόλυβδη 98,Petrol,1.637,TRANSPORT,ESSO
+2026-06-24,SONSIRE HOLDINGS LTD - Πετρέλαιο Κίνησης,Diesel,1.718,TRANSPORT,ESSO
+2026-06-24,SONSIRE HOLDINGS LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,1.389,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2026-06-24,SONSIRE HOLDINGS LTD - Κηροζίνη,Liquid fuels,1.35,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2026-06-24,DI FORCES TRADING LTD - Αμόλυβδη 95,Petrol,1.549,TRANSPORT,ESSO
+2026-06-24,DI FORCES TRADING LTD - Αμόλυβδη 98,Petrol,1.649,TRANSPORT,ESSO
+2026-06-24,DI FORCES TRADING LTD - Πετρέλαιο Κίνησης,Diesel,1.699,TRANSPORT,ESSO
+2026-06-24,DEMETRIS XANDRIS DEVELOPMENTS LTD - Αμόλυβδη 95,Petrol,1.529,TRANSPORT,ESSO
+2026-06-24,DEMETRIS XANDRIS DEVELOPMENTS LTD - Αμόλυβδη 98,Petrol,1.587,TRANSPORT,ESSO
+2026-06-24,DEMETRIS XANDRIS DEVELOPMENTS LTD - Πετρέλαιο Κίνησης,Diesel,1.678,TRANSPORT,ESSO
+2026-06-24,DEMETRIS XANDRIS DEVELOPMENTS LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,1.378,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",ESSO
+2026-06-24,STAROIL (CYPRUS) LTD - Αμόλυβδη 95,Petrol,1.525,TRANSPORT,STAROIL
+2026-06-24,STAROIL (CYPRUS) LTD - Αμόλυβδη 98,Petrol,1.583,TRANSPORT,STAROIL
+2026-06-24,STAROIL (CYPRUS) LTD - Πετρέλαιο Κίνησης,Diesel,1.646,TRANSPORT,STAROIL
+2026-06-24,STAROIL (CYPRUS) LTD - Πετρέλαιο Θέρμανσης,Liquid fuels,1.358,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",STAROIL
+2026-06-24,STAROIL (CYPRUS) LTD - Κηροζίνη,Liquid fuels,1.286,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",STAROIL
+2026-06-24,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-limassol-limassol-nicosia/,Passenger transport by bus and coach,6.0,TRANSPORT,Intercity Buses
+2026-06-24,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-nicosia-nicosia-larnaca/,Passenger transport by bus and coach,5.0,TRANSPORT,Intercity Buses
+2026-06-24,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-ayia-napa-paralimni-ayia-napa-paralimni-nicosia/,Passenger transport by bus and coach,6.0,TRANSPORT,Intercity Buses
+2026-06-24,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-paphos-paphos-nicosia/,Passenger transport by bus and coach,8.0,TRANSPORT,Intercity Buses
+2026-06-24,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-limassol-limassol-larnaca/,Passenger transport by bus and coach,5.0,TRANSPORT,Intercity Buses
+2026-06-24,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-ayia-napa-paralimni-paralimni-ayia-napa-larnaca/,Passenger transport by bus and coach,5.0,TRANSPORT,Intercity Buses
+2026-06-24,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)limassol-paphos-paphos-limassol/,Passenger transport by bus and coach,5.0,TRANSPORT,Intercity Buses
+2026-06-24,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)paralimni-ayia-napa-larnaca-paphos-paphos-larnaca-ayia-napa-paralimni/,Passenger transport by bus and coach,10.0,TRANSPORT,Intercity Buses
+2026-06-24,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-limassol-paphos-paphos-limassol-larnaca/,Passenger transport by bus and coach,10.0,TRANSPORT,Intercity Buses
+2026-06-24,Πάγιο ανά μήνα - Nicosia,Water supply delivered through network systems,5.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Nicosia
+2026-06-24,Κυβικά ανά μήνα - Nicosia,Water supply delivered through network systems,0.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Nicosia
+2026-06-24,Ετήσιο Τέλος - Nicosia,Sewage collection through sewer systems,0.31,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Nicosia
+2026-06-24,Τέλος Χρήσης - Nicosia,Sewage collection through sewer systems,0.55,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Nicosia
