@@ -3762,8 +3762,8 @@ for u in range(0, len(urls)):
         results_pharmfetch(u) 
     if retailer_=="Remedy":
         results_remedy(u) 
-    if retailer_=="Procopiou Medishop":
-        results_procopiou(u) 
+    #if retailer_=="Procopiou Medishop": #*Deactivated in 24/06/36 because of 401 error ("unauthenticated": you are either not logged in, your session expired, or you provided the wrong credentials, and the server expects you to retry with the correct details)
+    #    results_procopiou(u) 
     if retailer_=="Agathokleous Pharmacies":
         results_agathokleous(u)
     if retailer_=="24evexia":
