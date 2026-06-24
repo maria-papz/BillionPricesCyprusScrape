@@ -31,7 +31,7 @@ from docx import Document
 warnings.simplefilter("ignore")
 
 # Read necessary data
-df = pd.read_csv("ECOICOPv2/Datasets/Raw-Data-2.csv")
+df = pd.read_csv("ECOICOPv2/Datasets/Raw-Data/Raw-Data-2-2026Q3.csv")
 #df["Date"] = pd.to_datetime(df["Date"], format="%d/%m/%Y").dt.strftime("%Y-%m-%d")
 df = df.sort_values(["Date","Retailer"])
 
@@ -3784,11 +3784,10 @@ print("Elapsed time:", elapsed_time/60, "minutes")
 list_["Price"].astype(float)
 
 # Export/Save the scraped data 
-df.to_csv("ECOICOPv2/Datasets/Raw-Data-2.csv", index=False) 
+df.to_csv("ECOICOPv2/Datasets/Raw-Data/Raw-Data-2-2026Q3.csv", index=False) 
 combined_df = pd.concat([df, list_], axis=0)
 combined_df.reset_index(drop=True, inplace=True)
 combined_df.sort_values(["Date", "Retailer"])
-combined_df.to_csv("ECOICOPv2/Datasets/Raw-Data-2.csv", index=False, header=True)
-
+combined_df.to_csv("ECOICOPv2/Datasets/Raw-Data/Raw-Data-2-2026Q3.csv", index=False, header=True)
 # Export/Save the unscraped data (daily errors) 
 daily_errors.to_csv("ECOICOPv2/Datasets/Daily-Scraping-Errors.csv", index=False)
