@@ -268,6 +268,8 @@ if is_last_thursday(current_date_str):
     for unique_ in unique_divisions:
         df_17 = float(prior_df[prior_df["Division"] == unique_]["CPI Division"])
         df_18 = float(current_df[current_df["Division"] == unique_]["CPI Division"])
+        #df_17 = prior_df[prior_df["Division"] == unique_]["CPI Division"]
+        #df_18 = current_df[current_df["Division"] == unique_]["CPI Division"]
         percentage_change = 100 * (df_18 - df_17) / df_17
     
         index_list = current_df[current_df["Division"] == unique_]["CPI Division"].index.tolist()
@@ -507,6 +509,8 @@ while today_p <= end_date:
     for unique_ in unique_divisions:
         df_15 = float(prior_df[prior_df["Subclass"] == unique_]["CPI Division"])
         df_16 = float(current_df[current_df["Subclass"] == unique_]["CPI Division"])
+        #df_15 = prior_df[prior_df["Subclass"] == unique_]["CPI Division"]
+        #df_16 = current_df[current_df["Subclass"] == unique_]["CPI Division"]
         percentage_change = 100 * (df_16 - df_15) / df_15            
         
         index_list = current_df[current_df["Subclass"] == unique_]["CPI Division"].index.tolist()
@@ -557,6 +561,8 @@ while today_p <= end_date:
         for unique_ in unique_divisions:
             df_17 = float(prior_df[prior_df["Division"] == unique_]["CPI Division"])
             df_18 = float(current_df[current_df["Division"] == unique_]["CPI Division"])
+            #df_17 = prior_df[prior_df["Division"] == unique_]["CPI Division"]
+            #df_18 = current_df[current_df["Division"] == unique_]["CPI Division"]
             percentage_change = 100 * (df_18 - df_17) / df_17
         
             index_list = current_df[current_df["Division"] == unique_]["CPI Division"].index.tolist()
