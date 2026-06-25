@@ -266,10 +266,10 @@ if is_last_thursday(current_date_str):
     unique_divisions = df_monthly_division['Division'].unique()
     
     for unique_ in unique_divisions:
-        df_17 = float(prior_df[prior_df["Division"] == unique_]["CPI Division"])
-        df_18 = float(current_df[current_df["Division"] == unique_]["CPI Division"])
-        #df_17 = prior_df[prior_df["Division"] == unique_]["CPI Division"]
-        #df_18 = current_df[current_df["Division"] == unique_]["CPI Division"]
+        #df_17 = float(prior_df[prior_df["Division"] == unique_]["CPI Division"])
+        #df_18 = float(current_df[current_df["Division"] == unique_]["CPI Division"])
+        df_17 = prior_df[prior_df["Division"] == unique_]["CPI Division"]
+        df_18 = current_df[current_df["Division"] == unique_]["CPI Division"]
         percentage_change = 100 * (df_18 - df_17) / df_17
     
         index_list = current_df[current_df["Division"] == unique_]["CPI Division"].index.tolist()
