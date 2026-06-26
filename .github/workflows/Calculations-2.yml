@@ -9,7 +9,7 @@ run-name: Perform calculations and store results
 # Function to schedule the minutes, hour (UTC time), day of month (*), month (*), and day of week (*) of the workflow process
 on:
   schedule:
-   - cron: "11 11 * * 1-5" #UTC time and weekday (0=Sunday, 1=Monday,..., 6=Saturday)
+   - cron: "36 13 * * 1-5" #UTC time and weekday (0=Sunday, 1=Monday,..., 6=Saturday)
  #workflow_dispatch: # Allows manual testing
  
 #on:
