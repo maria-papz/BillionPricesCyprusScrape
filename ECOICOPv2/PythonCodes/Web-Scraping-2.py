@@ -3656,11 +3656,11 @@ for u in range(0, len(urls)):
         results_douce_et_belle(u)       
     if retailer_=="Akentia":
         results_akentia(u)    
-    #if retailer_=="Centroptical": #*Banned access through a 'verifying you are human' check in 13/03/26
+    #if retailer_=="Centroptical": #*Banned access through a 'verifying you are human' check in 13/03/26. Then, run only locally.
     #    results_centroptical(u)
     if retailer_=="Premier Laundry":
         results_premier(u)
-    if retailer_=="Music Avenue": #Deactivate in 17/05/2026 due to scraping errors. Then, run only locally.
+    if retailer_=="Music Avenue": #*Deactivated in 17/05/2026 due to scraping errors. Then, run only locally.
         results_musicavenue(u)    
     if retailer_=="Rio Cinema":
         results_rio(u)    
@@ -3718,7 +3718,7 @@ for u in range(0, len(urls)):
         results_flames(u)
     if retailer_=="Mageirisses":
         results_mageirisses(u)    
-    if retailer_=="Pagkratios": # *Deactivated in 16/11/25 due to maintenance reasons and activated in 01/12/2025
+    if retailer_=="Pagkratios": #*Deactivated in 16/11/25 due to maintenance reasons and activated in 01/12/2025
         results_pagkratios(u)
     if retailer_=="Christos Grill&Seafood":
         results_christos_grill_seafood(u)    
