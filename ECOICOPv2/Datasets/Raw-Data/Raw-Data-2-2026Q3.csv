@@ -22,114 +22,114 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-26,Κόστος Ενέργειας για κάθε παρεχόμενη μονάδα,Electricity,0.1789,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
 2026-06-26,Κόστος Δικτύου για κάθε παρεχόμενη μονάδα,Electricity,0.0393,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
 2026-06-26,Κόστος Διαχείρισης Μετρητικών Δεδομένων,Electricity,0.0094,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
-2026-06-26,Κόστος Προμήθειας,Electricity,8,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
-2026-06-26,ORBEA - ONNA 29 40,Bicycles,599,TRANSPORT,AWOL
-2026-06-26,Orbea - MX 20 XC,Bicycles,469,TRANSPORT,AWOL
-2026-06-26,Pulifren - Disc Brake Cleaner,Lubricants,9,TRANSPORT,AWOL
-2026-06-26,Barbieri - Repair Kit For Tubeless,Maintenance and repair of personal transport equipment,10,TRANSPORT,AWOL
-2026-06-26,Barbieri - No Stop Antipuncture Sealant,Maintenance and repair of personal transport equipment,10,TRANSPORT,AWOL
-2026-06-26,Barbieri - Tyre Inflator and Repair,Maintenance and repair of personal transport equipment,8,TRANSPORT,AWOL
-2026-06-26,CONTINENTAL - RACE KING - RACE KING MTB - WIRED TIRE,Tyres,26,TRANSPORT,AWOL
-2026-06-26,CONTINENTAL - CROSS KING PERFORMANCE MTB-WIRE BEAD TIRE,Tyres,26,TRANSPORT,AWOL
-2026-06-26,SPECIALIZED - FAST TRAK SPORT,Tyres,25,TRANSPORT,AWOL
+2026-06-26,Κόστος Προμήθειας,Electricity,8.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",AHK
+2026-06-26,ORBEA - ONNA 29 40,Bicycles,599.0,TRANSPORT,AWOL
+2026-06-26,Orbea - MX 20 XC,Bicycles,469.0,TRANSPORT,AWOL
+2026-06-26,Pulifren - Disc Brake Cleaner,Lubricants,9.0,TRANSPORT,AWOL
+2026-06-26,Barbieri - Repair Kit For Tubeless,Maintenance and repair of personal transport equipment,10.0,TRANSPORT,AWOL
+2026-06-26,Barbieri - No Stop Antipuncture Sealant,Maintenance and repair of personal transport equipment,10.0,TRANSPORT,AWOL
+2026-06-26,Barbieri - Tyre Inflator and Repair,Maintenance and repair of personal transport equipment,8.0,TRANSPORT,AWOL
+2026-06-26,CONTINENTAL - RACE KING - RACE KING MTB - WIRED TIRE,Tyres,26.0,TRANSPORT,AWOL
+2026-06-26,CONTINENTAL - CROSS KING PERFORMANCE MTB-WIRE BEAD TIRE,Tyres,26.0,TRANSPORT,AWOL
+2026-06-26,SPECIALIZED - FAST TRAK SPORT,Tyres,25.0,TRANSPORT,AWOL
 2026-06-26,SPECIALIZED - S-Works Turbo T2/T5,Tyres,48.3,TRANSPORT,AWOL
-2026-06-26,Theo Herbal Tea Valerian,Herbal medicines and homeopathic products,6,HEALTH,Agathokleous Pharmacies
+2026-06-26,Theo Herbal Tea Valerian,Herbal medicines and homeopathic products,6.0,HEALTH,Agathokleous Pharmacies
 2026-06-26,Beez Care Kids Herbal Syrup,Herbal medicines and homeopathic products,14.9,HEALTH,Agathokleous Pharmacies
 2026-06-26,Benlif Adults Herbal Syrup For Sore Throat 200ml,Herbal medicines and homeopathic products,9.75,HEALTH,Agathokleous Pharmacies
-2026-06-26,Dr. Free Fingertip Pulse Oximeter,Medical diagnostic products,50,HEALTH,Agathokleous Pharmacies
+2026-06-26,Dr. Free Fingertip Pulse Oximeter,Medical diagnostic products,50.0,HEALTH,Agathokleous Pharmacies
 2026-06-26,Kessler Ekectronic Clinical Thermometer Ks362 Rapid Screen,Medical diagnostic products,11.5,HEALTH,Agathokleous Pharmacies
-2026-06-26,Dr. Frei Blood Pressure Monitor Model M-200A,Medical diagnostic products,85,HEALTH,Agathokleous Pharmacies
-2026-06-26,"Contour Care Blood Glucose Meter For Use With Ascensia Contour Care Strips, 1Pc",Medical diagnostic products,30,HEALTH,Agathokleous Pharmacies
-2026-06-26,Combo Test Covid-19 & Flu A/Flu B & Rsv 1Pc,Medical diagnostic products,10,HEALTH,Agathokleous Pharmacies
-2026-06-26,First Step Pregnancy Test 2Pcs,Medical diagnostic products,18,HEALTH,Agathokleous Pharmacies
+2026-06-26,Dr. Frei Blood Pressure Monitor Model M-200A,Medical diagnostic products,85.0,HEALTH,Agathokleous Pharmacies
+2026-06-26,"Contour Care Blood Glucose Meter For Use With Ascensia Contour Care Strips, 1Pc",Medical diagnostic products,30.0,HEALTH,Agathokleous Pharmacies
+2026-06-26,Combo Test Covid-19 & Flu A/Flu B & Rsv 1Pc,Medical diagnostic products,10.0,HEALTH,Agathokleous Pharmacies
+2026-06-26,First Step Pregnancy Test 2Pcs,Medical diagnostic products,18.0,HEALTH,Agathokleous Pharmacies
 2026-06-26,Sterimar Prevention Nose Prone To Colds 100ml,"Medicines, vaccines and other pharmaceutical preparations",14.5,HEALTH,Agathokleous Pharmacies
 2026-06-26,Vernalin Hot / Cold Cream 100g,"Medicines, vaccines and other pharmaceutical preparations",11.5,HEALTH,Agathokleous Pharmacies
-2026-06-26,Ice Power Cold Spray 200ml,"Medicines, vaccines and other pharmaceutical preparations",11,HEALTH,Agathokleous Pharmacies
-2026-06-26,Power Of Nature Zinc + Vitamin C 500Mg Effervescent,"Medicines, vaccines and other pharmaceutical preparations",12,HEALTH,Agathokleous Pharmacies
-2026-06-26,Hansal Vitamins C 1000mg 20 Tablets,"Medicines, vaccines and other pharmaceutical preparations",8,HEALTH,Agathokleous Pharmacies
+2026-06-26,Ice Power Cold Spray 200ml,"Medicines, vaccines and other pharmaceutical preparations",11.0,HEALTH,Agathokleous Pharmacies
+2026-06-26,Power Of Nature Zinc + Vitamin C 500Mg Effervescent,"Medicines, vaccines and other pharmaceutical preparations",12.0,HEALTH,Agathokleous Pharmacies
+2026-06-26,Hansal Vitamins C 1000mg 20 Tablets,"Medicines, vaccines and other pharmaceutical preparations",8.0,HEALTH,Agathokleous Pharmacies
 2026-06-26,"Swiss Energy, Omega-3 Multivit, Omega-3 Complex, Vitamins And Iodine, 60 Soft Gummies","Medicines, vaccines and other pharmaceutical preparations",16.5,HEALTH,Agathokleous Pharmacies
 2026-06-26,Strepsils Orange With Vitamin C 24's,"Medicines, vaccines and other pharmaceutical preparations",6.6,HEALTH,Agathokleous Pharmacies
 2026-06-26,Dr. Frei Compressor Nebulizer System Model Turbo Base,Treatment devices for personal use,122.5,HEALTH,Agathokleous Pharmacies
-2026-06-26,Oral B Series 1 Black Toothbrush,Treatment devices for personal use,62,HEALTH,Agathokleous Pharmacies
+2026-06-26,Oral B Series 1 Black Toothbrush,Treatment devices for personal use,62.0,HEALTH,Agathokleous Pharmacies
 2026-06-26,Vision Optics 55 Hydrogel  Φακοί Μυωπίας Μηνιαίοι 6τμχ,Assistive products for vision,11.9,HEALTH,Akentia
 2026-06-26,Bausch & Lomb Soflens 59 Φακοί Μυωπίας Μηνιαίοι 6τμχ,Assistive products for vision,13.9,HEALTH,Akentia
 2026-06-26,Alcon Air Optix Plus HydraGlyde Multifocal Μηνιαίοι 3τμχ,Assistive products for vision,36.9,HEALTH,Akentia
 2026-06-26,Vision Optics DayVue BioMoist Φακοί Μυωπίας Ημερήσιοι 30τμχ,Assistive products for vision,14.9,HEALTH,Akentia
 2026-06-26,Bausch & Lomb Biotrue One Day Φακοί Μυωπίας Ημερήσιοι 30τμχ,Assistive products for vision,18.9,HEALTH,Akentia
 2026-06-26,Alcon Dailies Aqua Comfort Plus Multifocal Ημερήσιοι 30τμχ,Assistive products for vision,38.9,HEALTH,Akentia
-2026-06-26,Gucci 3613,Assistive products for vision,99,HEALTH,Alex Optical
+2026-06-26,Gucci 3613,Assistive products for vision,99.0,HEALTH,Alex Optical
 2026-06-26,Just Cavalli 820,Assistive products for vision,79.5,HEALTH,Alex Optical
 2026-06-26,Rayban 4184,Assistive products for vision,82.5,HEALTH,Alex Optical
 2026-06-26,GeekVape Zeus Sub-Ohm,Other tobacco products,36.9,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Alter Vape
 2026-06-26,Kit Wenax S3 Evo 1100mAh - Geekvape,Other tobacco products,29.9,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Alter Vape
-2026-06-26,GOLD RING,Purchase of jewellery and watches,150,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Aphrodite Jewellery
-2026-06-26,GOLD EARRINGS,Purchase of jewellery and watches,100,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Aphrodite Jewellery
-2026-06-26,GOLD NECKLACE,Purchase of jewellery and watches,220,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Aphrodite Jewellery
-2026-06-26,GOLD CROSS,Purchase of jewellery and watches,95,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Aphrodite Jewellery
-2026-06-26,GOLD BRACELET,Purchase of jewellery and watches,185,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Aphrodite Jewellery
-2026-06-26,GOLD PENDANT,Purchase of jewellery and watches,45,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Aphrodite Jewellery
+2026-06-26,GOLD RING,Purchase of jewellery and watches,150.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Aphrodite Jewellery
+2026-06-26,GOLD EARRINGS,Purchase of jewellery and watches,100.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Aphrodite Jewellery
+2026-06-26,GOLD NECKLACE,Purchase of jewellery and watches,220.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Aphrodite Jewellery
+2026-06-26,GOLD CROSS,Purchase of jewellery and watches,95.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Aphrodite Jewellery
+2026-06-26,GOLD BRACELET,Purchase of jewellery and watches,185.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Aphrodite Jewellery
+2026-06-26,GOLD PENDANT,Purchase of jewellery and watches,45.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Aphrodite Jewellery
 2026-06-26,ADIDAS RAPIDARUN ELASTIC INFANT SHOES,Footwear for infants and children,31.5,CLOTHING AND FOOTWEAR,Athlokinisi
 2026-06-26,CONVERSE CT ALL STAR KIDS LO,Footwear for infants and children,19.95,CLOTHING AND FOOTWEAR,Athlokinisi
-2026-06-26,ADIDAS ULTIMASHOW 2.0,Footwear for men,60,CLOTHING AND FOOTWEAR,Athlokinisi
-2026-06-26,NIKE COURT VISION LO MENS SHOES,Footwear for men,64,CLOTHING AND FOOTWEAR,Athlokinisi
-2026-06-26,ADIDAS ADVANTAGE BASE SHOES,Footwear for women,42,CLOTHING AND FOOTWEAR,Athlokinisi
+2026-06-26,ADIDAS ULTIMASHOW 2.0,Footwear for men,60.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2026-06-26,NIKE COURT VISION LO MENS SHOES,Footwear for men,64.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2026-06-26,ADIDAS ADVANTAGE BASE SHOES,Footwear for women,42.0,CLOTHING AND FOOTWEAR,Athlokinisi
 2026-06-26,SKECHERS SKECH-LITE PRO - BEST CHANCE WOMENS,Footwear for women,59.95,CLOTHING AND FOOTWEAR,Athlokinisi
 2026-06-26,NIKE JORDAN INFANT SIDELINE FLEECE HOODIE SET,Garments for infants (under 2 years of age),32.25,CLOTHING AND FOOTWEAR,Athlokinisi
-2026-06-26,ADIDAS SHORT TEE SET,Garments for infants (under 2 years of age),35,CLOTHING AND FOOTWEAR,Athlokinisi
-2026-06-26,ADIDAS M FAVS Q2 SHO,Garments for men or boys,21,CLOTHING AND FOOTWEAR,Athlokinisi
-2026-06-26,NIKE MAX GRAPHIC SHORTS MENS,Garments for men or boys,15,CLOTHING AND FOOTWEAR,Athlokinisi
+2026-06-26,ADIDAS SHORT TEE SET,Garments for infants (under 2 years of age),35.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2026-06-26,ADIDAS M FAVS Q2 SHO,Garments for men or boys,21.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2026-06-26,NIKE MAX GRAPHIC SHORTS MENS,Garments for men or boys,15.0,CLOTHING AND FOOTWEAR,Athlokinisi
 2026-06-26,ADIDAS CLUB COLOUR BLOCK TEE MENS,Garments for men or boys,24.5,CLOTHING AND FOOTWEAR,Athlokinisi
-2026-06-26,NIKE SPORTSWEAR ICON SWOOSH MENS TEE,Garments for men or boys,25,CLOTHING AND FOOTWEAR,Athlokinisi
+2026-06-26,NIKE SPORTSWEAR ICON SWOOSH MENS TEE,Garments for men or boys,25.0,CLOTHING AND FOOTWEAR,Athlokinisi
 2026-06-26,NIKE BOYS PARK 20 SS TEE,Garments for men or boys,7.5,CLOTHING AND FOOTWEAR,Athlokinisi
-2026-06-26,ADIDAS BOYS ESSENTIALS 3 STRIPES TEE,Garments for men or boys,10,CLOTHING AND FOOTWEAR,Athlokinisi
-2026-06-26,ADIDAS B XFG AR SH,Garments for men or boys,10,CLOTHING AND FOOTWEAR,Athlokinisi
-2026-06-26,NIKE BOYS DRI-FIT TRAINING SHORTS,Garments for men or boys,10,CLOTHING AND FOOTWEAR,Athlokinisi
-2026-06-26,PUMA CLASSICS ARCHIVE REMASTERED WOMENS TEE,Garments for women or girls,28,CLOTHING AND FOOTWEAR,Athlokinisi
-2026-06-26,ADIDAS M20 SHORT,Garments for women or girls,21,CLOTHING AND FOOTWEAR,Athlokinisi
-2026-06-26,ADIDAS JG AOP OPT TG,Garments for women or girls,28,CLOTHING AND FOOTWEAR,Athlokinisi
-2026-06-26,ADIDAS W WINRS SHORT,Garments for women or girls,21,CLOTHING AND FOOTWEAR,Athlokinisi
+2026-06-26,ADIDAS BOYS ESSENTIALS 3 STRIPES TEE,Garments for men or boys,10.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2026-06-26,ADIDAS B XFG AR SH,Garments for men or boys,10.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2026-06-26,NIKE BOYS DRI-FIT TRAINING SHORTS,Garments for men or boys,10.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2026-06-26,PUMA CLASSICS ARCHIVE REMASTERED WOMENS TEE,Garments for women or girls,28.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2026-06-26,ADIDAS M20 SHORT,Garments for women or girls,21.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2026-06-26,ADIDAS JG AOP OPT TG,Garments for women or girls,28.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2026-06-26,ADIDAS W WINRS SHORT,Garments for women or girls,21.0,CLOTHING AND FOOTWEAR,Athlokinisi
 2026-06-26,PUMA ESS+ LOVE IS LOVE RELAXED TEE,Garments for women or girls,20.25,CLOTHING AND FOOTWEAR,Athlokinisi
 2026-06-26,NIKE LITTLE GIRLS BOXY TEE & BIKE SHORT SET,Garments for women or girls,23.25,CLOTHING AND FOOTWEAR,Athlokinisi
-2026-06-26,ADIDAS TREFOIL TEE,Garments for women or girls,30,CLOTHING AND FOOTWEAR,Athlokinisi
-2026-06-26,PUMA GIRLS ALPHA DRESS,Garments for women or girls,21,CLOTHING AND FOOTWEAR,Athlokinisi
-2026-06-26,STAINLESS STEEL VANCLEEF BRACELET,Purchase of jewellery and watches,13,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Brilliance Jewellery
-2026-06-26,STAINLESS STEEL CHANEL AND PEARLS EARRINGS,Purchase of jewellery and watches,15,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Brilliance Jewellery
-2026-06-26,STAINLESS STEEL VANCLEEF NECKLACE,Purchase of jewellery and watches,15,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Brilliance Jewellery
-2026-06-26,9K GOLD PENDANT,Purchase of jewellery and watches,185,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Brilliance Jewellery
-2026-06-26,925 BLACK ONYX RING,Purchase of jewellery and watches,65,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Brilliance Jewellery
-2026-06-26,925 CROSS WITH THE CHAIN NECKLACE,Purchase of jewellery and watches,30,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Brilliance Jewellery
-2026-06-26,ROSEFIELD STUDIO EDITION 04 SBGSG-O77,Purchase of jewellery and watches,160,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Brilliance Jewellery
+2026-06-26,ADIDAS TREFOIL TEE,Garments for women or girls,30.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2026-06-26,PUMA GIRLS ALPHA DRESS,Garments for women or girls,21.0,CLOTHING AND FOOTWEAR,Athlokinisi
+2026-06-26,STAINLESS STEEL VANCLEEF BRACELET,Purchase of jewellery and watches,13.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Brilliance Jewellery
+2026-06-26,STAINLESS STEEL CHANEL AND PEARLS EARRINGS,Purchase of jewellery and watches,15.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Brilliance Jewellery
+2026-06-26,STAINLESS STEEL VANCLEEF NECKLACE,Purchase of jewellery and watches,15.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Brilliance Jewellery
+2026-06-26,9K GOLD PENDANT,Purchase of jewellery and watches,185.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Brilliance Jewellery
+2026-06-26,925 BLACK ONYX RING,Purchase of jewellery and watches,65.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Brilliance Jewellery
+2026-06-26,925 CROSS WITH THE CHAIN NECKLACE,Purchase of jewellery and watches,30.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Brilliance Jewellery
+2026-06-26,ROSEFIELD STUDIO EDITION 04 SBGSG-O77,Purchase of jewellery and watches,160.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Brilliance Jewellery
 2026-06-26,FREEDOM,Bundled telecommunication services,22.4,INFORMATION AND COMMUNICATION,CYTA
 2026-06-26,FREEDOM Plus,Bundled telecommunication services,26.4,INFORMATION AND COMMUNICATION,CYTA
 2026-06-26,Τέλη κλήσεων προς Σταθερό,Fixed communication services,0.03273,INFORMATION AND COMMUNICATION,CYTA
-2026-06-26,Internet Home 200Mbps,Internet access provision services and online storage services,33,INFORMATION AND COMMUNICATION,CYTA
-2026-06-26,Internet Home 500Mbps,Internet access provision services and online storage services,44,INFORMATION AND COMMUNICATION,CYTA
+2026-06-26,Internet Home 200Mbps,Internet access provision services and online storage services,33.0,INFORMATION AND COMMUNICATION,CYTA
+2026-06-26,Internet Home 500Mbps,Internet access provision services and online storage services,44.0,INFORMATION AND COMMUNICATION,CYTA
 2026-06-26,Τέλη κλήσεων προς Κινητή Τηλεφωνία,Mobile communication services,0.05772,INFORMATION AND COMMUNICATION,CYTA
-2026-06-26,5G Unlimited,Bundled telecommunication services,15,INFORMATION AND COMMUNICATION,Cablenet
-2026-06-26,5G Unlimited Max,Bundled telecommunication services,25,INFORMATION AND COMMUNICATION,Cablenet
+2026-06-26,5G Unlimited,Bundled telecommunication services,15.0,INFORMATION AND COMMUNICATION,Cablenet
+2026-06-26,5G Unlimited Max,Bundled telecommunication services,25.0,INFORMATION AND COMMUNICATION,Cablenet
 2026-06-26,Cablenet Fixed Service,Fixed communication services,0.025,INFORMATION AND COMMUNICATION,Cablenet
-2026-06-26,GigaMax 1000M,Internet access provision services and online storage services,25,INFORMATION AND COMMUNICATION,Cablenet
-2026-06-26,Super 300M,Internet access provision services and online storage services,22,INFORMATION AND COMMUNICATION,Cablenet
+2026-06-26,GigaMax 1000M,Internet access provision services and online storage services,25.0,INFORMATION AND COMMUNICATION,Cablenet
+2026-06-26,Super 300M,Internet access provision services and online storage services,22.0,INFORMATION AND COMMUNICATION,Cablenet
 2026-06-26,Cablenet Mobile Service,Mobile communication services,0.025,INFORMATION AND COMMUNICATION,Cablenet
-2026-06-26,CHIARA FERRAGNI CF 1020/S 35JIR 5217 140,Assistive products for vision,149,HEALTH,Centroptical
-2026-06-26,Lacoste - L2205 424 54-17 150,Assistive products for vision,198,HEALTH,Centroptical
-2026-06-26,Persol - 714 24/31 54-21 140 3N,Assistive products for vision,229,HEALTH,Centroptical
-2026-06-26,BURBERRY - B 2267 3316 55-18 145,Assistive products for vision,298,HEALTH,Centroptical
+2026-06-26,CHIARA FERRAGNI CF 1020/S 35JIR 5217 140,Assistive products for vision,149.0,HEALTH,Centroptical
+2026-06-26,Lacoste - L2205 424 54-17 150,Assistive products for vision,198.0,HEALTH,Centroptical
+2026-06-26,Persol - 714 24/31 54-21 140 3N,Assistive products for vision,229.0,HEALTH,Centroptical
+2026-06-26,BURBERRY - B 2267 3316 55-18 145,Assistive products for vision,298.0,HEALTH,Centroptical
 2026-06-26,Fish Meze for 2 persons - Paphos,"Restaurants, cafes and the like - with full service",24.5,RESTAURANTS AND ACCOMODATION SERVICES,Christos Grill&Seafood
-2026-06-26,Women's cross,Purchase of jewellery and watches,84,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Constantinou Jewels
-2026-06-26,Women's bracelet,Purchase of jewellery and watches,205,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Constantinou Jewels
-2026-06-26,Women's earrings,Purchase of jewellery and watches,75,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Constantinou Jewels
-2026-06-26,Women's necklace,Purchase of jewellery and watches,108,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Constantinou Jewels
-2026-06-26,Child ID,Purchase of jewellery and watches,199,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Constantinou Jewels
-2026-06-26,FLYING HORSE cabin luggage,"Travel goods, baby articles and other personal effects n.e.c.",45,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Costas Theodorou
-2026-06-26,FANTOM - Spinner 4 wheels - Cabin - Front Loader,"Travel goods, baby articles and other personal effects n.e.c.",95,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Costas Theodorou
-2026-06-26,"THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΝΗΠΙΑΓΩΓΕΙΩΝ 2025-2026",Early childhood education,6930,EDUCATION SERVICES,"Cyprus Ministry of Education, Sport and Youth"
-2026-06-26,"THE GRAMMAR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2025-2026, Ζ ΤΑΞΗ",Post-secondary non-tertiary education,8950,EDUCATION SERVICES,"Cyprus Ministry of Education, Sport and Youth"
-2026-06-26,"THE GRAMMAR SCHOOL (Limassol), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2025-2026, Ζ ΤΑΞΗ",Post-secondary non-tertiary education,9450,EDUCATION SERVICES,"Cyprus Ministry of Education, Sport and Youth"
-2026-06-26,"THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΔΗΜΟΤΙΚΩΝ ΣΧΟΛΕΙΩΝ 2025-2026",Primary education,7290,EDUCATION SERVICES,"Cyprus Ministry of Education, Sport and Youth"
+2026-06-26,Women's cross,Purchase of jewellery and watches,84.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Constantinou Jewels
+2026-06-26,Women's bracelet,Purchase of jewellery and watches,205.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Constantinou Jewels
+2026-06-26,Women's earrings,Purchase of jewellery and watches,75.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Constantinou Jewels
+2026-06-26,Women's necklace,Purchase of jewellery and watches,108.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Constantinou Jewels
+2026-06-26,Child ID,Purchase of jewellery and watches,199.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Constantinou Jewels
+2026-06-26,FLYING HORSE cabin luggage,"Travel goods, baby articles and other personal effects n.e.c.",45.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Costas Theodorou
+2026-06-26,FANTOM - Spinner 4 wheels - Cabin - Front Loader,"Travel goods, baby articles and other personal effects n.e.c.",95.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Costas Theodorou
+2026-06-26,"THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΝΗΠΙΑΓΩΓΕΙΩΝ 2025-2026",Early childhood education,6930.0,EDUCATION SERVICES,"Cyprus Ministry of Education, Sport and Youth"
+2026-06-26,"THE GRAMMAR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2025-2026, Ζ ΤΑΞΗ",Post-secondary non-tertiary education,8950.0,EDUCATION SERVICES,"Cyprus Ministry of Education, Sport and Youth"
+2026-06-26,"THE GRAMMAR SCHOOL (Limassol), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2025-2026, Ζ ΤΑΞΗ",Post-secondary non-tertiary education,9450.0,EDUCATION SERVICES,"Cyprus Ministry of Education, Sport and Youth"
+2026-06-26,"THE GRAMMAR JUNIOR SCHOOL (Nicosia), ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΔΗΜΟΤΙΚΩΝ ΣΧΟΛΕΙΩΝ 2025-2026",Primary education,7290.0,EDUCATION SERVICES,"Cyprus Ministry of Education, Sport and Youth"
 2026-06-26,"THE GRAMMAR SCHOOL (Nicosia), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2025-2026",Secondary education,8816.666667,EDUCATION SERVICES,"Cyprus Ministry of Education, Sport and Youth"
-2026-06-26,"THE GRAMMAR SCHOOL (Limassol), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2025-2026",Secondary education,8125,EDUCATION SERVICES,"Cyprus Ministry of Education, Sport and Youth"
-2026-06-26,ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 0.5 κιλό,Courier and parcel delivery services,4,INFORMATION AND COMMUNICATION,Cyprus Post
+2026-06-26,"THE GRAMMAR SCHOOL (Limassol), ΜΕΣΑ ΕΤΗΣΙΑ ΔΙΔΑΚΤΡΑ ΙΔΙΩΤΙΚΩΝ ΣΧΟΛΕΙΩΝ ΜΕΣΗΣ ΕΚΠΑΙΔΕΥΣΗΣ 2025-2026",Secondary education,8125.0,EDUCATION SERVICES,"Cyprus Ministry of Education, Sport and Youth"
+2026-06-26,ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 0.5 κιλό,Courier and parcel delivery services,4.0,INFORMATION AND COMMUNICATION,Cyprus Post
 2026-06-26,ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 15 κιλά,Courier and parcel delivery services,11.9,INFORMATION AND COMMUNICATION,Cyprus Post
 2026-06-26,ΤΕΛΗ ΥΠΗΡΕΣΙΑΣ ΔΕΜΑΤΩΝ ΕΣΩΤΕΡΙΚΟΥ 30 κιλά,Courier and parcel delivery services,21.65,INFORMATION AND COMMUNICATION,Cyprus Post
 2026-06-26,ΤΕΛΗ ΜΕΜΟΝΩΜΕΝΩΝ ΤΑΧΥΔΡΟΜΙΚΩΝ ΑΝΤΙΚΕΙΜΕΝΩΝ (ΕΠΙΣΤΟΛΙΚΟΥ ΤΑΧΥΔΡΟΜΕΙΟΥ) ΕΣΩΤΕΡΙΚΟΥ Α' ΠΡΟΤΕΡΑΙΟΤΗΤΑΣ Μικρά (P) 50 γρ.,Letter handling services,0.41,INFORMATION AND COMMUNICATION,Cyprus Post
@@ -138,27 +138,27 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-26,Paper Ticket (CASH) / Single Route,Passenger transport by bus and coach,2.4,TRANSPORT,Cyprus Public Transport
 2026-06-26,Plastic ANONYMOUS Card / Single Route,Passenger transport by bus and coach,1.8,TRANSPORT,Cyprus Public Transport
 2026-06-26,Plastic PERSONALISED Motion Bus Card - Normal Charge / Single Route,Passenger transport by bus and coach,1.8,TRANSPORT,Cyprus Public Transport
-2026-06-26,Τακτικός έλεγχος - Σκύλος Ετήσια,Veterinary and other services for pets,30,"RECREATION, SPORT AND CULTURE",DigiCare
-2026-06-26,Τακτικός έλεγχος - Γάτα Ετήσια,Veterinary and other services for pets,25,"RECREATION, SPORT AND CULTURE",DigiCare
-2026-06-26,Αποπαρασίτωση - Σκύλος Ετήσια,Veterinary and other services for pets,30,"RECREATION, SPORT AND CULTURE",DigiCare
-2026-06-26,Αποπαρασίτωση - Γάτα Ετήσια,Veterinary and other services for pets,30,"RECREATION, SPORT AND CULTURE",DigiCare
-2026-06-26,Εμβόλιο - Ενήλικη Ετήσια - Βασικός Συνδυασμός,Veterinary and other services for pets,50,"RECREATION, SPORT AND CULTURE",DigiCare
-2026-06-26,Women haircut only,Hairdressing,30,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Douce et Belle
-2026-06-26,Men haircut,Hairdressing,20,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Douce et Belle
-2026-06-26,Children haircut,Hairdressing,15,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Douce et Belle
-2026-06-26,In office fluoride application (children 6 -15 yrs),Dental preventive services,50,HEALTH,Dr Stephanos Tsitsis Dental Surgeon
-2026-06-26,Sealant (children 6 - 12 yrs),Dental preventive services,50,HEALTH,Dr Stephanos Tsitsis Dental Surgeon
-2026-06-26,Teeth cleaning,Dental preventive services,60,HEALTH,Dr Stephanos Tsitsis Dental Surgeon
-2026-06-26,Examination - Diagnosis,Other outpatient dental services,50,HEALTH,Dr Stephanos Tsitsis Dental Surgeon
-2026-06-26,Digital intraoral X-ray,Other outpatient dental services,25,HEALTH,Dr Stephanos Tsitsis Dental Surgeon
-2026-06-26,One surface filling,Other outpatient dental services,60,HEALTH,Dr Stephanos Tsitsis Dental Surgeon
-2026-06-26,Tooth extraction,Other outpatient dental services,70,HEALTH,Dr Stephanos Tsitsis Dental Surgeon
-2026-06-26,Geek Vape Aegis X kit Ηλεκτρονικά Τσιγάρα + 200ml Υγρά άτμισης,Other tobacco products,79,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",E-wholesale
-2026-06-26,SKE Crystal 4in1 Ηλεκτρονικά Τσιγάρα μίας χρήσης + 8 προγεμισμένες κάψουλες,Other tobacco products,19,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",E-wholesale
-2026-06-26,Aspire Puxos Kit Ηλεκτρονικά Τσιγάρα + μπαταρία 21700 + 200 ml Υγρά άτμισης,Other tobacco products,59,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",E-wholesale
-2026-06-26,Geek bar Elite + 5 J1 pods 5000 puffs Ηλεκτρονικά Τσιγάρα Κύπρο,Other tobacco products,12,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",E-wholesale
-2026-06-26,E-Cig Power XTAR Charger φορτιστής μπαταριών για Ηλεκτρονικά Τσιγάρα,Other tobacco products,14,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",E-wholesale
-2026-06-26,200 ml Ατμιστική Βάση νικοτίνης / E-liquid Base,Other tobacco products,9,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",E-wholesale
+2026-06-26,Τακτικός έλεγχος - Σκύλος Ετήσια,Veterinary and other services for pets,30.0,"RECREATION, SPORT AND CULTURE",DigiCare
+2026-06-26,Τακτικός έλεγχος - Γάτα Ετήσια,Veterinary and other services for pets,25.0,"RECREATION, SPORT AND CULTURE",DigiCare
+2026-06-26,Αποπαρασίτωση - Σκύλος Ετήσια,Veterinary and other services for pets,30.0,"RECREATION, SPORT AND CULTURE",DigiCare
+2026-06-26,Αποπαρασίτωση - Γάτα Ετήσια,Veterinary and other services for pets,30.0,"RECREATION, SPORT AND CULTURE",DigiCare
+2026-06-26,Εμβόλιο - Ενήλικη Ετήσια - Βασικός Συνδυασμός,Veterinary and other services for pets,50.0,"RECREATION, SPORT AND CULTURE",DigiCare
+2026-06-26,Women haircut only,Hairdressing,30.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Douce et Belle
+2026-06-26,Men haircut,Hairdressing,20.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Douce et Belle
+2026-06-26,Children haircut,Hairdressing,15.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Douce et Belle
+2026-06-26,In office fluoride application (children 6 -15 yrs),Dental preventive services,50.0,HEALTH,Dr Stephanos Tsitsis Dental Surgeon
+2026-06-26,Sealant (children 6 - 12 yrs),Dental preventive services,50.0,HEALTH,Dr Stephanos Tsitsis Dental Surgeon
+2026-06-26,Teeth cleaning,Dental preventive services,60.0,HEALTH,Dr Stephanos Tsitsis Dental Surgeon
+2026-06-26,Examination - Diagnosis,Other outpatient dental services,50.0,HEALTH,Dr Stephanos Tsitsis Dental Surgeon
+2026-06-26,Digital intraoral X-ray,Other outpatient dental services,25.0,HEALTH,Dr Stephanos Tsitsis Dental Surgeon
+2026-06-26,One surface filling,Other outpatient dental services,60.0,HEALTH,Dr Stephanos Tsitsis Dental Surgeon
+2026-06-26,Tooth extraction,Other outpatient dental services,70.0,HEALTH,Dr Stephanos Tsitsis Dental Surgeon
+2026-06-26,Geek Vape Aegis X kit Ηλεκτρονικά Τσιγάρα + 200ml Υγρά άτμισης,Other tobacco products,79.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",E-wholesale
+2026-06-26,SKE Crystal 4in1 Ηλεκτρονικά Τσιγάρα μίας χρήσης + 8 προγεμισμένες κάψουλες,Other tobacco products,19.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",E-wholesale
+2026-06-26,Aspire Puxos Kit Ηλεκτρονικά Τσιγάρα + μπαταρία 21700 + 200 ml Υγρά άτμισης,Other tobacco products,59.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",E-wholesale
+2026-06-26,Geek bar Elite + 5 J1 pods 5000 puffs Ηλεκτρονικά Τσιγάρα Κύπρο,Other tobacco products,12.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",E-wholesale
+2026-06-26,E-Cig Power XTAR Charger φορτιστής μπαταριών για Ηλεκτρονικά Τσιγάρα,Other tobacco products,14.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",E-wholesale
+2026-06-26,200 ml Ατμιστική Βάση νικοτίνης / E-liquid Base,Other tobacco products,9.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",E-wholesale
 2026-06-26,ADELFOI ARTYMATA (PROTARAS) LIMITED - Πετρέλαιο Κίνησης,Diesel,1.679,TRANSPORT,EKO
 2026-06-26,ADELFOI ARTYMATA (PARALIMNI) LIMITED - Πετρέλαιο Κίνησης,Diesel,1.679,TRANSPORT,EKO
 2026-06-26,CHRYSOULLA STATHI LIMITED - Πετρέλαιο Κίνησης,Diesel,1.678,TRANSPORT,EKO
@@ -746,13 +746,13 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-26,DEMETRIS XANDRIS DEVELOPMENTS LTD - Αμόλυβδη 95,Petrol,1.529,TRANSPORT,ESSO
 2026-06-26,DEMETRIS XANDRIS DEVELOPMENTS LTD - Αμόλυβδη 98,Petrol,1.587,TRANSPORT,ESSO
 2026-06-26,HAMA 00184079 Passion Clear True Wireless Headphones White,"Equipment for the reception, recording and reproduction of sound and vision",9.9,"RECREATION, SPORT AND CULTURE",Electroline
-2026-06-26,SONY MDREX15APW.CE7 Ακουστικά-Ψείρες Άσπρο,"Equipment for the reception, recording and reproduction of sound and vision",10,"RECREATION, SPORT AND CULTURE",Electroline
+2026-06-26,SONY MDREX15APW.CE7 Ακουστικά-Ψείρες Άσπρο,"Equipment for the reception, recording and reproduction of sound and vision",10.0,"RECREATION, SPORT AND CULTURE",Electroline
 2026-06-26,HOPESTAR P35 Μini Βluetooth Ασύρματο Ηχείο Γκρίζο,"Equipment for the reception, recording and reproduction of sound and vision",29.95,"RECREATION, SPORT AND CULTURE",Electroline
-2026-06-26,MIDEA MP012LW-WH Φούρνος Μικροκυμάτων Άσπρο,Major kitchen appliances,79,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Electroline
-2026-06-26,LIFE 221-0153 Μίνι Φουρνάκι με 2 Εστίες,Major kitchen appliances,119,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Electroline
-2026-06-26,BOSCH WGE03410GR Washing Machine 8 kg White,Major laundry appliances,550,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Electroline
-2026-06-26,SAMSUNG WW80CGC04DAELE Πλυντήριο Ρούχων 8kg,Major laundry appliances,429,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Electroline
-2026-06-26,MIDEA MTD55S400W Mini Dishwasher White,Major laundry appliances,259,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Electroline
+2026-06-26,MIDEA MP012LW-WH Φούρνος Μικροκυμάτων Άσπρο,Major kitchen appliances,79.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Electroline
+2026-06-26,LIFE 221-0153 Μίνι Φουρνάκι με 2 Εστίες,Major kitchen appliances,119.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Electroline
+2026-06-26,BOSCH WGE03410GR Washing Machine 8 kg White,Major laundry appliances,550.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Electroline
+2026-06-26,SAMSUNG WW80CGC04DAELE Πλυντήριο Ρούχων 8kg,Major laundry appliances,429.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Electroline
+2026-06-26,MIDEA MTD55S400W Mini Dishwasher White,Major laundry appliances,259.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Electroline
 2026-06-26,ASSIST ASS003 Μέτρο 3m,Miscellaneous accessories,1.99,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Electroline
 2026-06-26,EINHELL 49060115 Μέτρο 5m,Miscellaneous accessories,6.95,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Electroline
 2026-06-26,BORMANN PRO BPP2472 Γάντια Εργασίας,Miscellaneous accessories,1.99,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Electroline
@@ -775,7 +775,7 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-26,BLACK & DECKER BXJB350E Ατομικό Μπλέντερ,Other small household appliances,34.95,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Electroline
 2026-06-26,BORMANN ELITE BBQ1050 Ψησταριά Επιτραπέζια Ηλεκτρική 2000W,Other small household appliances,24.95,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Electroline
 2026-06-26,CLATRONIC TA 3802 Τοστιέρα για 4 Φέτες,Other small household appliances,39.9,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Electroline
-2026-06-26,LIFE 221-0296 Sous Chef Gallery Κουζινομηχανή,Small appliances for the cooking and processing of food,119,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Electroline
+2026-06-26,LIFE 221-0296 Sous Chef Gallery Κουζινομηχανή,Small appliances for the cooking and processing of food,119.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Electroline
 2026-06-26,KENWOOD FDP22.130GY MultiPro Go Πολυμίξερ,Small appliances for the cooking and processing of food,79.95,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Electroline
 2026-06-26,5G Unlimited Max Plus,Bundled telecommunication services,24.99,INFORMATION AND COMMUNICATION,Epic
 2026-06-26,5G Unlimited Max,Bundled telecommunication services,19.99,INFORMATION AND COMMUNICATION,Epic
@@ -791,64 +791,64 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-26,M.G. PETROL SERVICES LTD - Κηροζίνη,Liquid fuels,1.268,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",FILL N GO
 2026-06-26,M.G. PETROL SERVICES LTD - Αμόλυβδη 95,Petrol,1.469,TRANSPORT,FILL N GO
 2026-06-26,M.G. PETROL SERVICES LTD - Αμόλυβδη 98,Petrol,1.549,TRANSPORT,FILL N GO
-2026-06-26,adidas Kids Runfalcon 5 Shoes,Footwear for infants and children,20,CLOTHING AND FOOTWEAR,Famous Sports
+2026-06-26,adidas Kids Runfalcon 5 Shoes,Footwear for infants and children,20.0,CLOTHING AND FOOTWEAR,Famous Sports
 2026-06-26,adidas unisex infant grand court 2.0 shoes (ID5265),Footwear for infants and children,26.4,CLOTHING AND FOOTWEAR,Famous Sports
-2026-06-26,adidas men's response shoes,Footwear for men,42,CLOTHING AND FOOTWEAR,Famous Sports
-2026-06-26,Champion Men Climb Rx Low Low Cut Shoe (S21925)-BLACK,Footwear for men,45,CLOTHING AND FOOTWEAR,Famous Sports
-2026-06-26,adidas women's duramo sl shoes,Footwear for women,52,CLOTHING AND FOOTWEAR,Famous Sports
-2026-06-26,adidas women's runfalcon 5 running shoes,Footwear for women,30,CLOTHING AND FOOTWEAR,Famous Sports
+2026-06-26,adidas men's response shoes,Footwear for men,42.0,CLOTHING AND FOOTWEAR,Famous Sports
+2026-06-26,Champion Men Climb Rx Low Low Cut Shoe (S21925)-BLACK,Footwear for men,45.0,CLOTHING AND FOOTWEAR,Famous Sports
+2026-06-26,adidas women's duramo sl shoes,Footwear for women,52.0,CLOTHING AND FOOTWEAR,Famous Sports
+2026-06-26,adidas women's runfalcon 5 running shoes,Footwear for women,30.0,CLOTHING AND FOOTWEAR,Famous Sports
 2026-06-26,adidas Infants Essentials Joggers,Garments for infants (under 2 years of age),30.4,CLOTHING AND FOOTWEAR,Famous Sports
 2026-06-26,Champion Toddler Boy Set (306782),Garments for infants (under 2 years of age),9.98,CLOTHING AND FOOTWEAR,Famous Sports
-2026-06-26,Champion Toddler Girl Set (404976),Garments for infants (under 2 years of age),14,CLOTHING AND FOOTWEAR,Famous Sports
+2026-06-26,Champion Toddler Girl Set (404976),Garments for infants (under 2 years of age),14.0,CLOTHING AND FOOTWEAR,Famous Sports
 2026-06-26,Bdtk Men's T-Shirt Ss,Garments for men or boys,16.7,CLOTHING AND FOOTWEAR,Famous Sports
 2026-06-26,adidas men's house of tiro nations pack shorts,Garments for men or boys,22.5,CLOTHING AND FOOTWEAR,Famous Sports
 2026-06-26,Bdtk Men T-Shirt Ss,Garments for men or boys,10.95,CLOTHING AND FOOTWEAR,Famous Sports
-2026-06-26,Champion Men Shorts,Garments for men or boys,20,CLOTHING AND FOOTWEAR,Famous Sports
-2026-06-26,Quiksilver Boy T-Shirts Radical Flag Ss Youth EQBZT04616-WB,Garments for men or boys,12,CLOTHING AND FOOTWEAR,Famous Sports
+2026-06-26,Champion Men Shorts,Garments for men or boys,20.0,CLOTHING AND FOOTWEAR,Famous Sports
+2026-06-26,Quiksilver Boy T-Shirts Radical Flag Ss Youth EQBZT04616-WB,Garments for men or boys,12.0,CLOTHING AND FOOTWEAR,Famous Sports
 2026-06-26,Champion Boys Bermuda (306027-BS501),Garments for men or boys,12.6,CLOTHING AND FOOTWEAR,Famous Sports
 2026-06-26,Bdtk Women Snaps Crop Tshirt (1231-903620),Garments for women or girls,12.45,CLOTHING AND FOOTWEAR,Famous Sports
-2026-06-26,adidas women future icons winners shorts (HR6105),Garments for women or girls,21,CLOTHING AND FOOTWEAR,Famous Sports
+2026-06-26,adidas women future icons winners shorts (HR6105),Garments for women or girls,21.0,CLOTHING AND FOOTWEAR,Famous Sports
 2026-06-26,Bdtk Woman Walkshort (1241-904804),Garments for women or girls,22.45,CLOTHING AND FOOTWEAR,Famous Sports
 2026-06-26,Reebok Women Workout Supremium T-Shirt (HA1031),Garments for women or girls,12.5,CLOTHING AND FOOTWEAR,Famous Sports
 2026-06-26,Champion Girls Dress (404672),Garments for women or girls,8.98,CLOTHING AND FOOTWEAR,Famous Sports
 2026-06-26,Champion Girl Crewneck Croptop T-Shirt (404959),Garments for women or girls,8.98,CLOTHING AND FOOTWEAR,Famous Sports
 2026-06-26,Mixed Grill for 2 persons - Famagusta,"Restaurants, cafes and the like - with full service",35.9,RESTAURANTS AND ACCOMODATION SERVICES,Flames
 2026-06-26,Meat Meze for 2 persons - Famagusta,"Restaurants, cafes and the like - with full service",29.5,RESTAURANTS AND ACCOMODATION SERVICES,Flames
-2026-06-26,Womens Cut,Hairdressing,30,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Hairspray
-2026-06-26,Mens Hair Cut,Hairdressing,20,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Hairspray
-2026-06-26,Kids Boy Haircut 6-10 year,Hairdressing,16,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Hairspray
-2026-06-26,Kids Girl Haircut 6-10 year,Hairdressing,20,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Hairspray
-2026-06-26,Marlboro Gold 10 Packs of 20,Cigarettes,36,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
-2026-06-26,Marlboro Red 10 Packs of 20,Cigarettes,36,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
-2026-06-26,Marlboro Touch Blue 10 Packs of 20,Cigarettes,36,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
-2026-06-26,Marlboro Touch Silver 10 Packs of 20,Cigarettes,36,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
-2026-06-26,Camel Blue 10 Packs of 20,Cigarettes,36,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
-2026-06-26,Camel Yellow 10 Packs of 20,Cigarettes,36,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
-2026-06-26,Davidoff Classic 10 Packs of 20,Cigarettes,36,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
-2026-06-26,Davidoff Gold 10 Packs of 20,Cigarettes,36,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
-2026-06-26,Davidoff White 10 Packs of 20,Cigarettes,36,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
-2026-06-26,Silkcut Blue 10 Packs of 20,Cigarettes,37,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
-2026-06-26,Silkcut Purple 10 Packs of 20,Cigarettes,37,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
-2026-06-26,Silkcut Yellow 10 Packs of 20,Cigarettes,37,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
-2026-06-26,Winston Blue 10 Packs of 20,Cigarettes,36,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
-2026-06-26,Winston Red 10 Packs of 20,Cigarettes,36,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
-2026-06-26,Rothmans Classic 10 Packs of 20,Cigarettes,36,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
+2026-06-26,Womens Cut,Hairdressing,30.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Hairspray
+2026-06-26,Mens Hair Cut,Hairdressing,20.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Hairspray
+2026-06-26,Kids Boy Haircut 6-10 year,Hairdressing,16.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Hairspray
+2026-06-26,Kids Girl Haircut 6-10 year,Hairdressing,20.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Hairspray
+2026-06-26,Marlboro Gold 10 Packs of 20,Cigarettes,36.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
+2026-06-26,Marlboro Red 10 Packs of 20,Cigarettes,36.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
+2026-06-26,Marlboro Touch Blue 10 Packs of 20,Cigarettes,36.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
+2026-06-26,Marlboro Touch Silver 10 Packs of 20,Cigarettes,36.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
+2026-06-26,Camel Blue 10 Packs of 20,Cigarettes,36.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
+2026-06-26,Camel Yellow 10 Packs of 20,Cigarettes,36.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
+2026-06-26,Davidoff Classic 10 Packs of 20,Cigarettes,36.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
+2026-06-26,Davidoff Gold 10 Packs of 20,Cigarettes,36.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
+2026-06-26,Davidoff White 10 Packs of 20,Cigarettes,36.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
+2026-06-26,Silkcut Blue 10 Packs of 20,Cigarettes,37.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
+2026-06-26,Silkcut Purple 10 Packs of 20,Cigarettes,37.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
+2026-06-26,Silkcut Yellow 10 Packs of 20,Cigarettes,37.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
+2026-06-26,Winston Blue 10 Packs of 20,Cigarettes,36.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
+2026-06-26,Winston Red 10 Packs of 20,Cigarettes,36.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
+2026-06-26,Rothmans Classic 10 Packs of 20,Cigarettes,36.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",Hotbox Cy
 2026-06-26,"MOPSIG μαχαιροπίρουνα, σετ 16 τεμ.","Cutlery, flatware and silverware",8.99,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
 2026-06-26,"ANNONS Σκεύη μαγειρικής, σετ 3 τεμ.","Cutlery, flatware and silverware",14.99,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
 2026-06-26,"HÄGRANDE μπρίκι, 300 ml","Cutlery, flatware and silverware",8.99,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
 2026-06-26,"MIDDAGSMAT κατσαρόλα με καπάκι, 2 l","Cutlery, flatware and silverware",9.99,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
 2026-06-26,"BAGGEBO βιβλιοθήκη, 50x30x80 cm","Furnishings, loose carpets and rugs",24.99,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
-2026-06-26,"NAIDEN σκελετός κρεβατιού, 140x200 cm","Furnishings, loose carpets and rugs",109,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
-2026-06-26,KLEPPSTAD ντουλάπα με 2 πόρτες,"Furnishings, loose carpets and rugs",99,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
-2026-06-26,"GURSKEN συρταριέρα με 3 συρτάρια, 69x67 cm","Furnishings, loose carpets and rugs",55,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
+2026-06-26,"NAIDEN σκελετός κρεβατιού, 140x200 cm","Furnishings, loose carpets and rugs",109.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
+2026-06-26,KLEPPSTAD ντουλάπα με 2 πόρτες,"Furnishings, loose carpets and rugs",99.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
+2026-06-26,"GURSKEN συρταριέρα με 3 συρτάρια, 69x67 cm","Furnishings, loose carpets and rugs",55.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
 2026-06-26,"KNARREVIK κομοδίνο, 37x28 cm","Furnishings, loose carpets and rugs",9.99,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
 2026-06-26,MARIUS Σκαμπό,"Furnishings, loose carpets and rugs",5.99,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
 2026-06-26,"TIPHEDE χαλί, χαμηλή πλέξη","Furnishings, loose carpets and rugs",9.99,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
 2026-06-26,"KLEJS χαλί, χαμηλή πλέξη","Furnishings, loose carpets and rugs",1.99,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
 2026-06-26,"KÖRFÄLTSPIL χαλάκι εισόδου, 40x60 cm","Furnishings, loose carpets and rugs",2.49,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
 2026-06-26,"NÄMMARÖ σκαμπό/πτυσσόμενο/εξωτερικού χώρου, 37x45 cm",Garden and camping furniture,19.99,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
-2026-06-26,"FEJAN πτυσσόμενη καρέκλα, εξωτερικού χώρου",Garden and camping furniture,15,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
-2026-06-26,TÄRNÖ Πτυσσόμενη καρέκλα,Garden and camping furniture,18,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
+2026-06-26,"FEJAN πτυσσόμενη καρέκλα, εξωτερικού χώρου",Garden and camping furniture,15.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
+2026-06-26,TÄRNÖ Πτυσσόμενη καρέκλα,Garden and camping furniture,18.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
 2026-06-26,"TARNO τραπέζι εξωτερικού χώρου, 55x54 cm",Garden and camping furniture,15.99,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
 2026-06-26,FORENLIG κασπό εσωτερικού/εξωτερικού χώρου,Garden products,1.49,"RECREATION, SPORT AND CULTURE",IKEA
 2026-06-26,IKEA PS 2002 Ποτιστήρι,Garden products,1.49,"RECREATION, SPORT AND CULTURE",IKEA
@@ -856,10 +856,10 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-26,IVRIG Ποτήρι,"Glassware, crystal ware, ceramic ware and china ware",2.49,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
 2026-06-26,OFTAST Πιάτο,"Glassware, crystal ware, ceramic ware and china ware",0.79,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
 2026-06-26,OFTAST Μπολ,"Glassware, crystal ware, ceramic ware and china ware",0.79,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
-2026-06-26,GLOSTAD διθέσιος καναπές,Household furniture,139,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
+2026-06-26,GLOSTAD διθέσιος καναπές,Household furniture,139.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
 2026-06-26,SANDSBERG τραπέζι και 2 καρέκλες 67x67 cm,Household furniture,67.97,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
-2026-06-26,BESTÅ έπιπλο TV,Household furniture,129,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
-2026-06-26,"GOTTSKÄR πάγκος κουζίνας διπλής όψης, 246x1.8 cm",Household furniture,100,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
+2026-06-26,BESTÅ έπιπλο TV,Household furniture,129.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
+2026-06-26,"GOTTSKÄR πάγκος κουζίνας διπλής όψης, 246x1.8 cm",Household furniture,100.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
 2026-06-26,"BARLAST επιτραπέζιο φωτιστικό, 31 cm",Lighting equipment,4.49,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
 2026-06-26,RESTAD φωτιστικό οροφής,Lighting equipment,12.99,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
 2026-06-26,TAGARP φωτιστικό δαπέδου/διαβάσματος,Lighting equipment,19.99,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",IKEA
@@ -869,129 +869,129 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-26,"UTSADD μπολ για κατοικίδια, 11 cm",Products for pets and other household animals,3.99,"RECREATION, SPORT AND CULTURE",IKEA
 2026-06-26,UTSADD λούτρινο παιχνίδι για σκύλο,Products for pets and other household animals,3.99,"RECREATION, SPORT AND CULTURE",IKEA
 2026-06-26,UTSADD λούτρινο παιχνίδι για σκύλο,Products for pets and other household animals,4.99,"RECREATION, SPORT AND CULTURE",IKEA
-2026-06-26,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-limassol-limassol-nicosia/,Passenger transport by bus and coach,6,TRANSPORT,Intercity Buses
-2026-06-26,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-nicosia-nicosia-larnaca/,Passenger transport by bus and coach,5,TRANSPORT,Intercity Buses
-2026-06-26,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-ayia-napa-paralimni-ayia-napa-paralimni-nicosia/,Passenger transport by bus and coach,6,TRANSPORT,Intercity Buses
-2026-06-26,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-paphos-paphos-nicosia/,Passenger transport by bus and coach,8,TRANSPORT,Intercity Buses
-2026-06-26,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-limassol-limassol-larnaca/,Passenger transport by bus and coach,5,TRANSPORT,Intercity Buses
-2026-06-26,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-ayia-napa-paralimni-paralimni-ayia-napa-larnaca/,Passenger transport by bus and coach,5,TRANSPORT,Intercity Buses
-2026-06-26,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)limassol-paphos-paphos-limassol/,Passenger transport by bus and coach,5,TRANSPORT,Intercity Buses
-2026-06-26,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)paralimni-ayia-napa-larnaca-paphos-paphos-larnaca-ayia-napa-paralimni/,Passenger transport by bus and coach,10,TRANSPORT,Intercity Buses
-2026-06-26,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-limassol-paphos-paphos-limassol-larnaca/,Passenger transport by bus and coach,10,TRANSPORT,Intercity Buses
-2026-06-26,Ποικιλία Θαλασσινών για 2 άτομα - Larnaca,"Restaurants, cafes and the like - with full service",28,RESTAURANTS AND ACCOMODATION SERVICES,Ithaki
-2026-06-26,Ποικιλία Κρεατικών για 2 άτομα - Larnaca,"Restaurants, cafes and the like - with full service",12,RESTAURANTS AND ACCOMODATION SERVICES,Ithaki
+2026-06-26,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-limassol-limassol-nicosia/,Passenger transport by bus and coach,6.0,TRANSPORT,Intercity Buses
+2026-06-26,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-nicosia-nicosia-larnaca/,Passenger transport by bus and coach,5.0,TRANSPORT,Intercity Buses
+2026-06-26,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-ayia-napa-paralimni-ayia-napa-paralimni-nicosia/,Passenger transport by bus and coach,6.0,TRANSPORT,Intercity Buses
+2026-06-26,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-paphos-paphos-nicosia/,Passenger transport by bus and coach,8.0,TRANSPORT,Intercity Buses
+2026-06-26,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-limassol-limassol-larnaca/,Passenger transport by bus and coach,5.0,TRANSPORT,Intercity Buses
+2026-06-26,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-ayia-napa-paralimni-paralimni-ayia-napa-larnaca/,Passenger transport by bus and coach,5.0,TRANSPORT,Intercity Buses
+2026-06-26,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)limassol-paphos-paphos-limassol/,Passenger transport by bus and coach,5.0,TRANSPORT,Intercity Buses
+2026-06-26,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)paralimni-ayia-napa-larnaca-paphos-paphos-larnaca-ayia-napa-paralimni/,Passenger transport by bus and coach,10.0,TRANSPORT,Intercity Buses
+2026-06-26,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-limassol-paphos-paphos-limassol-larnaca/,Passenger transport by bus and coach,10.0,TRANSPORT,Intercity Buses
+2026-06-26,Ποικιλία Θαλασσινών για 2 άτομα - Larnaca,"Restaurants, cafes and the like - with full service",28.0,RESTAURANTS AND ACCOMODATION SERVICES,Ithaki
+2026-06-26,Ποικιλία Κρεατικών για 2 άτομα - Larnaca,"Restaurants, cafes and the like - with full service",12.0,RESTAURANTS AND ACCOMODATION SERVICES,Ithaki
 2026-06-26,JACKOSON ENTERPRISES LIMITED - Πετρέλαιο Κίνησης,Diesel,1.689,TRANSPORT,JACKOSON
 2026-06-26,JACKOSON ENTERPRISES LIMITED - Πετρέλαιο Θέρμανσης,Liquid fuels,1.389,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",JACKOSON
 2026-06-26,JACKOSON ENTERPRISES LIMITED - Κηροζίνη,Liquid fuels,1.349,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",JACKOSON
 2026-06-26,JACKOSON ENTERPRISES LIMITED - Αμόλυβδη 95,Petrol,1.539,TRANSPORT,JACKOSON
 2026-06-26,JACKOSON ENTERPRISES LIMITED - Αμόλυβδη 98,Petrol,1.599,TRANSPORT,JACKOSON
-2026-06-26,Τιμή ανά μάθημα - Αυτοκίνητο,"Driving lessons, tests, licences and roadworthiness tests",25,TRANSPORT,Larnaca Driving School
-2026-06-26,Τιμή ανά μάθημα - Μοτοσυκλέτα,"Driving lessons, tests, licences and roadworthiness tests",30,TRANSPORT,Larnaca Driving School
+2026-06-26,Τιμή ανά μάθημα - Αυτοκίνητο,"Driving lessons, tests, licences and roadworthiness tests",25.0,TRANSPORT,Larnaca Driving School
+2026-06-26,Τιμή ανά μάθημα - Μοτοσυκλέτα,"Driving lessons, tests, licences and roadworthiness tests",30.0,TRANSPORT,Larnaca Driving School
 2026-06-26,Βίδα τσιμεντοσανίδας AQUAPANEL DRILLPOINT SB39 KNAUF 250τεμ,"Repair, installation and hire of household appliances",20.29,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Leroy Merlin
 2026-06-26,Αφρός PU μονωτικός Genius ψεκαζόμενος χειρός 700ml,"Repair, installation and hire of household appliances",16.99,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Leroy Merlin
 2026-06-26,Σφυρί DEXTER μηχανικού,"Repair, installation and hire of household appliances",2.69,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Leroy Merlin
 2026-06-26,Σετ πολύγωνα κλειδιά κυρτά 10-19mm DEXTER 5τμχ,"Repair, installation and hire of household appliances",14.59,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Leroy Merlin
-2026-06-26,Women's wet cut,Hairdressing,35,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Magdas Hair Boutique
-2026-06-26,Men's cut,Hairdressing,18,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Magdas Hair Boutique
-2026-06-26,Boys cut,Hairdressing,15,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Magdas Hair Boutique
-2026-06-26,Girls cut,Hairdressing,20,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Magdas Hair Boutique
-2026-06-26,Meat Meze for 2 persons - Nicosia,"Restaurants, cafes and the like - with full service",23,RESTAURANTS AND ACCOMODATION SERVICES,Mageirisses
-2026-06-26,Pure Cotton Tufted Floral Bedding Set,Bed linen and bedding,75,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Marks & Spencer
-2026-06-26,Ultimate Comfort 13.5 Tog Duvet,Bed linen and bedding,99,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Marks & Spencer
-2026-06-26,Sierra Pure Cotton Embroidered Bedding Set,Bed linen and bedding,109,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Marks & Spencer
-2026-06-26,Pure Cotton Sateen Trailing Cherry Blossom Bedding Set,Bed linen and bedding,45,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Marks & Spencer
-2026-06-26,Kids' Leather School Shoes (8 Small - 2 Large),Footwear for infants and children,35,CLOTHING AND FOOTWEAR,Marks & Spencer
-2026-06-26,Kids' Riptape Plimsolls (7 Small - 4 Large),Footwear for infants and children,11,CLOTHING AND FOOTWEAR,Marks & Spencer
-2026-06-26,Wide Fit Suede White Sole Slip On Loafers,Footwear for men,75,CLOTHING AND FOOTWEAR,Marks & Spencer
-2026-06-26,Suede Moccasin Slippers,Footwear for men,35,CLOTHING AND FOOTWEAR,Marks & Spencer
+2026-06-26,Women's wet cut,Hairdressing,35.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Magdas Hair Boutique
+2026-06-26,Men's cut,Hairdressing,18.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Magdas Hair Boutique
+2026-06-26,Boys cut,Hairdressing,15.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Magdas Hair Boutique
+2026-06-26,Girls cut,Hairdressing,20.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Magdas Hair Boutique
+2026-06-26,Meat Meze for 2 persons - Nicosia,"Restaurants, cafes and the like - with full service",23.0,RESTAURANTS AND ACCOMODATION SERVICES,Mageirisses
+2026-06-26,Pure Cotton Tufted Floral Bedding Set,Bed linen and bedding,75.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Marks & Spencer
+2026-06-26,Ultimate Comfort 13.5 Tog Duvet,Bed linen and bedding,99.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Marks & Spencer
+2026-06-26,Sierra Pure Cotton Embroidered Bedding Set,Bed linen and bedding,109.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Marks & Spencer
+2026-06-26,Pure Cotton Sateen Trailing Cherry Blossom Bedding Set,Bed linen and bedding,45.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Marks & Spencer
+2026-06-26,Kids' Leather School Shoes (8 Small - 2 Large),Footwear for infants and children,35.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2026-06-26,Kids' Riptape Plimsolls (7 Small - 4 Large),Footwear for infants and children,11.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2026-06-26,Wide Fit Suede White Sole Slip On Loafers,Footwear for men,75.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2026-06-26,Suede Moccasin Slippers,Footwear for men,35.0,CLOTHING AND FOOTWEAR,Marks & Spencer
 2026-06-26,Retro Runner Trainers,Footwear for women,29.5,CLOTHING AND FOOTWEAR,Marks & Spencer
-2026-06-26,Stiletto Heel Pointed Shoe Boots,Footwear for women,20,CLOTHING AND FOOTWEAR,Marks & Spencer
-2026-06-26,Cotton Linen Blend Sheer Multiway Curtains,Furnishing fabrics and curtains,59,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Marks & Spencer
-2026-06-26,Faux Silk Pencil Pleat Blackout Curtains,Furnishing fabrics and curtains,46,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Marks & Spencer
-2026-06-26,Brushed Pencil Pleat Blackout Thermal Curtains,Furnishing fabrics and curtains,62,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Marks & Spencer
-2026-06-26,Isabelle Pencil Pleat Blackout Curtains,Furnishing fabrics and curtains,69,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Marks & Spencer
-2026-06-26,5 Pack Cotton Rich Baby Socks (0-3 Yrs),Garments for infants (under 2 years of age),10,CLOTHING AND FOOTWEAR,Marks & Spencer
-2026-06-26,7 Pack Pure Cotton Short Sleeve Bodysuits (5lbs-3 Yrs),Garments for infants (under 2 years of age),15,CLOTHING AND FOOTWEAR,Marks & Spencer
-2026-06-26,2pc Pure Cotton Striped Dungarees Outfit (0-3 Yrs),Garments for infants (under 2 years of age),25,CLOTHING AND FOOTWEAR,Marks & Spencer
-2026-06-26,Big & Tall Regular Fit Trousers with Active Waist,Garments for men or boys,26,CLOTHING AND FOOTWEAR,Marks & Spencer
-2026-06-26,3pk Cotton Rich Assorted Pattern Trunks,Garments for men or boys,25,CLOTHING AND FOOTWEAR,Marks & Spencer
-2026-06-26,Pure Cotton Plain T-Shirt (6-16 Yrs),Garments for men or boys,7,CLOTHING AND FOOTWEAR,Marks & Spencer
-2026-06-26,2 Pack Cotton Rich Elasticated Waist Shorts (6-16 Yrs),Garments for men or boys,22,CLOTHING AND FOOTWEAR,Marks & Spencer
-2026-06-26,Ribbed V-Neck Scallop Edge Knitted Top,Garments for women or girls,25,CLOTHING AND FOOTWEAR,Marks & Spencer
+2026-06-26,Stiletto Heel Pointed Shoe Boots,Footwear for women,20.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2026-06-26,Cotton Linen Blend Sheer Multiway Curtains,Furnishing fabrics and curtains,59.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Marks & Spencer
+2026-06-26,Faux Silk Pencil Pleat Blackout Curtains,Furnishing fabrics and curtains,46.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Marks & Spencer
+2026-06-26,Brushed Pencil Pleat Blackout Thermal Curtains,Furnishing fabrics and curtains,62.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Marks & Spencer
+2026-06-26,Isabelle Pencil Pleat Blackout Curtains,Furnishing fabrics and curtains,69.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Marks & Spencer
+2026-06-26,5 Pack Cotton Rich Baby Socks (0-3 Yrs),Garments for infants (under 2 years of age),10.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2026-06-26,7 Pack Pure Cotton Short Sleeve Bodysuits (5lbs-3 Yrs),Garments for infants (under 2 years of age),15.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2026-06-26,2pc Pure Cotton Striped Dungarees Outfit (0-3 Yrs),Garments for infants (under 2 years of age),25.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2026-06-26,Big & Tall Regular Fit Trousers with Active Waist,Garments for men or boys,26.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2026-06-26,3pk Cotton Rich Assorted Pattern Trunks,Garments for men or boys,25.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2026-06-26,Pure Cotton Plain T-Shirt (6-16 Yrs),Garments for men or boys,7.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2026-06-26,2 Pack Cotton Rich Elasticated Waist Shorts (6-16 Yrs),Garments for men or boys,22.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2026-06-26,Ribbed V-Neck Scallop Edge Knitted Top,Garments for women or girls,25.0,CLOTHING AND FOOTWEAR,Marks & Spencer
 2026-06-26,Slim Fit Ankle Grazer Trousers with Stretch,Garments for women or girls,27.5,CLOTHING AND FOOTWEAR,Marks & Spencer
 2026-06-26,2pc Wide Leg Hoodie and Joggers Outfit (6-16 Yrs),Garments for women or girls,27.5,CLOTHING AND FOOTWEAR,Marks & Spencer
-2026-06-26,Pure Cotton Crochet Fish Sleeveless Dress (2-10 Yrs),Garments for women or girls,35,CLOTHING AND FOOTWEAR,Marks & Spencer
-2026-06-26,3pk Unisex Pure Cotton School Polo Shirts (2-16 Yrs),School uniforms,21,CLOTHING AND FOOTWEAR,Marks & Spencer
-2026-06-26,2 Pack Unisex Pure Cotton School T-Shirts (2-16 Yrs) Long,School uniforms,15,CLOTHING AND FOOTWEAR,Marks & Spencer
-2026-06-26,2 Pack Unisex Pure Cotton School T-Shirts (2-16 Yrs) Short,School uniforms,10,CLOTHING AND FOOTWEAR,Marks & Spencer
+2026-06-26,Pure Cotton Crochet Fish Sleeveless Dress (2-10 Yrs),Garments for women or girls,35.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2026-06-26,3pk Unisex Pure Cotton School Polo Shirts (2-16 Yrs),School uniforms,21.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2026-06-26,2 Pack Unisex Pure Cotton School T-Shirts (2-16 Yrs) Long,School uniforms,15.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2026-06-26,2 Pack Unisex Pure Cotton School T-Shirts (2-16 Yrs) Short,School uniforms,10.0,CLOTHING AND FOOTWEAR,Marks & Spencer
 2026-06-26,2 Pack Unisex School Sweat Shorts (2-16 Yrs),School uniforms,22.5,CLOTHING AND FOOTWEAR,Marks & Spencer
-2026-06-26,2 Pack Boys' Plus Fit Regular Leg School Trousers,School uniforms,20,CLOTHING AND FOOTWEAR,Marks & Spencer
-2026-06-26,2 Pack Girls' Pleated School Skirts (2-18 Yrs),School uniforms,19,CLOTHING AND FOOTWEAR,Marks & Spencer
-2026-06-26,Pure Cotton Striped Towelling Dressing Gown,Table linen and bathroom linen,69,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Marks & Spencer
-2026-06-26,Set of 2 Pure Linen Embroidered Napkins,Table linen and bathroom linen,20,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Marks & Spencer
+2026-06-26,2 Pack Boys' Plus Fit Regular Leg School Trousers,School uniforms,20.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2026-06-26,2 Pack Girls' Pleated School Skirts (2-18 Yrs),School uniforms,19.0,CLOTHING AND FOOTWEAR,Marks & Spencer
+2026-06-26,Pure Cotton Striped Towelling Dressing Gown,Table linen and bathroom linen,69.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Marks & Spencer
+2026-06-26,Set of 2 Pure Linen Embroidered Napkins,Table linen and bathroom linen,20.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Marks & Spencer
 2026-06-26,Pure Cotton Tablecloth,Table linen and bathroom linen,22.5,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Marks & Spencer
-2026-06-26,Pure Cotton Geometric Check Towel,Table linen and bathroom linen,12,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Marks & Spencer
+2026-06-26,Pure Cotton Geometric Check Towel,Table linen and bathroom linen,12.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Marks & Spencer
 2026-06-26,Initial chargeFixed,Passenger transport by taxi and hired vehicle with driver,3.42,TRANSPORT,Max 7 Taxi
 2026-06-26,Initial chargeVariable,Passenger transport by taxi and hired vehicle with driver,4.36,TRANSPORT,Max 7 Taxi
 2026-06-26,Fare per KmFixed,Passenger transport by taxi and hired vehicle with driver,0.73,TRANSPORT,Max 7 Taxi
 2026-06-26,Fare per KmVariable,Passenger transport by taxi and hired vehicle with driver,0.85,TRANSPORT,Max 7 Taxi
-2026-06-26,BOSS 1374/S,Assistive products for vision,199,HEALTH,Mesmer Eyes
-2026-06-26,Ray-Ban AVIATOR LARGE METAL RB 3025JM 58,Assistive products for vision,176,HEALTH,Mesmer Eyes
-2026-06-26,HUGO HG 1228/S,Assistive products for vision,149,HEALTH,Mesmer Eyes
-2026-06-26,MaxMara MM RING FS,Assistive products for vision,175,HEALTH,Mesmer Eyes
-2026-06-26,CARRERA267/S,Assistive products for vision,162,HEALTH,Mesmer Eyes
-2026-06-26,Bausch & Lomb Biotrue ONEday lenses 30q,Assistive products for vision,30,HEALTH,Mesmer Eyes
-2026-06-26,Dailies Aqua Comfort PLUS 30q,Assistive products for vision,25,HEALTH,Mesmer Eyes
-2026-06-26,Cooper Vision Biofinity 3q,Assistive products for vision,28,HEALTH,Mesmer Eyes
+2026-06-26,BOSS 1374/S,Assistive products for vision,199.0,HEALTH,Mesmer Eyes
+2026-06-26,Ray-Ban AVIATOR LARGE METAL RB 3025JM 58,Assistive products for vision,176.0,HEALTH,Mesmer Eyes
+2026-06-26,HUGO HG 1228/S,Assistive products for vision,149.0,HEALTH,Mesmer Eyes
+2026-06-26,MaxMara MM RING FS,Assistive products for vision,175.0,HEALTH,Mesmer Eyes
+2026-06-26,CARRERA267/S,Assistive products for vision,162.0,HEALTH,Mesmer Eyes
+2026-06-26,Bausch & Lomb Biotrue ONEday lenses 30q,Assistive products for vision,30.0,HEALTH,Mesmer Eyes
+2026-06-26,Dailies Aqua Comfort PLUS 30q,Assistive products for vision,25.0,HEALTH,Mesmer Eyes
+2026-06-26,Cooper Vision Biofinity 3q,Assistive products for vision,28.0,HEALTH,Mesmer Eyes
 2026-06-26,Alcon Air Optix Plus HydraGlyde 3q,Assistive products for vision,24.8,HEALTH,Mesmer Eyes
-2026-06-26,Cooper Vision Avaira Vitality 3q,Assistive products for vision,20,HEALTH,Mesmer Eyes
+2026-06-26,Cooper Vision Avaira Vitality 3q,Assistive products for vision,20.0,HEALTH,Mesmer Eyes
 2026-06-26,Dailies AquaComfort PLUS 30q - TORIC,Assistive products for vision,32.5,HEALTH,Mesmer Eyes
-2026-06-26,Bausch & Lomb Biotrue ONEday for Astigmatism 30q,Assistive products for vision,36,HEALTH,Mesmer Eyes
+2026-06-26,Bausch & Lomb Biotrue ONEday for Astigmatism 30q,Assistive products for vision,36.0,HEALTH,Mesmer Eyes
 2026-06-26,Alcon Air Optix Plus HydraGlyde 3q – TORIC,Assistive products for vision,37.5,HEALTH,Mesmer Eyes
-2026-06-26,Cooper Vision Biofinity 3q – TORIC,Assistive products for vision,40,HEALTH,Mesmer Eyes
-2026-06-26,Biotrue Contact Lens Solution 360ml,Assistive products for vision,13,HEALTH,Mesmer Eyes
-2026-06-26,Meat Meze for 2 persons - Limassol,"Restaurants, cafes and the like - with full service",25,RESTAURANTS AND ACCOMODATION SERVICES,Meze Tavern
-2026-06-26,Fish Meze for 2 persons - Limassol,"Restaurants, cafes and the like - with full service",27,RESTAURANTS AND ACCOMODATION SERVICES,Meze Tavern
-2026-06-26,Polisport - Handguard Mounting Kit,Accessories for personal transport equipment,21,TRANSPORT,Moto Race
+2026-06-26,Cooper Vision Biofinity 3q – TORIC,Assistive products for vision,40.0,HEALTH,Mesmer Eyes
+2026-06-26,Biotrue Contact Lens Solution 360ml,Assistive products for vision,13.0,HEALTH,Mesmer Eyes
+2026-06-26,Meat Meze for 2 persons - Limassol,"Restaurants, cafes and the like - with full service",25.0,RESTAURANTS AND ACCOMODATION SERVICES,Meze Tavern
+2026-06-26,Fish Meze for 2 persons - Limassol,"Restaurants, cafes and the like - with full service",27.0,RESTAURANTS AND ACCOMODATION SERVICES,Meze Tavern
+2026-06-26,Polisport - Handguard Mounting Kit,Accessories for personal transport equipment,21.0,TRANSPORT,Moto Race
 2026-06-26,"Interphone | Air Pump Mini | Portable Compressor for Motorcycles, Cars and Bikes",Accessories for personal transport equipment,49.9,TRANSPORT,Moto Race
-2026-06-26,SURF MOUNT FCS ALL CAMERA,Accessories for personal transport equipment,39,TRANSPORT,Moto Race
-2026-06-26,Givi First aid kit,Accessories for personal transport equipment,18,TRANSPORT,Moto Race
-2026-06-26,INTERPHONE USB CAR CHARGER DUAL - UNIVERSAL,Accessories for personal transport equipment,15,TRANSPORT,Moto Race
+2026-06-26,SURF MOUNT FCS ALL CAMERA,Accessories for personal transport equipment,39.0,TRANSPORT,Moto Race
+2026-06-26,Givi First aid kit,Accessories for personal transport equipment,18.0,TRANSPORT,Moto Race
+2026-06-26,INTERPHONE USB CAR CHARGER DUAL - UNIVERSAL,Accessories for personal transport equipment,15.0,TRANSPORT,Moto Race
 2026-06-26,GIVI S210 Black Seat Cover,Accessories for personal transport equipment,16.5,TRANSPORT,Moto Race
-2026-06-26,GIVI S957B Universal With Fitting Kit Smartphone Holder,Accessories for personal transport equipment,53,TRANSPORT,Moto Race
+2026-06-26,GIVI S957B Universal With Fitting Kit Smartphone Holder,Accessories for personal transport equipment,53.0,TRANSPORT,Moto Race
 2026-06-26,Motorex Four Stroke 4T 10W/40 1L,Lubricants,10.9,TRANSPORT,Moto Race
-2026-06-26,Motorex Chain Clean Degreaser Spray - 500ML,Lubricants,12,TRANSPORT,Moto Race
-2026-06-26,Motorex Brake Fluid Dot 5.1 - 250ML,Lubricants,14,TRANSPORT,Moto Race
+2026-06-26,Motorex Chain Clean Degreaser Spray - 500ML,Lubricants,12.0,TRANSPORT,Moto Race
+2026-06-26,Motorex Brake Fluid Dot 5.1 - 250ML,Lubricants,14.0,TRANSPORT,Moto Race
 2026-06-26,Thumbs up - Tyre Repair Kit,Maintenance and repair of personal transport equipment,8.14,TRANSPORT,Moto Race
-2026-06-26,KTM SX-E 1.20 Factory Edition 2023,Motorcycles,3300,TRANSPORT,Moto Race
-2026-06-26,KTM 125 Enduro R Orange 2025,Motorcycles,6290,TRANSPORT,Moto Race
-2026-06-26,KTM 390 ADVENTURE 2023 - Black,Motorcycles,7990,TRANSPORT,Moto Race
-2026-06-26,KTM RC 125 Black 2024,Motorcycles,7500,TRANSPORT,Moto Race
+2026-06-26,KTM SX-E 1.20 Factory Edition 2023,Motorcycles,3300.0,TRANSPORT,Moto Race
+2026-06-26,KTM 125 Enduro R Orange 2025,Motorcycles,6290.0,TRANSPORT,Moto Race
+2026-06-26,KTM 390 ADVENTURE 2023 - Black,Motorcycles,7990.0,TRANSPORT,Moto Race
+2026-06-26,KTM RC 125 Black 2024,Motorcycles,7500.0,TRANSPORT,Moto Race
 2026-06-26,BRENTA - SEMI METALLIC PAD - 621SM1/FA115,Parts for personal transport equipment,5.9,TRANSPORT,Moto Race
 2026-06-26,RK 420MS Non Sealed Chain - Natural Color - 94L,Parts for personal transport equipment,12.5,TRANSPORT,Moto Race
 2026-06-26,Black Sport Mirror Set 006-8MM-R/R,Parts for personal transport equipment,15.5,TRANSPORT,Moto Race
-2026-06-26,YUASA Yumicron Conventional Motorcycle Battery - YB5L-B,Parts for personal transport equipment,32,TRANSPORT,Moto Race
-2026-06-26,Progrip PG2500 Fork Boots-Blue,Parts for personal transport equipment,25,TRANSPORT,Moto Race
+2026-06-26,YUASA Yumicron Conventional Motorcycle Battery - YB5L-B,Parts for personal transport equipment,32.0,TRANSPORT,Moto Race
+2026-06-26,Progrip PG2500 Fork Boots-Blue,Parts for personal transport equipment,25.0,TRANSPORT,Moto Race
 2026-06-26,ARROW STAINLESS STEEL CLAMP PROTECTION,Parts for personal transport equipment,2.55,TRANSPORT,Moto Race
-2026-06-26,KENDA K673 Kruz - 80X90-21 [48H/TL] - Front,Tyres,72,TRANSPORT,Moto Race
-2026-06-26,KENDA K673 Kruz - 140X90-15 [70H/TL] - Rear,Tyres,136,TRANSPORT,Moto Race
-2026-06-26,STAGG C405MNAT 1/4 CLASSIC GUITAR,Musical instruments,89,"RECREATION, SPORT AND CULTURE",Musicavenue
-2026-06-26,KORG B2 STAGE PIANO,Musical instruments,695,"RECREATION, SPORT AND CULTURE",Musicavenue
-2026-06-26,YAMAHA KEYBOARD PSRF52,Musical instruments,135,"RECREATION, SPORT AND CULTURE",Musicavenue
-2026-06-26,FENDER MONTEREY ELECTRIC ACOUSTIC GUITAR WITH BAG -STANDARD BLK,Musical instruments,325,"RECREATION, SPORT AND CULTURE",Musicavenue
-2026-06-26,FENDER AFFINITY TELECASTER BUTTERSCOTCH BLONDE FEGT3550,Musical instruments,339,"RECREATION, SPORT AND CULTURE",Musicavenue
-2026-06-26,OVATION DJ ASHBA DJA34CHB ELECTRIC-ACOUSTIC GUITAR WITH SOFT CASE,Musical instruments,485,"RECREATION, SPORT AND CULTURE",Musicavenue
+2026-06-26,KENDA K673 Kruz - 80X90-21 [48H/TL] - Front,Tyres,72.0,TRANSPORT,Moto Race
+2026-06-26,KENDA K673 Kruz - 140X90-15 [70H/TL] - Rear,Tyres,136.0,TRANSPORT,Moto Race
+2026-06-26,STAGG C405MNAT 1/4 CLASSIC GUITAR,Musical instruments,89.0,"RECREATION, SPORT AND CULTURE",Musicavenue
+2026-06-26,KORG B2 STAGE PIANO,Musical instruments,695.0,"RECREATION, SPORT AND CULTURE",Musicavenue
+2026-06-26,YAMAHA KEYBOARD PSRF52,Musical instruments,135.0,"RECREATION, SPORT AND CULTURE",Musicavenue
+2026-06-26,FENDER MONTEREY ELECTRIC ACOUSTIC GUITAR WITH BAG -STANDARD BLK,Musical instruments,325.0,"RECREATION, SPORT AND CULTURE",Musicavenue
+2026-06-26,FENDER AFFINITY TELECASTER BUTTERSCOTCH BLONDE FEGT3550,Musical instruments,339.0,"RECREATION, SPORT AND CULTURE",Musicavenue
+2026-06-26,OVATION DJ ASHBA DJA34CHB ELECTRIC-ACOUSTIC GUITAR WITH SOFT CASE,Musical instruments,485.0,"RECREATION, SPORT AND CULTURE",Musicavenue
 2026-06-26,Price per month - Basic,Subscriptions to audiovisual streaming services and rental of audiovisual content,8.99,INFORMATION AND COMMUNICATION,Netflix
 2026-06-26,Price per month - Standard,Subscriptions to audiovisual streaming services and rental of audiovisual content,12.49,INFORMATION AND COMMUNICATION,Netflix
-2026-06-26,Nissan Qashqai 1.3lt 156HP ACENTA LVL001,New motor cars,30900,TRANSPORT,Nissan
-2026-06-26,Nissan Qashqai 1.3lt 156HP TEKNA+-LUXURY LVL004,New motor cars,35900,TRANSPORT,Nissan
-2026-06-26,Nissan Qashqai 1.5lt 190HP ACENTA LVL005,New motor cars,35900,TRANSPORT,Nissan
-2026-06-26,NISSAN JUKE 1.6lt 143HP N-CONNECTA 2-TONE,New motor cars,28000,TRANSPORT,Nissan
-2026-06-26,"Services, LADIES CUT",Hairdressing,35,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Novella
-2026-06-26,"Student Offers, LADIES CUT",Hairdressing,30,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Novella
-2026-06-26,"Services, MEN'S CUT",Hairdressing,28,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Novella
-2026-06-26,"Services, CHILDREN'S CUT",Hairdressing,25,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Novella
-2026-06-26,"Student Offers, MEN'S CUT",Hairdressing,25,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Novella
+2026-06-26,Nissan Qashqai 1.3lt 156HP ACENTA LVL001,New motor cars,30900.0,TRANSPORT,Nissan
+2026-06-26,Nissan Qashqai 1.3lt 156HP TEKNA+-LUXURY LVL004,New motor cars,35900.0,TRANSPORT,Nissan
+2026-06-26,Nissan Qashqai 1.5lt 190HP ACENTA LVL005,New motor cars,35900.0,TRANSPORT,Nissan
+2026-06-26,NISSAN JUKE 1.6lt 143HP N-CONNECTA 2-TONE,New motor cars,28000.0,TRANSPORT,Nissan
+2026-06-26,"Services, LADIES CUT",Hairdressing,35.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Novella
+2026-06-26,"Student Offers, LADIES CUT",Hairdressing,30.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Novella
+2026-06-26,"Services, MEN'S CUT",Hairdressing,28.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Novella
+2026-06-26,"Services, CHILDREN'S CUT",Hairdressing,25.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Novella
+2026-06-26,"Student Offers, MEN'S CUT",Hairdressing,25.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Novella
 2026-06-26,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.648,TRANSPORT,PETROLINA
 2026-06-26,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.648,TRANSPORT,PETROLINA
 2026-06-26,PETROLINA (HOLDINGS) PUBLIC LIMITED - Πετρέλαιο Κίνησης,Diesel,1.648,TRANSPORT,PETROLINA
@@ -1313,13 +1313,13 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-26,Flaem RF7 Dual Speed,Treatment devices for personal use,18.5,HEALTH,PHARMFETCH
 2026-06-26,Mesh Portable Electronic Nebulizer,Treatment devices for personal use,79.9,HEALTH,PHARMFETCH
 2026-06-26,Oral-B Vitality 150 Cross Action,Treatment devices for personal use,38.68,HEALTH,PHARMFETCH
-2026-06-26,Meat Meze for 2 persons - Paphos,"Restaurants, cafes and the like - with full service",25,RESTAURANTS AND ACCOMODATION SERVICES,Pagkratios
-2026-06-26,Cross 9k Yellow Gold 0.83g,Purchase of jewellery and watches,150,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Panos Melekkis Jewellery
-2026-06-26,Cross 18k Yellow Gold 0.65g,Purchase of jewellery and watches,200,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Panos Melekkis Jewellery
+2026-06-26,Meat Meze for 2 persons - Paphos,"Restaurants, cafes and the like - with full service",25.0,RESTAURANTS AND ACCOMODATION SERVICES,Pagkratios
+2026-06-26,Cross 9k Yellow Gold 0.83g,Purchase of jewellery and watches,150.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Panos Melekkis Jewellery
+2026-06-26,Cross 18k Yellow Gold 0.65g,Purchase of jewellery and watches,200.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Panos Melekkis Jewellery
 2026-06-26,Από μένα αυτά…,Educational books and textbooks,8.75,"RECREATION, SPORT AND CULTURE",Parga
 2026-06-26,"Φιλαράκια, εραστές και το μεγάλο, φριχτό πράγμα",Educational books and textbooks,23.2,"RECREATION, SPORT AND CULTURE",Parga
 2026-06-26,Να βρω ξανά του νήματος την άκρη...,Educational books and textbooks,9.2,"RECREATION, SPORT AND CULTURE",Parga
-2026-06-26,Η τέχνη του να έχεις πάντα δίκιο,Educational books and textbooks,10,"RECREATION, SPORT AND CULTURE",Parga
+2026-06-26,Η τέχνη του να έχεις πάντα δίκιο,Educational books and textbooks,10.0,"RECREATION, SPORT AND CULTURE",Parga
 2026-06-26,Ο πλουσιότερος άνθρωπος της Βαβυλώνας,Educational books and textbooks,6.5,"RECREATION, SPORT AND CULTURE",Parga
 2026-06-26,Διαλειμματική νηστεία και αποφυγή νόσων,Educational books and textbooks,10.9,"RECREATION, SPORT AND CULTURE",Parga
 2026-06-26,Διδακτική,Educational books and textbooks,24.2,"RECREATION, SPORT AND CULTURE",Parga
@@ -1361,10 +1361,10 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-26,Μίνι συρραπτικό Νο. 24/6,Stationery and drawing materials,1.35,"RECREATION, SPORT AND CULTURE",Parga
 2026-06-26,Διατρητικό 10 φύλλων,Stationery and drawing materials,3.35,"RECREATION, SPORT AND CULTURE",Parga
 2026-06-26,Οργανωμένα Ταξίδια,Package holidays,3804.166667,"RECREATION, SPORT AND CULTURE",Pluton Travel
-2026-06-26,"Wash, Dry and Fold - up to 5kg",Cleaning of clothing,18,CLOTHING AND FOOTWEAR,Premier Laundry
-2026-06-26,"Wash, Dry and Fold - up to 10kg",Cleaning of clothing,32,CLOTHING AND FOOTWEAR,Premier Laundry
-2026-06-26,Dry and Fold Only (up to 5kg),Cleaning of clothing,8,CLOTHING AND FOOTWEAR,Premier Laundry
-2026-06-26,Dry and Fold Only (up to 10kg),Cleaning of clothing,14,CLOTHING AND FOOTWEAR,Premier Laundry
+2026-06-26,"Wash, Dry and Fold - up to 5kg",Cleaning of clothing,18.0,CLOTHING AND FOOTWEAR,Premier Laundry
+2026-06-26,"Wash, Dry and Fold - up to 10kg",Cleaning of clothing,32.0,CLOTHING AND FOOTWEAR,Premier Laundry
+2026-06-26,Dry and Fold Only (up to 5kg),Cleaning of clothing,8.0,CLOTHING AND FOOTWEAR,Premier Laundry
+2026-06-26,Dry and Fold Only (up to 10kg),Cleaning of clothing,14.0,CLOTHING AND FOOTWEAR,Premier Laundry
 2026-06-26,ΚΥΛΙΝΔΡΟΣ 10kg (ΤΙΜΗ ΜΕ ΕΠΙΣΤΡΟΦΗ ΑΔΕΙΟΥ),Liquefied hydrocarbons,20.08,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Price Observatory - Consumer Protection Service
 2026-06-26,GIGA Unlimited 5G,Bundled telecommunication services,14.99,INFORMATION AND COMMUNICATION,Primetel
 2026-06-26,GIGA Unlimited 5G MAX,Bundled telecommunication services,19.99,INFORMATION AND COMMUNICATION,Primetel
@@ -1372,54 +1372,54 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-26,Fiber Entertainment & 200Mbps,Internet access provision services and online storage services,24.99,INFORMATION AND COMMUNICATION,Primetel
 2026-06-26,Fiber Family & 200Mbps,Internet access provision services and online storage services,34.99,INFORMATION AND COMMUNICATION,Primetel
 2026-06-26,Calls to other providers mobile,Mobile communication services,0.095,INFORMATION AND COMMUNICATION,Primetel
-2026-06-26,Action Camera GoXtreme Pioneer White 4K Ultra HD,Cameras,70,"RECREATION, SPORT AND CULTURE",Public
+2026-06-26,Action Camera GoXtreme Pioneer White 4K Ultra HD,Cameras,70.0,"RECREATION, SPORT AND CULTURE",Public
 2026-06-26,Action Camera Lamtech 4K Waterproof & Wifi,Cameras,54.89,"RECREATION, SPORT AND CULTURE",Public
 2026-06-26,Instant Camera Fujifilm Instax Mini 12 - Clay White,Cameras,89.99,"RECREATION, SPORT AND CULTURE",Public
 2026-06-26,Φωτογραφική Μηχανή Compact AgfaPhoto Realishot DC5200 - Μπλε,Cameras,78.9,"RECREATION, SPORT AND CULTURE",Public
 2026-06-26,HOOVER HJ72WDLB JIVE LITHIUM 011 7.2 V 0.1 lt Μπλε Σκουπάκι Χειρός,Cleaning equipment,54.89,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
 2026-06-26,ROHNSON R-139 750 W με Σακούλα 2 L Μπλε Ηλεκτρική Σκούπα,Cleaning equipment,86.89,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
 2026-06-26,XIAOMI DUST MT PRO BHR89 Λευκό Σκουπάκι Χειρός,Cleaning equipment,89.9,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
-2026-06-26,Desktop Vengeance (AMD Athlon-3000G/8GB/240GB SSD/Radeon Vega Graphics/FreeDOS),"Computers, laptops and tablets",411,"RECREATION, SPORT AND CULTURE",Public
-2026-06-26,Desktop GMKtec M3 (Core i5-12450H/16 GB/512 GB SSD/UHD Graphics/Win11Pro),"Computers, laptops and tablets",539,"RECREATION, SPORT AND CULTURE",Public
+2026-06-26,Desktop Vengeance (AMD Athlon-3000G/8GB/240GB SSD/Radeon Vega Graphics/FreeDOS),"Computers, laptops and tablets",411.0,"RECREATION, SPORT AND CULTURE",Public
+2026-06-26,Desktop GMKtec M3 (Core i5-12450H/16 GB/512 GB SSD/UHD Graphics/Win11Pro),"Computers, laptops and tablets",539.0,"RECREATION, SPORT AND CULTURE",Public
 2026-06-26,Desktop Quest Me (Ryzen 5-5600G/16GB/240GB SSD/Radeon Graphics/FreeDOS,"Computers, laptops and tablets",697.99,"RECREATION, SPORT AND CULTURE",Public
-2026-06-26,Laptop Lenovo IdeaPad 1 15IGL7 15.6'' FHD IPS (Celeron N4120/8GB/128GB eMMC/UHD Graphics/Win11HomeS),"Computers, laptops and tablets",329,"RECREATION, SPORT AND CULTURE",Public
-2026-06-26,Laptop Asus Vivobook 15 X1504VA-BQ322W 15.6'' FHD (Core i3-1315U/8GB/512GB SSD/UHD Graphics/Win11Home),"Computers, laptops and tablets",589,"RECREATION, SPORT AND CULTURE",Public
-2026-06-26,Laptop Lenovo IdeaPad Slim 3 15ABR8 15.6'' FHD IPS (Ryzen 5-7530U/8GB/512GB SSD/Radeon Graphics/Win11Home),"Computers, laptops and tablets",399,"RECREATION, SPORT AND CULTURE",Public
-2026-06-26,"Tablet Lenovo Tab One 8.7"" 4GB/64GB Wi-Fi - Luna Grey + Clear Case","Computers, laptops and tablets",129,"RECREATION, SPORT AND CULTURE",Public
-2026-06-26,"Tablet Kiddoboo Eight Gen2 8"" 4GB/64GB Wi-Fi - Yellow","Computers, laptops and tablets",119,"RECREATION, SPORT AND CULTURE",Public
-2026-06-26,"Tablet TCL Tab 10L 10.1"" Gen 4 4GB/64GB WiFi - Future Dusk","Computers, laptops and tablets",149,"RECREATION, SPORT AND CULTURE",Public
+2026-06-26,Laptop Lenovo IdeaPad 1 15IGL7 15.6'' FHD IPS (Celeron N4120/8GB/128GB eMMC/UHD Graphics/Win11HomeS),"Computers, laptops and tablets",329.0,"RECREATION, SPORT AND CULTURE",Public
+2026-06-26,Laptop Asus Vivobook 15 X1504VA-BQ322W 15.6'' FHD (Core i3-1315U/8GB/512GB SSD/UHD Graphics/Win11Home),"Computers, laptops and tablets",589.0,"RECREATION, SPORT AND CULTURE",Public
+2026-06-26,Laptop Lenovo IdeaPad Slim 3 15ABR8 15.6'' FHD IPS (Ryzen 5-7530U/8GB/512GB SSD/Radeon Graphics/Win11Home),"Computers, laptops and tablets",399.0,"RECREATION, SPORT AND CULTURE",Public
+2026-06-26,"Tablet Lenovo Tab One 8.7"" 4GB/64GB Wi-Fi - Luna Grey + Clear Case","Computers, laptops and tablets",129.0,"RECREATION, SPORT AND CULTURE",Public
+2026-06-26,"Tablet Kiddoboo Eight Gen2 8"" 4GB/64GB Wi-Fi - Yellow","Computers, laptops and tablets",119.0,"RECREATION, SPORT AND CULTURE",Public
+2026-06-26,"Tablet TCL Tab 10L 10.1"" Gen 4 4GB/64GB WiFi - Future Dusk","Computers, laptops and tablets",149.0,"RECREATION, SPORT AND CULTURE",Public
 2026-06-26,English Grammar in Use Book with Answers,Educational books and textbooks,36.76,"RECREATION, SPORT AND CULTURE",Public
 2026-06-26,"������� ����� ����� �' ��������� - ����������, ���� (�������)",Educational books and textbooks,4.14,"RECREATION, SPORT AND CULTURE",Public
 2026-06-26,Luse me... an mporeis! Poia einai ta 2 idia; - Sullogiko ergo (iScool),Educational books and textbooks,6.61,"RECREATION, SPORT AND CULTURE",Public
 2026-06-26,Μαθαίνω να γράφω τους αριθμούς - Συλλογικό έργο (ΕΛΛΗΝΟΕΚΔΟΤΙΚΗ),Educational books and textbooks,2.93,"RECREATION, SPORT AND CULTURE",Public
 2026-06-26,JBL Go Essential 2 Φορητό Ηχείο - Μαύρο,"Equipment for the reception, recording and reproduction of sound and vision",29.9,"RECREATION, SPORT AND CULTURE",Public
-2026-06-26,Ακουστικά Sony MDREX15LP Μαύρα,"Equipment for the reception, recording and reproduction of sound and vision",8,"RECREATION, SPORT AND CULTURE",Public
+2026-06-26,Ακουστικά Sony MDREX15LP Μαύρα,"Equipment for the reception, recording and reproduction of sound and vision",8.0,"RECREATION, SPORT AND CULTURE",Public
 2026-06-26,Media Player Lamtech LAM023473 32GB 6K - Black,"Equipment for the reception, recording and reproduction of sound and vision",37.9,"RECREATION, SPORT AND CULTURE",Public
 2026-06-26,MP3 Player F&U MP5638 8 GB - Black,"Equipment for the reception, recording and reproduction of sound and vision",34.89,"RECREATION, SPORT AND CULTURE",Public
-2026-06-26,"Samsung QLED 55"" 4K Smart 55Q7F AI TV","Equipment for the reception, recording and reproduction of sound and vision",449,"RECREATION, SPORT AND CULTURE",Public
+2026-06-26,"Samsung QLED 55"" 4K Smart 55Q7F AI TV","Equipment for the reception, recording and reproduction of sound and vision",449.0,"RECREATION, SPORT AND CULTURE",Public
 2026-06-26,Chess - Checkers - Backgammon Tabletop (Desyllas Games),Games of chance,19.99,"RECREATION, SPORT AND CULTURE",Public
 2026-06-26,Monopoly: Classic Renewed Tabletop (Hasbro),Games of chance,29.9,"RECREATION, SPORT AND CULTURE",Public
 2026-06-26,Bicycle Playing Cards Rider Back International Standard Index Red,Games of chance,4.99,"RECREATION, SPORT AND CULTURE",Public
-2026-06-26,PITSOS Nefeli Standard PSI09VW30/PSO09VW30 Κλιματιστικό Inverter 9.000 BTU A++/A+++,Heaters and air conditioners,389,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
-2026-06-26,PITSOS Nefeli PSI09VW32 9.000 BTU A++/Α+++ με Ιονιστή & WiFi Κλιματιστικό Inverter,Heaters and air conditioners,349,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
-2026-06-26,OMNYS WNS-09R23 Κλιματιστικό Inverter 9.000 BTU A++/A+++,Heaters and air conditioners,339,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
-2026-06-26,MIDEA Xtreme Pro AG2PRO-09NXD0-I/O Κλιματιστικό Inverter 9.000 BTU A++/A+++ με Ιονιστή & WiFi,Heaters and air conditioners,499,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
-2026-06-26,IN CLIMA 12GR21 Κλιματιστικό Inverter 12.000BTU A++/A+++ με Ιονιστή & WiFi Ready,Heaters and air conditioners,378,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
-2026-06-26,BOSCH KGN36NLEA Full No Frost 305 Lt Metal Look Ψυγειοκαταψύκτης,Major kitchen appliances,529,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
-2026-06-26,LG GFE41PZGSZ Combo Thor 324 Lt Inox Καταψύκτης Όρθιος,Major kitchen appliances,949,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
-2026-06-26,LG GTBV44SWBKD No Frost 461 Lt Λευκό Δίπορτο Ψυγείο,Major kitchen appliances,899,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
-2026-06-26,SENCOR Slow Cooker,Major kitchen appliances,339,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
+2026-06-26,PITSOS Nefeli Standard PSI09VW30/PSO09VW30 Κλιματιστικό Inverter 9.000 BTU A++/A+++,Heaters and air conditioners,389.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
+2026-06-26,PITSOS Nefeli PSI09VW32 9.000 BTU A++/Α+++ με Ιονιστή & WiFi Κλιματιστικό Inverter,Heaters and air conditioners,349.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
+2026-06-26,OMNYS WNS-09R23 Κλιματιστικό Inverter 9.000 BTU A++/A+++,Heaters and air conditioners,339.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
+2026-06-26,MIDEA Xtreme Pro AG2PRO-09NXD0-I/O Κλιματιστικό Inverter 9.000 BTU A++/A+++ με Ιονιστή & WiFi,Heaters and air conditioners,499.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
+2026-06-26,IN CLIMA 12GR21 Κλιματιστικό Inverter 12.000BTU A++/A+++ με Ιονιστή & WiFi Ready,Heaters and air conditioners,378.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
+2026-06-26,BOSCH KGN36NLEA Full No Frost 305 Lt Metal Look Ψυγειοκαταψύκτης,Major kitchen appliances,529.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
+2026-06-26,LG GFE41PZGSZ Combo Thor 324 Lt Inox Καταψύκτης Όρθιος,Major kitchen appliances,949.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
+2026-06-26,LG GTBV44SWBKD No Frost 461 Lt Λευκό Δίπορτο Ψυγείο,Major kitchen appliances,899.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
+2026-06-26,SENCOR Slow Cooker,Major kitchen appliances,339.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
 2026-06-26,SINGER MW20IN 20 Lt Inox Φούρνος Μικροκυμάτων,Major kitchen appliances,79.9,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
-2026-06-26,LG F4R7009TSSB 9 kg 1.400 Στροφές Ασημί με Wi-Fi Πλυντήριο Ρούχων,Major laundry appliances,649,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
-2026-06-26,Πλυντήριο Πιάτων TESLA WD461MX για 9 Σερβίτσια - Inox,Major laundry appliances,449,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
-2026-06-26,Tumble dryer MIDEA MD200H90W/T-CY titanium,Major laundry appliances,605,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
+2026-06-26,LG F4R7009TSSB 9 kg 1.400 Στροφές Ασημί με Wi-Fi Πλυντήριο Ρούχων,Major laundry appliances,649.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
+2026-06-26,Πλυντήριο Πιάτων TESLA WD461MX για 9 Σερβίτσια - Inox,Major laundry appliances,449.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
+2026-06-26,Tumble dryer MIDEA MD200H90W/T-CY titanium,Major laundry appliances,605.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
 2026-06-26,Epson 103 Μαύρο Μελάνι Εκτυπωτή C13T00S14A,Miscellaneous printed matter,8.98,"RECREATION, SPORT AND CULTURE",Public
 2026-06-26,Canon GI-490 Μαύρο Μελάνι Εκτυπωτή 0663C001AA,Miscellaneous printed matter,9.98,"RECREATION, SPORT AND CULTURE",Public
 2026-06-26,Epson T6641 Μαύρο Μελάνι Εκτυπωτή C13T66414A,Miscellaneous printed matter,9.98,"RECREATION, SPORT AND CULTURE",Public
 2026-06-26,Epson T6642 Κυανό Μελάνι Εκτυπωτή C13T66424A,Miscellaneous printed matter,9.98,"RECREATION, SPORT AND CULTURE",Public
 2026-06-26,Xiaomi Redmi A5 64GB - Midnight Black,Mobile telephone equipment,109.9,INFORMATION AND COMMUNICATION,Public
 2026-06-26,Xiaomi Redmi 15C 128GB - Midnight Black,Mobile telephone equipment,139.9,INFORMATION AND COMMUNICATION,Public
-2026-06-26,Samsung Galaxy A16 128GB - Black,Mobile telephone equipment,189,INFORMATION AND COMMUNICATION,Public
+2026-06-26,Samsung Galaxy A16 128GB - Black,Mobile telephone equipment,189.0,INFORMATION AND COMMUNICATION,Public
 2026-06-26,LEGO® Minifigures Series 27 (71048),"Other games, toys and hobby-related articles",3.99,"RECREATION, SPORT AND CULTURE",Public
 2026-06-26,LEGO® Minifigures Series 26 Space (71046),"Other games, toys and hobby-related articles",4.99,"RECREATION, SPORT AND CULTURE",Public
 2026-06-26,PLAYMOBIL® Scooby-Doo! Συλλεκτική Φιγούρα Scooby Πιλότος (70711),"Other games, toys and hobby-related articles",6.99,"RECREATION, SPORT AND CULTURE",Public
@@ -1432,7 +1432,7 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-26,Sony WH-CH520 Wireless Headphones - Black,Other information and communication equipment,45.01,"RECREATION, SPORT AND CULTURE",Public
 2026-06-26,TEFAL FV2839 2400 W Μπλε Σίδερο Ατμού,Other small household appliances,35.9,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
 2026-06-26,BOSCH COMPACT MYMOMENT TAT2M123 2 Θέσεων 950W Μαύρο Φρυγανιέρα,Other small household appliances,29.9,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
-2026-06-26,Ηλεκτρική Ψησταριά Σχάρας DELONGHI BQ80.X 2450W - Inox,Other small household appliances,119,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
+2026-06-26,Ηλεκτρική Ψησταριά Σχάρας DELONGHI BQ80.X 2450W - Inox,Other small household appliances,119.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
 2026-06-26,Σίδερο Ατμού ROWENTA DW4320 2500W Μαύρο,Other small household appliances,44.9,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
 2026-06-26,Σίδερο Ατμού ROWENTA DW4345D1 2600 W Μαύρο,Other small household appliances,78.9,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
 2026-06-26,Σίδερο Ατμού ROWENTA DW8210 2800 W Μαύρο,Other small household appliances,98.9,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
@@ -1448,8 +1448,8 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-26,Smartwatch Xiaomi Redmi Watch 5 Active 49mm - Midnight Black,Purchase of jewellery and watches,39.9,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Public
 2026-06-26,Smartwatch Xiaomi Redmi Watch 5 Lite 48mm - Black,Purchase of jewellery and watches,49.9,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Public
 2026-06-26,Smartwatch HiFuture Zone 2 49mm - Black,Purchase of jewellery and watches,29.9,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Public
-2026-06-26,Πολυμίξερ BOSCH MCM3200W 800W Λευκό,Small appliances for the cooking and processing of food,129,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
-2026-06-26,Πολυμίξερ BOSCH MCM3501M 800 W 2.3 L Μαύρο,Small appliances for the cooking and processing of food,149,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
+2026-06-26,Πολυμίξερ BOSCH MCM3200W 800W Λευκό,Small appliances for the cooking and processing of food,129.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
+2026-06-26,Πολυμίξερ BOSCH MCM3501M 800 W 2.3 L Μαύρο,Small appliances for the cooking and processing of food,149.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
 2026-06-26,IZZY BARISTA 30W Μαύρη Φραπεδιέρα Χειρός,Small appliances for the preparation of beverages,12.99,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
 2026-06-26,FIRST AUSTRIA FA-5450-4 800W 0.35L Ηλεκτρικό Μπρίκι,Small appliances for the preparation of beverages,23.9,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
 2026-06-26,TAURUS Verona 12 680W 1.2L Καφετιέρα Φίλτρου,Small appliances for the preparation of beverages,38.9,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Public
@@ -1464,42 +1464,42 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-26,Sandisk Ultra Flair 128GB USB 3.0 Stick Black,Unrecorded recording media,15.99,"RECREATION, SPORT AND CULTURE",Public
 2026-06-26,Disks CD/DVD Verbatim DVD-R 4.7GB 50 pcs,Unrecorded recording media,20.9,"RECREATION, SPORT AND CULTURE",Public
 2026-06-26,Sony PlayStation 5 Digital Edition - 825GB,"Video game computers, consoles, game applications and software",610.01,"RECREATION, SPORT AND CULTURE",Public
-2026-06-26,Nintendo Switch OLED Model White,"Video game computers, consoles, game applications and software",389,"RECREATION, SPORT AND CULTURE",Public
+2026-06-26,Nintendo Switch OLED Model White,"Video game computers, consoles, game applications and software",389.0,"RECREATION, SPORT AND CULTURE",Public
 2026-06-26,EA Sports FC26 - PS5,"Video game computers, consoles, game applications and software",29.99,"RECREATION, SPORT AND CULTURE",Public
 2026-06-26,EA Sports FC26 (Code in a Box) - Nintendo Switch,"Video game computers, consoles, game applications and software",29.99,"RECREATION, SPORT AND CULTURE",Public
-2026-06-26,Fish Meze for 2 persons - Nicosia,"Restaurants, cafes and the like - with full service",30,RESTAURANTS AND ACCOMODATION SERVICES,Pyxida
-2026-06-26,SIMPLY GREEN ALMOND OIL 100ML,Herbal medicines and homeopathic products,5,HEALTH,Remedy
+2026-06-26,Fish Meze for 2 persons - Nicosia,"Restaurants, cafes and the like - with full service",30.0,RESTAURANTS AND ACCOMODATION SERVICES,Pyxida
+2026-06-26,SIMPLY GREEN ALMOND OIL 100ML,Herbal medicines and homeopathic products,5.0,HEALTH,Remedy
 2026-06-26,SIMPLY GREEN GLYCERIN LOTION 100ML,Herbal medicines and homeopathic products,2.5,HEALTH,Remedy
 2026-06-26,Korres Body Oil Relaxing Lavender 10ml,Herbal medicines and homeopathic products,17.6,HEALTH,Remedy
 2026-06-26,EUCALYPTUS OIL 100ML,Herbal medicines and homeopathic products,7.43,HEALTH,Remedy
 2026-06-26,DR MULLER TEA TREE OIL 100% PURE OIL 10ML,Herbal medicines and homeopathic products,9.95,HEALTH,Remedy
 2026-06-26,APIVITA TEATREE OIL,Herbal medicines and homeopathic products,17.3,HEALTH,Remedy
 2026-06-26,ROSSMAX X5 AUTOMATIC BLOOD PRESSURE MONITOR,Medical diagnostic products,75.01,HEALTH,Remedy
-2026-06-26,ROSSMAX HA500 TEMPLE THERMOMETER NON CONTACT,Medical diagnostic products,50,HEALTH,Remedy
-2026-06-26,ROSSMAX GB102 ANEROID SPHYGMOMANOMETER,Medical diagnostic products,21,HEALTH,Remedy
+2026-06-26,ROSSMAX HA500 TEMPLE THERMOMETER NON CONTACT,Medical diagnostic products,50.0,HEALTH,Remedy
+2026-06-26,ROSSMAX GB102 ANEROID SPHYGMOMANOMETER,Medical diagnostic products,21.0,HEALTH,Remedy
 2026-06-26,ON CALL PLUS LANCING DEVICE,Medical diagnostic products,12.3,HEALTH,Remedy
-2026-06-26,ROSSMAX FLEXIBLE THERMOMETER TG380,Medical diagnostic products,12,HEALTH,Remedy
-2026-06-26,NISSEI DS-11 BLOOD PRESSURE MONITOR,Medical diagnostic products,55,HEALTH,Remedy
-2026-06-26,FINGER PULSE OXIMETER (MD300C11) WHITE,Medical diagnostic products,44,HEALTH,Remedy
+2026-06-26,ROSSMAX FLEXIBLE THERMOMETER TG380,Medical diagnostic products,12.0,HEALTH,Remedy
+2026-06-26,NISSEI DS-11 BLOOD PRESSURE MONITOR,Medical diagnostic products,55.0,HEALTH,Remedy
+2026-06-26,FINGER PULSE OXIMETER (MD300C11) WHITE,Medical diagnostic products,44.0,HEALTH,Remedy
 2026-06-26,MIDSTREAM OVULATION TEST LH 5 PIECES,Medical diagnostic products,15.01,HEALTH,Remedy
 2026-06-26,TONIMER NORMAL SPRAY 125ML,"Medicines, vaccines and other pharmaceutical preparations",10.95,HEALTH,Remedy
-2026-06-26,HYLO-COMOD EYE DROPS,"Medicines, vaccines and other pharmaceutical preparations",16,HEALTH,Remedy
+2026-06-26,HYLO-COMOD EYE DROPS,"Medicines, vaccines and other pharmaceutical preparations",16.0,HEALTH,Remedy
 2026-06-26,Intermed Unisept Otic Drops 10ML,"Medicines, vaccines and other pharmaceutical preparations",7.06,HEALTH,Remedy
 2026-06-26,Vox Lysopaine με Γεύση Φράουλα-Μέντα 18τεμ,"Medicines, vaccines and other pharmaceutical preparations",7.38,HEALTH,Remedy
-2026-06-26,Tussimont Hustensaft - Cough Syrup For Adults 180g,"Medicines, vaccines and other pharmaceutical preparations",12,HEALTH,Remedy
+2026-06-26,Tussimont Hustensaft - Cough Syrup For Adults 180g,"Medicines, vaccines and other pharmaceutical preparations",12.0,HEALTH,Remedy
 2026-06-26,Vitabiotics Pregnacare Liquid 200ml,"Medicines, vaccines and other pharmaceutical preparations",20.11,HEALTH,Remedy
 2026-06-26,COLDIZIN NEW,"Medicines, vaccines and other pharmaceutical preparations",7.95,HEALTH,Remedy
-2026-06-26,ROSSMAX NB500 HEAVY DUTY NEBULIZER,Treatment devices for personal use,99,HEALTH,Remedy
+2026-06-26,ROSSMAX NB500 HEAVY DUTY NEBULIZER,Treatment devices for personal use,99.0,HEALTH,Remedy
 2026-06-26,OPTICHAMBER DIAMOND (RESPIRONICS PHILIPS),Treatment devices for personal use,22.95,HEALTH,Remedy
 2026-06-26,ORAL B SENSITIVE REFILLS X 2 PL,Treatment devices for personal use,16.36,HEALTH,Remedy
-2026-06-26,Adults,"Services provided by cinemas, theatres and concert venues",9,"RECREATION, SPORT AND CULTURE",Rio Cinema
-2026-06-26,Adults 3D,"Services provided by cinemas, theatres and concert venues",10,"RECREATION, SPORT AND CULTURE",Rio Cinema
-2026-06-26,Children,"Services provided by cinemas, theatres and concert venues",7,"RECREATION, SPORT AND CULTURE",Rio Cinema
-2026-06-26,Children 3D,"Services provided by cinemas, theatres and concert venues",8,"RECREATION, SPORT AND CULTURE",Rio Cinema
-2026-06-26,Senior 64,"Services provided by cinemas, theatres and concert venues",7,"RECREATION, SPORT AND CULTURE",Rio Cinema
-2026-06-26,Senior 64 3D,"Services provided by cinemas, theatres and concert venues",8,"RECREATION, SPORT AND CULTURE",Rio Cinema
-2026-06-26,Students,"Services provided by cinemas, theatres and concert venues",7,"RECREATION, SPORT AND CULTURE",Rio Cinema
-2026-06-26,Students 3D,"Services provided by cinemas, theatres and concert venues",8,"RECREATION, SPORT AND CULTURE",Rio Cinema
+2026-06-26,Adults,"Services provided by cinemas, theatres and concert venues",9.0,"RECREATION, SPORT AND CULTURE",Rio Cinema
+2026-06-26,Adults 3D,"Services provided by cinemas, theatres and concert venues",10.0,"RECREATION, SPORT AND CULTURE",Rio Cinema
+2026-06-26,Children,"Services provided by cinemas, theatres and concert venues",7.0,"RECREATION, SPORT AND CULTURE",Rio Cinema
+2026-06-26,Children 3D,"Services provided by cinemas, theatres and concert venues",8.0,"RECREATION, SPORT AND CULTURE",Rio Cinema
+2026-06-26,Senior 64,"Services provided by cinemas, theatres and concert venues",7.0,"RECREATION, SPORT AND CULTURE",Rio Cinema
+2026-06-26,Senior 64 3D,"Services provided by cinemas, theatres and concert venues",8.0,"RECREATION, SPORT AND CULTURE",Rio Cinema
+2026-06-26,Students,"Services provided by cinemas, theatres and concert venues",7.0,"RECREATION, SPORT AND CULTURE",Rio Cinema
+2026-06-26,Students 3D,"Services provided by cinemas, theatres and concert venues",8.0,"RECREATION, SPORT AND CULTURE",Rio Cinema
 2026-06-26,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Κίνησης,Diesel,1.678,TRANSPORT,SHELL
 2026-06-26,CORAL ENERGY PRODUCTS CYPRUS LTD - Πετρέλαιο Κίνησης,Diesel,1.678,TRANSPORT,SHELL
 2026-06-26,K. MICHAILAS & SIA LIMITED - Πετρέλαιο Κίνησης,Diesel,1.639,TRANSPORT,SHELL
@@ -1670,52 +1670,52 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-26,Τέλος Χρήσης - Limassol,Sewage collection through sewer systems,0.64,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Limassol
 2026-06-26,Ετήσιο Τέλος - Nicosia,Sewage collection through sewer systems,0.31,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Nicosia
 2026-06-26,Τέλος Χρήσης - Nicosia,Sewage collection through sewer systems,0.55,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Nicosia
-2026-06-26,Action camera LAMTECH 4K Ultra HD Duo LAM021615 black,Cameras,69,"RECREATION, SPORT AND CULTURE",Stephanis
-2026-06-26,Action camera SENCOR 3CAM 4K04WR black,Cameras,69,"RECREATION, SPORT AND CULTURE",Stephanis
-2026-06-26,Instant camera FUJIFILM Instax Mini 12 white,Cameras,99,"RECREATION, SPORT AND CULTURE",Stephanis
-2026-06-26,Digital camera AGFAPHOTO Realishot DC5200 red,Cameras,79,"RECREATION, SPORT AND CULTURE",Stephanis
-2026-06-26,Corded Stick & Handheld Vacuum cleaner DEERMA DX700 white,Cleaning equipment,59,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
-2026-06-26,Vacuum cleaner SENCOR SVC 45RD red,Cleaning equipment,59,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
+2026-06-26,Action camera LAMTECH 4K Ultra HD Duo LAM021615 black,Cameras,69.0,"RECREATION, SPORT AND CULTURE",Stephanis
+2026-06-26,Action camera SENCOR 3CAM 4K04WR black,Cameras,69.0,"RECREATION, SPORT AND CULTURE",Stephanis
+2026-06-26,Instant camera FUJIFILM Instax Mini 12 white,Cameras,99.0,"RECREATION, SPORT AND CULTURE",Stephanis
+2026-06-26,Digital camera AGFAPHOTO Realishot DC5200 red,Cameras,79.0,"RECREATION, SPORT AND CULTURE",Stephanis
+2026-06-26,Corded Stick & Handheld Vacuum cleaner DEERMA DX700 white,Cleaning equipment,59.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
+2026-06-26,Vacuum cleaner SENCOR SVC 45RD red,Cleaning equipment,59.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
 2026-06-26,Mattress Mini Vacuum Cleaner XIAOMI Dust Mite BHR8276EU white,Cleaning equipment,74.95,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
-2026-06-26,Laptop HP 250 G9 A38H3ET dark ash silver,"Computers, laptops and tablets",349,"RECREATION, SPORT AND CULTURE",Stephanis
-2026-06-26,Laptop ASUS Vivobook Go 15 E510KA-BR136WS 90NB0UJ5-M014P0 black,"Computers, laptops and tablets",359,"RECREATION, SPORT AND CULTURE",Stephanis
-2026-06-26,Laptop LENOVO IdeaPad 1 15AMN7 82VG00SPCY cloud grey,"Computers, laptops and tablets",569,"RECREATION, SPORT AND CULTURE",Stephanis
-2026-06-26,PC ACER Veriton ES2710G DT.VY4ET.00U black,"Computers, laptops and tablets",499,"RECREATION, SPORT AND CULTURE",Stephanis
-2026-06-26,PC LENOVO ThinkCentre neo 30s Gen 5 13DK0033UK black,"Computers, laptops and tablets",659,"RECREATION, SPORT AND CULTURE",Stephanis
-2026-06-26,PC ACER Veriton ES2710G DT.VY4ET.00K black,"Computers, laptops and tablets",699,"RECREATION, SPORT AND CULTURE",Stephanis
-2026-06-26,"Tablet ACER Iconia A8-11 8.7"" 64GB NT.LGWEE.004 silver","Computers, laptops and tablets",99,"RECREATION, SPORT AND CULTURE",Stephanis
-2026-06-26,"Tablet EGOBOO PrimeOne 10.1"" 128GB EB101BLUE blue","Computers, laptops and tablets",129,"RECREATION, SPORT AND CULTURE",Stephanis
-2026-06-26,"Tablet BLACKVIEW Tab A6 Kids 10.1"" 128GB blue","Computers, laptops and tablets",99,"RECREATION, SPORT AND CULTURE",Stephanis
+2026-06-26,Laptop HP 250 G9 A38H3ET dark ash silver,"Computers, laptops and tablets",349.0,"RECREATION, SPORT AND CULTURE",Stephanis
+2026-06-26,Laptop ASUS Vivobook Go 15 E510KA-BR136WS 90NB0UJ5-M014P0 black,"Computers, laptops and tablets",359.0,"RECREATION, SPORT AND CULTURE",Stephanis
+2026-06-26,Laptop LENOVO IdeaPad 1 15AMN7 82VG00SPCY cloud grey,"Computers, laptops and tablets",569.0,"RECREATION, SPORT AND CULTURE",Stephanis
+2026-06-26,PC ACER Veriton ES2710G DT.VY4ET.00U black,"Computers, laptops and tablets",499.0,"RECREATION, SPORT AND CULTURE",Stephanis
+2026-06-26,PC LENOVO ThinkCentre neo 30s Gen 5 13DK0033UK black,"Computers, laptops and tablets",659.0,"RECREATION, SPORT AND CULTURE",Stephanis
+2026-06-26,PC ACER Veriton ES2710G DT.VY4ET.00K black,"Computers, laptops and tablets",699.0,"RECREATION, SPORT AND CULTURE",Stephanis
+2026-06-26,"Tablet ACER Iconia A8-11 8.7"" 64GB NT.LGWEE.004 silver","Computers, laptops and tablets",99.0,"RECREATION, SPORT AND CULTURE",Stephanis
+2026-06-26,"Tablet EGOBOO PrimeOne 10.1"" 128GB EB101BLUE blue","Computers, laptops and tablets",129.0,"RECREATION, SPORT AND CULTURE",Stephanis
+2026-06-26,"Tablet BLACKVIEW Tab A6 Kids 10.1"" 128GB blue","Computers, laptops and tablets",99.0,"RECREATION, SPORT AND CULTURE",Stephanis
 2026-06-26,Educational book for kids Mathaino Na Grafo - Tous Arithmous,Educational books and textbooks,3.99,"RECREATION, SPORT AND CULTURE",Stephanis
 2026-06-26,Educational book for kids The Notebook Of The First Scripture (For A' Grade),Educational books and textbooks,4.99,"RECREATION, SPORT AND CULTURE",Stephanis
 2026-06-26,Educational book for kids Fisher Price Protes Gnoseis 4 - Antitheta,Educational books and textbooks,5.99,"RECREATION, SPORT AND CULTURE",Stephanis
 2026-06-26,Educational book for kids Mathaino Kai Grafo Ta 24 Grammata tis A-B,Educational books and textbooks,6.7,"RECREATION, SPORT AND CULTURE",Stephanis
 2026-06-26,Portable speaker YENKEE,"Equipment for the reception, recording and reproduction of sound and vision",23.95,"RECREATION, SPORT AND CULTURE",Stephanis
 2026-06-26,Earphones with microphone SAMSUNG EO-IA500BBEGWW black,"Equipment for the reception, recording and reproduction of sound and vision",14.95,"RECREATION, SPORT AND CULTURE",Stephanis
-2026-06-26,Hi-Fi system SENCOR SMC 4300BR silver,"Equipment for the reception, recording and reproduction of sound and vision",79,"RECREATION, SPORT AND CULTURE",Stephanis
-2026-06-26,Portable CD/MP3 player MUSE M-900 DM black,"Equipment for the reception, recording and reproduction of sound and vision",49,"RECREATION, SPORT AND CULTURE",Stephanis
-2026-06-26,TV 24'' TESLA 24E655BHS HD Ready LED Smart Google TV,"Equipment for the reception, recording and reproduction of sound and vision",139,"RECREATION, SPORT AND CULTURE",Stephanis
+2026-06-26,Hi-Fi system SENCOR SMC 4300BR silver,"Equipment for the reception, recording and reproduction of sound and vision",79.0,"RECREATION, SPORT AND CULTURE",Stephanis
+2026-06-26,Portable CD/MP3 player MUSE M-900 DM black,"Equipment for the reception, recording and reproduction of sound and vision",49.0,"RECREATION, SPORT AND CULTURE",Stephanis
+2026-06-26,TV 24'' TESLA 24E655BHS HD Ready LED Smart Google TV,"Equipment for the reception, recording and reproduction of sound and vision",139.0,"RECREATION, SPORT AND CULTURE",Stephanis
 2026-06-26,Board Game WINNING MOVES Monopoly - Junior Paw Patrol (Greek) WM04163-GRK,Games of chance,27.95,"RECREATION, SPORT AND CULTURE",Stephanis
 2026-06-26,Collectible Playing Cards PALADONE Playstation 5th Generation PP7930PS,Games of chance,9.95,"RECREATION, SPORT AND CULTURE",Stephanis
 2026-06-26,Board Game Ubongo KA110055,Games of chance,29.95,"RECREATION, SPORT AND CULTURE",Stephanis
-2026-06-26,Air Conditioner with Inverter TESLA TT34EX21-1232IA,Heaters and air conditioners,349,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
-2026-06-26,Air Conditioner with Inverter TESLA TT26EX81-0932IAW white,Heaters and air conditioners,379,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
-2026-06-26,Air Conditioner with Inverter TESLA TT26EX21-0932IA,Heaters and air conditioners,329,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
-2026-06-26,Air Conditioner with Inverter MIDEA AG2Eco 09NXD0-I Xtreme Save 9000 Smart white,Heaters and air conditioners,399,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
-2026-06-26,Refrigerator TESLA RD2400ME white,Major kitchen appliances,259,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
-2026-06-26,Freezer BOSCH GSV24VWEV white,Major kitchen appliances,699,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
-2026-06-26,Multicooker SENCOR Slow Cooker SPR 5508BK black,Major kitchen appliances,119,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
-2026-06-26,Microwave Oven Turntable SENCOR SMW1718WH white,Major kitchen appliances,79,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
-2026-06-26,Washing machine TESLA WF101590M white,Major laundry appliances,599,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
-2026-06-26,Dishwasher TESLA WD431M white,Major laundry appliances,349,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
-2026-06-26,Tumble dryer MIDEA MD200H90W/T-CY titanium,Major laundry appliances,599,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
+2026-06-26,Air Conditioner with Inverter TESLA TT34EX21-1232IA,Heaters and air conditioners,349.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
+2026-06-26,Air Conditioner with Inverter TESLA TT26EX81-0932IAW white,Heaters and air conditioners,379.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
+2026-06-26,Air Conditioner with Inverter TESLA TT26EX21-0932IA,Heaters and air conditioners,329.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
+2026-06-26,Air Conditioner with Inverter MIDEA AG2Eco 09NXD0-I Xtreme Save 9000 Smart white,Heaters and air conditioners,399.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
+2026-06-26,Refrigerator TESLA RD2400ME white,Major kitchen appliances,259.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
+2026-06-26,Freezer BOSCH GSV24VWEV white,Major kitchen appliances,699.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
+2026-06-26,Multicooker SENCOR Slow Cooker SPR 5508BK black,Major kitchen appliances,119.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
+2026-06-26,Microwave Oven Turntable SENCOR SMW1718WH white,Major kitchen appliances,79.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
+2026-06-26,Washing machine TESLA WF101590M white,Major laundry appliances,599.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
+2026-06-26,Dishwasher TESLA WD431M white,Major laundry appliances,349.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
+2026-06-26,Tumble dryer MIDEA MD200H90W/T-CY titanium,Major laundry appliances,599.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
 2026-06-26,Ink bottle EPSON 103 EcoTank C13T00S14A black,Miscellaneous printed matter,14.95,"RECREATION, SPORT AND CULTURE",Stephanis
 2026-06-26,Ink bottle CANON GI-490B 0663C001AA black,Miscellaneous printed matter,14.95,"RECREATION, SPORT AND CULTURE",Stephanis
 2026-06-26,Ink bottle EPSON T6641 C13T66414A L365/565 black,Miscellaneous printed matter,14.95,"RECREATION, SPORT AND CULTURE",Stephanis
 2026-06-26,Ink bottle EPSON T6642 C13T66424A L365/565 cyan,Miscellaneous printed matter,14.95,"RECREATION, SPORT AND CULTURE",Stephanis
-2026-06-26,Smartphone XIAOMI Redmi A5 64GB LTE Dual SIM blue,Mobile telephone equipment,89,INFORMATION AND COMMUNICATION,Stephanis
-2026-06-26,Smartphone ZTE Blade Α75 128GB 5G Dual SIM black,Mobile telephone equipment,119,INFORMATION AND COMMUNICATION,Stephanis
-2026-06-26,Smartphone SAMSUNG Galaxy A16 128GB LTE Dual SIM black,Mobile telephone equipment,139,INFORMATION AND COMMUNICATION,Stephanis
+2026-06-26,Smartphone XIAOMI Redmi A5 64GB LTE Dual SIM blue,Mobile telephone equipment,89.0,INFORMATION AND COMMUNICATION,Stephanis
+2026-06-26,Smartphone ZTE Blade Α75 128GB 5G Dual SIM black,Mobile telephone equipment,119.0,INFORMATION AND COMMUNICATION,Stephanis
+2026-06-26,Smartphone SAMSUNG Galaxy A16 128GB LTE Dual SIM black,Mobile telephone equipment,139.0,INFORMATION AND COMMUNICATION,Stephanis
 2026-06-26,Toy LEGO Minifigures: Series 27 (1pc) 71048,"Other games, toys and hobby-related articles",4.95,"RECREATION, SPORT AND CULTURE",Stephanis
 2026-06-26,Toy LEGO Minifigures: Series 26 - Space Minifigure (1pc) 71046,"Other games, toys and hobby-related articles",4.95,"RECREATION, SPORT AND CULTURE",Stephanis
 2026-06-26,Toy PLAYMOBIL Special Plus: Mermaid 9355,"Other games, toys and hobby-related articles",6.95,"RECREATION, SPORT AND CULTURE",Stephanis
@@ -1726,51 +1726,51 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-26,Bluetooth Earbuds XIAOMI Redmi Buds 8 Lite BHR08OMGL black,Other information and communication equipment,29.95,"RECREATION, SPORT AND CULTURE",Stephanis
 2026-06-26,Cordless Headphones with microphone QCY H3 black,Other information and communication equipment,34.95,"RECREATION, SPORT AND CULTURE",Stephanis
 2026-06-26,Earphones JVC HA-EB75-S silver,Other information and communication equipment,15.95,"RECREATION, SPORT AND CULTURE",Stephanis
-2026-06-26,Blender/Chopper SENCOR 6-in-1 SHB 6441WH white,Other small household appliances,59,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
+2026-06-26,Blender/Chopper SENCOR 6-in-1 SHB 6441WH white,Other small household appliances,59.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
 2026-06-26,Toaster MATESTAR MAT-6002W white,Other small household appliances,29.95,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
 2026-06-26,Barbecue Grill OSIO OGB-2437 black/orange,Other small household appliances,29.95,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
 2026-06-26,Iron SENCOR SSI 2800BL white/blue,Other small household appliances,24.95,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
 2026-06-26,Case for laptop 13.3 RIVACASE Anti-Shock 5120 black,Peripheral equipment and its consumable components,24.95,"RECREATION, SPORT AND CULTURE",Stephanis
 2026-06-26,Wall Charger USB-A/USB-C 2-way 20W (PD) LAMTECH LAM980619 UK black,Peripheral equipment and its consumable components,9.95,"RECREATION, SPORT AND CULTURE",Stephanis
 2026-06-26,Accessory kit PRO-MOUNTS Bag of Mounts PM2013GP99,Peripheral equipment and its consumable components,19.95,"RECREATION, SPORT AND CULTURE",Stephanis
-2026-06-26,Shaver BEURER Body Groomer HR 6000 black,Purchase of electric appliances for personal care,59,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Stephanis
+2026-06-26,Shaver BEURER Body Groomer HR 6000 black,Purchase of electric appliances for personal care,59.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Stephanis
 2026-06-26,Hair clipper REMINGTON HC5150,Purchase of electric appliances for personal care,49.95,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Stephanis
-2026-06-26,Hair dryer LIFE Character 221-0238 purple,Purchase of electric appliances for personal care,39,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Stephanis
-2026-06-26,Digital thermometer JOYROOM Body Non Contact XS-IFT002B,Purchase of electric appliances for personal care,49,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Stephanis
+2026-06-26,Hair dryer LIFE Character 221-0238 purple,Purchase of electric appliances for personal care,39.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Stephanis
+2026-06-26,Digital thermometer JOYROOM Body Non Contact XS-IFT002B,Purchase of electric appliances for personal care,49.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Stephanis
 2026-06-26,Smartwatch Strap for XIAOMI Redmi Watch 4/Smart Band 8 Pro BHR8002GL orange,Purchase of jewellery and watches,29.95,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Stephanis
 2026-06-26,Smartwatch Bezel for XIAOMI S3 BHR8318GL blue,Purchase of jewellery and watches,19.95,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Stephanis
 2026-06-26,Smartwatch Strap for XIAOMI Redmi Watch 4/Smart Band 8 Pro BHR7846GL pastel purple,Purchase of jewellery and watches,14.95,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Stephanis
-2026-06-26,Multicooker SENCOR Slow Cooker SPR 5520SS silver,Small appliances for the cooking and processing of food,79,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
-2026-06-26,Kitchen machine BOSCH MCM3100W white,Small appliances for the cooking and processing of food,89,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
+2026-06-26,Multicooker SENCOR Slow Cooker SPR 5520SS silver,Small appliances for the cooking and processing of food,79.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
+2026-06-26,Kitchen machine BOSCH MCM3100W white,Small appliances for the cooking and processing of food,89.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
 2026-06-26,Mixer for frappe OSIO OMM-2211 BL black,Small appliances for the preparation of beverages,12.95,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
 2026-06-26,Electric pot for Cyprus coffee OSIO OCP-2502BR black/red,Small appliances for the preparation of beverages,19.95,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
-2026-06-26,Filter coffee machine SENCOR SCE 3700BK black/chrome,Small appliances for the preparation of beverages,39,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
+2026-06-26,Filter coffee machine SENCOR SCE 3700BK black/chrome,Small appliances for the preparation of beverages,39.0,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
 2026-06-26,Kettle SENCOR SWK 1748WH white,Small appliances for the preparation of beverages,23.95,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",Stephanis
 2026-06-26,Fishing Tool Box Set HI 66278,Sporting equipment,11.95,"RECREATION, SPORT AND CULTURE",Stephanis
 2026-06-26,Outdoor Game Wood Finnish Throwing in Net HI 66144,Sporting equipment,12.95,"RECREATION, SPORT AND CULTURE",Stephanis
-2026-06-26,Electronic Skipping Rope MULTIFUN MF-SR01,Sporting equipment,15,"RECREATION, SPORT AND CULTURE",Stephanis
+2026-06-26,Electronic Skipping Rope MULTIFUN MF-SR01,Sporting equipment,15.0,"RECREATION, SPORT AND CULTURE",Stephanis
 2026-06-26,Paper A4 500 sheets 80 g,Stationery and drawing materials,5.95,"RECREATION, SPORT AND CULTURE",Stephanis
 2026-06-26,Paper HP A4 Office Matte CHP110 white 500pcs,Stationery and drawing materials,5.95,"RECREATION, SPORT AND CULTURE",Stephanis
 2026-06-26,Photo Paper 2x3 HP Sprocket Premium Zink Sticky-Back HPIZ2X320 20pcs,Stationery and drawing materials,15.95,"RECREATION, SPORT AND CULTURE",Stephanis
 2026-06-26,CD recordable VERBATIM 80min x 25pcs 43432,Unrecorded recording media,9.95,"RECREATION, SPORT AND CULTURE",Stephanis
 2026-06-26,DVD-R 4.7GB 16x VERBATIM 25pcs 43522 C/BOX,Unrecorded recording media,12.95,"RECREATION, SPORT AND CULTURE",Stephanis
 2026-06-26,USB 2.0 memory 16GB SANDISK SDCZ50-016G-E95,Unrecorded recording media,14.95,"RECREATION, SPORT AND CULTURE",Stephanis
-2026-06-26,Remote player for PS5 console Playstation Portal white,"Video game computers, consoles, game applications and software",259,"RECREATION, SPORT AND CULTURE",Stephanis
-2026-06-26,Nintendo Switch Lite console grey,"Video game computers, consoles, game applications and software",229,"RECREATION, SPORT AND CULTURE",Stephanis
+2026-06-26,Remote player for PS5 console Playstation Portal white,"Video game computers, consoles, game applications and software",259.0,"RECREATION, SPORT AND CULTURE",Stephanis
+2026-06-26,Nintendo Switch Lite console grey,"Video game computers, consoles, game applications and software",229.0,"RECREATION, SPORT AND CULTURE",Stephanis
 2026-06-26,PS5 game Grand Theft Auto V,"Video game computers, consoles, game applications and software",29.95,"RECREATION, SPORT AND CULTURE",Stephanis
 2026-06-26,Nintendo Switch game Minecraft,"Video game computers, consoles, game applications and software",29.95,"RECREATION, SPORT AND CULTURE",Stephanis
-2026-06-26,FORD FIESTA PETROL MANUAL 1100cc,Second-hand motor cars,10200,TRANSPORT,Stock Center
-2026-06-26,RENAULT CLIO 1.0cc Auto Petrol 1000cc,Second-hand motor cars,12200,TRANSPORT,Stock Center
-2026-06-26,VOLKSWAGEN POLO 1.0 PETROL MANUAL 1000cc,Second-hand motor cars,10900,TRANSPORT,Stock Center
-2026-06-26,NISSAN MICRA 1.0 PETROL AUTOMATIC 1000cc,Second-hand motor cars,12000,TRANSPORT,Stock Center
-2026-06-26,KIA CEED 1.6cc MANUAL DIESEL 1600cc,Second-hand motor cars,12500,TRANSPORT,Stock Center
-2026-06-26,HYUNDAI BAYON 1.0cc AUTO PETROL 1000cc,Second-hand motor cars,12800,TRANSPORT,Stock Center
-2026-06-26,TOYOTA COROLLA 1.5cc MANUAL PETROL 1500cc,Second-hand motor cars,12500,TRANSPORT,Stock Center
-2026-06-26,SEAT ARONA 1.0cc MANUAL PETROL 1000cc,Second-hand motor cars,12800,TRANSPORT,Stock Center
-2026-06-26,Women's Cut & Blowdry,Hairdressing,39,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Studio 37 For Hair
-2026-06-26,Men's Cut,Hairdressing,18,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Studio 37 For Hair
-2026-06-26,Boy's Cut,Hairdressing,10,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Studio 37 For Hair
-2026-06-26,Girl's Cut,Hairdressing,20,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Studio 37 For Hair
+2026-06-26,FORD FIESTA PETROL MANUAL 1100cc,Second-hand motor cars,10200.0,TRANSPORT,Stock Center
+2026-06-26,RENAULT CLIO 1.0cc Auto Petrol 1000cc,Second-hand motor cars,12200.0,TRANSPORT,Stock Center
+2026-06-26,VOLKSWAGEN POLO 1.0 PETROL MANUAL 1000cc,Second-hand motor cars,10900.0,TRANSPORT,Stock Center
+2026-06-26,NISSAN MICRA 1.0 PETROL AUTOMATIC 1000cc,Second-hand motor cars,12000.0,TRANSPORT,Stock Center
+2026-06-26,KIA CEED 1.6cc MANUAL DIESEL 1600cc,Second-hand motor cars,12500.0,TRANSPORT,Stock Center
+2026-06-26,HYUNDAI BAYON 1.0cc AUTO PETROL 1000cc,Second-hand motor cars,12800.0,TRANSPORT,Stock Center
+2026-06-26,TOYOTA COROLLA 1.5cc MANUAL PETROL 1500cc,Second-hand motor cars,12500.0,TRANSPORT,Stock Center
+2026-06-26,SEAT ARONA 1.0cc MANUAL PETROL 1000cc,Second-hand motor cars,12800.0,TRANSPORT,Stock Center
+2026-06-26,Women's Cut & Blowdry,Hairdressing,39.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Studio 37 For Hair
+2026-06-26,Men's Cut,Hairdressing,18.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Studio 37 For Hair
+2026-06-26,Boy's Cut,Hairdressing,10.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Studio 37 For Hair
+2026-06-26,Girl's Cut,Hairdressing,20.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Studio 37 For Hair
 2026-06-26,Nounou Farine Lactee 300g,Baby food,3.52,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2026-06-26,Nounou Frisogrow 3 400g,Baby food,10.95,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2026-06-26,Hipp Organic Milk & Cereal Banana Peach 250g,Baby food,5.48,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
@@ -1784,7 +1784,7 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-26,Nounou Fruit Cream 5 Fruits & Milk 300g -0.20EUR,Baby food,5.65,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2026-06-26,Nounou Frisogrow 3 400g,Baby food,10.95,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2026-06-26,Nounou Frisogrow Plus+ 4 800g,Baby food,21.5,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-2026-06-26,Nounou Frisolac 1 400g,Baby food,13,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2026-06-26,Nounou Frisolac 1 400g,Baby food,13.0,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2026-06-26,Nounou Frisomel 2 800g,Baby food,18.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2026-06-26,Heineken Cans 6X330ml,Beer,5.19,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",SupermarketCy
 2026-06-26,Keo 6X330ml,Beer,6.25,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",SupermarketCy
@@ -1793,8 +1793,8 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-26,Stella Artois 6X330ml,Beer,7.99,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",SupermarketCy
 2026-06-26,Carlsberg 500ml,Beer,1.25,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",SupermarketCy
 2026-06-26,Blueberries 125g,"Berries, fresh",2.5,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-2026-06-26,Cherries 1Kg,"Berries, fresh",8,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-2026-06-26,Sifounas Common White Sliced Bread 970g,Bread,2,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2026-06-26,Cherries 1Kg,"Berries, fresh",8.0,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2026-06-26,Sifounas Common White Sliced Bread 970g,Bread,2.0,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2026-06-26,Sifounas White Bread 560g,Bread,1.75,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2026-06-26,Sifounas Whole Wheat Small Sliced Bread 500g,Bread,1.85,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2026-06-26,Sifounas Whole Grain Sliced Bread 780g,Bread,2.4,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
@@ -1857,7 +1857,7 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-26,Coconut 1Pc,"Dates, figs and tropical fruits, fresh",1.7,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2026-06-26,Kiwi 1kg,"Dates, figs and tropical fruits, fresh",4.95,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2026-06-26,Mango Palmer 1kg,"Dates, figs and tropical fruits, fresh",4.45,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-2026-06-26,Pineapple 1Pc,"Dates, figs and tropical fruits, fresh",4,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2026-06-26,Pineapple 1Pc,"Dates, figs and tropical fruits, fresh",4.0,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2026-06-26,Nikiforou Eggs Barn Eggs Size L 12Pcs,Eggs,4.15,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2026-06-26,Nikiforou Eggs Barn Eggs Size M 12Pcs,Eggs,3.89,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2026-06-26,Birds Eye Fish Fingers 14Pcs,Fish preparations,7.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
@@ -1906,7 +1906,7 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-26,Avocado 1kg,"Fruit-bearing vegetables, fresh or chilled",4.75,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2026-06-26,Serano Selected Cocktail Mix With Nuts And Dried Fruits No Added Sugar 180g,"Fruits and nuts, ground, and in other preparations",2.99,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2026-06-26,Serano Economy Pack Absolute Mix 375g,"Fruits and nuts, ground, and in other preparations",3.75,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-2026-06-26,Serano Berry Mix With Nuts No Added Sugar 120g,"Fruits and nuts, ground, and in other preparations",2,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2026-06-26,Serano Berry Mix With Nuts No Added Sugar 120g,"Fruits and nuts, ground, and in other preparations",2.0,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2026-06-26,Serano Snackin' Good Dried Cranberries No Added Sugar 200g,"Fruits, dried and dehydrated",3.89,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2026-06-26,Amalia Raisins 350g,"Fruits, dried and dehydrated",2.5,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2026-06-26,Serano Raisins 300g,"Fruits, dried and dehydrated",2.25,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
@@ -1948,7 +1948,7 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-26,Spoons 12Pcs,Kitchen utensils and articles,8.5,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",SupermarketCy
 2026-06-26,Crown Non Stick Frying Pan 24cm,Kitchen utensils and articles,17.95,"FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSEHOLD MAINTENANCE",SupermarketCy
 2026-06-26,Broccoli 1kg,"Leafy or stem vegetables, fresh or chilled",4.5,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-2026-06-26,Iceberg Lettuce 1Pc,"Leafy or stem vegetables, fresh or chilled",2,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2026-06-26,Iceberg Lettuce 1Pc,"Leafy or stem vegetables, fresh or chilled",2.0,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2026-06-26,Cauliflower 1kg,"Leafy or stem vegetables, fresh or chilled",2.95,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2026-06-26,Barba Stathis Brussels Sprouts 450g,"Leafy or stem vegetables, fresh or chilled",2.75,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2026-06-26,Mitsides Traditional Cyprus Macaroni 500g,"Macaroni, noodles, couscous and similar pasta products",1.78,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
@@ -2187,9 +2187,9 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-26,Lipton Yellow Label Tea 20Pcs,"Tea, mate and other plant-derived products for infusion",1.79,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2026-06-26,Edesma Artichokes 400g,"Vegetables, tubers, plantains and cooking bananas, frozen",3.75,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2026-06-26,7Seas Artichokes 500g,"Vegetables, tubers, plantains and cooking bananas, frozen",3.25,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-2026-06-26,The Gardener Profit Seeds Radish,"Vegetables, tubers, plantains, cooking bananas and pulses, ground, and in other preparations",1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-2026-06-26,The Gardener Profit Seeds Artichoke,"Vegetables, tubers, plantains, cooking bananas and pulses, ground, and in other preparations",1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
-2026-06-26,The Gardener Profit Seeds Carrot,"Vegetables, tubers, plantains, cooking bananas and pulses, ground, and in other preparations",1,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2026-06-26,The Gardener Profit Seeds Radish,"Vegetables, tubers, plantains, cooking bananas and pulses, ground, and in other preparations",1.0,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2026-06-26,The Gardener Profit Seeds Artichoke,"Vegetables, tubers, plantains, cooking bananas and pulses, ground, and in other preparations",1.0,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
+2026-06-26,The Gardener Profit Seeds Carrot,"Vegetables, tubers, plantains, cooking bananas and pulses, ground, and in other preparations",1.0,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2026-06-26,Agros 6X1.5L,Water,2.79,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2026-06-26,Agros 12X500ml,Water,3.89,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
 2026-06-26,Saint Nicholas 6X1.5L,Water,2.69,FOOD AND NON-ALCOHOLIC BEVERAGES,SupermarketCy
@@ -2213,25 +2213,25 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-26,CIRCLEOFFICES LTD - Αμόλυβδη 95,Petrol,1.559,TRANSPORT,TOTAL PLUS
 2026-06-26,TOTAL PLUS LIMITED - Αμόλυβδη 95,Petrol,1.557,TRANSPORT,TOTAL PLUS
 2026-06-26,TOTAL PLUS LIMITED - Αμόλυβδη 98,Petrol,1.608,TRANSPORT,TOTAL PLUS
-2026-06-26,Ιδιαίτερα Μαθήματα,Tutoring,15,EDUCATION SERVICES,Teacher Finder
+2026-06-26,Ιδιαίτερα Μαθήματα,Tutoring,15.0,EDUCATION SERVICES,Teacher Finder
 2026-06-26,Villa Zamorano INTENSO,Cigars,4.2,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",The CYgar shop
 2026-06-26,Arturo Fuente Don Carlos Robusto,Cigars,21.6,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",The CYgar shop
-2026-06-26,Rocky Patel - CONVICTION,Cigars,100,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",The CYgar shop
+2026-06-26,Rocky Patel - CONVICTION,Cigars,100.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",The CYgar shop
 2026-06-26,Rocky Patel Grand Reserve,Cigars,14.8,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",The CYgar shop
 2026-06-26,Gold Seal Mini Cigarillos 10s,Cigars,4.5,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",The CYgar shop
-2026-06-26,La Aurora Preferidos Hors d'Age 2020,Cigars,27,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",The CYgar shop
-2026-06-26,Toyota Aygo X,New motor cars,20900,TRANSPORT,Toyota
-2026-06-26,The New Toyota Yaris Cross,New motor cars,27900,TRANSPORT,Toyota
-2026-06-26,The New Toyota Yaris,New motor cars,25200,TRANSPORT,Toyota
-2026-06-26,Stardust Crystal Mesh Necklace N023-1,Purchase of jewellery and watches,45,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Tsiropoulos Jewelry
-2026-06-26,Fashion Bracelet | Delicate Marquise and Round CZ Band VAR221,Purchase of jewellery and watches,25,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Tsiropoulos Jewelry
-2026-06-26,Silver Plated Faux Pearl Clip-On | Non-Pierced Earrings VAR206-1,Purchase of jewellery and watches,40,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Tsiropoulos Jewelry
-2026-06-26,Cubic Zirconia Stainless Steel Band with Polished Finish SR042,Purchase of jewellery and watches,40,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Tsiropoulos Jewelry
+2026-06-26,La Aurora Preferidos Hors d'Age 2020,Cigars,27.0,"ALCOHOLIC BEVERAGES, TOBACCO AND NARCOTICS",The CYgar shop
+2026-06-26,Toyota Aygo X,New motor cars,20900.0,TRANSPORT,Toyota
+2026-06-26,The New Toyota Yaris Cross,New motor cars,27900.0,TRANSPORT,Toyota
+2026-06-26,The New Toyota Yaris,New motor cars,25200.0,TRANSPORT,Toyota
+2026-06-26,Stardust Crystal Mesh Necklace N023-1,Purchase of jewellery and watches,45.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Tsiropoulos Jewelry
+2026-06-26,Fashion Bracelet | Delicate Marquise and Round CZ Band VAR221,Purchase of jewellery and watches,25.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Tsiropoulos Jewelry
+2026-06-26,Silver Plated Faux Pearl Clip-On | Non-Pierced Earrings VAR206-1,Purchase of jewellery and watches,40.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Tsiropoulos Jewelry
+2026-06-26,Cubic Zirconia Stainless Steel Band with Polished Finish SR042,Purchase of jewellery and watches,40.0,"PERSONAL CARE, SOCIAL PROTECTION AND MISCELLANEOUS GOODS AND SERVICES",Tsiropoulos Jewelry
 2026-06-26,Fish Meze for 2 persons - Famagusta,"Restaurants, cafes and the like - with full service",34.5,RESTAURANTS AND ACCOMODATION SERVICES,Vassos Psarolimano
 2026-06-26,Πάγιο ανά μήνα - Larnaca,Water supply delivered through network systems,3.35,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Larnaca
 2026-06-26,Δικαίωμα Συντήρησης ανά μήνα - Larnaca,Water supply delivered through network systems,1.9,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Larnaca
 2026-06-26,Κυβικά ανά μήνα - Larnaca,Water supply delivered through network systems,0.333866667,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Larnaca
-2026-06-26,Πάγιο ανά μήνα - Limassol,Water supply delivered through network systems,4,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Limassol
+2026-06-26,Πάγιο ανά μήνα - Limassol,Water supply delivered through network systems,4.0,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Limassol
 2026-06-26,Δικαίωμα Συντήρησης ανά μήνα - Limassol,Water supply delivered through network systems,1.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Limassol
 2026-06-26,Κυβικά ανά μήνα - Limassol,Water supply delivered through network systems,0.225,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Limassol
 2026-06-26,Πάγιο ανά μήνα - Nicosia,Water supply delivered through network systems,5.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Nicosia
@@ -2255,16 +2255,29 @@ Date,Name,Subclass,Price,Division,Retailer
 2026-06-26,Starbucks Freddo Espresso Tall,"Restaurants, cafes and the like - with limited service",3.95,RESTAURANTS AND ACCOMODATION SERVICES,Wolt
 2026-06-26,Nero Americano Regular,"Restaurants, cafes and the like - with limited service",3.45,RESTAURANTS AND ACCOMODATION SERVICES,Wolt
 2026-06-26,Nero Cappuccino Regular,"Restaurants, cafes and the like - with limited service",4.1,RESTAURANTS AND ACCOMODATION SERVICES,Wolt
-2026-06-26,Nero Freddo Espresso Regular,"Restaurants, cafes and the like - with limited service",4,RESTAURANTS AND ACCOMODATION SERVICES,Wolt
+2026-06-26,Nero Freddo Espresso Regular,"Restaurants, cafes and the like - with limited service",4.0,RESTAURANTS AND ACCOMODATION SERVICES,Wolt
 2026-06-26,Nero Freddo Cappuccino Regular,"Restaurants, cafes and the like - with limited service",4.1,RESTAURANTS AND ACCOMODATION SERVICES,Wolt
-2026-06-26,RAY-BAN RJ9077S,Assistive products for vision,77,HEALTH,X-Eyes
-2026-06-26,RAY-BAN RB9075V,Assistive products for vision,78,HEALTH,X-Eyes
-2026-06-26,RAY-BAN RB1594,Assistive products for vision,84,HEALTH,X-Eyes
-2026-06-26,RAY-BAN RB3447V size 47,Assistive products for vision,135,HEALTH,X-Eyes
-2026-06-26,RAY-BAN RB0840V Mega Wayfarer,Assistive products for vision,141,HEALTH,X-Eyes
-2026-06-26,Marc Jacobs,Assistive products for vision,164,HEALTH,Zouvanis Optics
-2026-06-26,Serengeti,Assistive products for vision,180,HEALTH,Zouvanis Optics
-2026-06-26,Boss,Assistive products for vision,156,HEALTH,Zouvanis Optics
-2026-06-26,Tommy Hilfiger,Assistive products for vision,127,HEALTH,Zouvanis Optics
-2026-06-26,Carrera,Assistive products for vision,131,HEALTH,Zouvanis Optics
-2026-06-26,Rayban,Assistive products for vision,143,HEALTH,Zouvanis Optics
+2026-06-26,RAY-BAN RJ9077S,Assistive products for vision,77.0,HEALTH,X-Eyes
+2026-06-26,RAY-BAN RB9075V,Assistive products for vision,78.0,HEALTH,X-Eyes
+2026-06-26,RAY-BAN RB1594,Assistive products for vision,84.0,HEALTH,X-Eyes
+2026-06-26,RAY-BAN RB3447V size 47,Assistive products for vision,135.0,HEALTH,X-Eyes
+2026-06-26,RAY-BAN RB0840V Mega Wayfarer,Assistive products for vision,141.0,HEALTH,X-Eyes
+2026-06-26,Marc Jacobs,Assistive products for vision,164.0,HEALTH,Zouvanis Optics
+2026-06-26,Serengeti,Assistive products for vision,180.0,HEALTH,Zouvanis Optics
+2026-06-26,Boss,Assistive products for vision,156.0,HEALTH,Zouvanis Optics
+2026-06-26,Tommy Hilfiger,Assistive products for vision,127.0,HEALTH,Zouvanis Optics
+2026-06-26,Carrera,Assistive products for vision,131.0,HEALTH,Zouvanis Optics
+2026-06-26,Rayban,Assistive products for vision,143.0,HEALTH,Zouvanis Optics
+2026-06-26,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-limassol-limassol-nicosia/,Passenger transport by bus and coach,6.0,TRANSPORT,Intercity Buses
+2026-06-26,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-nicosia-nicosia-larnaca/,Passenger transport by bus and coach,5.0,TRANSPORT,Intercity Buses
+2026-06-26,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-ayia-napa-paralimni-ayia-napa-paralimni-nicosia/,Passenger transport by bus and coach,6.0,TRANSPORT,Intercity Buses
+2026-06-26,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)nicosia-paphos-paphos-nicosia/,Passenger transport by bus and coach,8.0,TRANSPORT,Intercity Buses
+2026-06-26,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-limassol-limassol-larnaca/,Passenger transport by bus and coach,5.0,TRANSPORT,Intercity Buses
+2026-06-26,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-ayia-napa-paralimni-paralimni-ayia-napa-larnaca/,Passenger transport by bus and coach,5.0,TRANSPORT,Intercity Buses
+2026-06-26,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)limassol-paphos-paphos-limassol/,Passenger transport by bus and coach,5.0,TRANSPORT,Intercity Buses
+2026-06-26,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)paralimni-ayia-napa-larnaca-paphos-paphos-larnaca-ayia-napa-paralimni/,Passenger transport by bus and coach,10.0,TRANSPORT,Intercity Buses
+2026-06-26,OneWay(Paperticketfromthedriverorwiththemotioncarde-wallet)larnaca-limassol-paphos-paphos-limassol-larnaca/,Passenger transport by bus and coach,10.0,TRANSPORT,Intercity Buses
+2026-06-26,Πάγιο ανά μήνα - Nicosia,Water supply delivered through network systems,5.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Nicosia
+2026-06-26,Κυβικά ανά μήνα - Nicosia,Water supply delivered through network systems,0.5,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Water EOA Nicosia
+2026-06-26,Ετήσιο Τέλος - Nicosia,Sewage collection through sewer systems,0.31,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Nicosia
+2026-06-26,Τέλος Χρήσης - Nicosia,Sewage collection through sewer systems,0.55,"HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS",Sewerage EOA Nicosia
