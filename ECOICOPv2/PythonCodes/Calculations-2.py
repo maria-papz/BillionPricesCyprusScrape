@@ -11,8 +11,8 @@ from datetime import datetime, timedelta
 warnings.simplefilter("ignore")
 
 # Date
-#today = datetime.today().strftime("%Y-%m-%d")
-today = '2026-06-25'
+today = datetime.today().strftime("%Y-%m-%d")
+#today = '2026-06-25'
 
 # Read necessary data 
 #raw_data_26q3 = pd.read_csv("ECOICOPv2/Datasets/Raw-Data/Raw-Data-2-2026Q3.csv", parse_dates = ['Date'], date_parser = lambda x:pd.to_datetime(x, format = '%Y-%m-%d'))
