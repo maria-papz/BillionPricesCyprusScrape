@@ -40,7 +40,7 @@ jobs:
       # Installs the required Python dependencies
       - name: Install dependencies
         run: |
-          if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi
+          if [ -f requirements-2.txt ]; then pip install --no-cache-dir -r requirements-2.txt; fi
       
       - name: Run Visualizations-2.py
         run: |
