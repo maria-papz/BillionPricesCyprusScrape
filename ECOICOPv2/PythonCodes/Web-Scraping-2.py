@@ -230,34 +230,6 @@ def results_fueldaddy(u):
             list_.loc[len(list_)] = new_row
             list_['Name'] = list_['Name'].apply(lambda x:x)
 
-def results_centroptical(u):
-
-    header = {"User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/114.0"}
-    response = requests.get(Item_url_, headers = header)
-    print(response)
-    
-    if response.status_code != 200:
-        website_false.append(name_)
-        website_false.append(subclass_)
-        website_false.append(Item_url_)
-        website_false.append(division_)
-        website_false.append(retailer_)
-        daily_errors.loc[len(daily_errors)] = website_false
-        daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
-    else:
-        soup = BeautifulSoup(response.content, "html.parser")
-        price_element = soup.find('p', class_ = 'price')
-        bdi_element = price_element.find('bdi')
-        price_ = bdi_element.text.replace("€","").replace(",",".")
-        print(price_)
-        new_row.append(datetime.now().strftime('%Y-%m-%d'))
-        new_row.append(name_)
-        new_row.append(float(price_))
-        new_row.append(subclass_)
-        new_row.append(division_)
-        new_row.append("Centroptical")
-        list_.loc[len(list_)] = new_row
-
 def results_akentia(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
@@ -3656,8 +3628,6 @@ for u in range(0, len(urls)):
         results_douce_et_belle(u)       
     if retailer_=="Akentia":
         results_akentia(u)    
-    #if retailer_=="Centroptical": #*Banned access through a 'verifying you are human' check in 13/03/26. Then, run only locally.
-    #    results_centroptical(u)
     if retailer_=="Premier Laundry":
         results_premier(u)
     if retailer_=="Music Avenue": #*Deactivated in 17/05/2026 due to scraping errors. Then, run only locally.
