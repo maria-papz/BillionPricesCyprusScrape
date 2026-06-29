@@ -1,0 +1,53 @@
+# Workflow for the construction of plots
+
+# Whenever pull request is made targeting branch initialisation, csv is reset
+name: visualizations
+
+# Workflow's description
+run-name: Construct the plots of Inflation and General CPI 
+
+# Function to schedule the minutes, hour (UTC time), day of month (*), month (*), and day of week (*) of the workflow process
+#on:
+#  schedule:
+#    - cron: "01 12 * * 1-5" #UTC time and weekday (0=Sunday, 1=Monday,..., 6=Saturday)
+#  #workflow_dispatch: # Allows manual testing
+
+on:
+  pull_request:
+   # Sequence of patterns matched against refs/heads
+   branches:
+      - visualizations
+
+jobs:
+  getdataandrefreshmap:
+    runs-on: ubuntu-latest
+    steps:
+      
+      # It checks out the latest content of your repository
+      - name: Checkout repo content
+        uses: actions/checkout@v4 # checkout the repository content to github runner
+        with:
+          fetch-depth: 0
+      
+      - name: Setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.11 #install the python needed
+      
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
+      
+      # Installs the required Python dependencies
+      - name: Install dependencies
+        run: |
+          if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi
+      
+      - name: Run Visualizations-2.py
+        run: |
+          python ECOICOPv2/PythonCodes/Visualizations-2.py
+          git status
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "visualizations completed"
+          git push origin HEAD:main
