@@ -7,15 +7,15 @@ name: test-web-scraping
 run-name: Test web scraping
 
 # Function to schedule the time (UTC), day, month, and year of the workflow process
-on:
- schedule:
-   - cron: "01 06 * * 1-5" #UTC time and weekday (0=Sunday,...,6=Saturday) 
-
 #on:
-#  pull_request:
-#   # Sequence of patterns matched against refs/heads
-#   branches:
-#     - test-web-scraping
+# schedule:
+#   - cron: "01 06 * * 1-5" #UTC time and weekday (0=Sunday,...,6=Saturday) 
+
+on:
+  pull_request:
+   # Sequence of patterns matched against refs/heads
+   branches:
+     - test-web-scraping
  
 jobs:
   getdataandrefreshmap:
