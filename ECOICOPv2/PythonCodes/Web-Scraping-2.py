@@ -3354,8 +3354,11 @@ def results_melekkis(u):
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x)
     else:
         soup = BeautifulSoup(response.content, "html.parser")
-        element_ = soup.find_all('span', {'class':'woocommerce-Price-amount amount'})
-        price_ = element_[0].text.replace(".","").replace("€","").replace(",",".")
+        #The price is not displayed in the visible HTML. Instead, it is stored inside the data-wmc_price_cache attribute as a JSON string.
+        cache = json.loads(
+            soup.find("span", class_ = "wmc-price-cache-list")["data-wmc_price_cache"])
+        eur_html = cache["EUR"]
+        price_ = re.search(r'>(\d+(?:\.\d+)?)<', eur_html).group(1)
         print("Τιμή:", price_)  
         new_row.append(datetime.now().strftime('%Y-%m-%d'))
         new_row.append(name_)
