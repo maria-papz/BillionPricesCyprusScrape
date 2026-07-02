@@ -464,8 +464,10 @@ def results_ikea(u):
     #response = requests.get(Item_url_, headers=header)
 
     print(response)
+
+    soup = BeautifulSoup(response.content, "html.parser")
     
-    if response.status_code != 200 :
+    if (response.status_code != 200) or ("διαθέσιμα προϊόντα" in soup.text) or ("0 προϊόντα" in soup.text):
         website_false.append(name_)
         website_false.append(subclass_)
         website_false.append(Item_url_)
@@ -474,8 +476,6 @@ def results_ikea(u):
         daily_errors.loc[len(daily_errors)] = website_false
         daily_errors["Name"] = daily_errors["Name"].apply(lambda x:x) 
     else:
-        soup = BeautifulSoup(response.content, "html.parser")
-        #soup = BeautifulSoup(response.text, "html.parser")
         element_soup = soup.find_all("span", {"class":"price__sr-text"})
         price_ = element_soup[0].text.strip("Τρέχουσα τιμή € ").replace("Αρχική τιμή € ","").replace(",",".")
         print(price_)
