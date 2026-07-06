@@ -322,36 +322,25 @@ def results_cyprus_public_transport(u):
     else:
         soup = BeautifulSoup(response.content, "html.parser")
         wrapper = soup.find_all('tbody')[0]
-        data = []
-        for row in wrapper.find_all('tr'):
-            row_data = []
-            for cell in row.find_all(['td', 'th']):
-                row_data.append(cell.get_text().strip())
-            data.append(row_data)
-        df1 = pd.DataFrame(data)
-        df1.columns = ['Ticket type', 'Paper Ticket (CASH)', 'Plastic ANONYMOUS Card', 'Plastic PERSONALISED Motion Bus Card - Normal Charge', 'Plastic PERSONALISED Motion Bus Card - Beneficiaries of 50%' ]
-        df1 = df1.drop(0)
-        df1 = df1.drop(1)
-        df1 = df1.drop(6)
-        df1 = df1.set_index('Ticket type')
-        new_list = []
-        
-        for column in df1.columns:  
-            for index in df1.index:
-                value = df1.loc[index, column]
-                new_row = {'Date': datetime.now().strftime('%Y-%m-%d'), 'Name': f'{column} / {index}', 'Price': value, 'Subclass': 'Passenger transport by bus and coach', 'Division': 'TRANSPORT', 'Retailer': 'Cyprus Public Transport'}  # Create a new row with the concatenated column name and index value
-                new_list.append(new_row)
-                
-        df2 = pd.DataFrame.from_records(new_list)
-        df_cy_transport = df2[df2["Price"] != '-']
-        df_cy_transport['Price'] = df_cy_transport['Price'].str.replace('€', '').replace('Αρχική τιμή ', '')
-        df_cy_transport['Price'] = df_cy_transport['Price'].astype(float)
-        df_cy_transport.reset_index(drop = True, inplace = True)
-
-        for index, row in df_cy_transport.iterrows():
-            if row['Name'] == name_:
-                list_.loc[len(list_)] = row
-                list_['Name'] = list_['Name'].apply(lambda x:x)
+        # Find the prices immediately after "Single Route"
+        match = re.search(r"Single Route\s*((?:€\d+\.\d{2}\s*){4})", wrapper.text)
+        if match:
+            prices = re.findall(r"\d+\.\d{2}", match.group(1))
+        if name_ == "Paper Ticket (CASH) / Single Route":
+            price_ = prices[0]
+        if name_ == "Plastic ANONYMOUS Card / Single Route":
+            price_ = prices[1]
+        if name_ == "Plastic PERSONALISED Motion Bus Card - Normal Charge / Single Route":
+            price_ = prices[2]    
+        print(price_)
+        new_row.append(datetime.today().strftime("%Y-%m-%d"))
+        new_row.append(name_)
+        new_row.append(float(price_))
+        new_row.append(subclass_)
+        new_row.append(division_)
+        new_row.append("Cyprus Public Transport")
+        list_.loc[len(list_)] = new_row
+        list_['Name'] = list_['Name'].apply(lambda x:x)
                 
 def results_max_7_taxi(u):
     
