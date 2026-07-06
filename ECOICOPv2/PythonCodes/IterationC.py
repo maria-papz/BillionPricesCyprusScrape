@@ -305,7 +305,7 @@ def results_intercity_buses(u):
                         new_row.append("Intercity Buses")
                         list_.loc[len(list_)] = new_row
                         
-def results_cyprus_transport(u):
+def results_cyprus_public_transport(u):
     
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     response = requests.get(Item_url_, headers = header)
@@ -3691,8 +3691,8 @@ for u in range(0, len(urls)):
         results_christos_grill_seafood(u)    
     #if retailer_=="Intercity Buses": #*Run only locally
     #    results_intercity_buses(u)  
-    if retailer_=="Cyprus Transport":
-        results_cyprus_transport(u)
+    if retailer_=="Cyprus Public Transport":
+        results_cyprus_public_transport(u)
     if retailer_=="Max 7 Taxi":
         results_max_7_taxi(u)
     # New Retailers
