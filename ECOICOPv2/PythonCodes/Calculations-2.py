@@ -146,8 +146,8 @@ df_5 = df_5[cols]
 df_5['Date'] = pd.to_datetime(df_5['Date']) 
 
 df_5a = pd.concat([df_5, df_daily_division])
+del df_5a["Weight_Price_Division"]
 df_5a['Date'] = pd.to_datetime(df_5a['Date'])
-#df_5a = df_5a.sort_values(by='Date').reset_index(drop=True)
 df_5a = df_5a.sort_values(['Date', 'Division']).reset_index(drop = True)
 
 df_5a.to_csv("ECOICOPv2/Results/Daily/Daily-CPI-Division.csv", index = False)
@@ -275,7 +275,6 @@ if is_last_thursday(current_date_str):
     df_5b = df_5[["Division", "CPI Division"]]
     df_5b["Date"] = current_date_str
     df_monthly_division = pd.concat([df_5b, df_monthly_division], ignore_index = True)
-    #df_monthly_division = df_monthly_division.sort_values(by = 'Date')
     df_monthly_division = df_monthly_division.sort_values(['Date', 'Division'])
     cols = list(df_monthly_division.columns)
     cols.insert(0, cols.pop(cols.index('Date')))
@@ -466,8 +465,8 @@ while today_p <= end_date:
         df_5['Date'] = pd.to_datetime(df_5['Date']) 
 
         df_5a = pd.concat([df_5, df_daily_division])
+        del df_5a["Weight_Price_Division"]
         df_5a['Date'] = pd.to_datetime(df_5a['Date'])
-        #df_5a = df_5a.sort_values(by = 'Date').reset_index(drop = True)
         df_5a = df_5a.sort_values(['Date', 'Division']).reset_index(drop = True)
 
         df_5a.to_csv("ECOICOPv2/Results/Daily/Daily-CPI-Division.csv", index = False)
@@ -589,7 +588,6 @@ while today_p <= end_date:
             df_5b = df_5[["Division", "CPI Division"]]
             df_5b["Date"] = current_date
             df_monthly_division = pd.concat([df_5b, df_monthly_division], ignore_index = True)
-            #df_monthly_division = df_monthly_division.sort_values(by = 'Date')
             df_monthly_division = df_monthly_division.sort_values(['Date', 'Division'])
             cols = list(df_monthly_division.columns)
             cols.insert(0, cols.pop(cols.index('Date')))
