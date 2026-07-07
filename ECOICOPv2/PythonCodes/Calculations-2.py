@@ -9,7 +9,7 @@ from datetime import datetime, timedelta
 
 # Ignore specific warning
 warnings.simplefilter("ignore")
-'''
+
 # Date
 today = datetime.today().strftime("%Y-%m-%d")
 #today = '2026-06-29'
@@ -627,3 +627,4 @@ while today_p <= end_date:
 end_time = time.time()
 elapsed_time = end_time - start_time
 print("Elapsed time:", elapsed_time / 60, "minutes") 
+'''
