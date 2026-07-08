@@ -175,10 +175,16 @@ df_10 = pd.merge(df_9, df_7, on = 'Division')
 df_10["New"] = df_10["CPI Division"] * df_10["Weight"]
 CPI_general = round(df_10["New"].sum(), 4)
 
+# Chain-link the old and new/revised General CPI series 
+Old_CPI_general = 101.76 #26/06/2026
+New_CPI_general = 82.16 #26/06/2026
+Linking_Coefficient = Old_CPI_general / New_CPI_general
+CPI_general_linked = CPI_general * Linking_Coefficient
+
 # Create a new list and add information
 new_row = []
 new_row.append(today)
-new_row.append(CPI_general)
+new_row.append(CPI_general_linked)
 new_row.append(None)
 
 # General CPI Inflation
@@ -494,10 +500,16 @@ while today_p <= end_date:
         df_10["New"] = df_10["CPI Division"] * df_10["Weight"]
         CPI_general = round(df_10["New"].sum(), 4)
 
+        # Chain-link the old and new/revised General CPI series 
+        Old_CPI_general = 101.76 #26/06/2026
+        New_CPI_general = 82.16 #26/06/2026
+        Linking_Coefficient = Old_CPI_general / New_CPI_general
+        CPI_general_linked = CPI_general * Linking_Coefficient
+
         # Create a new list and add information
         new_row = []
         new_row.append(today_f)
-        new_row.append(CPI_general)
+        new_row.append(CPI_general_linked)
         new_row.append(None)
 
         # General CPI Inflation
