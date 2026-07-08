@@ -179,7 +179,7 @@ CPI_general = round(df_10["New"].sum(), 4)
 Old_CPI_general = 101.76 #26/06/2026
 New_CPI_general = 82.16 #26/06/2026
 Linking_Coefficient = Old_CPI_general / New_CPI_general
-CPI_general_linked = CPI_general * Linking_Coefficient
+CPI_general_linked = round(CPI_general * Linking_Coefficient, 4)
 
 # Create a new list and add information
 new_row = []
@@ -504,7 +504,7 @@ while today_p <= end_date:
         Old_CPI_general = 101.76 #26/06/2026
         New_CPI_general = 82.16 #26/06/2026
         Linking_Coefficient = Old_CPI_general / New_CPI_general
-        CPI_general_linked = CPI_general * Linking_Coefficient
+        CPI_general_linked = round(CPI_general * Linking_Coefficient, 4)
 
         # Create a new list and add information
         new_row = []
