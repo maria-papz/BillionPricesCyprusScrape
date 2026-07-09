@@ -461,7 +461,8 @@ while today_p <= end_date:
 
         # Daily CPI per Division 
         df_5 = pd.merge(index_, df_4, on = 'Division')
-        df_5["CPI Division"] = round(100 * df_5["Weight_Price_Division_today"] / df_5["Weight_Price_Division_reference"], 4)
+        #df_5["CPI Division"] = round(100 * df_5["Weight_Price_Division_today"] / df_5["Weight_Price_Division_reference"], 4)
+        df_5["CPI Division"] = round(df_5["Old_Division_CPI"] * df_5["Weight_Price_Division_today"] / df_5["Weight_Price_Division_reference"], 4) #chain-link the old and new/revised Division CPI series
         df_5 = df_5[["Division", "CPI Division", "Weight_Price_Division_today"]]
         df_5.rename(columns = {'Weight_Price_Division_today':'Weight_Price_Division'}, inplace = True)
         df_5["Date"] = today_f
