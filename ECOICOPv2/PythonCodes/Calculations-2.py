@@ -161,7 +161,7 @@ df_6 = df_6[["Date", "Subclass", "Division", "Price", "Weight", "Weight_Price_Su
 df_6["Date"] = today
 
 combined_df = pd.concat([df_daily_subclass_division, df_6], axis = 0)
-combined_df.sort_values(['Date', 'Division'])
+combined_df.sort_values(['Date', 'Division', 'Subclass'])
 
 combined_df.to_csv("ECOICOPv2/Results/Daily/Daily-CPI-Subclass-Division.csv", index = False)
 
@@ -488,7 +488,7 @@ while today_p <= end_date:
         df_6["Date"] = today_f
 
         combined_df = pd.concat([df_daily_subclass_division, df_6], axis = 0)
-        combined_df.sort_values(['Date', 'Division'])
+        combined_df.sort_values(['Date', 'Division', 'Subclass'])
 
         combined_df.to_csv("ECOICOPv2/Results/Daily/Daily-CPI-Subclass-Division.csv", index = False)
 
