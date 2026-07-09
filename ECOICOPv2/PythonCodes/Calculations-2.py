@@ -33,7 +33,6 @@ df_daily_subclass_division = pd.read_csv("ECOICOPv2/Results/Daily/Daily-CPI-Subc
 
 weight_ = pd.read_csv("ECOICOPv2/Datasets/ECOICOP2-Matched-Weights.csv")
 index_ = pd.read_csv("ECOICOPv2/Datasets/Reference-Values-2.csv")
-old_division_cpi_ = pd.read_csv("ECOICOPv2/Datasets/Old-CPI-Division-2026-06-26.csv")
 
 #Initialization of the computational time
 start_time = time.time()
