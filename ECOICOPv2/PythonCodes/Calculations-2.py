@@ -33,6 +33,7 @@ df_daily_subclass_division = pd.read_csv("ECOICOPv2/Results/Daily/Daily-CPI-Subc
 
 weight_ = pd.read_csv("ECOICOPv2/Datasets/ECOICOP2-Matched-Weights.csv")
 index_ = pd.read_csv("ECOICOPv2/Datasets/Reference-Values-2.csv")
+old_division_cpi_ = pd.read_csv("ECOICOPv2/Datasets/Old-CPI-Division-2026-06-26.csv")
 
 #Initialization of the computational time
 start_time = time.time()
@@ -135,7 +136,8 @@ df_4.rename(columns = {'Weight_Price_Subclass': 'Weight_Price_Division_today'}, 
 
 # Daily CPI per Division 
 df_5 = pd.merge(index_, df_4, on = 'Division')
-df_5["CPI Division"] = round(100 * df_5["Weight_Price_Division_today"] / df_5["Weight_Price_Division_reference"], 4)
+#df_5["CPI Division"] = round(100 * df_5["Weight_Price_Division_today"] / df_5["Weight_Price_Division_reference"], 4)
+df_5["CPI Division"] = round(df_5["Old_Division_CPI"] * df_5["Weight_Price_Division_today"] / df_5["Weight_Price_Division_reference"], 4) #chain-link the old with the new/revised Division CPI series
 df_5 = df_5[["Division", "CPI Division", "Weight_Price_Division_today"]]
 df_5.rename(columns = {'Weight_Price_Division_today': 'Weight_Price_Division'}, inplace = True)
 df_5["Date"] = today
