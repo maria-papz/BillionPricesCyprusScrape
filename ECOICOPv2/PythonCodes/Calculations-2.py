@@ -178,13 +178,15 @@ CPI_general = round(df_10["New"].sum(), 4)
 
 # Chain-link the old and new/revised General CPI series 
 Old_CPI_general = 101.76 #26/06/2026
-New_CPI_general = 82.16 #26/06/2026
-Linking_Coefficient = Old_CPI_general / New_CPI_general
+#New_CPI_general = 82.16 #26/06/2026 (the new Division CPIs are equal to 100)
+New_CPI_general_linked = 83.42248 #26/06/2026 (the new Division CPIs are equal to the old ones)
+Linking_Coefficient = Old_CPI_general / New_CPI_general_linked
 CPI_general_linked = round(CPI_general * Linking_Coefficient, 4)
 
 # Create a new list and add information
 new_row = []
 new_row.append(today)
+#new_row.append(CPI_general)
 new_row.append(CPI_general_linked)
 new_row.append(None)
 
@@ -504,13 +506,15 @@ while today_p <= end_date:
 
         # Chain-link the old and new/revised General CPI series 
         Old_CPI_general = 101.76 #26/06/2026
-        New_CPI_general = 82.16 #26/06/2026
-        Linking_Coefficient = Old_CPI_general / New_CPI_general
+        #New_CPI_general = 82.16 #26/06/2026 (the new Division CPIs are equal to 100)
+        New_CPI_general_linked = 83.42248 #26/06/2026 (the new Division CPIs are equal to the old ones)
+        Linking_Coefficient = Old_CPI_general / New_CPI_general_linked
         CPI_general_linked = round(CPI_general * Linking_Coefficient, 4)
 
         # Create a new list and add information
         new_row = []
         new_row.append(today_f)
+        #new_row.append(CPI_general)
         new_row.append(CPI_general_linked)
         new_row.append(None)
 
