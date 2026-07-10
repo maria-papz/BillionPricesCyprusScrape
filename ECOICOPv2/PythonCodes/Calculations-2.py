@@ -248,7 +248,7 @@ for unique_ in unique_subclasses:
     float_index_list = [int(i) for i in index_list]
     df_daily_cpi_subclass_division.loc[float_index_list, "Daily Change (%)"] = round(percentage_change, 4)
 
-df_daily_cpi_subclass_division.sort_values(["Date", "Division", "Subclass"])
+df_daily_cpi_subclass_division.sort_values(["Date", "Division"])
 
 df_daily_cpi_subclass_division.to_csv("ECOICOPv2/Results/Daily/Daily-CPI-Subclass-Division.csv", index = False)
 
@@ -570,7 +570,7 @@ while today_p <= end_date:
             float_index_list = [int(i) for i in index_list]
             df_daily_cpi_subclass_division.loc[float_index_list, "Daily Change (%)"] = round(percentage_change, 4)
 
-        df_daily_cpi_subclass_division.sort_values(["Date", "Division", "Subclass"])
+        df_daily_cpi_subclass_division.sort_values(["Date", "Division"])
 
         df_daily_cpi_subclass_division.to_csv("ECOICOPv2/Results/Daily/Daily-CPI-Subclass-Division.csv", index = False)
 
