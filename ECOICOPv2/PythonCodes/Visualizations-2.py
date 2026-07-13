@@ -18,7 +18,7 @@ df_daily_general['Date'] = pd.to_datetime(df_daily_general['Date'])
 plt.figure(figsize = (12,6))
 plt.plot(df_daily_general['Date'], df_daily_general['Inflation (%)'], marker = 'o')
 
-for date, cpi in zip(df_daily_general['Date'], df_daily['Inflation (%)']):
+for date, cpi in zip(df_daily_general['Date'], df_daily_general['Inflation (%)']):
     if date.day == 1:
         plt.annotate(f'{cpi:.2f}', (date, cpi), textcoords = "offset points", xytext = (0,10), ha = 'center')
 
@@ -49,7 +49,7 @@ plt.tight_layout()
 plt.savefig('ECOICOPv2/Results/Daily/Daily-Inflation.png')
 plt.show()
 plt.figure(figsize=(10,6))
-plt.plot(df_daily_general['Date'], df_daily['Inflation (%)'], linestyle='-', marker='o', color='b', label='CPI General')
+plt.plot(df_daily_general['Date'], df_daily_general['Inflation (%)'], linestyle='-', marker='o', color='b', label='CPI General')
 '''
 
 ## Plot the time evolution of the daily General CPI
