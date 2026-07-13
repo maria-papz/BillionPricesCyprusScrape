@@ -6,19 +6,19 @@ from datetime import datetime
 from datetime import datetime, timedelta 
 
 #Import data
-df_daily = pd.read_csv("ECOICOPv2/Results/Daily/Daily-CPI-General-Inflation.csv")
+df_daily_general = pd.read_csv("ECOICOPv2/Results/Daily/Daily-CPI-General-Inflation.csv")
 
 plt.figure(figsize = (10, 6))
-plt.plot(df_daily['Date'], df_daily['Inflation (%)'], linestyle = '-', marker = 'o', color = 'b', label = 'Inflation')
+plt.plot(df_daily_general['Date'], df_daily_general['Inflation (%)'], linestyle = '-', marker = 'o', color = 'b', label = 'Inflation')
 
 ## Plot the time evolution of the daily CPI Inflation
 
 # Show on the horizontal x-axis only the date of the first day per month 
-df_daily['Date'] = pd.to_datetime(df_daily['Date'])
+df_daily_general['Date'] = pd.to_datetime(df_daily_general['Date'])
 plt.figure(figsize = (12,6))
-plt.plot(df_daily['Date'], df_daily['Inflation (%)'], marker = 'o')
+plt.plot(df_daily_general['Date'], df_daily_general['Inflation (%)'], marker = 'o')
 
-for date, cpi in zip(df_daily['Date'], df_daily['Inflation (%)']):
+for date, cpi in zip(df_daily_general['Date'], df_daily['Inflation (%)']):
     if date.day == 1:
         plt.annotate(f'{cpi:.2f}', (date, cpi), textcoords = "offset points", xytext = (0,10), ha = 'center')
 
@@ -37,8 +37,8 @@ plt.show()
 
 '''
 # Show on the horizontal x-axis all the dates
-for i, txt in enumerate(df_daily['Inflation (%)']):
-    plt.annotate(f'{txt:.2f}', (df_daily['Date'][i], df_daily['Inflation (%)'][i]), textcoords="offset points", xytext=(0,10), ha='center')
+for i, txt in enumerate(df_daily_general['Inflation (%)']):
+    plt.annotate(f'{txt:.2f}', (df_daily_general['Date'][i], df_daily_general['Inflation (%)'][i]), textcoords="offset points", xytext=(0,10), ha='center')
 
 plt.xlabel('Date')
 plt.ylabel('Inflation (%)')
@@ -49,17 +49,17 @@ plt.tight_layout()
 plt.savefig('ECOICOPv2/Results/Daily/Daily-Inflation.png')
 plt.show()
 plt.figure(figsize=(10,6))
-plt.plot(df_daily['Date'], df_daily['Inflation (%)'], linestyle='-', marker='o', color='b', label='CPI General')
+plt.plot(df_daily_general['Date'], df_daily['Inflation (%)'], linestyle='-', marker='o', color='b', label='CPI General')
 '''
 
 ## Plot the time evolution of the daily General CPI
 
 # Show on the horizontal x-axis only the date of the first day per month
-df_daily['Date'] = pd.to_datetime(df_daily['Date'])
+df_daily_general['Date'] = pd.to_datetime(df_daily_general['Date'])
 plt.figure(figsize = (12,6))
-plt.plot(df_daily['Date'], df_daily['CPI General'], marker = 'o')
+plt.plot(df_daily_general['Date'], df_daily_general['CPI General'], marker = 'o')
 
-for date, cpi in zip(df_daily['Date'], df_daily['CPI General']):
+for date, cpi in zip(df_daily_general['Date'], df_daily_general['CPI General']):
     if date.day == 1:
         plt.annotate(f'{cpi:.2f}', (date, cpi), textcoords = "offset points", xytext = (0,10), ha = 'center')
 
@@ -78,8 +78,8 @@ plt.show()
 
 '''
 # Show on the horizontal x-axis all the dates
-for i, txt in enumerate(df_daily['CPI General']):
-    plt.annotate(f'{txt:.2f}', (df_daily['Date'][i], df_daily['CPI General'][i]), textcoords="offset points", xytext=(0,10), ha='center')
+for i, txt in enumerate(df_daily_general['CPI General']):
+    plt.annotate(f'{txt:.2f}', (df_daily_general['Date'][i], df_daily_general['CPI General'][i]), textcoords = "offset points", xytext = (0,10), ha = 'center')
 
 plt.xlabel('Date')
 plt.ylabel('General CPI (2025=100)')
@@ -90,8 +90,30 @@ plt.tight_layout()
 plt.savefig('ECOICOPv2/Results/Daily/Daily-CPI-General.png')
 plt.show()
 plt.figure(figsize=(10,6))
-plt.plot(df_daily['Date'], df_daily['CPI General'], linestyle='-', marker='o', color='b', label='CPI General')
+plt.plot(df_daily_general['Date'], df_daily_general['CPI General'], linestyle='-', marker='o', color='b', label='CPI General')
 '''
+
+## Plot the time evolution of the daily CPI per Division
+
+#Import data
+df_daily_division = pd.read_csv("ECOICOPv2/Results/Daily/Daily-CPI-Division.csv")
+
+df_daily_division["Date"] = pd.to_datetime(df_daily_division["Date"])
+df_daily_division = df_daily_division.sort_values("Date")
+plt.figure(figsize = (16,8))
+
+for division in df_daily_division["Division"].unique():
+    temp = df_daily_division[df_daily_division["Division"] == division]
+    plt.plot(temp["Date"], temp["CPI Division"], label = division, linewidth = 2)
+
+plt.title("Evolution of Daily CPI per Division in Cyprus")
+plt.xlabel("Date")
+plt.ylabel("Division CPI (2025=100)")
+plt.legend(title = "Division", bbox_to_anchor = (1.02, 1), loc = "upper left")
+plt.grid(True)
+plt.tight_layout()
+plt.savefig("ECOICOPv2/Results/Daily/Daily-CPI-Division.png", dpi = 300, bbox_inches = "tight")
+plt.show()
 
 #========================================================================================================================
 # LAST THURSDAY (*this corresponds to the monthly observation*)
@@ -102,7 +124,7 @@ current_date = datetime.today().strftime("%Y-%m-%d")
 #current_date = '2026-07-30' #*set manually the date of the last Thursday of the month
 
 #Read data
-df_monthly = pd.read_csv("ECOICOPv2/Results/Monthly/Monthly-CPI-General-Inflation.csv")
+df_monthly_general = pd.read_csv("ECOICOPv2/Results/Monthly/Monthly-CPI-General-Inflation.csv")
 
 #Function to run every last Thursday per month
 def is_last_thursday(date):
@@ -115,11 +137,11 @@ def is_last_thursday(date):
 if is_last_thursday(current_date):
     
     plt.figure(figsize = (10, 6))
-    plt.plot(df_monthly['Date'], df_monthly['Inflation (%)'], linestyle = '-', marker = 'o', color = 'b', label = 'Inflation')
+    plt.plot(df_monthly_general['Date'], df_monthly_general['Inflation (%)'], linestyle = '-', marker = 'o', color = 'b', label = 'Inflation')
 
     #Plot the time evolution of the monthly CPI Inflation
-    for i, txt in enumerate(df_monthly['Inflation (%)']):
-        plt.annotate(f'{txt:.2f}', (df_monthly['Date'][i], df_monthly['Inflation (%)'][i]), textcoords = "offset points", xytext = (0,10), ha = 'center')
+    for i, txt in enumerate(df_monthly_general['Inflation (%)']):
+        plt.annotate(f'{txt:.2f}', (df_monthly_general['Date'][i], df_monthly_general['Inflation (%)'][i]), textcoords = "offset points", xytext = (0,10), ha = 'center')
         
     plt.xlabel('Date')
     plt.ylabel('Inflation (%)')
@@ -131,11 +153,11 @@ if is_last_thursday(current_date):
     plt.show()
     
     plt.figure(figsize = (10, 6))
-    plt.plot(df_monthly['Date'], df_monthly['CPI General'], linestyle = '-', marker = 'o', color = 'b', label = 'CPI General')
+    plt.plot(df_monthly_general['Date'], df_monthly_general['CPI General'], linestyle = '-', marker = 'o', color = 'b', label = 'CPI General')
 
     #Plot the time evolution of the monthly General CPI 
-    for i, txt in enumerate(df_monthly['CPI General']):
-        plt.annotate(f'{txt:.2f}', (df_monthly['Date'][i], df_monthly['CPI General'][i]), textcoords = "offset points", xytext = (0,10), ha = 'center')
+    for i, txt in enumerate(df_monthly_general['CPI General']):
+        plt.annotate(f'{txt:.2f}', (df_monthly_general['Date'][i], df_monthly_general['CPI General'][i]), textcoords = "offset points", xytext = (0,10), ha = 'center')
         
     plt.xlabel('Date')
     plt.ylabel('General CPI (2025=100)')
