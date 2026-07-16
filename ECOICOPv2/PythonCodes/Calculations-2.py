@@ -279,6 +279,7 @@ def is_last_thursday(date):
 if is_last_thursday(current_date_str):
     
     df_current_date = df_daily_general.tail(1)
+    print("Today is the last Thursday of the month (monthly CPI measurement)")
     
     # Monthly CPI per Division
     df_5b = df_5[["Division", "CPI Division"]]
@@ -601,6 +602,7 @@ while today_p <= end_date:
         if is_last_thursday(current_date):
 
             df_current_date = df_daily_general.tail(1)
+            print("Today is the last Thursday of the month (monthly CPI measurement)")
 
             # Monthly CPI per Division
             df_5b = df_5[["Division", "CPI Division"]]
