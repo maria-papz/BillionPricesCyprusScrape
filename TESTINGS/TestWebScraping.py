@@ -188,7 +188,7 @@ print(response_2)
 # Procopiou Medishop
 #================================================================================================================================
 print("Procopiou Medishop")
-url = "https://www.procopioumedishop.com/product/graduated-ss-n3-surgical-handle"
+url = "https://www.procopioumedishop.com/product/nebuliser-gem"
 
 response_1 = requests.get(url)
 print(response_1)
