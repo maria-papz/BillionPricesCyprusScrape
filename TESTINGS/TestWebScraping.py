@@ -28,6 +28,12 @@ from docx import Document
 #############################################################################################################################
 ##### Kyriacos' testings
 
+#################################################################################################################################
+print("######################################################################################################################")
+print("ECOICOP v2")
+print("######################################################################################################################")
+#################################################################################################################################
+
 #================================================================================================================================
 # SupermarketCy
 #================================================================================================================================
@@ -56,35 +62,11 @@ header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/5
 response_2 = requests.get(url, headers=header)
 print(response_2)
 
-#soup = BeautifulSoup(response.content, "html.parser")    
-#element_soup = soup.find_all("div", {"class":"listing-details-heading"})
-#if (len(element_soup) < 2):
-#    element_soup = element_soup[0]
-#else:
-#    element_soup = element_soup[1]
-#price_ = element_soup.text.replace("€","").replace("\n","")
-#print(price_)
-
-#================================================================================================================================
-# Public
-#================================================================================================================================
-print("Public")
-url = "https://www.public.cy/public/v1/mm/productPage?sku=1867127&locale=el"
-
-response_1 = requests.get(url)
-print(response_1)
-
-#header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-response_2 = requests.get(url, headers=header)
-print(response_2)
-
 #================================================================================================================================
 # Cablenet
 #================================================================================================================================
 print("Cablenet")
-### Bundled telecommunication services
-url = "https://cablenet.com.cy/hbo-max/"
+url = "https://cablenet.com.cy/postpaid-charge-rates/"
 
 ### without headers 
 ## 1
@@ -106,11 +88,6 @@ response_2 = requests.get(url, headers = header)
 #with httpx.Client(headers = header) as client:
 #    response_2 = client.get(url)
 print(response_2)
-
-#soup = BeautifulSoup(response.content, "html.parser")
-#element = soup.find_all("span", {"style":"font-size: 50px"})
-#price = float(element[0].text) #Purple Max Mobile HBO Max Edition	
-#print(price)
 
 #================================================================================================================================
 # Intercity Buses
@@ -141,10 +118,10 @@ response_2 = requests.get(url, headers=header)
 print(response_2)
 
 #================================================================================================================================
-# Centroptical
+# Famous Sports
 #================================================================================================================================
-print("Centroptical")
-url = "https://centroptical-cyprus.com/product/lacoste-3/"
+print("Famous Sports")
+url = "https://www.famousports.com/en/products/core-team-kit-sml-logo-t-sh-au-blue?option_variant_id=140"
 
 response_1 = requests.get(url)
 print(response_1)
@@ -155,10 +132,63 @@ response_2 = requests.get(url, headers=header)
 print(response_2)
 
 #================================================================================================================================
-# Famous Sports
+# EOA Nicosia (https://ndlgo.org.cy/)
 #================================================================================================================================
-print("Famous Sports")
-url = "https://www.famousports.com/en/products/core-team-kit-sml-logo-t-sh-au-blue?option_variant_id=140"
+print("Water EOA Nicosia")
+url = "https://ndlgo.org.cy/water-supply/water-fees-wbn/"
+
+response_1 = requests.get(url)
+print(response_1)
+
+#header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url, headers=header)
+print(response_2)
+
+print("Sewerage EOA Nicosia")
+url = "https://ndlgo.org.cy/sewage/sewer-fees/"
+
+response_1 = requests.get(url)
+print(response_1)
+
+#header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url, headers=header)
+print(response_2)
+
+#================================================================================================================================
+# Constantinou Jewels
+#================================================================================================================================
+print("Constantinou Jewels")
+url = "https://constantinou-jewels.com/en/shop-2/jewellery/women/womens-cross-23/"
+
+response_1 = requests.get(url)
+print(response_1)
+
+#header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url, headers=header)
+print(response_2)
+
+#================================================================================================================================
+# Brilliance Jewellery
+#================================================================================================================================
+print("Brilliance Jewellery")
+url = "https://brilliancejewellery.com.cy/product/stainless-steel-vancleef-bracelet-10/"
+
+response_1 = requests.get(url)
+print(response_1)
+
+#header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url, headers=header)
+print(response_2)
+
+#================================================================================================================================
+# Procopiou Medishop
+#================================================================================================================================
+print("Procopiou Medishop")
+url = "https://www.procopioumedishop.com/product/graduated-ss-n3-surgical-handle"
 
 response_1 = requests.get(url)
 print(response_1)
@@ -225,148 +255,6 @@ html_content = fetch_url(url, headers)
 if html_content:
     print(html_content[:500])
 '''
-
-#================================================================================================================================
-# EOA Larnaca (https://ndlgo.org.cy/)
-#================================================================================================================================
-print("Water Board of Larnaca")
-url = "https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/"
-
-response_1 = requests.get(url)
-print(response_1)
-
-#header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-response_2 = requests.get(url, headers=header)
-print(response_2)
-
-print("Sewerage Board of Larnaca")
-url = "https://eoal.org.cy/exypiretisi/teli/apocheteftika-teli/"
-
-response_1 = requests.get(url)
-print(response_1)
-
-#header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-response_2 = requests.get(url, headers=header)
-print(response_2)
-
-#================================================================================================================================
-# EOA Limassol (https://eoalemesos.org.cy/el/fees)
-#================================================================================================================================
-print("Water/Sewerage Board of Limassol")
-url = "https://eoalemesos.org.cy/el/fees"
-
-response_1 = requests.get(url)
-print(response_1)
-
-headerA = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-headerB = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36'}
-response_2A = requests.get(url, headers=headerA)
-print(response_2A)
-response_2B = requests.get(url, headers=headerB)
-print(response_2B)
-
-#================================================================================================================================
-# EOA Nicosia (https://ndlgo.org.cy/)
-#================================================================================================================================
-print("Water Board of Nicosia")
-url = "https://ndlgo.org.cy/water-supply/water-fees-wbn/"
-
-response_1 = requests.get(url)
-print(response_1)
-
-#header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-response_2 = requests.get(url, headers=header)
-print(response_2)
-
-print("Sewerage Board of Nicosia")
-url = "https://ndlgo.org.cy/sewage/sewer-fees/"
-
-response_1 = requests.get(url)
-print(response_1)
-
-#header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-response_2 = requests.get(url, headers=header)
-print(response_2)
-
-#================================================================================================================================
-# Alter Vape
-#================================================================================================================================
-print("Alter Vape")
-url = "https://altervape.eu/product/geekvape-zeus-sub-ohm-76"
-
-response_1 = requests.get(url)
-print(response_1)
-
-#header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-response_2 = requests.get(url, headers=header)
-print(response_2)
-
-#================================================================================================================================
-# E-wholesale
-#================================================================================================================================
-print("E-wholesale")
-url = "https://www.ewsale.com/product-page/ske-crystal-4in1-%CE%B7%CE%BB%CE%B5%CE%BA%CF%84%CF%81%CE%BF%CE%BD%CE%B9%CE%BA%CE%AC-%CF%84%CF%83%CE%B9%CE%B3%CE%AC%CF%81%CE%B1-%CE%BC%CE%AF%CE%B1%CF%82-%CF%87%CF%81%CE%AE%CF%83%CE%B7%CF%82-8-%CF%80%CF%81%CE%BF%CE%B3%CE%B5%CE%BC%CE%B9%CF%83%CE%BC%CE%AD%CE%BD%CE%B5%CF%82-%CE%BA%CE%AC%CF%88%CE%BF%CF%85%CE%BB%CE%B5%CF%82"
-
-response_1 = requests.get(url)
-print(response_1)
-
-#header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-response_2 = requests.get(url, headers=header)
-print(response_2)
-
-#================================================================================================================================
-# The CYgar shop
-#================================================================================================================================
-print("The CYgar shop")
-url = "https://www.thecygarshop.com/product-page/la-aurora-preferidos-hors-d-age-2020"
-
-response_1 = requests.get(url)
-print(response_1)
-
-#header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-response_2 = requests.get(url, headers=header)
-print(response_2)
-
-#################################################################################################################################
-print("######################################################################################################################")
-print("ECOICOP v2")
-print("######################################################################################################################")
-#################################################################################################################################
-
-#================================================================================================================================
-# Procopiou Medishop
-#================================================================================================================================
-print("Procopiou Medishop")
-url = "https://www.procopioumedishop.com/shop_advanced/pedi-care-foot-protect/"
-
-response_1 = requests.get(url)
-print(response_1)
-
-#header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-response_2 = requests.get(url, headers=header)
-print(response_2)
-
-#================================================================================================================================
-# Constantinou Jewels
-#================================================================================================================================
-print("Constantinou Jewels")
-url = "https://constantinou-jewels.com/en/shop-2/jewellery/women/womens-cross-23/"
-
-response_1 = requests.get(url)
-print(response_1)
-
-#header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-response_2 = requests.get(url, headers=header)
-print(response_2)
 
 """
 #####################################################################################################################################################
