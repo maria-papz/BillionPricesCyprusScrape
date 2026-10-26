@@ -41,14 +41,25 @@ print("SupermarketCy")
 url = "https://www.supermarketcy.com.cy/sifounas-frantzolakia-stroggyla-4tem"
 
 ## without headers 
-response_1 = requests.get(url)
-print(response_1)
+response_0 = requests.get(url)
+print(response_0)
 
 ## with headers 
-#header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-response_2 = requests.get(url, headers=header)
+header_1 = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+response_1 = requests.get(url, headers = header_1)
+print(response_1)
+
+header_2 = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url, headers = header_2)
 print(response_2)
+
+header_3 = {"User-Agent": "Mozilla/5.0"}
+response_3 = requests.get(url, headers = header_3)
+print(response_3)
+
+with httpx.Client(headers = header_3) as client:
+    response_4 = client.get(url)
+print(response_4)
 
 #================================================================================================================================
 # 1.2. Alphamega
@@ -57,14 +68,25 @@ print("Alphamega")
 url = "https://www.alphamega.com.cy/en/groceries/chilled/yoghurt-desserts/plain-yoghurt/zita-super-strained-yoghurt-light-1-kg"
 
 ## without headers 
-response_1 = requests.get(url)
-print(response_1)
+response_0 = requests.get(url)
+print(response_0)
 
 ## with headers 
-#header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-response_2 = requests.get(url, headers=header)
+header_1 = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+response_1 = requests.get(url, headers = header_1)
+print(response_1)
+
+header_2 = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url, headers = header_2)
 print(response_2)
+
+header_3 = {"User-Agent": "Mozilla/5.0"}
+response_3 = requests.get(url, headers = header_3)
+print(response_3)
+
+with httpx.Client(headers = header_3) as client:
+    response_4 = client.get(url)
+print(response_4)
 
 #================================================================================================================================
 # 1.3. METRO
@@ -73,14 +95,25 @@ print("METRO - Wolt")
 url = "https://wolt.com/en/cyp/nicosia/venue/metro-express-aglantzia/saint-nicholas-natural-mineral-water-6x1-5l-itemid-b2b74d4d98d5c3e2ecf859b9"
 
 ## without headers 
-response_1 = requests.get(url)
-print(response_1)
+response_0 = requests.get(url)
+print(response_0)
 
 ## with headers 
-#header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-response_2 = requests.get(url, headers=header)
+header_1 = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+response_1 = requests.get(url, headers = header_1)
+print(response_1)
+
+header_2 = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url, headers = header_2)
 print(response_2)
+
+header_3 = {"User-Agent": "Mozilla/5.0"}
+response_3 = requests.get(url, headers = header_3)
+print(response_3)
+
+with httpx.Client(headers = header_3) as client:
+    response_4 = client.get(url)
+print(response_4)
 
 #================================================================================================================================
 # 2. Stephanis
@@ -89,14 +122,25 @@ print("Stephanis")
 url = "https://www.stephanis.com.cy/en/products/396845"
 
 ## without headers 
-response_1 = requests.get(url)
-print(response_1)
+response_0 = requests.get(url)
+print(response_0)
 
 ## with headers 
-#header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-response_2 = requests.get(url, headers=header)
+header_1 = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+response_1 = requests.get(url, headers = header_1)
+print(response_1)
+
+header_2 = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url, headers = header_2)
 print(response_2)
+
+header_3 = {"User-Agent": "Mozilla/5.0"}
+response_3 = requests.get(url, headers = header_3)
+print(response_3)
+
+with httpx.Client(headers = header_3) as client:
+    response_4 = client.get(url)
+print(response_4)
 
 #================================================================================================================================
 # 3. Cablenet
@@ -104,26 +148,26 @@ print(response_2)
 print("Cablenet")
 url = "https://cablenet.com.cy/postpaid-charge-rates/"
 
-### without headers 
-## 1
-#bs = BeautifulSoup(url, "html.parser")
-#response_1 = requests.get(bs)
-## 2
-response_1 = requests.get(url)
+## without headers 
+response_0 = requests.get(url)
+print(response_0)
+
+## with headers 
+header_1 = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+response_1 = requests.get(url, headers = header_1)
 print(response_1)
 
-### with headers 
-header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-#header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
-## 1 
-#bs = BeautifulSoup(url, "html.parser")
-#response_2 = requests.get(bs, {'headers':header})
-## 2
-response_2 = requests.get(url, headers = header) 
-## 3 
-#with httpx.Client(headers = header) as client:
-#    response_2 = client.get(url)
+header_2 = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url, headers = header_2)
 print(response_2)
+
+header_3 = {"User-Agent": "Mozilla/5.0"}
+response_3 = requests.get(url, headers = header_3)
+print(response_3)
+
+with httpx.Client(headers = header_3) as client:
+    response_4 = client.get(url)
+print(response_4)
 
 #================================================================================================================================
 # 4. Moto Race
@@ -132,14 +176,25 @@ print("Moto Race")
 url = "https://www.motorace.com.cy/ktm-sx-e-1-20-factory-edition.html"
 
 ## without headers 
-response_1 = requests.get(url)
-print(response_1)
+response_0 = requests.get(url)
+print(response_0)
 
 ## with headers 
-#header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-response_2 = requests.get(url, headers=header)
+header_1 = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+response_1 = requests.get(url, headers = header_1)
+print(response_1)
+
+header_2 = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url, headers = header_2)
 print(response_2)
+
+header_3 = {"User-Agent": "Mozilla/5.0"}
+response_3 = requests.get(url, headers = header_3)
+print(response_3)
+
+with httpx.Client(headers = header_3) as client:
+    response_4 = client.get(url)
+print(response_4)
 
 #================================================================================================================================
 # 5. Famous Sports
@@ -148,14 +203,25 @@ print("Famous Sports")
 url = "https://www.famousports.com/en/products/adidas-mens-kit-small-logo-t-shirt-kx1284?option_variant_id=19726"
 
 ## without headers 
-response_1 = requests.get(url)
-print(response_1)
+response_0 = requests.get(url)
+print(response_0)
 
 ## with headers 
-#header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-response_2 = requests.get(url, headers=header)
+header_1 = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+response_1 = requests.get(url, headers = header_1)
+print(response_1)
+
+header_2 = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url, headers = header_2)
 print(response_2)
+
+header_3 = {"User-Agent": "Mozilla/5.0"}
+response_3 = requests.get(url, headers = header_3)
+print(response_3)
+
+with httpx.Client(headers = header_3) as client:
+    response_4 = client.get(url)
+print(response_4)
 
 #================================================================================================================================
 # 6. Constantinou Jewels
@@ -163,15 +229,26 @@ print(response_2)
 print("Constantinou Jewels")
 url = "https://constantinou-jewels.com/en/shop-2/jewellery/women/womens-cross-23/"
 
-## without headers
-response_1 = requests.get(url)
+## without headers 
+response_0 = requests.get(url)
+print(response_0)
+
+## with headers 
+header_1 = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+response_1 = requests.get(url, headers = header_1)
 print(response_1)
 
-## with headers
-#header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-response_2 = requests.get(url, headers=header)
+header_2 = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url, headers = header_2)
 print(response_2)
+
+header_3 = {"User-Agent": "Mozilla/5.0"}
+response_3 = requests.get(url, headers = header_3)
+print(response_3)
+
+with httpx.Client(headers = header_3) as client:
+    response_4 = client.get(url)
+print(response_4)
 
 #================================================================================================================================
 # 7. Remedy
@@ -179,15 +256,26 @@ print(response_2)
 print("Remedy")
 url = "https://remedy.com.cy/product/tonimer-normal-spray-125ml/"
 
-## without headers
-response_1 = requests.get(url)
+## without headers 
+response_0 = requests.get(url)
+print(response_0)
+
+## with headers 
+header_1 = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+response_1 = requests.get(url, headers = header_1)
 print(response_1)
 
-## with headers
-#header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-response_2 = requests.get(url, headers=header)
+header_2 = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url, headers = header_2)
 print(response_2)
+
+header_3 = {"User-Agent": "Mozilla/5.0"}
+response_3 = requests.get(url, headers = header_3)
+print(response_3)
+
+with httpx.Client(headers = header_3) as client:
+    response_4 = client.get(url)
+print(response_4)
 
 #================================================================================================================================
 # 8. Parga
@@ -195,15 +283,26 @@ print(response_2)
 print("Parga")
 url = "https://www.parga.com.cy/el/grafiki-uli-analosima/-mixaniko-moluvi-05-lila-xroma-114446#sthash.QQDkSC0Z.83AJ7kBx.dpbs"
 
-## without headers
-response_1 = requests.get(url)
+## without headers 
+response_0 = requests.get(url)
+print(response_0)
+
+## with headers 
+header_1 = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+response_1 = requests.get(url, headers = header_1)
 print(response_1)
 
-## with headers
-#header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-response_2 = requests.get(url, headers=header)
+header_2 = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url, headers = header_2)
 print(response_2)
+
+header_3 = {"User-Agent": "Mozilla/5.0"}
+response_3 = requests.get(url, headers = header_3)
+print(response_3)
+
+with httpx.Client(headers = header_3) as client:
+    response_4 = client.get(url)
+print(response_4)
 
 #================================================================================================================================
 # 9. Intercity Buses
@@ -212,43 +311,76 @@ print("Intercity Buses")
 url = "https://intercity-buses.com/en/routes/nicosia-limassol-limassol-nicosia/"
 
 ## without headers 
-response_1 = requests.get(url)
-print(response_1)
+response_0 = requests.get(url)
+print(response_0)
 
 ## with headers 
-#header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-response_2 = requests.get(url, headers=header)
+header_1 = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+response_1 = requests.get(url, headers = header_1)
+print(response_1)
+
+header_2 = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url, headers = header_2)
 print(response_2)
+
+header_3 = {"User-Agent": "Mozilla/5.0"}
+response_3 = requests.get(url, headers = header_3)
+print(response_3)
+
+with httpx.Client(headers = header_3) as client:
+    response_4 = client.get(url)
+print(response_4)
 
 #================================================================================================================================
 # 10. EOA Nicosia (https://ndlgo.org.cy/)
 #================================================================================================================================
 print("Water EOA Nicosia")
-url = "https://ndlgo.org.cy/water-supply/water-fees-wbn/"
+url1 = "https://ndlgo.org.cy/water-supply/water-fees-wbn/"
 
 ## without headers 
-response_1 = requests.get(url)
-print(response_1)
+response_0 = requests.get(url1)
+print(response_0)
 
 ## with headers 
-#header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-response_2 = requests.get(url, headers=header)
+header_1 = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+response_1 = requests.get(url1, headers = header_1)
+print(response_1)
+
+header_2 = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url1, headers = header_2)
 print(response_2)
+
+header_3 = {"User-Agent": "Mozilla/5.0"}
+response_3 = requests.get(url1, headers = header_3)
+print(response_3)
+
+with httpx.Client(headers = header_3) as client:
+    response_4 = client.get(url1)
+print(response_4)
 
 print("Sewerage EOA Nicosia")
-url = "https://ndlgo.org.cy/sewage/sewer-fees/"
+url2 = "https://ndlgo.org.cy/sewage/sewer-fees/"
 
 ## without headers 
-response_1 = requests.get(url)
-print(response_1)
+response_0 = requests.get(url)
+print(response_0)
 
 ## with headers 
-#header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-response_2 = requests.get(url, headers=header)
+header_1 = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+response_1 = requests.get(url2, headers = header_1)
+print(response_1)
+
+header_2 = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url2, headers = header_2)
 print(response_2)
+
+header_3 = {"User-Agent": "Mozilla/5.0"}
+response_3 = requests.get(url2, headers = header_3)
+print(response_3)
+
+with httpx.Client(headers = header_3) as client:
+    response_4 = client.get(url2)
+print(response_4)
 
 #################################################################################################################################
 # A.1. Brilliance Jewellery
@@ -257,14 +389,25 @@ print("Brilliance Jewellery")
 url = "https://brilliancejewellery.com.cy/product/stainless-steel-vancleef-bracelet-10/"
 
 ## without headers 
-response_1 = requests.get(url)
-print(response_1)
+response_0 = requests.get(url)
+print(response_0)
 
 ## with headers 
-#header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-response_2 = requests.get(url, headers=header)
+header_1 = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+response_1 = requests.get(url, headers = header_1)
+print(response_1)
+
+header_2 = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url, headers = header_2)
 print(response_2)
+
+header_3 = {"User-Agent": "Mozilla/5.0"}
+response_3 = requests.get(url, headers = header_3)
+print(response_3)
+
+with httpx.Client(headers = header_3) as client:
+    response_4 = client.get(url)
+print(response_4)
 
 #################################################################################################################################
 # A.2. Procopiou Medishop
@@ -273,14 +416,25 @@ print("Procopiou Medishop")
 url = "https://www.procopioumedishop.com/product/nebuliser-gem"
 
 ## without headers 
-response_1 = requests.get(url)
-print(response_1)
+response_0 = requests.get(url)
+print(response_0)
 
 ## with headers 
-#header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-response_2 = requests.get(url, headers=header)
+header_1 = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+response_1 = requests.get(url, headers = header_1)
+print(response_1)
+
+header_2 = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url, headers = header_2)
 print(response_2)
+
+header_3 = {"User-Agent": "Mozilla/5.0"}
+response_3 = requests.get(url, headers = header_3)
+print(response_3)
+
+with httpx.Client(headers = header_3) as client:
+    response_4 = client.get(url)
+print(response_4)
 
 """
 #================================================================================================================================
@@ -289,13 +443,26 @@ print(response_2)
 print("Wolt")
 url = "https://wolt.com/en/cyp/nicosia/restaurant/kfc-aglantzia/twister-itemid-692eae75bc0a1e597836f510"
 
-response_1 = requests.get(url)
+## without headers 
+response_0 = requests.get(url)
+print(response_0)
+
+## with headers 
+header_1 = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+response_1 = requests.get(url, headers = header_1)
 print(response_1)
 
-#header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-response_2 = requests.get(url, headers=header)
+header_2 = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url, headers = header_2)
 print(response_2)
+
+header_3 = {"User-Agent": "Mozilla/5.0"}
+response_3 = requests.get(url, headers = header_3)
+print(response_3)
+
+with httpx.Client(headers = header_3) as client:
+    response_4 = client.get(url)
+print(response_4)
 
 '''
 ### *Wolt*
@@ -346,13 +513,26 @@ if html_content:
 print("Larnaca Driving School")
 url = "https://larnacadrivingschool.com/el/"
 
-response_1 = requests.get(url)
+## without headers 
+response_0 = requests.get(url)
+print(response_0)
+
+## with headers 
+header_1 = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+response_1 = requests.get(url, headers = header_1)
 print(response_1)
 
-#header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-response_2 = requests.get(url, headers=header)
+header_2 = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url, headers = header_2)
 print(response_2)
+
+header_3 = {"User-Agent": "Mozilla/5.0"}
+response_3 = requests.get(url, headers = header_3)
+print(response_3)
+
+with httpx.Client(headers = header_3) as client:
+    response_4 = client.get(url)
+print(response_4)
 """
 
 
