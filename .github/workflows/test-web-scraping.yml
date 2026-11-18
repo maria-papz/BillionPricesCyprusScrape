@@ -19,15 +19,15 @@ on:
  
 jobs:
   getdataandrefreshmap:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       # It checks out the latest content of your repository
       - name: Checkout repo content
-        uses: actions/checkout@v3 # checkout the repository content to github runner.
+        uses: actions/checkout@v5 # checkout the repository content to github runner.
         with:
           fetch-depth: 0
       - name: Setup python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: 3.9 #install the python needed
       - name: Upgrade pip
