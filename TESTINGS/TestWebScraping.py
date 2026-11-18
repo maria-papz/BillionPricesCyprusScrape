@@ -302,28 +302,52 @@ print(response_4)
 #================================================================================================================================
 # 9. Intercity Buses
 #================================================================================================================================
-print("Intercity Buses")
-url = "https://intercity-buses.com/ticket-prices-2/"
+print("Intercity Buses: url1")
+url1 = "https://intercity-buses.com/ticket-prices-2/"
 
 ## without headers 
-response_0 = requests.get(url)
+response_0 = requests.get(url1)
 print(response_0)
 
 ## with headers 
 header_1 = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
-response_1 = requests.get(url, headers = header_1)
+response_1 = requests.get(url1, headers = header_1)
 print(response_1)
 
 header_2 = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-response_2 = requests.get(url, headers = header_2)
+response_2 = requests.get(url1, headers = header_2)
 print(response_2)
 
 header_3 = {"User-Agent": "Mozilla/5.0"}
-response_3 = requests.get(url, headers = header_3)
+response_3 = requests.get(url1, headers = header_3)
 print(response_3)
 
 with httpx.Client(headers = header_3) as client:
-    response_4 = client.get(url)
+    response_4 = client.get(url1)
+print(response_4)
+
+print("Intercity Buses: url2")
+url2 = "https://intercity-buses.com/en/niclarnew/"
+
+## without headers 
+response_0 = requests.get(url2)
+print(response_0)
+
+## with headers 
+header_1 = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+response_1 = requests.get(url2, headers = header_1)
+print(response_1)
+
+header_2 = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url2, headers = header_2)
+print(response_2)
+
+header_3 = {"User-Agent": "Mozilla/5.0"}
+response_3 = requests.get(url2, headers = header_3)
+print(response_3)
+
+with httpx.Client(headers = header_3) as client:
+    response_4 = client.get(url2)
 print(response_4)
 
 #================================================================================================================================
