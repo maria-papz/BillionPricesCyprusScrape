@@ -25,14 +25,9 @@ from urllib.error import URLError
 from tabula import read_pdf
 from docx import Document
 
-#############################################################################################################################
-##### Kyriacos' testings
-
-#################################################################################################################################
 print("######################################################################################################################")
 print("ECOICOP v2")
 print("######################################################################################################################")
-#################################################################################################################################
 
 #================================================================================================================================
 # 1.1. SupermarketCy
@@ -143,10 +138,10 @@ with httpx.Client(headers = header_3) as client:
 print(response_4)
 
 #================================================================================================================================
-# 3. Cablenet
+# 3. Vangelis Tavern
 #================================================================================================================================
-print("Cablenet")
-url = "https://cablenet.com.cy/postpaid-charge-rates/"
+print("Vangelis Tavern")
+url = "https://vangelistavern.com/el/"
 
 ## without headers 
 response_0 = requests.get(url)
@@ -227,7 +222,7 @@ print(response_4)
 # 6. Constantinou Jewels
 #================================================================================================================================
 print("Constantinou Jewels")
-url = "https://constantinou-jewels.com/en/shop-2/jewellery/women/womens-cross-23/"
+url = "https://constantinou-jewels.com/en/shop-2/jewellery/women/female-trifuren-cross/"
 
 ## without headers 
 response_0 = requests.get(url)
@@ -308,7 +303,7 @@ print(response_4)
 # 9. Intercity Buses
 #================================================================================================================================
 print("Intercity Buses")
-url = "https://intercity-buses.com/en/routes/nicosia-limassol-limassol-nicosia/"
+url = "https://intercity-buses.com/ticket-prices-2/"
 
 ## without headers 
 response_0 = requests.get(url)
@@ -533,42 +528,4 @@ print(response_3)
 with httpx.Client(headers = header_3) as client:
     response_4 = client.get(url)
 print(response_4)
-"""
-
-
-"""
-#####################################################################################################################################################
-#### Kendeas' testings
-
-## *Intercity Buses*
-
-url_new = "https://intercity-buses.com/en/routes/" + "nicosia-limassol-limassol-nicosia/"
-
-### with headers
-#header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
-#response = requests.get(url_new, {'headers':header})
-
-### without headers
-## 1 
-bs = BeautifulSoup(url_new, "html.parser")
-response = requests.get(bs)
-## 2 
-#response = requests.get(url_new)
-
-if response.status_code != 200:
-    print(response)
-else:
-    soup = BeautifulSoup(response.content, "html.parser")
-    table_ = soup.find_all("table", {"class":"tablesorter eael-data-table center"})[0]
-    if table_:
-        element_ = table_.find_all("div", {"class":"td-content-wrapper"}) 
-        for i in range(0,2):
-            new_row = []
-            if i%2 == 0:
-                ticket_name_ = element_[i].text.replace(" ","").replace("\n","").replace("\t","")
-                price_ = element_[i+1].text.replace(" ","").replace("\n","").replace("\t","").replace("€","")
-                if (price_=="NOTAVAILABLE") or (price_=='ΔΕΝΔΙΑΤΙΘΕΤΑΙ'):
-                    print(price_)
-                else:
-                    print(price_)  
 """
