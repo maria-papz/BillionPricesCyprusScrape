@@ -302,7 +302,7 @@ print(response_4)
 #================================================================================================================================
 # 9. Intercity Buses
 #================================================================================================================================
-print("Intercity Buses: url1")
+print("Intercity Buses: https://intercity-buses.com/ticket-prices-2/")
 url1 = "https://intercity-buses.com/ticket-prices-2/"
 
 ## without headers 
@@ -326,7 +326,7 @@ with httpx.Client(headers = header_3) as client:
     response_4 = client.get(url1)
 print(response_4)
 
-print("Intercity Buses: url2")
+print("Intercity Buses: https://intercity-buses.com/en/niclarnew/")
 url2 = "https://intercity-buses.com/en/niclarnew/"
 
 ## without headers 
