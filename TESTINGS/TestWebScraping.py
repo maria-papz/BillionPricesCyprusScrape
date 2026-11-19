@@ -351,7 +351,7 @@ with httpx.Client(headers = header_3) as client:
 print(response_4)
 
 #================================================================================================================================
-# 10. EOA Nicosia (https://ndlgo.org.cy/)
+# 10.1. EOA Nicosia (https://ndlgo.org.cy/)
 #================================================================================================================================
 print("Water EOA Nicosia")
 url1 = "https://ndlgo.org.cy/water-supply/water-fees-wbn/"
@@ -399,6 +399,84 @@ print(response_3)
 
 with httpx.Client(headers = header_3) as client:
     response_4 = client.get(url2)
+print(response_4)
+
+#================================================================================================================================
+# 10.2. EOA Larnaca (https://eoal.org.cy/)
+#================================================================================================================================
+print("Water EOA Larnaca")
+url1 = "https://eoal.org.cy/exypiretisi/teli/teli-chrisis-nerou/"
+
+## without headers 
+response_0 = requests.get(url1)
+print(response_0)
+
+## with headers 
+header_1 = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+response_1 = requests.get(url1, headers = header_1)
+print(response_1)
+
+header_2 = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url1, headers = header_2)
+print(response_2)
+
+header_3 = {"User-Agent": "Mozilla/5.0"}
+response_3 = requests.get(url1, headers = header_3)
+print(response_3)
+
+with httpx.Client(headers = header_3) as client:
+    response_4 = client.get(url1)
+print(response_4)
+
+print("Sewerage EOA Larnaca")
+url2 = "https://eoal.org.cy/exypiretisi/teli/apocheteftika-teli/"
+
+## without headers 
+response_0 = requests.get(url)
+print(response_0)
+
+## with headers 
+header_1 = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+response_1 = requests.get(url2, headers = header_1)
+print(response_1)
+
+header_2 = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url2, headers = header_2)
+print(response_2)
+
+header_3 = {"User-Agent": "Mozilla/5.0"}
+response_3 = requests.get(url2, headers = header_3)
+print(response_3)
+
+with httpx.Client(headers = header_3) as client:
+    response_4 = client.get(url2)
+print(response_4)
+
+#================================================================================================================================
+# 10.3. EOA Limassol (https://eoalemesos.org.cy/)
+#================================================================================================================================
+print("Water & Sewerage EOA Limassol")
+url1 = "https://eoalemesos.org.cy/el/fees"
+
+## without headers 
+response_0 = requests.get(url1)
+print(response_0)
+
+## with headers 
+header_1 = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',}
+response_1 = requests.get(url1, headers = header_1)
+print(response_1)
+
+header_2 = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'}
+response_2 = requests.get(url1, headers = header_2)
+print(response_2)
+
+header_3 = {"User-Agent": "Mozilla/5.0"}
+response_3 = requests.get(url1, headers = header_3)
+print(response_3)
+
+with httpx.Client(headers = header_3) as client:
+    response_4 = client.get(url1)
 print(response_4)
 
 #################################################################################################################################
